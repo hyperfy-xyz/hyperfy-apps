@@ -550,6 +550,7 @@ def main() -> int:
 
     if not GLOBAL_MANIFEST.exists():
         print(f"Error: missing {GLOBAL_MANIFEST}")
+        print("Run build_catalog.py first to generate it (requires source-research dir)")
         return 1
 
     if not HYP_INDEX_RAW.exists():

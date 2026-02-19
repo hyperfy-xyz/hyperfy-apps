@@ -300,6 +300,7 @@ def build_card_json(
 def main() -> int:
     if not GLOBAL_MANIFEST.exists():
         print(f"Error: missing {GLOBAL_MANIFEST}")
+        print("Run build_catalog.py first to generate it (requires source-research dir)")
         return 1
 
     global_manifest = read_json(GLOBAL_MANIFEST)
