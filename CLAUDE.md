@@ -9,7 +9,7 @@ Archive of 165+ Hyperfy virtual world apps with an AI-powered web explorer. The 
 ## Commands
 
 ```bash
-# Rebuild explorer data (explorer-data.json + catalog.json)
+# Rebuild catalog (writes catalog/catalog.json)
 uv run python scripts/catalog/build_explorer_data.py
 
 # Serve explorer locally (from repo root, not catalog/)
@@ -40,7 +40,7 @@ hyp-files/*.hyp (binary)
     → scripts/catalog/build_catalog.py
     → context/apps/<slug>/manifest.json  (manifest["ai"] merged from tmp/ai-summaries/)
     → scripts/catalog/build_explorer_data.py
-    → catalog/explorer-data.json + catalog/catalog.json
+    → catalog/catalog.json
     → catalog/ (static site on GitHub Pages)
 ```
 
@@ -49,8 +49,7 @@ hyp-files/*.hyp (binary)
 - **`v2/<slug>/`** — Flat app source dirs (slugified). Each has `<Name>.json` (blueprint), `index.js`, and optional `assets/`.
 - **`hyp-files/`** — Original `.hyp` binary files (174 files).
 - **`catalog/`** — Static web explorer deployed to GitHub Pages. React 18 + HTM, no build step.
-- **`catalog/explorer-data.json`** — Single merged JSON fetched by the explorer UI (~167KB).
-- **`catalog/catalog.json`** — Per-app card data keyed by slug, fetched once by SourceModal (~439KB).
+- **`catalog/catalog.json`** — Merged app data + source excerpts fetched on load (~495KB).
 - **`catalog/media/<slug>/`** — Optimized preview images/videos (~670MB, committed via LFS-like approach).
 - **`context/`** — Knowledge base (not deployed): `hyp_index.raw.json` (Discord metadata), `apps/<slug>/manifest.json` (provenance + AI data), `hyp_summaries/` (full app docs), `snippets/` (doc snippets), `source/` (raw docs), `context-index.json`.
 - **`scripts/catalog/`** — Build pipeline scripts.
@@ -65,7 +64,7 @@ Single-page React app with no build step — edit `app.js`/`styles.css` directly
 - **`app.js`** — Full component tree (~500 LOC). Uses HTM tagged templates (`` html`<div>...</div>` ``), not JSX.
 - **`styles.css`** — Dark theme, CSS variables (`--bg: #0c0c14`, `--accent: #8b5cf6`).
 
-Data flow: fetches `explorer-data.json` on load; SourceModal fetches `catalog.json` once on first open (cached in memory), then looks up by slug.
+Data flow: fetches `catalog.json` on load; all app data including source excerpts is immediately available.
 
 ### Per-App Metadata Schema
 
