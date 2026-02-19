@@ -16,7 +16,7 @@
   "asset_profile": "medium",
   "script_complexity": "medium",
   "networking": "events",
-  "preview_url": "generated_previews/questitembasic.png",
+  "preview_url": "media/questitembasic/preview.png",
   "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/QuestItemBasic.hyp",
   "created_at": "2025-07-20T07:26:56.291Z",
   "props": {

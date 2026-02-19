@@ -13,7 +13,7 @@
   "asset_profile": "light",
   "script_complexity": "medium",
   "networking": "events",
-  "preview_url": "generated_previews/notifications.png",
+  "preview_url": "media/notifications/preview.png",
   "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Notifications.hyp",
   "created_at": "2025-05-26T15:48:41.450Z",
   "props": {

@@ -25,7 +25,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 CATALOG_ROOT = REPO_ROOT / "catalog"
 GLOBAL_MANIFEST = CATALOG_ROOT / "manifests" / "apps-manifest.json"
 EXPLORER_DATA_DIR = CATALOG_ROOT
-GENERATED_PREVIEWS_DIR = CATALOG_ROOT / "generated_previews"
+MEDIA_DIR = CATALOG_ROOT / "media"
 V2_APPS_DIR = REPO_ROOT / "v2"
 V2_ASSETS_DIR = REPO_ROOT / "v2" / "assets"
 
@@ -155,9 +155,9 @@ def build_app_entry(
     source = manifest.get("source", {})
     preview_path = manifest.get("preview", {}).get("primary_media_path") or app_row.get("primary_preview")
 
-    # Fallback: check for AI-generated preview image
+    # Fallback: check for generated preview image in media/<slug>/preview.*
     if not preview_path:
-        matches = list(GENERATED_PREVIEWS_DIR.glob(f"{app_row['app_slug']}.*"))
+        matches = list((MEDIA_DIR / app_row['app_slug']).glob("preview.*"))
         if matches:
             preview_path = str(matches[0].relative_to(REPO_ROOT))
 
@@ -227,9 +227,9 @@ def build_card_json(
     source = manifest.get("source", {})
     preview_path = manifest.get("preview", {}).get("primary_media_path") or app_row.get("primary_preview")
 
-    # Fallback: check for AI-generated preview image
+    # Fallback: check for generated preview image in media/<slug>/preview.*
     if not preview_path:
-        matches = list(GENERATED_PREVIEWS_DIR.glob(f"{app_row['app_slug']}.*"))
+        matches = list((MEDIA_DIR / app_row['app_slug']).glob("preview.*"))
         if matches:
             preview_path = str(matches[0].relative_to(REPO_ROOT))
 

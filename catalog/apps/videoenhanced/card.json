@@ -12,7 +12,7 @@
   "asset_profile": "medium",
   "script_complexity": "medium",
   "networking": "none",
-  "preview_url": "generated_previews/videoenhanced.png",
+  "preview_url": "media/videoenhanced/preview.png",
   "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/VideoEnhanced.hyp",
   "created_at": "2025-10-29T12:33:12.756Z"
 }

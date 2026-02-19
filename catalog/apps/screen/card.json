@@ -13,7 +13,7 @@
   "asset_profile": "light",
   "script_complexity": "low",
   "networking": "none",
-  "preview_url": "generated_previews/screen.jpg",
+  "preview_url": "media/screen/preview.jpg",
   "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Screen.hyp",
   "created_at": "2025-04-14T12:55:54.185Z",
   "props": {

@@ -15,7 +15,7 @@
   "asset_profile": "heavy",
   "script_complexity": "high",
   "networking": "events",
-  "preview_url": "generated_previews/jukebox-ui.png",
+  "preview_url": "media/jukebox-ui/preview.png",
   "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/JUKEBOX_UI.hyp",
   "created_at": "2025-03-26T17:54:19.828Z",
   "props": {

@@ -15,7 +15,7 @@
   "asset_profile": "medium",
   "script_complexity": "medium",
   "networking": "events",
-  "preview_url": "generated_previews/networked-grabbable.png",
+  "preview_url": "media/networked-grabbable/preview.png",
   "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Networked_Grabbable.hyp",
   "created_at": "2025-03-12T03:25:45.227Z",
   "props": {

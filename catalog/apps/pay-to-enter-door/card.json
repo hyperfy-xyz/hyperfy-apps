@@ -16,7 +16,7 @@
   "asset_profile": "medium",
   "script_complexity": "high",
   "networking": "events",
-  "preview_url": "generated_previews/pay-to-enter-door.jpg",
+  "preview_url": "media/pay-to-enter-door/preview.jpg",
   "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/PAY_TO_ENTER_DOOR.hyp",
   "created_at": "2025-03-11T21:08:41.943Z",
   "props": {
