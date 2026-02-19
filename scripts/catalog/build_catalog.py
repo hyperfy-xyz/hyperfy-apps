@@ -361,7 +361,7 @@ def build_catalog_manifests(
     v2_slugs = {p.name for p in v2_root.iterdir() if p.is_dir()} if v2_root.exists() else set()
     mappings = load_filename_mappings(repo_root / "tmp" / "filename-mappings.csv")
 
-    apps_out_root = repo_root / "catalog" / "apps"
+    apps_out_root = repo_root / "context" / "apps"
     manifests_out = repo_root / "tmp" / "manifests" / "apps-manifest.json"
     issue_out = repo_root / "catalog" / "issues" / "missing-media-checklist.md"
 
@@ -474,7 +474,7 @@ def build_catalog_manifests(
             "links": {
                 "v2_app_dir": f"v2/{v2_slug}" if v2_slug else None,
                 "v2_json_path": str(v2_json.relative_to(repo_root)) if v2_json else None,
-                "hyp_summary_path": f"catalog/discord/hyp_summaries/{summary_rel}" if summary_rel else None,
+                "hyp_summary_path": f"context/hyp_summaries/{summary_rel}" if summary_rel else None,
             },
             "preview": {
                 "primary_media_path": primary.get("catalog_path") if primary else None,
@@ -495,7 +495,7 @@ def build_catalog_manifests(
         }
 
         ai_summary = None
-        ai_summary_path = apps_out_root / app_id / "ai-summary.json"
+        ai_summary_path = repo_root / "tmp" / "ai-summaries" / f"{preferred_slug}.json"
         if merge_ai_summaries and ai_summary_path.exists():
             try:
                 ai_summary = json.loads(ai_summary_path.read_text(encoding="utf-8"))
@@ -510,15 +510,15 @@ def build_catalog_manifests(
             "author": author_name,
             "has_preview": primary is not None,
             "primary_preview": primary.get("catalog_path") if primary else None,
-            "manifest_path": f"catalog/apps/{app_id}/manifest.json",
+            "manifest_path": f"context/apps/{preferred_slug}/manifest.json",
             "v2_app_dir": f"v2/{v2_slug}" if v2_slug else None,
             "has_ai_summary": bool(ai_summary),
-            "ai_summary_path": f"catalog/apps/{app_id}/ai-summary.json" if ai_summary else None,
+            "ai_summary_path": f"tmp/ai-summaries/{preferred_slug}.json" if ai_summary else None,
             "flags": sorted(flags),
         })
 
         if not dry_run:
-            app_dir = apps_out_root / app_id
+            app_dir = apps_out_root / preferred_slug
             app_dir.mkdir(parents=True, exist_ok=True)
             (app_dir / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
 

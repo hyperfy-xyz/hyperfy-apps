@@ -9,7 +9,7 @@ Archive of 165+ Hyperfy virtual world apps with an AI-powered web explorer. The 
 ## Commands
 
 ```bash
-# Rebuild explorer data (explorer-data.json + card.json files)
+# Rebuild explorer data (explorer-data.json + catalog.json)
 uv run python scripts/catalog/build_explorer_data.py
 
 # Serve explorer locally (from repo root, not catalog/)
@@ -38,9 +38,9 @@ hyp-files/*.hyp (binary)
     → scripts/hyp_tool.py unbundle
     → v2/<slug>/ (blueprint JSON + index.js + assets/)
     → scripts/catalog/build_catalog.py
-    → catalog/apps/<slug>/manifest.json + ai-summary.json
+    → context/apps/<slug>/manifest.json  (manifest["ai"] merged from tmp/ai-summaries/)
     → scripts/catalog/build_explorer_data.py
-    → catalog/explorer-data.json + catalog/apps/<slug>/card.json
+    → catalog/explorer-data.json + catalog/catalog.json
     → catalog/ (static site on GitHub Pages)
 ```
 
@@ -49,13 +49,13 @@ hyp-files/*.hyp (binary)
 - **`v2/<slug>/`** — Flat app source dirs (slugified). Each has `<Name>.json` (blueprint), `index.js`, and optional `assets/`.
 - **`hyp-files/`** — Original `.hyp` binary files (174 files).
 - **`catalog/`** — Static web explorer deployed to GitHub Pages. React 18 + HTM, no build step.
-- **`catalog/apps/<slug>/`** — Per-app metadata: `manifest.json` (provenance), `ai-summary.json` (AI output), `card.json` (merged for explorer/agents). One dir per unique slug (165 total).
-- **`catalog/explorer-data.json`** — Single merged JSON fetched by the explorer UI (~204KB).
+- **`catalog/explorer-data.json`** — Single merged JSON fetched by the explorer UI (~167KB).
+- **`catalog/catalog.json`** — Per-app card data keyed by slug, fetched once by SourceModal (~439KB).
 - **`catalog/media/<slug>/`** — Optimized preview images/videos (~670MB, committed via LFS-like approach).
-- **`context/`** — Knowledge base (not deployed): `hyp_index.raw.json` (Discord metadata), `hyp_summaries/` (full app docs), `snippets/` (doc snippets), `source/` (raw docs), `context-index.json`.
+- **`context/`** — Knowledge base (not deployed): `hyp_index.raw.json` (Discord metadata), `apps/<slug>/manifest.json` (provenance + AI data), `hyp_summaries/` (full app docs), `snippets/` (doc snippets), `source/` (raw docs), `context-index.json`.
 - **`scripts/catalog/`** — Build pipeline scripts.
 - **`scripts/research/`** — AI summarization and context preparation.
-- **`tmp/`** — Gitignored working directory. Contains `manifests/` (build pipeline artifacts: `apps-manifest.json`, `ai-summary-report.json`, `ai-summary-failures/`) and legacy files.
+- **`tmp/`** — Gitignored working directory. Contains `manifests/` (build artifacts: `apps-manifest.json`, `ai-summary-report.json`, `ai-summary-failures/`), `ai-summaries/` (AI output pending merge into manifests; kept after merge).
 
 ### Web Explorer (`catalog/`)
 
@@ -65,11 +65,11 @@ Single-page React app with no build step — edit `app.js`/`styles.css` directly
 - **`app.js`** — Full component tree (~500 LOC). Uses HTM tagged templates (`` html`<div>...</div>` ``), not JSX.
 - **`styles.css`** — Dark theme, CSS variables (`--bg: #0c0c14`, `--accent: #8b5cf6`).
 
-Data flow: fetches `explorer-data.json` on load; SourceModal lazy-loads `app.card_path` (e.g. `apps/<slug>/card.json`) on demand.
+Data flow: fetches `explorer-data.json` on load; SourceModal fetches `catalog.json` once on first open (cached in memory), then looks up by slug.
 
 ### Per-App Metadata Schema
 
-**`ai-summary.json`** fields (strict enums):
+**`manifest["ai"]`** fields (strict enums):
 - `feature_tags`: max 6 from canonical set: `particles`, `audio`, `vehicle`, `npc`, `combat`, `camera`, `physics`, `ui`, `environment`, `animation`, `interaction`, `building`, `teleport`, `media-player`, `multiplayer`, `3d-model`
 - `script_complexity`: `low` | `medium` | `high`
 - `asset_profile`: `light` | `medium` | `heavy`

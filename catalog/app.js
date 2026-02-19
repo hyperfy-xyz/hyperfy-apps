@@ -5,7 +5,19 @@ import htm from "htm";
 const html = htm.bind(React.createElement);
 
 const EXPLORER_DATA = "./explorer-data.json";
+const CATALOG_DATA = "./catalog.json";
 const MIN_TAG_COUNT = 3; // Only show tags used by this many apps in sidebar
+
+// Module-level cache for catalog.json (fetched once on first SourceModal open)
+const catalogRef = { data: null, promise: null };
+function fetchCatalog() {
+  if (!catalogRef.promise) {
+    catalogRef.promise = fetch(CATALOG_DATA)
+      .then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+      .then((d) => { catalogRef.data = d; return d; });
+  }
+  return catalogRef.promise;
+}
 const MISSING_PREVIEW_SVG = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 24 24' fill='none' stroke='%233a3a5a' stroke-width='1.5'%3E%3Crect x='3' y='3' width='18' height='18' rx='2'/%3E%3Ccircle cx='8.5' cy='8.5' r='1.5'/%3E%3Cpath d='m21 15-5-5L5 21'/%3E%3C/svg%3E`;
 
 function formatDate(iso) {
@@ -50,7 +62,7 @@ function VideoPreview({ src }) {
   `;
 }
 
-// ---- SourceModal: fetches card.json on demand, syntax highlights ----
+// ---- SourceModal: fetches catalog.json once (cached), syntax highlights ----
 
 function SourceModal({ app, onClose }) {
   const [card, setCard] = useState(null);
@@ -61,15 +73,15 @@ function SourceModal({ app, onClose }) {
   const codeRef = useRef(null);
 
   useEffect(() => {
-    const cardUrl = app.card_path;
-    fetch(cardUrl)
-      .then((r) => {
-        if (!r.ok) throw new Error(`HTTP ${r.status}`);
-        return r.json();
+    fetchCatalog()
+      .then((catalog) => {
+        const cardData = catalog[app.slug];
+        if (!cardData) throw new Error(`App "${app.slug}" not found in catalog`);
+        setCard(cardData);
+        setLoading(false);
       })
-      .then((d) => { setCard(d); setLoading(false); })
       .catch((e) => { setError(e.message); setLoading(false); });
-  }, [app.card_path]);
+  }, [app.slug]);
 
   // Highlight code after render
   useEffect(() => {

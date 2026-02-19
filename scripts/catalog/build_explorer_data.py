@@ -2,12 +2,11 @@
 """Build merged explorer data from catalog manifests and AI summaries.
 
 Outputs:
-  catalog/explorer-data.json                 - single file for web explorer
-  catalog/apps/<app-id>/card.json           - per-app file for AI agents
+  catalog/explorer-data.json    - single file for web explorer
+  catalog/catalog.json          - dict keyed by slug for SourceModal lazy-load
 
 Inputs:
-  tmp/manifests/apps-manifest.json
-  catalog/apps/*/manifest.json + ai-summary.json
+  context/apps/*/manifest.json  (manifest["ai"] or tmp/ai-summaries/<slug>.json)
   v2/*/  (blueprint JSON, index.js, asset files)
 """
 
@@ -23,11 +22,11 @@ from typing import Any
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 CATALOG_ROOT = REPO_ROOT / "catalog"
-GLOBAL_MANIFEST = REPO_ROOT / "tmp" / "manifests" / "apps-manifest.json"
+CONTEXT_APPS_DIR = REPO_ROOT / "context" / "apps"
+AI_SUMMARIES_DIR = REPO_ROOT / "tmp" / "ai-summaries"
 EXPLORER_DATA_DIR = CATALOG_ROOT
 MEDIA_DIR = CATALOG_ROOT / "media"
 V2_APPS_DIR = REPO_ROOT / "v2"
-V2_ASSETS_DIR = REPO_ROOT / "v2" / "assets"
 
 def detect_github_raw_base() -> str:
     """Detect GitHub raw URL base from git remote, with fallback."""
@@ -198,7 +197,6 @@ def build_app_entry(
         "id": app_row["app_id"],
         "slug": app_row.get("app_slug", ""),
         "name": app_row.get("app_name", ""),
-        "card_path": f"apps/{app_row['app_slug']}/card.json",
         "author": manifest.get("author", {}).get("display_name") or app_row.get("author", "Unknown"),
         "description": description,
         "preview_url": catalog_preview,
@@ -223,7 +221,7 @@ def build_card_json(
     v2_dir: Path | None,
     blueprint: dict[str, Any] | None,
 ) -> dict[str, Any]:
-    """Build a self-contained card.json for AI agent consumption."""
+    """Build a self-contained card entry for AI agent consumption."""
     source = manifest.get("source", {})
     preview_path = manifest.get("preview", {}).get("primary_media_path") or app_row.get("primary_preview")
 
@@ -298,36 +296,48 @@ def build_card_json(
 
 
 def main() -> int:
-    if not GLOBAL_MANIFEST.exists():
-        print(f"Error: missing {GLOBAL_MANIFEST}")
-        print("Run build_catalog.py first to generate it (requires source-research dir)")
+    manifest_paths = sorted(CONTEXT_APPS_DIR.glob("*/manifest.json"))
+    if not manifest_paths:
+        print(f"Error: no manifests found in {CONTEXT_APPS_DIR}")
+        print("Run build_catalog.py first to generate them (requires source-research dir)")
         return 1
 
-    global_manifest = read_json(GLOBAL_MANIFEST)
-    if not global_manifest:
-        print("Error: could not parse apps-manifest.json")
-        return 1
-
-    app_rows = global_manifest.get("apps", [])
-    print(f"Processing {len(app_rows)} apps...")
+    print(f"Processing {len(manifest_paths)} apps...")
 
     explorer_apps: list[dict[str, Any]] = []
     tag_index: dict[str, list[str]] = defaultdict(list)
+    catalog_cards: dict[str, Any] = {}
     with_preview = 0
-    card_count = 0
+    ai_merged = 0
 
-    for app_row in app_rows:
-        app_id = app_row["app_id"]
-        manifest_path = REPO_ROOT / app_row["manifest_path"]
-        app_dir = manifest_path.parent
-        ai_summary_path = app_dir / "ai-summary.json"
-
+    for manifest_path in manifest_paths:
         manifest = read_json(manifest_path)
         if not manifest:
-            print(f"  Warning: could not read manifest for {app_id}")
+            print(f"  Warning: could not read {manifest_path}")
             continue
 
-        ai_summary = read_json(ai_summary_path)
+        slug = manifest.get("app_slug") or manifest_path.parent.name
+        app_id = manifest.get("app_id", slug)
+
+        # Build app_row equivalent from manifest
+        app_row = {
+            "app_id": app_id,
+            "app_slug": slug,
+            "app_name": manifest.get("app_name", slug),
+            "author": manifest.get("author", {}).get("display_name", ""),
+            "primary_preview": manifest.get("preview", {}).get("primary_media_path"),
+        }
+
+        # Get AI summary: prefer manifest["ai"], fall back to tmp/ai-summaries/<slug>.json
+        ai_summary = manifest.get("ai")
+        if not ai_summary:
+            ai_summary_path = AI_SUMMARIES_DIR / f"{slug}.json"
+            ai_summary = read_json(ai_summary_path)
+            if ai_summary:
+                # Merge into manifest on disk (tmp file left in place — gitignored)
+                manifest["ai"] = ai_summary
+                manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+                ai_merged += 1
 
         # Find v2 app directory
         v2_dir_rel = manifest.get("links", {}).get("v2_app_dir")
@@ -351,11 +361,12 @@ def main() -> int:
         for tag in entry["tags"]:
             tag_index[tag].append(app_id)
 
-        # Build and write card.json
+        # Build card entry for catalog.json
         card = build_card_json(app_row, manifest, ai_summary, v2_dir, blueprint)
-        card_path = app_dir / "card.json"
-        card_path.write_text(json.dumps(card, indent=2), encoding="utf-8")
-        card_count += 1
+        catalog_cards[slug] = card
+
+    # Sort apps by name
+    explorer_apps.sort(key=lambda x: x["name"].lower())
 
     # Sort tag index by frequency (most used first)
     sorted_tag_index = dict(
@@ -378,14 +389,20 @@ def main() -> int:
     output_path = EXPLORER_DATA_DIR / "explorer-data.json"
     output_path.write_text(json.dumps(explorer_data, indent=2), encoding="utf-8")
 
+    # Write catalog.json (dict keyed by slug, for SourceModal)
+    catalog_path = CATALOG_ROOT / "catalog.json"
+    catalog_path.write_text(json.dumps(catalog_cards, indent=2), encoding="utf-8")
+
     # Stats
     data_size = output_path.stat().st_size
+    catalog_size = catalog_path.stat().st_size
     tag_count = len(sorted_tag_index)
     print(f"Done!")
     print(f"  explorer-data.json: {data_size / 1024:.1f} KB ({len(explorer_apps)} apps, {tag_count} tags)")
-    print(f"  card.json files: {card_count}")
+    print(f"  catalog.json: {catalog_size / 1024:.1f} KB ({len(catalog_cards)} entries)")
     print(f"  Apps with preview: {with_preview}")
-    print(f"  Output: {output_path}")
+    if ai_merged:
+        print(f"  AI summaries merged into manifests: {ai_merged}")
 
     return 0
 
