@@ -5,7 +5,7 @@ Pipeline:
 1. Copy source research artifacts into catalog/discord
 2. Optimize media into catalog/discord/hyp_media with size gating
 3. Generate per-app manifests in catalog/apps/<app-id>/manifest.json
-4. Generate global manifest index in catalog/manifests/apps-manifest.json
+4. Generate global manifest index in tmp/manifests/apps-manifest.json
 5. Generate missing-media GitHub issue checklist markdown
 """
 
@@ -362,7 +362,7 @@ def build_catalog_manifests(
     mappings = load_filename_mappings(repo_root / "tmp" / "filename-mappings.csv")
 
     apps_out_root = repo_root / "catalog" / "apps"
-    manifests_out = repo_root / "catalog" / "manifests" / "apps-manifest.json"
+    manifests_out = repo_root / "tmp" / "manifests" / "apps-manifest.json"
     issue_out = repo_root / "catalog" / "issues" / "missing-media-checklist.md"
 
     if not dry_run:
@@ -635,7 +635,7 @@ def main():
     print(f"  Dry run: {args.dry_run}")
     print(f"  Missing preview count: {result['missing_count']}")
     if not args.dry_run:
-        print(f"  Global manifest: {repo_root / 'catalog/manifests/apps-manifest.json'}")
+        print(f"  Global manifest: {repo_root / 'tmp/manifests/apps-manifest.json'}")
         print(f"  Issue checklist: {result['issue_path']}")
 
 

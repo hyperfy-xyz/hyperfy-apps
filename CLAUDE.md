@@ -55,7 +55,7 @@ hyp-files/*.hyp (binary)
 - **`catalog/context/`** — AI context: `hyp_index.raw.json` (Discord metadata), `hyp_summaries/` (full app docs), `snippets/` (doc snippets), `source/` (raw docs), `context-index.json`.
 - **`scripts/catalog/`** — Build pipeline scripts.
 - **`scripts/research/`** — AI summarization and context preparation.
-- **`tmp/`** — Gitignored working directory with legacy files and retired catalog dirs.
+- **`tmp/`** — Gitignored working directory. Contains `manifests/` (build pipeline artifacts: `apps-manifest.json`, `ai-summary-report.json`, `ai-summary-failures/`) and legacy files.
 
 ### Web Explorer (`catalog/`)
 

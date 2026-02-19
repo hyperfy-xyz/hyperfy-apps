@@ -5,7 +5,7 @@ Outputs one file per app:
   catalog/apps/<app-id>/ai-summary.json
 
 Inputs:
-  - catalog/manifests/apps-manifest.json
+  - tmp/manifests/apps-manifest.json
   - catalog/apps/*/manifest.json
   - catalog/discord/hyp_index.raw.json
   - catalog/discord/hyp_summaries/*.md
@@ -30,11 +30,11 @@ from typing import Any
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 CATALOG_ROOT = REPO_ROOT / "catalog"
-GLOBAL_MANIFEST = CATALOG_ROOT / "manifests" / "apps-manifest.json"
+GLOBAL_MANIFEST = REPO_ROOT / "tmp" / "manifests" / "apps-manifest.json"
 HYP_INDEX_RAW = CATALOG_ROOT / "discord" / "hyp_index.raw.json"
 SNIPPETS_DIR = CATALOG_ROOT / "context" / "snippets"
-REPORT_PATH = CATALOG_ROOT / "manifests" / "ai-summary-report.json"
-FAILURE_DUMP_DIR = CATALOG_ROOT / "manifests" / "ai-summary-failures"
+REPORT_PATH = REPO_ROOT / "tmp" / "manifests" / "ai-summary-report.json"
+FAILURE_DUMP_DIR = REPO_ROOT / "tmp" / "manifests" / "ai-summary-failures"
 
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 MODEL_DEFAULT = "anthropic/claude-opus-4.6"

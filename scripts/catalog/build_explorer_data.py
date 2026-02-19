@@ -6,7 +6,7 @@ Outputs:
   catalog/apps/<app-id>/card.json           - per-app file for AI agents
 
 Inputs:
-  catalog/manifests/apps-manifest.json
+  tmp/manifests/apps-manifest.json
   catalog/apps/*/manifest.json + ai-summary.json
   v2/*/  (blueprint JSON, index.js, asset files)
 """
@@ -23,7 +23,7 @@ from typing import Any
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 CATALOG_ROOT = REPO_ROOT / "catalog"
-GLOBAL_MANIFEST = CATALOG_ROOT / "manifests" / "apps-manifest.json"
+GLOBAL_MANIFEST = REPO_ROOT / "tmp" / "manifests" / "apps-manifest.json"
 EXPLORER_DATA_DIR = CATALOG_ROOT
 MEDIA_DIR = CATALOG_ROOT / "media"
 V2_APPS_DIR = REPO_ROOT / "v2"
