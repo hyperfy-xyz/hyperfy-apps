@@ -15,7 +15,7 @@
   "script_complexity": "medium",
   "networking": "none",
   "preview_url": "generated_previews/teleport-trigger-box-1431333007888748678.jpg",
-  "download_path": "https://raw.githubusercontent.com/madjin/hyperfy-apps/main/v2-hyp/TeleportTriggerBox.hyp",
+  "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/TeleportTriggerBox.hyp",
   "created_at": "2025-10-24T17:26:21.962Z",
   "props": {
     "collision": true,

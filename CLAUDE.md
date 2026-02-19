@@ -23,8 +23,8 @@ uv run python scripts/catalog/build_catalog.py --skip-optimize
 uv run python scripts/research/summarize_hyp_files_openrouter.py --dry-run
 
 # .hyp file inspection/extraction
-uv run python scripts/hyp_tool.py info v2-hyp/SomeApp.hyp
-uv run python scripts/hyp_tool.py unbundle v2-hyp/SomeApp.hyp output_dir/
+uv run python scripts/hyp_tool.py info hyp-files/SomeApp.hyp
+uv run python scripts/hyp_tool.py unbundle hyp-files/SomeApp.hyp output_dir/
 ```
 
 **Critical:** Always use `uv run python`, never bare `python` or `python3` (enforced by hook).
@@ -34,7 +34,7 @@ uv run python scripts/hyp_tool.py unbundle v2-hyp/SomeApp.hyp output_dir/
 ### Data Pipeline
 
 ```
-v2-hyp/*.hyp (binary)
+hyp-files/*.hyp (binary)
     → scripts/hyp_tool.py unbundle
     → v2/<slug>/ (blueprint JSON + index.js + assets/)
     → scripts/catalog/build_catalog.py
@@ -47,7 +47,7 @@ v2-hyp/*.hyp (binary)
 ### Key Directories
 
 - **`v2/<slug>/`** — Flat app source dirs (slugified). Each has `<Name>.json` (blueprint), `index.js`, and optional `assets/`.
-- **`v2-hyp/`** — Original `.hyp` binary files (174 files).
+- **`hyp-files/`** — Original `.hyp` binary files (174 files).
 - **`catalog/`** — Static web explorer deployed to GitHub Pages. React 18 + HTM, no build step.
 - **`catalog/apps/<app-id>/`** — Per-app metadata: `manifest.json` (provenance), `ai-summary.json` (AI output), `card.json` (merged for explorer/agents).
 - **`catalog/explorer-data.json`** — Single merged JSON fetched by the explorer UI (221KB).
@@ -89,7 +89,7 @@ Blueprint JSON references assets via `"assets/<filename>"` paths. Almost all app
 
 ## Deployment
 
-GitHub Pages auto-deploys `catalog/` on push to `main` when `catalog/**` changes (`.github/workflows/deploy-pages.yml`). The explorer uses relative paths — preview images resolve under `catalog/discord/hyp_media/`, downloads point to GitHub raw CDN for `v2-hyp/*.hyp`.
+GitHub Pages auto-deploys `catalog/` on push to `main` when `catalog/**` changes (`.github/workflows/deploy-pages.yml`). The explorer uses relative paths — preview images resolve under `catalog/discord/hyp_media/`, downloads point to GitHub raw CDN for `hyp-files/*.hyp`.
 
 ## Conventions
 

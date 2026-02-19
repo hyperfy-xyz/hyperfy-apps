@@ -190,9 +190,9 @@ def build_app_entry(
         else:
             catalog_preview = preview_path
 
-    # Download: use GitHub raw URL since v2-hyp/ is outside catalog/
+    # Download: use GitHub raw URL since hyp-files/ is outside catalog/
     hyp_filename = source.get("hyp_filename")
-    download_url = f"{GITHUB_RAW_BASE}/v2-hyp/{hyp_filename}" if hyp_filename else None
+    download_url = f"{GITHUB_RAW_BASE}/hyp-files/{hyp_filename}" if hyp_filename else None
 
     return {
         "id": app_row["app_id"],
@@ -270,7 +270,7 @@ def build_card_json(
             catalog_preview = preview_path
 
     hyp_filename = source.get("hyp_filename")
-    download_url = f"{GITHUB_RAW_BASE}/v2-hyp/{hyp_filename}" if hyp_filename else None
+    download_url = f"{GITHUB_RAW_BASE}/hyp-files/{hyp_filename}" if hyp_filename else None
 
     card: dict[str, Any] = {
         "name": app_row.get("app_name", ""),
