@@ -157,7 +157,7 @@ def build_app_entry(
 
     # Fallback: check for AI-generated preview image
     if not preview_path:
-        matches = list(GENERATED_PREVIEWS_DIR.glob(f"{app_row['app_id']}.*"))
+        matches = list(GENERATED_PREVIEWS_DIR.glob(f"{app_row['app_slug']}.*"))
         if matches:
             preview_path = str(matches[0].relative_to(REPO_ROOT))
 
@@ -198,6 +198,7 @@ def build_app_entry(
         "id": app_row["app_id"],
         "slug": app_row.get("app_slug", ""),
         "name": app_row.get("app_name", ""),
+        "card_path": f"apps/{app_row['app_slug']}/card.json",
         "author": manifest.get("author", {}).get("display_name") or app_row.get("author", "Unknown"),
         "description": description,
         "preview_url": catalog_preview,
@@ -228,7 +229,7 @@ def build_card_json(
 
     # Fallback: check for AI-generated preview image
     if not preview_path:
-        matches = list(GENERATED_PREVIEWS_DIR.glob(f"{app_row['app_id']}.*"))
+        matches = list(GENERATED_PREVIEWS_DIR.glob(f"{app_row['app_slug']}.*"))
         if matches:
             preview_path = str(matches[0].relative_to(REPO_ROOT))
 

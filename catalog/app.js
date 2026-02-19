@@ -61,7 +61,7 @@ function SourceModal({ app, onClose }) {
   const codeRef = useRef(null);
 
   useEffect(() => {
-    const cardUrl = `./apps/${app.id}/card.json`;
+    const cardUrl = app.card_path;
     fetch(cardUrl)
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
@@ -69,7 +69,7 @@ function SourceModal({ app, onClose }) {
       })
       .then((d) => { setCard(d); setLoading(false); })
       .catch((e) => { setError(e.message); setLoading(false); });
-  }, [app.id]);
+  }, [app.card_path]);
 
   // Highlight code after render
   useEffect(() => {
