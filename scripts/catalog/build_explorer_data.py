@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-"""Build merged explorer data from catalog manifests and AI summaries.
+"""Build merged catalog from manifests and AI summaries.
 
 Outputs:
-  catalog/explorer-data.json    - single file for web explorer
-  catalog/catalog.json          - dict keyed by slug for SourceModal lazy-load
+  catalog/catalog.json    - single file for web explorer (version 3)
 
 Inputs:
   context/apps/*/manifest.json  (manifest["ai"] or tmp/ai-summaries/<slug>.json)
@@ -14,7 +13,6 @@ from __future__ import annotations
 
 import json
 import os
-from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -24,7 +22,6 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 CATALOG_ROOT = REPO_ROOT / "catalog"
 CONTEXT_APPS_DIR = REPO_ROOT / "context" / "apps"
 AI_SUMMARIES_DIR = REPO_ROOT / "tmp" / "ai-summaries"
-EXPLORER_DATA_DIR = CATALOG_ROOT
 MEDIA_DIR = CATALOG_ROOT / "media"
 V2_APPS_DIR = REPO_ROOT / "v2"
 
@@ -150,7 +147,7 @@ def build_app_entry(
     v2_dir: Path | None,
     blueprint: dict[str, Any] | None,
 ) -> dict[str, Any]:
-    """Build a single app entry for explorer-data.json."""
+    """Build a single app entry for catalog.json."""
     source = manifest.get("source", {})
     preview_path = manifest.get("preview", {}).get("primary_media_path") or app_row.get("primary_preview")
 
@@ -193,8 +190,24 @@ def build_app_entry(
     hyp_filename = source.get("hyp_filename")
     download_url = f"{GITHUB_RAW_BASE}/hyp-files/{hyp_filename}" if hyp_filename else None
 
-    return {
-        "id": app_row["app_id"],
+    # Extract source excerpts from v2
+    props: dict[str, Any] = {}
+    script_excerpt = ""
+    asset_files: list[str] = []
+
+    if blueprint:
+        props = extract_props(blueprint)
+        asset_files = get_asset_files(blueprint)
+
+    if v2_dir and v2_dir.exists():
+        index_js = v2_dir / "index.js"
+        if index_js.exists():
+            try:
+                script_excerpt = index_js.read_text(encoding="utf-8", errors="ignore")[:2000]
+            except Exception:
+                pass
+
+    entry: dict[str, Any] = {
         "slug": app_row.get("app_slug", ""),
         "name": app_row.get("app_name", ""),
         "author": manifest.get("author", {}).get("display_name") or app_row.get("author", "Unknown"),
@@ -213,86 +226,14 @@ def build_app_entry(
         "has_source": v2_dir is not None and v2_dir.exists(),
     }
 
-
-def build_card_json(
-    app_row: dict[str, Any],
-    manifest: dict[str, Any],
-    ai_summary: dict[str, Any] | None,
-    v2_dir: Path | None,
-    blueprint: dict[str, Any] | None,
-) -> dict[str, Any]:
-    """Build a self-contained card entry for AI agent consumption."""
-    source = manifest.get("source", {})
-    preview_path = manifest.get("preview", {}).get("primary_media_path") or app_row.get("primary_preview")
-
-    # Fallback: check for generated preview image in media/<slug>/preview.*
-    if not preview_path:
-        matches = list((MEDIA_DIR / app_row['app_slug']).glob("preview.*"))
-        if matches:
-            preview_path = str(matches[0].relative_to(REPO_ROOT))
-
-    description = ""
-    if ai_summary:
-        description = ai_summary.get("description", "")
-    if not description:
-        description = manifest.get("description", {}).get("short", "")
-
-    tags = normalize_tags((ai_summary or {}).get("feature_tags", []))
-    interaction_modes = (ai_summary or {}).get("interaction_modes", [])
-    asset_profile = (ai_summary or {}).get("asset_profile", "medium")
-    script_complexity = (ai_summary or {}).get("script_complexity", "medium")
-    networking = (ai_summary or {}).get("networking_profile", "none")
-
-    # Extract source excerpts from v2
-    props: dict[str, Any] = {}
-    script_excerpt = ""
-    asset_files: list[str] = []
-
-    if blueprint:
-        props = extract_props(blueprint)
-        asset_files = get_asset_files(blueprint)
-
-    if v2_dir and v2_dir.exists():
-        index_js = v2_dir / "index.js"
-        if index_js.exists():
-            try:
-                script_excerpt = index_js.read_text(encoding="utf-8", errors="ignore")[:2000]
-            except Exception:
-                pass
-
-    # Make preview_path relative to catalog/ for Pages deployment
-    catalog_preview = None
-    if preview_path:
-        if preview_path.startswith("catalog/"):
-            catalog_preview = preview_path[len("catalog/"):]
-        else:
-            catalog_preview = preview_path
-
-    hyp_filename = source.get("hyp_filename")
-    download_url = f"{GITHUB_RAW_BASE}/hyp-files/{hyp_filename}" if hyp_filename else None
-
-    card: dict[str, Any] = {
-        "name": app_row.get("app_name", ""),
-        "author": manifest.get("author", {}).get("display_name") or app_row.get("author", "Unknown"),
-        "description": description,
-        "tags": tags,
-        "interaction_modes": interaction_modes,
-        "asset_profile": asset_profile,
-        "script_complexity": script_complexity,
-        "networking": networking,
-        "preview_url": catalog_preview,
-        "download_path": download_url,
-        "created_at": source.get("discord_timestamp"),
-    }
-
     if props:
-        card["props"] = props
+        entry["props"] = props
     if script_excerpt:
-        card["script_excerpt"] = script_excerpt
+        entry["script_excerpt"] = script_excerpt
     if asset_files:
-        card["asset_files"] = asset_files
+        entry["asset_files"] = asset_files
 
-    return card
+    return entry
 
 
 def main() -> int:
@@ -304,9 +245,8 @@ def main() -> int:
 
     print(f"Processing {len(manifest_paths)} apps...")
 
-    explorer_apps: list[dict[str, Any]] = []
-    tag_index: dict[str, list[str]] = defaultdict(list)
-    catalog_cards: dict[str, Any] = {}
+    apps: list[dict[str, Any]] = []
+    tag_counts: dict[str, int] = {}
     with_preview = 0
     ai_merged = 0
 
@@ -350,56 +290,46 @@ def main() -> int:
             if json_files:
                 blueprint = read_json(json_files[0])
 
-        # Build explorer entry
+        # Build app entry
         entry = build_app_entry(app_row, manifest, ai_summary, v2_dir, blueprint)
-        explorer_apps.append(entry)
+        apps.append(entry)
 
         if entry["has_preview"]:
             with_preview += 1
 
-        # Build tag index
+        # Accumulate tag counts
         for tag in entry["tags"]:
-            tag_index[tag].append(app_id)
-
-        # Build card entry for catalog.json
-        card = build_card_json(app_row, manifest, ai_summary, v2_dir, blueprint)
-        catalog_cards[slug] = card
+            tag_counts[tag] = tag_counts.get(tag, 0) + 1
 
     # Sort apps by name
-    explorer_apps.sort(key=lambda x: x["name"].lower())
+    apps.sort(key=lambda x: x["name"].lower())
 
     # Sort tag index by frequency (most used first)
     sorted_tag_index = dict(
-        sorted(tag_index.items(), key=lambda x: len(x[1]), reverse=True)
+        sorted(tag_counts.items(), key=lambda x: x[1], reverse=True)
     )
 
-    # Build final explorer-data.json
-    explorer_data = {
-        "version": 2,
+    # Build final catalog.json
+    catalog_data = {
+        "version": 3,
         "generated_at": now_iso(),
         "counts": {
-            "total": len(explorer_apps),
+            "total": len(apps),
             "with_preview": with_preview,
         },
         "tag_index": sorted_tag_index,
-        "apps": explorer_apps,
+        "apps": apps,
     }
 
-    EXPLORER_DATA_DIR.mkdir(parents=True, exist_ok=True)
-    output_path = EXPLORER_DATA_DIR / "explorer-data.json"
-    output_path.write_text(json.dumps(explorer_data, indent=2), encoding="utf-8")
-
-    # Write catalog.json (dict keyed by slug, for SourceModal)
+    CATALOG_ROOT.mkdir(parents=True, exist_ok=True)
     catalog_path = CATALOG_ROOT / "catalog.json"
-    catalog_path.write_text(json.dumps(catalog_cards, indent=2), encoding="utf-8")
+    catalog_path.write_text(json.dumps(catalog_data, indent=2), encoding="utf-8")
 
     # Stats
-    data_size = output_path.stat().st_size
     catalog_size = catalog_path.stat().st_size
     tag_count = len(sorted_tag_index)
     print(f"Done!")
-    print(f"  explorer-data.json: {data_size / 1024:.1f} KB ({len(explorer_apps)} apps, {tag_count} tags)")
-    print(f"  catalog.json: {catalog_size / 1024:.1f} KB ({len(catalog_cards)} entries)")
+    print(f"  catalog.json: {catalog_size / 1024:.1f} KB ({len(apps)} apps, {tag_count} tags)")
     print(f"  Apps with preview: {with_preview}")
     if ai_merged:
         print(f"  AI summaries merged into manifests: {ai_merged}")

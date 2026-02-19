@@ -4,20 +4,9 @@ import htm from "htm";
 
 const html = htm.bind(React.createElement);
 
-const EXPLORER_DATA = "./explorer-data.json";
 const CATALOG_DATA = "./catalog.json";
 const MIN_TAG_COUNT = 3; // Only show tags used by this many apps in sidebar
 
-// Module-level cache for catalog.json (fetched once on first SourceModal open)
-const catalogRef = { data: null, promise: null };
-function fetchCatalog() {
-  if (!catalogRef.promise) {
-    catalogRef.promise = fetch(CATALOG_DATA)
-      .then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
-      .then((d) => { catalogRef.data = d; return d; });
-  }
-  return catalogRef.promise;
-}
 const MISSING_PREVIEW_SVG = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 24 24' fill='none' stroke='%233a3a5a' stroke-width='1.5'%3E%3Crect x='3' y='3' width='18' height='18' rx='2'/%3E%3Ccircle cx='8.5' cy='8.5' r='1.5'/%3E%3Cpath d='m21 15-5-5L5 21'/%3E%3C/svg%3E`;
 
 function formatDate(iso) {
@@ -62,33 +51,19 @@ function VideoPreview({ src }) {
   `;
 }
 
-// ---- SourceModal: fetches catalog.json once (cached), syntax highlights ----
+// ---- SourceModal: reads from preloaded app data ----
 
 function SourceModal({ app, onClose }) {
-  const [card, setCard] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
   const [activeTab, setActiveTab] = useState("script");
   const [copied, setCopied] = useState(false);
   const codeRef = useRef(null);
 
-  useEffect(() => {
-    fetchCatalog()
-      .then((catalog) => {
-        const cardData = catalog[app.slug];
-        if (!cardData) throw new Error(`App "${app.slug}" not found in catalog`);
-        setCard(cardData);
-        setLoading(false);
-      })
-      .catch((e) => { setError(e.message); setLoading(false); });
-  }, [app.slug]);
-
   // Highlight code after render
   useEffect(() => {
-    if (card && codeRef.current && window.Prism) {
+    if (codeRef.current && window.Prism) {
       window.Prism.highlightAllUnder(codeRef.current);
     }
-  }, [card, activeTab]);
+  }, [activeTab]);
 
   // Close on Escape
   useEffect(() => {
@@ -98,11 +73,10 @@ function SourceModal({ app, onClose }) {
   }, [onClose]);
 
   const getCurrentCode = useCallback(() => {
-    if (!card) return "";
-    if (activeTab === "script") return card.script_excerpt || "// No script found";
-    if (activeTab === "blueprint") return JSON.stringify(card.props || {}, null, 2);
+    if (activeTab === "script") return app.script_excerpt || "// No script found";
+    if (activeTab === "blueprint") return JSON.stringify(app.props || {}, null, 2);
     return "";
-  }, [card, activeTab]);
+  }, [app, activeTab]);
 
   const onCopy = useCallback(() => {
     const text = getCurrentCode();
@@ -152,39 +126,31 @@ function SourceModal({ app, onClose }) {
             : null}
         </div>
 
-        ${!loading && card ? html`
-          <div className="modal-tabs">
-            ${card.script_excerpt ? html`
-              <button className=${`modal-tab ${activeTab === "script" ? "active" : ""}`}
-                onClick=${() => setActiveTab("script")}>index.js</button>
-            ` : null}
-            ${card.props && Object.keys(card.props).length > 0 ? html`
-              <button className=${`modal-tab ${activeTab === "blueprint" ? "active" : ""}`}
-                onClick=${() => setActiveTab("blueprint")}>Props / Blueprint</button>
-            ` : null}
-            <button className=${`modal-copy-btn ${copied ? "copied" : ""}`} onClick=${onCopy}>
-              ${copied ? "Copied!" : "Copy"}
-            </button>
-          </div>
-        ` : null}
-
-        <div className="modal-body" ref=${codeRef}>
-          ${loading ? html`<div className="modal-loading">Loading source...</div>` : null}
-          ${error ? html`<div className="modal-error">Failed to load: ${error}</div>` : null}
-          ${!loading && !error && card ? html`
-            <pre className=${`language-${lang}`}><code className=${`language-${lang}`}>${getCurrentCode()}</code></pre>
+        <div className="modal-tabs">
+          ${app.script_excerpt ? html`
+            <button className=${`modal-tab ${activeTab === "script" ? "active" : ""}`}
+              onClick=${() => setActiveTab("script")}>index.js</button>
           ` : null}
+          ${app.props && Object.keys(app.props).length > 0 ? html`
+            <button className=${`modal-tab ${activeTab === "blueprint" ? "active" : ""}`}
+              onClick=${() => setActiveTab("blueprint")}>Props / Blueprint</button>
+          ` : null}
+          <button className=${`modal-copy-btn ${copied ? "copied" : ""}`} onClick=${onCopy}>
+            ${copied ? "Copied!" : "Copy"}
+          </button>
         </div>
 
-        ${!loading && card ? html`
-          <div className="modal-meta">
-            ${card.asset_files?.length ? html`
-              <span className="modal-meta-item"><strong>Assets:</strong> ${card.asset_files.join(", ")}</span>
-            ` : null}
-            <span className="modal-meta-item"><strong>Complexity:</strong> ${card.script_complexity}</span>
-            <span className="modal-meta-item"><strong>Networking:</strong> ${card.networking}</span>
-          </div>
-        ` : null}
+        <div className="modal-body" ref=${codeRef}>
+          <pre className=${`language-${lang}`}><code className=${`language-${lang}`}>${getCurrentCode()}</code></pre>
+        </div>
+
+        <div className="modal-meta">
+          ${app.asset_files?.length ? html`
+            <span className="modal-meta-item"><strong>Assets:</strong> ${app.asset_files.join(", ")}</span>
+          ` : null}
+          <span className="modal-meta-item"><strong>Complexity:</strong> ${app.script_complexity}</span>
+          <span className="modal-meta-item"><strong>Networking:</strong> ${app.networking}</span>
+        </div>
       </div>
     </div>
   `;
@@ -285,8 +251,8 @@ function AppCard({ app, onTagClick, onSourceClick, onAuthorClick }) {
 function TagSidebar({ tagIndex, activeTags, onTagToggle }) {
   const filteredTags = useMemo(() => {
     return Object.entries(tagIndex)
-      .filter(([, apps]) => apps.length >= MIN_TAG_COUNT)
-      .sort((a, b) => b[1].length - a[1].length);
+      .filter(([, count]) => count >= MIN_TAG_COUNT)
+      .sort((a, b) => b[1] - a[1]);
   }, [tagIndex]);
 
   return html`
@@ -296,14 +262,14 @@ function TagSidebar({ tagIndex, activeTags, onTagToggle }) {
       </div>
       <div className="tag-list">
         ${filteredTags.map(
-          ([tag, apps]) => html`
+          ([tag, count]) => html`
             <div
               key=${tag}
               className=${`tag-item ${activeTags.has(tag) ? "active" : ""}`}
               onClick=${() => onTagToggle(tag)}
             >
               <span>${tag}</span>
-              <span className="tag-count">${apps.length}</span>
+              <span className="tag-count">${count}</span>
             </div>
           `
         )}
@@ -323,8 +289,8 @@ function TagSidebar({ tagIndex, activeTags, onTagToggle }) {
 function MobileTags({ tagIndex, activeTags, onTagToggle }) {
   const filteredTags = useMemo(() => {
     return Object.entries(tagIndex)
-      .filter(([, apps]) => apps.length >= MIN_TAG_COUNT)
-      .sort((a, b) => b[1].length - a[1].length)
+      .filter(([, count]) => count >= MIN_TAG_COUNT)
+      .sort((a, b) => b[1] - a[1])
       .slice(0, 30);
   }, [tagIndex]);
 
@@ -356,7 +322,7 @@ function Explorer() {
 
   useEffect(() => {
     let cancelled = false;
-    fetch(EXPLORER_DATA)
+    fetch(CATALOG_DATA)
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.json();
@@ -539,7 +505,7 @@ function Explorer() {
           : html`
               <section className="grid">
                 ${filteredApps.map(
-                  (app) => html`<${AppCard} key=${app.id} app=${app} onTagClick=${onTagToggle} onSourceClick=${setSourceApp} onAuthorClick=${onAuthorClick} />`
+                  (app) => html`<${AppCard} key=${app.slug} app=${app} onTagClick=${onTagToggle} onSourceClick=${setSourceApp} onAuthorClick=${onAuthorClick} />`
                 )}
               </section>
             `}
