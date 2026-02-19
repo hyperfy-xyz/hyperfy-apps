@@ -2,14 +2,14 @@
 """Summarize Hyperfy apps using OpenRouter into lean JSON sidecars.
 
 Outputs one file per app:
-  catalog/apps/<app-id>/ai-summary.json
+  tmp/ai-summaries/<slug>.json
 
 Inputs:
-  - catalog/manifests/apps-manifest.json
-  - catalog/apps/*/manifest.json
-  - catalog/discord/hyp_index.raw.json
-  - catalog/discord/hyp_summaries/*.md
-  - catalog/context/snippets/*.snippet.txt (conditionally)
+  - tmp/manifests/apps-manifest.json
+  - context/apps/*/manifest.json
+  - context/hyp_index.raw.json
+  - context/hyp_summaries/*.md
+  - context/snippets/*.snippet.txt (conditionally)
 """
 
 from __future__ import annotations
@@ -29,12 +29,14 @@ from typing import Any
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-CATALOG_ROOT = REPO_ROOT / "catalog"
-GLOBAL_MANIFEST = CATALOG_ROOT / "manifests" / "apps-manifest.json"
-HYP_INDEX_RAW = CATALOG_ROOT / "discord" / "hyp_index.raw.json"
-SNIPPETS_DIR = CATALOG_ROOT / "context" / "snippets"
-REPORT_PATH = CATALOG_ROOT / "manifests" / "ai-summary-report.json"
-FAILURE_DUMP_DIR = CATALOG_ROOT / "manifests" / "ai-summary-failures"
+CONTEXT_DIR = REPO_ROOT / "context"
+CONTEXT_APPS_DIR = CONTEXT_DIR / "apps"
+GLOBAL_MANIFEST = REPO_ROOT / "tmp" / "manifests" / "apps-manifest.json"
+HYP_INDEX_RAW = CONTEXT_DIR / "hyp_index.raw.json"
+SNIPPETS_DIR = CONTEXT_DIR / "snippets"
+AI_SUMMARIES_DIR = REPO_ROOT / "tmp" / "ai-summaries"
+REPORT_PATH = REPO_ROOT / "tmp" / "manifests" / "ai-summary-report.json"
+FAILURE_DUMP_DIR = REPO_ROOT / "tmp" / "manifests" / "ai-summary-failures"
 
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 MODEL_DEFAULT = "anthropic/claude-opus-4.6"
@@ -430,9 +432,9 @@ def process_one(
     dry_run: bool,
     hyp_index_entries: list[dict[str, Any]],
 ) -> dict[str, Any]:
+    slug = app_row.get("app_slug") or app_row["app_id"]
     app_manifest_path = REPO_ROOT / app_row["manifest_path"]
-    app_dir = app_manifest_path.parent
-    ai_summary_path = app_dir / "ai-summary.json"
+    ai_summary_path = AI_SUMMARIES_DIR / f"{slug}.json"
 
     if ai_summary_path.exists() and not force:
         return {"app_id": app_row["app_id"], "status": "skipped_existing", "path": str(ai_summary_path)}
@@ -470,6 +472,7 @@ def process_one(
     if dry_run:
         return {
             "app_id": app_row["app_id"],
+            "app_slug": slug,
             "status": "dry_run",
             "path": str(ai_summary_path),
             "has_hyp_entry": bool(hyp_entry),
@@ -525,7 +528,7 @@ def process_one(
         if rejection:
             print(f"    WARNING: {app_row['app_id']}: quality gate still failed after retry: {rejection}")
 
-    app_dir.mkdir(parents=True, exist_ok=True)
+    AI_SUMMARIES_DIR.mkdir(parents=True, exist_ok=True)
     ai_summary_path.write_text(json.dumps(summary, indent=2), encoding="utf-8")
 
     return {
@@ -550,6 +553,7 @@ def main() -> int:
 
     if not GLOBAL_MANIFEST.exists():
         print(f"Error: missing {GLOBAL_MANIFEST}")
+        print("Run build_catalog.py first to generate it (requires source-research dir)")
         return 1
 
     if not HYP_INDEX_RAW.exists():

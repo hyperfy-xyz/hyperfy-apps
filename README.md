@@ -9,7 +9,7 @@ hyperfy-apps/
 ├── v1/              # 40 V1 React-based apps (legacy platform)
 ├── v2/              # ~200 V2 apps (extracted, human-readable)
 │   └── <slug>/      # Each app: blueprint JSON + index.js + assets/
-├── v2-hyp/          # 174 original .hyp binary files
+├── hyp-files/       # 174 original .hyp binary files
 └── package.json
 ```
 
@@ -204,7 +204,7 @@ cat "v2/fire/Fire.json"
 **Import to Hyperfy world:**
 ```bash
 # Copy .hyp file to your world's apps folder
-cp v2-hyp/Fire.hyp ~/hyperfy/worlds/myworld/apps/
+cp hyp-files/Fire.hyp ~/hyperfy/worlds/myworld/apps/
 ```
 
 ## .hyp Format

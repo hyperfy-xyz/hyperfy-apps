@@ -5,7 +5,7 @@ Uses Google Gemini 3 Pro Image via OpenRouter to generate stylized 16:9 preview
 images based on each app's description and tags.
 
 Outputs:
-  catalog/generated_previews/{app_id}.png
+  catalog/media/{slug}/preview.png
 
 Inputs:
   catalog/explorer-data.json                 (app list, filter has_preview=false)
@@ -30,8 +30,8 @@ from typing import Any
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 CATALOG_ROOT = REPO_ROOT / "catalog"
-EXPLORER_DATA = CATALOG_ROOT / "explorer" / "data" / "explorer-data.json"
-GENERATED_DIR = CATALOG_ROOT / "generated_previews"
+EXPLORER_DATA = CATALOG_ROOT / "explorer-data.json"
+MEDIA_DIR = CATALOG_ROOT / "media"
 
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 MODEL_DEFAULT = "google/gemini-3-pro-image-preview"
@@ -227,14 +227,15 @@ def process_one(
 ) -> dict[str, Any]:
     """Generate a preview image for one app."""
     app_id = app["id"]
+    slug = app.get("slug", app_id)
 
-    # Check for any existing preview (jpg or png)
-    existing = list(GENERATED_DIR.glob(f"{app_id}.*"))
+    # Check for any existing generated preview in media/<slug>/preview.*
+    existing = list((MEDIA_DIR / slug).glob("preview.*"))
     if existing and not force:
         return {"app_id": app_id, "status": "skipped_existing"}
 
     # Load card.json for richer context
-    card_path = CATALOG_ROOT / "apps" / app_id / "card.json"
+    card_path = CATALOG_ROOT / "apps" / slug / "card.json"
     card = read_json(card_path)
 
     name = (card or {}).get("name") or app.get("name", app_id)
@@ -252,8 +253,9 @@ def process_one(
 
     img_bytes, ext = call_openrouter_image(prompt, api_key, model, max_retries)
 
-    GENERATED_DIR.mkdir(parents=True, exist_ok=True)
-    output_path = GENERATED_DIR / f"{app_id}.{ext}"
+    out_dir = MEDIA_DIR / slug
+    out_dir.mkdir(parents=True, exist_ok=True)
+    output_path = out_dir / f"preview.{ext}"
     output_path.write_bytes(img_bytes)
 
     size_kb = len(img_bytes) / 1024
@@ -315,7 +317,7 @@ def main() -> int:
     print(f"Apps to generate previews for: {len(apps)}")
     print(f"Model: {args.model}")
     print(f"Dry run: {args.dry_run}")
-    print(f"Output dir: {GENERATED_DIR}")
+    print(f"Output dir: {MEDIA_DIR}/<slug>/preview.*")
 
     if not apps:
         print("Nothing to do.")

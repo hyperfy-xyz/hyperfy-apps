@@ -4,8 +4,9 @@ import htm from "htm";
 
 const html = htm.bind(React.createElement);
 
-const EXPLORER_DATA = "./explorer-data.json";
+const CATALOG_DATA = "./catalog.json";
 const MIN_TAG_COUNT = 3; // Only show tags used by this many apps in sidebar
+
 const MISSING_PREVIEW_SVG = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 24 24' fill='none' stroke='%233a3a5a' stroke-width='1.5'%3E%3Crect x='3' y='3' width='18' height='18' rx='2'/%3E%3Ccircle cx='8.5' cy='8.5' r='1.5'/%3E%3Cpath d='m21 15-5-5L5 21'/%3E%3C/svg%3E`;
 
 function formatDate(iso) {
@@ -50,33 +51,19 @@ function VideoPreview({ src }) {
   `;
 }
 
-// ---- SourceModal: fetches card.json on demand, syntax highlights ----
+// ---- SourceModal: reads from preloaded app data ----
 
 function SourceModal({ app, onClose }) {
-  const [card, setCard] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
   const [activeTab, setActiveTab] = useState("script");
   const [copied, setCopied] = useState(false);
   const codeRef = useRef(null);
 
-  useEffect(() => {
-    const cardUrl = `./apps/${app.id}/card.json`;
-    fetch(cardUrl)
-      .then((r) => {
-        if (!r.ok) throw new Error(`HTTP ${r.status}`);
-        return r.json();
-      })
-      .then((d) => { setCard(d); setLoading(false); })
-      .catch((e) => { setError(e.message); setLoading(false); });
-  }, [app.id]);
-
   // Highlight code after render
   useEffect(() => {
-    if (card && codeRef.current && window.Prism) {
+    if (codeRef.current && window.Prism) {
       window.Prism.highlightAllUnder(codeRef.current);
     }
-  }, [card, activeTab]);
+  }, [activeTab]);
 
   // Close on Escape
   useEffect(() => {
@@ -86,11 +73,10 @@ function SourceModal({ app, onClose }) {
   }, [onClose]);
 
   const getCurrentCode = useCallback(() => {
-    if (!card) return "";
-    if (activeTab === "script") return card.script_excerpt || "// No script found";
-    if (activeTab === "blueprint") return JSON.stringify(card.props || {}, null, 2);
+    if (activeTab === "script") return app.script_excerpt || "// No script found";
+    if (activeTab === "blueprint") return JSON.stringify(app.props || {}, null, 2);
     return "";
-  }, [card, activeTab]);
+  }, [app, activeTab]);
 
   const onCopy = useCallback(() => {
     const text = getCurrentCode();
@@ -140,39 +126,31 @@ function SourceModal({ app, onClose }) {
             : null}
         </div>
 
-        ${!loading && card ? html`
-          <div className="modal-tabs">
-            ${card.script_excerpt ? html`
-              <button className=${`modal-tab ${activeTab === "script" ? "active" : ""}`}
-                onClick=${() => setActiveTab("script")}>index.js</button>
-            ` : null}
-            ${card.props && Object.keys(card.props).length > 0 ? html`
-              <button className=${`modal-tab ${activeTab === "blueprint" ? "active" : ""}`}
-                onClick=${() => setActiveTab("blueprint")}>Props / Blueprint</button>
-            ` : null}
-            <button className=${`modal-copy-btn ${copied ? "copied" : ""}`} onClick=${onCopy}>
-              ${copied ? "Copied!" : "Copy"}
-            </button>
-          </div>
-        ` : null}
-
-        <div className="modal-body" ref=${codeRef}>
-          ${loading ? html`<div className="modal-loading">Loading source...</div>` : null}
-          ${error ? html`<div className="modal-error">Failed to load: ${error}</div>` : null}
-          ${!loading && !error && card ? html`
-            <pre className=${`language-${lang}`}><code className=${`language-${lang}`}>${getCurrentCode()}</code></pre>
+        <div className="modal-tabs">
+          ${app.script_excerpt ? html`
+            <button className=${`modal-tab ${activeTab === "script" ? "active" : ""}`}
+              onClick=${() => setActiveTab("script")}>index.js</button>
           ` : null}
+          ${app.props && Object.keys(app.props).length > 0 ? html`
+            <button className=${`modal-tab ${activeTab === "blueprint" ? "active" : ""}`}
+              onClick=${() => setActiveTab("blueprint")}>Props / Blueprint</button>
+          ` : null}
+          <button className=${`modal-copy-btn ${copied ? "copied" : ""}`} onClick=${onCopy}>
+            ${copied ? "Copied!" : "Copy"}
+          </button>
         </div>
 
-        ${!loading && card ? html`
-          <div className="modal-meta">
-            ${card.asset_files?.length ? html`
-              <span className="modal-meta-item"><strong>Assets:</strong> ${card.asset_files.join(", ")}</span>
-            ` : null}
-            <span className="modal-meta-item"><strong>Complexity:</strong> ${card.script_complexity}</span>
-            <span className="modal-meta-item"><strong>Networking:</strong> ${card.networking}</span>
-          </div>
-        ` : null}
+        <div className="modal-body" ref=${codeRef}>
+          <pre className=${`language-${lang}`}><code className=${`language-${lang}`}>${getCurrentCode()}</code></pre>
+        </div>
+
+        <div className="modal-meta">
+          ${app.asset_files?.length ? html`
+            <span className="modal-meta-item"><strong>Assets:</strong> ${app.asset_files.join(", ")}</span>
+          ` : null}
+          <span className="modal-meta-item"><strong>Complexity:</strong> ${app.script_complexity}</span>
+          <span className="modal-meta-item"><strong>Networking:</strong> ${app.networking}</span>
+        </div>
       </div>
     </div>
   `;
@@ -273,8 +251,8 @@ function AppCard({ app, onTagClick, onSourceClick, onAuthorClick }) {
 function TagSidebar({ tagIndex, activeTags, onTagToggle }) {
   const filteredTags = useMemo(() => {
     return Object.entries(tagIndex)
-      .filter(([, apps]) => apps.length >= MIN_TAG_COUNT)
-      .sort((a, b) => b[1].length - a[1].length);
+      .filter(([, count]) => count >= MIN_TAG_COUNT)
+      .sort((a, b) => b[1] - a[1]);
   }, [tagIndex]);
 
   return html`
@@ -284,20 +262,20 @@ function TagSidebar({ tagIndex, activeTags, onTagToggle }) {
       </div>
       <div className="tag-list">
         ${filteredTags.map(
-          ([tag, apps]) => html`
+          ([tag, count]) => html`
             <div
               key=${tag}
               className=${`tag-item ${activeTags.has(tag) ? "active" : ""}`}
               onClick=${() => onTagToggle(tag)}
             >
               <span>${tag}</span>
-              <span className="tag-count">${apps.length}</span>
+              <span className="tag-count">${count}</span>
             </div>
           `
         )}
       </div>
       <div className="sidebar-footer">
-        <a className="sidebar-footer-link" href="https://github.com/madjin/hyperfy-apps/issues" target="_blank" rel="noopener noreferrer">
+        <a className="sidebar-footer-link" href="https://github.com/hyperfy-xyz/hyperfy-apps/issues" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>
           Report Issues
         </a>
@@ -311,8 +289,8 @@ function TagSidebar({ tagIndex, activeTags, onTagToggle }) {
 function MobileTags({ tagIndex, activeTags, onTagToggle }) {
   const filteredTags = useMemo(() => {
     return Object.entries(tagIndex)
-      .filter(([, apps]) => apps.length >= MIN_TAG_COUNT)
-      .sort((a, b) => b[1].length - a[1].length)
+      .filter(([, count]) => count >= MIN_TAG_COUNT)
+      .sort((a, b) => b[1] - a[1])
       .slice(0, 30);
   }, [tagIndex]);
 
@@ -344,7 +322,7 @@ function Explorer() {
 
   useEffect(() => {
     let cancelled = false;
-    fetch(EXPLORER_DATA)
+    fetch(CATALOG_DATA)
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.json();
@@ -527,7 +505,7 @@ function Explorer() {
           : html`
               <section className="grid">
                 ${filteredApps.map(
-                  (app) => html`<${AppCard} key=${app.id} app=${app} onTagClick=${onTagToggle} onSourceClick=${setSourceApp} onAuthorClick=${onAuthorClick} />`
+                  (app) => html`<${AppCard} key=${app.slug} app=${app} onTagClick=${onTagToggle} onSourceClick=${setSourceApp} onAuthorClick=${onAuthorClick} />`
                 )}
               </section>
             `}

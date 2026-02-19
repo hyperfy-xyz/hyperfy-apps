@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
-"""Build merged explorer data from catalog manifests and AI summaries.
+"""Build merged catalog from manifests and AI summaries.
 
 Outputs:
-  catalog/explorer-data.json                 - single file for web explorer
-  catalog/apps/<app-id>/card.json           - per-app file for AI agents
+  catalog/catalog.json    - single file for web explorer (version 3)
 
 Inputs:
-  catalog/manifests/apps-manifest.json
-  catalog/apps/*/manifest.json + ai-summary.json
+  context/apps/*/manifest.json  (manifest["ai"] or tmp/ai-summaries/<slug>.json)
   v2/*/  (blueprint JSON, index.js, asset files)
 """
 
@@ -15,7 +13,6 @@ from __future__ import annotations
 
 import json
 import os
-from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -23,11 +20,10 @@ from typing import Any
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 CATALOG_ROOT = REPO_ROOT / "catalog"
-GLOBAL_MANIFEST = CATALOG_ROOT / "manifests" / "apps-manifest.json"
-EXPLORER_DATA_DIR = CATALOG_ROOT
-GENERATED_PREVIEWS_DIR = CATALOG_ROOT / "generated_previews"
+CONTEXT_APPS_DIR = REPO_ROOT / "context" / "apps"
+AI_SUMMARIES_DIR = REPO_ROOT / "tmp" / "ai-summaries"
+MEDIA_DIR = CATALOG_ROOT / "media"
 V2_APPS_DIR = REPO_ROOT / "v2"
-V2_ASSETS_DIR = REPO_ROOT / "v2" / "assets"
 
 def detect_github_raw_base() -> str:
     """Detect GitHub raw URL base from git remote, with fallback."""
@@ -47,7 +43,7 @@ def detect_github_raw_base() -> str:
             return f"https://raw.githubusercontent.com/{parts}/main"
     except Exception:
         pass
-    return ""
+    return "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main"
 
 
 GITHUB_RAW_BASE = detect_github_raw_base()
@@ -151,13 +147,13 @@ def build_app_entry(
     v2_dir: Path | None,
     blueprint: dict[str, Any] | None,
 ) -> dict[str, Any]:
-    """Build a single app entry for explorer-data.json."""
+    """Build a single app entry for catalog.json."""
     source = manifest.get("source", {})
     preview_path = manifest.get("preview", {}).get("primary_media_path") or app_row.get("primary_preview")
 
-    # Fallback: check for AI-generated preview image
+    # Fallback: check for generated preview image in media/<slug>/preview.*
     if not preview_path:
-        matches = list(GENERATED_PREVIEWS_DIR.glob(f"{app_row['app_id']}.*"))
+        matches = list((MEDIA_DIR / app_row['app_slug']).glob("preview.*"))
         if matches:
             preview_path = str(matches[0].relative_to(REPO_ROOT))
 
@@ -190,59 +186,9 @@ def build_app_entry(
         else:
             catalog_preview = preview_path
 
-    # Download: use GitHub raw URL since v2-hyp/ is outside catalog/
+    # Download: use GitHub raw URL since hyp-files/ is outside catalog/
     hyp_filename = source.get("hyp_filename")
-    download_url = f"{GITHUB_RAW_BASE}/v2-hyp/{hyp_filename}" if hyp_filename else None
-
-    return {
-        "id": app_row["app_id"],
-        "slug": app_row.get("app_slug", ""),
-        "name": app_row.get("app_name", ""),
-        "author": manifest.get("author", {}).get("display_name") or app_row.get("author", "Unknown"),
-        "description": description,
-        "preview_url": catalog_preview,
-        "preview_type": media_type_from_path(preview_path),
-        "hyp_filename": hyp_filename,
-        "download_path": download_url,
-        "created_at": source.get("discord_timestamp"),
-        "tags": tags,
-        "interaction_modes": interaction_modes,
-        "asset_profile": asset_profile,
-        "script_complexity": script_complexity,
-        "networking": networking,
-        "has_preview": bool(preview_path),
-        "has_source": v2_dir is not None and v2_dir.exists(),
-    }
-
-
-def build_card_json(
-    app_row: dict[str, Any],
-    manifest: dict[str, Any],
-    ai_summary: dict[str, Any] | None,
-    v2_dir: Path | None,
-    blueprint: dict[str, Any] | None,
-) -> dict[str, Any]:
-    """Build a self-contained card.json for AI agent consumption."""
-    source = manifest.get("source", {})
-    preview_path = manifest.get("preview", {}).get("primary_media_path") or app_row.get("primary_preview")
-
-    # Fallback: check for AI-generated preview image
-    if not preview_path:
-        matches = list(GENERATED_PREVIEWS_DIR.glob(f"{app_row['app_id']}.*"))
-        if matches:
-            preview_path = str(matches[0].relative_to(REPO_ROOT))
-
-    description = ""
-    if ai_summary:
-        description = ai_summary.get("description", "")
-    if not description:
-        description = manifest.get("description", {}).get("short", "")
-
-    tags = normalize_tags((ai_summary or {}).get("feature_tags", []))
-    interaction_modes = (ai_summary or {}).get("interaction_modes", [])
-    asset_profile = (ai_summary or {}).get("asset_profile", "medium")
-    script_complexity = (ai_summary or {}).get("script_complexity", "medium")
-    networking = (ai_summary or {}).get("networking_profile", "none")
+    download_url = f"{GITHUB_RAW_BASE}/hyp-files/{hyp_filename}" if hyp_filename else None
 
     # Extract source excerpts from v2
     props: dict[str, Any] = {}
@@ -261,71 +207,77 @@ def build_card_json(
             except Exception:
                 pass
 
-    # Make preview_path relative to catalog/ for Pages deployment
-    catalog_preview = None
-    if preview_path:
-        if preview_path.startswith("catalog/"):
-            catalog_preview = preview_path[len("catalog/"):]
-        else:
-            catalog_preview = preview_path
-
-    hyp_filename = source.get("hyp_filename")
-    download_url = f"{GITHUB_RAW_BASE}/v2-hyp/{hyp_filename}" if hyp_filename else None
-
-    card: dict[str, Any] = {
+    entry: dict[str, Any] = {
+        "slug": app_row.get("app_slug", ""),
         "name": app_row.get("app_name", ""),
         "author": manifest.get("author", {}).get("display_name") or app_row.get("author", "Unknown"),
         "description": description,
+        "preview_url": catalog_preview,
+        "preview_type": media_type_from_path(preview_path),
+        "hyp_filename": hyp_filename,
+        "download_path": download_url,
+        "created_at": source.get("discord_timestamp"),
         "tags": tags,
         "interaction_modes": interaction_modes,
         "asset_profile": asset_profile,
         "script_complexity": script_complexity,
         "networking": networking,
-        "preview_url": catalog_preview,
-        "download_path": download_url,
-        "created_at": source.get("discord_timestamp"),
+        "has_preview": bool(preview_path),
+        "has_source": v2_dir is not None and v2_dir.exists(),
     }
 
     if props:
-        card["props"] = props
+        entry["props"] = props
     if script_excerpt:
-        card["script_excerpt"] = script_excerpt
+        entry["script_excerpt"] = script_excerpt
     if asset_files:
-        card["asset_files"] = asset_files
+        entry["asset_files"] = asset_files
 
-    return card
+    return entry
 
 
 def main() -> int:
-    if not GLOBAL_MANIFEST.exists():
-        print(f"Error: missing {GLOBAL_MANIFEST}")
+    manifest_paths = sorted(CONTEXT_APPS_DIR.glob("*/manifest.json"))
+    if not manifest_paths:
+        print(f"Error: no manifests found in {CONTEXT_APPS_DIR}")
+        print("Run build_catalog.py first to generate them (requires source-research dir)")
         return 1
 
-    global_manifest = read_json(GLOBAL_MANIFEST)
-    if not global_manifest:
-        print("Error: could not parse apps-manifest.json")
-        return 1
+    print(f"Processing {len(manifest_paths)} apps...")
 
-    app_rows = global_manifest.get("apps", [])
-    print(f"Processing {len(app_rows)} apps...")
-
-    explorer_apps: list[dict[str, Any]] = []
-    tag_index: dict[str, list[str]] = defaultdict(list)
+    apps: list[dict[str, Any]] = []
+    tag_counts: dict[str, int] = {}
     with_preview = 0
-    card_count = 0
+    ai_merged = 0
 
-    for app_row in app_rows:
-        app_id = app_row["app_id"]
-        manifest_path = REPO_ROOT / app_row["manifest_path"]
-        app_dir = manifest_path.parent
-        ai_summary_path = app_dir / "ai-summary.json"
-
+    for manifest_path in manifest_paths:
         manifest = read_json(manifest_path)
         if not manifest:
-            print(f"  Warning: could not read manifest for {app_id}")
+            print(f"  Warning: could not read {manifest_path}")
             continue
 
-        ai_summary = read_json(ai_summary_path)
+        slug = manifest.get("app_slug") or manifest_path.parent.name
+        app_id = manifest.get("app_id", slug)
+
+        # Build app_row equivalent from manifest
+        app_row = {
+            "app_id": app_id,
+            "app_slug": slug,
+            "app_name": manifest.get("app_name", slug),
+            "author": manifest.get("author", {}).get("display_name", ""),
+            "primary_preview": manifest.get("preview", {}).get("primary_media_path"),
+        }
+
+        # Get AI summary: prefer manifest["ai"], fall back to tmp/ai-summaries/<slug>.json
+        ai_summary = manifest.get("ai")
+        if not ai_summary:
+            ai_summary_path = AI_SUMMARIES_DIR / f"{slug}.json"
+            ai_summary = read_json(ai_summary_path)
+            if ai_summary:
+                # Merge into manifest on disk (tmp file left in place — gitignored)
+                manifest["ai"] = ai_summary
+                manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+                ai_merged += 1
 
         # Find v2 app directory
         v2_dir_rel = manifest.get("links", {}).get("v2_app_dir")
@@ -338,52 +290,49 @@ def main() -> int:
             if json_files:
                 blueprint = read_json(json_files[0])
 
-        # Build explorer entry
+        # Build app entry
         entry = build_app_entry(app_row, manifest, ai_summary, v2_dir, blueprint)
-        explorer_apps.append(entry)
+        apps.append(entry)
 
         if entry["has_preview"]:
             with_preview += 1
 
-        # Build tag index
+        # Accumulate tag counts
         for tag in entry["tags"]:
-            tag_index[tag].append(app_id)
+            tag_counts[tag] = tag_counts.get(tag, 0) + 1
 
-        # Build and write card.json
-        card = build_card_json(app_row, manifest, ai_summary, v2_dir, blueprint)
-        card_path = app_dir / "card.json"
-        card_path.write_text(json.dumps(card, indent=2), encoding="utf-8")
-        card_count += 1
+    # Sort apps by name
+    apps.sort(key=lambda x: x["name"].lower())
 
     # Sort tag index by frequency (most used first)
     sorted_tag_index = dict(
-        sorted(tag_index.items(), key=lambda x: len(x[1]), reverse=True)
+        sorted(tag_counts.items(), key=lambda x: x[1], reverse=True)
     )
 
-    # Build final explorer-data.json
-    explorer_data = {
-        "version": 2,
+    # Build final catalog.json
+    catalog_data = {
+        "version": 3,
         "generated_at": now_iso(),
         "counts": {
-            "total": len(explorer_apps),
+            "total": len(apps),
             "with_preview": with_preview,
         },
         "tag_index": sorted_tag_index,
-        "apps": explorer_apps,
+        "apps": apps,
     }
 
-    EXPLORER_DATA_DIR.mkdir(parents=True, exist_ok=True)
-    output_path = EXPLORER_DATA_DIR / "explorer-data.json"
-    output_path.write_text(json.dumps(explorer_data, indent=2), encoding="utf-8")
+    CATALOG_ROOT.mkdir(parents=True, exist_ok=True)
+    catalog_path = CATALOG_ROOT / "catalog.json"
+    catalog_path.write_text(json.dumps(catalog_data, indent=2), encoding="utf-8")
 
     # Stats
-    data_size = output_path.stat().st_size
+    catalog_size = catalog_path.stat().st_size
     tag_count = len(sorted_tag_index)
     print(f"Done!")
-    print(f"  explorer-data.json: {data_size / 1024:.1f} KB ({len(explorer_apps)} apps, {tag_count} tags)")
-    print(f"  card.json files: {card_count}")
+    print(f"  catalog.json: {catalog_size / 1024:.1f} KB ({len(apps)} apps, {tag_count} tags)")
     print(f"  Apps with preview: {with_preview}")
-    print(f"  Output: {output_path}")
+    if ai_merged:
+        print(f"  AI summaries merged into manifests: {ai_merged}")
 
     return 0
 

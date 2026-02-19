@@ -2,11 +2,11 @@
 """Build catalog artifacts in hyperfy-apps from sunset research outputs.
 
 Pipeline:
-1. Copy source research artifacts into catalog/discord
-2. Optimize media into catalog/discord/hyp_media with size gating
-3. Generate per-app manifests in catalog/apps/<app-id>/manifest.json
-4. Generate global manifest index in catalog/manifests/apps-manifest.json
-5. Generate missing-media GitHub issue checklist markdown
+1. Copy source research artifacts into context/ and tmp/
+2. Optimize media into catalog/media/ with size gating
+3. Generate per-app manifests in context/apps/<slug>/manifest.json
+4. Generate global manifest index in tmp/manifests/apps-manifest.json
+5. Generate missing-media checklist in tmp/issues/
 """
 
 from __future__ import annotations
@@ -129,16 +129,16 @@ def resolve_v2_slug(app_name: str, filename_stem: str, v2_slugs: set[str], mappi
     return None
 
 
-def copy_artifacts(source_research: Path, catalog_discord: Path, dry_run: bool = False):
+def copy_artifacts(source_research: Path, context_dir: Path, tmp_dir: Path, dry_run: bool = False):
     src_index = source_research / "hyp_index.json"
     src_summaries = source_research / "hyp_summaries"
     src_media = source_research / "hyp_media"
     src_report = source_research / "hyp_media_report.md"
 
-    dst_index = catalog_discord / "hyp_index.raw.json"
-    dst_summaries = catalog_discord / "hyp_summaries"
-    dst_media_raw = catalog_discord / "hyp_media_raw"
-    dst_report = catalog_discord / "hyp_media_report.md"
+    dst_index = context_dir / "hyp_index.raw.json"
+    dst_summaries = context_dir / "hyp_summaries"
+    dst_media_raw = tmp_dir / "hyp_media_raw"
+    dst_report = tmp_dir / "hyp_media_report.md"
 
     if dry_run:
         return {
@@ -148,7 +148,8 @@ def copy_artifacts(source_research: Path, catalog_discord: Path, dry_run: bool =
             "report": src_report,
         }
 
-    catalog_discord.mkdir(parents=True, exist_ok=True)
+    context_dir.mkdir(parents=True, exist_ok=True)
+    tmp_dir.mkdir(parents=True, exist_ok=True)
 
     shutil.copy2(src_index, dst_index)
 
@@ -361,9 +362,9 @@ def build_catalog_manifests(
     v2_slugs = {p.name for p in v2_root.iterdir() if p.is_dir()} if v2_root.exists() else set()
     mappings = load_filename_mappings(repo_root / "tmp" / "filename-mappings.csv")
 
-    apps_out_root = repo_root / "catalog" / "apps"
-    manifests_out = repo_root / "catalog" / "manifests" / "apps-manifest.json"
-    issue_out = repo_root / "catalog" / "issues" / "missing-media-checklist.md"
+    apps_out_root = repo_root / "context" / "apps"
+    manifests_out = repo_root / "tmp" / "manifests" / "apps-manifest.json"
+    issue_out = repo_root / "tmp" / "issues" / "missing-media-checklist.md"
 
     if not dry_run:
         apps_out_root.mkdir(parents=True, exist_ok=True)
@@ -418,7 +419,7 @@ def build_catalog_manifests(
             excluded_large = False
             out_rel = None
             if opt and opt.status == "kept" and opt.optimized_rel:
-                out_rel = f"catalog/discord/hyp_media/{opt.optimized_rel}"
+                out_rel = f"catalog/media/{opt.optimized_rel}"
             elif opt and opt.status == "excluded":
                 excluded_large = True
 
@@ -474,7 +475,7 @@ def build_catalog_manifests(
             "links": {
                 "v2_app_dir": f"v2/{v2_slug}" if v2_slug else None,
                 "v2_json_path": str(v2_json.relative_to(repo_root)) if v2_json else None,
-                "hyp_summary_path": f"catalog/discord/hyp_summaries/{summary_rel}" if summary_rel else None,
+                "hyp_summary_path": f"context/hyp_summaries/{summary_rel}" if summary_rel else None,
             },
             "preview": {
                 "primary_media_path": primary.get("catalog_path") if primary else None,
@@ -495,7 +496,7 @@ def build_catalog_manifests(
         }
 
         ai_summary = None
-        ai_summary_path = apps_out_root / app_id / "ai-summary.json"
+        ai_summary_path = repo_root / "tmp" / "ai-summaries" / f"{preferred_slug}.json"
         if merge_ai_summaries and ai_summary_path.exists():
             try:
                 ai_summary = json.loads(ai_summary_path.read_text(encoding="utf-8"))
@@ -510,15 +511,15 @@ def build_catalog_manifests(
             "author": author_name,
             "has_preview": primary is not None,
             "primary_preview": primary.get("catalog_path") if primary else None,
-            "manifest_path": f"catalog/apps/{app_id}/manifest.json",
+            "manifest_path": f"context/apps/{preferred_slug}/manifest.json",
             "v2_app_dir": f"v2/{v2_slug}" if v2_slug else None,
             "has_ai_summary": bool(ai_summary),
-            "ai_summary_path": f"catalog/apps/{app_id}/ai-summary.json" if ai_summary else None,
+            "ai_summary_path": f"tmp/ai-summaries/{preferred_slug}.json" if ai_summary else None,
             "flags": sorted(flags),
         })
 
         if not dry_run:
-            app_dir = apps_out_root / app_id
+            app_dir = apps_out_root / preferred_slug
             app_dir.mkdir(parents=True, exist_ok=True)
             (app_dir / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
 
@@ -587,9 +588,10 @@ def main():
 
     repo_root = args.repo_root.resolve()
     catalog_root = repo_root / "catalog"
-    catalog_discord = catalog_root / "discord"
+    context_dir = repo_root / "context"
+    tmp_dir = repo_root / "tmp"
 
-    copied = copy_artifacts(args.source_research.resolve(), catalog_discord, dry_run=args.dry_run)
+    copied = copy_artifacts(args.source_research.resolve(), context_dir, tmp_dir, dry_run=args.dry_run)
 
     media_map: dict[str, OptimizeResult]
     optimize_rows: list[dict[str, Any]]
@@ -597,7 +599,7 @@ def main():
     if args.skip_optimize:
         media_map, optimize_rows = {}, []
     else:
-        media_out = catalog_discord / "hyp_media"
+        media_out = catalog_root / "media"
         media_map, optimize_rows = optimize_media_tree(
             copied["media_raw"],
             media_out,
@@ -607,8 +609,8 @@ def main():
         )
 
     if not args.dry_run and not args.skip_optimize:
-        opt_csv = catalog_discord / "hyp_media_optimization.csv"
-        exc_csv = catalog_discord / "hyp_media_excluded.csv"
+        opt_csv = tmp_dir / "hyp_media_optimization.csv"
+        exc_csv = tmp_dir / "hyp_media_excluded.csv"
         write_csv(
             opt_csv,
             optimize_rows,
@@ -635,7 +637,7 @@ def main():
     print(f"  Dry run: {args.dry_run}")
     print(f"  Missing preview count: {result['missing_count']}")
     if not args.dry_run:
-        print(f"  Global manifest: {repo_root / 'catalog/manifests/apps-manifest.json'}")
+        print(f"  Global manifest: {repo_root / 'tmp/manifests/apps-manifest.json'}")
         print(f"  Issue checklist: {result['issue_path']}")
 
 
