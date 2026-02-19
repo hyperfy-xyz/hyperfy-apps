@@ -29,14 +29,14 @@
     "hyp_summary_path": "catalog/ingest/hyp_summaries/Rover-LavaCargo.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/rover-lavacargo/p0_vt01.png",
+    "primary_media_path": "catalog/media/health/p0_vt01.png",
     "media_type": ".png",
     "selection_reason": "same_message",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/rover-lavacargo/p0_vt01.png",
+      "catalog_path": "catalog/media/health/p0_vt01.png",
       "original_filename": "vt01.png",
       "content_type": "image/png",
       "relative_index": 0,

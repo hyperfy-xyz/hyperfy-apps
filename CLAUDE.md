@@ -52,7 +52,7 @@ hyp-files/*.hyp (binary)
 - **`catalog/apps/<slug>/`** — Per-app metadata: `manifest.json` (provenance), `ai-summary.json` (AI output), `card.json` (merged for explorer/agents). One dir per unique slug (165 total).
 - **`catalog/explorer-data.json`** — Single merged JSON fetched by the explorer UI (~204KB).
 - **`catalog/media/<slug>/`** — Optimized preview images/videos (~670MB, committed via LFS-like approach).
-- **`catalog/ingest/`** — Source provenance: `hyp_index.raw.json` (Discord metadata), `hyp_summaries/` (full app docs).
+- **`catalog/context/`** — AI context: `hyp_index.raw.json` (Discord metadata), `hyp_summaries/` (full app docs), `snippets/` (doc snippets), `source/` (raw docs), `context-index.json`.
 - **`scripts/catalog/`** — Build pipeline scripts.
 - **`scripts/research/`** — AI summarization and context preparation.
 - **`tmp/`** — Gitignored working directory with legacy files and retired catalog dirs.

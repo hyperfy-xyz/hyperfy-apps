@@ -47,7 +47,7 @@ def detect_github_raw_base() -> str:
             return f"https://raw.githubusercontent.com/{parts}/main"
     except Exception:
         pass
-    return ""
+    return "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main"
 
 
 GITHUB_RAW_BASE = detect_github_raw_base()

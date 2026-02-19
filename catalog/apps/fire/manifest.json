@@ -29,14 +29,14 @@
     "hyp_summary_path": "catalog/ingest/hyp_summaries/Fire.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/fire/m1_xyz-particle-demos_2_-_edit.mp4",
+    "primary_media_path": "catalog/media/explosion-sprites/m1_xyz-particle-demos_2_-_edit.mp4",
     "media_type": ".mp4",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/fire/m1_xyz-particle-demos_2_-_edit.mp4",
+      "catalog_path": "catalog/media/explosion-sprites/m1_xyz-particle-demos_2_-_edit.mp4",
       "original_filename": "xyz-particle-demos_2_-_edit.mp4",
       "content_type": "video/mp4",
       "relative_index": -1,

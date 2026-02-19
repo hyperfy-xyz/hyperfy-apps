@@ -29,14 +29,14 @@
     "hyp_summary_path": "catalog/ingest/hyp_summaries/PingScriptFORcompanion.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/pingscriptforcompanion/m1_updated_companion.mp4",
+    "primary_media_path": "catalog/media/companion-v8/m1_updated_companion.mp4",
     "media_type": ".mp4",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/pingscriptforcompanion/m1_updated_companion.mp4",
+      "catalog_path": "catalog/media/companion-v8/m1_updated_companion.mp4",
       "original_filename": "updated_companion.mp4",
       "content_type": "video/mp4",
       "relative_index": -1,

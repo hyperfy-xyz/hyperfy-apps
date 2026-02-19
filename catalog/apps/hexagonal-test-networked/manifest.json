@@ -29,14 +29,14 @@
     "hyp_summary_path": "catalog/ingest/hyp_summaries/hexagonal_test_networked.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/hexagonal-test-networked/p0_image.png",
+    "primary_media_path": "catalog/media/hexagonal-test-basic/p0_image.png",
     "media_type": ".png",
     "selection_reason": "same_message",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/hexagonal-test-networked/p0_image.png",
+      "catalog_path": "catalog/media/hexagonal-test-basic/p0_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": 0,

@@ -29,14 +29,14 @@
     "hyp_summary_path": "catalog/ingest/hyp_summaries/SimonSaysBoard.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/simonsaysboard/p0_2025-03-27_00-21-03_1.mp4",
+    "primary_media_path": "catalog/media/simonsays-screen/p0_2025-03-27_00-21-03_1.mp4",
     "media_type": ".mp4",
     "selection_reason": "same_message",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/simonsaysboard/p0_2025-03-27_00-21-03_1.mp4",
+      "catalog_path": "catalog/media/simonsays-screen/p0_2025-03-27_00-21-03_1.mp4",
       "original_filename": "2025-03-27_00-21-03_1.mp4",
       "content_type": "video/mp4",
       "relative_index": 0,

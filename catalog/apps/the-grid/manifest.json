@@ -29,14 +29,14 @@
     "hyp_summary_path": "catalog/ingest/hyp_summaries/The_Grid.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/the-grid/m4_image.png",
+    "primary_media_path": "catalog/media/alien-planet/m4_image.png",
     "media_type": ".png",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/the-grid/m4_image.png",
+      "catalog_path": "catalog/media/alien-planet/m4_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": -4,

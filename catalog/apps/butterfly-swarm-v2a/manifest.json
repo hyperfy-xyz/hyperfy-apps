@@ -29,14 +29,14 @@
     "hyp_summary_path": "catalog/ingest/hyp_summaries/Butterfly_Swarm_V2a.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/butterfly-swarm-v2a/p0_5000.png",
+    "primary_media_path": "catalog/media/butterfly-swarm-v1/p0_5000.png",
     "media_type": ".png",
     "selection_reason": "same_message",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/butterfly-swarm-v2a/p0_5000.png",
+      "catalog_path": "catalog/media/butterfly-swarm-v1/p0_5000.png",
       "original_filename": "5000.png",
       "content_type": "image/png",
       "relative_index": 0,

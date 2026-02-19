@@ -29,7 +29,7 @@
     "hyp_summary_path": "catalog/ingest/hyp_summaries/Prism.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/prism/m6_xyz-skelly.mp4",
+    "primary_media_path": "catalog/media/mob-skelly/m6_xyz-skelly.mp4",
     "media_type": ".mp4",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
@@ -49,7 +49,7 @@
       "attachment_id": "1355780113417113731"
     },
     {
-      "catalog_path": "catalog/media/prism/m6_xyz-skelly.mp4",
+      "catalog_path": "catalog/media/mob-skelly/m6_xyz-skelly.mp4",
       "original_filename": "xyz-skelly.mp4",
       "content_type": "video/mp4",
       "relative_index": -6,
