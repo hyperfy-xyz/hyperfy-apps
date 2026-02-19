@@ -9,7 +9,7 @@ Inputs:
   - catalog/apps/*/manifest.json
   - catalog/discord/hyp_index.raw.json
   - catalog/discord/hyp_summaries/*.md
-  - catalog/context/snippets/*.snippet.txt (conditionally)
+  - context/snippets/*.snippet.txt (conditionally)
 """
 
 from __future__ import annotations
@@ -32,7 +32,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 CATALOG_ROOT = REPO_ROOT / "catalog"
 GLOBAL_MANIFEST = REPO_ROOT / "tmp" / "manifests" / "apps-manifest.json"
 HYP_INDEX_RAW = CATALOG_ROOT / "discord" / "hyp_index.raw.json"
-SNIPPETS_DIR = CATALOG_ROOT / "context" / "snippets"
+SNIPPETS_DIR = REPO_ROOT / "context" / "snippets"
 REPORT_PATH = REPO_ROOT / "tmp" / "manifests" / "ai-summary-report.json"
 FAILURE_DUMP_DIR = REPO_ROOT / "tmp" / "manifests" / "ai-summary-failures"
 
