@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/spicex-portal",
     "v2_json_path": "v2/spicex-portal/SPICEX Portal.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/SPICEXPortal.md"
+    "hyp_summary_path": "context/hyp_summaries/SPICEXPortal.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/spicex-portal/p1_brave_iUo8WLJkxq.mp4",

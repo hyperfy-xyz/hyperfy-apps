@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "generated_at": "2026-02-19T20:54:50+00:00",
+  "generated_at": "2026-02-19T21:42:19+00:00",
   "counts": {
     "total": 165,
     "with_preview": 165
@@ -33,6 +33,7 @@
       "preview_type": "image",
       "hyp_filename": "360_Video_Viewer.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/360_Video_Viewer.hyp",
+      "has_download": true,
       "created_at": "2025-04-12T14:53:54.373Z",
       "tags": [
         "media-player",
@@ -63,6 +64,7 @@
       "preview_type": "video",
       "hyp_filename": "360Player_Mono.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/360Player_Mono.hyp",
+      "has_download": true,
       "created_at": "2025-04-15T10:26:13.112Z",
       "tags": [
         "media-player",
@@ -95,6 +97,7 @@
       "preview_type": "image",
       "hyp_filename": "Alien_Planet.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Alien_Planet.hyp",
+      "has_download": true,
       "created_at": "2025-09-10T12:15:47.057Z",
       "tags": [
         "environment",
@@ -139,6 +142,7 @@
       "preview_type": "image",
       "hyp_filename": "AlleySign.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/AlleySign.hyp",
+      "has_download": true,
       "created_at": "2025-02-19T12:48:41.204Z",
       "tags": [
         "3d-model",
@@ -166,6 +170,7 @@
       "preview_type": "image",
       "hyp_filename": "Amanita.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Amanita.hyp",
+      "has_download": true,
       "created_at": "2025-04-03T15:54:32.920Z",
       "tags": [
         "3d-model",
@@ -201,6 +206,7 @@
       "preview_type": "image",
       "hyp_filename": "anybox.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/anybox.hyp",
+      "has_download": true,
       "created_at": "2025-03-27T23:55:26.459Z",
       "tags": [
         "audio",
@@ -236,6 +242,7 @@
       "preview_type": "image",
       "hyp_filename": "ArrayVectorProps.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/ArrayVectorProps.hyp",
+      "has_download": true,
       "created_at": "2025-03-13T01:25:29.955Z",
       "tags": [
         "3d-model",
@@ -300,6 +307,7 @@
       "preview_type": "image",
       "hyp_filename": "BasicMp3Player.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/BasicMp3Player.hyp",
+      "has_download": true,
       "created_at": "2026-01-09T21:22:33.634Z",
       "tags": [
         "audio",
@@ -341,6 +349,7 @@
       "preview_type": "image",
       "hyp_filename": "Bats_v1.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Bats_v1.hyp",
+      "has_download": true,
       "created_at": "2025-03-27T20:58:48.367Z",
       "tags": [
         "animation",
@@ -387,6 +396,7 @@
       "preview_type": "image",
       "hyp_filename": "bending_leaf_V1.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/bending_leaf_V1.hyp",
+      "has_download": true,
       "created_at": "2025-04-03T08:24:51.483Z",
       "tags": [
         "animation",
@@ -414,6 +424,7 @@
       "preview_type": "image",
       "hyp_filename": "BlockTesting.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/BlockTesting.hyp",
+      "has_download": true,
       "created_at": "2025-03-09T02:57:13.707Z",
       "tags": [
         "animation",
@@ -446,6 +457,7 @@
       "preview_type": "image",
       "hyp_filename": "Book_-_Flip.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Book_-_Flip.hyp",
+      "has_download": true,
       "created_at": "2025-10-13T13:52:18.828Z",
       "tags": [
         "physics",
@@ -498,6 +510,7 @@
       "preview_type": "image",
       "hyp_filename": "Boombox.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Boombox.hyp",
+      "has_download": true,
       "created_at": "2026-01-09T19:36:41.481Z",
       "tags": [
         "audio",
@@ -540,6 +553,7 @@
       "preview_type": "image",
       "hyp_filename": "broke-rom.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/broke-rom.hyp",
+      "has_download": true,
       "created_at": "2025-03-28T16:20:53.352Z",
       "tags": [
         "3d-model",
@@ -571,6 +585,7 @@
       "preview_type": "video",
       "hyp_filename": "Builder_Drone.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Builder_Drone.hyp",
+      "has_download": true,
       "created_at": "2025-04-01T01:52:55.848Z",
       "tags": [
         "vehicle",
@@ -607,6 +622,7 @@
       "preview_type": "video",
       "hyp_filename": "Builder_Drone_X501.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Builder_Drone_X501.hyp",
+      "has_download": true,
       "created_at": "2025-04-01T01:35:12.370Z",
       "tags": [
         "camera",
@@ -639,6 +655,7 @@
       "preview_type": "image",
       "hyp_filename": "Butterfly_Swarm_V1.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Butterfly_Swarm_V1.hyp",
+      "has_download": true,
       "created_at": "2025-03-14T15:31:38.098Z",
       "tags": [
         "animation",
@@ -668,6 +685,7 @@
       "preview_type": "image",
       "hyp_filename": "Butterfly_Swarm_V2a.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Butterfly_Swarm_V2a.hyp",
+      "has_download": true,
       "created_at": "2025-03-14T15:31:38.098Z",
       "tags": [
         "animation",
@@ -697,6 +715,7 @@
       "preview_type": "image",
       "hyp_filename": "Butterfly_Swarm_V3.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Butterfly_Swarm_V3.hyp",
+      "has_download": true,
       "created_at": "2025-03-14T16:35:27.506Z",
       "tags": [
         "animation",
@@ -756,6 +775,7 @@
       "preview_type": "image",
       "hyp_filename": "Butterfly_Swarm_V4.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Butterfly_Swarm_V4.hyp",
+      "has_download": true,
       "created_at": "2025-03-25T14:29:08.148Z",
       "tags": [
         "animation",
@@ -818,6 +838,7 @@
       "preview_type": "image",
       "hyp_filename": "Butterfly_Swarm_V5.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Butterfly_Swarm_V5.hyp",
+      "has_download": true,
       "created_at": "2025-03-25T14:39:54.498Z",
       "tags": [
         "animation",
@@ -880,6 +901,7 @@
       "preview_type": "image",
       "hyp_filename": "Butterfly_Swarm_V6.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Butterfly_Swarm_V6.hyp",
+      "has_download": true,
       "created_at": "2025-03-27T11:01:15.661Z",
       "tags": [
         "animation",
@@ -944,6 +966,7 @@
       "preview_type": "image",
       "hyp_filename": "Butterfly_Swarm_V6_Hyperfly_edition.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Butterfly_Swarm_V6_Hyperfly_edition.hyp",
+      "has_download": true,
       "created_at": "2025-03-27T13:28:08.412Z",
       "tags": [
         "animation",
@@ -1008,6 +1031,7 @@
       "preview_type": "image",
       "hyp_filename": "Butterfly_Swarm_V6_Hyperfly_edition2.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Butterfly_Swarm_V6_Hyperfly_edition2.hyp",
+      "has_download": true,
       "created_at": "2025-03-28T06:37:36.279Z",
       "tags": [
         "animation",
@@ -1067,6 +1091,7 @@
       "preview_type": "image",
       "hyp_filename": "Butterfly_Swarm_V6_Hyperfly_edition2_BW.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Butterfly_Swarm_V6_Hyperfly_edition2_BW.hyp",
+      "has_download": true,
       "created_at": "2025-03-28T06:38:53.339Z",
       "tags": [
         "animation",
@@ -1125,6 +1150,7 @@
       "preview_type": "image",
       "hyp_filename": "cam_raycast_action_bar.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/cam_raycast_action_bar.hyp",
+      "has_download": true,
       "created_at": "2025-03-10T20:04:11.978Z",
       "tags": [
         "ui",
@@ -1255,6 +1281,7 @@
       "preview_type": "image",
       "hyp_filename": "Camera_Trigger.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Camera_Trigger.hyp",
+      "has_download": true,
       "created_at": "2025-10-15T14:45:28.329Z",
       "tags": [
         "camera",
@@ -1290,6 +1317,7 @@
       "preview_type": "video",
       "hyp_filename": "CameraLaser.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/CameraLaser.hyp",
+      "has_download": true,
       "created_at": "2025-10-09T06:51:28.944Z",
       "tags": [
         "combat",
@@ -1321,6 +1349,7 @@
       "preview_type": "video",
       "hyp_filename": "CameraManager.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/CameraManager.hyp",
+      "has_download": true,
       "created_at": "2025-03-21T05:48:13.045Z",
       "tags": [
         "camera",
@@ -1349,6 +1378,7 @@
       "preview_type": "video",
       "hyp_filename": "CameraManagerTest.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/CameraManagerTest.hyp",
+      "has_download": true,
       "created_at": "2025-03-21T05:48:13.045Z",
       "tags": [
         "camera",
@@ -1380,6 +1410,7 @@
       "preview_type": "image",
       "hyp_filename": "car1.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/car1.hyp",
+      "has_download": true,
       "created_at": "2025-03-23T02:38:43.612Z",
       "tags": [
         "vehicle",
@@ -1411,6 +1442,7 @@
       "preview_type": "image",
       "hyp_filename": "car1-v2.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/car1-v2.hyp",
+      "has_download": true,
       "created_at": "2025-03-23T02:53:41.176Z",
       "tags": [
         "vehicle",
@@ -1437,6 +1469,7 @@
       "preview_type": "video",
       "hyp_filename": "Companion_v8.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Companion_v8.hyp",
+      "has_download": true,
       "created_at": "2025-03-25T19:16:23.393Z",
       "tags": [
         "npc",
@@ -1509,6 +1542,7 @@
       "preview_type": "image",
       "hyp_filename": "CONFETTT_PPOT.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/CONFETTT_PPOT.hyp",
+      "has_download": true,
       "created_at": "2025-08-05T11:20:13.553Z",
       "tags": [
         "particles",
@@ -1592,6 +1626,7 @@
       "preview_type": "video",
       "hyp_filename": "Cube_1.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Cube_1.hyp",
+      "has_download": true,
       "created_at": "2025-03-29T02:42:56.145Z",
       "tags": [
         "animation",
@@ -1623,6 +1658,7 @@
       "preview_type": "image",
       "hyp_filename": "Curved_Video_Viewer.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Curved_Video_Viewer.hyp",
+      "has_download": true,
       "created_at": "2025-04-12T14:57:58.868Z",
       "tags": [
         "media-player",
@@ -1658,6 +1694,7 @@
       "preview_type": "video",
       "hyp_filename": "CurvedVid_with_link_input.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/CurvedVid_with_link_input.hyp",
+      "has_download": true,
       "created_at": "2025-04-20T17:55:21.503Z",
       "tags": [
         "media-player",
@@ -1689,6 +1726,7 @@
       "preview_type": "image",
       "hyp_filename": "dash.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/dash.hyp",
+      "has_download": true,
       "created_at": "2025-04-02T12:29:05.862Z",
       "tags": [
         "animation",
@@ -1729,6 +1767,7 @@
       "preview_type": "image",
       "hyp_filename": "DAY_NIGHT_WEATHER_CURRENT.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/DAY_NIGHT_WEATHER_CURRENT.hyp",
+      "has_download": true,
       "created_at": "2025-04-21T23:21:38.212Z",
       "tags": [
         "particles",
@@ -1871,6 +1910,7 @@
       "preview_type": "image",
       "hyp_filename": "Discord3.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Discord3.hyp",
+      "has_download": true,
       "created_at": "2025-09-26T10:41:17.911Z",
       "tags": [
         "ui",
@@ -1911,6 +1951,7 @@
       "preview_type": "image",
       "hyp_filename": "Eagles_v1.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Eagles_v1.hyp",
+      "has_download": true,
       "created_at": "2025-03-31T01:18:52.914Z",
       "tags": [
         "animation",
@@ -1968,6 +2009,7 @@
       "preview_type": "video",
       "hyp_filename": "eel_add_particles1.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/eel_add_particles1.hyp",
+      "has_download": true,
       "created_at": "2025-04-17T13:37:02.907Z",
       "tags": [
         "particles",
@@ -1996,6 +2038,7 @@
       "preview_type": "video",
       "hyp_filename": "eel_add_particles1_1.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/eel_add_particles1_1.hyp",
+      "has_download": true,
       "created_at": "2025-04-17T14:19:47.342Z",
       "tags": [
         "particles",
@@ -2020,6 +2063,7 @@
       "preview_type": "video",
       "hyp_filename": "Emote_Rom.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Emote_Rom.hyp",
+      "has_download": true,
       "created_at": "2025-04-16T04:00:48.828Z",
       "tags": [
         "animation",
@@ -2086,6 +2130,7 @@
       "preview_type": "image",
       "hyp_filename": "Emote_Rom_1.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Emote_Rom_1.hyp",
+      "has_download": true,
       "created_at": "2025-04-17T00:15:21.097Z",
       "tags": [
         "animation",
@@ -2148,6 +2193,7 @@
       "preview_type": "image",
       "hyp_filename": "EmotesR.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/EmotesR.hyp",
+      "has_download": true,
       "created_at": "2025-11-18T22:15:20.767Z",
       "tags": [
         "ui",
@@ -2223,6 +2269,7 @@
       "preview_type": "video",
       "hyp_filename": "Explosion_Sprites.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Explosion_Sprites.hyp",
+      "has_download": true,
       "created_at": "2025-04-16T03:23:09.271Z",
       "tags": [
         "particles",
@@ -2257,6 +2304,7 @@
       "preview_type": "video",
       "hyp_filename": "Fire.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Fire.hyp",
+      "has_download": true,
       "created_at": "2025-04-16T03:23:09.271Z",
       "tags": [
         "particles",
@@ -2291,6 +2339,7 @@
       "preview_type": "image",
       "hyp_filename": "firstHYP.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/firstHYP.hyp",
+      "has_download": true,
       "created_at": "2025-04-23T12:22:12.139Z",
       "tags": [
         "3d-model",
@@ -2314,6 +2363,7 @@
       "preview_type": "image",
       "hyp_filename": "firstHYPv2.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/firstHYPv2.hyp",
+      "has_download": true,
       "created_at": "2025-04-23T14:12:12.783Z",
       "tags": [
         "3d-model",
@@ -2338,6 +2388,7 @@
       "preview_type": "video",
       "hyp_filename": "Fog.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Fog.hyp",
+      "has_download": true,
       "created_at": "2025-04-16T03:23:09.271Z",
       "tags": [
         "particles",
@@ -2372,6 +2423,7 @@
       "preview_type": "video",
       "hyp_filename": "Forest.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Forest.hyp",
+      "has_download": true,
       "created_at": "2025-11-27T14:45:36.698Z",
       "tags": [
         "environment",
@@ -2414,6 +2466,7 @@
       "preview_type": "image",
       "hyp_filename": "Framed_Image_v1.0.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Framed_Image_v1.0.hyp",
+      "has_download": true,
       "created_at": "2025-11-01T14:39:39.446Z",
       "tags": [
         "ui",
@@ -2481,6 +2534,7 @@
       "preview_type": "image",
       "hyp_filename": "Free_Camera.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Free_Camera.hyp",
+      "has_download": true,
       "created_at": "2025-09-09T18:59:54.437Z",
       "tags": [
         "camera",
@@ -2518,6 +2572,7 @@
       "preview_type": "video",
       "hyp_filename": "FTV.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/FTV.hyp",
+      "has_download": true,
       "created_at": "2025-04-15T18:23:08.775Z",
       "tags": [
         "media-player",
@@ -2575,6 +2630,7 @@
       "preview_type": "video",
       "hyp_filename": "Game_Timer.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Game_Timer.hyp",
+      "has_download": true,
       "created_at": "2025-03-24T12:19:48.848Z",
       "tags": [
         "ui"
@@ -2709,6 +2765,7 @@
       "preview_type": "image",
       "hyp_filename": "generate_monstera_V1.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/generate_monstera_V1.hyp",
+      "has_download": true,
       "created_at": "2025-04-03T14:54:13.899Z",
       "tags": [
         "3d-model",
@@ -2740,6 +2797,7 @@
       "preview_type": "image",
       "hyp_filename": "Gert-2-1-aloe.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Gert-2-1-aloe.hyp",
+      "has_download": true,
       "created_at": "2025-03-04T23:46:36.827Z",
       "tags": [
         "3d-model",
@@ -2772,6 +2830,7 @@
       "preview_type": "video",
       "hyp_filename": "Glow_Dust.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Glow_Dust.hyp",
+      "has_download": true,
       "created_at": "2025-04-16T03:23:09.271Z",
       "tags": [
         "particles",
@@ -2806,6 +2865,7 @@
       "preview_type": "image",
       "hyp_filename": "Grass_V1.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Grass_V1.hyp",
+      "has_download": true,
       "created_at": "2025-04-08T14:06:29.306Z",
       "tags": [
         "particles",
@@ -2847,6 +2907,7 @@
       "preview_type": "image",
       "hyp_filename": "Grass_V3.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Grass_V3.hyp",
+      "has_download": true,
       "created_at": "2025-04-11T13:23:56.979Z",
       "tags": [
         "environment",
@@ -2886,6 +2947,7 @@
       "preview_type": "image",
       "hyp_filename": "Grid_Floor_v2.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Grid_Floor_v2.hyp",
+      "has_download": true,
       "created_at": "2025-06-06T13:06:46.986Z",
       "tags": [
         "3d-model",
@@ -2914,6 +2976,7 @@
       "preview_type": "image",
       "hyp_filename": "GroupieV1.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/GroupieV1.hyp",
+      "has_download": true,
       "created_at": "2025-10-12T08:20:52.269Z",
       "tags": [
         "npc",
@@ -2979,6 +3042,7 @@
       "preview_type": "video",
       "hyp_filename": "Healing_Aura.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Healing_Aura.hyp",
+      "has_download": true,
       "created_at": "2025-04-16T03:23:09.271Z",
       "tags": [
         "particles",
@@ -3018,6 +3082,7 @@
       "preview_type": "image",
       "hyp_filename": "Health.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Health.hyp",
+      "has_download": true,
       "created_at": "2025-02-12T06:32:35.128Z",
       "tags": [
         "3d-model",
@@ -3053,6 +3118,7 @@
       "preview_type": "image",
       "hyp_filename": "HELIv4.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/HELIv4.hyp",
+      "has_download": true,
       "created_at": "2025-05-20T19:06:01.996Z",
       "tags": [
         "vehicle",
@@ -3085,6 +3151,7 @@
       "preview_type": "image",
       "hyp_filename": "hexagonal_test_basic.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/hexagonal_test_basic.hyp",
+      "has_download": true,
       "created_at": "2025-03-29T23:23:55.925Z",
       "tags": [
         "animation",
@@ -3119,6 +3186,7 @@
       "preview_type": "image",
       "hyp_filename": "hexagonal_test_networked.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/hexagonal_test_networked.hyp",
+      "has_download": true,
       "created_at": "2025-03-29T23:23:55.925Z",
       "tags": [
         "interaction",
@@ -3156,6 +3224,7 @@
       "preview_type": "image",
       "hyp_filename": "hover-cursor-test.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/hover-cursor-test.hyp",
+      "has_download": true,
       "created_at": "2025-08-06T14:04:57.126Z",
       "tags": [
         "ui",
@@ -3184,6 +3253,7 @@
       "preview_type": "image",
       "hyp_filename": "HP-eliza-2-1-app_1.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/HP-eliza-2-1-app_1.hyp",
+      "has_download": true,
       "created_at": "2025-03-04T23:46:36.827Z",
       "tags": [
         "npc",
@@ -3220,6 +3290,7 @@
       "preview_type": "image",
       "hyp_filename": "HyperBeacon_v2.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/HyperBeacon_v2.hyp",
+      "has_download": true,
       "created_at": "2025-02-07T01:32:11.867Z",
       "tags": [
         "3d-model",
@@ -3252,6 +3323,7 @@
       "preview_type": "image",
       "hyp_filename": "HyperPortal_with_Set.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/HyperPortal_with_Set.hyp",
+      "has_download": true,
       "created_at": "2025-03-13T17:01:20.441Z",
       "tags": [
         "teleport",
@@ -3286,6 +3358,7 @@
       "preview_type": "image",
       "hyp_filename": "HyperPortal_with_Set_Manual.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/HyperPortal_with_Set_Manual.hyp",
+      "has_download": true,
       "created_at": "2025-03-21T00:31:33.973Z",
       "tags": [
         "teleport",
@@ -3324,6 +3397,7 @@
       "preview_type": "image",
       "hyp_filename": "JUKEBOX_UI.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/JUKEBOX_UI.hyp",
+      "has_download": true,
       "created_at": "2025-03-26T17:54:19.828Z",
       "tags": [
         "audio",
@@ -3375,6 +3449,7 @@
       "preview_type": "image",
       "hyp_filename": "Jumping_Frog.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Jumping_Frog.hyp",
+      "has_download": true,
       "created_at": "2026-01-14T18:08:43.052Z",
       "tags": [
         "animation",
@@ -3406,6 +3481,7 @@
       "preview_type": "image",
       "hyp_filename": "Launchpad.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Launchpad.hyp",
+      "has_download": true,
       "created_at": "2025-10-14T15:54:19.238Z",
       "tags": [
         "physics",
@@ -3434,6 +3510,7 @@
       "preview_type": "image",
       "hyp_filename": "Locationator.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Locationator.hyp",
+      "has_download": true,
       "created_at": "2025-04-20T09:36:54.737Z",
       "tags": [
         "ui",
@@ -3461,6 +3538,7 @@
       "preview_type": "image",
       "hyp_filename": "Loot.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Loot.hyp",
+      "has_download": true,
       "created_at": "2025-02-12T06:32:35.128Z",
       "tags": [
         "3d-model",
@@ -3495,6 +3573,7 @@
       "preview_type": "image",
       "hyp_filename": "Loot-PlanetLava.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Loot-PlanetLava.hyp",
+      "has_download": true,
       "created_at": "2025-02-12T06:32:35.128Z",
       "tags": [
         "3d-model",
@@ -3529,6 +3608,7 @@
       "preview_type": "image",
       "hyp_filename": "Loot-Ringed_Planet.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Loot-Ringed_Planet.hyp",
+      "has_download": true,
       "created_at": "2025-02-12T06:32:35.128Z",
       "tags": [
         "3d-model",
@@ -3563,6 +3643,7 @@
       "preview_type": "image",
       "hyp_filename": "m2-2-4-beacon-dev.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/m2-2-4-beacon-dev.hyp",
+      "has_download": true,
       "created_at": "2025-03-04T23:46:36.827Z",
       "tags": [
         "3d-model",
@@ -3590,6 +3671,7 @@
       "preview_type": "video",
       "hyp_filename": "Machine_Gun_v8.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Machine_Gun_v8.hyp",
+      "has_download": true,
       "created_at": "2025-03-30T18:49:03.457Z",
       "tags": [
         "combat",
@@ -3735,6 +3817,7 @@
       "preview_type": "image",
       "hyp_filename": "Machine_Gun_With_Animation.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Machine_Gun_With_Animation.hyp",
+      "has_download": true,
       "created_at": "2025-03-12T22:43:46.261Z",
       "tags": [
         "combat",
@@ -3859,6 +3942,7 @@
       "preview_type": "image",
       "hyp_filename": "Mato_Pet_v2.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Mato_Pet_v2.hyp",
+      "has_download": true,
       "created_at": "2025-03-01T02:02:12.890Z",
       "tags": [
         "npc",
@@ -3911,6 +3995,7 @@
       "preview_type": "image",
       "hyp_filename": "Mato_Pets.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Mato_Pets.hyp",
+      "has_download": true,
       "created_at": "2025-02-25T05:11:27.263Z",
       "tags": [
         "npc",
@@ -3964,6 +4049,7 @@
       "preview_type": "image",
       "hyp_filename": "MINI-Nuke.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/MINI-Nuke.hyp",
+      "has_download": true,
       "created_at": "2025-03-25T20:08:09.489Z",
       "tags": [
         "particles",
@@ -4021,6 +4107,7 @@
       "preview_type": "image",
       "hyp_filename": "MINI-NukePORTAL.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/MINI-NukePORTAL.hyp",
+      "has_download": true,
       "created_at": "2025-04-04T18:33:55.243Z",
       "tags": [
         "particles",
@@ -4081,6 +4168,7 @@
       "preview_type": "video",
       "hyp_filename": "Mob_-_Skelly.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Mob_-_Skelly.hyp",
+      "has_download": true,
       "created_at": "2025-03-30T13:57:21.442Z",
       "tags": [
         "npc",
@@ -4229,6 +4317,7 @@
       "preview_type": "image",
       "hyp_filename": "Model.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Model.hyp",
+      "has_download": true,
       "created_at": "2025-03-24T11:56:10.261Z",
       "tags": [
         "3d-model",
@@ -4261,6 +4350,7 @@
       "preview_type": "image",
       "hyp_filename": "monkey_head.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/monkey_head.hyp",
+      "has_download": true,
       "created_at": "2025-04-10T21:33:48.001Z",
       "tags": [
         "3d-model",
@@ -4296,6 +4386,7 @@
       "preview_type": "image",
       "hyp_filename": "MoonJump.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/MoonJump.hyp",
+      "has_download": true,
       "created_at": "2025-08-17T06:25:22.366Z",
       "tags": [
         "physics",
@@ -4328,6 +4419,7 @@
       "preview_type": "image",
       "hyp_filename": "n1-n1-05.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/n1-n1-05.hyp",
+      "has_download": true,
       "created_at": "2025-03-25T23:07:52.329Z",
       "tags": [
         "physics",
@@ -4355,6 +4447,7 @@
       "preview_type": "video",
       "hyp_filename": "NEON_1.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/NEON_1.hyp",
+      "has_download": true,
       "created_at": "2025-05-06T11:58:35.296Z",
       "tags": [
         "3d-model",
@@ -4399,6 +4492,7 @@
       "preview_type": "video",
       "hyp_filename": "NEON_2.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/NEON_2.hyp",
+      "has_download": true,
       "created_at": "2025-05-06T12:41:29.924Z",
       "tags": [
         "audio",
@@ -4457,6 +4551,7 @@
       "preview_type": "image",
       "hyp_filename": "Networked_Grabbable.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Networked_Grabbable.hyp",
+      "has_download": true,
       "created_at": "2025-03-12T03:25:45.227Z",
       "tags": [
         "interaction",
@@ -4495,6 +4590,7 @@
       "preview_type": "image",
       "hyp_filename": "Notifications.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Notifications.hyp",
+      "has_download": true,
       "created_at": "2025-05-26T15:48:41.450Z",
       "tags": [
         "ui",
@@ -4535,6 +4631,7 @@
       "preview_type": "image",
       "hyp_filename": "NPC_10.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/NPC_10.hyp",
+      "has_download": true,
       "created_at": "2025-03-25T13:20:40.224Z",
       "tags": [
         "npc",
@@ -4616,6 +4713,7 @@
       "preview_type": "image",
       "hyp_filename": "NPC_9.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/NPC_9.hyp",
+      "has_download": true,
       "created_at": "2025-03-25T12:23:19.548Z",
       "tags": [
         "npc",
@@ -4696,6 +4794,7 @@
       "preview_type": "image",
       "hyp_filename": "NPC_Prisoner.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/NPC_Prisoner.hyp",
+      "has_download": true,
       "created_at": "2025-10-12T08:20:52.269Z",
       "tags": [
         "npc",
@@ -4753,6 +4852,7 @@
       "preview_type": "image",
       "hyp_filename": "PAY_TO_ENTER_DOOR.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/PAY_TO_ENTER_DOOR.hyp",
+      "has_download": true,
       "created_at": "2025-03-11T21:08:41.943Z",
       "tags": [
         "ui",
@@ -4793,6 +4893,7 @@
       "preview_type": "video",
       "hyp_filename": "Physics_-_Contacts__Tags.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Physics_-_Contacts__Tags.hyp",
+      "has_download": true,
       "created_at": "2025-03-26T03:41:33.063Z",
       "tags": [
         "physics",
@@ -4821,6 +4922,7 @@
       "preview_type": "video",
       "hyp_filename": "Physics_-_Raycast_Tags.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Physics_-_Raycast_Tags.hyp",
+      "has_download": true,
       "created_at": "2025-03-26T04:48:10.372Z",
       "tags": [
         "physics",
@@ -4849,6 +4951,7 @@
       "preview_type": "video",
       "hyp_filename": "Physics_-_Triggers__Tags.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Physics_-_Triggers__Tags.hyp",
+      "has_download": true,
       "created_at": "2025-03-26T03:56:38.484Z",
       "tags": [
         "physics",
@@ -4877,6 +4980,7 @@
       "preview_type": "video",
       "hyp_filename": "PingScriptFORcompanion.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/PingScriptFORcompanion.hyp",
+      "has_download": true,
       "created_at": "2025-03-25T19:16:23.393Z",
       "tags": [
         "interaction",
@@ -4914,6 +5018,7 @@
       "preview_type": "image",
       "hyp_filename": "Platforms.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Platforms.hyp",
+      "has_download": true,
       "created_at": "2025-11-11T19:27:30.203Z",
       "tags": [
         "physics",
@@ -4960,6 +5065,7 @@
       "preview_type": "video",
       "hyp_filename": "Player_Transforms.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Player_Transforms.hyp",
+      "has_download": true,
       "created_at": "2025-10-09T07:50:06.399Z",
       "tags": [
         "ui",
@@ -4992,6 +5098,7 @@
       "preview_type": "video",
       "hyp_filename": "PlayerTag-UInew.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/PlayerTag-UInew.hyp",
+      "has_download": true,
       "created_at": "2025-03-30T00:46:46.464Z",
       "tags": [
         "ui",
@@ -5079,6 +5186,7 @@
       "preview_type": "video",
       "hyp_filename": "position.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/position.hyp",
+      "has_download": true,
       "created_at": "2025-07-25T04:06:53.101Z",
       "tags": [
         "ui"
@@ -5108,6 +5216,7 @@
       "preview_type": "video",
       "hyp_filename": "Prism.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Prism.hyp",
+      "has_download": true,
       "created_at": "2025-03-30T13:57:21.442Z",
       "tags": [
         "combat",
@@ -5214,6 +5323,7 @@
       "preview_type": "image",
       "hyp_filename": "PvE_Sword.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/PvE_Sword.hyp",
+      "has_download": true,
       "created_at": "2025-03-25T13:20:40.224Z",
       "tags": [
         "combat",
@@ -5264,6 +5374,7 @@
       "preview_type": "image",
       "hyp_filename": "PvP_Core_with_spawns.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/PvP_Core_with_spawns.hyp",
+      "has_download": true,
       "created_at": "2025-03-28T17:46:22.278Z",
       "tags": [
         "combat",
@@ -5304,6 +5415,7 @@
       "preview_type": "image",
       "hyp_filename": "PVPblasterLATEST.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/PVPblasterLATEST.hyp",
+      "has_download": true,
       "created_at": "2025-03-25T22:47:43.233Z",
       "tags": [
         "combat",
@@ -5379,6 +5491,7 @@
       "preview_type": "image",
       "hyp_filename": "QuestItemBasic.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/QuestItemBasic.hyp",
+      "has_download": true,
       "created_at": "2025-07-20T07:26:56.291Z",
       "tags": [
         "audio",
@@ -5425,6 +5538,7 @@
       "preview_type": "image",
       "hyp_filename": "QuestItemUI.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/QuestItemUI.hyp",
+      "has_download": true,
       "created_at": "2025-07-20T07:26:56.291Z",
       "tags": [
         "ui",
@@ -5470,6 +5584,7 @@
       "preview_type": "video",
       "hyp_filename": "Rain.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Rain.hyp",
+      "has_download": true,
       "created_at": "2025-04-16T03:23:09.271Z",
       "tags": [
         "particles",
@@ -5504,6 +5619,7 @@
       "preview_type": "video",
       "hyp_filename": "RainV3.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/RainV3.hyp",
+      "has_download": true,
       "created_at": "2025-04-10T08:47:59.742Z",
       "tags": [
         "particles",
@@ -5558,6 +5674,7 @@
       "preview_type": "image",
       "hyp_filename": "RainV4.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/RainV4.hyp",
+      "has_download": true,
       "created_at": "2025-04-10T10:37:15.193Z",
       "tags": [
         "particles",
@@ -5614,6 +5731,7 @@
       "preview_type": "image",
       "hyp_filename": "Raptor_random_loc.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Raptor_random_loc.hyp",
+      "has_download": true,
       "created_at": "2025-04-24T12:51:55.532Z",
       "tags": [
         "npc",
@@ -5677,6 +5795,7 @@
       "preview_type": "image",
       "hyp_filename": "Raycaster.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Raycaster.hyp",
+      "has_download": true,
       "created_at": "2025-03-10T20:03:26.308Z",
       "tags": [
         "physics",
@@ -5706,6 +5825,7 @@
       "preview_type": "image",
       "hyp_filename": "Ricky-3-2-show_chart.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Ricky-3-2-show_chart.hyp",
+      "has_download": true,
       "created_at": "2025-03-04T23:46:36.827Z",
       "tags": [
         "ui",
@@ -5742,6 +5862,7 @@
       "preview_type": "image",
       "hyp_filename": "Rocket_Launcher_V3.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Rocket_Launcher_V3.hyp",
+      "has_download": true,
       "created_at": "2025-04-24T14:32:26.925Z",
       "tags": [
         "particles",
@@ -5771,6 +5892,7 @@
       "preview_type": "image",
       "hyp_filename": "RocketGlobalColl.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/RocketGlobalColl.hyp",
+      "has_download": true,
       "created_at": "2025-11-11T13:31:20.181Z",
       "tags": [
         "particles",
@@ -5802,6 +5924,7 @@
       "preview_type": "image",
       "hyp_filename": "rom2.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/rom2.hyp",
+      "has_download": true,
       "created_at": "2025-03-28T04:57:06.581Z",
       "tags": [
         "ui",
@@ -5833,6 +5956,7 @@
       "preview_type": "image",
       "hyp_filename": "Rover-LavaCargo.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Rover-LavaCargo.hyp",
+      "has_download": true,
       "created_at": "2025-02-12T06:32:35.128Z",
       "tags": [
         "npc",
@@ -5882,6 +6006,7 @@
       "preview_type": "image",
       "hyp_filename": "Rover-RingedPlanet.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Rover-RingedPlanet.hyp",
+      "has_download": true,
       "created_at": "2025-02-12T06:32:35.128Z",
       "tags": [
         "npc",
@@ -5932,6 +6057,7 @@
       "preview_type": "image",
       "hyp_filename": "Rover.2.11.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Rover.2.11.hyp",
+      "has_download": true,
       "created_at": "2025-02-12T06:32:35.128Z",
       "tags": [
         "npc",
@@ -5978,6 +6104,7 @@
       "preview_type": "image",
       "hyp_filename": "saori-2-5-trump-agent.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/saori-2-5-trump-agent.hyp",
+      "has_download": true,
       "created_at": "2025-03-04T23:46:36.827Z",
       "tags": [
         "npc",
@@ -6039,6 +6166,7 @@
       "preview_type": "image",
       "hyp_filename": "Screen.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Screen.hyp",
+      "has_download": true,
       "created_at": "2025-04-14T12:55:54.185Z",
       "tags": [
         "media-player",
@@ -6070,6 +6198,7 @@
       "preview_type": "image",
       "hyp_filename": "Screen_UI_link_section.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Screen_UI_link_section.hyp",
+      "has_download": true,
       "created_at": "2025-06-19T14:00:11.112Z",
       "tags": [
         "ui",
@@ -6142,6 +6271,7 @@
       "preview_type": "image",
       "hyp_filename": "Seatv2.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Seatv2.hyp",
+      "has_download": true,
       "created_at": "2025-07-08T03:58:47.476Z",
       "tags": [
         "interaction",
@@ -6217,6 +6347,7 @@
       "preview_type": "video",
       "hyp_filename": "SimonSays_Screen.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/SimonSays_Screen.hyp",
+      "has_download": true,
       "created_at": "2025-03-27T04:35:30.551Z",
       "tags": [
         "ui",
@@ -6287,6 +6418,7 @@
       "preview_type": "video",
       "hyp_filename": "SimonSays_Screen_2.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/SimonSays_Screen_2.hyp",
+      "has_download": true,
       "created_at": "2025-03-29T01:27:49.085Z",
       "tags": [
         "ui",
@@ -6355,6 +6487,7 @@
       "preview_type": "video",
       "hyp_filename": "SimonSaysBoard.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/SimonSaysBoard.hyp",
+      "has_download": true,
       "created_at": "2025-03-27T04:35:30.551Z",
       "tags": [
         "interaction",
@@ -6387,6 +6520,7 @@
       "preview_type": "image",
       "hyp_filename": "sit.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/sit.hyp",
+      "has_download": true,
       "created_at": "2025-03-17T16:00:45.098Z",
       "tags": [
         "interaction",
@@ -6421,6 +6555,7 @@
       "preview_type": "video",
       "hyp_filename": "Smoke.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Smoke.hyp",
+      "has_download": true,
       "created_at": "2025-04-16T03:23:09.271Z",
       "tags": [
         "particles",
@@ -6455,6 +6590,7 @@
       "preview_type": "image",
       "hyp_filename": "SmolWrld.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/SmolWrld.hyp",
+      "has_download": true,
       "created_at": "2025-03-31T19:17:27.713Z",
       "tags": [
         "audio",
@@ -6547,6 +6683,7 @@
       "preview_type": "image",
       "hyp_filename": "Solar_Panel.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Solar_Panel.hyp",
+      "has_download": true,
       "created_at": "2025-04-21T23:22:44.602Z",
       "tags": [
         "environment",
@@ -6592,6 +6729,7 @@
       "preview_type": "video",
       "hyp_filename": "Solar_Panel_-_sundown.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Solar_Panel_-_sundown.hyp",
+      "has_download": true,
       "created_at": "2025-03-31T12:53:51.039Z",
       "tags": [
         "environment",
@@ -6632,6 +6770,7 @@
       "preview_type": "image",
       "hyp_filename": "spawn.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/spawn.hyp",
+      "has_download": true,
       "created_at": "2025-03-28T17:46:22.278Z",
       "tags": [
         "teleport",
@@ -6664,6 +6803,7 @@
       "preview_type": "video",
       "hyp_filename": "SpeedTrail_v0.1.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/SpeedTrail_v0.1.hyp",
+      "has_download": true,
       "created_at": "2025-04-16T08:51:30.071Z",
       "tags": [
         "particles",
@@ -6694,6 +6834,7 @@
       "preview_type": "video",
       "hyp_filename": "SPICEXPortal.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/SPICEXPortal.hyp",
+      "has_download": true,
       "created_at": "2025-03-26T03:02:14.488Z",
       "tags": [
         "particles",
@@ -6749,6 +6890,7 @@
       "preview_type": "video",
       "hyp_filename": "SplinePineV1.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/SplinePineV1.hyp",
+      "has_download": true,
       "created_at": "2025-03-04T15:30:42.583Z",
       "tags": [
         "3d-model",
@@ -6776,6 +6918,7 @@
       "preview_type": "image",
       "hyp_filename": "SS3.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/SS3.hyp",
+      "has_download": true,
       "created_at": "2025-04-17T00:15:31.092Z",
       "tags": [
         "particles",
@@ -6849,6 +6992,7 @@
       "preview_type": "video",
       "hyp_filename": "Super_Run.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Super_Run.hyp",
+      "has_download": true,
       "created_at": "2025-12-02T14:20:12.164Z",
       "tags": [
         "physics",
@@ -6898,6 +7042,7 @@
       "preview_type": "image",
       "hyp_filename": "szjanko-2-11-dice.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/szjanko-2-11-dice.hyp",
+      "has_download": true,
       "created_at": "2025-03-04T23:46:36.827Z",
       "tags": [
         "animation",
@@ -6922,6 +7067,7 @@
       "preview_type": "image",
       "hyp_filename": "Teleport_Command_v2.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Teleport_Command_v2.hyp",
+      "has_download": true,
       "created_at": "2025-06-08T04:28:19.667Z",
       "tags": [
         "teleport",
@@ -6957,6 +7103,7 @@
       "preview_type": "image",
       "hyp_filename": "TeleportTriggerBox.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/TeleportTriggerBox.hyp",
+      "has_download": true,
       "created_at": "2025-10-24T17:26:21.962Z",
       "tags": [
         "teleport",
@@ -6995,6 +7142,7 @@
       "preview_type": "image",
       "hyp_filename": "test_level.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/test_level.hyp",
+      "has_download": true,
       "created_at": "2025-03-28T17:45:44.077Z",
       "tags": [
         "3d-model",
@@ -7022,6 +7170,7 @@
       "preview_type": "image",
       "hyp_filename": "Text_link_option.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Text_link_option.hyp",
+      "has_download": true,
       "created_at": "2025-10-10T10:04:28.226Z",
       "tags": [
         "ui",
@@ -7065,6 +7214,7 @@
       "preview_type": "image",
       "hyp_filename": "The_Grid.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/The_Grid.hyp",
+      "has_download": true,
       "created_at": "2025-09-10T12:15:47.057Z",
       "tags": [
         "environment",
@@ -7111,6 +7261,7 @@
       "preview_type": "image",
       "hyp_filename": "The_Meadow.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/The_Meadow.hyp",
+      "has_download": true,
       "created_at": "2025-09-10T12:15:47.057Z",
       "tags": [
         "environment",
@@ -7156,6 +7307,7 @@
       "preview_type": "image",
       "hyp_filename": "TOKEN_GATE.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/TOKEN_GATE.hyp",
+      "has_download": true,
       "created_at": "2025-03-11T21:08:41.943Z",
       "tags": [
         "ui",
@@ -7196,6 +7348,7 @@
       "preview_type": "video",
       "hyp_filename": "Tornado.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Tornado.hyp",
+      "has_download": true,
       "created_at": "2025-04-16T03:23:09.271Z",
       "tags": [
         "particles",
@@ -7230,6 +7383,7 @@
       "preview_type": "video",
       "hyp_filename": "TriggerZone.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/TriggerZone.hyp",
+      "has_download": true,
       "created_at": "2025-11-18T12:45:26.819Z",
       "tags": [
         "physics",
@@ -7272,6 +7426,7 @@
       "preview_type": "image",
       "hyp_filename": "uiImage_from_File-update1.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/uiImage_from_File-update1.hyp",
+      "has_download": true,
       "created_at": "2025-03-13T17:45:54.028Z",
       "tags": [
         "ui",
@@ -7295,6 +7450,7 @@
       "preview_type": "video",
       "hyp_filename": "Vanguard.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Vanguard.hyp",
+      "has_download": true,
       "created_at": "2025-03-30T13:57:21.442Z",
       "tags": [
         "combat",
@@ -7410,6 +7566,7 @@
       "preview_type": "image",
       "hyp_filename": "Video_Channel_Changer.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Video_Channel_Changer.hyp",
+      "has_download": true,
       "created_at": "2025-04-21T12:49:23.660Z",
       "tags": [
         "media-player",
@@ -7450,6 +7607,7 @@
       "preview_type": "image",
       "hyp_filename": "Video_with_player_UI.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Video_with_player_UI.hyp",
+      "has_download": true,
       "created_at": "2025-12-07T14:30:29.140Z",
       "tags": [
         "media-player",
@@ -7499,7 +7657,8 @@
       "preview_url": "media/videoenhanced/preview.png",
       "preview_type": "image",
       "hyp_filename": "VideoEnhanced.hyp",
-      "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/VideoEnhanced.hyp",
+      "download_path": null,
+      "has_download": false,
       "created_at": "2025-10-29T12:33:12.756Z",
       "tags": [
         "media-player",
@@ -7523,6 +7682,7 @@
       "preview_type": "image",
       "hyp_filename": "VideoPlayer.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/VideoPlayer.hyp",
+      "has_download": true,
       "created_at": "2025-10-08T15:27:03.285Z",
       "tags": [
         "media-player",
@@ -7572,6 +7732,7 @@
       "preview_type": "video",
       "hyp_filename": "Wall_Hang.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Wall_Hang.hyp",
+      "has_download": true,
       "created_at": "2025-11-11T19:48:16.104Z",
       "tags": [
         "physics",
@@ -7616,6 +7777,7 @@
       "preview_type": "video",
       "hyp_filename": "Water_Fountain.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Water_Fountain.hyp",
+      "has_download": true,
       "created_at": "2025-04-16T03:23:09.271Z",
       "tags": [
         "particles",
@@ -7650,6 +7812,7 @@
       "preview_type": "video",
       "hyp_filename": "Weightpaint_ScreenUI_test1.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Weightpaint_ScreenUI_test1.hyp",
+      "has_download": true,
       "created_at": "2025-09-25T12:02:07.170Z",
       "tags": [
         "ui",
@@ -7681,6 +7844,7 @@
       "preview_type": "image",
       "hyp_filename": "who_there.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/who_there.hyp",
+      "has_download": true,
       "created_at": "2025-07-23T11:45:59.244Z",
       "tags": [
         "ui",
@@ -7713,6 +7877,7 @@
       "preview_type": "image",
       "hyp_filename": "Wolf_Maro.hyp",
       "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/hyp-files/Wolf_Maro.hyp",
+      "has_download": true,
       "created_at": "2025-04-01T12:34:21.686Z",
       "tags": [
         "3d-model",

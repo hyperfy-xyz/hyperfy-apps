@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/spawn",
     "v2_json_path": "v2/spawn/spawn.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/spawn.md"
+    "hyp_summary_path": "context/hyp_summaries/spawn.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/pvp-core-with-spawns/m2_image.png",

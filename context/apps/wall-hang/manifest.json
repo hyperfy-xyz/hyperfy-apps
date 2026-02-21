@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/wall-hang",
     "v2_json_path": "v2/wall-hang/Wall Hang.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/Wall_Hang.md"
+    "hyp_summary_path": "context/hyp_summaries/Wall_Hang.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/wall-hang/p2_Desktop_2025.11.11_-_17.21.42.05.mp4",

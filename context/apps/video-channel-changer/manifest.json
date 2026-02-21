@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/video-channel-changer",
     "v2_json_path": "v2/video-channel-changer/Video Channel Changer.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/Video_Channel_Changer.md"
+    "hyp_summary_path": "context/hyp_summaries/Video_Channel_Changer.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/video-channel-changer/m3_IMG_1182.png",

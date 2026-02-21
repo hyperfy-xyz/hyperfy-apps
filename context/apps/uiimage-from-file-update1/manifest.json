@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/uiimage-from-file-update1",
     "v2_json_path": "v2/uiimage-from-file-update1/blueprint.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/uiImage_from_File-update1.md"
+    "hyp_summary_path": "context/hyp_summaries/uiImage_from_File-update1.md"
   },
   "preview": {
     "primary_media_path": null,

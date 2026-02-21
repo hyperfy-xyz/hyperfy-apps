@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/physics-raycast-tags",
     "v2_json_path": "v2/physics-raycast-tags/Physics - Raycast Tags.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/Physics_-_Raycast_Tags.md"
+    "hyp_summary_path": "context/hyp_summaries/Physics_-_Raycast_Tags.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/physics-raycast-tags/p0_xyz-physics-raycast-tags.mp4",

@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/simonsaysboard",
     "v2_json_path": "v2/simonsaysboard/SimonSaysBoard.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/SimonSaysBoard.md"
+    "hyp_summary_path": "context/hyp_summaries/SimonSaysBoard.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/simonsays-screen/p0_2025-03-27_00-21-03_1.mp4",

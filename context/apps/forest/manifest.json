@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/forest",
     "v2_json_path": "v2/forest/Forest.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/Forest.md"
+    "hyp_summary_path": "context/hyp_summaries/Forest.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/forest/m1_forest-gen.mp4",

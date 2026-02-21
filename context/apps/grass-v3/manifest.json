@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/grass-v3",
     "v2_json_path": "v2/grass-v3/Grass_V3.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/Grass_V3.md"
+    "hyp_summary_path": "context/hyp_summaries/Grass_V3.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/grass-v3/m1_Play_-_Google_Chrome_11.04.2025_15_22_23.png",

@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/anybox",
     "v2_json_path": "v2/anybox/anybox.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/anybox.md"
+    "hyp_summary_path": "context/hyp_summaries/anybox.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/anybox/p0_image.png",

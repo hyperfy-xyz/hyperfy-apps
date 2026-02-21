@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/test-level",
     "v2_json_path": "v2/test-level/test_level.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/test_level.md"
+    "hyp_summary_path": "context/hyp_summaries/test_level.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/test-level/m1_image.png",

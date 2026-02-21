@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/cam-raycast-action-bar",
     "v2_json_path": "v2/cam-raycast-action-bar/cam raycast action bar.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/cam_raycast_action_bar.md"
+    "hyp_summary_path": "context/hyp_summaries/cam_raycast_action_bar.md"
   },
   "preview": {
     "primary_media_path": null,

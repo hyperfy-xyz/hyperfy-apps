@@ -3,8 +3,7 @@
 Link checker for the Hyperfy Apps Explorer.
 
 Checks all URLs the explorer depends on:
-  - explorer-data.json
-  - card.json per app
+  - catalog.json
   - preview media per app
   - .hyp download URLs (GitHub raw CDN)
 
@@ -105,15 +104,15 @@ def main():
         time.sleep(0.3)  # let server start
         base = f"http://localhost:{port}/catalog"
 
-    # Fetch explorer-data.json
-    explorer_url = f"{base}/explorer-data.json"
-    print(f"Fetching {explorer_url} ...")
+    # Fetch catalog.json
+    catalog_url = f"{base}/catalog.json"
+    print(f"Fetching {catalog_url} ...")
     try:
-        req = urllib.request.Request(explorer_url)
+        req = urllib.request.Request(catalog_url)
         req.add_header("User-Agent", "hyperfy-link-checker/1.0")
         with urllib.request.urlopen(req, timeout=args.timeout) as resp:
             data = json.load(resp)
-            explorer_ok = True
+            catalog_ok = True
     except Exception as e:
         print(f"  FAIL: {e}")
         if server:
@@ -126,11 +125,7 @@ def main():
     # Build work items: (url, category, label)
     tasks = []
     for app in apps:
-        slug = app.get("slug", app.get("id", "?"))
-
-        card_path = app.get("card_path")
-        if card_path:
-            tasks.append((f"{base}/{card_path}", "card.json", slug))
+        slug = app.get("slug", "?")
 
         preview = app.get("preview_url")
         if preview:
@@ -149,11 +144,7 @@ def main():
     print(f"Checking {total} URLs ({args.workers} workers)...\n")
 
     # Results buckets: category -> list of (url, slug, status, err)
-    results = {
-        "card.json": [],
-        "preview": [],
-        "hyp_download": [],
-    }
+    results = {"preview": [], "hyp_download": []}
     done_count = 0
     lock = threading.Lock()
 
@@ -183,12 +174,11 @@ def main():
     print("SUMMARY")
     print("=" * 60)
 
-    # explorer-data.json
-    print(f"  {'✓' if explorer_ok else '✗'} explorer-data.json   OK")
+    # catalog.json
+    print(f"  {'✓' if catalog_ok else '✗'} catalog.json         OK")
 
     any_local_fail = False
     categories = [
-        ("card.json",    "card.json     "),
         ("preview",      "preview       "),
         ("hyp_download", "hyp download  "),
     ]

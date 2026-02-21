@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/camera-laser",
     "v2_json_path": "v2/camera-laser/Camera Laser.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/CameraLaser.md"
+    "hyp_summary_path": "context/hyp_summaries/CameraLaser.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/camera-laser/p2_cannonballs.mp4",

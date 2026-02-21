@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/cube-1",
     "v2_json_path": "v2/cube-1/Cube 1.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/Cube_1.md"
+    "hyp_summary_path": "context/hyp_summaries/Cube_1.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/cube-1/m2_xyz-unlinked-uvscroll.mp4",

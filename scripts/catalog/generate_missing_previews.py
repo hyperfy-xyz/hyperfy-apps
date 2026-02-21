@@ -8,8 +8,8 @@ Outputs:
   catalog/media/{slug}/preview.png
 
 Inputs:
-  catalog/explorer-data.json                 (app list, filter has_preview=false)
-  catalog/apps/*/card.json                  (richer description + tags for prompts)
+  catalog/catalog.json                      (app list, filter has_preview=false)
+  context/apps/*/manifest.json             (optional richer AI description + tags)
 """
 
 from __future__ import annotations
@@ -30,7 +30,7 @@ from typing import Any
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 CATALOG_ROOT = REPO_ROOT / "catalog"
-EXPLORER_DATA = CATALOG_ROOT / "explorer-data.json"
+CATALOG_DATA = CATALOG_ROOT / "catalog.json"
 MEDIA_DIR = CATALOG_ROOT / "media"
 
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
@@ -226,21 +226,24 @@ def process_one(
     dry_run: bool,
 ) -> dict[str, Any]:
     """Generate a preview image for one app."""
-    app_id = app["id"]
-    slug = app.get("slug", app_id)
+    slug = app.get("slug") or app.get("id")
+    if not slug:
+        raise RuntimeError("App row missing slug/id")
+    app_id = app.get("id") or slug
 
     # Check for any existing generated preview in media/<slug>/preview.*
     existing = list((MEDIA_DIR / slug).glob("preview.*"))
     if existing and not force:
         return {"app_id": app_id, "status": "skipped_existing"}
 
-    # Load card.json for richer context
-    card_path = CATALOG_ROOT / "apps" / slug / "card.json"
-    card = read_json(card_path)
+    # Load manifest for richer context if available
+    manifest_path = REPO_ROOT / "context" / "apps" / slug / "manifest.json"
+    manifest = read_json(manifest_path)
+    ai = (manifest or {}).get("ai", {})
 
-    name = (card or {}).get("name") or app.get("name", app_id)
-    description = (card or {}).get("description") or app.get("description", "")
-    tags = (card or {}).get("tags") or app.get("tags", [])
+    name = app.get("name", slug)
+    description = ai.get("description") or app.get("description", "")
+    tags = ai.get("feature_tags") or app.get("tags", [])
 
     prompt = build_prompt(name, description, tags)
 
@@ -290,8 +293,8 @@ def main() -> int:
 
     args = parser.parse_args()
 
-    if not EXPLORER_DATA.exists():
-        print(f"Error: missing {EXPLORER_DATA}")
+    if not CATALOG_DATA.exists():
+        print(f"Error: missing {CATALOG_DATA}")
         print("Run: uv run python scripts/catalog/build_explorer_data.py")
         return 1
 
@@ -300,13 +303,13 @@ def main() -> int:
         print("Error: OPENROUTER_API_KEY is required")
         return 1
 
-    explorer = json.loads(EXPLORER_DATA.read_text(encoding="utf-8"))
-    all_apps = explorer.get("apps", [])
+    catalog = json.loads(CATALOG_DATA.read_text(encoding="utf-8"))
+    all_apps = catalog.get("apps", [])
 
     # Filter to specific app IDs if given
     if args.app_ids:
         wanted = set(args.app_ids)
-        apps = [a for a in all_apps if a["id"] in wanted]
+        apps = [a for a in all_apps if (a.get("id") in wanted or a.get("slug") in wanted)]
     else:
         # Default: only apps missing previews
         apps = [a for a in all_apps if not a.get("has_preview")]
@@ -353,9 +356,9 @@ def main() -> int:
                     extra = f"\n    Prompt: {res['prompt'][:120]}..."
                 print(f"  {res['app_id']}: {status}{extra}")
             except Exception as e:
-                err = {"app_id": app.get("id"), "status": "failed", "error": str(e)}
+                err = {"app_id": app.get("id") or app.get("slug"), "status": "failed", "error": str(e)}
                 results.append(err)
-                print(f"  {app.get('id')}: FAILED - {e}")
+                print(f"  {app.get('id') or app.get('slug')}: FAILED - {e}")
 
     duration = round(time.time() - started, 2)
     counts = {

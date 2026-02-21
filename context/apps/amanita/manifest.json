@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/amanita",
     "v2_json_path": "v2/amanita/Amanita.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/Amanita.md"
+    "hyp_summary_path": "context/hyp_summaries/Amanita.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/amanita/m2_image.png",

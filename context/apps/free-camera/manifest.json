@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/free-camera",
     "v2_json_path": "v2/free-camera/Free Camera.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/Free_Camera.md"
+    "hyp_summary_path": "context/hyp_summaries/Free_Camera.md"
   },
   "preview": {
     "primary_media_path": null,

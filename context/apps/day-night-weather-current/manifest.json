@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/day-night-weather-current",
     "v2_json_path": "v2/day-night-weather-current/blueprint.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/DAY_NIGHT_WEATHER_CURRENT.md"
+    "hyp_summary_path": "context/hyp_summaries/DAY_NIGHT_WEATHER_CURRENT.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/day-night-weather-current/m8_IMG_1182.png",

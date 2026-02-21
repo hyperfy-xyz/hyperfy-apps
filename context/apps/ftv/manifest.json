@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/ftv",
     "v2_json_path": "v2/ftv/blueprint.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/FTV.md"
+    "hyp_summary_path": "context/hyp_summaries/FTV.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/ftv/p0_ww.mp4",

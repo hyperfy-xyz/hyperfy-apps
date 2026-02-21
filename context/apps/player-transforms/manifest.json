@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/player-transforms",
     "v2_json_path": "v2/player-transforms/Player Transforms.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/Player_Transforms.md"
+    "hyp_summary_path": "context/hyp_summaries/Player_Transforms.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/player-transforms/p0_player_transforms.mp4",

@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/neon-2",
     "v2_json_path": "v2/neon-2/NEON_2.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/NEON_2.md"
+    "hyp_summary_path": "context/hyp_summaries/NEON_2.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/neon-2/m3_NEON.mp4",

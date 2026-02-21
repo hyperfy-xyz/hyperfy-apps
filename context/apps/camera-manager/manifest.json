@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/camera-manager",
     "v2_json_path": "v2/camera-manager/Camera Manager.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/CameraManager.md"
+    "hyp_summary_path": "context/hyp_summaries/CameraManager.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/camera-manager/p0_CameraManagerTest.mp4",

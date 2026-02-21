@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/speedtrail-v0-1",
     "v2_json_path": "v2/speedtrail-v0-1/SpeedTrail v0.1.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/SpeedTrail_v0.1.md"
+    "hyp_summary_path": "context/hyp_summaries/SpeedTrail_v0.1.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/speedtrail-v0-1/m1_2025-04-14_23-09-26_1.mp4",

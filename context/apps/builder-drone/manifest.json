@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/builder-drone",
     "v2_json_path": "v2/builder-drone/Builder Drone.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/Builder_Drone.md"
+    "hyp_summary_path": "context/hyp_summaries/Builder_Drone.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/builder-drone/m2_xyz-builder-drone-x501.mp4",

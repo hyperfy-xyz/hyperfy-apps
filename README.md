@@ -13,6 +13,10 @@ hyperfy-apps/
 └── package.json
 ```
 
+## ETL Documentation
+
+- See [`ETL_PIPELINE.md`](ETL_PIPELINE.md) for script-level ingest/transform/output contracts and runbooks.
+
 ## V1 Apps (Legacy)
 
 40 React-based apps from the legacy Hyperfy SDK (2023-2026). Each directory contains `app.json`, `index.js`, and assets.
@@ -21,7 +25,7 @@ hyperfy-apps/
 
 ## V2 Apps (Current)
 
-158 modern JavaScript apps using the Hyperfy Script SDK, collected from the Hyperfy Discord community.
+165 modern JavaScript apps using the Hyperfy Script SDK, collected from the Hyperfy Discord community.
 
 ### By Category
 
@@ -48,7 +52,7 @@ hyperfy-apps/
 ### Full App List
 
 <details>
-<summary>All 158 V2 Apps (click to expand)</summary>
+<summary>All 165 V2 Apps (click to expand)</summary>
 
 - $scene
 - 360-video-viewer

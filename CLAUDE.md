@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Archive of 165+ Hyperfy virtual world apps with an AI-powered web explorer. The pipeline extracts `.hyp` binary packages into human-readable source, generates AI summaries, and serves a static catalog on GitHub Pages.
 
+Detailed ETL contracts and data flow are documented in `ETL_PIPELINE.md`.
+
 ## Commands
 
 ```bash
@@ -96,4 +98,4 @@ GitHub Pages auto-deploys `catalog/` on push to `main` when `catalog/**` changes
 - App directory names are always slugified: lowercase, hyphens only (no underscores, dots, or special chars).
 - `build_catalog.py` cannot run standalone — it needs the external `source-research` directory. Use `build_explorer_data.py` for local rebuilds.
 - The explorer is served from repo root, not from `catalog/`. Paths in the HTML reference `./app.js`, `./styles.css`, etc.
-- Tag normalization happens in `summarize_hyp_files_openrouter.py` (`TAG_CANONICAL` dict) and is enforced in `build_explorer_data.py` (`ALLOWED_TAGS` import).
+- Tag normalization/validation happens in `summarize_hyp_files_openrouter.py` (`ALLOWED_TAGS`) and is enforced in `build_explorer_data.py` (`ALLOWED_TAGS` import).
