@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/rocket-launcher-v3",
     "v2_json_path": "v2/rocket-launcher-v3/Rocket Launcher V3.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/Rocket_Launcher_V3.md"
+    "hyp_summary_path": "context/hyp_summaries/Rocket_Launcher_V3.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/rocket-launcher-v3/m1_World_-_Google_Chrome_24.04.2025_14_53_08.png",

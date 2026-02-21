@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/launchpad",
     "v2_json_path": "v2/launchpad/Launchpad.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/Launchpad.md"
+    "hyp_summary_path": "context/hyp_summaries/Launchpad.md"
   },
   "preview": {
     "primary_media_path": null,

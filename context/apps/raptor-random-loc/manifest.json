@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/raptor-random-loc",
     "v2_json_path": "v2/raptor-random-loc/Raptor_random_loc.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/Raptor_random_loc.md"
+    "hyp_summary_path": "context/hyp_summaries/Raptor_random_loc.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/raptor-random-loc/p1_World_-_Google_Chrome_24.04.2025_14_53_08.png",

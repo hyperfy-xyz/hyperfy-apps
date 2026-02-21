@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/rover-2-11",
     "v2_json_path": "v2/rover-2-11/blueprint.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/Rover.2.11.md"
+    "hyp_summary_path": "context/hyp_summaries/Rover.2.11.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/health/p0_vt01.png",

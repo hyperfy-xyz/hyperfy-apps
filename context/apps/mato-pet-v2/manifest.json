@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/mato-pet-v2",
     "v2_json_path": "v2/mato-pet-v2/Mato Pet v2.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/Mato_Pet_v2.md"
+    "hyp_summary_path": "context/hyp_summaries/Mato_Pet_v2.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/mato-pet-v2/p2_image.png",

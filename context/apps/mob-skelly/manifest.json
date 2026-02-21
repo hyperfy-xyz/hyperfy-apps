@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/mob-skelly",
     "v2_json_path": "v2/mob-skelly/Mob - Skelly.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/Mob_-_Skelly.md"
+    "hyp_summary_path": "context/hyp_summaries/Mob_-_Skelly.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/mob-skelly/m6_xyz-skelly.mp4",

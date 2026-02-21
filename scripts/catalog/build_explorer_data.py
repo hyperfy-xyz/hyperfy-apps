@@ -11,6 +11,7 @@ Inputs:
 
 from __future__ import annotations
 
+import argparse
 import json
 import os
 from datetime import datetime, timezone
@@ -24,6 +25,8 @@ CONTEXT_APPS_DIR = REPO_ROOT / "context" / "apps"
 AI_SUMMARIES_DIR = REPO_ROOT / "tmp" / "ai-summaries"
 MEDIA_DIR = CATALOG_ROOT / "media"
 V2_APPS_DIR = REPO_ROOT / "v2"
+HYP_FILES_DIR = REPO_ROOT / "hyp-files"
+TMP_MANIFESTS_DIR = REPO_ROOT / "tmp" / "manifests"
 
 def detect_github_raw_base() -> str:
     """Detect GitHub raw URL base from git remote, with fallback."""
@@ -186,9 +189,10 @@ def build_app_entry(
         else:
             catalog_preview = preview_path
 
-    # Download: use GitHub raw URL since hyp-files/ is outside catalog/
+    # Download: only emit URL if the .hyp file exists in hyp-files/
     hyp_filename = source.get("hyp_filename")
-    download_url = f"{GITHUB_RAW_BASE}/hyp-files/{hyp_filename}" if hyp_filename else None
+    has_hyp_file = bool(hyp_filename and (HYP_FILES_DIR / hyp_filename).exists())
+    download_url = f"{GITHUB_RAW_BASE}/hyp-files/{hyp_filename}" if has_hyp_file else None
 
     # Extract source excerpts from v2
     props: dict[str, Any] = {}
@@ -216,6 +220,7 @@ def build_app_entry(
         "preview_type": media_type_from_path(preview_path),
         "hyp_filename": hyp_filename,
         "download_path": download_url,
+        "has_download": has_hyp_file,
         "created_at": source.get("discord_timestamp"),
         "tags": tags,
         "interaction_modes": interaction_modes,
@@ -237,6 +242,14 @@ def build_app_entry(
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description="Build merged catalog JSON for explorer")
+    parser.add_argument(
+        "--allow-missing-hyp",
+        action="store_true",
+        help="Allow apps that reference missing hyp-files/*.hyp entries (default: fail with error)",
+    )
+    args = parser.parse_args()
+
     manifest_paths = sorted(CONTEXT_APPS_DIR.glob("*/manifest.json"))
     if not manifest_paths:
         print(f"Error: no manifests found in {CONTEXT_APPS_DIR}")
@@ -249,6 +262,7 @@ def main() -> int:
     tag_counts: dict[str, int] = {}
     with_preview = 0
     ai_merged = 0
+    missing_hyp: list[tuple[str, str]] = []
 
     for manifest_path in manifest_paths:
         manifest = read_json(manifest_path)
@@ -294,6 +308,9 @@ def main() -> int:
         entry = build_app_entry(app_row, manifest, ai_summary, v2_dir, blueprint)
         apps.append(entry)
 
+        if entry.get("hyp_filename") and not entry.get("has_download"):
+            missing_hyp.append((entry["slug"], entry["hyp_filename"]))
+
         if entry["has_preview"]:
             with_preview += 1
 
@@ -320,6 +337,34 @@ def main() -> int:
         "tag_index": sorted_tag_index,
         "apps": apps,
     }
+
+    if missing_hyp:
+        missing_hyp_report_path = TMP_MANIFESTS_DIR / "missing-hyp-files.json"
+        missing_hyp_report = {
+            "generated_at": now_iso(),
+            "missing_hyp_count": len(missing_hyp),
+            "missing_hyp": [
+                {
+                    "slug": slug,
+                    "hyp_filename": hyp_filename,
+                    "expected_path": f"hyp-files/{hyp_filename}",
+                }
+                for slug, hyp_filename in missing_hyp
+            ],
+        }
+        TMP_MANIFESTS_DIR.mkdir(parents=True, exist_ok=True)
+        missing_hyp_report_path.write_text(
+            json.dumps(missing_hyp_report, indent=2),
+            encoding="utf-8",
+        )
+
+        print(f"  Missing .hyp files: {len(missing_hyp)}")
+        print(f"  Missing .hyp report: {missing_hyp_report_path.relative_to(REPO_ROOT)}")
+        for slug, hyp_filename in missing_hyp:
+            print(f"    - {slug}: hyp-files/{hyp_filename} (missing)")
+        if not args.allow_missing_hyp:
+            print("Error: missing .hyp files detected. catalog/catalog.json was not updated.")
+            return 2
 
     CATALOG_ROOT.mkdir(parents=True, exist_ok=True)
     catalog_path = CATALOG_ROOT / "catalog.json"

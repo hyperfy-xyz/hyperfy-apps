@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/camera-trigger",
     "v2_json_path": "v2/camera-trigger/Camera Trigger.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/Camera_Trigger.md"
+    "hyp_summary_path": "context/hyp_summaries/Camera_Trigger.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/camera-trigger/m1_IMG_0630.png",

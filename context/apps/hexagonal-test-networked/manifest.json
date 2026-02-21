@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/hexagonal-test-networked",
     "v2_json_path": "v2/hexagonal-test-networked/blueprint.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/hexagonal_test_networked.md"
+    "hyp_summary_path": "context/hyp_summaries/hexagonal_test_networked.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/hexagonal-test-basic/p0_image.png",

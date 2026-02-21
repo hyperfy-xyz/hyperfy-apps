@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/hyperbeacon-v2",
     "v2_json_path": "v2/hyperbeacon-v2/blueprint.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/HyperBeacon_v2.md"
+    "hyp_summary_path": "context/hyp_summaries/HyperBeacon_v2.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/hyperbeacon-v2/m1_spatial_relay_example.png",

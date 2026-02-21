@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": null,
     "v2_json_path": null,
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/VideoEnhanced.md"
+    "hyp_summary_path": null
   },
   "preview": {
     "primary_media_path": null,

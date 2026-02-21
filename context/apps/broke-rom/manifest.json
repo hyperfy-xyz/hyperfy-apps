@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/broke-rom",
     "v2_json_path": "v2/broke-rom/broke-rom.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/broke-rom.md"
+    "hyp_summary_path": "context/hyp_summaries/broke-rom.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/broke-rom/p3_Screenshot_2025-03-28_at_9.28.05_AM.png",

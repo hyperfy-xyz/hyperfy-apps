@@ -129,7 +129,14 @@ def resolve_v2_slug(app_name: str, filename_stem: str, v2_slugs: set[str], mappi
     return None
 
 
-def copy_artifacts(source_research: Path, context_dir: Path, tmp_dir: Path, dry_run: bool = False):
+def copy_artifacts(
+    source_research: Path,
+    context_dir: Path,
+    tmp_dir: Path,
+    dry_run: bool = False,
+    use_local_index: bool = True,
+    local_index_path: Path | None = None,
+):
     src_index = source_research / "hyp_index.json"
     src_summaries = source_research / "hyp_summaries"
     src_media = source_research / "hyp_media"
@@ -140,34 +147,87 @@ def copy_artifacts(source_research: Path, context_dir: Path, tmp_dir: Path, dry_
     dst_media_raw = tmp_dir / "hyp_media_raw"
     dst_report = tmp_dir / "hyp_media_report.md"
 
-    if dry_run:
-        return {
-            "index": src_index,
-            "summaries": src_summaries,
-            "media_raw": src_media,
-            "report": src_report,
-        }
+    local_index = local_index_path or dst_index
+    warnings: list[str] = []
+    source_exists = source_research.exists()
 
-    context_dir.mkdir(parents=True, exist_ok=True)
-    tmp_dir.mkdir(parents=True, exist_ok=True)
+    if not dry_run:
+        context_dir.mkdir(parents=True, exist_ok=True)
+        tmp_dir.mkdir(parents=True, exist_ok=True)
 
-    shutil.copy2(src_index, dst_index)
+    # Index resolution: prefer local canonical index, fallback to source research import.
+    if use_local_index and local_index.exists():
+        index_path = local_index
+        index_mode = "local"
+    elif source_exists and src_index.exists():
+        if dry_run:
+            index_path = src_index
+        else:
+            shutil.copy2(src_index, dst_index)
+            index_path = dst_index
+        index_mode = "source-research"
+    elif dst_index.exists():
+        index_path = dst_index
+        index_mode = "local-existing"
+        warnings.append("source-research hyp_index.json missing; using existing context/hyp_index.raw.json")
+    else:
+        raise FileNotFoundError(
+            "No usable index found. Provide --local-index (or generate it) or ensure --source-research/hyp_index.json exists."
+        )
 
-    if dst_summaries.exists():
-        shutil.rmtree(dst_summaries)
-    shutil.copytree(src_summaries, dst_summaries)
+    # Summaries resolution: refresh from source when available, otherwise use existing local copy.
+    if source_exists and src_summaries.exists():
+        if dry_run:
+            summaries_path = src_summaries
+        else:
+            if dst_summaries.exists():
+                shutil.rmtree(dst_summaries)
+            shutil.copytree(src_summaries, dst_summaries)
+            summaries_path = dst_summaries
+    elif dst_summaries.exists():
+        summaries_path = dst_summaries
+        warnings.append("source-research hyp_summaries missing; using existing context/hyp_summaries")
+    else:
+        summaries_path = dst_summaries
+        warnings.append("No hyp_summaries found; summary excerpts will be empty")
 
-    if dst_media_raw.exists():
-        shutil.rmtree(dst_media_raw)
-    shutil.copytree(src_media, dst_media_raw)
+    # Media resolution: optional in simplified pipeline.
+    if source_exists and src_media.exists():
+        if dry_run:
+            media_raw_path = src_media
+        else:
+            if dst_media_raw.exists():
+                shutil.rmtree(dst_media_raw)
+            shutil.copytree(src_media, dst_media_raw)
+            media_raw_path = dst_media_raw
+    elif dst_media_raw.exists():
+        media_raw_path = dst_media_raw
+        warnings.append("source-research hyp_media missing; using existing tmp/hyp_media_raw")
+    else:
+        media_raw_path = dst_media_raw
+        warnings.append("No hyp_media available; media optimization stage will be skipped automatically")
 
-    shutil.copy2(src_report, dst_report)
+    # Media report is optional; keep best available copy.
+    if source_exists and src_report.exists():
+        if dry_run:
+            report_path = src_report
+        else:
+            shutil.copy2(src_report, dst_report)
+            report_path = dst_report
+    elif dst_report.exists():
+        report_path = dst_report
+        warnings.append("source-research hyp_media_report.md missing; using existing tmp/hyp_media_report.md")
+    else:
+        report_path = dst_report
+        warnings.append("No hyp_media_report.md available")
 
     return {
-        "index": dst_index,
-        "summaries": dst_summaries,
-        "media_raw": dst_media_raw,
-        "report": dst_report,
+        "index": index_path,
+        "summaries": summaries_path,
+        "media_raw": media_raw_path,
+        "report": report_path,
+        "warnings": warnings,
+        "index_mode": index_mode,
     }
 
 
@@ -348,6 +408,16 @@ def pick_primary_candidate(candidates: list[dict[str, Any]]) -> dict[str, Any] |
     return sorted(candidates, key=rank)[0]
 
 
+def find_existing_preview(repo_root: Path, slug: str) -> str | None:
+    media_dir = repo_root / "catalog" / "media" / slug
+    if not media_dir.exists():
+        return None
+    matches = sorted(media_dir.glob("preview.*"))
+    if not matches:
+        return None
+    return f"catalog/media/{slug}/{matches[0].name}"
+
+
 def build_catalog_manifests(
     repo_root: Path,
     hyp_index_path: Path,
@@ -369,8 +439,9 @@ def build_catalog_manifests(
     if not dry_run:
         apps_out_root.mkdir(parents=True, exist_ok=True)
 
-    compact_apps = []
+    compact_apps_by_slug: dict[str, dict[str, Any]] = {}
     missing_preview = []
+    slug_collision_entries: dict[str, list[dict[str, Any]]] = {}
 
     for e in entries:
         app_name = e.get("app_name") or Path(e.get("filename", "app.hyp")).stem
@@ -380,6 +451,16 @@ def build_catalog_manifests(
         preferred_slug = v2_slug or sanitize_slug(app_name)
         message_id = e.get("message_id") or e.get("attachment_id") or "unknown"
         app_id = f"{preferred_slug}-{message_id}"
+        hyp_filename = e.get("filename")
+        has_hyp_file = bool(hyp_filename and (repo_root / "hyp-files" / hyp_filename).exists())
+        slug_collision_entries.setdefault(preferred_slug, []).append({
+            "app_id": app_id,
+            "message_id": e.get("message_id"),
+            "attachment_id": e.get("attachment_id"),
+            "timestamp": e.get("timestamp"),
+            "hyp_filename": hyp_filename,
+            "has_hyp_file": has_hyp_file,
+        })
 
         v2_dir = repo_root / "v2" / v2_slug if v2_slug else None
         v2_json = detect_v2_json(v2_dir) if v2_dir else None
@@ -390,7 +471,11 @@ def build_catalog_manifests(
             except Exception:
                 v2_json_data = {}
 
-        summary_rel = (e.get("summary_path") or "").replace("research/hyp_summaries/", "")
+        summary_rel = e.get("summary_path") or ""
+        for prefix in ("research/hyp_summaries/", "context/hyp_summaries/", "./context/hyp_summaries/"):
+            if summary_rel.startswith(prefix):
+                summary_rel = summary_rel[len(prefix):]
+                break
         summary_path = summaries_dir / summary_rel if summary_rel else None
         summary_excerpt = load_summary_excerpt(summary_path) if summary_path else ""
 
@@ -410,6 +495,10 @@ def build_catalog_manifests(
             marker = "research/hyp_media/"
             if marker in local_path:
                 rel_media = local_path.split(marker, 1)[1]
+            elif "tmp/hyp_media_raw/" in local_path:
+                rel_media = local_path.split("tmp/hyp_media_raw/", 1)[1]
+            elif local_path.startswith("hyp_media/"):
+                rel_media = local_path.split("hyp_media/", 1)[1]
             elif local_path.startswith("catalog/discord/hyp_media/"):
                 rel_media = local_path.split("catalog/discord/hyp_media/", 1)[1]
             if not rel_media:
@@ -418,7 +507,7 @@ def build_catalog_manifests(
             opt = media_map.get(rel_media)
             excluded_large = False
             out_rel = None
-            if opt and opt.status == "kept" and opt.optimized_rel:
+            if opt and opt.optimized_rel and opt.status in {"kept", "dry_run"}:
                 out_rel = f"catalog/media/{opt.optimized_rel}"
             elif opt and opt.status == "excluded":
                 excluded_large = True
@@ -439,8 +528,17 @@ def build_catalog_manifests(
 
         usable_media = [m for m in mapped_media if m.get("catalog_path")]
         primary = pick_primary_candidate(usable_media)
+        if primary is None:
+            fallback_preview = find_existing_preview(repo_root, preferred_slug)
+            if fallback_preview:
+                primary = {
+                    "catalog_path": fallback_preview,
+                    "selection_reason": "existing_catalog_preview",
+                }
 
         flags = set(e.get("flags", []))
+        if not has_hyp_file:
+            flags.add("missing_hyp_file")
         needs_media_review = primary is None
         if needs_media_review:
             missing_preview.append(e)
@@ -452,7 +550,7 @@ def build_catalog_manifests(
             "app_slug": preferred_slug,
             "app_name": app_name,
             "source": {
-                "hyp_filename": e.get("filename"),
+                "hyp_filename": hyp_filename,
                 "discord_attachment_id": e.get("attachment_id"),
                 "discord_message_id": e.get("message_id"),
                 "discord_channel": e.get("channel_name"),
@@ -475,7 +573,11 @@ def build_catalog_manifests(
             "links": {
                 "v2_app_dir": f"v2/{v2_slug}" if v2_slug else None,
                 "v2_json_path": str(v2_json.relative_to(repo_root)) if v2_json else None,
-                "hyp_summary_path": f"context/hyp_summaries/{summary_rel}" if summary_rel else None,
+                "hyp_summary_path": (
+                    f"context/hyp_summaries/{summary_rel}"
+                    if (summary_rel and summary_path and summary_path.exists())
+                    else None
+                ),
             },
             "preview": {
                 "primary_media_path": primary.get("catalog_path") if primary else None,
@@ -486,6 +588,7 @@ def build_catalog_manifests(
             "media": mapped_media,
             "status": {
                 "has_preview": primary is not None,
+                "has_hyp_file": has_hyp_file,
                 "needs_media_review": needs_media_review,
                 "needs_author_review": needs_author_review,
                 "flags": sorted(flags),
@@ -504,7 +607,7 @@ def build_catalog_manifests(
             except Exception:
                 ai_summary = None
 
-        compact_apps.append({
+        compact_apps_by_slug[preferred_slug] = {
             "app_id": app_id,
             "app_slug": preferred_slug,
             "app_name": app_name,
@@ -513,25 +616,46 @@ def build_catalog_manifests(
             "primary_preview": primary.get("catalog_path") if primary else None,
             "manifest_path": f"context/apps/{preferred_slug}/manifest.json",
             "v2_app_dir": f"v2/{v2_slug}" if v2_slug else None,
+            "has_hyp_file": has_hyp_file,
             "has_ai_summary": bool(ai_summary),
             "ai_summary_path": f"tmp/ai-summaries/{preferred_slug}.json" if ai_summary else None,
             "flags": sorted(flags),
-        })
+        }
 
         if not dry_run:
             app_dir = apps_out_root / preferred_slug
             app_dir.mkdir(parents=True, exist_ok=True)
             (app_dir / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
 
-    compact_apps.sort(key=lambda x: x["app_name"].lower())
+    compact_apps = sorted(compact_apps_by_slug.values(), key=lambda x: x["app_name"].lower())
+
+    collision_groups = []
+    for slug, rows in sorted(slug_collision_entries.items()):
+        if len(rows) <= 1:
+            continue
+        kept_app_id = compact_apps_by_slug[slug]["app_id"]
+        collision_groups.append({
+            "app_slug": slug,
+            "kept_app_id": kept_app_id,
+            "all_app_ids": [r["app_id"] for r in rows],
+            "dropped_app_ids": [r["app_id"] for r in rows if r["app_id"] != kept_app_id],
+            "source_rows": rows,
+        })
+    dropped_duplicate_count = sum(len(g["dropped_app_ids"]) for g in collision_groups)
+    collision_out = repo_root / "tmp" / "manifests" / "slug-collision-report.json"
 
     global_manifest = {
         "version": 1,
         "generated_at": now_iso(),
         "counts": {
+            "source_entries": len(entries),
             "apps": len(compact_apps),
             "with_preview": sum(1 for a in compact_apps if a["has_preview"]),
             "missing_preview": sum(1 for a in compact_apps if not a["has_preview"]),
+            "with_hyp_file": sum(1 for a in compact_apps if a.get("has_hyp_file")),
+            "missing_hyp_file": sum(1 for a in compact_apps if not a.get("has_hyp_file")),
+            "slug_collisions": len(collision_groups),
+            "dropped_duplicate_entries": dropped_duplicate_count,
         },
         "apps": compact_apps,
     }
@@ -539,6 +663,19 @@ def build_catalog_manifests(
     if not dry_run:
         manifests_out.parent.mkdir(parents=True, exist_ok=True)
         manifests_out.write_text(json.dumps(global_manifest, indent=2), encoding="utf-8")
+        collision_out.parent.mkdir(parents=True, exist_ok=True)
+        collision_out.write_text(
+            json.dumps(
+                {
+                    "generated_at": now_iso(),
+                    "source_entries": len(entries),
+                    "unique_slugs": len(compact_apps),
+                    "collision_groups": collision_groups,
+                },
+                indent=2,
+            ),
+            encoding="utf-8",
+        )
 
     # Issue checklist
     lines = [
@@ -570,6 +707,12 @@ def build_catalog_manifests(
 
     return {
         "global_manifest": global_manifest,
+        "source_entry_count": len(entries),
+        "unique_slug_count": len(compact_apps),
+        "collision_count": len(collision_groups),
+        "dropped_duplicate_count": dropped_duplicate_count,
+        "missing_hyp_count": sum(1 for a in compact_apps if not a.get("has_hyp_file")),
+        "collision_report_path": collision_out,
         "missing_count": len(missing_compact),
         "issue_path": issue_out,
     }
@@ -578,6 +721,18 @@ def build_catalog_manifests(
 def main():
     parser = argparse.ArgumentParser(description="Build hyperfy-apps catalog from sunset research")
     parser.add_argument("--source-research", type=Path, default=Path("/home/jin/repo/hyperfy-archive/sunset/research"))
+    parser.add_argument(
+        "--use-local-index",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Prefer local canonical index (context/hyp_index.raw.json) over importing source-research/hyp_index.json",
+    )
+    parser.add_argument(
+        "--local-index",
+        type=Path,
+        default=None,
+        help="Override local index path (default: <repo-root>/context/hyp_index.raw.json)",
+    )
     parser.add_argument("--repo-root", type=Path, default=Path(__file__).resolve().parents[2])
     parser.add_argument("--max-bytes", type=int, default=MAX_BYTES_DEFAULT)
     parser.add_argument("--dry-run", action="store_true")
@@ -590,8 +745,16 @@ def main():
     catalog_root = repo_root / "catalog"
     context_dir = repo_root / "context"
     tmp_dir = repo_root / "tmp"
+    local_index = args.local_index.resolve() if args.local_index else (context_dir / "hyp_index.raw.json")
 
-    copied = copy_artifacts(args.source_research.resolve(), context_dir, tmp_dir, dry_run=args.dry_run)
+    copied = copy_artifacts(
+        source_research=args.source_research.resolve(),
+        context_dir=context_dir,
+        tmp_dir=tmp_dir,
+        dry_run=args.dry_run,
+        use_local_index=args.use_local_index,
+        local_index_path=local_index,
+    )
 
     media_map: dict[str, OptimizeResult]
     optimize_rows: list[dict[str, Any]]
@@ -635,9 +798,17 @@ def main():
     print("Catalog build complete")
     print(f"  Repo root: {repo_root}")
     print(f"  Dry run: {args.dry_run}")
+    print(f"  Index mode: {copied.get('index_mode')}")
+    for warning in copied.get("warnings", []):
+        print(f"  Warning: {warning}")
+    print(f"  Source entries: {result['source_entry_count']}")
+    print(f"  Unique slugs: {result['unique_slug_count']}")
+    print(f"  Slug collisions: {result['collision_count']} (dropped {result['dropped_duplicate_count']} duplicates)")
+    print(f"  Missing .hyp files: {result['missing_hyp_count']}")
     print(f"  Missing preview count: {result['missing_count']}")
     if not args.dry_run:
         print(f"  Global manifest: {repo_root / 'tmp/manifests/apps-manifest.json'}")
+        print(f"  Collision report: {result['collision_report_path']}")
         print(f"  Issue checklist: {result['issue_path']}")
 
 

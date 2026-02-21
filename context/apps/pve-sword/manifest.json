@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/pve-sword",
     "v2_json_path": "v2/pve-sword/PvE Sword.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/PvE_Sword.md"
+    "hyp_summary_path": "context/hyp_summaries/PvE_Sword.md"
   },
   "preview": {
     "primary_media_path": null,

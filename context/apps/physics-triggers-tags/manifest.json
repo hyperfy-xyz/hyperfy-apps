@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/physics-triggers-tags",
     "v2_json_path": "v2/physics-triggers-tags/Physics - Triggers & Tags.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/Physics_-_Triggers__Tags.md"
+    "hyp_summary_path": "context/hyp_summaries/Physics_-_Triggers__Tags.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/physics-triggers-tags/p0_xyz-physics-triggers--tags.mp4",

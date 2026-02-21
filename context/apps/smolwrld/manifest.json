@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/smolwrld",
     "v2_json_path": "v2/smolwrld/SmolWrld.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/SmolWrld.md"
+    "hyp_summary_path": "context/hyp_summaries/SmolWrld.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/smolwrld/p5_Screenshot_2025-03-31_at_1.28.44_PM.png",

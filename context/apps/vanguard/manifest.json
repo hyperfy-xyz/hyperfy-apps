@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/vanguard",
     "v2_json_path": "v2/vanguard/Vanguard.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/Vanguard.md"
+    "hyp_summary_path": "context/hyp_summaries/Vanguard.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/mob-skelly/m6_xyz-skelly.mp4",

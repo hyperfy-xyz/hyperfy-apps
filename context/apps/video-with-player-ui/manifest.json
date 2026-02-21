@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/video-with-player-ui",
     "v2_json_path": "v2/video-with-player-ui/Video with player UI.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/Video_with_player_UI.md"
+    "hyp_summary_path": "context/hyp_summaries/Video_with_player_UI.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/video-with-player-ui/p0_video_player_ui.png",

@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/rainv4",
     "v2_json_path": "v2/rainv4/RainV4.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/RainV4.md"
+    "hyp_summary_path": "context/hyp_summaries/RainV4.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/rainv4/m2_image.png",

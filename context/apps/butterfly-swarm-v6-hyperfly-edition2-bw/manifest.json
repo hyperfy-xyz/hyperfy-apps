@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/butterfly-swarm-v6-hyperfly-edition2-bw",
     "v2_json_path": "v2/butterfly-swarm-v6-hyperfly-edition2-bw/blueprint.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/Butterfly_Swarm_V6_Hyperfly_edition2_BW.md"
+    "hyp_summary_path": "context/hyp_summaries/Butterfly_Swarm_V6_Hyperfly_edition2_BW.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/butterfly-swarm-v6-hyperfly-edition2-bw/p1_1092aa12-4c83-4fd9-bd55-6704eea2f06e.png",

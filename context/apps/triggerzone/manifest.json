@@ -26,7 +26,7 @@
   "links": {
     "v2_app_dir": "v2/triggerzone",
     "v2_json_path": "v2/triggerzone/TriggerZone.json",
-    "hyp_summary_path": "catalog/ingest/hyp_summaries/TriggerZone.md"
+    "hyp_summary_path": "context/hyp_summaries/TriggerZone.md"
   },
   "preview": {
     "primary_media_path": "catalog/media/triggerzone/p1_triggerzone.mp4",

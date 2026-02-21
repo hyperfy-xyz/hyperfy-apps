@@ -232,7 +232,6 @@ def read_optional(path: Path | None, max_chars: int = 6000) -> str:
         return ""
     return path.read_text(encoding="utf-8", errors="ignore")[:max_chars]
 
-
 def check_description_quality(description: str) -> str | None:
     """Return a rejection reason, or None if OK."""
     desc_lower = description.lower()
