@@ -3,3 +3,6 @@ __pycache__/
 tmp/
 catalog/discord/hyp_media_raw/
 catalog/manifests/ai-summary-failures/
+*.sqlite
+*.sqlite.enc
+*.bak
