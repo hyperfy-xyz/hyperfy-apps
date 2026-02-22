@@ -1,0 +1,16 @@
+{
+  "id": "FKN7Wi0n7H",
+  "version": 55,
+  "name": "NavMesh",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": null,
+  "model": "asset://b66285a1342dbc494a4a3da95cc661cd39d7fd9fbf7fe7a57c7629fd57ad79b1.glb",
+  "script": "asset://ea24d3ff5a107c14a91c3618d149840f7db8bfa5447ba17a4ab88d333cb6ab21.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

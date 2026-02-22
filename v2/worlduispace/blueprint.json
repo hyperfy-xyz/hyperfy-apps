@@ -1,0 +1,33 @@
+{
+  "id": "Hnzr8y8D1G",
+  "version": 268,
+  "name": "World UI Space",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": "A demo showing the difference between rendering UI in world or screen space.",
+  "model": "asset://39f472b2ec76836a0187c27e3872bf7ba6690fd25b61e6323ca272a44fff3f94.glb",
+  "script": "asset://e8b24d68ee5372e7b4708ec081061cbe33861d7759f75d62ffa6a477feab3c2e.js",
+  "props": {
+    "attack": {
+      "type": "emote",
+      "name": "emote-sword-out-slash.glb",
+      "url": "asset://9eed8f2520fae4b02052fa66264aec8b8ca285bc004267a5a13f6576d40c22ed.glb"
+    },
+    "attack1": {
+      "type": "emote",
+      "name": "emote-sword-out-slash.glb",
+      "url": "asset://9eed8f2520fae4b02052fa66264aec8b8ca285bc004267a5a13f6576d40c22ed.glb"
+    },
+    "attack2": {
+      "type": "emote",
+      "name": "sword-in-slash.glb",
+      "url": "asset://9eed8f2520fae4b02052fa66264aec8b8ca285bc004267a5a13f6576d40c22ed.glb"
+    },
+    "screen": false
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

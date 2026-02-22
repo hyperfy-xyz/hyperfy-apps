@@ -1,0 +1,24 @@
+{
+  "id": "mLQ552Cogu",
+  "version": 11,
+  "name": "BIKE-fallout",
+  "image": null,
+  "author": "HiveMind",
+  "url": null,
+  "desc": "Can't Do this in Fallout......",
+  "model": "asset://74fc8fce8ef1f3c13c275ea8c43e430a9d6fd47f433fad233eea9265ee98ba89.glb",
+  "script": "asset://026315b0cbda88001248d72e0b169e477ba426636363d42aada65e3a61be3e59.js",
+  "props": {
+    "emote": {
+      "type": "emote",
+      "name": "sit.glb",
+      "url": "asset://43aa6ecfccf3a111926b31a1865bc5875d22c9c54c7d3ad501aeb829082e7a08.glb"
+    },
+    "speed": 4,
+    "turnSpeed": 3
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

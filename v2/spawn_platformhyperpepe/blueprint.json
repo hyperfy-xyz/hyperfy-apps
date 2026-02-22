@@ -1,0 +1,32 @@
+{
+  "id": "cKPjDfFPXq",
+  "version": 254,
+  "name": "Spawn Platform",
+  "image": null,
+  "author": "drdoge.eth ",
+  "url": "https://tattedalien.club/",
+  "desc": null,
+  "model": "asset://8eb99b8c531e64275da45b66f494a795b8d7b1a9de45b67b0f369a91d4342e3e.glb",
+  "script": "asset://9cdb299b9b596b9e50a8daf6014f423709a5717a04fe3e54ceecc421ec0ae001.js",
+  "props": {
+    "audio": {
+      "type": "audio",
+      "name": "HOW_SWAY_CARL.mp3",
+      "url": "asset://2dca42db57dd4b5064724ee74477c12fe38848c6950213d09a72221b8a1af523.mp3"
+    },
+    "particleCount": 120,
+    "scaleY": 5,
+    "scaleX": 3,
+    "scaleZ": 3,
+    "particleImageUrl1": "https://imgs.search.brave.com/Iz3Uh9wsGfAZYbYYTEjxUch8B-CzUyQ1MfWsgQg2PaM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9oeXBl/cmZ5Lnh5ei9sb2dv/LWljb24uc3Zn",
+    "imageRatio": 0,
+    "particleType": "mixed",
+    "particleImageUrl2": "https://imgs.search.brave.com/Iz3Uh9wsGfAZYbYYTEjxUch8B-CzUyQ1MfWsgQg2PaM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9oeXBl/cmZ5Lnh5ei9sb2dv/LWljb24uc3Zn",
+    "particleImageUrl3": "",
+    "orbitalSpeed": 2
+  },
+  "preload": true,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

@@ -1,0 +1,15 @@
+{
+  "id": "61ZfwxsXdn",
+  "version": 9,
+  "name": "Fun with Projectiles",
+  "image": null,
+  "author": "Shiffty",
+  "url": null,
+  "desc": "Proof of concept projectile system.",
+  "model": "asset://9e5191e8376186fe37433c8c0cb752957547f233875a3922964a21cb1394a98b.glb",
+  "script": "asset://72c73986c467793e78a19f1ba09872b23c0bf01e3a990d2261c92d8f09e374c0.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false
+}

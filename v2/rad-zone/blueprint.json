@@ -1,0 +1,32 @@
+{
+  "id": "2tuu1QmMgO",
+  "version": 90,
+  "name": "RAD-ZONE",
+  "image": null,
+  "author": "drdoge",
+  "url": "https://tattedalien.club/",
+  "desc": "Deals Enviromental Area of Effect damage over time.  (currently RADIATION) can be configured to what ever type needed. works in Unison with other apps with PVP/health/Damage aspects. ",
+  "model": "asset://fb0f648703d845f3c6850d8b7356c5c5415c9894cf3af81296745864445400cc.glb",
+  "script": "asset://81118da984f2f0f721ceee0a6c12828af1aab58714f54fb1072777f8fa2a40ec.js",
+  "props": {
+    "refDistance": 3,
+    "maxDistance": 15,
+    "rolloffFactor": 1.5,
+    "distanceModel": "inverse",
+    "radiationAudio": {
+      "type": "audio",
+      "name": "RADS.mp3",
+      "url": "asset://13dfaca31a65bfe0cad62febf418b2f8e25f15a4e046992f4ff4ca40749069d8.mp3"
+    },
+    "geigerAudio": null,
+    "enableUI": 1,
+    "uiStyle": "pipboy",
+    "uiPosition": 80,
+    "detectionRange": 20,
+    "toggleKey": "p"
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

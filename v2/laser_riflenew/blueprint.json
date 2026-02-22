@@ -1,0 +1,27 @@
+{
+  "id": "EshR58yFSv",
+  "version": 100,
+  "name": "laser_rifle",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": null,
+  "model": "asset://17730e9b4f5eb65ebaf4acb300ec0a3a63d4fdd0b024ba3b02eb9c55241359a5.glb",
+  "script": "asset://da390d584528f14e46675f26bc566f302f978594742017ac51250d984c68714e.js",
+  "props": {
+    "modelName": "",
+    "colliderName": "",
+    "shoot": {
+      "type": "emote",
+      "name": "Firing A Rifle While Standing.glb",
+      "url": "asset://2977711767a0f016a93b7999ecc6ccecb52d1fa4b61858abee7fc5bd0ca3ed94.glb"
+    },
+    "debug": true,
+    "rotX": 90,
+    "rotY": 0
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

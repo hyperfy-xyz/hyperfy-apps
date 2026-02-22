@@ -1,0 +1,34 @@
+{
+  "id": "wvFKkbwm3e",
+  "version": 50,
+  "name": "ButtonsUI",
+  "image": {
+    "type": "texture",
+    "name": "LucideMousePointerClick.png",
+    "url": "asset://12a5b0be5abb64a8ad362c42e96ff4ea6fd2e26abd6cd02dd1d3c1263423be78.png"
+  },
+  "author": "0mka",
+  "url": null,
+  "desc": "Example of UI with uiViews as buttons with sound.  world/screen space toggle",
+  "model": "asset://97fc7289a38b5b49357e6fbd74e7e77fc78493dbb1c0dbc850cb8e9db9fd2530.glb",
+  "script": "asset://9e8fe596e68a393006980d9183dd2445efc6c945167a30ee6072ce551ac3a849.js",
+  "props": {
+    "collision": true,
+    "buttonTheme": "classic",
+    "enableSounds": true,
+    "showCounter": true,
+    "buttonSize": 1,
+    "useWorldSpace": true,
+    "visibility": true,
+    "clickSound": {
+      "type": "audio",
+      "name": "walkmanclick.mp3",
+      "url": "asset://55819eb1b409eaf6a43fccda8bb192d3f2d328cbc01ee75b67780cd1e6e365df.mp3"
+    }
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false,
+  "disabled": false
+}

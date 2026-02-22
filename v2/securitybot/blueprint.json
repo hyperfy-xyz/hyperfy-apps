@@ -1,0 +1,22 @@
+{
+  "id": "ZBiyxzTQMC",
+  "version": 4,
+  "name": "Follower",
+  "image": null,
+  "author": "MetaRick",
+  "url": null,
+  "desc": "FOllows you and then rotates around facing you, like a security bot or sumthin",
+  "model": "asset://28a2e22801904ade0436588350af3b59174a4e129326f0e4b52f6474f9cf5383.glb",
+  "script": "asset://820dc1e793b1bfa22c31c8fab05a5a721e886ca65fb16d56dd82b2c9b8361f7a.js",
+  "props": {
+    "sound": {
+      "type": "audio",
+      "name": "mixkit-mystwrious-bass-pulse-2298.mp3",
+      "url": "asset://1476760fdb0e1f8ad9e5c591029f12ad58890ae5cf57b1f44454d6528fa77255.mp3"
+    }
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

@@ -1,0 +1,19 @@
+{
+  "id": "5Xo9CUuTNe",
+  "version": 14,
+  "name": "Chicken with Hat",
+  "image": null,
+  "author": "Akerboom",
+  "url": null,
+  "desc": "click on the Chicken : )",
+  "model": "asset://97fc7289a38b5b49357e6fbd74e7e77fc78493dbb1c0dbc850cb8e9db9fd2530.glb",
+  "script": "asset://932b563191e840276ddec096f9017f38467f75dbf6490491b61b59d8674d5753.js",
+  "props": {
+    "collision": true
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false,
+  "disabled": false
+}

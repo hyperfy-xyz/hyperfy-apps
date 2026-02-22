@@ -1,0 +1,22 @@
+{
+  "id": "x2kn43g0Sy",
+  "version": 1,
+  "name": "SwivelChair",
+  "image": null,
+  "author": "",
+  "url": null,
+  "desc": "A desk chair you can sit in and swivel around.",
+  "model": "asset://17f5651ae11905903d490088d23868d806fb4280fd58f86821673e13e66f2505.glb",
+  "script": "asset://c9f29cab509f76a756f3e6f84eaa6700301f21a4a85001eec43d8b85371c948c.js",
+  "props": {
+    "emote": {
+      "type": "emote",
+      "name": "sit.glb",
+      "url": "asset://43aa6ecfccf3a111926b31a1865bc5875d22c9c54c7d3ad501aeb829082e7a08.glb"
+    }
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

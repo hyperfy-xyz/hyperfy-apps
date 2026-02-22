@@ -1,0 +1,30 @@
+{
+  "id": "x3TpmZWylJ",
+  "version": 1,
+  "name": "HyperFridge",
+  "image": {
+    "type": "texture",
+    "name": "hyperfy-social-2.png",
+    "url": "asset://d60648b9091c00e460545dce3cef7b88c0d643d0a864424f715a878c2ad3661a.png"
+  },
+  "author": "b0gie",
+  "url": null,
+  "desc": "24hr Dev Juice. Get HYPED",
+  "model": "asset://4025cab7040fa4ef642158c576f74accaaf762c33141156420f3268da11f4c74.glb",
+  "script": "asset://44c8ab04eda15e4d03c3bcbec6e1fbc5c041881aea7b5a856c39bc1a0b967543.js",
+  "props": {
+    "doorSound": {
+      "type": "audio",
+      "name": "door_close.mp3",
+      "url": "asset://e54ef172155989794da0e21f24eecf426fcd3622f144f985915384db3e3f13f7.mp3"
+    },
+    "fridgeHum": {
+      "type": "audio",
+      "name": "fridge_hum.mp3",
+      "url": "asset://1305e6ae6851665f0e0c2d74ff02ccecbdba6025f0118ba31469957395321240.mp3"
+    }
+  },
+  "preload": false,
+  "public": false,
+  "locked": false
+}

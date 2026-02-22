@@ -1,0 +1,40 @@
+{
+  "id": "tfivqpYu0B",
+  "version": 3255,
+  "name": "Prim Tester",
+  "image": {
+    "type": "texture",
+    "name": "Model.png",
+    "url": "asset://39ad1b405cbf41a90825dadf0b554f3c3baba634636bb94a1057dd8ec0784c86.png"
+  },
+  "author": "Hyperfy",
+  "url": null,
+  "desc": null,
+  "model": "asset://97fc7289a38b5b49357e6fbd74e7e77fc78493dbb1c0dbc850cb8e9db9fd2530.glb",
+  "script": "asset://583d69db980c721df0d4700c76c3fac2ffd17397a3ed1a9ab5286b6cd5c312b8.js",
+  "props": {
+    "collision": true,
+    "primType": "box",
+    "scaleX": 1.3,
+    "scaleY": 1.4000000000000001,
+    "scaleZ": 1.6,
+    "rotate": false,
+    "rotationSpeed": 0.9,
+    "color": "#fc00ff",
+    "metalness": 0.9,
+    "roughness": 0.05,
+    "emissive": false,
+    "emissiveIntensity": 1.8,
+    "doubleside": true,
+    "texture": {
+      "type": "texture",
+      "name": "black-n-white-pattern.jpg",
+      "url": "asset://e2cb056ad851944748d426226a574d297f460a913b7cc3b7966a53c6210c46fe.jpg"
+    }
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false,
+  "disabled": false
+}

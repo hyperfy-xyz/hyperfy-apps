@@ -1,0 +1,15 @@
+{
+  "id": "jgca3nF3eh",
+  "version": 22,
+  "name": "Hexagons",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": null,
+  "model": "asset://7eee836a3d7e6a4828b246095dbed57aefd44cf392845fd44dddc10b9d81f280.glb",
+  "script": "asset://7ffd776fed16f2fb7509c8b8fea54e1d0cd286c3a5bd809ce630a0bc70cc5fa2.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false
+}

@@ -1,0 +1,15 @@
+{
+  "id": "vQJljNviqn",
+  "version": 18,
+  "name": "Autonomous Resource Network",
+  "image": null,
+  "author": "itsmetamike",
+  "url": "hyperfy.itsmetamike.com",
+  "desc": null,
+  "model": "asset://377721d889082b2e92084b0bfc70b6389a0fe710d85ae03eb0d550871094563a.glb",
+  "script": "asset://9e81eba6cf88e25a610a2af7d70b9d84bf3e58a4fbef0f7ddcccdc845c0f5c22.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false
+}

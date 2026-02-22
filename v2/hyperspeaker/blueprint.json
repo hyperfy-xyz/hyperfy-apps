@@ -1,0 +1,29 @@
+{
+  "id": "SCcc6QtIUg",
+  "version": 487,
+  "model": "asset://55fb0406e52baaf33aa409b797a93250aebe55827e314ffb49ce21a6a19dbb9c.glb",
+  "script": "asset://52f09cabacbc15729c007d343787a14d99574ff1210d3105de6c778f88f440d8.js",
+  "props": {
+    "model": {
+      "type": "model",
+      "name": "largeSpeaker.glb",
+      "url": "asset://3a64f3bd44b384ecc8d1c90675bbfa6069f9d34ea6fd9cab3d1a231724339124.glb"
+    },
+    "animation0": null,
+    "audio": null,
+    "audioType": "music",
+    "volume": 0.3
+  },
+  "preload": true,
+  "public": true,
+  "locked": false,
+  "name": "HyperSpeaker",
+  "author": "hyperfy",
+  "url": "https://hyperfy.xyz",
+  "desc": "Load audio and enjoy.",
+  "image": {
+    "type": "texture",
+    "name": "hyperfy-social-2.png",
+    "url": "asset://d60648b9091c00e460545dce3cef7b88c0d643d0a864424f715a878c2ad3661a.png"
+  }
+}

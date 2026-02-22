@@ -1,0 +1,18 @@
+{
+  "id": "dpI6Zo6hQp",
+  "version": 42,
+  "name": "game",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": null,
+  "model": "asset://e47d024c30089d49d6836a129467c800065dcc3b392362c4a5688967c65d1919.glb",
+  "script": "asset://f180cf5e58a793f1a0101adcb077f69bb763d62b5f0fe5dbebd6cf032c31ece8.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false,
+  "scene": false,
+  "disabled": false
+}

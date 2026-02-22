@@ -1,0 +1,16 @@
+{
+  "id": "TOHrW7PtuZ",
+  "version": 33,
+  "name": "ccp chicken",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": null,
+  "model": "asset://6628d22955b6ffa49902c2b6bd499365e2046214aa8e730e842f8bc2e7f1ceb5.glb",
+  "script": "asset://e1a5fba00e7974cf1c52d05d64182d6591ae3d0d0e94930135a1b350bc91b6a5.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

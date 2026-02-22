@@ -1,0 +1,20 @@
+{
+  "id": "6FK7WL9V1O",
+  "version": 10,
+  "name": "SAMPLE",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": null,
+  "model": "asset://d00066632731e8ab8dbb06c46176cb5b3c4c89ea101a3bc3ac3be6e201e34528.glb",
+  "script": "asset://ae2f8f44548892192a9731790abfad03b5634072af3dd8a1ebaf888208ed52ab.js",
+  "props": {
+    "targetSpeedX": 0,
+    "targetSpeedY": 20
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false,
+  "disabled": false
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "type": "model",
+    "url": "asset://3db31de3b773f80a19d688b3313db90bc3873af68b50d35b12260f66feaeb827.glb",
+    "filename": "3db31de3b773f80a19d688b3313db90bc3873af68b50d35b12260f66feaeb827.glb",
+    "size": 128676,
+    "mime": "model/gltf-binary"
+  },
+  {
+    "type": "script",
+    "url": "asset://82629d3c289c3919006bf3c713f3116b8161d926d7da9702debad968dcd2972b.js",
+    "filename": "82629d3c289c3919006bf3c713f3116b8161d926d7da9702debad968dcd2972b.js",
+    "size": 4355,
+    "mime": "application/javascript"
+  },
+  {
+    "type": "audio",
+    "url": "asset://68aa88d8fdaff639db5d393d66a207e6bbf0fe5079928ce37e07521b65c43d7d.mp3",
+    "filename": "68aa88d8fdaff639db5d393d66a207e6bbf0fe5079928ce37e07521b65c43d7d.mp3",
+    "size": 2329388,
+    "mime": "audio/mpeg"
+  },
+  {
+    "type": "texture",
+    "url": "asset://e2677330b0668033b0744276da74de605164aa5d58203bf251a8ec84e62c2108.png",
+    "filename": "e2677330b0668033b0744276da74de605164aa5d58203bf251a8ec84e62c2108.png",
+    "size": 88453,
+    "mime": "image/png"
+  },
+  {
+    "type": "texture",
+    "url": "asset://7c66cf05c52aefb1f3e37c54917289a11d9268a995dbc4effc8ca80242a4122b.png",
+    "filename": "7c66cf05c52aefb1f3e37c54917289a11d9268a995dbc4effc8ca80242a4122b.png",
+    "size": 87963,
+    "mime": "image/png"
+  },
+  {
+    "type": "texture",
+    "url": "asset://254f5bd4f0548612bf29305d27899efdee8cb8d8306292761ebbddebd3e57935.png",
+    "filename": "254f5bd4f0548612bf29305d27899efdee8cb8d8306292761ebbddebd3e57935.png",
+    "size": 42886,
+    "mime": "image/png"
+  }
+]

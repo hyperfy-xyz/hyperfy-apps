@@ -1,0 +1,23 @@
+[
+  {
+    "type": "model",
+    "url": "asset://17730e9b4f5eb65ebaf4acb300ec0a3a63d4fdd0b024ba3b02eb9c55241359a5.glb",
+    "filename": "17730e9b4f5eb65ebaf4acb300ec0a3a63d4fdd0b024ba3b02eb9c55241359a5.glb",
+    "size": 761592,
+    "mime": "model/gltf-binary"
+  },
+  {
+    "type": "script",
+    "url": "asset://da390d584528f14e46675f26bc566f302f978594742017ac51250d984c68714e.js",
+    "filename": "da390d584528f14e46675f26bc566f302f978594742017ac51250d984c68714e.js",
+    "size": 2952,
+    "mime": "application/javascript"
+  },
+  {
+    "type": "emote",
+    "url": "asset://2977711767a0f016a93b7999ecc6ccecb52d1fa4b61858abee7fc5bd0ca3ed94.glb",
+    "filename": "2977711767a0f016a93b7999ecc6ccecb52d1fa4b61858abee7fc5bd0ca3ed94.glb",
+    "size": 140980,
+    "mime": "model/gltf-binary"
+  }
+]

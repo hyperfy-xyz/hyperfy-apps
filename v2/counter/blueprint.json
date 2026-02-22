@@ -1,0 +1,16 @@
+{
+  "id": "AXLZ86HSnq",
+  "version": 8,
+  "name": "Counter",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": "Click the chest, number goes up!",
+  "model": "asset://39f472b2ec76836a0187c27e3872bf7ba6690fd25b61e6323ca272a44fff3f94.glb",
+  "script": "asset://59c86d758c060ebeade8c28690910f67f12ea7bfc9b92e86300d9769da4c4d3d.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

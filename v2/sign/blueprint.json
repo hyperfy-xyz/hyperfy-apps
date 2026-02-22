@@ -1,0 +1,22 @@
+{
+  "id": "7Nh0DvoRD5",
+  "version": 188,
+  "name": "Sign",
+  "image": {
+    "type": "texture",
+    "name": "Frame 71.png",
+    "url": "asset://340376e256a25e02e563aa40038acbaf5eb35fbee9486776d51124de68d199f2.png"
+  },
+  "author": "Ashxn",
+  "url": "",
+  "desc": "",
+  "model": "asset://88c7f197cfa68a1fd91350c55b1690fd5b15635ff6d7b46b52c6d2e33ffd316c.glb",
+  "script": "asset://6f2e2e64b942a7c6401f7913a017be28532ea0fe7064e069304001568054e53c.js",
+  "props": {
+    "text": "Its a sign!"
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": true
+}

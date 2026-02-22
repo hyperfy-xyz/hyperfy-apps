@@ -1,0 +1,20 @@
+{
+  "id": "ds6HKgVmdb",
+  "version": 3,
+  "name": "Grid Floor",
+  "image": {
+    "type": "texture",
+    "name": "texture_07.png",
+    "url": "asset://5549f24c2758e5c151e386b21ae5bf547d045b796f69551c82e9ccc5974e22cc.png"
+  },
+  "author": "Howie Duhzit x Kenney",
+  "url": "https://www.kenney.nl/assets/prototype-textures",
+  "desc": "Floor made to world scale with Kenney Prototype texture.",
+  "model": "asset://05ed3ecd74bde07f310411491db2481613c9636fc8a5a97758bfa881a3813159.glb",
+  "script": "asset://022ac15c9fe34008933b6568c11eb5da3453a24fbc86a1850dcf285a687572e1.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

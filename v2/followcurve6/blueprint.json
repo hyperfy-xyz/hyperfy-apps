@@ -1,0 +1,23 @@
+{
+  "id": "0DKTLI2Hef",
+  "version": 196,
+  "name": "followcurve6",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": null,
+  "model": "asset://854fb41a850a89406f786627e7c04b48a6d62f09488af7b742304f99389ae631.glb",
+  "script": "asset://df77e003f384de0f45514e5f2ffb1c4d6870c01bcdd122a322a549e0ff765ad5.js",
+  "props": {
+    "num_cubes": 25,
+    "cube_spacing": 6.5,
+    "curve_radius": 20,
+    "cube_size": 4,
+    "random_rotation": "true"
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": true,
+  "disabled": false
+}

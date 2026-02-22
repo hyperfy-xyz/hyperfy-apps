@@ -1,0 +1,21 @@
+{
+  "id": "zEsPsuzitK",
+  "version": 0,
+  "name": "HyperPortal",
+  "image": {
+    "type": "texture",
+    "name": "hyperfy-social-2.png",
+    "url": "asset://d60648b9091c00e460545dce3cef7b88c0d643d0a864424f715a878c2ad3661a.png"
+  },
+  "author": "b0gie",
+  "url": "https://hyperfy.xyz",
+  "desc": "warp to a new location",
+  "model": "asset://f361b150f4d5ef44b6840e7c35264b863eb6982c5f74ed9b9736f61adab41d34.glb",
+  "script": "asset://3e26c87f0348e93cda6c0a35b055a0f53c01509575815f2c0b170bb3e4e9b13e.js",
+  "props": {
+    "zone1": "0,0,0"
+  },
+  "preload": false,
+  "public": false,
+  "locked": false
+}

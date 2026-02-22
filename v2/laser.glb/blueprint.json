@@ -1,0 +1,16 @@
+{
+  "id": "jgW6MRVkUg",
+  "version": 29,
+  "name": "laser.glb",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": null,
+  "model": "asset://6ed4d7013885981a02f269625b9745e69b9e7a9baede30e8abb635a54fc2185d.glb",
+  "script": "asset://8d95cf0f2542175bd026e662c34264a1c6629ea4f61a63153668e7f130f9e7f2.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

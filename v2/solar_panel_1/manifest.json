@@ -1,0 +1,30 @@
+[
+  {
+    "type": "model",
+    "url": "asset://d7e74c6afd6bad54bd503971015d04713633afcf2bc536fd6533e639cbed2657.glb",
+    "filename": "d7e74c6afd6bad54bd503971015d04713633afcf2bc536fd6533e639cbed2657.glb",
+    "size": 23556,
+    "mime": "model/gltf-binary"
+  },
+  {
+    "type": "script",
+    "url": "asset://620cd9175c1631be208b160f0f7203f2ec94bc3160cbf5e52560c25a9c2c0297.js",
+    "filename": "620cd9175c1631be208b160f0f7203f2ec94bc3160cbf5e52560c25a9c2c0297.js",
+    "size": 1619,
+    "mime": "application/javascript"
+  },
+  {
+    "type": "texture",
+    "url": "asset://ff76abe3e6a2346e77d26bf9c3cba24816f9cb12d6124f9c563c15d48fec6c8f.jpg",
+    "filename": "ff76abe3e6a2346e77d26bf9c3cba24816f9cb12d6124f9c563c15d48fec6c8f.jpg",
+    "size": 642805,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "hdr",
+    "url": "asset://1cfcc8695296b8bd737ff4f328bfc3211380c735148283cc3fd6c96314ca2928.hdr",
+    "filename": "1cfcc8695296b8bd737ff4f328bfc3211380c735148283cc3fd6c96314ca2928.hdr",
+    "size": 269617,
+    "mime": "application/octet-stream"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "type": "model",
+    "url": "asset://ai.glb",
+    "filename": "ai.glb",
+    "size": 3380,
+    "mime": "model/gltf-binary"
+  },
+  {
+    "type": "script",
+    "url": "asset://0d055208add43e6975afcf8267f2a3dc728bc7df8305741aca7e8dbec5db5376.js",
+    "filename": "0d055208add43e6975afcf8267f2a3dc728bc7df8305741aca7e8dbec5db5376.js",
+    "size": 1160,
+    "mime": "application/javascript"
+  }
+]

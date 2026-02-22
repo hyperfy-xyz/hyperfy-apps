@@ -1,0 +1,32 @@
+{
+  "id": "yoCC8LUP5G",
+  "version": 27,
+  "name": "Attachable",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": "E to equip. Q to drop.",
+  "model": "asset://39f472b2ec76836a0187c27e3872bf7ba6690fd25b61e6323ca272a44fff3f94.glb",
+  "script": "asset://7f99758800fc7d7dc304320a7d8b53cb0d09c3e2dc5b85084005894aa7adfe3c.js",
+  "props": {
+    "attack": {
+      "type": "emote",
+      "name": "emote-sword-out-slash.glb",
+      "url": "asset://9eed8f2520fae4b02052fa66264aec8b8ca285bc004267a5a13f6576d40c22ed.glb"
+    },
+    "attack1": {
+      "type": "emote",
+      "name": "emote-sword-out-slash.glb",
+      "url": "asset://9eed8f2520fae4b02052fa66264aec8b8ca285bc004267a5a13f6576d40c22ed.glb"
+    },
+    "attack2": {
+      "type": "emote",
+      "name": "sword-in-slash.glb",
+      "url": "asset://9eed8f2520fae4b02052fa66264aec8b8ca285bc004267a5a13f6576d40c22ed.glb"
+    }
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

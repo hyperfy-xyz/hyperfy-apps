@@ -1,0 +1,10 @@
+{
+  "id": "mtIpcSK4ZX",
+  "version": 4,
+  "model": "asset://04eeae438699e4716632f6139277531610c5721267ce402b4c7a9a6c7cf7f33c.glb",
+  "script": "asset://f6cb10c0a4408f7fb06b77b182b05fbacd84651897db000e4c84484734ad71d6.js",
+  "preload": true,
+  "props": {},
+  "public": false,
+  "locked": false
+}

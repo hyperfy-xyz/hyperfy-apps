@@ -1,0 +1,58 @@
+[
+  {
+    "type": "avatar",
+    "url": "asset://a39e765561332a778658050991961753bc55e826ea2cc9eb78760bfb7743ee9b.vrm",
+    "filename": "a39e765561332a778658050991961753bc55e826ea2cc9eb78760bfb7743ee9b.vrm",
+    "size": 19032668,
+    "mime": "application/octet-stream"
+  },
+  {
+    "type": "script",
+    "url": "asset://8c2fac87e902811d2192309804600c9921485ed358b521ce109a4c75d21b453c.js",
+    "filename": "8c2fac87e902811d2192309804600c9921485ed358b521ce109a4c75d21b453c.js",
+    "size": 16380,
+    "mime": "application/javascript"
+  },
+  {
+    "type": "emote",
+    "url": "asset://2936a0527fa5e851563473e2636bd8a12765cd1f2b85c1260760a0672eaf4ad4.glb",
+    "filename": "2936a0527fa5e851563473e2636bd8a12765cd1f2b85c1260760a0672eaf4ad4.glb",
+    "size": 297052,
+    "mime": "model/gltf-binary"
+  },
+  {
+    "type": "emote",
+    "url": "asset://71114754534e64bcf90535d582dd72b80c319b2c59ab19a23c9b40d741abdaba.glb",
+    "filename": "71114754534e64bcf90535d582dd72b80c319b2c59ab19a23c9b40d741abdaba.glb",
+    "size": 133464,
+    "mime": "model/gltf-binary"
+  },
+  {
+    "type": "emote",
+    "url": "asset://16c060ec2a214f365e130799b5d95d874b170bd2d8a6c24365aa9573982d1ed6.glb",
+    "filename": "16c060ec2a214f365e130799b5d95d874b170bd2d8a6c24365aa9573982d1ed6.glb",
+    "size": 75976,
+    "mime": "model/gltf-binary"
+  },
+  {
+    "type": "emote",
+    "url": "asset://c56b4f79ae304b31ee0f81ebd66b8f5a906ff508d739bf9deeafe7b68484efbe.glb",
+    "filename": "c56b4f79ae304b31ee0f81ebd66b8f5a906ff508d739bf9deeafe7b68484efbe.glb",
+    "size": 88600,
+    "mime": "model/gltf-binary"
+  },
+  {
+    "type": "emote",
+    "url": "asset://1c3066265c17c7491c4c58fb651dabed0d0d269a8b6fb141d47f3482e360a29c.glb",
+    "filename": "1c3066265c17c7491c4c58fb651dabed0d0d269a8b6fb141d47f3482e360a29c.glb",
+    "size": 158744,
+    "mime": "model/gltf-binary"
+  },
+  {
+    "type": "emote",
+    "url": "asset://c56b4f79ae304b31ee0f81ebd66b8f5a906ff508d739bf9deeafe7b68484efbe.glb",
+    "filename": "c56b4f79ae304b31ee0f81ebd66b8f5a906ff508d739bf9deeafe7b68484efbe.glb",
+    "size": 88600,
+    "mime": "model/gltf-binary"
+  }
+]

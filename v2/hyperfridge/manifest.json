@@ -1,0 +1,30 @@
+[
+  {
+    "type": "model",
+    "url": "asset://4025cab7040fa4ef642158c576f74accaaf762c33141156420f3268da11f4c74.glb",
+    "filename": "4025cab7040fa4ef642158c576f74accaaf762c33141156420f3268da11f4c74.glb",
+    "size": 3112188,
+    "mime": "model/gltf-binary"
+  },
+  {
+    "type": "script",
+    "url": "asset://b08d702c9be8417dbd560a4f188e8270e3a4aa06941a5671e3aeeb808c6aea8b.js",
+    "filename": "b08d702c9be8417dbd560a4f188e8270e3a4aa06941a5671e3aeeb808c6aea8b.js",
+    "size": 2411,
+    "mime": "application/javascript"
+  },
+  {
+    "type": "audio",
+    "url": "asset://e54ef172155989794da0e21f24eecf426fcd3622f144f985915384db3e3f13f7.mp3",
+    "filename": "e54ef172155989794da0e21f24eecf426fcd3622f144f985915384db3e3f13f7.mp3",
+    "size": 24960,
+    "mime": "audio/mpeg"
+  },
+  {
+    "type": "audio",
+    "url": "asset://1305e6ae6851665f0e0c2d74ff02ccecbdba6025f0118ba31469957395321240.mp3",
+    "filename": "1305e6ae6851665f0e0c2d74ff02ccecbdba6025f0118ba31469957395321240.mp3",
+    "size": 978432,
+    "mime": "audio/mpeg"
+  }
+]

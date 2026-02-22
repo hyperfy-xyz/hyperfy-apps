@@ -1,0 +1,24 @@
+{
+  "id": "CD5CFoNcK3",
+  "version": 114,
+  "name": "Model",
+  "image": {
+    "type": "texture",
+    "name": "Model.png",
+    "url": "asset://39ad1b405cbf41a90825dadf0b554f3c3baba634636bb94a1057dd8ec0784c86.png"
+  },
+  "author": "Hyperfy",
+  "url": null,
+  "desc": null,
+  "model": "asset://97fc7289a38b5b49357e6fbd74e7e77fc78493dbb1c0dbc850cb8e9db9fd2530.glb",
+  "script": "asset://fe744582ff339b21618e4a184aa73e2a7aa48e15facf2c773c2012ca335eab47.js",
+  "props": {
+    "collision": true,
+    "anim": ""
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false,
+  "disabled": false
+}

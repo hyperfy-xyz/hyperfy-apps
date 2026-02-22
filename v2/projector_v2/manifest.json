@@ -1,0 +1,58 @@
+[
+  {
+    "type": "model",
+    "url": "asset://836fa409c26ad59c11d4a5bfaed3027d52420b8fa781eb2bbca2c5eaaf57c4b1.glb",
+    "filename": "836fa409c26ad59c11d4a5bfaed3027d52420b8fa781eb2bbca2c5eaaf57c4b1.glb",
+    "size": 2544860,
+    "mime": "model/gltf-binary"
+  },
+  {
+    "type": "script",
+    "url": "asset://2ec39c8393a851896ff10b171e6fd729abe6bd5a3b679da6f5d495c2aee9085f.js",
+    "filename": "2ec39c8393a851896ff10b171e6fd729abe6bd5a3b679da6f5d495c2aee9085f.js",
+    "size": 5665,
+    "mime": "application/javascript"
+  },
+  {
+    "type": "texture",
+    "url": "asset://2c495ed20c34bde21a5b8e393bcf6f1d022244ddffe305d44bc19023f0988dbe.png",
+    "filename": "2c495ed20c34bde21a5b8e393bcf6f1d022244ddffe305d44bc19023f0988dbe.png",
+    "size": 278978,
+    "mime": "image/png"
+  },
+  {
+    "type": "audio",
+    "url": "asset://852fc7ff0175b9a5ddda1c017a88e311a265bfebe21a4453709fe4d562949cff.mp3",
+    "filename": "852fc7ff0175b9a5ddda1c017a88e311a265bfebe21a4453709fe4d562949cff.mp3",
+    "size": 950236,
+    "mime": "audio/mpeg"
+  },
+  {
+    "type": "audio",
+    "url": "asset://04e4bcfae97099d4ee4af8f8dd5708a3ba0d109229092e3c8067156d4463d070.mp3",
+    "filename": "04e4bcfae97099d4ee4af8f8dd5708a3ba0d109229092e3c8067156d4463d070.mp3",
+    "size": 5223,
+    "mime": "audio/mpeg"
+  },
+  {
+    "type": "audio",
+    "url": "asset://d05a463ff78beaa13a7093f0c68ac03304e917df63fd64d47812bc78ea2ef7ec.mp3",
+    "filename": "d05a463ff78beaa13a7093f0c68ac03304e917df63fd64d47812bc78ea2ef7ec.mp3",
+    "size": 159868,
+    "mime": "audio/mpeg"
+  },
+  {
+    "type": "audio",
+    "url": "asset://0c77d6946bd1874ba7c72aaae75e398e318577af0eaa08eea29687b8a61ed6e4.mp3",
+    "filename": "0c77d6946bd1874ba7c72aaae75e398e318577af0eaa08eea29687b8a61ed6e4.mp3",
+    "size": 320782,
+    "mime": "audio/mpeg"
+  },
+  {
+    "type": "audio",
+    "url": "asset://bab4d64fb7dd3cc1a6c7859bfaea7391bfaffabe16d8b10dac9301776f4c1897.mp3",
+    "filename": "bab4d64fb7dd3cc1a6c7859bfaea7391bfaffabe16d8b10dac9301776f4c1897.mp3",
+    "size": 120162,
+    "mime": "audio/mpeg"
+  }
+]

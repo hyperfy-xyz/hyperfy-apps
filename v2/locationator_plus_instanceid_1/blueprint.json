@@ -1,0 +1,16 @@
+{
+  "id": "8ZPzdbckMa",
+  "version": 22,
+  "name": "Locationator plus InstanceId",
+  "image": null,
+  "author": "MetaRick",
+  "url": "https://uncannydev.hyperworld.host/",
+  "desc": "Helps you find a world location, just drop the milkshake where you want and will display its world location.",
+  "model": "asset://b22e4dcf41f98f5918e2f03e54f48b8c995d3568a2bb1e845c47dcafb1f269bd.glb",
+  "script": "asset://578d08b28d1c73eec1c33b3bf65fbdd9239e37750af5c96755e1378ba6db6c95.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": true
+}

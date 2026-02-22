@@ -1,0 +1,26 @@
+{
+  "id": "SAU8l3gPSH",
+  "version": 50,
+  "name": "$HYPERTOKEN",
+  "image": {
+    "type": "texture",
+    "name": "hyperfy-social-2.png",
+    "url": "asset://d60648b9091c00e460545dce3cef7b88c0d643d0a864424f715a878c2ad3661a.png"
+  },
+  "author": "hyperfy",
+  "url": "https://hyperfy.xyz",
+  "desc": "HYPERHYPERHYPERHYPERHYPERHYPERHYPERHYPERHYPERHYPERHYPER",
+  "model": "asset://bd974ace7906976fc46b15a392989f62aee95a3ffbd3763ebf6ecaa0a24511c2.glb",
+  "script": "asset://c671ccf6763f99592561065f656149944682dd900a40a7eaf678f5c248259a26.js",
+  "props": {
+    "idleEmote": null,
+    "walkEmote": null,
+    "runEmote": null,
+    "shootEmote": null,
+    "loadingEmote": null
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

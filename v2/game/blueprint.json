@@ -1,0 +1,8 @@
+{
+  "id": "Ir7LIG0lbj",
+  "version": 9,
+  "name": "game",
+  "script": "asset://5bbcbcc315dc593cdf8b013f781999eb6e3db5f9c02e25e400244f6392641bae.js",
+  "model": "asset://e47d024c30089d49d6836a129467c800065dcc3b392362c4a5688967c65d1919.glb",
+  "props": {}
+}

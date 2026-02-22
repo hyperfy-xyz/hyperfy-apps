@@ -1,0 +1,17 @@
+{
+  "id": "iAE7MlQxYp",
+  "version": 15,
+  "name": "vertexPaintTest",
+  "image": null,
+  "author": "b0gie",
+  "url": null,
+  "desc": "vert painted in ucupaint ",
+  "model": "asset://7035f35c2226b7acf5ac0cbd6157d9d97547698cb774a93a5782349e2c09823a.glb",
+  "script": null,
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false,
+  "disabled": false
+}

@@ -1,0 +1,23 @@
+{
+  "id": "i7llre3w6R",
+  "version": 38,
+  "name": "Rock",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": null,
+  "model": "asset://3779298fa70df77916c3c92396d677ba2e1e6869a70b1437ae891a412bc2a950.glb",
+  "script": "asset://b74830d03a95bc35a30c2c41c45971bcd7eee50fe98728f0efc946f1b6de7879.js",
+  "props": {
+    "clone_count": 100,
+    "area_size_x": 7,
+    "area_size_z": 7,
+    "min_size": 0.5,
+    "max_size": 3,
+    "debug": false
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

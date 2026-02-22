@@ -1,0 +1,20 @@
+{
+  "id": "tMenoFai7v",
+  "version": 171,
+  "name": "HYPER RAILv2",
+  "image": null,
+  "author": "Hive minD",
+  "url": "https://tattedalien.club/",
+  "desc": "Welcome to the Future. ",
+  "model": "asset://4067356af105d2c5fc6dccc86cff937ad6107f8e47be8d6904b1a4e23c6f810e.glb",
+  "script": "asset://5073e76a98e9e85406abd837c709e837481fbc698902aa6726df19a81ecfa4d4.js",
+  "props": {
+    "speed": 0,
+    "displayName": "",
+    "travelDistance": 0
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

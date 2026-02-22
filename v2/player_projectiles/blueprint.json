@@ -1,0 +1,22 @@
+{
+  "id": "rsXQY4xQ7j",
+  "version": 1,
+  "name": "Player Projectiles",
+  "image": null,
+  "author": "Shiffty",
+  "url": null,
+  "desc": "Proof of concept player projectiles.",
+  "model": "asset://092a1460e3b5b079985fe33289462e3794e64a1409aa106ed001faeedd6efd72.glb",
+  "script": "asset://0e7f9d34863686fd08c6dbd0ef1cac3b92d778ea8a0332fc1fea4e3e1c3d04d0.js",
+  "props": {
+    "emote": {
+      "type": "emote",
+      "name": "Hit Reaction.glb",
+      "url": "asset://0fd7c186444cc005ceddc3632eb9c0265bf942c0868126b0b212cbde5ab6e230.glb"
+    }
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

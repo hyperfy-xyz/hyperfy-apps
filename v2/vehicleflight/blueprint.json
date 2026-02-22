@@ -1,0 +1,22 @@
+{
+  "id": "NRJYaUZ3TL",
+  "version": 92,
+  "name": "Vehicle Flight",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": "Interact to Fly (Q to quit)\n\nW-Increase Throttle | S-Decrease Throttle | A-Roll Left (clamped) | D-Roll Right (clamped) | Left Shift (hold)-Unclamp Roll (Barrel Roll) | Mouse Up/Down-Pitch | Mouse Left/Right-Yaw | LMB-Shoot Projectile | C-Change Camera",
+  "model": "asset://8191cd89499f8a740f8a22d80b37d38e17070bbfcd65b9454bfd63808cc85a96.glb",
+  "script": "asset://7f99a5951b331ddcbd3de1057f566d3e5acb2666af78645d9bdf6ed4d5d39979.js",
+  "props": {
+    "enterEmote": {
+      "type": "emote",
+      "name": "Sitting In Chair Hands Resting On Thighs.glb",
+      "url": "asset://efdefb6e4021862743c361230bed8e8f67adbcc21141117d6f06707d24bb08b4.glb"
+    }
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

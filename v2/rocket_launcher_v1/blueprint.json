@@ -1,0 +1,16 @@
+{
+  "id": "yvD2WmNTOY",
+  "version": 67,
+  "name": "Rocket Launcher V1",
+  "image": null,
+  "author": "Akerboom",
+  "url": null,
+  "desc": "Rocket Launcher",
+  "model": "asset://4476726c9db58978410f69155f6294625f22db640a5510f966c12f1ab45a7aa5.glb",
+  "script": "asset://cf27daadf407adf14ad33ff1eba0bcfe94f74bd6cc2297fd5a80248bfaf79cd7.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

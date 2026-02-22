@@ -1,0 +1,38 @@
+{
+  "id": "oR8rsn6rFI",
+  "version": 69,
+  "name": "Curved Main Screen",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": null,
+  "model": "asset://5e68ee6bd1db8b495bbf5478a697f17206f45351124c9de74a5528eb8c05b03b.glb",
+  "script": "asset://2f883bd7f0a1dca1be3c4cd3d0668a4e4047ff44c6c37bfe9da85c9dcbbef114.js",
+  "props": {
+    "video": {
+      "type": "video",
+      "name": "1920x1080 V4-Compressed.mp4",
+      "url": "asset://c922d4d959e100876dc7f06b27425583c01ffa30ba6d0694f572b12be40a43bc.mp4"
+    },
+    "defaultVolume": 15,
+    "isSpatial": true,
+    "minDistance": 1,
+    "maxDistance": 5,
+    "rolloffFactor": 1,
+    "videoLink": "",
+    "restricted": true,
+    "screensaver": null,
+    "loop": true,
+    "sync": true,
+    "volume": 1,
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": true
+}

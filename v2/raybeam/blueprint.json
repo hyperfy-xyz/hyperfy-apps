@@ -1,0 +1,16 @@
+{
+  "id": "YdhGvZojIR",
+  "version": 23,
+  "name": "RayBeam",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": "This app listens for any other app that calls app.emit('raybeam', { origin, direction }) and displays a beam!",
+  "model": "asset://1e53c9e7a18dfe47743e81a3006b7cd3c1d047e2f710c477c61e2113a1469cc4.glb",
+  "script": "asset://8451e664a764969866c08f83b99a300f0d9016e01a30493ced481fd88582f110.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

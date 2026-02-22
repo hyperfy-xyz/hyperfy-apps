@@ -1,0 +1,33 @@
+{
+  "id": "sb7MDR9mD2",
+  "version": 256,
+  "name": "Avatar Station",
+  "image": null,
+  "author": "Hyperfy",
+  "url": null,
+  "desc": null,
+  "model": "asset://2f962657a3169a51905f660a64d5f56e5571e695198d705168e6cb1c789b3dbb.glb",
+  "script": "asset://f25654eb9afccc8fba55e5e5f03cdb2c0ac0db89a5e5c61b886d16d2886f3140.js",
+  "props": {
+    "avatar": {
+      "type": "avatar",
+      "name": "toysoldier4.vrm",
+      "url": "asset://74179e444cc29c59ec48057cbd65320845730d5362213f759e1ce6234388b0b9.vrm"
+    },
+    "emote": {
+      "type": "emote",
+      "name": "stretch.glb",
+      "url": "asset://3cb86aea9361ca9c73416ffa6c519bb7be115f129994f79be3e3780f945308f8.glb"
+    },
+    "rotate": true,
+    "rssotate": false,
+    "rssotdate": false,
+    "hover": true,
+    "name": "Toy Soldier",
+    "scale": 1.2
+  },
+  "preload": true,
+  "public": false,
+  "locked": false,
+  "unique": true
+}

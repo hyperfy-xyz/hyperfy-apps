@@ -1,0 +1,54 @@
+{
+  "id": "iReD3Ilouj",
+  "version": 78,
+  "name": "Auto Assigned Persistent Avatar Station",
+  "image": null,
+  "author": "Hyperfy and peezy",
+  "url": "https://www.opensourceavatars.com/",
+  "desc": "Some avatars from Tox and OpenSourceAvatars.\nPlayers are assigned one at random when they first enter the world. This overrides players avatars.",
+  "model": "asset://2f962657a3169a51905f660a64d5f56e5571e695198d705168e6cb1c789b3dbb.glb",
+  "script": "asset://03aaed3c24f4448cadc0d8821b18d9c9465ac56ede163baede7c21872613f87a.js",
+  "props": {
+    "avatar": null,
+    "emote": {
+      "type": "emote",
+      "name": "idle.glb",
+      "url": "asset://c56b4f79ae304b31ee0f81ebd66b8f5a906ff508d739bf9deeafe7b68484efbe.glb"
+    },
+    "rotate": true,
+    "rssotate": false,
+    "rssotdate": false,
+    "hover": true,
+    "name": "",
+    "avatars": "1",
+    "avatar1_name": "taco",
+    "avatar2_name": "egg",
+    "avatar3_name": "candle",
+    "avatar4_name": "horse",
+    "avatar1": {
+      "type": "avatar",
+      "name": "1f9a5eefb4ffb7f4b3572a4313f302a8b0e1c2afaaae623aee1bb093d5bab4ce.vrm",
+      "url": "asset://1f9a5eefb4ffb7f4b3572a4313f302a8b0e1c2afaaae623aee1bb093d5bab4ce.vrm"
+    },
+    "avatar2": {
+      "type": "avatar",
+      "name": "27aa6d1dfa91d3fb3397638cc059824ed75cec1ae1fa8caecfabd4e5ee18e24f.vrm",
+      "url": "asset://27aa6d1dfa91d3fb3397638cc059824ed75cec1ae1fa8caecfabd4e5ee18e24f.vrm"
+    },
+    "avatar3": {
+      "type": "avatar",
+      "name": "bd3798a60d0cb5a0784305873c7414d70ccf7ab240452b70fbdc266d87c2d3f0.vrm",
+      "url": "asset://bd3798a60d0cb5a0784305873c7414d70ccf7ab240452b70fbdc266d87c2d3f0.vrm"
+    },
+    "avatar4": {
+      "type": "avatar",
+      "name": "f7060fe3fc9b464b07e37cffb035b47a7ab6f289100486c0a08edb820fd9a767.vrm",
+      "url": "asset://f7060fe3fc9b464b07e37cffb035b47a7ab6f289100486c0a08edb820fd9a767.vrm"
+    },
+    "autoCycle": true
+  },
+  "preload": true,
+  "public": false,
+  "locked": false,
+  "unique": true
+}
