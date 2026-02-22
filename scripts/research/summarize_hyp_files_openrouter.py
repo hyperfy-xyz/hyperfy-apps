@@ -67,6 +67,46 @@ FORBIDDEN_PHRASES = [
 ]
 
 
+def load_dotenv_files(paths: list[Path]) -> list[Path]:
+    """Load KEY=VALUE pairs from .env-style files into os.environ (without overriding existing vars)."""
+    loaded: list[Path] = []
+
+    for path in paths:
+        if not path.exists() or not path.is_file():
+            continue
+
+        for raw_line in path.read_text(encoding="utf-8", errors="ignore").splitlines():
+            line = raw_line.strip()
+            if not line or line.startswith("#"):
+                continue
+            if line.startswith("export "):
+                line = line[len("export "):].strip()
+            if "=" not in line:
+                continue
+
+            key, value = line.split("=", 1)
+            key = key.strip()
+            value = value.strip()
+            if not key:
+                continue
+
+            # Strip inline comment for unquoted values only.
+            if value and value[0] not in {'"', "'"} and " #" in value:
+                value = value.split(" #", 1)[0].rstrip()
+
+            if (value.startswith('"') and value.endswith('"')) or (value.startswith("'") and value.endswith("'")):
+                quote = value[0]
+                value = value[1:-1]
+                if quote == '"':
+                    value = value.encode("utf-8").decode("unicode_escape")
+
+            os.environ.setdefault(key, value)
+
+        loaded.append(path)
+
+    return loaded
+
+
 def now_iso() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
@@ -547,8 +587,25 @@ def main() -> int:
     parser.add_argument("--fail-fast", action="store_true")
     parser.add_argument("--max-retries", type=int, default=3)
     parser.add_argument("--concurrency", type=int, default=3)
+    parser.add_argument("--env-file", action="append", default=[], help="Additional .env file to load (repeatable)")
 
     args = parser.parse_args()
+
+    env_paths: list[Path] = [REPO_ROOT / ".env", REPO_ROOT / ".env.local"]
+    env_paths.extend(Path(p) for p in args.env_file)
+    seen = set()
+    deduped_paths: list[Path] = []
+    for path in env_paths:
+        resolved = path.resolve()
+        if resolved in seen:
+            continue
+        seen.add(resolved)
+        deduped_paths.append(resolved)
+
+    loaded_env = load_dotenv_files(deduped_paths)
+    if loaded_env:
+        loaded_str = ", ".join(str(p) for p in loaded_env)
+        print(f"Loaded env files: {loaded_str}")
 
     if not GLOBAL_MANIFEST.exists():
         print(f"Error: missing {GLOBAL_MANIFEST}")
