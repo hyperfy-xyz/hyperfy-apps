@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Mato_Pet_v2.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/1345254955891556362_WaterPlane.mp4",
+    "primary_media_path": "catalog/media/mato_pet_v2/1345254955891556362_WaterPlane.mp4",
     "media_type": ".mp4",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1345254955891556362_WaterPlane.mp4",
+      "catalog_path": "catalog/media/mato_pet_v2/1345254955891556362_WaterPlane.mp4",
       "original_filename": "WaterPlane.mp4",
       "content_type": "video/mp4",
       "relative_index": 4,
@@ -59,7 +59,7 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "mato-pet-v2-1345254057660645468",

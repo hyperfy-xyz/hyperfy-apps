@@ -29,14 +29,14 @@
     "hyp_summary_path": null
   },
   "preview": {
-    "primary_media_path": "catalog/media/1351037494711287858_Drumpadv1.mp4",
+    "primary_media_path": "catalog/media/drumpad/1351037494711287858_Drumpadv1.mp4",
     "media_type": ".mp4",
     "selection_reason": "same_message",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1351037494711287858_Drumpadv1.mp4",
+      "catalog_path": "catalog/media/drumpad/1351037494711287858_Drumpadv1.mp4",
       "original_filename": "Drumpadv1.mp4",
       "content_type": "video/mp4",
       "relative_index": 0,
@@ -57,7 +57,7 @@
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "drumpad-1351037495693021235",

@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Physics_-_Contacts__Tags.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/1354299208072429639_xyz-physics-contacts--tags.mp4",
+    "primary_media_path": "catalog/media/physics_-_contacts__tags/1354299208072429639_xyz-physics-contacts--tags.mp4",
     "media_type": ".mp4",
     "selection_reason": "same_message",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1354299208072429639_xyz-physics-contacts--tags.mp4",
+      "catalog_path": "catalog/media/physics_-_contacts__tags/1354299208072429639_xyz-physics-contacts--tags.mp4",
       "original_filename": "xyz-physics-contacts--tags.mp4",
       "content_type": "video/mp4",
       "relative_index": 0,
@@ -57,7 +57,7 @@
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "physics-contacts-tags-1354299208894648330",

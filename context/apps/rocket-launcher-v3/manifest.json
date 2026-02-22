@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Rocket_Launcher_V3.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/1364947396399861770_World_-_Google_Chrome_24.04.2025_14_53_08.png",
+    "primary_media_path": "catalog/media/rocket_launcher_v3/1364947396399861770_World_-_Google_Chrome_24.04.2025_14_53_08.png",
     "media_type": ".png",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1364947396399861770_World_-_Google_Chrome_24.04.2025_14_53_08.png",
+      "catalog_path": "catalog/media/rocket_launcher_v3/1364947396399861770_World_-_Google_Chrome_24.04.2025_14_53_08.png",
       "original_filename": "World_-_Google_Chrome_24.04.2025_14_53_08.png",
       "content_type": "image/png",
       "relative_index": -1,
@@ -57,7 +57,7 @@
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "rocket-launcher-v3-1364972260766646293",

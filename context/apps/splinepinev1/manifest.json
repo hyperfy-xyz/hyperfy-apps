@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/SplinePineV1.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/1346505116660006956_splinepine0001-1000.mp4",
+    "primary_media_path": "catalog/media/splinepinev1/1346505116660006956_splinepine0001-1000.mp4",
     "media_type": ".mp4",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1346505116660006956_splinepine0001-1000.mp4",
+      "catalog_path": "catalog/media/splinepinev1/1346505116660006956_splinepine0001-1000.mp4",
       "original_filename": "splinepine0001-1000.mp4",
       "content_type": "video/mp4",
       "relative_index": -1,
@@ -57,7 +57,7 @@
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "splinepinev1-1346505141473382451",

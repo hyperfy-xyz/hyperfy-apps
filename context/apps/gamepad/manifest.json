@@ -29,14 +29,14 @@
     "hyp_summary_path": null
   },
   "preview": {
-    "primary_media_path": "catalog/media/1347729508626858044_gamepad.jpg",
+    "primary_media_path": "catalog/media/gamepad/1347729508626858044_gamepad.jpg",
     "media_type": ".jpg",
     "selection_reason": "same_message",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1347729508626858044_gamepad.jpg",
+      "catalog_path": "catalog/media/gamepad/1347729508626858044_gamepad.jpg",
       "original_filename": "gamepad.jpg",
       "content_type": "image/jpeg",
       "relative_index": 0,
@@ -57,7 +57,7 @@
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "gamepad-1347729509193089185",

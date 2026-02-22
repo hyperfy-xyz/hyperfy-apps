@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/CurvedVid_with_link_input.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/1363580345357963264_Desktop_2025.04.20_-_20.18.43.04.mp4",
+    "primary_media_path": "catalog/media/curvedvid_with_link_input/1363580345357963264_Desktop_2025.04.20_-_20.18.43.04.mp4",
     "media_type": ".mp4",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1363580345357963264_Desktop_2025.04.20_-_20.18.43.04.mp4",
+      "catalog_path": "catalog/media/curvedvid_with_link_input/1363580345357963264_Desktop_2025.04.20_-_20.18.43.04.mp4",
       "original_filename": "Desktop_2025.04.20_-_20.18.43.04.mp4",
       "content_type": "video/mp4",
       "relative_index": 1,
@@ -57,7 +57,7 @@
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "curvedvid-with-link-input-1363573773185450045",

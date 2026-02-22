@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Framed_Image_v1.0.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/1434190156625346701_FramedImage.jpg",
+    "primary_media_path": "catalog/media/framed_image_v1.0/1434190156625346701_FramedImage.jpg",
     "media_type": ".jpg",
     "selection_reason": "same_message",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1434190156625346701_FramedImage.jpg",
+      "catalog_path": "catalog/media/framed_image_v1.0/1434190156625346701_FramedImage.jpg",
       "original_filename": "FramedImage.jpg",
       "content_type": "image/jpeg",
       "relative_index": 0,
@@ -49,7 +49,7 @@
       "attachment_id": "1434190156625346701"
     },
     {
-      "catalog_path": "catalog/media/1434229079749689416_image.png",
+      "catalog_path": "catalog/media/framed_image_v1.0/1434229079749689416_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": 2,
@@ -62,7 +62,7 @@
       "attachment_id": "1434229079749689416"
     },
     {
-      "catalog_path": "catalog/media/1434229080131113070_image.png",
+      "catalog_path": "catalog/media/framed_image_v1.0/1434229080131113070_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": 2,
@@ -83,7 +83,7 @@
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "framed-image-v1-0-1434190157220806658",

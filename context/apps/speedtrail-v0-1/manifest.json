@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/SpeedTrail_v0.1.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/1361970355131908157_2025-04-14_23-09-26_1.mp4",
+    "primary_media_path": "catalog/media/speedtrail_v0.1/1361970355131908157_2025-04-14_23-09-26_1.mp4",
     "media_type": ".mp4",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1361970355131908157_2025-04-14_23-09-26_1.mp4",
+      "catalog_path": "catalog/media/speedtrail_v0.1/1361970355131908157_2025-04-14_23-09-26_1.mp4",
       "original_filename": "2025-04-14_23-09-26_1.mp4",
       "content_type": "video/mp4",
       "relative_index": -1,
@@ -57,7 +57,7 @@
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "speedtrail-v0-1-1361987355577421954",

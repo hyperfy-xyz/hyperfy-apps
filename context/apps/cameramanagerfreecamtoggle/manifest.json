@@ -29,14 +29,14 @@
     "hyp_summary_path": null
   },
   "preview": {
-    "primary_media_path": "catalog/media/1381760463502708766_Screenshot_2025-06-08_at_7.01.40_PM.png",
+    "primary_media_path": "catalog/media/cameramanagerfreecamtoggle/1381760463502708766_Screenshot_2025-06-08_at_7.01.40_PM.png",
     "media_type": ".png",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1381760463502708766_Screenshot_2025-06-08_at_7.01.40_PM.png",
+      "catalog_path": "catalog/media/cameramanagerfreecamtoggle/1381760463502708766_Screenshot_2025-06-08_at_7.01.40_PM.png",
       "original_filename": "Screenshot_2025-06-08_at_7.01.40_PM.png",
       "content_type": "image/png",
       "relative_index": -1,
@@ -49,7 +49,7 @@
       "attachment_id": "1381760463502708766"
     },
     {
-      "catalog_path": "catalog/media/1381760463897100508_Screenshot_2025-06-03_at_12.05.21_PM.png",
+      "catalog_path": "catalog/media/cameramanagerfreecamtoggle/1381760463897100508_Screenshot_2025-06-03_at_12.05.21_PM.png",
       "original_filename": "Screenshot_2025-06-03_at_12.05.21_PM.png",
       "content_type": "image/png",
       "relative_index": -1,
@@ -62,7 +62,7 @@
       "attachment_id": "1381760463897100508"
     },
     {
-      "catalog_path": "catalog/media/1381760464417063084_Screenshot_2025-06-08_at_11.53.40_PM.png",
+      "catalog_path": "catalog/media/cameramanagerfreecamtoggle/1381760464417063084_Screenshot_2025-06-08_at_11.53.40_PM.png",
       "original_filename": "Screenshot_2025-06-08_at_11.53.40_PM.png",
       "content_type": "image/png",
       "relative_index": -1,
@@ -85,7 +85,7 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "cameramanagerfreecamtoggle-1381477367448469538",

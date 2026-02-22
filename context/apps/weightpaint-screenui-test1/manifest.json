@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Weightpaint_ScreenUI_test1.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/1420762332530868346_coins.mp4",
+    "primary_media_path": "catalog/media/weightpaint_screenui_test1/1420762332530868346_coins.mp4",
     "media_type": ".mp4",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1420762332530868346_coins.mp4",
+      "catalog_path": "catalog/media/weightpaint_screenui_test1/1420762332530868346_coins.mp4",
       "original_filename": "coins.mp4",
       "content_type": "video/mp4",
       "relative_index": 4,
@@ -59,7 +59,7 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "weightpaint-screenui-test1-1420742160474701966",

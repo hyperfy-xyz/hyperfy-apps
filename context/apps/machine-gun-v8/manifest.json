@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Machine_Gun_v8.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/1355979564563562736_arena_test.mp4",
+    "primary_media_path": "catalog/media/machine_gun_v8/1355979564563562736_arena_test.mp4",
     "media_type": ".mp4",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1355976854565163209_2025-03-30_13-41-09.mp4",
+      "catalog_path": "catalog/media/machine_gun_v8/1355976854565163209_2025-03-30_13-41-09.mp4",
       "original_filename": "2025-03-30_13-41-09.mp4",
       "content_type": "video/mp4",
       "relative_index": -2,
@@ -49,7 +49,7 @@
       "attachment_id": "1355976854565163209"
     },
     {
-      "catalog_path": "catalog/media/1355979564563562736_arena_test.mp4",
+      "catalog_path": "catalog/media/machine_gun_v8/1355979564563562736_arena_test.mp4",
       "original_filename": "arena_test.mp4",
       "content_type": "video/mp4",
       "relative_index": 1,
@@ -70,7 +70,7 @@
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "machine-gun-v8-1355977141862400300",

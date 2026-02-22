@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Text_link_option.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/1426204611764818031_IMG_1244.png",
+    "primary_media_path": "catalog/media/text_link_option/1426204611764818031_IMG_1244.png",
     "media_type": ".png",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1426204611764818031_IMG_1244.png",
+      "catalog_path": "catalog/media/text_link_option/1426204611764818031_IMG_1244.png",
       "original_filename": "IMG_1244.png",
       "content_type": "image/jpeg",
       "relative_index": 3,
@@ -59,7 +59,7 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "text-link-option-1426148371101651037",

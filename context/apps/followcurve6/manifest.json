@@ -29,14 +29,14 @@
     "hyp_summary_path": null
   },
   "preview": {
-    "primary_media_path": "catalog/media/1374726363445067837_meshsize.png",
+    "primary_media_path": "catalog/media/followcurve6/1374726363445067837_meshsize.png",
     "media_type": ".png",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1374726363445067837_meshsize.png",
+      "catalog_path": "catalog/media/followcurve6/1374726363445067837_meshsize.png",
       "original_filename": "meshsize.png",
       "content_type": "image/png",
       "relative_index": -1,
@@ -57,7 +57,7 @@
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "followcurve6-1374726400036044891",

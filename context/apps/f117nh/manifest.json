@@ -29,14 +29,14 @@
     "hyp_summary_path": null
   },
   "preview": {
-    "primary_media_path": "catalog/media/1345283784353906791_takeoff.mp4",
+    "primary_media_path": "catalog/media/f117nh/1345283784353906791_takeoff.mp4",
     "media_type": ".mp4",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1345283784353906791_takeoff.mp4",
+      "catalog_path": "catalog/media/f117nh/1345283784353906791_takeoff.mp4",
       "original_filename": "takeoff.mp4",
       "content_type": "video/mp4",
       "relative_index": -2,
@@ -49,7 +49,7 @@
       "attachment_id": "1345283784353906791"
     },
     {
-      "catalog_path": "catalog/media/1345283789487865908_TestFlight2.mp4",
+      "catalog_path": "catalog/media/f117nh/1345283789487865908_TestFlight2.mp4",
       "original_filename": "TestFlight2.mp4",
       "content_type": "video/mp4",
       "relative_index": -2,
@@ -70,7 +70,7 @@
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "f117nh-1345283957213630495",

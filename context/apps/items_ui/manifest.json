@@ -29,14 +29,14 @@
     "hyp_summary_path": null
   },
   "preview": {
-    "primary_media_path": "catalog/media/1347841365580714015_HandCursors_featured-894x488-c8565fa3abceefb2b410d4de68652f17.png",
+    "primary_media_path": "catalog/media/items_ui/1347841365580714015_HandCursors_featured-894x488-c8565fa3abceefb2b410d4de68652f17.png",
     "media_type": ".png",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1347841365580714015_HandCursors_featured-894x488-c8565fa3abceefb2b410d4de68652f17.png",
+      "catalog_path": "catalog/media/items_ui/1347841365580714015_HandCursors_featured-894x488-c8565fa3abceefb2b410d4de68652f17.png",
       "original_filename": "HandCursors_featured-894x488-c8565fa3abceefb2b410d4de68652f17.png",
       "content_type": "image/png",
       "relative_index": -2,
@@ -59,7 +59,7 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "items_ui-1347845999158231092",

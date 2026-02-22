@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Book_-_Flip.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/1427292962483605564_knowledge.webp",
+    "primary_media_path": "catalog/media/book_-_flip/1427292962483605564_knowledge.webp",
     "media_type": ".webp",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1427292962483605564_knowledge.webp",
+      "catalog_path": "catalog/media/book_-_flip/1427292962483605564_knowledge.webp",
       "original_filename": "knowledge.webp",
       "content_type": "image/webp",
       "relative_index": 1,
@@ -57,7 +57,7 @@
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "book-flip-1427292873358971045",

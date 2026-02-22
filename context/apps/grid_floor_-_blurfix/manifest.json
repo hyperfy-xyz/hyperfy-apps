@@ -29,14 +29,14 @@
     "hyp_summary_path": null
   },
   "preview": {
-    "primary_media_path": "catalog/media/1346633633728958505_image.png",
+    "primary_media_path": "catalog/media/grid_floor_-_blurfix/1346633633728958505_image.png",
     "media_type": ".png",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1346633633728958505_image.png",
+      "catalog_path": "catalog/media/grid_floor_-_blurfix/1346633633728958505_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": -1,
@@ -49,7 +49,7 @@
       "attachment_id": "1346633633728958505"
     },
     {
-      "catalog_path": "catalog/media/1346633635679178812_image.png",
+      "catalog_path": "catalog/media/grid_floor_-_blurfix/1346633635679178812_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": -1,
@@ -62,7 +62,7 @@
       "attachment_id": "1346633635679178812"
     },
     {
-      "catalog_path": "catalog/media/1346633852977680494_image.png",
+      "catalog_path": "catalog/media/grid_floor_-_blurfix/1346633852977680494_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": 1,
@@ -83,7 +83,7 @@
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "grid_floor_-_blurfix-1346633688552706088",

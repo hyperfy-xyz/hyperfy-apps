@@ -29,14 +29,14 @@
     "hyp_summary_path": null
   },
   "preview": {
-    "primary_media_path": "catalog/media/1349273826323730532_2025-03-12_01-51-20.mp4",
+    "primary_media_path": "catalog/media/wasteland-hud/1349273826323730532_2025-03-12_01-51-20.mp4",
     "media_type": ".mp4",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1349273826323730532_2025-03-12_01-51-20.mp4",
+      "catalog_path": "catalog/media/wasteland-hud/1349273826323730532_2025-03-12_01-51-20.mp4",
       "original_filename": "2025-03-12_01-51-20.mp4",
       "content_type": "video/mp4",
       "relative_index": 3,
@@ -59,7 +59,7 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "wasteland-hud-1349270746576457818",

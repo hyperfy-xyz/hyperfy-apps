@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Builder_Drone.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/1356441739052978196_xyz-builder-drone-x501.mp4",
+    "primary_media_path": "catalog/media/builder_drone/1356441739052978196_xyz-builder-drone-x501.mp4",
     "media_type": ".mp4",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1356431657036677360_Screenshot_2025-03-31_205343.png",
+      "catalog_path": "catalog/media/builder_drone/1356431657036677360_Screenshot_2025-03-31_205343.png",
       "original_filename": "Screenshot_2025-03-31_205343.png",
       "content_type": "image/png",
       "relative_index": -5,
@@ -49,7 +49,7 @@
       "attachment_id": "1356431657036677360"
     },
     {
-      "catalog_path": "catalog/media/1356441739052978196_xyz-builder-drone-x501.mp4",
+      "catalog_path": "catalog/media/builder_drone/1356441739052978196_xyz-builder-drone-x501.mp4",
       "original_filename": "xyz-builder-drone-x501.mp4",
       "content_type": "video/mp4",
       "relative_index": -2,
@@ -62,7 +62,7 @@
       "attachment_id": "1356441739052978196"
     },
     {
-      "catalog_path": "catalog/media/1356451711329370193_7BF1F0C5-A1B7-4314-B897-43E2666AB7C8.png",
+      "catalog_path": "catalog/media/builder_drone/1356451711329370193_7BF1F0C5-A1B7-4314-B897-43E2666AB7C8.png",
       "original_filename": "7BF1F0C5-A1B7-4314-B897-43E2666AB7C8.png",
       "content_type": "image/png",
       "relative_index": 2,
@@ -85,7 +85,7 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "builder-drone-1356446200907432129",

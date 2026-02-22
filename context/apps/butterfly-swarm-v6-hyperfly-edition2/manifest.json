@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Butterfly_Swarm_V6_Hyperfly_edition2.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/1355093782277787708_1092aa12-4c83-4fd9-bd55-6704eea2f06e.png",
+    "primary_media_path": "catalog/media/butterfly_swarm_v6_hyperfly_edition2/1355093782277787708_1092aa12-4c83-4fd9-bd55-6704eea2f06e.png",
     "media_type": ".png",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1355093782277787708_1092aa12-4c83-4fd9-bd55-6704eea2f06e.png",
+      "catalog_path": "catalog/media/butterfly_swarm_v6_hyperfly_edition2/1355093782277787708_1092aa12-4c83-4fd9-bd55-6704eea2f06e.png",
       "original_filename": "1092aa12-4c83-4fd9-bd55-6704eea2f06e.png",
       "content_type": "image/png",
       "relative_index": 2,
@@ -57,7 +57,7 @@
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T01:38:47+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "butterfly-swarm-v6-hyperfly-edition2-1355068289964970128",

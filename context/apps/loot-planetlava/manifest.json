@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Loot-PlanetLava.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/1339121961598455881_vt01.png",
+    "primary_media_path": "catalog/media/loot-planetlava/1339121961598455881_vt01.png",
     "media_type": ".png",
     "selection_reason": "same_message",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1339121961598455881_vt01.png",
+      "catalog_path": "catalog/media/loot-planetlava/1339121961598455881_vt01.png",
       "original_filename": "vt01.png",
       "content_type": "image/png",
       "relative_index": 0,
@@ -49,7 +49,7 @@
       "attachment_id": "1339121961598455881"
     },
     {
-      "catalog_path": "catalog/media/1339121962060087306_vt02.png",
+      "catalog_path": "catalog/media/loot-planetlava/1339121962060087306_vt02.png",
       "original_filename": "vt02.png",
       "content_type": "image/png",
       "relative_index": 0,
@@ -62,7 +62,7 @@
       "attachment_id": "1339121962060087306"
     },
     {
-      "catalog_path": "catalog/media/1339121966178762845_Rover_Ships_and_Loot_Planets_in_Hyperfy.mp4",
+      "catalog_path": "catalog/media/loot-planetlava/1339121966178762845_Rover_Ships_and_Loot_Planets_in_Hyperfy.mp4",
       "original_filename": "Rover_Ships_and_Loot_Planets_in_Hyperfy.mp4",
       "content_type": "video/mp4",
       "relative_index": 0,
@@ -83,7 +83,7 @@
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "loot-planetlava-1339121960759721996",

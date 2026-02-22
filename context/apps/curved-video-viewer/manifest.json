@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Curved_Video_Viewer.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/1363452192446746686_UVscroll.mp4",
+    "primary_media_path": "catalog/media/curved_video_viewer/1363452192446746686_UVscroll.mp4",
     "media_type": ".mp4",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1363452192446746686_UVscroll.mp4",
+      "catalog_path": "catalog/media/curved_video_viewer/1363452192446746686_UVscroll.mp4",
       "original_filename": "UVscroll.mp4",
       "content_type": "video/mp4",
       "relative_index": -2,
@@ -59,7 +59,7 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "curved-video-viewer-1363490690339831849",

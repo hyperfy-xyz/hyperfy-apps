@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Camera_Trigger.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/1428010788530032795_IMG_0630.png",
+    "primary_media_path": "catalog/media/camera_trigger/1428010788530032795_IMG_0630.png",
     "media_type": ".png",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1428010788530032795_IMG_0630.png",
+      "catalog_path": "catalog/media/camera_trigger/1428010788530032795_IMG_0630.png",
       "original_filename": "IMG_0630.png",
       "content_type": "image/jpeg",
       "relative_index": -1,
@@ -49,7 +49,7 @@
       "attachment_id": "1428010788530032795"
     },
     {
-      "catalog_path": "catalog/media/1428010788869898392_IMG_0623.png",
+      "catalog_path": "catalog/media/camera_trigger/1428010788869898392_IMG_0623.png",
       "original_filename": "IMG_0623.png",
       "content_type": "image/jpeg",
       "relative_index": -1,
@@ -72,7 +72,7 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "camera-trigger-1428031026826842285",

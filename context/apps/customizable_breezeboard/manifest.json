@@ -29,14 +29,14 @@
     "hyp_summary_path": null
   },
   "preview": {
-    "primary_media_path": "catalog/media/1346715736504008734_Owned_Dutchtide_4804.jpg",
+    "primary_media_path": "catalog/media/customizable_breezeboard/1346715736504008734_Owned_Dutchtide_4804.jpg",
     "media_type": ".jpg",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1346715736504008734_Owned_Dutchtide_4804.jpg",
+      "catalog_path": "catalog/media/customizable_breezeboard/1346715736504008734_Owned_Dutchtide_4804.jpg",
       "original_filename": "Owned_Dutchtide_4804.jpg",
       "content_type": "image/jpeg",
       "relative_index": 1,
@@ -57,7 +57,7 @@
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "customizable_breezeboard-1346715439681503297",

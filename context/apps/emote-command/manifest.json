@@ -29,14 +29,14 @@
     "hyp_summary_path": null
   },
   "preview": {
-    "primary_media_path": "catalog/media/1379795653357736017_breeezin_v1_world.mp4",
+    "primary_media_path": "catalog/media/emote_command/1379795653357736017_breeezin_v1_world.mp4",
     "media_type": ".mp4",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1379795653357736017_breeezin_v1_world.mp4",
+      "catalog_path": "catalog/media/emote_command/1379795653357736017_breeezin_v1_world.mp4",
       "original_filename": "breeezin_v1_world.mp4",
       "content_type": "video/mp4",
       "relative_index": -2,
@@ -49,7 +49,7 @@
       "attachment_id": "1379795653357736017"
     },
     {
-      "catalog_path": "catalog/media/1379801542181388378_image.png",
+      "catalog_path": "catalog/media/emote_command/1379801542181388378_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": 3,
@@ -62,7 +62,7 @@
       "attachment_id": "1379801542181388378"
     },
     {
-      "catalog_path": "catalog/media/1379802016863354941_brave_B0Ly4KbMdd.mp4",
+      "catalog_path": "catalog/media/emote_command/1379802016863354941_brave_B0Ly4KbMdd.mp4",
       "original_filename": "brave_B0Ly4KbMdd.mp4",
       "content_type": "video/mp4",
       "relative_index": 4,
@@ -85,7 +85,7 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "emote-command-1379797545554935878",

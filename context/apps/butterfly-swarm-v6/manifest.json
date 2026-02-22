@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Butterfly_Swarm_V6.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/1354867765554712586_image.png",
+    "primary_media_path": "catalog/media/butterfly_swarm_v6/1354867765554712586_image.png",
     "media_type": ".png",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1354867765554712586_image.png",
+      "catalog_path": "catalog/media/butterfly_swarm_v6/1354867765554712586_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": 3,
@@ -49,7 +49,7 @@
       "attachment_id": "1354867765554712586"
     },
     {
-      "catalog_path": "catalog/media/1354870556830466262_image.png",
+      "catalog_path": "catalog/media/butterfly_swarm_v6/1354870556830466262_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": 4,
@@ -62,7 +62,7 @@
       "attachment_id": "1354870556830466262"
     },
     {
-      "catalog_path": "catalog/media/1354872920438079758_image.png",
+      "catalog_path": "catalog/media/butterfly_swarm_v6/1354872920438079758_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": 5,
@@ -85,7 +85,7 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "butterfly-swarm-v6-1354772253396701385",

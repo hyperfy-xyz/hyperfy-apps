@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Amanita.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/1357378467800416466_image.png",
+    "primary_media_path": "catalog/media/amanita/1357378467800416466_image.png",
     "media_type": ".png",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1357378467800416466_image.png",
+      "catalog_path": "catalog/media/amanita/1357378467800416466_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": -2,
@@ -49,7 +49,7 @@
       "attachment_id": "1357378467800416466"
     },
     {
-      "catalog_path": "catalog/media/1357387917282250772_image.png",
+      "catalog_path": "catalog/media/amanita/1357387917282250772_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": 5,
@@ -72,7 +72,7 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "amanita-1357382776709582919",

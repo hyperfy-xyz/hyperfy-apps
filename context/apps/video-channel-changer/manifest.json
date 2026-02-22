@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Video_Channel_Changer.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/1363856635457441912_IMG_1182.png",
+    "primary_media_path": "catalog/media/video_channel_changer/1363856635457441912_IMG_1182.png",
     "media_type": ".png",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1363854172591624222_xyz-screen-remote-many.mp4",
+      "catalog_path": "catalog/media/video_channel_changer/1363854172591624222_xyz-screen-remote-many.mp4",
       "original_filename": "xyz-screen-remote-many.mp4",
       "content_type": "video/mp4",
       "relative_index": -5,
@@ -49,7 +49,7 @@
       "attachment_id": "1363854172591624222"
     },
     {
-      "catalog_path": "catalog/media/1363856635457441912_IMG_1182.png",
+      "catalog_path": "catalog/media/video_channel_changer/1363856635457441912_IMG_1182.png",
       "original_filename": "IMG_1182.png",
       "content_type": "image/jpeg",
       "relative_index": -3,
@@ -72,7 +72,7 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "video-channel-changer-1363859162676596797",

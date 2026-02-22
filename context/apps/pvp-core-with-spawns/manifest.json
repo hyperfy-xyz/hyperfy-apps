@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/PvP_Core_with_spawns.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/1355236265124954277_image.png",
+    "primary_media_path": "catalog/media/pvp_core_with_spawns/1355236265124954277_image.png",
     "media_type": ".png",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/1355236265124954277_image.png",
+      "catalog_path": "catalog/media/pvp_core_with_spawns/1355236265124954277_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": -2,
@@ -57,7 +57,7 @@
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-22T00:29:56+00:00",
+  "generated_at": "2026-02-22T02:16:59+00:00",
   "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "pvp-core-with-spawns-1355236590603075706",
