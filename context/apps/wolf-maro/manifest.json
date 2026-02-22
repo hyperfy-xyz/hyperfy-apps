@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-04-01T12:34:21.686Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1356607621783617706/Wolf_Maro.hyp?ex=6979598d&is=6978080d&hm=ba5cbb4853fa65f0d90b54d1aba8f994231700ff4f5811ab3263648afa7211bf&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1356607621783617706/Wolf_Maro.hyp?ex=6998fd8d&is=6997ac0d&hm=b8d533b456076caa435480061e3fac5dbd290f0ed682d6e33985725b48dde237&"
   },
   "author": {
     "display_name": "ash",
@@ -25,31 +25,18 @@
   },
   "links": {
     "v2_app_dir": "v2/wolf-maro",
-    "v2_json_path": "v2/wolf-maro/Wolf Maro.json",
+    "v2_json_path": null,
     "hyp_summary_path": "context/hyp_summaries/Wolf_Maro.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/wolf-maro/p4_image.png",
+    "primary_media_path": "catalog/media/1356608583290196191_image.png",
     "media_type": ".png",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/wolf-maro/m6_image.png",
-      "original_filename": "image.png",
-      "content_type": "image/png",
-      "relative_index": -6,
-      "same_author": false,
-      "selection_reason": "any_author_fallback",
-      "size_bytes": 28417,
-      "optimized": true,
-      "excluded_large": false,
-      "download_status": "downloaded",
-      "attachment_id": "1356606660856119438"
-    },
-    {
-      "catalog_path": "catalog/media/wolf-maro/m5_image.png",
+      "catalog_path": "catalog/media/1356606976498602175_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": -5,
@@ -62,7 +49,7 @@
       "attachment_id": "1356606976498602175"
     },
     {
-      "catalog_path": "catalog/media/wolf-maro/p4_image.png",
+      "catalog_path": "catalog/media/1356608583290196191_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": 4,
@@ -77,6 +64,7 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
@@ -84,13 +72,13 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "wolf-maro-1356607622211440731",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:31:07+00:00",
-    "description": "Renders a skinned wolf character mesh that plays an idle animation by default and triggers a random animation from the rig's animation list on pointer click, with configurable speed and crossfade blending.",
+    "generated_at": "2026-02-21T23:50:18+00:00",
+    "description": "Renders a skinned wolf mesh with an idle animation and plays a random animation from the rig's anim list on pointer click. Demonstrates skinned mesh support by picking a random anim with configurable speed and fade transitions.",
     "feature_tags": [
       "3d-model",
       "animation",

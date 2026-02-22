@@ -1,0 +1,65 @@
+{
+  "app_id": "hyperducksitfighter-1344601514747887619",
+  "app_slug": "hyperducksitfighter",
+  "app_name": "hyperducksitfighter",
+  "source": {
+    "hyp_filename": "hyperducksitfighter.hyp",
+    "discord_attachment_id": "1344601514722983997",
+    "discord_message_id": "1344601514747887619",
+    "discord_channel": "\ud83e\uddca\u25023d-design",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-27T09:26:22.604Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1031058655581323324/1344601514722983997/hyperducksitfighter.hyp?ex=6998d17e&is=69977ffe&hm=d3e2d092fa07cf8e997f45e332c7fea521f559ea0cf1be5644fbd0bf2f290932&"
+  },
+  "author": {
+    "display_name": "0mka",
+    "discord_user_id": "783416470205497394",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "hyperducksitfighter-1344601514747887619",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:45:57+00:00",
+    "description": "Renders a duck-themed sit fighter 3D model with a sitting animation, allowing players to mount and ride the duck. Uses a Mixamo-style pose where the avatar grasps and holds on to the vehicle.",
+    "feature_tags": [
+      "3d-model",
+      "animation",
+      "vehicle"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "medium",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

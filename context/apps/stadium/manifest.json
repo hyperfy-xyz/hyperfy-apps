@@ -1,0 +1,104 @@
+{
+  "app_id": "stadium-1403439992092758106",
+  "app_slug": "stadium",
+  "app_name": "stadium",
+  "source": {
+    "hyp_filename": "stadium.hyp",
+    "discord_attachment_id": "1403439991744495759",
+    "discord_message_id": "1403439992092758106",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-08-08T18:09:28.769Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1403439991744495759/stadium.hyp?ex=6998a358&is=699751d8&hm=916b1fe9f91645acd09a4c212679a945915d55f102c734555f091b92c3a78810&"
+  },
+  "author": {
+    "display_name": "MetaMike",
+    "discord_user_id": "688215116457443346",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "dont know how to change the name cos i havent been playin for a while but ye",
+    "raw_message_content": "dont know how to change the name cos i havent been playin for a while but ye",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/1403449515780083742_image.png",
+    "media_type": ".png",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/1403437305213091950_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": -4,
+      "same_author": true,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 200592,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1403437305213091950"
+    },
+    {
+      "catalog_path": "catalog/media/1403437305724932198_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": -4,
+      "same_author": true,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 307419,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1403437305724932198"
+    },
+    {
+      "catalog_path": "catalog/media/1403449515780083742_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": 1,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 120322,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1403449515780083742"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "stadium-1403439992092758106",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:49:11+00:00",
+    "description": "Renders a stadium 3D model as a static environment asset, packaged as a single .hyp file. Loads the arena structure into the world for players to explore and gather within the venue space.",
+    "feature_tags": [
+      "3d-model",
+      "environment"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "heavy",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

@@ -9,7 +9,7 @@
     "discord_channel": "\u26a1\u2502general",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-04-08T14:06:29.306Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/958209074045026327/1359167521424408616/Grass_V1.hyp?ex=69796f25&is=69781da5&hm=a2263a4dcf5afe28d30b0650f77331a8ffb3ff7cdb120241a68646d07eed7e58&"
+    "discord_url": "https://cdn.discordapp.com/attachments/958209074045026327/1359167521424408616/Grass_V1.hyp?ex=69991325&is=6997c1a5&hm=7c84eacc67f9658ab7e8d083e3552424a156a9e2a2bd2aec6e660fefa984905d&"
   },
   "author": {
     "display_name": "Gert-Jan Akerboom",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Grass_V1.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/grass-v1/p4_image.png",
+    "primary_media_path": "catalog/media/1359168531412811816_image.png",
     "media_type": ".png",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/grass-v1/p4_image.png",
+      "catalog_path": "catalog/media/1359168531412811816_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": 4,
@@ -51,6 +51,7 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
@@ -58,13 +59,13 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "grass-v1-1359167521789448234",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:21:41+00:00",
-    "description": "Spawns up to 10,000 grass clones across a configurable area, distributing them in randomized clusters with adjustable density and radius. Clones wind-animated 3D grass models with random rotation and scale to simulate a natural breeze across the terrain.",
+    "generated_at": "2026-02-21T23:45:22+00:00",
+    "description": "Spawns up to 10,000 grass clones across a configurable area, distributing them in realistic clusters with randomized scale and rotation. Clones wind-animated 3D grass models and renders them as a breeze-like particle field with adjustable cluster density, size, and percentage.",
     "feature_tags": [
       "particles",
       "environment",
@@ -75,7 +76,7 @@
     "interaction_modes": [
       "passive"
     ],
-    "asset_profile": "light",
+    "asset_profile": "medium",
     "script_complexity": "medium",
     "networking_profile": "none"
   }

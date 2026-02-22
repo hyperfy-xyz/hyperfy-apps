@@ -1,0 +1,78 @@
+{
+  "app_id": "drone.glb-1339341240621072455",
+  "app_slug": "drone.glb",
+  "app_name": "drone.glb",
+  "source": {
+    "hyp_filename": "drone.glb.hyp",
+    "discord_attachment_id": "1339341240256303124",
+    "discord_message_id": "1339341240621072455",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-12T21:03:55.521Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1339341240256303124/drone.glb.hyp?ex=6998cc3b&is=69977abb&hm=666085455597d892c3cc36543a5a4fc65434382232c2e8cccd81aae367e408f0&"
+  },
+  "author": {
+    "display_name": "peezy",
+    "discord_user_id": "169825031314997249",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/1339339603810713661_image.png",
+    "media_type": ".png",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/1339339603810713661_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": -3,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 2001,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1339339603810713661"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "drone.glb-1339341240621072455",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:44:27+00:00",
+    "description": "Loads a drone 3D model intended to be controlled via app.control, allowing players to pilot the drone as a vehicle. Currently broken due to XR and build mode upgrade conflicts, as noted by the author.",
+    "feature_tags": [
+      "vehicle",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

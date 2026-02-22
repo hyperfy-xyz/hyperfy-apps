@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-05-26T15:48:41.450Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1376587859108302969/Notifications.hyp?ex=69798719&is=69783599&hm=a762fbf27c18ae5713a32c754178062504ab1c4730ca15182918ec247025f7e1&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1376587859108302969/Notifications.hyp?ex=69988259&is=699730d9&hm=60b950bb2ddaa11d8fb5dd5b9901d07c355b35c62265a8bb3589e1755890dc2d&"
   },
   "author": {
     "display_name": "Lastraum - theforgecore.xyz",
@@ -29,28 +29,29 @@
     "hyp_summary_path": "context/hyp_summaries/Notifications.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/notifications/preview.png",
+    "media_type": ".png",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "notifications-1376587859414356008",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:24:43+00:00",
-    "description": "Renders a screen-space UI notification panel that animates slide-in/slide-out. Listens for world events via a configurable message key and queues incoming messages with optional color, fontSize, and timer. The panel auto-scales the 3D model to zero so nothing shows in-world.",
+    "generated_at": "2026-02-21T23:47:05+00:00",
+    "description": "Renders a screen-space UI notification panel that animates slide-in/slide-out. Listens for world events via a configurable message key and queues incoming messages with optional color, fontSize, and timer. The panel auto-hides by scaling the model to zero so nothing shows in-world.",
     "feature_tags": [
       "ui",
       "animation"

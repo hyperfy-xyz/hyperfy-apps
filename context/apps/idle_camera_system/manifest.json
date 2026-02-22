@@ -1,0 +1,78 @@
+{
+  "app_id": "idle_camera_system-1349987822781730857",
+  "app_slug": "idle_camera_system",
+  "app_name": "Idle_Camera_System",
+  "source": {
+    "hyp_filename": "Idle_Camera_System.hyp",
+    "discord_attachment_id": "1349987822467285084",
+    "discord_message_id": "1349987822781730857",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-14T06:09:38.512Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1349987822467285084/Idle_Camera_System.hyp?ex=6998a362&is=699751e2&hm=8104d08683d6b25706f46b5f852b27ca8b56273eb1a68626a8d00cf2666fb42c&"
+  },
+  "author": {
+    "display_name": "~/drdoge.eth",
+    "discord_user_id": "357905702926286858",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/1349987284531019776_JingleJangle.mp4",
+    "media_type": ".mp4",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/1349987284531019776_JingleJangle.mp4",
+      "original_filename": "JingleJangle.mp4",
+      "content_type": "video/mp4",
+      "relative_index": -4,
+      "same_author": true,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 3141231,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1349987284531019776"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "idle_camera_system-1349987822781730857",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:46:10+00:00",
+    "description": "Triggers an idle camera system that animates a cinematic camera loop when the player is inactive, enabling automated flythrough or spectator views useful for club scenes or ambient world showcases.",
+    "feature_tags": [
+      "camera",
+      "animation"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

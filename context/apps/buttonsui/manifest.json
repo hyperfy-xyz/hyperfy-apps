@@ -1,0 +1,65 @@
+{
+  "app_id": "buttonsui-1393446298694455306",
+  "app_slug": "buttonsui",
+  "app_name": "ButtonsUI",
+  "source": {
+    "hyp_filename": "ButtonsUI.hyp",
+    "discord_attachment_id": "1393446298165842021",
+    "discord_message_id": "1393446298694455306",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-07-12T04:18:06.589Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1393446298165842021/ButtonsUI.hyp?ex=6998893e&is=699737be&hm=df3058c2566897716cf4ef94d9c09f30af56dbd3f29571c71ba3bfc9ea969822&"
+  },
+  "author": {
+    "display_name": "0mka",
+    "discord_user_id": "783416470205497394",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "Here'es a ButtonUI example using onPointer events with uiViews, with sound and a click counter.  world/screen space toggle.  some ways to preset themes.  how to do size changes that scale with ui.",
+    "raw_message_content": "Here'es a ButtonUI example using onPointer events with uiViews, with sound and a click counter.  world/screen space toggle.  some ways to preset themes.  how to do size changes that scale with ui.",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "buttonsui-1393446298694455306",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:43:35+00:00",
+    "description": "Renders interactive UI buttons using onPointer events and uiViews, plays click sound effects, tracks a click counter, and toggles between world-space and screen-space display modes with scalable preset themes.",
+    "feature_tags": [
+      "ui",
+      "audio",
+      "interaction"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

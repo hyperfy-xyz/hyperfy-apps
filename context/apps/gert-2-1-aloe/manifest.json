@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-03-04T23:46:36.827Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1346629938626953306/Gert-2-1-aloe.hyp?ex=69794e5c&is=6977fcdc&hm=0ac6f64e67a85bb1c7bfbee15fa04fb1d683bb61e3b1bf4fb4f6b21dc2a88c51&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1346629938626953306/Gert-2-1-aloe.hyp?ex=6998f25c&is=6997a0dc&hm=479a9c6059ba299b6b83d35761e9becf2cce046257e3bdb02682676595765578&"
   },
   "author": {
     "display_name": "0mka",
@@ -29,28 +29,29 @@
     "hyp_summary_path": "context/hyp_summaries/Gert-2-1-aloe.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/gert-2-1-aloe/preview.png",
+    "media_type": ".png",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "gert-2-1-aloe-1346629939817877556",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:21:31+00:00",
-    "description": "Spawns configurable Aloe Vera plant clones across a rectangular area, randomizing position, Y-axis rotation, and uniform scale for each 3D model instance. Users configure clone count, area width/depth, and min/max size through a UI panel.",
+    "generated_at": "2026-02-21T23:45:18+00:00",
+    "description": "Spawns configurable Aloe Vera plant clones across a defined rectangular area. Distributes up to 100 3D model instances with randomized position, Y-axis rotation, and uniform scale between user-defined min/max size values via a configure UI panel.",
     "feature_tags": [
       "3d-model",
       "environment",

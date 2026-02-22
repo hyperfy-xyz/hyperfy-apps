@@ -1,0 +1,64 @@
+{
+  "app_id": "bloomblock-1346090883849654373",
+  "app_slug": "bloomblock",
+  "app_name": "BloomBlock",
+  "source": {
+    "hyp_filename": "BloomBlock.hyp",
+    "discord_attachment_id": "1346090883505848342",
+    "discord_message_id": "1346090883849654373",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-03T12:04:35.869Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1346090883505848342/BloomBlock.hyp?ex=6998f693&is=6997a513&hm=ce9aa8c8b0de74cefd34e02c35946f27a4aad023a1513ab32d17957cbcba8c89&"
+  },
+  "author": {
+    "display_name": "ash",
+    "discord_user_id": "179546010303856640",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "just whipped this up",
+    "raw_message_content": "just whipped this up",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "bloomblock-1346090883849654373",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:43:09+00:00",
+    "description": "Renders a bloom-styled decorative block as a 3D model in the world. The name suggests it applies a visual bloom or emissive glow effect to a block object, likely leveraging emission materials for environmental decoration.",
+    "feature_tags": [
+      "3d-model",
+      "environment"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

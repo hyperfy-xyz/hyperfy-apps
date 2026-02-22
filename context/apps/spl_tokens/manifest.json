@@ -1,0 +1,89 @@
+{
+  "app_id": "spl_tokens-1342484960426197013",
+  "app_slug": "spl_tokens",
+  "app_name": "spl_tokens",
+  "source": {
+    "hyp_filename": "spl_tokens.hyp",
+    "discord_attachment_id": "1342484959968886884",
+    "discord_message_id": "1342484960426197013",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-21T13:15:56.730Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1342484959968886884/spl_tokens.hyp?ex=6999074c&is=6997b5cc&hm=85782da6bea1e6dec98efaea522eff78a18f7b1b5d86eade436cb35189ef89ca&"
+  },
+  "author": {
+    "display_name": "peezy",
+    "discord_user_id": "169825031314997249",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "just fyi guys I've improved the solana branch a good bit. wallets are now networked so if you want to make an app where people can click each other to send tokens it should be super easy! also, the token program now dynamically gets the metadata tokens, so scripts dont have to worry about symbol decimals all that shit\n\nto test the mod just do `npx hypkg apply solana` on your hyperfy repo. i recommend doing it on a separate branch that tracks latest dev to keep everything clean",
+    "raw_message_content": "just fyi guys I've improved the solana branch a good bit. wallets are now networked so if you want to make an app where people can click each other to send tokens it should be super easy! also, the token program now dynamically gets the metadata tokens, so scripts dont have to worry about symbol decimals all that shit\n\nto test the mod just do `npx hypkg apply solana` on your hyperfy repo. i recommend doing it on a separate branch that tracks latest dev to keep everything clean",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/1342485054596583536_image.png",
+    "media_type": ".png",
+    "selection_reason": "same_author_nearby",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/1342485054596583536_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": 1,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 29317,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1342485054596583536"
+    },
+    {
+      "catalog_path": "catalog/media/1342485078982262805_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": 2,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 24594,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1342485078982262805"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "spl_tokens-1342484960426197013",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:49:08+00:00",
+    "description": "Integrates Solana SPL token transfers into Hyperfy worlds, syncs networked wallets across players so users can click each other to send tokens. Dynamically fetches token metadata including symbol and decimals.",
+    "feature_tags": [
+      "interaction",
+      "multiplayer"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "high",
+    "networking_profile": "none"
+  }
+}

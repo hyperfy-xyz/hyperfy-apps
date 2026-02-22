@@ -1,0 +1,64 @@
+{
+  "app_id": "counter_1-1346073128094273567",
+  "app_slug": "counter_1",
+  "app_name": "Counter_1",
+  "source": {
+    "hyp_filename": "Counter_1.hyp",
+    "discord_attachment_id": "1346073127746273340",
+    "discord_message_id": "1346073128094273567",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-03T10:54:02.567Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1346073127746273340/Counter_1.hyp?ex=6998e60a&is=6997948a&hm=63d1759d6d2bb81584e508bdc20d869d82e7d60eb9fb19107e4b2e7291a8da72&"
+  },
+  "author": {
+    "display_name": "ash",
+    "discord_user_id": "179546010303856640",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "and pointer enter/leave events for feedback as an example",
+    "raw_message_content": "and pointer enter/leave events for feedback as an example",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "counter_1-1346073128094273567",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:44:10+00:00",
+    "description": "Renders an interactive click counter that tracks pointer enter/leave events on a 3D object, updating a UI display each time the user clicks. Serves as a beginner example demonstrating hover feedback and incremental state changes.",
+    "feature_tags": [
+      "interaction",
+      "ui"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

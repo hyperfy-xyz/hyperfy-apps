@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-04-03T15:54:32.920Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1357382776353198242/Amanita.hyp?ex=69798878&is=697836f8&hm=a1d225453234d780b53f2da4c6b4dc48e7ed5bce19a11c103c10d736082ecfc4&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1357382776353198242/Amanita.hyp?ex=699883b8&is=69973238&hm=37822b153f45c07bc32c29ded6e22a041b53f5d38a39a8f58cc37002398c977f&"
   },
   "author": {
     "display_name": "Gert-Jan Akerboom",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Amanita.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/amanita/m2_image.png",
+    "primary_media_path": "catalog/media/1357378467800416466_image.png",
     "media_type": ".png",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/amanita/m2_image.png",
+      "catalog_path": "catalog/media/1357378467800416466_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": -2,
@@ -49,7 +49,7 @@
       "attachment_id": "1357378467800416466"
     },
     {
-      "catalog_path": "catalog/media/amanita/p5_image.png",
+      "catalog_path": "catalog/media/1357387917282250772_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": 5,
@@ -64,6 +64,7 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
@@ -71,13 +72,13 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "amanita-1357382776709582919",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:16:21+00:00",
-    "description": "Clones a mushroom 3D model up to 500 times and scatters them randomly across a configurable rectangular area with randomized rotation and scale. Spawns an Amanita particle-like field useful for ground cover like grass or fungi.",
+    "generated_at": "2026-02-21T23:42:38+00:00",
+    "description": "Spawns up to 500 clones of an amanita mushroom 3D model scattered randomly across a configurable rectangular area. Randomizes position, Y-axis rotation, and uniform scale for each clone, creating a particle-like ground cover system suitable for mushrooms or grass.",
     "feature_tags": [
       "3d-model",
       "environment",

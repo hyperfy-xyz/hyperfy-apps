@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-03-25T13:20:40.224Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1354082560329650176/PvE_Sword.hyp?ex=69796468&is=697812e8&hm=99fc7ad645f42b7903b3b7380a9fffaa7de7f008e5b2048c7f3bbbafdaee65c0&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1354082560329650176/PvE_Sword.hyp?ex=69990868&is=6997b6e8&hm=402b15bc804f9c5cd419ff3f1007c139466fd731e0f76203338f8d8eda2a6c4f&"
   },
   "author": {
     "display_name": "peezy",
@@ -29,28 +29,29 @@
     "hyp_summary_path": "context/hyp_summaries/PvE_Sword.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/pve-sword/preview.png",
+    "media_type": ".png",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "pve-sword-1354082561185288312",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:25:52+00:00",
-    "description": "PvE melee sword that players pick up and attach to their right hand via bone tracking. Left-click triggers randomized attack emotes and fires an overlapSphere hit check that damages nearby players with critical hit chance. Syncs sword holders across server and clients, and drops on Q press or discon",
+    "generated_at": "2026-02-21T23:47:45+00:00",
+    "description": "PvE melee sword that players pick up and attach to their right hand via bone transforms. Left-click triggers randomized attack emotes and damages nearby targets using overlapSphere with critical hit chance. Syncs sword holders across server and clients, and supports drop via Q key.",
     "feature_tags": [
       "combat",
       "animation",

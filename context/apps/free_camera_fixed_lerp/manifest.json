@@ -1,0 +1,91 @@
+{
+  "app_id": "free_camera_fixed_lerp-1404322638557478912",
+  "app_slug": "free_camera_fixed_lerp",
+  "app_name": "Free_Camera_Fixed_Lerp",
+  "source": {
+    "hyp_filename": "Free_Camera_Fixed_Lerp.hyp",
+    "discord_attachment_id": "1404322638242910319",
+    "discord_message_id": "1404322638557478912",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-08-11T04:36:48.085Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1404322638242910319/Free_Camera_Fixed_Lerp.hyp?ex=69988da0&is=69973c20&hm=380051776ac453fc2299159cbc8dbd746e00260f6475a87815db5944e595fc41&"
+  },
+  "author": {
+    "display_name": "Shiffty",
+    "discord_user_id": "466331582458888192",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "<@415262868217266177> Here's a version of the free cam with a fixed linear interpolation instead of an easing function. (If you're curious, settings of around .9 would give you something close to this functionality assuming consistent 60 fps). Let me know if this feels better and I can clean it up if so.",
+    "raw_message_content": "<@415262868217266177> Here's a version of the free cam with a fixed linear interpolation instead of an easing function. (If you're curious, settings of around .9 would give you something close to this functionality assuming consistent 60 fps). Let me know if this feels better and I can clean it up if so.",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/1404312320552992879_image.png",
+    "media_type": ".png",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/1404312198595088445_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": -3,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 3593222,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1404312198595088445"
+    },
+    {
+      "catalog_path": "catalog/media/1404312320552992879_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": -2,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 10608,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1404312320552992879"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "free_camera_fixed_lerp-1404322638557478912",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:45:08+00:00",
+    "description": "Implements a free camera mode that smoothly interpolates position using fixed linear interpolation (lerp) instead of an easing function, delivering consistent movement feel regardless of frame rate fluctuations.",
+    "feature_tags": [
+      "camera",
+      "animation"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

@@ -1,15 +1,15 @@
 {
-  "app_id": "forest-1443613740150034512",
+  "app_id": "forest-1443613865295220818",
   "app_slug": "forest",
   "app_name": "Forest",
   "source": {
     "hyp_filename": "Forest.hyp",
-    "discord_attachment_id": "1443613739638325350",
-    "discord_message_id": "1443613740150034512",
-    "discord_channel": "\ud83d\udcbb\u2502developers",
-    "discord_channel_category": "Creators",
-    "discord_timestamp": "2025-11-27T14:45:36.698Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1443613739638325350/Forest.hyp?ex=692b0710&is=6929b590&hm=d7ba15894f2c4835beb781fd884638f1062edac3a2e6f62a89e51ca6cddf6f57&"
+    "discord_attachment_id": "1443613865400074341",
+    "discord_message_id": "1443613865295220818",
+    "discord_channel": "\ud83c\udfa8\u2502showcase",
+    "discord_channel_category": "Platform",
+    "discord_timestamp": "2025-11-27T14:46:06.535Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1443613865400074341/Forest.hyp?ex=69991c6e&is=6997caee&hm=f80d48f90824499973b49e9333e31541642b47b64e776ba78f02f1d91b760b10&"
   },
   "author": {
     "display_name": "Gert-Jan Akerboom",
@@ -18,8 +18,8 @@
     "evidence": "discord"
   },
   "description": {
-    "short": "try it out",
-    "raw_message_content": "try it out",
+    "short": "a forest generator with trees from here https://quickmesh.dev/tree/",
+    "raw_message_content": "a forest generator with trees from here https://quickmesh.dev/tree/",
     "summary_excerpt": "Forest.hyp",
     "source_priority_used": "discord_message"
   },
@@ -29,45 +29,33 @@
     "hyp_summary_path": "context/hyp_summaries/Forest.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/forest/m1_forest-gen.mp4",
-    "media_type": ".mp4",
-    "selection_reason": "same_author_nearby",
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
     "is_fallback_any_author": false
   },
-  "media": [
-    {
-      "catalog_path": "catalog/media/forest/m1_forest-gen.mp4",
-      "original_filename": "forest-gen.mp4",
-      "content_type": "video/mp4",
-      "relative_index": -1,
-      "same_author": true,
-      "selection_reason": "same_author_nearby",
-      "size_bytes": 8567260,
-      "optimized": true,
-      "excluded_large": false,
-      "download_status": "downloaded",
-      "attachment_id": "1443613680909418638"
-    }
-  ],
+  "media": [],
   "status": {
-    "has_preview": true,
-    "needs_media_review": false,
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
     "needs_author_review": false,
-    "flags": [],
+    "flags": [
+      "no_media_found"
+    ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
-    "app_id": "forest-1443613740150034512",
+    "app_id": "forest-1443613865295220818",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:20:58+00:00",
-    "description": "Procedural forest generator that clones up to 10,000 tree models across configurable circle or rectangle distribution shapes. Spawns clustered and scattered trees with randomized scale and rotation using a UI panel for clone count, cluster density, inner radius, and area size.",
+    "generated_at": "2026-02-21T23:45:03+00:00",
+    "description": "Procedural forest generator that clones up to 10,000 tree models across configurable circle or rectangle distribution shapes. Spawns clustered and scattered trees with randomized scale and rotation using a UI panel for clone count, cluster density, and area radius.",
     "feature_tags": [
       "environment",
       "ui",
-      "3d-model",
-      "building"
+      "3d-model"
     ],
     "interaction_modes": [
       "passive"

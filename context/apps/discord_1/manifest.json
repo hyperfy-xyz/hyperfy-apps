@@ -1,0 +1,79 @@
+{
+  "app_id": "discord_1-1350208919510978692",
+  "app_slug": "discord_1",
+  "app_name": "discord_1",
+  "source": {
+    "hyp_filename": "discord_1.hyp",
+    "discord_attachment_id": "1350208919305326674",
+    "discord_message_id": "1350208919510978692",
+    "discord_channel": "\u26a1\u2502general",
+    "discord_channel_category": "Platform",
+    "discord_timestamp": "2025-03-14T20:48:12.080Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/958209074045026327/1350208919305326674/discord_1.hyp?ex=6998c88c&is=6997770c&hm=3690aa5b6a2dbcb7462616a3d825908513b574f49206fd8e690146dbfbdc3452&"
+  },
+  "author": {
+    "display_name": "peezy",
+    "discord_user_id": "169825031314997249",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/1350207420974104576_discordd.mp4",
+    "media_type": ".mp4",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/1350207420974104576_discordd.mp4",
+      "original_filename": "discordd.mp4",
+      "content_type": "video/mp4",
+      "relative_index": -3,
+      "same_author": true,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 1400317,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1350207420974104576"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "discord_1-1350208919510978692",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:44:27+00:00",
+    "description": "Bridges in-world events to a Discord webhook, broadcasting chat messages and player join/leave notifications. Listens for custom 'discord' events emitted by other apps on the server and relays them to an external Discord channel. Renders a 3D model icon in the world.",
+    "feature_tags": [
+      "multiplayer",
+      "interaction",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "medium",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

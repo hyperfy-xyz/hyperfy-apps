@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-03-04T23:46:36.827Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1346629938203332642/szjanko-2-11-dice.hyp?ex=69794e5c&is=6977fcdc&hm=d7112b684aab0e7481124643247afcd98aa437847ed02836dae1d440c4fb15a5&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1346629938203332642/szjanko-2-11-dice.hyp?ex=6998f25c&is=6997a0dc&hm=e5b7a8286387a6a88be9dbb16fbe78b4628a20d46b7d7066209855f80cad2c62&"
   },
   "author": {
     "display_name": "0mka",
@@ -29,32 +29,33 @@
     "hyp_summary_path": "context/hyp_summaries/szjanko-2-11-dice.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/szjanko-2-11-dice/preview.png",
+    "media_type": ".png",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "szjanko-2-11-dice-1346629939817877556",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:29:17+00:00",
-    "description": "Interactive dice app that animates a 3D dice model when clicked. Triggers a rolling animation on pointer down, rotating the cube with easing over a two-second duration using per-frame update deltas. The rotation decelerates smoothly to simulate a realistic dice roll.",
+    "generated_at": "2026-02-21T23:49:20+00:00",
+    "description": "Interactive dice 3D model that animates a rolling motion when clicked. On pointer down, triggers a timed rotation with easing that gradually decelerates the cube's spin across all three axes over a two-second duration.",
     "feature_tags": [
+      "3d-model",
       "animation",
-      "interaction",
-      "3d-model"
+      "interaction"
     ],
     "interaction_modes": [
       "passive"

@@ -1,0 +1,65 @@
+{
+  "app_id": "laser_riflenew-1344748049942970410",
+  "app_slug": "laser_riflenew",
+  "app_name": "laser_rifleNEW",
+  "source": {
+    "hyp_filename": "laser_rifleNEW.hyp",
+    "discord_attachment_id": "1344748049649631232",
+    "discord_message_id": "1344748049942970410",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-27T19:08:39.317Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1344748049649631232/laser_rifleNEW.hyp?ex=6998b137&is=69975fb7&hm=0daf20aa5611d5d8d83e5c64caad4216d682c425ab0d2717d8c592c236b698e4&"
+  },
+  "author": {
+    "display_name": "~/drdoge.eth",
+    "discord_user_id": "357905702926286858",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "and also, it needs a lil love but, we making progress lmao",
+    "raw_message_content": "and also, it needs a lil love but, we making progress lmao",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "laser_riflenew-1344748049942970410",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:46:22+00:00",
+    "description": "Laser rifle weapon that fires laser projectiles in a 3D world environment. Work-in-progress combat item that renders a rifle model and triggers shooting interactions for players.",
+    "feature_tags": [
+      "combat",
+      "3d-model",
+      "interaction"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "medium",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

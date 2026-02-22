@@ -1,0 +1,77 @@
+{
+  "app_id": "scrolltest-1379480967525175406",
+  "app_slug": "scrolltest",
+  "app_name": "scrolltest",
+  "source": {
+    "hyp_filename": "scrolltest.hyp",
+    "discord_attachment_id": "1379480967261196298",
+    "discord_message_id": "1379480967525175406",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-06-03T15:24:52.175Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1379480967261196298/scrolltest.hyp?ex=69992584&is=6997d404&hm=285009180a8a8d2a1cc521fad3b26111253de838ce7ad0211634b4a15b87184a&"
+  },
+  "author": {
+    "display_name": "hypShaman",
+    "discord_user_id": "297290503181959169",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/1379481068419158238_brave_dvwMIpqTaF.mp4",
+    "media_type": ".mp4",
+    "selection_reason": "same_author_nearby",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/1379481068419158238_brave_dvwMIpqTaF.mp4",
+      "original_filename": "brave_dvwMIpqTaF.mp4",
+      "content_type": "video/mp4",
+      "relative_index": 1,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 951738,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1379481068419158238"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "scrolltest-1379480967525175406",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:48:36+00:00",
+    "description": "Experimental scroll test app that animates UV-scrolling planes to flash between colors rapidly, creating a strobing visual effect on 3D surfaces. Adjusts plane UVs to trigger color transitions across the environment.",
+    "feature_tags": [
+      "animation",
+      "environment",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

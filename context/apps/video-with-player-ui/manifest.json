@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-12-07T14:30:29.140Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1447233811636162772/Video_with_player_UI.hyp?ex=697974c4&is=69782344&hm=bdf24d0c81434473be705c47ef31655ba66d7a7d46f1f0ae516af57a7920fc0d&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1447233811636162772/Video_with_player_UI.hyp?ex=699918c4&is=6997c744&hm=6fc57f78e5e0ab17ed4e1b260b2c8e170af18f35cf2f4cc3540b34452d313d49&"
   },
   "author": {
     "display_name": "Gert-Jan Akerboom",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Video_with_player_UI.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/video-with-player-ui/p0_video_player_ui.png",
+    "primary_media_path": "catalog/media/1447233811996737566_video_player_ui.png",
     "media_type": ".png",
     "selection_reason": "same_message",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/video-with-player-ui/p0_video_player_ui.png",
+      "catalog_path": "catalog/media/1447233811996737566_video_player_ui.png",
       "original_filename": "video_player_ui.png",
       "content_type": "image/png",
       "relative_index": 0,
@@ -51,18 +51,19 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "video-with-player-ui-1447233812231880724",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:30:30+00:00",
-    "description": "Renders a video surface with world-space Play, Pause, and Reset UI buttons that players can click to control playback. Syncs video state across multiplayer via client-server messaging, supports looping, configurable dimensions, volume, and fit modes.",
+    "generated_at": "2026-02-21T23:49:58+00:00",
+    "description": "Renders a video surface with optional world-space UI buttons that trigger play, pause, and reset actions. Syncs video playback state across multiplayer via client-server messaging, and supports configurable dimensions, looping, volume, and fit modes.",
     "feature_tags": [
       "media-player",
       "ui",

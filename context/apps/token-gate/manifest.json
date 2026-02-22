@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-03-11T21:08:41.943Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1349126913485963344/TOKEN_GATE.hyp?ex=69792959&is=6977d7d9&hm=be2c13cb6c652881266d2023e1efca32bde65c398544642d4c466efa8d326f2a&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1349126913485963344/TOKEN_GATE.hyp?ex=6998cd59&is=69977bd9&hm=d2f1b9269f5aac2882582d3f51ae051e52c5064d781a7e00b2ef559d799b4465&"
   },
   "author": {
     "display_name": "peezy",
@@ -29,28 +29,29 @@
     "hyp_summary_path": "context/hyp_summaries/TOKEN_GATE.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/token-gate/preview.png",
+    "media_type": ".png",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "token-gate-1349126914333478954",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:29:56+00:00",
-    "description": "Token-gated door that checks a player's Solana SPL token balance and animates a sliding or swinging door open when the minimum threshold is met. Renders UI panels displaying required token amount and live wallet balance. Auto-closes after a configurable timer. Requires external Solana mod.",
+    "generated_at": "2026-02-21T23:49:36+00:00",
+    "description": "Token-gated door that checks a player's Solana SPL token balance and animates a sliding or swinging door open when the minimum threshold is met. Renders UI panels displaying required token amount and live wallet balance. Requires the Solana mod for on-chain queries.",
     "feature_tags": [
       "ui",
       "animation",

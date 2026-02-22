@@ -1,0 +1,64 @@
+{
+  "app_id": "clouds2-1344375054019854397",
+  "app_slug": "clouds2",
+  "app_name": "clouds2",
+  "source": {
+    "hyp_filename": "clouds2.hyp",
+    "discord_attachment_id": "1344375053361614920",
+    "discord_message_id": "1344375054019854397",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-26T18:26:30.159Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1344375053361614920/clouds2.hyp?ex=6998a756&is=699755d6&hm=330648208fefe1e139f0df05245e04858ee6ea8eed2d29be20d763a2bde8c76a&"
+  },
+  "author": {
+    "display_name": "~/drdoge.eth",
+    "discord_user_id": "357905702926286858",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "not till now. lol here ya go!",
+    "raw_message_content": "not till now. lol here ya go!",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "clouds2-1344375054019854397",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:44:01+00:00",
+    "description": "Renders a cloud environment model that spawns decorative cloud formations in a Hyperfy world, adding atmospheric sky elements to the scene as a static 3D asset.",
+    "feature_tags": [
+      "environment",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

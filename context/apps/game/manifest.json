@@ -1,0 +1,89 @@
+{
+  "app_id": "game-1403407154211459165",
+  "app_slug": "game",
+  "app_name": "game",
+  "source": {
+    "hyp_filename": "game.hyp",
+    "discord_attachment_id": "1403407153921790086",
+    "discord_message_id": "1403407154211459165",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-08-08T15:58:59.608Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1403407153921790086/game.hyp?ex=69992d83&is=6997dc03&hm=21c2042498312bd602fc32d3047a92c86364e4171a48cb555f21e88705e7c1c5&"
+  },
+  "author": {
+    "display_name": "peezy",
+    "discord_user_id": "169825031314997249",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/1403407153343238284_image.png",
+    "media_type": ".png",
+    "selection_reason": "same_message",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/1403407153343238284_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": 0,
+      "same_author": true,
+      "selection_reason": "same_message",
+      "size_bytes": 383776,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1403407153343238284"
+    },
+    {
+      "catalog_path": "catalog/media/1403407153670389901_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": 0,
+      "same_author": true,
+      "selection_reason": "same_message",
+      "size_bytes": 189191,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1403407153670389901"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "game-1403407154211459165",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:45:10+00:00",
+    "description": "A game app shared as a generated prototype. Renders a playable game scene within a Hyperfy world. Based on author context, it spawns interactive game elements and loads 3d-model assets, though internal scripts and asset details are unavailable.",
+    "feature_tags": [
+      "interaction",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-03-24T12:19:48.848Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1353704856690360340/Game_Timer.hyp?ex=69795624&is=697804a4&hm=6ecb0f6afc63470a91d94f5e66842bcb55db7f12eb5b5c8f3b9422d4377ef618&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1353704856690360340/Game_Timer.hyp?ex=6998fa24&is=6997a8a4&hm=3becf9c953ed5c50e70d7acb9ff8c31c1fe85e4387035f3e0d8eba92eba70427&"
   },
   "author": {
     "display_name": "0mka",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Game_Timer.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/game-timer/p0_timer.mp4",
+    "primary_media_path": "catalog/media/1353704857265246218_timer.mp4",
     "media_type": ".mp4",
     "selection_reason": "same_message",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/game-timer/p0_timer.mp4",
+      "catalog_path": "catalog/media/1353704857265246218_timer.mp4",
       "original_filename": "timer.mp4",
       "content_type": "video/mp4",
       "relative_index": 0,
@@ -51,18 +51,19 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "game-timer-1353704858338984058",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:21:23+00:00",
-    "description": "Renders a configurable countdown timer as an on-screen UI panel that ticks down each second from a user-defined minute value. Displays MM:SS formatted text and stops at 00:00. Colors, alpha, and duration are customizable via app.configure fields.",
+    "generated_at": "2026-02-21T23:45:12+00:00",
+    "description": "Renders a configurable countdown timer as an on-screen UI panel that ticks down each second from a user-defined minute value. Displays MM:SS text with customizable background, border, and text colors via app.configure fields. Stops updating when the timer reaches zero.",
     "feature_tags": [
       "ui"
     ],

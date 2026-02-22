@@ -1,0 +1,92 @@
+{
+  "app_id": "vehicleflight-1344901348327555114",
+  "app_slug": "vehicleflight",
+  "app_name": "VehicleFlight",
+  "source": {
+    "hyp_filename": "VehicleFlight.hyp",
+    "discord_attachment_id": "1344901348008792084",
+    "discord_message_id": "1344901348327555114",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-28T05:17:48.500Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1344901348008792084/VehicleFlight.hyp?ex=6998973c&is=699745bc&hm=2afc119df64c861ba23430a84c508280e0c48dd0630904ba22aea9a1d789a041&"
+  },
+  "author": {
+    "display_name": "Shiffty",
+    "discord_user_id": "466331582458888192",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "Here's Hyperduck 2.0, moving on to other things",
+    "raw_message_content": "Here's Hyperduck 2.0, moving on to other things",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/1344896376357654549_image.png",
+    "media_type": ".png",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/1344896376357654549_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": -4,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 17637,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1344896376357654549"
+    },
+    {
+      "catalog_path": "catalog/media/1344896376617566249_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": -4,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 11810,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1344896376617566249"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "vehicleflight-1344901348327555114",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:49:52+00:00",
+    "description": "A flying vehicle app (Hyperduck 2.0) that enables players to pilot an airborne craft with flight controls and physics-based movement through the world environment.",
+    "feature_tags": [
+      "vehicle",
+      "physics",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "medium",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

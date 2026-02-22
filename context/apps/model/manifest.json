@@ -9,7 +9,7 @@
     "discord_channel": "\ud83e\uddca\u25023d-design",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-03-24T11:56:10.261Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1031058655581323324/1353698908249002015/Model.hyp?ex=6979509a&is=6977ff1a&hm=ff3e93c86e0a055ec51ef8f0d6b475ce5c48bd9166344a5315e8ef0a527d9b66&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1031058655581323324/1353698908249002015/Model.hyp?ex=6998f49a&is=6997a31a&hm=c9b72e04608f8465fbf4eba04fe5dff1ff2d19d93c9cfe350c155fa2ac80ab28&"
   },
   "author": {
     "display_name": "ash",
@@ -29,42 +29,30 @@
     "hyp_summary_path": "context/hyp_summaries/Model.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/model/p7_image.png",
-    "media_type": ".png",
-    "selection_reason": "any_author_fallback",
-    "is_fallback_any_author": true
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
   },
-  "media": [
-    {
-      "catalog_path": "catalog/media/model/p7_image.png",
-      "original_filename": "image.png",
-      "content_type": "image/png",
-      "relative_index": 7,
-      "same_author": false,
-      "selection_reason": "any_author_fallback",
-      "size_bytes": 28888,
-      "optimized": true,
-      "excluded_large": false,
-      "download_status": "downloaded",
-      "attachment_id": "1353700440058888264"
-    }
-  ],
+  "media": [],
   "status": {
-    "has_preview": true,
-    "needs_media_review": false,
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
     "needs_author_review": false,
     "flags": [
-      "media_fallback_any_author"
+      "media_fallback_any_author",
+      "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "model-1353698908353724480",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:24:13+00:00",
-    "description": "Loads a GLB 3D model and traverses its mesh nodes to create a rigidbody with geometry-based colliders for each mesh. Exposes configurable scale and a collision toggle switch via the app UI, enabling quick physics-ready placement of custom models.",
+    "generated_at": "2026-02-21T23:46:49+00:00",
+    "description": "Loads a GLB 3d-model and auto-generates a rigidbody with geometry colliders for each mesh when collision is toggled on. Traverses the node hierarchy, decomposes world transforms, and creates matching collider nodes. Configurable scale and collision toggle via UI props.",
     "feature_tags": [
       "3d-model",
       "physics",

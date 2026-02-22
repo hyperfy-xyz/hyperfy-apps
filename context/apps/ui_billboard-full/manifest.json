@@ -1,0 +1,64 @@
+{
+  "app_id": "ui_billboard-full-1349072688273948803",
+  "app_slug": "ui_billboard-full",
+  "app_name": "UI_Billboard-Full",
+  "source": {
+    "hyp_filename": "UI_Billboard-Full.hyp",
+    "discord_attachment_id": "1349072687728955392",
+    "discord_message_id": "1349072688273948803",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-11T17:33:13.443Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1349072687728955392/UI_Billboard-Full.hyp?ex=69989ad9&is=69974959&hm=4690307d29264fbc3e2990f60e36752da5e6a148dd8144bda3c96a85a4777e3c&"
+  },
+  "author": {
+    "display_name": "0mka",
+    "discord_user_id": "783416470205497394",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "Here's a mega uibillboard with configurable settings in the inspect pane.\n\nref:\n\nhttps://hyperfy.how/ref/ui-view\nhttps://hyperfy.how/ref/ui-text\nhttps://hyperfy.how/ref/ui/",
+    "raw_message_content": "Here's a mega uibillboard with configurable settings in the inspect pane.\n\nref:\n\nhttps://hyperfy.how/ref/ui-view\nhttps://hyperfy.how/ref/ui-text\nhttps://hyperfy.how/ref/ui/",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "ui_billboard-full-1349072688273948803",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:49:43+00:00",
+    "description": "Renders a configurable UI billboard sign with text and view elements, exposing RGB color sliders and layout settings through the inspect pane. Uses a lightweight 3D sign model as the base and supports customizable display properties.",
+    "feature_tags": [
+      "ui",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

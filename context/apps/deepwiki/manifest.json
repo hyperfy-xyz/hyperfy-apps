@@ -1,0 +1,75 @@
+{
+  "app_id": "deepwiki-1393164801596850199",
+  "app_slug": "deepwiki",
+  "app_name": "DeepWiki",
+  "source": {
+    "hyp_filename": "DeepWiki.hyp",
+    "discord_attachment_id": "1393164801676410911",
+    "discord_message_id": "1393164801596850199",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-07-11T09:39:32.451Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1393164801676410911/DeepWiki.hyp?ex=6998d494&is=69978314&hm=4029bcf4c66ef957d715232e96be96e1fd19917cdbd39a13090b8d4db6ab404e&"
+  },
+  "author": {
+    "display_name": "0mka",
+    "discord_user_id": "783416470205497394",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "Dropping in playworld. (which apparently has a looot to load again) meta",
+    "raw_message_content": "Dropping in playworld. (which apparently has a looot to load again) meta",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/1393164801399849080_deepwiki.png",
+    "media_type": ".png",
+    "selection_reason": "same_message",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/1393164801399849080_deepwiki.png",
+      "original_filename": "deepwiki.png",
+      "content_type": "image/png",
+      "relative_index": 0,
+      "same_author": true,
+      "selection_reason": "same_message",
+      "size_bytes": 243094,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1393164801399849080"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "deepwiki-1393164801596850199",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:44:23+00:00",
+    "description": "AI-generated Hyperfy app created by DeepWiki that loads into a playworld environment. Deploys a 3D model scene with minimal scripting, generated as a proof-of-concept demonstration of automated app creation from an AI wiki tool.",
+    "feature_tags": [
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

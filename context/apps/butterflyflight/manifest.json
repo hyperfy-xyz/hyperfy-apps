@@ -1,0 +1,79 @@
+{
+  "app_id": "butterflyflight-1350710848615743498",
+  "app_slug": "butterflyflight",
+  "app_name": "ButterflyFlight",
+  "source": {
+    "hyp_filename": "ButterflyFlight.hyp",
+    "discord_attachment_id": "1350710848154238976",
+    "discord_message_id": "1350710848615743498",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-16T06:02:41.304Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1350710848154238976/ButterflyFlight.hyp?ex=6998a1c1&is=69975041&hm=b06f9ecb8821ca61f5129caa4d4dbcc02c413c6beaa1e40ce6bb28d3efcd2cdf&"
+  },
+  "author": {
+    "display_name": "Shiffty",
+    "discord_user_id": "466331582458888192",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "<@601886221072990251> I took a stab at butterfly flight (proc terrain was being a pain and I needed this). It's just a single butterfly. Free to use whatever parts you want if you feel like it.",
+    "raw_message_content": "<@601886221072990251> I took a stab at butterfly flight (proc terrain was being a pain and I needed this). It's just a single butterfly. Free to use whatever parts you want if you feel like it.",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/1350804582539984896_image.png",
+    "media_type": ".png",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/1350804582539984896_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": 2,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 2778,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1350804582539984896"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "butterflyflight-1350710848615743498",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:43:33+00:00",
+    "description": "Renders a single butterfly 3D model and animates its flight path procedurally, simulating natural wing movement and wandering behavior in the scene. Designed as a reusable nature element for virtual environments.",
+    "feature_tags": [
+      "animation",
+      "3d-model",
+      "environment"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

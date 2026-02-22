@@ -1,0 +1,80 @@
+{
+  "app_id": "autonomous_resource_network-1337948274484576418",
+  "app_slug": "autonomous_resource_network",
+  "app_name": "Autonomous_Resource_Network",
+  "source": {
+    "hyp_filename": "Autonomous_Resource_Network.hyp",
+    "discord_attachment_id": "1337948274178527282",
+    "discord_message_id": "1337948274484576418",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-09T00:48:46.514Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1337948274178527282/Autonomous_Resource_Network.hyp?ex=699900ee&is=6997af6e&hm=79cb21da2da90d4a2be1dc89d7994702ce5d8550db1daaa1d7bf02ee3bb5f4b8&"
+  },
+  "author": {
+    "display_name": "MetaMike",
+    "discord_user_id": "688215116457443346",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/1337947734887628810_image.png",
+    "media_type": ".png",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/1337947734887628810_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": -3,
+      "same_author": true,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 89880,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1337947734887628810"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "autonomous_resource_network-1337948274484576418",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:42:50+00:00",
+    "description": "Spawns an autonomous resource network with configurable node types such as mine, refinery, and storage buildings. Players interact with resource nodes to gather and process materials, forming MMO-style economy fundamentals in a multiplayer world.",
+    "feature_tags": [
+      "interaction",
+      "building",
+      "multiplayer",
+      "environment"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "medium",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

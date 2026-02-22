@@ -1,0 +1,65 @@
+{
+  "app_id": "curved_main_screen_2-1381974786204504106",
+  "app_slug": "curved_main_screen_2",
+  "app_name": "Curved_Main_Screen_2",
+  "source": {
+    "hyp_filename": "Curved_Main_Screen_2.hyp",
+    "discord_attachment_id": "1381974785642201139",
+    "discord_message_id": "1381974786204504106",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-06-10T12:34:24.881Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1381974785642201139/Curved_Main_Screen_2.hyp?ex=6998fd90&is=6997ac10&hm=6f4735f16093d6df8724809e9a8268e77aaa5c6621201a38c78e424bc5fde64c&"
+  },
+  "author": {
+    "display_name": "Alephic",
+    "discord_user_id": "1379514949554147349",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "Sorry wrong file - is it possible to add a fullscreen mode for this screenshare app? I'm trying to add a toggleable fullscreen UI window that displays the same video as the in-world model but running into errors:",
+    "raw_message_content": "Sorry wrong file - is it possible to add a fullscreen mode for this screenshare app? I'm trying to add a toggleable fullscreen UI window that displays the same video as the in-world model but running into errors:",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "curved_main_screen_2-1381974786204504106",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:44:12+00:00",
+    "description": "Renders a curved in-world screen for screensharing video content, intended to allow users to toggle a fullscreen UI overlay displaying the same media stream from the 3D model surface.",
+    "feature_tags": [
+      "media-player",
+      "ui",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "medium",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

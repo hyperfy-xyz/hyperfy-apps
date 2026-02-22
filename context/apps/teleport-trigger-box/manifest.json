@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-10-24T17:26:21.962Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1431333007783886849/TeleportTriggerBox.hyp?ex=68fe59bd&is=68fd083d&hm=8f27fdd820ee1765f06f45c7ed3602d9901afe2cbc3709a40211e3ce9985e4b9&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1431333007783886849/TeleportTriggerBox.hyp?ex=6998993d&is=699747bd&hm=5ca98fa6007ec084778bd2e5cf1e70b946b740dc403fed300c1490b98be7644e&"
   },
   "author": {
     "display_name": "\ud835\udd7d\ud835\udd94\ud835\udd9a\ud835\udd98\ud835\udd99\ud835\udd86\ud835\udd93",
@@ -29,33 +29,33 @@
     "hyp_summary_path": "context/hyp_summaries/TeleportTriggerBox.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/teleport-trigger-box/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "teleport-trigger-box-1431333007888748678",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:29:28+00:00",
-    "description": "Spawns a customizable trigger zone that teleports players to a configurable X,Y,Z destination on entry. Creates a rigidbody with a geometry collider set as a trigger, and uses onTriggerEnter to call player.teleport. The box mesh can be toggled visible or hidden and scaled along each axis via props.",
+    "generated_at": "2026-02-21T23:49:27+00:00",
+    "description": "Customizable trigger box that teleports players to a configurable X,Y,Z destination when they walk into it. Creates a rigidbody with a trigger collider on a scalable green cube mesh that can be toggled invisible to hide the zone.",
     "feature_tags": [
       "teleport",
       "physics",
-      "interaction",
-      "3d-model"
+      "interaction"
     ],
     "interaction_modes": [
       "trigger"

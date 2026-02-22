@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-03-30T13:57:21.442Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1355903732411269261/Prism.hyp?ex=69796d01&is=69781b81&hm=40627d170d50fb5975032124cf51103b6ecff4c42280e12c050c128193fd3127&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1355903732411269261/Prism.hyp?ex=69991101&is=6997bf81&hm=de4e7e0f447bba175723a42069a546c9e0b2dd4351b256293ac4338d2ec5c023&"
   },
   "author": {
     "display_name": "ash",
@@ -29,55 +29,30 @@
     "hyp_summary_path": "context/hyp_summaries/Prism.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/mob-skelly/m6_xyz-skelly.mp4",
-    "media_type": ".mp4",
-    "selection_reason": "any_author_fallback",
-    "is_fallback_any_author": true
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
   },
-  "media": [
-    {
-      "catalog_path": "catalog/media/prism/m8_CamSwitcher.mp4",
-      "original_filename": "CamSwitcher.mp4",
-      "content_type": "video/mp4",
-      "relative_index": -8,
-      "same_author": false,
-      "selection_reason": "any_author_fallback",
-      "size_bytes": 22409746,
-      "optimized": true,
-      "excluded_large": false,
-      "download_status": "downloaded",
-      "attachment_id": "1355780113417113731"
-    },
-    {
-      "catalog_path": "catalog/media/mob-skelly/m6_xyz-skelly.mp4",
-      "original_filename": "xyz-skelly.mp4",
-      "content_type": "video/mp4",
-      "relative_index": -6,
-      "same_author": true,
-      "selection_reason": "any_author_fallback",
-      "size_bytes": 9033986,
-      "optimized": true,
-      "excluded_large": false,
-      "download_status": "downloaded",
-      "attachment_id": "1355851207217778808"
-    }
-  ],
+  "media": [],
   "status": {
-    "has_preview": true,
-    "needs_media_review": false,
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
     "needs_author_review": false,
     "flags": [
-      "media_fallback_any_author"
+      "media_fallback_any_author",
+      "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "prism-1355903733090750595",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:25:47+00:00",
-    "description": "Class-based PvPvE combat system that damages players on hit events, triggers death emotes with freeze effects, teleports defeated players to configurable respawn locations, heals survivors over time, and renders floating damage numbers as billboard UI text on clients.",
+    "generated_at": "2026-02-21T23:47:37+00:00",
+    "description": "Class-based PvPvE combat system that damages players on hit events, plays death emotes, teleports dead players to configurable respawn locations, and heals survivors over time. Renders floating damage numbers as billboard UI text on clients and syncs combat state across server and clients.",
     "feature_tags": [
       "combat",
       "animation",

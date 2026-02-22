@@ -1,0 +1,76 @@
+{
+  "app_id": "beacon-dev-1336541746472943626",
+  "app_slug": "beacon-dev",
+  "app_name": "beacon-dev",
+  "source": {
+    "hyp_filename": "beacon-dev.hyp",
+    "discord_attachment_id": "1336541746141855837",
+    "discord_message_id": "1336541746472943626",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-05T03:39:44.104Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1336541746141855837/beacon-dev.hyp?ex=69988040&is=69972ec0&hm=ffe8a28622b7dda9f5511c59e4c317819555125c52deb5a0f1b3977bf94c8f21&"
+  },
+  "author": {
+    "display_name": "m\u2082",
+    "discord_user_id": "735949862692061246",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/1336541356172120106_image.png",
+    "media_type": ".png",
+    "selection_reason": "same_author_nearby",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/1336541356172120106_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": -2,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 70856,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1336541356172120106"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "beacon-dev-1336541746472943626",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:43:03+00:00",
+    "description": "Development beacon app that defines configurable parameters (props) for in-world placement. Shared as a debug test to troubleshoot missing UI parameter fields, likely renders a 3D model with custom property tags in the editor panel.",
+    "feature_tags": [
+      "ui",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

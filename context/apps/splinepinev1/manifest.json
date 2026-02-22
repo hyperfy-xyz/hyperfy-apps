@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udf06\u2502share",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-03-04T15:30:42.583Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/999870741069692958/1346505141418725539/SplinePineV1.hyp?ex=697982e2&is=69783162&hm=0b0623b85e1e56d8f7e875e48e944809ce4baaa92352f7eb832e7f08917a8691&"
+    "discord_url": "https://cdn.discordapp.com/attachments/999870741069692958/1346505141418725539/SplinePineV1.hyp?ex=69987e22&is=69972ca2&hm=40f40c341dd3540b77d1a0791b65698973dae7b0c8924a2ee10eff3171813618&"
   },
   "author": {
     "display_name": "Gert-Jan Akerboom",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/SplinePineV1.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/splinepinev1/m1_splinepine0001-1000.mp4",
+    "primary_media_path": "catalog/media/1346505116660006956_splinepine0001-1000.mp4",
     "media_type": ".mp4",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/splinepinev1/m1_splinepine0001-1000.mp4",
+      "catalog_path": "catalog/media/1346505116660006956_splinepine0001-1000.mp4",
       "original_filename": "splinepine0001-1000.mp4",
       "content_type": "video/mp4",
       "relative_index": -1,
@@ -51,18 +51,19 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "splinepinev1-1346505141473382451",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:28:58+00:00",
-    "description": "Spawns 30 cloned pine-part meshes along a sine-curve spline, scaling each piece smaller toward the top to procedurally generate a curved pine tree from a single lightweight 50kb GLB model. Randomizes global scale and Y-rotation on each load for natural variation.",
+    "generated_at": "2026-02-21T23:49:09+00:00",
+    "description": "Spawns 30 cloned pine-part meshes along a sine-curve spline, scaling each piece smaller toward the top to form a procedural pine tree. Applies random global and per-clone Y rotations and a randomized overall scale using a lightweight 50kb GLB model.",
     "feature_tags": [
       "3d-model",
       "environment"

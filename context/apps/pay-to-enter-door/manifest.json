@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-03-11T21:08:41.943Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1349126913909588099/PAY_TO_ENTER_DOOR.hyp?ex=69792959&is=6977d7d9&hm=5c26bf6b9896971399b3fe53b2e96bffc4a944a19b9364f9dc6dfcf43097826f&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1349126913909588099/PAY_TO_ENTER_DOOR.hyp?ex=6998cd59&is=69977bd9&hm=985d811ebeee54bd7832b570f5e3462b67fe38cdb1f24528369eb52a64943f3f&"
   },
   "author": {
     "display_name": "peezy",
@@ -29,28 +29,29 @@
     "hyp_summary_path": "context/hyp_summaries/PAY_TO_ENTER_DOOR.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/pay-to-enter-door/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "pay-to-enter-door-1349126914333478954",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:25:05+00:00",
-    "description": "Animated door that triggers open after a Solana SPL token payment. Supports sliding and swinging modes with configurable direction, distance, and swing angle. Renders a billboard UI panel showing the token price, checks wallet balance, and auto-closes the door after a timer expires.",
+    "generated_at": "2026-02-21T23:47:17+00:00",
+    "description": "Animated door that triggers open after a Solana SPL token payment. Supports sliding and swinging modes with configurable direction, distance, and swing angle. Displays a billboard UI panel showing the token price, checks the player's wallet balance, and auto-closes after a timer.",
     "feature_tags": [
       "ui",
       "animation",

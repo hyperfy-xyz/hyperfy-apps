@@ -1,15 +1,15 @@
 {
-  "app_id": "camera-manager-1352519146201419816",
+  "app_id": "camera-manager-1381482043308904478",
   "app_slug": "camera-manager",
   "app_name": "CameraManager",
   "source": {
     "hyp_filename": "CameraManager.hyp",
-    "discord_attachment_id": "1352519145232535602",
-    "discord_message_id": "1352519146201419816",
+    "discord_attachment_id": "1381482042876755998",
+    "discord_message_id": "1381482043308904478",
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
-    "discord_timestamp": "2025-03-21T05:48:13.045Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1352519145232535602/CameraManager.hyp?ex=6979a31c&is=6978519c&hm=89bf9888b302106705cf2df26f971ce413e275ef70c2ce7fe675fd54b14a2642&"
+    "discord_timestamp": "2025-06-09T03:56:25.820Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1381482042876755998/CameraManager.hyp?ex=69988429&is=699732a9&hm=6a46f16328ea89cccf599d39f26949decd205f4561db825d66552ec2265028f8&"
   },
   "author": {
     "display_name": "Shiffty",
@@ -18,8 +18,8 @@
     "evidence": "discord"
   },
   "description": {
-    "short": "I found myself writing camera code a lot so I pulled everything out into a Camera Manager app. Still fresh but feel free to try it out and use at will.\n\nControls for the test rig:\nC - change camera mode\nO - change object target\nZ - camera shake",
-    "raw_message_content": "I found myself writing camera code a lot so I pulled everything out into a Camera Manager app. Still fresh but feel free to try it out and use at will.\n\nControls for the test rig:\nC - change camera mode\nO - change object target\nZ - camera shake",
+    "short": "Movement is now buttery and configurable too",
+    "raw_message_content": "Movement is now buttery and configurable too",
     "summary_excerpt": "CameraManager.hyp",
     "source_priority_used": "discord_message"
   },
@@ -29,43 +29,46 @@
     "hyp_summary_path": "context/hyp_summaries/CameraManager.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/camera-manager/p0_CameraManagerTest.mp4",
-    "media_type": ".mp4",
-    "selection_reason": "same_message",
-    "is_fallback_any_author": false
+    "primary_media_path": "catalog/media/1381551736384131132_image.png",
+    "media_type": ".png",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/camera-manager/p0_CameraManagerTest.mp4",
-      "original_filename": "CameraManagerTest.mp4",
-      "content_type": "video/mp4",
-      "relative_index": 0,
-      "same_author": true,
-      "selection_reason": "same_message",
-      "size_bytes": 13321289,
+      "catalog_path": "catalog/media/1381551736384131132_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": 2,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 1200697,
       "optimized": true,
       "excluded_large": false,
       "download_status": "downloaded",
-      "attachment_id": "1352519144033222696"
+      "attachment_id": "1381551736384131132"
     }
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
-    "flags": [],
+    "flags": [
+      "media_fallback_any_author"
+    ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
-    "app_id": "camera-manager-1352519146201419816",
+    "app_id": "camera-manager-1381482043308904478",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:18:56+00:00",
-    "description": "Reusable camera management system that switches between follow, orbit, and static modes, triggers smooth transitions between camera states, and applies configurable screen shake effects. Listens for world events like camera:follow and camera:shake to control camera position and rotation with damping",
+    "generated_at": "2026-02-21T23:43:43+00:00",
+    "description": "Reusable camera management system that controls follow, static, orbit, and shake modes with smooth damped transitions. Listens for world events like camera:follow and camera:shake to switch states, and animates the camera position and rotation each frame using configurable damping and lerp factors.",
     "feature_tags": [
       "camera",
-      "interaction"
+      "animation"
     ],
     "interaction_modes": [
       "passive",

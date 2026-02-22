@@ -1,0 +1,79 @@
+{
+  "app_id": "vibe-1343835740961902633",
+  "app_slug": "vibe",
+  "app_name": "vibe",
+  "source": {
+    "hyp_filename": "vibe.hyp",
+    "discord_attachment_id": "1343835740575895637",
+    "discord_message_id": "1343835740961902633",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-25T06:43:27.906Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1343835740575895637/vibe.hyp?ex=6998ab4f&is=699759cf&hm=2050930c886d617142283f749e9dca913be1f2c49addac66beabb7ed94fcd90b&"
+  },
+  "author": {
+    "display_name": "Shiffty",
+    "discord_user_id": "466331582458888192",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "I almost one shot this while vibe coding tonight... just had to fix one line, it was trying to capture the mouse input...\n\n\"Let's create a new hyperscript app. When the player presses the O key, 20 spawned Cubes should rise up out of the ground in a circle around the player and start to orbit the player randomly. Left click should then shoot all of the cubes in the relative direction of the camera. The cube node is in the model and is named Cube. Everything should be configurable.\"",
+    "raw_message_content": "I almost one shot this while vibe coding tonight... just had to fix one line, it was trying to capture the mouse input...\n\n\"Let's create a new hyperscript app. When the player presses the O key, 20 spawned Cubes should rise up out of the ground in a circle around the player and start to orbit the player randomly. Left click should then shoot all of the cubes in the relative direction of the camera. The cube node is in the model and is named Cube. Everything should be configurable.\"",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/1343835740106395709_vibe.mp4",
+    "media_type": ".mp4",
+    "selection_reason": "same_message",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/1343835740106395709_vibe.mp4",
+      "original_filename": "vibe.mp4",
+      "content_type": "video/mp4",
+      "relative_index": 0,
+      "same_author": true,
+      "selection_reason": "same_message",
+      "size_bytes": 3036378,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1343835740106395709"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "vibe-1343835740961902633",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:49:55+00:00",
+    "description": "Spawns 20 cube nodes in a circle around the player when pressing O, animates them orbiting randomly, then shoots all cubes in the camera's forward direction on left click. Configurable cube count and behavior.",
+    "feature_tags": [
+      "animation",
+      "interaction",
+      "camera",
+      "physics",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

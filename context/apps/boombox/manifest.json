@@ -9,7 +9,7 @@
     "discord_channel": "\u26a1\u2502general",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2026-01-09T19:36:41.481Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/958209074045026327/1459269670656933969/Boombox.hyp?ex=6979bc89&is=69786b09&hm=29000bd732455b6eab7dcfc8311b6f3cf4c00bea4998ae612b2743116f39c6db&"
+    "discord_url": "https://cdn.discordapp.com/attachments/958209074045026327/1459269670656933969/Boombox.hyp?ex=6998b7c9&is=69976649&hm=696a73edf0506cf996632064b026f800cf02d164992ba402e2108a664c98ee44&"
   },
   "author": {
     "display_name": "Dhin",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Boombox.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/boombox/m5_image.png",
+    "primary_media_path": "catalog/media/1459193544106574072_image.png",
     "media_type": ".png",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/boombox/m5_image.png",
+      "catalog_path": "catalog/media/1459193544106574072_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": -5,
@@ -51,6 +51,7 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
@@ -58,13 +59,13 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "boombox-1459269670980030535",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:17:01+00:00",
-    "description": "Renders a detailed old-school boombox built from primitive shapes (speakers, cassette deck, knobs, antenna) and plays looping spatial audio with configurable volume, distance, and rolloff. Syncs play/pause state between server and clients via networked events, toggled by a clickable action button wi",
+    "generated_at": "2026-02-21T23:43:13+00:00",
+    "description": "Renders an old-school boombox built from primitive shapes (speakers, cassette deck, knobs, antenna) and plays looping spatial audio with configurable volume, distance, and rolloff. A clickable play/pause button syncs playback state between server and clients, toggling an emissive LED indicator.",
     "feature_tags": [
       "audio",
       "interaction",

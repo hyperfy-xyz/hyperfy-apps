@@ -1,0 +1,66 @@
+{
+  "app_id": "emotes-1397383077948428288",
+  "app_slug": "emotes",
+  "app_name": "Emotes",
+  "source": {
+    "hyp_filename": "Emotes.hyp",
+    "discord_attachment_id": "1397383077621141666",
+    "discord_message_id": "1397383077948428288",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-07-23T01:01:27.905Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1397383077621141666/Emotes.hyp?ex=699903e7&is=6997b267&hm=1e62c9a0d30802022b2aeee69e58a081f1b507650f3ed69b24e1503731b9754a&"
+  },
+  "author": {
+    "display_name": "ash",
+    "discord_user_id": "179546010303856640",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": "v2/emotes",
+    "v2_json_path": "v2/emotes/Emotes.json",
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "emotes-1397383077948428288",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:44:44+00:00",
+    "description": "Renders a circular emote wheel UI on screen, triggered by the B key or a button click. Players select from up to 6 configurable dance emotes (e.g. Snake, Hip Hop, Gagnam) arranged in a radial layout, which applies the chosen emote animation to the player avatar.",
+    "feature_tags": [
+      "ui",
+      "animation",
+      "interaction",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "medium",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

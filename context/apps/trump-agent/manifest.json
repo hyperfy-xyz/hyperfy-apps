@@ -1,0 +1,65 @@
+{
+  "app_id": "trump-agent-1336753776610246819",
+  "app_slug": "trump-agent",
+  "app_name": "trump-agent",
+  "source": {
+    "hyp_filename": "trump-agent.hyp",
+    "discord_attachment_id": "1336753776064725002",
+    "discord_message_id": "1336753776610246819",
+    "discord_channel": "\ud83e\udd16\u2502agents",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-05T17:42:16.028Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1330373197203505185/1336753776064725002/trump-agent.hyp?ex=69989cf7&is=69974b77&hm=0236942b545de1b696808ff62b12630c017693243b3fedbc902ac39da3a7160f&"
+  },
+  "author": {
+    "display_name": "Saori",
+    "discord_user_id": "1099579050378399806",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "trump-agent-1336753776610246819",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:49:40+00:00",
+    "description": "Spawns a Trump-themed AI agent NPC that connects to an external Eliza server to handle conversational interactions with players in the world. Requires a configured Eliza endpoint URL to process and respond to chat messages.",
+    "feature_tags": [
+      "npc",
+      "interaction",
+      "multiplayer"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

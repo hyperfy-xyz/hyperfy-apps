@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-03-28T06:37:36.279Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1350129252976168992/1355068289667301427/Butterfly_Swarm_V6_Hyperfly_edition2.hyp?ex=697905f0&is=6977b470&hm=7ee1dae677ab449af2b815ad35b213e9a5a40ef2fe1023b37f6620a996c3fc10&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1350129252976168992/1355068289667301427/Butterfly_Swarm_V6_Hyperfly_edition2.hyp?ex=6998a9f0&is=69975870&hm=e15f3ecf3bc0de05c3ce256328416680352b502f95eda687f01ff6fa8fed34d9&"
   },
   "author": {
     "display_name": "Gert-Jan Akerboom",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Butterfly_Swarm_V6_Hyperfly_edition2.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/butterfly-swarm-v6-hyperfly-edition2/p2_1092aa12-4c83-4fd9-bd55-6704eea2f06e.png",
+    "primary_media_path": "catalog/media/1355093782277787708_1092aa12-4c83-4fd9-bd55-6704eea2f06e.png",
     "media_type": ".png",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/butterfly-swarm-v6-hyperfly-edition2/p2_1092aa12-4c83-4fd9-bd55-6704eea2f06e.png",
+      "catalog_path": "catalog/media/1355093782277787708_1092aa12-4c83-4fd9-bd55-6704eea2f06e.png",
       "original_filename": "1092aa12-4c83-4fd9-bd55-6704eea2f06e.png",
       "content_type": "image/png",
       "relative_index": 2,
@@ -51,22 +51,23 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "butterfly-swarm-v6-hyperfly-edition2-1355068289964970128",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:18:34+00:00",
-    "description": "Spawns up to 5000 butterfly clones with randomized scale, flap speed, and flight paths across a configurable 3D area. Animates wing flapping and drifting movement each frame using cloned GLB wing nodes with emissive cyan materials inside group containers.",
+    "generated_at": "2026-02-22T00:30:34+00:00",
+    "description": "Spawns up to 5000 butterfly clones with emissive cyan materials across a configurable 3D area. Animates wing flapping and drifting movement per frame using randomized speed, scale, and rotation offsets for each butterfly group node.",
     "feature_tags": [
       "animation",
-      "environment",
       "3d-model",
+      "environment",
       "ui"
     ],
     "interaction_modes": [

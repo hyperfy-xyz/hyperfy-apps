@@ -1,0 +1,65 @@
+{
+  "app_id": "hexafloor-v0-1338873477914038367",
+  "app_slug": "hexafloor-v0",
+  "app_name": "HexaFloor-v0",
+  "source": {
+    "hyp_filename": "HexaFloor-v0.hyp",
+    "discord_attachment_id": "1338873477947457576",
+    "discord_message_id": "1338873477914038367",
+    "discord_channel": "\ud83e\uddca\u25023d-design",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-11T14:05:12.201Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1031058655581323324/1338873477947457576/HexaFloor-v0.hyp?ex=699912d8&is=6997c158&hm=a977ba89d36ab48877d07242653abfc2b3af7f1ad9f6ebd3720dbbcfcb6c62b3&"
+  },
+  "author": {
+    "display_name": "maximus",
+    "discord_user_id": "793486941349216288",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "thanks for sharing, I took a few pieces from this to see if I can merge it with the ash hexagon app and created this mutant of an app \ud83d\ude04 \n\nI'll figure out how the controls and colors work in the future \ud83d\ude05 \n\nVideo = https://discord.com/channels/958209073277456457/1031058655581323324/1338863597832638487",
+    "raw_message_content": "thanks for sharing, I took a few pieces from this to see if I can merge it with the ash hexagon app and created this mutant of an app \ud83d\ude04 \n\nI'll figure out how the controls and colors work in the future \ud83d\ude05 \n\nVideo = https://discord.com/channels/958209073277456457/1031058655581323324/1338863597832638487",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "hexafloor-v0-1338873477914038367",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:45:39+00:00",
+    "description": "Renders a hexagonal floor tile grid as a 3D model, merging pieces from an existing hexagon app. Generates tiled hex geometry for use as a modular environment building block in virtual worlds.",
+    "feature_tags": [
+      "3d-model",
+      "environment",
+      "building"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

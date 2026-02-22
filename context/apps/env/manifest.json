@@ -1,0 +1,77 @@
+{
+  "app_id": "env-1403259060618530931",
+  "app_slug": "env",
+  "app_name": "env",
+  "source": {
+    "hyp_filename": "env.hyp",
+    "discord_attachment_id": "1403259060492566538",
+    "discord_message_id": "1403259060618530931",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-08-08T06:10:31.344Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1403259060492566538/env.hyp?ex=6998a397&is=69975217&hm=bd7463c12ae85cefb43bb202d251a37dc225e0fb03ea948f98739b69fb074552&"
+  },
+  "author": {
+    "display_name": "peezy",
+    "discord_user_id": "169825031314997249",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "'blow my mind' of gpt5 in cursor",
+    "raw_message_content": "'blow my mind' of gpt5 in cursor",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/1403263941286821939_aaaaaa_-_Made_with_Clipchamp.mp4",
+    "media_type": ".mp4",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/1403263941286821939_aaaaaa_-_Made_with_Clipchamp.mp4",
+      "original_filename": "aaaaaa_-_Made_with_Clipchamp.mp4",
+      "content_type": "video/mp4",
+      "relative_index": 3,
+      "same_author": true,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 2098139,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1403263941286821939"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "env-1403259060618530931",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:44:48+00:00",
+    "description": "Generates a procedural environment scene that renders complex geometry, likely spawning circular structures. Discord context suggests it triggers heavy computation with a possible memory leak, taxing lower-end hardware.",
+    "feature_tags": [
+      "environment"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "heavy",
+    "script_complexity": "high",
+    "networking_profile": "none"
+  }
+}

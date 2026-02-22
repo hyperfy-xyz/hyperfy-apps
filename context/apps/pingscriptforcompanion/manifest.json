@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-03-25T19:16:23.393Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1354172080849162445/PingScriptFORcompanion.hyp?ex=69790f07&is=6977bd87&hm=b25a6e777dcf2f40601dfafe0caecb74798e04dea31e2a9443920fbcc8eaa16b&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1354172080849162445/PingScriptFORcompanion.hyp?ex=6998b307&is=69976187&hm=fd8f32c0daa583f433feb2101e5d8960986fcb16293613397c0f47b8ac0ff71f&"
   },
   "author": {
     "display_name": "~/drdoge.eth",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/PingScriptFORcompanion.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/companion-v8/m1_updated_companion.mp4",
+    "primary_media_path": "catalog/media/1354172022875361411_updated_companion.mp4",
     "media_type": ".mp4",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/companion-v8/m1_updated_companion.mp4",
+      "catalog_path": "catalog/media/1354172022875361411_updated_companion.mp4",
       "original_filename": "updated_companion.mp4",
       "content_type": "video/mp4",
       "relative_index": -1,
@@ -51,18 +51,19 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "pingscriptforcompanion-1354172080924397802",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:25:23+00:00",
-    "description": "Responds to ping events from a companion or minimap system by calculating distance via Math.hypot and emitting pong events with the object's configurable display name, type, and position. Attach to any 3D model to make it scannable as a landmark.",
+    "generated_at": "2026-02-21T23:47:24+00:00",
+    "description": "Listens for ping events from a companion or minimap system and emits pong responses containing the object's configurable display name, type, and position. Attach this script to any world object to make it scannable and locatable by companion or HUD/compass apps.",
     "feature_tags": [
       "interaction",
       "ui",
@@ -72,7 +73,7 @@
       "passive",
       "networked"
     ],
-    "asset_profile": "medium",
+    "asset_profile": "heavy",
     "script_complexity": "low",
     "networking_profile": "events"
   }

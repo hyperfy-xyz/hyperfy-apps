@@ -1,0 +1,78 @@
+{
+  "app_id": "launchparty-1343804645457530881",
+  "app_slug": "launchparty",
+  "app_name": "LaunchParty",
+  "source": {
+    "hyp_filename": "LaunchParty.hyp",
+    "discord_attachment_id": "1343804645411258473",
+    "discord_message_id": "1343804645457530881",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-25T04:39:54.160Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1343804645411258473/LaunchParty.hyp?ex=69988e5a&is=69973cda&hm=78df6d6988a8fe569fbcf2160eacd26936fad66a82b985f51b74fed6ca1e420f&"
+  },
+  "author": {
+    "display_name": "Shiffty",
+    "discord_user_id": "466331582458888192",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/1343802903961276489_image.png",
+    "media_type": ".png",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/1343802903961276489_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": -4,
+      "same_author": true,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 42635,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1343802903961276489"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "launchparty-1343804645457530881",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:46:24+00:00",
+    "description": "A launch party themed app that renders a celebratory 3D scene. Evidence is minimal due to missing source files and .hyp asset, but the name and positive Discord reactions suggest it spawns festive environment elements for a party or event setting.",
+    "feature_tags": [
+      "environment",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

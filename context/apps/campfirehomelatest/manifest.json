@@ -1,0 +1,78 @@
+{
+  "app_id": "campfirehomelatest-1398393660776910949",
+  "app_slug": "campfirehomelatest",
+  "app_name": "CampfireHomeLATEST",
+  "source": {
+    "hyp_filename": "CampfireHomeLATEST.hyp",
+    "discord_attachment_id": "1398393660432715836",
+    "discord_message_id": "1398393660776910949",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-07-25T19:57:09.627Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1398393660432715836/CampfireHomeLATEST.hyp?ex=6998bc95&is=69976b15&hm=2e330fff1636253f43923e3acb2ce32890650fbdd82c5e8182e3ac113b868ffb&"
+  },
+  "author": {
+    "display_name": "~/drdoge.eth",
+    "discord_user_id": "357905702926286858",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/1398103094063272057_2025-07-24_20-40-27.mp4",
+    "media_type": ".mp4",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/1398103094063272057_2025-07-24_20-40-27.mp4",
+      "original_filename": "2025-07-24_20-40-27.mp4",
+      "content_type": "video/mp4",
+      "relative_index": 1,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 1974864,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1398103094063272057"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "campfirehomelatest-1398393660776910949",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:43:50+00:00",
+    "description": "Renders a campfire home environment scene as a 3D model, likely placing a decorative campfire setting into a Hyperfy world. No script code is available, so behavior is inferred from the app name and context alone.",
+    "feature_tags": [
+      "environment",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "medium",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

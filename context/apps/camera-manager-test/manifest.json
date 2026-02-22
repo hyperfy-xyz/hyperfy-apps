@@ -1,15 +1,15 @@
 {
-  "app_id": "camera-manager-test-1352519146201419816",
+  "app_id": "camera-manager-test-1381373907885494483",
   "app_slug": "camera-manager-test",
   "app_name": "CameraManagerTest",
   "source": {
     "hyp_filename": "CameraManagerTest.hyp",
-    "discord_attachment_id": "1352519145761144832",
-    "discord_message_id": "1352519146201419816",
+    "discord_attachment_id": "1381373907571052726",
+    "discord_message_id": "1381373907885494483",
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
-    "discord_timestamp": "2025-03-21T05:48:13.045Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1352519145761144832/CameraManagerTest.hyp?ex=6979a31c&is=6978519c&hm=a53a4b6ab1a32cbdab87802c91460bb63f1f0116db9b30ffd713888fda1892c4&"
+    "discord_timestamp": "2025-06-08T20:46:44.326Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1381373907571052726/CameraManagerTest.hyp?ex=6998c834&is=699776b4&hm=d7049d879de1225a658a3365ec94df8523bc17614d299c58c27475f2a5caaac9&"
   },
   "author": {
     "display_name": "Shiffty",
@@ -18,8 +18,8 @@
     "evidence": "discord"
   },
   "description": {
-    "short": "I found myself writing camera code a lot so I pulled everything out into a Camera Manager app. Still fresh but feel free to try it out and use at will.\n\nControls for the test rig:\nC - change camera mode\nO - change object target\nZ - camera shake",
-    "raw_message_content": "I found myself writing camera code a lot so I pulled everything out into a Camera Manager app. Still fresh but feel free to try it out and use at will.\n\nControls for the test rig:\nC - change camera mode\nO - change object target\nZ - camera shake",
+    "short": "I've added a free cam mode with 6DOF (WASD, SHIFT, SPACE) and hold right mouse to rotate. All movement and rotations are smoothed but settings are still in code. I'll be moving them to app.configure in the next iteration. Feel free to try it out and let me know what else you want as far as features or exposed configs.",
+    "raw_message_content": "I've added a free cam mode with 6DOF (WASD, SHIFT, SPACE) and hold right mouse to rotate. All movement and rotations are smoothed but settings are still in code. I'll be moving them to app.configure in the next iteration. Feel free to try it out and let me know what else you want as far as features or exposed configs.",
     "summary_excerpt": "CameraManagerTest.hyp",
     "source_priority_used": "discord_message"
   },
@@ -29,40 +29,29 @@
     "hyp_summary_path": "context/hyp_summaries/CameraManagerTest.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/camera-manager/p0_CameraManagerTest.mp4",
-    "media_type": ".mp4",
-    "selection_reason": "same_message",
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
     "is_fallback_any_author": false
   },
-  "media": [
-    {
-      "catalog_path": "catalog/media/camera-manager/p0_CameraManagerTest.mp4",
-      "original_filename": "CameraManagerTest.mp4",
-      "content_type": "video/mp4",
-      "relative_index": 0,
-      "same_author": true,
-      "selection_reason": "same_message",
-      "size_bytes": 13321289,
-      "optimized": true,
-      "excluded_large": false,
-      "download_status": "downloaded",
-      "attachment_id": "1352519144033222696"
-    }
-  ],
+  "media": [],
   "status": {
-    "has_preview": true,
-    "needs_media_review": false,
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
     "needs_author_review": false,
-    "flags": [],
+    "flags": [
+      "no_media_found"
+    ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
-    "app_id": "camera-manager-test-1352519146201419816",
+    "app_id": "camera-manager-test-1381373907885494483",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:19:02+00:00",
-    "description": "Test rig that spawns animated cubes moving in circle, bounce, and figure-8 patterns, then cycles through follow, orbit, static, and default camera modes via keyboard input. Emits camera:follow, camera:orbit, camera:shake, and camera:reset events and renders a screen-space UI panel showing the active",
+    "generated_at": "2026-02-21T23:43:45+00:00",
+    "description": "Test rig that spawns animated cubes (orbiting, bouncing, figure-8) and cycles through camera modes (follow, orbit, static, default) via keyboard input. Emits camera:follow, camera:orbit, camera:shake, and camera:reset events. Renders a screen-space UI panel displaying the active mode and target cube",
     "feature_tags": [
       "camera",
       "ui",

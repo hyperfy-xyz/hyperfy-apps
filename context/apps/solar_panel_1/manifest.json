@@ -1,0 +1,77 @@
+{
+  "app_id": "solar_panel_1-1336918644894077061",
+  "app_slug": "solar_panel_1",
+  "app_name": "Solar_Panel_1",
+  "source": {
+    "hyp_filename": "Solar_Panel_1.hyp",
+    "discord_attachment_id": "1336918644558397542",
+    "discord_message_id": "1336918644894077061",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-06T04:37:23.690Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1336918644558397542/Solar_Panel_1.hyp?ex=69988dc3&is=69973c43&hm=7d3d10e46ef0878544920f59933dfdd38f331f3cce4458eaf41c7f765700afd8&"
+  },
+  "author": {
+    "display_name": "ash",
+    "discord_user_id": "179546010303856640",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/1336918644302549042_image.png",
+    "media_type": ".png",
+    "selection_reason": "same_message",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/1336918644302549042_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": 0,
+      "same_author": true,
+      "selection_reason": "same_message",
+      "size_bytes": 275296,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1336918644302549042"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "solar_panel_1-1336918644894077061",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:48:57+00:00",
+    "description": "Renders a static solar panel 3D model as an environment prop. The .hyp package contains the model asset but no script logic is present, serving as a placeable decorative object for world-building scenes.",
+    "feature_tags": [
+      "3d-model",
+      "environment",
+      "building"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

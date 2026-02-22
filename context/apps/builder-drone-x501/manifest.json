@@ -1,15 +1,15 @@
 {
-  "app_id": "builder-drone-x501-1356441740357406801",
+  "app_id": "builder-drone-x501-1356755805017215098",
   "app_slug": "builder-drone-x501",
   "app_name": "Builder_Drone_X501",
   "source": {
     "hyp_filename": "Builder_Drone_X501.hyp",
-    "discord_attachment_id": "1356441739883319408",
-    "discord_message_id": "1356441740357406801",
-    "discord_channel": "\u26a1\u2502general",
+    "discord_attachment_id": "1356755804694515833",
+    "discord_message_id": "1356755805017215098",
+    "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
-    "discord_timestamp": "2025-04-01T01:35:12.370Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/958209074045026327/1356441739883319408/Builder_Drone_X501.hyp?ex=697967d0&is=69781650&hm=b7acedf7a94fea7aa6a0a38882b83faf7132f67fb98b7cf5a82e057cb06c9058&"
+    "discord_timestamp": "2025-04-01T22:23:11.220Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1356755804694515833/Builder_Drone_X501.hyp?ex=6998decf&is=69978d4f&hm=093cbeac57df0c678cddbfdb68034bbc0e04dd8112f409823f19403fb0f88146&"
   },
   "author": {
     "display_name": "ash",
@@ -18,8 +18,8 @@
     "evidence": "discord"
   },
   "description": {
-    "short": "drop this in your world and you can build in first person flying mode.",
-    "raw_message_content": "drop this in your world and you can build in first person flying mode.",
+    "short": "fixed an issue where if you refresh while flying the drone it doesn't release it",
+    "raw_message_content": "fixed an issue where if you refresh while flying the drone it doesn't release it",
     "summary_excerpt": "Builder Drone X501.hyp",
     "source_priority_used": "discord_message"
   },
@@ -29,47 +29,36 @@
     "hyp_summary_path": "context/hyp_summaries/Builder_Drone_X501.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/builder-drone-x501/p0_xyz-builder-drone-x501.mp4",
-    "media_type": ".mp4",
-    "selection_reason": "same_message",
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
     "is_fallback_any_author": false
   },
-  "media": [
-    {
-      "catalog_path": "catalog/media/builder-drone-x501/p0_xyz-builder-drone-x501.mp4",
-      "original_filename": "xyz-builder-drone-x501.mp4",
-      "content_type": "video/mp4",
-      "relative_index": 0,
-      "same_author": true,
-      "selection_reason": "same_message",
-      "size_bytes": 4190300,
-      "optimized": true,
-      "excluded_large": false,
-      "download_status": "downloaded",
-      "attachment_id": "1356441739052978196"
-    }
-  ],
+  "media": [],
   "status": {
-    "has_preview": true,
-    "needs_media_review": false,
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
     "needs_author_review": false,
-    "flags": [],
+    "flags": [
+      "no_media_found"
+    ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
-    "app_id": "builder-drone-x501-1356441740357406801",
+    "app_id": "builder-drone-x501-1356755805017215098",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:17:16+00:00",
-    "description": "Flyable builder drone that captures keyboard and mouse input to let a player pilot a 3D drone model in first-person camera mode. Animates spinning rotors, syncs position and quaternion across clients via networked state, and releases control on disconnect or keypress.",
+    "generated_at": "2026-02-21T23:43:18+00:00",
+    "description": "Multiplayer flyable drone with four spinning rotors that a player triggers via an action prompt. Captures WASD + mouse controls to steer a kinematic rigidbody through the world, syncs position and quaternion state across server and clients, and attaches the camera to the drone view node. Releases co",
     "feature_tags": [
+      "vehicle",
       "camera",
       "physics",
       "animation",
       "interaction",
-      "multiplayer",
-      "3d-model"
+      "multiplayer"
     ],
     "interaction_modes": [
       "action",

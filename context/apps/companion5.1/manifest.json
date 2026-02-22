@@ -1,0 +1,65 @@
+{
+  "app_id": "companion5.1-1344747314480156756",
+  "app_slug": "companion5.1",
+  "app_name": "Companion5.1",
+  "source": {
+    "hyp_filename": "Companion5.1.hyp",
+    "discord_attachment_id": "1344747314148802651",
+    "discord_message_id": "1344747314480156756",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-27T19:05:43.969Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1344747314148802651/Companion5.1.hyp?ex=6998b087&is=69975f07&hm=fecb79d25f3e0e1e52e14ba3890d35467ac91214ac6ded22ad25a1edffdabccc&"
+  },
+  "author": {
+    "display_name": "~/drdoge.eth",
+    "discord_user_id": "357905702926286858",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "anytime! here is the latest just incase anyone wants to mess around with it",
+    "raw_message_content": "anytime! here is the latest just incase anyone wants to mess around with it",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "companion5.1-1344747314480156756",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:44:04+00:00",
+    "description": "Companion NPC app that spawns an interactive AI-driven character capable of playing audio responses. Discord context suggests it streams voice audio from dedicated sources and handles user interaction within the world.",
+    "feature_tags": [
+      "npc",
+      "audio",
+      "interaction"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "medium",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

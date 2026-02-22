@@ -1,0 +1,65 @@
+{
+  "app_id": "neonsign-1369290539765338222",
+  "app_slug": "neonsign",
+  "app_name": "NeonSign",
+  "source": {
+    "hyp_filename": "NeonSign.hyp",
+    "discord_attachment_id": "1369290539392041000",
+    "discord_message_id": "1369290539765338222",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-05-06T12:31:44.868Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1369290539392041000/NeonSign.hyp?ex=6998fcf0&is=6997ab70&hm=fd2a2e765506cc98a6c165dbeacc03788823920dd8698028178a548a57f6cade&"
+  },
+  "author": {
+    "display_name": "hypShaman",
+    "discord_user_id": "297290503181959169",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "this one snaps to things",
+    "raw_message_content": "this one snaps to things",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "neonsign-1369290539765338222",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:47:01+00:00",
+    "description": "Renders a neon sign 3D model that snaps to nearby objects or surfaces using snap points, enabling easy placement and alignment within a world scene for decorative building purposes.",
+    "feature_tags": [
+      "3d-model",
+      "building",
+      "interaction"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

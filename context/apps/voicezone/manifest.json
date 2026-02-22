@@ -1,0 +1,65 @@
+{
+  "app_id": "voicezone-1397457232807071785",
+  "app_slug": "voicezone",
+  "app_name": "VoiceZone",
+  "source": {
+    "hyp_filename": "VoiceZone.hyp",
+    "discord_attachment_id": "1397457232509014027",
+    "discord_message_id": "1397457232807071785",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-07-23T05:56:07.801Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1397457232509014027/VoiceZone.hyp?ex=6998a037&is=69974eb7&hm=8659f4d29b3b33374da852cfc2400eb72ed3c37a260f30a06eb1cce6e657334b&"
+  },
+  "author": {
+    "display_name": "ash",
+    "discord_user_id": "179546010303856640",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "ok voice chat stuff is in dev, and here's an app that lets you modify voice level of players when they enter/leave the zone",
+    "raw_message_content": "ok voice chat stuff is in dev, and here's an app that lets you modify voice level of players when they enter/leave the zone",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "voicezone-1397457232807071785",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:50:01+00:00",
+    "description": "Defines a spatial trigger zone that modifies voice chat audio levels for players when they enter or leave the zone, enabling localized voice volume control for areas like stages or guild pods.",
+    "feature_tags": [
+      "audio",
+      "interaction",
+      "multiplayer"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-09-26T10:41:17.911Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1421084208608055326/Discord3.hyp?ex=69793f0d&is=6977ed8d&hm=9f98ac0b080bbfe40a48b2ad72564e85e329c7c7f2da3f7a1da2d9ab98fff5d2&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1421084208608055326/Discord3.hyp?ex=6998e30d&is=6997918d&hm=bb744e48b6bf8fee0852163a11272fe9682efec20e78592fb7bbe6564d1bfc07&"
   },
   "author": {
     "display_name": "Gert-Jan Akerboom",
@@ -29,34 +29,34 @@
     "hyp_summary_path": "context/hyp_summaries/Discord3.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/discord3/preview.png",
+    "media_type": ".png",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "discord3-1421084209073885294",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:20:01+00:00",
-    "description": "Broadcasts world events to a Discord webhook: sends player join/leave and chat messages, tracks session duration, and renders a rotating Discord logo with screen-space UI notifications. Supports excluding specific player names and toggling logo visibility.",
+    "generated_at": "2026-02-21T23:44:27+00:00",
+    "description": "Broadcasts world events to a Discord webhook. Tracks player enter/leave events and chat messages, sends them via fetch to a configured Discord channel. Displays a rotating 3D Discord logo and renders screen-space UI notifications when players join. Supports name exclusion lists and session duration ",
     "feature_tags": [
       "ui",
       "animation",
       "interaction",
-      "3d-model",
-      "multiplayer"
+      "3d-model"
     ],
     "interaction_modes": [
       "ui",

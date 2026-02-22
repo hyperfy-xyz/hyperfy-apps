@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-03-26T17:54:19.828Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1354513817542856807/JUKEBOX_UI.hyp?ex=6979a48b&is=6978530b&hm=fabf4f486a1df32598e8e226ede3e4260bdcfeda753bf700abcb605b8d381877&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1354513817542856807/JUKEBOX_UI.hyp?ex=69989fcb&is=69974e4b&hm=b34fc3e515dabe05117a6bb9281a2b9f0f49f54e4e89283da87f3ca8b384c190&"
   },
   "author": {
     "display_name": "~/drdoge.eth",
@@ -29,28 +29,29 @@
     "hyp_summary_path": "context/hyp_summaries/JUKEBOX_UI.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/jukebox-ui/preview.png",
+    "media_type": ".png",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "jukebox-ui-1354513817861750816",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:22:50+00:00",
-    "description": "Multi-track jukebox that plays up to five configurable audio tracks with spatial 3D sound. Renders an in-world UI panel displaying track name, playback status, elapsed time, and animated visualizer bars. Supports shuffle, loop, next/prev navigation, and configurable volume and accent color.",
+    "generated_at": "2026-02-21T23:46:16+00:00",
+    "description": "Multi-track jukebox that plays up to five configurable audio tracks with shuffle, loop, and volume controls. Renders a UI panel displaying track name, elapsed time, and animated visualizer bars. Supports spatial 3D or global audio modes with customizable accent color.",
     "feature_tags": [
       "audio",
       "ui",

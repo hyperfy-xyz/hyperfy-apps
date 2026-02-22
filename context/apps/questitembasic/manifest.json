@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-07-20T07:26:56.291Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1396392921221038231/QuestItemBasic.hyp?ex=69791180&is=6977c000&hm=c342d8667d05e52fe82076c4d419f3cb37a91ebe57e141d4aa579b2c0e41619d&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1396392921221038231/QuestItemBasic.hyp?ex=6998b580&is=69976400&hm=ead1cc504c485301adf668feb08c65b90c0254a8c199fc615c355ba3f7423058&"
   },
   "author": {
     "display_name": "0mka",
@@ -29,33 +29,34 @@
     "hyp_summary_path": "context/hyp_summaries/QuestItemBasic.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/questitembasic/preview.png",
+    "media_type": ".png",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "questitembasic-1396392921833410642",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:26:08+00:00",
-    "description": "Collectible quest item that animates a 3D model with configurable rotation and bobbing, triggers a rigidbody collider to detect player overlap, plays a collection sound on pickup, hides the mesh, and emits a custom event signal for use with a companion QuestItemUI app.",
+    "generated_at": "2026-02-21T23:47:50+00:00",
+    "description": "Collectible quest item that animates with configurable Y-axis rotation and sine-wave bobbing. A trigger collider detects player overlap, hides the mesh, plays a collection sound, and emits a custom event signal for companion UI or other apps to track pickup count.",
     "feature_tags": [
       "audio",
       "animation",
-      "physics",
       "interaction",
+      "physics",
       "3d-model"
     ],
     "interaction_modes": [

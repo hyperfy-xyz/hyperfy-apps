@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-04-21T23:22:44.602Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1364018549689159761/Solar_Panel.hyp?ex=697948c4&is=6977f744&hm=dfae7e4934dbd35b18ec0b1e70159450fb0892983613ca2c14fb7f0d18d3f924&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1364018549689159761/Solar_Panel.hyp?ex=6998ecc4&is=69979b44&hm=422ee94560d4596838644fd70caf1b0ffc501e2a9437bd5082fef941b2bab333&"
   },
   "author": {
     "display_name": "~/drdoge.eth",
@@ -29,32 +29,32 @@
     "hyp_summary_path": "context/hyp_summaries/Solar_Panel.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/solar-panel/preview.png",
+    "media_type": ".png",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "solar-panel-1364018550179631196",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:28:31+00:00",
-    "description": "A solar panel 3D model that controls the world sky node by configuring sun direction, intensity, HDR lighting, and sky texture. Calculates sun position by rotating a direction vector based on configurable hour and AM/PM period settings.",
+    "generated_at": "2026-02-21T23:48:55+00:00",
+    "description": "Solar panel 3D model that controls the world sky node by setting sun direction, intensity, sky texture, and HDR lighting. Calculates sun position from configurable hour and AM/PM period, rotating the sun vector around the X axis to simulate time of day.",
     "feature_tags": [
       "environment",
-      "3d-model",
-      "ui"
+      "3d-model"
     ],
     "interaction_modes": [
       "passive"

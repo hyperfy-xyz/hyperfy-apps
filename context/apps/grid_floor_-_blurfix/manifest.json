@@ -1,0 +1,102 @@
+{
+  "app_id": "grid_floor_-_blurfix-1346633688552706088",
+  "app_slug": "grid_floor_-_blurfix",
+  "app_name": "Grid_Floor_-_BlurFix",
+  "source": {
+    "hyp_filename": "Grid_Floor_-_BlurFix.hyp",
+    "discord_attachment_id": "1346633688238260307",
+    "discord_message_id": "1346633688552706088",
+    "discord_channel": "\ud83e\uddca\u25023d-design",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-05T00:01:30.595Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1031058655581323324/1346633688238260307/Grid_Floor_-_BlurFix.hyp?ex=6998f5da&is=6997a45a&hm=d4b317116f6482509fde352859763b94b4f6087c226f693f1f391a78399dfed4&"
+  },
+  "author": {
+    "display_name": "ash",
+    "discord_user_id": "179546010303856640",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/1346633633728958505_image.png",
+    "media_type": ".png",
+    "selection_reason": "same_author_nearby",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/1346633633728958505_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": -1,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 2276058,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1346633633728958505"
+    },
+    {
+      "catalog_path": "catalog/media/1346633635679178812_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": -1,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 2542665,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1346633635679178812"
+    },
+    {
+      "catalog_path": "catalog/media/1346633852977680494_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": 1,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 17549,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1346633852977680494"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "grid_floor_-_blurfix-1346633688552706088",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:45:25+00:00",
+    "description": "Renders a grid floor 3D model with corrected texture filtering switched from nearest to linear, eliminating blur artifacts. Designed to serve as a default ground plane for Hyperfy worlds.",
+    "feature_tags": [
+      "3d-model",
+      "environment"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

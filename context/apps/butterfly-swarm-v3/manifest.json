@@ -1,15 +1,15 @@
 {
-  "app_id": "butterfly-swarm-v3-1350145314677592157",
+  "app_id": "butterfly-swarm-v3-1350145491001802873",
   "app_slug": "butterfly-swarm-v3",
   "app_name": "Butterfly_Swarm_V3",
   "source": {
     "hyp_filename": "Butterfly_Swarm_V3.hyp",
-    "discord_attachment_id": "1350145314778120283",
-    "discord_message_id": "1350145314677592157",
+    "discord_attachment_id": "1350145490674782309",
+    "discord_message_id": "1350145491001802873",
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
-    "discord_timestamp": "2025-03-14T16:35:27.506Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1350145314778120283/Butterfly_Swarm_V3.hyp?ex=6979920f&is=6978408f&hm=e1cad969233304bc6b12f2ec95484ed0139fd2cdfc896a67f6fe1b12939e34d7&"
+    "discord_timestamp": "2025-03-14T16:36:09.545Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1350129252976168992/1350145490674782309/Butterfly_Swarm_V3.hyp?ex=69988d79&is=69973bf9&hm=0e29b7b86c48eab96292efdca2afba560f7c455305d5b6cf5272234d49e3c6d3&"
   },
   "author": {
     "display_name": "Gert-Jan Akerboom",
@@ -18,8 +18,8 @@
     "evidence": "discord"
   },
   "description": {
-    "short": "Butterfly swarm V3",
-    "raw_message_content": "Butterfly swarm V3",
+    "short": "the latest version",
+    "raw_message_content": "the latest version",
     "summary_excerpt": "Butterfly Swarm V3.hyp",
     "source_priority_used": "discord_message"
   },
@@ -29,17 +29,17 @@
     "hyp_summary_path": "context/hyp_summaries/Butterfly_Swarm_V3.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/butterfly-swarm-v3/m1_5000.png",
+    "primary_media_path": "catalog/media/1350130188687642774_5000.png",
     "media_type": ".png",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/butterfly-swarm-v3/m1_5000.png",
+      "catalog_path": "catalog/media/1350130188687642774_5000.png",
       "original_filename": "5000.png",
       "content_type": "image/png",
-      "relative_index": -1,
+      "relative_index": -2,
       "same_author": true,
       "selection_reason": "same_author_nearby",
       "size_bytes": 903875,
@@ -51,18 +51,19 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
-    "app_id": "butterfly-swarm-v3-1350145314677592157",
+    "app_id": "butterfly-swarm-v3-1350145491001802873",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:18:02+00:00",
-    "description": "Spawns up to 5000 butterfly clones from a GLB wing model and animates their wing-flapping and oscillatory flight paths each frame. A configurable UI panel exposes butterfly amount, random scale range, flap-speed range, and fly-speed range for tuning swarm behavior.",
+    "generated_at": "2026-02-21T23:43:23+00:00",
+    "description": "Spawns a configurable swarm of up to 5000 butterfly clones from a GLB wing model, then animates each butterfly with randomized sine-wave flapping, oscillatory flight paths, and drift offsets. A UI panel exposes controls for butterfly amount, scale range, flap speed, and fly speed.",
     "feature_tags": [
       "animation",
       "3d-model",

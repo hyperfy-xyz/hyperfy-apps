@@ -9,7 +9,7 @@
     "discord_channel": "\ud83e\uddca\u25023d-design",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-04-02T12:29:05.862Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1031058655581323324/1356968685037682848/dash.hyp?ex=69795851&is=697806d1&hm=131bd6893e315f0577add7ff4a7b5b5c7194fa8cd13a732b9ce8b094a84a8e44&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1031058655581323324/1356968685037682848/dash.hyp?ex=6998fc51&is=6997aad1&hm=508393fdcfbaac594a10dfd1532039e2fd04b0dac94057d2a4efacd8fdbedad9&"
   },
   "author": {
     "display_name": "peezy",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/dash.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/dash/m2_image.png",
+    "primary_media_path": "catalog/media/1356968361795256461_image.png",
     "media_type": ".png",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/dash/m2_image.png",
+      "catalog_path": "catalog/media/1356968361795256461_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": -2,
@@ -51,18 +51,19 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "dash-1356968685415301160",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:19:51+00:00",
-    "description": "Spammable dash ability that pushes the player forward in the camera direction when pressing F, triggers a charge emote animation for 0.4 seconds, and renders a configurable color-tinted 3D rom model with a UI label displaying the rom name.",
+    "generated_at": "2026-02-21T23:44:22+00:00",
+    "description": "Spammable dash ability that pushes the player forward when pressing F, triggers a charge emote animation for 0.4 seconds, and reads camera quaternion to compute dash direction. Renders a configurable color-tinted 3D model with a UI label displaying the rom name.",
     "feature_tags": [
       "animation",
       "ui",

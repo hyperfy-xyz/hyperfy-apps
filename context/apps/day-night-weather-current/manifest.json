@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-04-21T23:21:38.212Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1364018271384244294/DAY_NIGHT_WEATHER_CURRENT.hyp?ex=69794882&is=6977f702&hm=05c1dab8e2133bbe469ddebe3df8605a39b776437477753769f5fa15475e59bb&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1364018271384244294/DAY_NIGHT_WEATHER_CURRENT.hyp?ex=6998ec82&is=69979b02&hm=1c6985c85dad596b9596b91af70832b040559358a3f03430df6404aada5bdb38&"
   },
   "author": {
     "display_name": "~/drdoge.eth",
@@ -29,42 +29,30 @@
     "hyp_summary_path": "context/hyp_summaries/DAY_NIGHT_WEATHER_CURRENT.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/day-night-weather-current/m8_IMG_1182.png",
-    "media_type": ".png",
-    "selection_reason": "any_author_fallback",
-    "is_fallback_any_author": true
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
   },
-  "media": [
-    {
-      "catalog_path": "catalog/media/day-night-weather-current/m8_IMG_1182.png",
-      "original_filename": "IMG_1182.png",
-      "content_type": "image/jpeg",
-      "relative_index": -8,
-      "same_author": false,
-      "selection_reason": "any_author_fallback",
-      "size_bytes": 475224,
-      "optimized": true,
-      "excluded_large": false,
-      "download_status": "downloaded",
-      "attachment_id": "1363856635457441912"
-    }
-  ],
+  "media": [],
   "status": {
-    "has_preview": true,
-    "needs_media_review": false,
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
     "needs_author_review": false,
     "flags": [
-      "media_fallback_any_author"
+      "media_fallback_any_author",
+      "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "day-night-weather-current-1364018271719919686",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:19:57+00:00",
-    "description": "Solar panel controller that rotates the sun and sky through a real-time day/night cycle, spawns weather particle systems (rain, dust storms, lightning, fog, nuclear ash), and plays thunder and rain audio. Renders a Pip-Boy-style UI displaying current time and days passed.",
+    "generated_at": "2026-02-21T23:44:23+00:00",
+    "description": "Solar panel controller that rotates the sun and sky through a real-time day/night cycle, spawns weather particle effects (rain, dust storms, lightning, fog, ash), and plays thunder and rain audio. Renders a Pip-Boy-style UI displaying current time and days passed.",
     "feature_tags": [
       "particles",
       "audio",

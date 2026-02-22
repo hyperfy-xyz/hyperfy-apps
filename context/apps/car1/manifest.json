@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-03-23T02:38:43.612Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1353196234675851345/car1.hyp?ex=697976b3&is=69782533&hm=ce8c48e78dcd758990f45ddc87ba8f44c04159edf21b3ca0f7683d53c07b9d7f&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1353196234675851345/car1.hyp?ex=69991ab3&is=6997c933&hm=99c8e5849db3e3c09aef03b91f58d705d5488452ffb3a38976233a5f1042b87a&"
   },
   "author": {
     "display_name": "ash",
@@ -29,48 +29,35 @@
     "hyp_summary_path": "context/hyp_summaries/car1.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/car1/m6_susanequip.png",
-    "media_type": ".png",
-    "selection_reason": "any_author_fallback",
-    "is_fallback_any_author": true
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
   },
-  "media": [
-    {
-      "catalog_path": "catalog/media/car1/m6_susanequip.png",
-      "original_filename": "susanequip.png",
-      "content_type": "image/png",
-      "relative_index": -6,
-      "same_author": false,
-      "selection_reason": "any_author_fallback",
-      "size_bytes": 254566,
-      "optimized": true,
-      "excluded_large": false,
-      "download_status": "downloaded",
-      "attachment_id": "1353182907858026557"
-    }
-  ],
+  "media": [],
   "status": {
-    "has_preview": true,
-    "needs_media_review": false,
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
     "needs_author_review": false,
     "flags": [
-      "media_fallback_any_author"
+      "media_fallback_any_author",
+      "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "car1-1353196235074441290",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:19:07+00:00",
-    "description": "Client-side drivable car that simulates raycast suspension, steering, and acceleration forces per wheel during fixedUpdate. Players anchor into the vehicle body and control it with WASD keys, while tire hubs animate rotation and lateral grip using physics raycasts against the ground.",
+    "generated_at": "2026-02-21T23:43:52+00:00",
+    "description": "Client-side drivable car that simulates raycast suspension, steering, and acceleration forces per wheel. Players control the vehicle body with WASD keys, while spring dampers and anti-roll bars stabilize the rigidbody. Tire hubs animate rotation and compression based on ground raycasts.",
     "feature_tags": [
       "vehicle",
       "physics",
-      "animation",
-      "interaction",
-      "3d-model"
+      "3d-model",
+      "interaction"
     ],
     "interaction_modes": [
       "passive",

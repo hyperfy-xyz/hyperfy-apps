@@ -1,0 +1,65 @@
+{
+  "app_id": "quadduckhead_beadbeard-follows-1341472607253434389",
+  "app_slug": "quadduckhead_beadbeard-follows",
+  "app_name": "Quadduckhead_beadbeard-follows",
+  "source": {
+    "hyp_filename": "Quadduckhead_beadbeard-follows.hyp",
+    "discord_attachment_id": "1341472606821416970",
+    "discord_message_id": "1341472607253434389",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-18T18:13:12.925Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1341472606821416970/Quadduckhead_beadbeard-follows.hyp?ex=6998a438&is=699752b8&hm=311fed5d2d498378991f02c1c8bd5a994d434396eb5881db64d019faa2846fd7&"
+  },
+  "author": {
+    "display_name": "~/MayD524/Hyperfy",
+    "discord_user_id": "350830819423551488",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "<@1099579050378399806> I think you'll enjoy this",
+    "raw_message_content": "<@1099579050378399806> I think you'll enjoy this",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "quadduckhead_beadbeard-follows-1341472607253434389",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:47:49+00:00",
+    "description": "Spawns a duck-head 3D model that tracks and follows the local player around the world. Users can configure a follow target via a player ID property, enabling an NPC-like companion that moves with the player.",
+    "feature_tags": [
+      "npc",
+      "3d-model",
+      "interaction"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

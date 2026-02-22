@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-03-28T04:57:06.581Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1355042999339454464/rom2.hyp?ex=69799722&is=697845a2&hm=9d6ef52716590aacc5f1b7e3ead71df999aac72bb52dd93b676ef175fa21a33a&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1355042999339454464/rom2.hyp?ex=69989262&is=699740e2&hm=dd991c0b54a3b08f42a09ce56c9caa21c17b270f3897b3795bf4279c3089d341&"
   },
   "author": {
     "display_name": "general hyper",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/rom2.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/rom2/m3_image.png",
+    "primary_media_path": "catalog/media/1355020520176881846_image.png",
     "media_type": ".png",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/rom2/m3_image.png",
+      "catalog_path": "catalog/media/1355020520176881846_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": -3,
@@ -51,6 +51,7 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
@@ -58,13 +59,13 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "rom2-1355042999578660955",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:27:14+00:00",
-    "description": "Renders a configurable ROM cartridge 3D model with a UI text label displaying the rom name and adjusts material texture offsets to switch between seven color variants (Red, Orange, Yellow, Green, Blue, Indigo, Violet) via a dropdown prop.",
+    "generated_at": "2026-02-21T23:48:18+00:00",
+    "description": "Renders a configurable ROM cartridge 3D model with a UI text label displaying the rom name and adjusts mesh material texture offsets based on a color dropdown selection (Red, Orange, Yellow, Green, Blue, Indigo, Violet).",
     "feature_tags": [
       "ui",
       "3d-model"

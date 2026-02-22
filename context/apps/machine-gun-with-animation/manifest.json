@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-03-12T22:43:46.261Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1349513227486105630/Machine_Gun_With_Animation.hyp?ex=69793fa2&is=6977ee22&hm=24dde72192e255136f79463e0b2993e5e375b70afc1e81617dbfe61b588fc609&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1349513227486105630/Machine_Gun_With_Animation.hyp?ex=6998e3a2&is=69979222&hm=a96dd2a95813c9dee3cfbf9f6b3a182c36c3408c4d9296a9e15ece10efd9e5e4&"
   },
   "author": {
     "display_name": "Saori",
@@ -29,31 +29,32 @@
     "hyp_summary_path": "context/hyp_summaries/Machine_Gun_With_Animation.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/machine-gun-with-animation/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "machine-gun-with-animation-1349513227842879581",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:23:38+00:00",
-    "description": "Equippable machine gun weapon that overrides player locomotion animations with rifle-specific emotes for idle, walk, sprint, and directional movement. Players triggers a pick-up action, and the script syncs shooting and drop events across client and server via networked messages.",
+    "generated_at": "2026-02-21T23:46:39+00:00",
+    "description": "Machine gun weapon that overrides player locomotion animations with rifle-specific emotes for idle, walk, sprint, and directional movement. Players triggers a pick-up action to equip the 3D gun model, and fires shots via mouse input with a cooldown-based fire rate system.",
     "feature_tags": [
-      "combat",
       "animation",
+      "combat",
       "interaction",
       "3d-model",
       "multiplayer"

@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-02-12T06:32:35.128Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1339121960759721996/1339121963322310677/Loot-Ringed_Planet.hyp?ex=697904c3&is=6977b343&hm=3087098d5b41b554eed9f8d5478a4f7769e3ed16fc22c01a938274ce4e3484f4&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1339121960759721996/1339121963322310677/Loot-Ringed_Planet.hyp?ex=6998a8c3&is=69975743&hm=9ca4560c36e1ea67d1f186b4d4aceebc42d6a0835ee5b1aaf94ad7760292f448&"
   },
   "author": {
     "display_name": "maximus",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Loot-Ringed_Planet.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/health/p0_vt01.png",
+    "primary_media_path": "catalog/media/1339121961598455881_vt01.png",
     "media_type": ".png",
     "selection_reason": "same_message",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/health/p0_vt01.png",
+      "catalog_path": "catalog/media/1339121961598455881_vt01.png",
       "original_filename": "vt01.png",
       "content_type": "image/png",
       "relative_index": 0,
@@ -49,7 +49,7 @@
       "attachment_id": "1339121961598455881"
     },
     {
-      "catalog_path": "catalog/media/loot-ringed-planet/p0_vt02.png",
+      "catalog_path": "catalog/media/1339121962060087306_vt02.png",
       "original_filename": "vt02.png",
       "content_type": "image/png",
       "relative_index": 0,
@@ -62,7 +62,7 @@
       "attachment_id": "1339121962060087306"
     },
     {
-      "catalog_path": "catalog/media/loot-ringed-planet/p0_Rover_Ships_and_Loot_Planets_in_Hyperfy.mp4",
+      "catalog_path": "catalog/media/1339121966178762845_Rover_Ships_and_Loot_Planets_in_Hyperfy.mp4",
       "original_filename": "Rover_Ships_and_Loot_Planets_in_Hyperfy.mp4",
       "content_type": "video/mp4",
       "relative_index": 0,
@@ -77,18 +77,19 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "loot-ringed-planet-1339121960759721996",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:23:22+00:00",
-    "description": "Renders a rotating ringed planet GLB model that acts as a collectible loot item in a space trading sim. Animates continuous Y-axis rotation on update, listens for proximity-check events to trigger collection by a collectron, and emits item-detected and pong events for cross-app communication.",
+    "generated_at": "2026-02-21T23:46:33+00:00",
+    "description": "Renders a scaled ringed planet GLB model that rotates continuously via update loop. Responds to proximity-check and ping events to trigger loot collection, emitting item-detected and pong events for a space trading sim collectron system.",
     "feature_tags": [
       "3d-model",
       "animation",

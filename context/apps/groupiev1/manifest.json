@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-10-12T08:20:52.269Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1426847074653311006/GroupieV1.hyp?ex=68eeb0a4&is=68ed5f24&hm=af2efd49353b91279cee9dcb8afda0f0ec31c952cc946ee2f93225d6c3e74e33&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1426847074653311006/GroupieV1.hyp?ex=6998c224&is=699770a4&hm=1167ccae01b410751ba9510b9df0489de2ca97f198d4c5b733241b7204688b1a&"
   },
   "author": {
     "display_name": "b34k3r",
@@ -29,28 +29,29 @@
     "hyp_summary_path": "context/hyp_summaries/GroupieV1.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/groupiev1/preview.png",
+    "media_type": ".png",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "groupiev1-1426847075219275808",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:21:57+00:00",
-    "description": "Collectron NPC that patrols a configurable radius, detects nearby items, and follows players via chat commands. Animates idle, walk, and search states on a VRM avatar. Renders Pip-Boy-style UI bars tracking health and loot depletion over time, and responds to chat with status reports.",
+    "generated_at": "2026-02-21T23:45:30+00:00",
+    "description": "Collectron NPC that patrols a configurable radius, detects nearby items, and follows players via chat commands. Animates idle, walk, and search states on a VRM avatar. Renders a billboard UI with health and loot stat bars that deplete over time, and responds to chat with status reports.",
     "feature_tags": [
       "npc",
       "animation",

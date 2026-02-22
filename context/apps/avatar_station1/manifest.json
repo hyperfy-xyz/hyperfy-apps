@@ -1,0 +1,64 @@
+{
+  "app_id": "avatar_station1-1350205013628026921",
+  "app_slug": "avatar_station1",
+  "app_name": "Avatar_Station1",
+  "source": {
+    "hyp_filename": "Avatar_Station1.hyp",
+    "discord_attachment_id": "1350205013439414273",
+    "discord_message_id": "1350205013628026921",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-14T20:32:40.845Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1350205013439414273/Avatar_Station1.hyp?ex=6998c4e8&is=69977368&hm=4c70938ee875141e48a0946a9c75ae36741d60a50ebd3472620c8511c18f2603&"
+  },
+  "author": {
+    "display_name": "peezy",
+    "discord_user_id": "169825031314997249",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "here",
+    "raw_message_content": "here",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "avatar_station1-1350205013628026921",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:42:52+00:00",
+    "description": "Avatar swap station that allows players to interact with a 3D model station and switch their avatar. Shared as a working fix for a broken avatar swap app, this triggers an avatar change upon player interaction.",
+    "feature_tags": [
+      "interaction",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

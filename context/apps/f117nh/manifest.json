@@ -1,0 +1,91 @@
+{
+  "app_id": "f117nh-1345283957213630495",
+  "app_slug": "f117nh",
+  "app_name": "F117NH",
+  "source": {
+    "hyp_filename": "F117NH.hyp",
+    "discord_attachment_id": "1345283956987269181",
+    "discord_message_id": "1345283957213630495",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-01T06:38:09.567Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1345283956987269181/F117NH.hyp?ex=6998aa11&is=69975891&hm=b47b24f02d90b15ccca4309376907c490490a64d109d6256057975fe9f00a21b&"
+  },
+  "author": {
+    "display_name": "~/drdoge.eth",
+    "discord_user_id": "357905702926286858",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/1345283784353906791_takeoff.mp4",
+    "media_type": ".mp4",
+    "selection_reason": "same_author_nearby",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/1345283784353906791_takeoff.mp4",
+      "original_filename": "takeoff.mp4",
+      "content_type": "video/mp4",
+      "relative_index": -2,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 21407172,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1345283784353906791"
+    },
+    {
+      "catalog_path": "catalog/media/1345283789487865908_TestFlight2.mp4",
+      "original_filename": "TestFlight2.mp4",
+      "content_type": "video/mp4",
+      "relative_index": -2,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 21498015,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1345283789487865908"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "f117nh-1345283957213630495",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:44:51+00:00",
+    "description": "F-117 Nighthawk stealth aircraft model that renders a flyable vehicle with guns and camera perspective shifting, allowing players to pilot and fire weapons in a 3D environment.",
+    "feature_tags": [
+      "vehicle",
+      "combat",
+      "camera",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "medium",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

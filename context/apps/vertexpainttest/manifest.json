@@ -1,0 +1,76 @@
+{
+  "app_id": "vertexpainttest-1369241115215134750",
+  "app_slug": "vertexpainttest",
+  "app_name": "vertexPaintTest",
+  "source": {
+    "hyp_filename": "vertexPaintTest.hyp",
+    "discord_attachment_id": "1369241114745376809",
+    "discord_message_id": "1369241115215134750",
+    "discord_channel": "\ud83e\uddca\u25023d-design",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-05-06T09:15:21.137Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1031058655581323324/1369241114745376809/vertexPaintTest.hyp?ex=6998cee9&is=69977d69&hm=49bf8de7c63470164f616088ee21339d2a876debec60439fc83d36dbf7f54037&"
+  },
+  "author": {
+    "display_name": "hypShaman",
+    "discord_user_id": "297290503181959169",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "for some reason the `emission`  isn't using the `color attribute` ...\nso i guess a few more drawbacks than orginally thought. either way i still think this is brilliant for \nbackground / filler objects + it's a lot of fun painting with **ucupaint** feels like i'm in *photoshop*",
+    "raw_message_content": "for some reason the `emission`  isn't using the `color attribute` ...\nso i guess a few more drawbacks than orginally thought. either way i still think this is brilliant for \nbackground / filler objects + it's a lot of fun painting with **ucupaint** feels like i'm in *photoshop*",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/1369228013631442954_image.png",
+    "media_type": ".png",
+    "selection_reason": "same_author_nearby",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/1369228013631442954_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": -1,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 307153,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1369228013631442954"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "vertexpainttest-1369241115215134750",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:49:52+00:00",
+    "description": "Renders a vertex-painted 3D model created with ucupaint to test vertex color attribute support in Hyperfy, intended as a lightweight background or filler object for environment decoration.",
+    "feature_tags": [
+      "3d-model",
+      "environment"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

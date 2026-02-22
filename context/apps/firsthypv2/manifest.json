@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-04-23T14:12:12.783Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1364604780135186543/firstHYPv2.hyp?ex=6979707c&is=69781efc&hm=dac87070ed84dc989b11baf5dd1b6f61cda0aed990e7c17eb7a2fb40cea6ed52&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1364604780135186543/firstHYPv2.hyp?ex=6999147c&is=6997c2fc&hm=1284c291a346a1944976390aa47ff4fe6c48015e23fe702c633f481935f994cc&"
   },
   "author": {
     "display_name": "vox",
@@ -29,28 +29,29 @@
     "hyp_summary_path": "context/hyp_summaries/firstHYPv2.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/firsthypv2/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "firsthypv2-1364604780420272199",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:20:47+00:00",
-    "description": "Renders a room environment (ROOMERS4) with a GLB model and scrolls UV texture offsets on a mesh named UVSCROLL each frame, animating the Y-axis at 0.5 speed using material textureX/textureY properties for seamless looping.",
+    "generated_at": "2026-02-21T23:44:56+00:00",
+    "description": "Renders a room environment (ROOMERS4) with a GLB model and scrolls UV texture offsets on a mesh named UVSCROLL each frame, animating the Y-axis at 0.5 speed for seamless looping material movement on gold element plane textures.",
     "feature_tags": [
       "3d-model",
       "animation",

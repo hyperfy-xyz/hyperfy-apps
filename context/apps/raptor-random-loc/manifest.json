@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-04-24T12:51:55.532Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1364946963195232347/Raptor_random_loc.hyp?ex=69795dab&is=69780c2b&hm=fd0d1a995ee8e6d076b20dfa9235f3e46f0d18e75896835c3ddeb1dd31f064b9&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1364946963195232347/Raptor_random_loc.hyp?ex=699901ab&is=6997b02b&hm=4d8683058b8ab9a3a121b811fae4edb33782aa0d733d3efc8170ae5f1949cdc4&"
   },
   "author": {
     "display_name": "Gert-Jan Akerboom",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Raptor_random_loc.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/raptor-random-loc/p1_World_-_Google_Chrome_24.04.2025_14_53_08.png",
+    "primary_media_path": "catalog/media/1364947396399861770_World_-_Google_Chrome_24.04.2025_14_53_08.png",
     "media_type": ".png",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/raptor-random-loc/p1_World_-_Google_Chrome_24.04.2025_14_53_08.png",
+      "catalog_path": "catalog/media/1364947396399861770_World_-_Google_Chrome_24.04.2025_14_53_08.png",
       "original_filename": "World_-_Google_Chrome_24.04.2025_14_53_08.png",
       "content_type": "image/png",
       "relative_index": 1,
@@ -51,17 +51,18 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "raptor-random-loc-1364946963270991875",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:26:47+00:00",
+    "generated_at": "2026-02-21T23:48:00+00:00",
     "description": "Spawns an NPC raptor avatar that randomly transitions between walk, run, idle, and talk emote states. Each instance picks a unique random initial state and drifts direction with range-limiting logic. Renders a billboarded UI label displaying the controller's live world position and rotation coordina",
     "feature_tags": [
       "npc",
@@ -74,7 +75,7 @@
       "ui",
       "networked"
     ],
-    "asset_profile": "medium",
+    "asset_profile": "heavy",
     "script_complexity": "medium",
     "networking_profile": "events"
   }

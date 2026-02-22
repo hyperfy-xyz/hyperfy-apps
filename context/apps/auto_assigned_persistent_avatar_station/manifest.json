@@ -1,0 +1,65 @@
+{
+  "app_id": "auto_assigned_persistent_avatar_station-1351179432932671572",
+  "app_slug": "auto_assigned_persistent_avatar_station",
+  "app_name": "Auto_Assigned_Persistent_Avatar_Station",
+  "source": {
+    "hyp_filename": "Auto_Assigned_Persistent_Avatar_Station.hyp",
+    "discord_attachment_id": "1351179432563445770",
+    "discord_message_id": "1351179432932671572",
+    "discord_channel": "\u26a1\u2502general",
+    "discord_channel_category": "Platform",
+    "discord_timestamp": "2025-03-17T13:04:40.511Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/958209074045026327/1351179432563445770/Auto_Assigned_Persistent_Avatar_Station.hyp?ex=699904a8&is=6997b328&hm=ea5f8d6b4032f29e384bbdf021db280fab2b4b95f545003d41a81d5be7ab27d9&"
+  },
+  "author": {
+    "display_name": "peezy",
+    "discord_user_id": "169825031314997249",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "this one is for people that dont want every new person in a world to enter as the hyperfy bot. \nit auto assigns one of the avatars on the station at random to people when they first login. \nthis persists between sessions. (i made it to understand how to use the storage feature)",
+    "raw_message_content": "this one is for people that dont want every new person in a world to enter as the hyperfy bot. \nit auto assigns one of the avatars on the station at random to people when they first login. \nthis persists between sessions. (i made it to understand how to use the storage feature)",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "auto_assigned_persistent_avatar_station-1351179432932671572",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:42:48+00:00",
+    "description": "Avatar station that automatically assigns a random avatar from a predefined set to each new player on first login. Persists avatar selections across sessions using the world storage API, replacing the default Hyperfy bot appearance for newcomers.",
+    "feature_tags": [
+      "interaction",
+      "multiplayer",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "medium",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

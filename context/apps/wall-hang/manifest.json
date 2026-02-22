@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-11-11T19:48:16.104Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1437891700029788361/Wall_Hang.hyp?ex=69163600&is=6914e480&hm=6a8cc800af8838c74363dcdc69c0edfd0c96c44ff61a70ba8c8484ec2bd7edc5&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1437891700029788361/Wall_Hang.hyp?ex=6998ba80&is=69976900&hm=27fcb80094ab0938a9551614849bd0875f51bd347c2fe987f974359ce83c032a&"
   },
   "author": {
     "display_name": "Dhin",
@@ -29,40 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Wall_Hang.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/wall-hang/p2_Desktop_2025.11.11_-_17.21.42.05.mp4",
+    "primary_media_path": "catalog/media/1437930608952213644_Desktop_2025.11.11_-_17.21.42.05.mp4",
     "media_type": ".mp4",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/wall-hang/m8_Desktop_2025.11.11_-_10.41.47.01.mp4",
-      "original_filename": "Desktop_2025.11.11_-_10.41.47.01.mp4",
-      "content_type": "video/mp4",
-      "relative_index": -8,
-      "same_author": false,
-      "selection_reason": "any_author_fallback",
-      "size_bytes": 718000,
-      "optimized": true,
-      "excluded_large": false,
-      "download_status": "downloaded",
-      "attachment_id": "1437829987230154834"
-    },
-    {
-      "catalog_path": "catalog/media/wall-hang/m7_image.png",
-      "original_filename": "image.png",
-      "content_type": "image/png",
-      "relative_index": -7,
-      "same_author": false,
-      "selection_reason": "any_author_fallback",
-      "size_bytes": 340225,
-      "optimized": true,
-      "excluded_large": false,
-      "download_status": "downloaded",
-      "attachment_id": "1437865947137446109"
-    },
-    {
-      "catalog_path": "catalog/media/wall-hang/m4_image.png",
+      "catalog_path": "catalog/media/1437868142708916324_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": -4,
@@ -75,7 +49,7 @@
       "attachment_id": "1437868142708916324"
     },
     {
-      "catalog_path": "catalog/media/wall-hang/m3_image.png",
+      "catalog_path": "catalog/media/1437872177583100055_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": -3,
@@ -88,7 +62,7 @@
       "attachment_id": "1437872177583100055"
     },
     {
-      "catalog_path": "catalog/media/wall-hang/p2_Desktop_2025.11.11_-_17.21.42.05.mp4",
+      "catalog_path": "catalog/media/1437930608952213644_Desktop_2025.11.11_-_17.21.42.05.mp4",
       "original_filename": "Desktop_2025.11.11_-_17.21.42.05.mp4",
       "content_type": "video/mp4",
       "relative_index": 2,
@@ -103,6 +77,7 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
@@ -110,19 +85,19 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "wall-hang-1437891700369658059",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:30:43+00:00",
-    "description": "Wall hang mechanic that raycasts to detect ledges while the player falls, teleports the player to the grab point, and applies a hanging emote effect. Space triggers a climb impulse upward while S drops the player away from the wall normal.",
+    "generated_at": "2026-02-21T23:50:03+00:00",
+    "description": "Wall-hang mechanic that raycasts to detect ledges while the player falls, teleports them to the grab point, and applies a hanging emote effect. Players can climb up with space or drop with S key, using impulse pushes and cooldown timers to manage transitions.",
     "feature_tags": [
       "physics",
       "animation",
       "interaction",
       "teleport",
-      "3d-model"
+      "camera"
     ],
     "interaction_modes": [
       "passive"

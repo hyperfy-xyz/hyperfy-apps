@@ -1,0 +1,65 @@
+{
+  "app_id": "rgb_cube-1351629917825269933",
+  "app_slug": "rgb_cube",
+  "app_name": "RGB_CUBE",
+  "source": {
+    "hyp_filename": "RGB_CUBE.hyp",
+    "discord_attachment_id": "1351629917514633246",
+    "discord_message_id": "1351629917825269933",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-18T18:54:44.479Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1351629917514633246/RGB_CUBE.hyp?ex=6998adf4&is=69975c74&hm=c8177e56dbd009ff143aa149302bc98e25f95ac0400f16e341d23212fd7b594a&"
+  },
+  "author": {
+    "display_name": "0mka",
+    "discord_user_id": "783416470205497394",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "<@838035886260224022>",
+    "raw_message_content": "<@838035886260224022>",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "rgb_cube-1351629917825269933",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:48:06+00:00",
+    "description": "Renders a rotating glowing RGB cube that animates continuously in the scene. The 3D model cycles through color changes while spinning, serving as a decorative environment element built as a lightweight Hyperfy app.",
+    "feature_tags": [
+      "animation",
+      "3d-model",
+      "environment"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

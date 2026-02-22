@@ -1,0 +1,77 @@
+{
+  "app_id": "uiimagefromurl-1342322223167574077",
+  "app_slug": "uiimagefromurl",
+  "app_name": "uiImageFromUrl",
+  "source": {
+    "hyp_filename": "uiImageFromUrl.hyp",
+    "discord_attachment_id": "1342322222894940211",
+    "discord_message_id": "1342322223167574077",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-21T02:29:17.144Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1342322222894940211/uiImageFromUrl.hyp?ex=6999187d&is=6997c6fd&hm=3fd437e17a8a046a605673c7c55726df83019cdc6a6cef231bf7d839781b9459&"
+  },
+  "author": {
+    "display_name": "0mka",
+    "discord_user_id": "783416470205497394",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "this is one iteration. but you can get the props basis from this. create/add the uiview in your ui, then create/add the uiimage after the view where it is.\n\ncan modify props in top\n\nI have a few more but this should get you what you want",
+    "raw_message_content": "this is one iteration. but you can get the props basis from this. create/add the uiview in your ui, then create/add the uiimage after the view where it is.\n\ncan modify props in top\n\nI have a few more but this should get you what you want",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/1342323670387003403_uiimagefromurl.mp4",
+    "media_type": ".mp4",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/1342323670387003403_uiimagefromurl.mp4",
+      "original_filename": "uiimagefromurl.mp4",
+      "content_type": "video/mp4",
+      "relative_index": 3,
+      "same_author": true,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 591685,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1342323670387003403"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "uiimagefromurl-1342322223167574077",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:49:49+00:00",
+    "description": "Renders a UI image loaded from an external URL by creating a UIView and UIImage node with configurable props. Demonstrates how to display remote images inside a Hyperfy UI panel using customizable positioning and sizing parameters.",
+    "feature_tags": [
+      "ui"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

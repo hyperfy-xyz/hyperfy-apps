@@ -1,0 +1,79 @@
+{
+  "app_id": "show-chart-1345899014482169947",
+  "app_slug": "show-chart",
+  "app_name": "show_chart",
+  "source": {
+    "hyp_filename": "show_chart.hyp",
+    "discord_attachment_id": "1345899014196953268",
+    "discord_message_id": "1345899014482169947",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-02T23:22:10.647Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1345899014196953268/show_chart.hyp?ex=6998eca2&is=69979b22&hm=b389cbc0a2ce6cdfb20149588f40fac468869eefd8a8e3bc102509851671381b&"
+  },
+  "author": {
+    "display_name": "Ricky",
+    "discord_user_id": "876921223496466492",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "yess, ty for taking a look \ud83d\ude4f",
+    "raw_message_content": "yess, ty for taking a look \ud83d\ude4f",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": "v2/show-chart",
+    "v2_json_path": "v2/show-chart/show chart.json",
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/1345903662962311248_image.png",
+    "media_type": ".png",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/1345903662962311248_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": 5,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 5210,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1345903662962311248"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "show-chart-1345899014482169947",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:48:40+00:00",
+    "description": "Renders a remote chart image on a billboard UI panel and triggers a cache-busting refresh when the player presses the action key within a configurable radius. Supports customizable width, height, position, and image fit via app.configure fields.",
+    "feature_tags": [
+      "ui",
+      "interaction",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

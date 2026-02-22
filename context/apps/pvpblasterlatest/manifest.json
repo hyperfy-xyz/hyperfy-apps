@@ -9,10 +9,10 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-03-25T22:47:43.233Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1354225263701000274/PVPblasterLATEST.hyp?ex=6979408f&is=6977ef0f&hm=9f1efd8ae24294843756f5cf515e60ccb2edd73709b53b3efd39d4c6cd047504&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1354225263701000274/PVPblasterLATEST.hyp?ex=6998e48f&is=6997930f&hm=684f8a5ccf94ab5ee5b421209407b8b5d902a3b417a75aff3bb06c5ddbc44dc5&"
   },
   "author": {
-    "display_name": ".hyp shaman",
+    "display_name": "hypShaman",
     "discord_user_id": "297290503181959169",
     "confidence": "high",
     "evidence": "discord"
@@ -29,34 +29,35 @@
     "hyp_summary_path": "context/hyp_summaries/PVPblasterLATEST.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/pvpblasterlatest/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "pvpblasterlatest-1354225264028291292",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:26:03+00:00",
-    "description": "PVP blaster weapon that players equip with E and drop with Q. Fires raycasted projectiles dealing configurable damage with headshot multipliers, spawns lightning and muzzle flash particles, plays spatial impact and lightning audio, supports first-person camera mode, health regeneration, and networke",
+    "generated_at": "2026-02-21T23:47:47+00:00",
+    "description": "PVP blaster weapon that fires raycast projectiles, spawns lightning and muzzle flash particles, plays spatial impact and lightning audio, damages other players with configurable headshot multipliers, and supports health regeneration and first-person camera mode.",
     "feature_tags": [
       "combat",
       "particles",
       "audio",
-      "camera",
       "animation",
+      "camera",
       "ui"
     ],
     "interaction_modes": [

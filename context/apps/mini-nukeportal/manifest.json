@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-04-04T18:33:55.243Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1357785271701078036/MINI-NukePORTAL.hyp?ex=69790513&is=6977b393&hm=aa86a0d77f73d900c362ac750bc113ed9dbbfffbe4577f3750015b4fc3909314&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1357785271701078036/MINI-NukePORTAL.hyp?ex=6998a913&is=69975793&hm=ef37ad92156aa04487c6d941a5204f7c02abb0fd51db4ae1ac3be0b2650ab4eb&"
   },
   "author": {
     "display_name": "~/drdoge.eth",
@@ -29,35 +29,36 @@
     "hyp_summary_path": "context/hyp_summaries/MINI-NukePORTAL.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/mini-nukeportal/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "mini-nukeportal-1357785271864660153",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:24:03+00:00",
-    "description": "Interactive mini-nuke that players detonate via an action trigger, spawning radiation particle clouds with \u2622 symbols, playing explosion and Geiger counter audio, dealing AoE radiation damage to nearby players, and opening a portal to a configurable destination world URL after a timed delay.",
+    "generated_at": "2026-02-21T23:46:46+00:00",
+    "description": "Interactive mini-nuke that players detonate via action button, triggering explosion audio, radiation particle cloud with \u2622 symbols, and radiation damage to nearby players. After a configurable delay, opens a portal to a destination world URL. Includes Geiger counter SFX and green radiation tint UI o",
     "feature_tags": [
       "particles",
       "audio",
       "combat",
+      "ui",
       "interaction",
-      "teleport",
-      "ui"
+      "teleport"
     ],
     "interaction_modes": [
       "action",

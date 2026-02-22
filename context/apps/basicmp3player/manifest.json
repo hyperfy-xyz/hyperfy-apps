@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2026-01-09T21:22:33.634Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1459296313333121024/BasicMp3Player.hyp?ex=69792c99&is=6977db19&hm=0630cb4898f95a3ea25aac629d803dfa84edb578d0d7c2c08a2c5f2f65ef1c97&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1459296313333121024/BasicMp3Player.hyp?ex=6998d099&is=69977f19&hm=98647d2ddc4d8ea74b0cc2e958e915b2d77d23e54a7726035c127cea95dccf77&"
   },
   "author": {
     "display_name": "Valiant",
@@ -29,33 +29,33 @@
     "hyp_summary_path": "context/hyp_summaries/BasicMp3Player.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/basicmp3player/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "basicmp3player-1459296313840504887",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:16:33+00:00",
+    "generated_at": "2026-02-21T23:42:58+00:00",
     "description": "Minimal clickable MP3 player that plays and pauses an audio node when the user clicks a GLB cube mesh. Supports uploaded files or pasted URLs, with configurable volume, loop, spatial/global mode, and auto-play on upload.",
     "feature_tags": [
       "audio",
       "interaction",
-      "media-player",
-      "3d-model"
+      "media-player"
     ],
     "interaction_modes": [
       "passive"

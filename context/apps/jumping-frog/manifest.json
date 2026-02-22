@@ -9,7 +9,7 @@
     "discord_channel": "\u26a1\u2502general",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2026-01-14T18:08:43.052Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/958209074045026327/1461059470732951734/Jumping_Frog.hyp?ex=6979a7ea&is=6978566a&hm=fed4761e8927fac23b8d33665d39d419d34b18dc7bfbcb9ac3b6b8243b5bad55&"
+    "discord_url": "https://cdn.discordapp.com/attachments/958209074045026327/1461059470732951734/Jumping_Frog.hyp?ex=6998a32a&is=699751aa&hm=7e2936b9be2530ce852027a6baa33b34eb77408ab9bdee7c80350810882837e7&"
   },
   "author": {
     "display_name": "fractilians",
@@ -29,28 +29,29 @@
     "hyp_summary_path": "context/hyp_summaries/Jumping_Frog.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/jumping-frog/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "jumping-frog-1461059470972158002",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:22:55+00:00",
-    "description": "Builds a procedural frog character from primitive spheres, cylinders, and boxes, then animates a looping hop cycle with squash-and-stretch scaling, hind-leg joint rotation, a red tongue flick at jump apex, and subtle eye bobbing on each frame.",
+    "generated_at": "2026-02-21T23:46:19+00:00",
+    "description": "Renders a procedural frog character built from primitive spheres, cylinders, and boxes, then animates a looping hop cycle with squash-and-stretch scaling, articulated hind leg posing, and a tongue that flicks outward at the jump apex.",
     "feature_tags": [
       "animation",
       "3d-model"

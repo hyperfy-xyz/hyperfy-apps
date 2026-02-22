@@ -1,0 +1,65 @@
+{
+  "app_id": "app_2-1336798195178803253",
+  "app_slug": "app_2",
+  "app_name": "app_2",
+  "source": {
+    "hyp_filename": "app_2.hyp",
+    "discord_attachment_id": "1336798194935402496",
+    "discord_message_id": "1336798195178803253",
+    "discord_channel": "\ud83e\udd16\u2502agents",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-05T20:38:46.240Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1330373197203505185/1336798194935402496/app_2.hyp?ex=6998c656&is=699774d6&hm=ca3ce5f556fb76b5b12a66b1fb526956b6f00ef7a50fdee782cba10af6957d43&"
+  },
+  "author": {
+    "display_name": "HypPrivakos - HyperWorld.Host",
+    "discord_user_id": "183099323142242304",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "<@688215116457443346> try this one? the url should be working there",
+    "raw_message_content": "<@688215116457443346> try this one? the url should be working there",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "app_2-1336798195178803253",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:42:44+00:00",
+    "description": "Shared agent connector app that links an external Eliza-based NPC agent endpoint to a Hyperfy world, routing messages between the server and a remote URL for AI-driven interaction.",
+    "feature_tags": [
+      "npc",
+      "interaction",
+      "multiplayer"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

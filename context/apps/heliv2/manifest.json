@@ -1,0 +1,77 @@
+{
+  "app_id": "heliv2-1374403023543205898",
+  "app_slug": "heliv2",
+  "app_name": "HELIv2",
+  "source": {
+    "hyp_filename": "HELIv2.hyp",
+    "discord_attachment_id": "1374403022821654578",
+    "discord_message_id": "1374403023543205898",
+    "discord_channel": "\ud83e\uddca\u25023d-design",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-05-20T15:06:55.986Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1031058655581323324/1374403022821654578/HELIv2.hyp?ex=6999214f&is=6997cfcf&hm=423fbb0ac73c7710c62e512d2cb36c26c3ccae542984ba4d781564cc0b38ff12&"
+  },
+  "author": {
+    "display_name": "vox",
+    "discord_user_id": "415262868217266177",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "here the random app..with random code on german XD",
+    "raw_message_content": "here the random app..with random code on german XD",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/1374402399036379136_image.png",
+    "media_type": ".png",
+    "selection_reason": "same_author_nearby",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/1374402399036379136_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": -2,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 448346,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1374402399036379136"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T00:29:56+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "heliv2-1374403023543205898",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:45:35+00:00",
+    "description": "Renders a helicopter 3D model with rotating blades that animate in motion. Includes emission map support so only the light elements are affected. Experimental scripting with German-language code comments.",
+    "feature_tags": [
+      "3d-model",
+      "vehicle",
+      "animation"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "medium",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}
