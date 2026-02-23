@@ -1,0 +1,32 @@
+{
+  "id": "iylEeECjy3",
+  "version": 3,
+  "name": "Neon Sign",
+  "image": null,
+  "author": "Gert-Jan Akerboom",
+  "url": null,
+  "desc": "Drag and Drop a Neon Sign into your world.",
+  "model": "asset://0359e7202144559217830bf443c998a3e3fb53c083e84975129acae29f0b28fe.glb",
+  "script": "asset://dec30b5cb7750688c8b6dec58de5d14fc983d909792b4955a59053dbc891521c.js",
+  "props": {
+    "text_input": "** hyperfy **",
+    "letter_spacing": 2.9000000000000004,
+    "letter_scale": 1,
+    "emission_r": 0.30000000000000004,
+    "emission_g": 0.7000000000000001,
+    "emission_b": 0.4,
+    "emission_intensity": 14.8,
+    ".emissiveIntensity: 5": 3.2,
+    "showchars": "true",
+    "visible": "true",
+    "alignment": "center",
+    "scale": 0.6000000000000001,
+    "height": 2.4000000000000004,
+    "uvcolor": 0.88
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": true,
+  "disabled": false
+}

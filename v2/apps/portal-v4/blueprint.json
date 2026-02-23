@@ -1,0 +1,38 @@
+{
+  "id": "fX0x1MJT95",
+  "version": 4,
+  "name": "Portal\ud83c\udf10",
+  "image": {
+    "type": "texture",
+    "name": "teleportman.png",
+    "url": "asset://86fd355db34421f0eca4cf61c193f0b313ebe7cd311a0364d01bf3bf999901e9.png"
+  },
+  "author": "homemade",
+  "url": "https://x.com/H0M3_D1R",
+  "desc": "made by 0mka\nPortal out of world.",
+  "model": "asset://23de53dfc14eb182cdcc6654081fffa00cf22cd1d365140db6f4132b9aba3b00.glb",
+  "script": "asset://68552553265e02f3529cbde41aee1335bbd95b6b3a9486f5feef5861e26bda03.js",
+  "props": {
+    "collision": true,
+    "portalName": "Portal\ud83c\udf10",
+    "portalDest": "somewhere",
+    "uiWidth": 300,
+    "uiHeight": 40,
+    "uiYOffset": 2.2,
+    "uiFontSize": 35,
+    "visibility": "visible",
+    "uiVisibility": "visible",
+    "uiFontColor": "blue",
+    "aVisibility": "visible",
+    "eVisibility": "visible",
+    "rimEmissive": 1.1,
+    "rimSpeed": 0,
+    "worldUrl": "https://google.com",
+    "newTab": false
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": true,
+  "disabled": false
+}

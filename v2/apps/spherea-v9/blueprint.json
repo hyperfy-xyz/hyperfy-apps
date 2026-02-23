@@ -1,0 +1,31 @@
+{
+  "id": "wa0gvXGZgS",
+  "version": 9,
+  "name": "Spherea",
+  "image": {
+    "type": "texture",
+    "name": "homedirectory.png",
+    "url": "asset://6be2ff457c549182e139847120784bd7a0cdfc7d27730b33adc973afbcb51b32.png"
+  },
+  "author": "homemade",
+  "url": "https://x.com/H0M3_D1R",
+  "desc": "made by b0gie\nsignal trigger",
+  "model": "asset://acd9ab1fd12d8e98bcd7859e3fc499ec449a4b2e2d63b4f19af5a8bc1c682c18.glb",
+  "script": "asset://7623dc0f6715e5963ff36f54efbdb8dcf3e2b9bd44b81db180df3de8cf852d55.js",
+  "props": {
+    "signal": "Wearable:Reveal",
+    "showMesh": false,
+    "debugColor": "white",
+    "visibleType": "visible",
+    "revealSignal": "Wearable:Reveal",
+    "equipSignal": "Wearable:Equip",
+    "showMesh1": "on",
+    "showMesh2": "on",
+    "showMesh3": "on"
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": true,
+  "disabled": false
+}

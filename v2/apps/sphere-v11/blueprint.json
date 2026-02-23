@@ -1,0 +1,50 @@
+{
+  "id": "64Mk8PODYi",
+  "version": 11,
+  "name": "Sphere\ud83d\udd0a",
+  "image": {
+    "type": "texture",
+    "name": "homedirectory.png",
+    "url": "asset://6be2ff457c549182e139847120784bd7a0cdfc7d27730b33adc973afbcb51b32.png"
+  },
+  "author": "homemade",
+  "url": "https://x.com/H0M3_D1R",
+  "desc": "made by b0gie\nspatial ambience",
+  "model": "asset://acd9ab1fd12d8e98bcd7859e3fc499ec449a4b2e2d63b4f19af5a8bc1c682c18.glb",
+  "script": "asset://b11765f8dfee8571a140268114305efa3c7a4e8bf412e82f85359fbeb6a2cfad.js",
+  "props": {
+    "signal": "Ambiance1",
+    "showMesh": "visible",
+    "debugColor": "blue",
+    "audioFile": {
+      "type": "audio",
+      "name": "spaceship-ambiace-24881.mp3",
+      "url": "asset://1e7e62efc3d19d97f65d5952efe058b80308659681c010cad92412d47163435c.mp3"
+    },
+    "audio": {
+      "type": "audio",
+      "name": "spaceship-ambiace-24881.mp3",
+      "url": "asset://1e7e62efc3d19d97f65d5952efe058b80308659681c010cad92412d47163435c.mp3"
+    },
+    "volume": 1,
+    "audioType": "music",
+    "loop": true,
+    "spatial": true,
+    "distanceModel": "exponential",
+    "refDistance": 1,
+    "maxDistance": 10,
+    "rolloffFactor": 2,
+    "coneInnerAngle": 40,
+    "coneOuterAngle": 60,
+    "coneOuterGain": 1,
+    "defaultVolume": 1,
+    "isSpatial": true,
+    "minDistance": 1,
+    "visibleType": "Invisible"
+  },
+  "preload": true,
+  "public": false,
+  "locked": false,
+  "unique": true,
+  "disabled": false
+}

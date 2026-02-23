@@ -1,0 +1,37 @@
+[
+  {
+    "type": "model",
+    "url": "asset://bc106fe8e4158546ce8a5b3565105659b2d8c3b6fc96e7835ac3d8c373a6978c.glb",
+    "filename": "bc106fe8e4158546ce8a5b3565105659b2d8c3b6fc96e7835ac3d8c373a6978c.glb",
+    "size": 6260,
+    "mime": "model/gltf-binary"
+  },
+  {
+    "type": "script",
+    "url": "asset://437bbbfe58db1d1a6f6d1d1d1b0081e9380ba6c2946576b477eefa97e6df02e8.js",
+    "filename": "437bbbfe58db1d1a6f6d1d1d1b0081e9380ba6c2946576b477eefa97e6df02e8.js",
+    "size": 4089,
+    "mime": "application/javascript"
+  },
+  {
+    "type": "texture",
+    "url": "asset://6be2ff457c549182e139847120784bd7a0cdfc7d27730b33adc973afbcb51b32.png",
+    "filename": "6be2ff457c549182e139847120784bd7a0cdfc7d27730b33adc973afbcb51b32.png",
+    "size": 659589,
+    "mime": "image/png"
+  },
+  {
+    "type": "emote",
+    "url": "asset://ad0dc6273210096fa432edaddea494beaa855cc3f108f2e909c6d4242559a97a.glb",
+    "filename": "ad0dc6273210096fa432edaddea494beaa855cc3f108f2e909c6d4242559a97a.glb",
+    "size": 1410320,
+    "mime": "model/gltf-binary"
+  },
+  {
+    "type": "texture",
+    "url": "asset://94b7856da6a8e9874150a6b3086182ae655851535f575068c3ad54b6a9def8d1.png",
+    "filename": "94b7856da6a8e9874150a6b3086182ae655851535f575068c3ad54b6a9def8d1.png",
+    "size": 17683,
+    "mime": "image/png"
+  }
+]

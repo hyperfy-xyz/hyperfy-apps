@@ -1,0 +1,47 @@
+{
+  "app_id": "sphere-v11",
+  "app_slug": "sphere-v11",
+  "app_name": "Sphere\ud83d\udd0a",
+  "source": {
+    "hyp_filename": "sphere-v11.hyp",
+    "external_repo": "awesome-hyps",
+    "external_path": "/home/jin/repo/awesome-hyps/default/Sphere\ud83d\udd0a.hyp",
+    "match_status": "missing_candidate",
+    "import_strategy": "external-versioned"
+  },
+  "author": {
+    "display_name": "homemade",
+    "confidence": "low",
+    "evidence": "blueprint"
+  },
+  "description": {
+    "short": "made by b0gie\nspatial ambience",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "blueprint"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/sphere-v11",
+    "v2_json_path": "v2/apps/sphere-v11/blueprint.json"
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": "none",
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "external_import",
+      "include"
+    ],
+    "notes": "Imported from external repositories using versioned naming policy."
+  },
+  "generated_at": "2026-02-23T05:40:35+00:00",
+  "max_commit_size_bytes": 52428800
+}

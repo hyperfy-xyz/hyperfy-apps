@@ -1,0 +1,47 @@
+{
+  "app_id": "bio-links-v1",
+  "app_slug": "bio-links-v1",
+  "app_name": "Bio-Links",
+  "source": {
+    "hyp_filename": "bio-links-v1.hyp",
+    "external_repo": ".hyp-apps-",
+    "external_path": "/home/jin/repo/.hyp-apps-/Bio-Links/Bio-Links.hyp",
+    "match_status": "missing_candidate",
+    "import_strategy": "external-versioned"
+  },
+  "author": {
+    "display_name": "Gert-Jan Akerboom",
+    "confidence": "low",
+    "evidence": "blueprint"
+  },
+  "description": {
+    "short": "add (download) links as a screen-UI toggle to your world.",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "blueprint"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/bio-links-v1",
+    "v2_json_path": "v2/apps/bio-links-v1/blueprint.json"
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": "none",
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "external_import",
+      "include"
+    ],
+    "notes": "Imported from external repositories using versioned naming policy."
+  },
+  "generated_at": "2026-02-23T05:40:35+00:00",
+  "max_commit_size_bytes": 52428800
+}

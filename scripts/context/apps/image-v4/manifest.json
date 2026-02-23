@@ -1,0 +1,47 @@
+{
+  "app_id": "image-v4",
+  "app_slug": "image-v4",
+  "app_name": "Image",
+  "source": {
+    "hyp_filename": "image-v4.hyp",
+    "external_repo": "awesome-hyps",
+    "external_path": "/home/jin/repo/awesome-hyps/default/Image.hyp",
+    "match_status": "existing_exact_name_only",
+    "import_strategy": "external-versioned"
+  },
+  "author": {
+    "display_name": "Hyperfy",
+    "confidence": "low",
+    "evidence": "blueprint"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "blueprint"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/image-v4",
+    "v2_json_path": "v2/apps/image-v4/blueprint.json"
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": "none",
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "external_import",
+      "include"
+    ],
+    "notes": "Imported from external repositories using versioned naming policy."
+  },
+  "generated_at": "2026-02-23T05:40:35+00:00",
+  "max_commit_size_bytes": 52428800
+}

@@ -1,0 +1,26 @@
+{
+  "id": "AYCWASSsAG",
+  "version": 1,
+  "name": "Grass and Flowers",
+  "image": null,
+  "author": "Gert-Jan Akerboom",
+  "url": null,
+  "desc": "Drag and Drop Grass and Flowers into your World.",
+  "model": "asset://f7bc20c45680fa35bdbc589a68f62d393859e2f16e1ef1daee2e076af20aaa15.glb",
+  "script": "asset://8a4446cf6a3938d9480f33ae96e301158b1d8082e707aad2a63d19f73eb3f4f0.js",
+  "props": {
+    "clone_count": 10000,
+    "area_size_x": 40,
+    "area_size_z": 40,
+    "min_size": 0.8,
+    "max_size": 1.3,
+    "grass_count": 20,
+    "cluster_percentage": 80,
+    "cluster_density": 20,
+    "cluster_size": 1
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

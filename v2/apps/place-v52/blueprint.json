@@ -1,0 +1,27 @@
+{
+  "id": "4PXsOJtfbY",
+  "version": 52,
+  "name": "Place\ud83c\udf00",
+  "image": {
+    "type": "texture",
+    "name": "homedirectory.webp",
+    "url": "asset://5a446fe25fa1355add5ca30cff36bc076eb05beacc26ed7c3c3c7ac2361ef33b.webp"
+  },
+  "author": "homemade ~/0mka, b0gie",
+  "url": "https://x.com/H0M3_D1R",
+  "desc": "\n a teleport destination.",
+  "model": "asset://94fe96b10eb2468b4f80b42aaea7565ca1c4aa570b23ccdb21d748a889dab9e1.glb",
+  "script": "asset://260da0f549bcf7c1d902a0c797ab77c9602de5729c49f42092c4a2dd281bbfe9.js",
+  "props": {
+    "collision": true,
+    "location": "here",
+    "visibility": "visible",
+    "cmd": "portal",
+    "color": "red"
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": true,
+  "disabled": false
+}

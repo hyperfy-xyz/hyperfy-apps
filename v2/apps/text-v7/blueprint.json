@@ -1,0 +1,33 @@
+{
+  "id": "2C4uMiZplQ",
+  "version": 7,
+  "name": "Text",
+  "image": {
+    "type": "texture",
+    "name": "Text.png",
+    "url": "asset://a737851aa49988665c40380007a8e3ef3fc7d5eb27cffcdf199ded87abcc7bcf.png"
+  },
+  "author": "Hyperfy",
+  "url": null,
+  "desc": null,
+  "model": "asset://e7cfd8f907f8979fc32f3afabc0962c8d74ea484a61d150187fec23bd0c03a5c.glb",
+  "script": "asset://5298877b10d5aae7db40dde9c0ec421f374644c7c869e9c3696c3a95dd338ba5.js",
+  "props": {
+    "width": 200,
+    "height": 200,
+    "lit": false,
+    "text": "Enter text...",
+    "color": "white",
+    "align": "center",
+    "bg": "black",
+    "padding": 20,
+    "size": 24,
+    "doubleside": true,
+    "shadows": true
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false,
+  "disabled": false
+}

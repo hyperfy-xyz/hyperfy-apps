@@ -1,8 +1,8 @@
 {
   "version": 4,
-  "generated_at": "2026-02-23T04:37:41+00:00",
+  "generated_at": "2026-02-23T05:42:07+00:00",
   "name": "Hyperfy Apps Archive",
-  "description": "326 community-built virtual world apps for the Hyperfy platform",
+  "description": "342 community-built virtual world apps for the Hyperfy platform",
   "base_url": "https://hyperfy-xyz.github.io/hyperfy-apps",
   "source_url": "https://github.com/hyperfy-xyz/hyperfy-apps",
   "endpoints": {
@@ -10,9 +10,9 @@
     "app_blueprint": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/v2/apps/{slug}/{blueprint_path}"
   },
   "counts": {
-    "total": 326,
-    "with_preview": 326,
-    "with_source": 326,
+    "total": 342,
+    "with_preview": 342,
+    "with_source": 342,
     "metadata_only": 0
   },
   "tag_index": {
@@ -2232,6 +2232,107 @@
         "js_files": 1,
         "json_files": 2,
         "asset_files": 3
+      },
+      "blueprint_path": "blueprint.json"
+    },
+    {
+      "slug": "bio-links-v1",
+      "name": "Bio-Links",
+      "author": "Gert-Jan Akerboom",
+      "description": "add (download) links as a screen-UI toggle to your world.",
+      "preview_url": "media/bio-links-v1/preview.png",
+      "preview_type": "image",
+      "hyp_filename": "bio-links-v1.hyp",
+      "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/v2/hyp-files/bio-links-v1.hyp",
+      "has_download": true,
+      "created_at": null,
+      "tags": [],
+      "interaction_modes": [],
+      "asset_profile": "medium",
+      "script_complexity": "medium",
+      "networking": "none",
+      "has_preview": true,
+      "has_source": true,
+      "has_details": true,
+      "source_status": "v2",
+      "props": {
+        "button_count": 10,
+        "button_text_1": "link 1",
+        "button_text_2": "link 2",
+        "button_text_3": "link 4",
+        "button_text_4": "link 4",
+        "button_text_5": "link 5",
+        "download_link_1": "",
+        "download_link_2": "",
+        "download_link_3": "",
+        "download_link_4": "",
+        "download_link_5": "",
+        "button_text_6": "link 6",
+        "download_link_6": "",
+        "button_text_7": "link 7",
+        "download_link_7": "",
+        "button_text_8": "link 8",
+        "download_link_8": "",
+        "button_text_9": "link 9",
+        "download_link_9": "",
+        "button_text_10": "link 10",
+        "download_link_10": "",
+        "button_text_11": "link 11",
+        "download_link_11": "",
+        "button_text_12": "link 12",
+        "download_link_12": "",
+        "button_text_13": "link 13",
+        "download_link_13": "",
+        "button_text_14": "link 14",
+        "download_link_14": "",
+        "button_text_15": "link 15",
+        "download_link_15": "",
+        "button_text_16": "link 16",
+        "download_link_16": "",
+        "button_text_17": "link 17",
+        "download_link_17": "",
+        "button_text_18": "link 18",
+        "download_link_18": "",
+        "button_text_19": "link 19",
+        "download_link_19": "",
+        "button_text_20": "link 20",
+        "download_link_20": "",
+        "header_text": "Your info Here",
+        "visible": "true",
+        "scale": 1
+      },
+      "script_excerpt": "/**\n * Bio-Links\n * Drag and Drop a screenspace ui toggle for your Bio/links into your Hyperfy V2 world.\n * \n * @author Gert-Jan Akerboom\n * https://x.com/GertJanAkerboom\n * @license MIT\n * Copyright (c) 2025 Gert-Jan Akerboom\n */\n\n// Create the main toggle button (top right corner of screen)\nconst UItoggle = app.create('ui', {\n  width: 50,\n  height: 50,\n  res: 1,\n  position: [1, 0, 0],\n  offset: [-15, 15, 0],\n  space: 'screen',\n  pivot: 'top-right',\n  backgroundColor: 'rgba(0,0,0,0.85)',\n  borderRadius: 12,\n  borderWidth: 0,\n  pointerEvents: true,\n  alignItems: 'center',\n  justifyContent: 'center',\n  flexDirection: 'row',\n  cursor: 'pointer',\n});\n\n// Create the toggle button icon (arrow)\nconst UItoggleIcon = app.create('uitext', {\n  value: '\u25b2',\n  fontSize: 35,\n  color: '#fff',\n  textAlign: 'center',\n  backgroundColor: 'transparent',\n  cursor: 'pointer',\n});\n\nUItoggle.add(UItoggleIcon);\napp.add(UItoggle);\n\n// Configure UI inputs for the bio links system\napp.configure(() => {\n  const buttonCount = app.config.button_count || 8;\n  const configFields = [\n    {\n      key: 'button_count',\n      label: 'Number of Buttons',\n      type: 'number',\n      min: 1,\n      max: 14,\n      step: 1,\n      initial: 8,\n    },\n    {\n      key: 'header_text',\n      label: 'Header Text',\n      type: 'text',\n      initial: 'Download Section',\n      placeholder: 'Enter header text to explain downloads',\n    },\n    {\n      type: 'switch',\n      key: 'visible',\n      label: 'Cube Visible',\n      options: [\n        {\n          label: 'Show',\n          value: 'true',\n        },\n        {\n          label: 'Hide',\n          value: 'false',\n        }\n      ],\n      initial: 'true',\n    },\n    {\n      type: 'section',\n      key: 'links',\n      label: 'Links',\n    }\n  ];\n  \n  // Dynamically add text input fields and download link fields based on button count\n  for (let i = 0; i < buttonCount; i++) {\n    configFields.push({\n      key: `button_text_${i + 1}`,\n      label: `Button ${i + 1} Text`,\n      ",
+      "script_path": "assets/5f2bb6248a83b38867f07ffc730b6cddb73c833a26204dff62251c7d8ac10709.js",
+      "asset_files": [
+        "5f2bb6248a83b38867f07ffc730b6cddb73c833a26204dff62251c7d8ac10709.js",
+        "efb0f3ac587dd7911b2a6e0865401e9380af8dc6fde9da8439d94d0b661c3ee3.glb"
+      ],
+      "source_files": [
+        {
+          "path": "assets/5f2bb6248a83b38867f07ffc730b6cddb73c833a26204dff62251c7d8ac10709.js",
+          "size_bytes": 5836
+        },
+        {
+          "path": "assets/efb0f3ac587dd7911b2a6e0865401e9380af8dc6fde9da8439d94d0b661c3ee3.glb",
+          "size_bytes": 1948
+        },
+        {
+          "path": "blueprint.json",
+          "size_bytes": 1788
+        },
+        {
+          "path": "manifest.json",
+          "size_bytes": 524
+        }
+      ],
+      "source_inventory": {
+        "file_count": 4,
+        "listed_file_count": 4,
+        "listed_truncated": false,
+        "total_size_bytes": 10096,
+        "js_files": 1,
+        "json_files": 2,
+        "asset_files": 2
       },
       "blueprint_path": "blueprint.json"
     },
@@ -9604,6 +9705,89 @@
       "blueprint_path": "generate monstera V1.json"
     },
     {
+      "slug": "geoff-v22",
+      "name": "Geoff\ud83d\udcf9",
+      "author": "homemade",
+      "description": "a loyal camera man\nby Dr.Doge",
+      "preview_url": "media/geoff-v22/preview.jpg",
+      "preview_type": "image",
+      "hyp_filename": "geoff-v22.hyp",
+      "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/v2/hyp-files/geoff-v22.hyp",
+      "has_download": true,
+      "created_at": null,
+      "tags": [],
+      "interaction_modes": [],
+      "asset_profile": "medium",
+      "script_complexity": "medium",
+      "networking": "none",
+      "has_preview": true,
+      "has_source": true,
+      "has_details": true,
+      "source_status": "v2",
+      "props": {
+        "anchorName": "MainStreet",
+        "transitionSpeed": 1.5,
+        "cameraHeight": 0,
+        "lookDirection": "back",
+        "showLabel": true,
+        "cameraOffsetX": 2,
+        "cameraOffsetZ": 0,
+        "shotType": "closeup",
+        "cameraAngle": "eye_level",
+        "movementStyle": "instant",
+        "enableTracking": true,
+        "trackingSpeed": 10,
+        "trackingSmooth": 5,
+        "trackingRange": 50,
+        "enableTriggerMode": true,
+        "triggerSignal": "MainStreet1",
+        "triggerAction": "enter_only",
+        "autoRelease": 0,
+        "visibleType": true,
+        "showDebug": false,
+        "showReticle": false
+      },
+      "script_excerpt": "// Camera Anchor System - Click to teleport camera to this location\n\napp.configure([\n\t{\n\t\tkey: 'anchorName',\n\t\ttype: 'text',\n\t\tlabel: 'Camera Anchor Name',\n\t\tinitial: 'Camera Point'\n\t},\n\t{\n\t\tkey: 'transitionSpeed',\n\t\ttype: 'number',\n\t\tlabel: 'Camera Transition Speed',\n\t\tinitial: 1.5,\n\t\tmin: 0.5,\n\t\tmax: 5.0,\n\t\tdp: 1\n\t},\n\t{\n\t\tkey: 'cameraHeight',\n\t\ttype: 'number',\n\t\tlabel: 'Camera Height Offset (Y)',\n\t\tinitial: 1.6,\n\t\tmin: -5.0,\n\t\tmax: 5.0,\n\t\tdp: 1\n\t},\n\t{\n\t\tkey: 'cameraOffsetX',\n\t\ttype: 'number',\n\t\tlabel: 'Camera X Offset',\n\t\tinitial: 0.0,\n\t\tmin: -10.0,\n\t\tmax: 10.0,\n\t\tdp: 1\n\t},\n\t{\n\t\tkey: 'cameraOffsetZ',\n\t\ttype: 'number',\n\t\tlabel: 'Camera Z Offset',\n\t\tinitial: 0.0,\n\t\tmin: -10.0,\n\t\tmax: 10.0,\n\t\tdp: 1\n\t},\n\t{\n\t\tkey: 'shotType',\n\t\ttype: 'dropdown',\n\t\tlabel: 'V-Tubing Shot Type',\n\t\tinitial: 'medium',\n\t\toptions: [\n\t\t\t{ value: 'closeup', label: 'Close-up Shot' },\n\t\t\t{ value: 'medium', label: 'Medium Shot' },\n\t\t\t{ value: 'wide', label: 'Wide Shot' },\n\t\t\t{ value: 'fullbody', label: 'Full Body Shot' },\n\t\t\t{ value: 'overhead', label: 'Overhead Shot' },\n\t\t\t{ value: 'lowangle', label: 'Low Angle (Heroic)' },\n\t\t\t{ value: 'highangle', label: 'High Angle (Cute)' },\n\t\t\t{ value: 'profile', label: 'Profile Shot' },\n\t\t\t{ value: 'custom', label: 'Custom Position' }\n\t\t]\n\t},\n\t{\n\t\tkey: 'cameraAngle',\n\t\ttype: 'dropdown',\n\t\tlabel: 'Camera Angle Style',\n\t\tinitial: 'eye_level',\n\t\toptions: [\n\t\t\t{ value: 'eye_level', label: 'Eye Level' },\n\t\t\t{ value: 'slight_high', label: 'Slightly Above (Flattering)' },\n\t\t\t{ value: 'dramatic_high', label: 'High Angle (Dramatic)' },\n\t\t\t{ value: 'slight_low', label: 'Slightly Below (Confident)' },\n\t\t\t{ value: 'dramatic_low', label: 'Low Angle (Powerful)' }\n\t\t]\n\t},\n\t{\n\t\tkey: 'movementStyle',\n\t\ttype: 'dropdown',\n\t\tlabel: 'Camera Movement Style',\n\t\tinitial: 'smooth',\n\t\toptions: [\n\t\t\t{ value: 'instant', label: 'Instant Cut' },\n\t\t\t{ value: 'smooth', label: 'Smooth Transition' },\n\t\t\t{ value: 'cinematic', label: 'Cinematic Ease' },\n\t\t\t{ value: 'bounce', label: 'Bouncy Ani",
+      "script_path": "assets/060b3754c8771ad139897164b03ef3518bffbe0f069832212391ce876daa20e4.js",
+      "asset_files": [
+        "060b3754c8771ad139897164b03ef3518bffbe0f069832212391ce876daa20e4.js",
+        "0a6d965110252aa3cf91ce46b192534d6865fdad482af256a5c0f9b9ea15429f.glb",
+        "6be2ff457c549182e139847120784bd7a0cdfc7d27730b33adc973afbcb51b32.png"
+      ],
+      "source_files": [
+        {
+          "path": "assets/060b3754c8771ad139897164b03ef3518bffbe0f069832212391ce876daa20e4.js",
+          "size_bytes": 22669
+        },
+        {
+          "path": "assets/0a6d965110252aa3cf91ce46b192534d6865fdad482af256a5c0f9b9ea15429f.glb",
+          "size_bytes": 27296
+        },
+        {
+          "path": "assets/6be2ff457c549182e139847120784bd7a0cdfc7d27730b33adc973afbcb51b32.png",
+          "size_bytes": 659589
+        },
+        {
+          "path": "blueprint.json",
+          "size_bytes": 1210
+        },
+        {
+          "path": "manifest.json",
+          "size_bytes": 781
+        }
+      ],
+      "source_inventory": {
+        "file_count": 5,
+        "listed_file_count": 5,
+        "listed_truncated": false,
+        "total_size_bytes": 711545,
+        "js_files": 1,
+        "json_files": 2,
+        "asset_files": 3
+      },
+      "blueprint_path": "blueprint.json"
+    },
+    {
       "slug": "gert-2-1-aloe",
       "name": "Gert-2-1-aloe",
       "author": "0mka",
@@ -9800,6 +9984,72 @@
         "asset_files": 2
       },
       "blueprint_path": "Glow Dust.json"
+    },
+    {
+      "slug": "grass-and-flowers-v1",
+      "name": "Grass and Flowers",
+      "author": "Gert-Jan Akerboom",
+      "description": "Drag and Drop Grass and Flowers into your World.",
+      "preview_url": "media/grass-and-flowers-v1/preview.png",
+      "preview_type": "image",
+      "hyp_filename": "grass-and-flowers-v1.hyp",
+      "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/v2/hyp-files/grass-and-flowers-v1.hyp",
+      "has_download": true,
+      "created_at": null,
+      "tags": [],
+      "interaction_modes": [],
+      "asset_profile": "medium",
+      "script_complexity": "medium",
+      "networking": "none",
+      "has_preview": true,
+      "has_source": true,
+      "has_details": true,
+      "source_status": "v2",
+      "props": {
+        "clone_count": 10000,
+        "area_size_x": 40,
+        "area_size_z": 40,
+        "min_size": 0.8,
+        "max_size": 1.3,
+        "grass_count": 20,
+        "cluster_percentage": 80,
+        "cluster_density": 20,
+        "cluster_size": 1
+      },
+      "script_excerpt": "/**\n * Grass and Flowers\n * Drag and Drop Grass and Flowers into your Hyperfy V2 world.\n * \n * @author Gert-Jan Akerboom\n * https://x.com/GertJanAkerboom\n * @license MIT\n * Copyright (c) 2025 Gert-Jan Akerboom\n */\n\n// Configure UI inputs for the grass and flower generation system\napp.configure(() => {\n  return [\n    {\n      key: \"clone_count\",\n      label: \"Clone Count\",\n      type: \"number\",\n      initial: 20,\n      min: 1,\n      max: 10000,\n      step: 1,\n    },\n    {\n      key: \"area_size_x\",\n      label: \"Area Width (X meters)\",\n      type: \"number\",\n      initial: 10,\n      min: 1,\n      max: 100,\n      step: 1,\n    },\n    {\n      key: \"area_size_z\",\n      label: \"Area Depth (Z meters)\",\n      type: \"number\",\n      initial: 10,\n      min: 1,\n      max: 100,\n      step: 1,\n    },\n    {\n      key: \"min_size\",\n      label: \"Minimum Clone Size\",\n      type: \"number\",\n      dp: 2,\n      initial: 0.2,\n      min: 0.01,\n      max: 5,\n      step: 0.1,\n    },\n    {\n      key: \"max_size\",\n      label: \"Maximum Clone Size\",\n      type: \"number\",\n      dp: 2,\n      initial: 2,\n      min: 0.1,\n      max: 5,\n      step: 0.1,\n    },\n    {\n      key: \"cluster_percentage\",\n      label: \"Percentage of Grass in Clusters\",\n      type: \"number\",\n      initial: 30,\n      min: 0,\n      max: 100,\n      step: 1,\n    },\n    {\n      key: \"cluster_size\",\n      label: \"Cluster Size (radius in meters)\",\n      type: \"number\",\n      initial: 1,\n      min: 0.1,\n      max: 10,\n      step: 0.1,\n    },\n    {\n      key: \"cluster_density\",\n      label: \"Cluster Density (grass per m\u00b2)\",\n      type: \"number\",\n      initial: 5,\n      min: 1,\n      max: 20,\n      step: 1,\n    }\n  ];\n});\n\n// Get configuration values from UI inputs\nconst cloneCount = app.config.clone_count;\nconst areaSizeX = app.config.area_size_x;\nconst areaSizeZ = app.config.area_size_z;\nconst minSize = app.config.min_size;\nconst maxSize = app.config.max_size;\nconst clusterPercentage = app.config.cluster_percentage;\nconst clusterSize = ",
+      "script_path": "assets/8a4446cf6a3938d9480f33ae96e301158b1d8082e707aad2a63d19f73eb3f4f0.js",
+      "asset_files": [
+        "8a4446cf6a3938d9480f33ae96e301158b1d8082e707aad2a63d19f73eb3f4f0.js",
+        "f7bc20c45680fa35bdbc589a68f62d393859e2f16e1ef1daee2e076af20aaa15.glb"
+      ],
+      "source_files": [
+        {
+          "path": "assets/8a4446cf6a3938d9480f33ae96e301158b1d8082e707aad2a63d19f73eb3f4f0.js",
+          "size_bytes": 5346
+        },
+        {
+          "path": "assets/f7bc20c45680fa35bdbc589a68f62d393859e2f16e1ef1daee2e076af20aaa15.glb",
+          "size_bytes": 71760
+        },
+        {
+          "path": "blueprint.json",
+          "size_bytes": 691
+        },
+        {
+          "path": "manifest.json",
+          "size_bytes": 525
+        }
+      ],
+      "source_inventory": {
+        "file_count": 4,
+        "listed_file_count": 4,
+        "listed_truncated": false,
+        "total_size_bytes": 78322,
+        "js_files": 1,
+        "json_files": 2,
+        "asset_files": 2
+      },
+      "blueprint_path": "blueprint.json"
     },
     {
       "slug": "grass-v1",
@@ -12527,6 +12777,80 @@
       "blueprint_path": "blueprint.json"
     },
     {
+      "slug": "image-v4",
+      "name": "Image",
+      "author": "Hyperfy",
+      "description": "",
+      "preview_url": "media/image-v4/preview.jpg",
+      "preview_type": "image",
+      "hyp_filename": "image-v4.hyp",
+      "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/v2/hyp-files/image-v4.hyp",
+      "has_download": true,
+      "created_at": null,
+      "tags": [],
+      "interaction_modes": [],
+      "asset_profile": "medium",
+      "script_complexity": "medium",
+      "networking": "none",
+      "has_preview": true,
+      "has_source": true,
+      "has_details": true,
+      "source_status": "v2",
+      "props": {
+        "width": 0,
+        "height": 2,
+        "fit": "cover",
+        "image": null,
+        "transparent": false,
+        "lit": false,
+        "shadows": true,
+        "placeholder": {
+          "type": "image",
+          "name": "Image.png",
+          "url": "asset://daaace2f1b595664c0e6f5a10deb494efc13a850d3cf0804b297a634d2003803.png"
+        }
+      },
+      "script_excerpt": "app.configure([\n  {\n    key: 'placeholder',\n    type: 'file',\n    kind: 'image',\n    label: 'Placeholder',\n    hidden: true,\n  },\n  {\n    key: 'image',\n    type: 'file',\n    kind: 'image',\n    label: 'Image',\n    hint: 'The image to display.'\n  },\n  {\n    key: 'surface',\n    type: 'section',\n    label: 'Surface',\n  },\n  {\n    key: 'width',\n    type: 'number',\n    label: 'Width',\n    dp: 1,\n    step: 0.1,\n    bigStep: 1,\n    initial: 0,\n    hint: 'The width of the surface. If set to zero with a non-zero height, the width will automatically adjust to match the image aspect ratio.'\n  },\n  {\n    key: 'height',\n    type: 'number',\n    label: 'Height',\n    dp: 1,\n    step: 0.1,\n    bigStep: 1,\n    initial: 1,\n    hint: 'The height of the surface. If set to zero with a non-zero width, the height will automatically adjust to match the image aspect ratio.'\n  },\n  {\n    key: 'fit',\n    type: 'switch',\n    label: 'Fit',\n    options: [\n      { label: 'Stretch', value: 'none' },\n      { label: 'Cover', value: 'cover' },\n      { label: 'Contain', value: 'contain' },\n    ],\n    initial: 'none',\n    hint: 'How the image should be scaled to fit the surface dimensions. This has no effect if both width and height are set.'\n  },\n  {\n    key: 'transparent',\n    type: 'toggle',\n    label: 'Transparent',\n    hint: 'This should be used when using a (semi-)transparent image like a png.'\n  },\n  {\n    key: 'lit',\n    type: 'toggle',\n    label: 'Lit',\n    hint: 'Whether this surface is effected by world lighting.'\n  },\n  {\n    key: 'shadows',\n    type: 'toggle',\n    label: 'Shadows',\n    hint: 'Whether this surface casts and receives shadows.'\n  },\n])\napp.keepActive = true\n\nconst src = props.image?.url || props.placeholder?.url\nconst width = props.width === 0 ? null : props.width\nconst height = props.height === 0 ? null : props.height\nconst fit = props.fit\nconst transparent = props.transparent\nconst lit = props.lit\nconst shadows = props.shadows\n\nconst surface = app.get('Surface')\napp.remove(su",
+      "script_path": "assets/378774dc69a8dc33c006d5c75c2d586070bfaa0aa42e0e4ba2ef74a2fd2aa81f.js",
+      "asset_files": [
+        "378774dc69a8dc33c006d5c75c2d586070bfaa0aa42e0e4ba2ef74a2fd2aa81f.js",
+        "70f1cabcf315fb6d19769609c0f2e9cc798a45165e19bf0e84c161643faef868.glb",
+        "daaace2f1b595664c0e6f5a10deb494efc13a850d3cf0804b297a634d2003803.png"
+      ],
+      "source_files": [
+        {
+          "path": "assets/378774dc69a8dc33c006d5c75c2d586070bfaa0aa42e0e4ba2ef74a2fd2aa81f.js",
+          "size_bytes": 2334
+        },
+        {
+          "path": "assets/70f1cabcf315fb6d19769609c0f2e9cc798a45165e19bf0e84c161643faef868.glb",
+          "size_bytes": 2620
+        },
+        {
+          "path": "assets/daaace2f1b595664c0e6f5a10deb494efc13a850d3cf0804b297a634d2003803.png",
+          "size_bytes": 2498
+        },
+        {
+          "path": "blueprint.json",
+          "size_bytes": 873
+        },
+        {
+          "path": "manifest.json",
+          "size_bytes": 1028
+        }
+      ],
+      "source_inventory": {
+        "file_count": 5,
+        "listed_file_count": 5,
+        "listed_truncated": false,
+        "total_size_bytes": 9353,
+        "js_files": 1,
+        "json_files": 2,
+        "asset_files": 3
+      },
+      "blueprint_path": "blueprint.json"
+    },
+    {
       "slug": "items_ui",
       "name": "Items_UI",
       "author": "0mka",
@@ -14961,6 +15285,69 @@
       "blueprint_path": "Model.json"
     },
     {
+      "slug": "model-v3",
+      "name": "Model",
+      "author": "Hyperfy",
+      "description": "",
+      "preview_url": "media/model-v3/preview.png",
+      "preview_type": "image",
+      "hyp_filename": "model-v3.hyp",
+      "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/v2/hyp-files/model-v3.hyp",
+      "has_download": true,
+      "created_at": null,
+      "tags": [],
+      "interaction_modes": [],
+      "asset_profile": "medium",
+      "script_complexity": "medium",
+      "networking": "none",
+      "has_preview": true,
+      "has_source": true,
+      "has_details": true,
+      "source_status": "v2",
+      "props": {
+        "collision": true
+      },
+      "script_excerpt": "app.configure([\n  {\n    key: 'collision',\n    type: 'toggle',\n    label: 'Collision',\n    initial: true,\n    hint: 'Forces all meshes to have collision. Disable this if your model already has embedded collision.'\n  },\n])\n\nconst collision = props.collision\n\nif (collision) {\n  const m1 = new Matrix4()\n  const appInverseMatrix = app.matrixWorld.clone().invert()\n  const body = app.create('rigidbody')\n  app.traverse(node => {\n    if (node.name === 'mesh') {\n      const collider = app.create('collider')\n      collider.type = 'geometry'\n      collider.geometry = node.geometry\n      m1.copy(node.matrixWorld).premultiply(appInverseMatrix).decompose(\n        collider.position,\n        collider.quaternion,\n        collider.scale\n      )\n      body.add(collider)\n    }\n  })\n  body.position.copy(app.position)\n  body.quaternion.copy(app.quaternion)\n  body.scale.copy(app.scale)\n  world.add(body)\n}",
+      "script_path": "assets/448d865815800831237e06e9d5817d74cb600dfa8e7fec74eb209d63fc46f0aa.js",
+      "asset_files": [
+        "39ad1b405cbf41a90825dadf0b554f3c3baba634636bb94a1057dd8ec0784c86.png",
+        "448d865815800831237e06e9d5817d74cb600dfa8e7fec74eb209d63fc46f0aa.js",
+        "97fc7289a38b5b49357e6fbd74e7e77fc78493dbb1c0dbc850cb8e9db9fd2530.glb"
+      ],
+      "source_files": [
+        {
+          "path": "assets/39ad1b405cbf41a90825dadf0b554f3c3baba634636bb94a1057dd8ec0784c86.png",
+          "size_bytes": 2777
+        },
+        {
+          "path": "assets/448d865815800831237e06e9d5817d74cb600dfa8e7fec74eb209d63fc46f0aa.js",
+          "size_bytes": 894
+        },
+        {
+          "path": "assets/97fc7289a38b5b49357e6fbd74e7e77fc78493dbb1c0dbc850cb8e9db9fd2530.glb",
+          "size_bytes": 3380
+        },
+        {
+          "path": "blueprint.json",
+          "size_bytes": 589
+        },
+        {
+          "path": "manifest.json",
+          "size_bytes": 776
+        }
+      ],
+      "source_inventory": {
+        "file_count": 5,
+        "listed_file_count": 5,
+        "listed_truncated": false,
+        "total_size_bytes": 8416,
+        "js_files": 1,
+        "json_files": 2,
+        "asset_files": 3
+      },
+      "blueprint_path": "blueprint.json"
+    },
+    {
       "slug": "model-vca",
       "name": "Model-VCA",
       "author": "0mka",
@@ -15329,6 +15716,77 @@
         "listed_file_count": 4,
         "listed_truncated": false,
         "total_size_bytes": 29956,
+        "js_files": 1,
+        "json_files": 2,
+        "asset_files": 2
+      },
+      "blueprint_path": "blueprint.json"
+    },
+    {
+      "slug": "neon-sign-v3",
+      "name": "Neon Sign",
+      "author": "Gert-Jan Akerboom",
+      "description": "Drag and Drop a Neon Sign into your world.",
+      "preview_url": "media/neon-sign-v3/preview.jpg",
+      "preview_type": "image",
+      "hyp_filename": "neon-sign-v3.hyp",
+      "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/v2/hyp-files/neon-sign-v3.hyp",
+      "has_download": true,
+      "created_at": null,
+      "tags": [],
+      "interaction_modes": [],
+      "asset_profile": "medium",
+      "script_complexity": "medium",
+      "networking": "none",
+      "has_preview": true,
+      "has_source": true,
+      "has_details": true,
+      "source_status": "v2",
+      "props": {
+        "text_input": "** hyperfy **",
+        "letter_spacing": 2.9000000000000004,
+        "letter_scale": 1,
+        "emission_r": 0.30000000000000004,
+        "emission_g": 0.7000000000000001,
+        "emission_b": 0.4,
+        "emission_intensity": 14.8,
+        ".emissiveIntensity: 5": 3.2,
+        "showchars": "true",
+        "visible": "true",
+        "alignment": "center",
+        "scale": 0.6000000000000001,
+        "height": 2.4000000000000004,
+        "uvcolor": 0.88
+      },
+      "script_excerpt": "/**\n * Neon Sign\n * Drag and Drop a Neon Sign into your Hyperfy V2 world.\n * \n * @author Gert-Jan Akerboom\n * https://x.com/GertJanAkerboom\n * @license MIT\n * Copyright (c) 2025 Gert-Jan Akerboom\n */\n\n// Define all supported characters and their corresponding mesh names\nconst letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';\nconst numbers = '0123456789';\nconst specialChars = {\n  '@': 'at',\n  '?': 'question',\n  '&': 'ampersand',\n  '#': 'hash',\n  '!': 'exclamation',\n  '/': 'slash',\n  '(': 'parenthesisLeft',\n  ')': 'parenthesisRight',\n  '{': 'curlyLeft',\n  '}': 'curlyRight',\n  '[': 'bracketLeft',\n  ']': 'bracketRight',\n  '*': 'asterisk',\n  '-': 'minus',\n  '_': 'underscore',\n  '\"': 'quote',\n  ':': 'colon',\n  '=': 'equals'\n};\n\n// Create a mapping object to store all character meshes\nconst meshes = {};\n\n// Load all letter meshes from the GLB file\nletters.split('').forEach(letter => {\n  meshes[letter] = app.get(letter);\n});\n\n// Load all number meshes from the GLB file\nnumbers.split('').forEach(num => {\n  meshes[num] = app.get(num);\n});\n\n// Load all special character meshes from the GLB file\nObject.entries(specialChars).forEach(([char, name]) => {\n  const mesh = app.get(name);\n  if (mesh) {\n    meshes[char] = mesh;\n  }\n});\n\n// Store references to cloned meshes for cleanup\nlet clonedMeshes = [];\n\n// Function to display the specified text as a neon sign\nfunction showLetters(text) {\n  // Remove all previously created letter meshes from the scene\n  clonedMeshes.forEach(clone => app.remove(clone));\n  clonedMeshes = [];\n\n  // Calculate total width of text including spaces for proper alignment\n  let totalWidth = 0;\n  let validLetters = 0;\n  let spaceCount = 0;\n  \n  for (let i = 0; i < text.length; i++) {\n    const letter = text[i];\n    const processedLetter = /[a-zA-Z]/.test(letter) ? letter.toUpperCase() : letter;\n    \n    if (letter === ' ') {\n      spaceCount++;\n    } else {\n      validLetters++;\n      totalWidth += spaceCount * app.config.letter_spacing;\n      spaceCount = 0;\n      if (",
+      "script_path": "assets/dec30b5cb7750688c8b6dec58de5d14fc983d909792b4955a59053dbc891521c.js",
+      "asset_files": [
+        "0359e7202144559217830bf443c998a3e3fb53c083e84975129acae29f0b28fe.glb",
+        "dec30b5cb7750688c8b6dec58de5d14fc983d909792b4955a59053dbc891521c.js"
+      ],
+      "source_files": [
+        {
+          "path": "assets/0359e7202144559217830bf443c998a3e3fb53c083e84975129acae29f0b28fe.glb",
+          "size_bytes": 1159836
+        },
+        {
+          "path": "assets/dec30b5cb7750688c8b6dec58de5d14fc983d909792b4955a59053dbc891521c.js",
+          "size_bytes": 5677
+        },
+        {
+          "path": "blueprint.json",
+          "size_bytes": 909
+        },
+        {
+          "path": "manifest.json",
+          "size_bytes": 527
+        }
+      ],
+      "source_inventory": {
+        "file_count": 4,
+        "listed_file_count": 4,
+        "listed_truncated": false,
+        "total_size_bytes": 1166949,
         "js_files": 1,
         "json_files": 2,
         "asset_files": 2
@@ -16891,6 +17349,73 @@
       "blueprint_path": "PingScriptFORcompanion.json"
     },
     {
+      "slug": "place-v52",
+      "name": "Place\ud83c\udf00",
+      "author": "homemade ~/0mka, b0gie",
+      "description": "a teleport destination.",
+      "preview_url": "media/place-v52/preview.png",
+      "preview_type": "image",
+      "hyp_filename": "place-v52.hyp",
+      "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/v2/hyp-files/place-v52.hyp",
+      "has_download": true,
+      "created_at": null,
+      "tags": [],
+      "interaction_modes": [],
+      "asset_profile": "medium",
+      "script_complexity": "medium",
+      "networking": "none",
+      "has_preview": true,
+      "has_source": true,
+      "has_details": true,
+      "source_status": "v2",
+      "props": {
+        "collision": true,
+        "location": "here",
+        "visibility": "visible",
+        "cmd": "portal",
+        "color": "red"
+      },
+      "script_excerpt": "// Configuration for the app\napp.configure([\n  {\n    key: 'visibility',\n    type: 'switch',\n    label: 'Visibility',\n    hint: 'Whether the block is visible in the world',\n    options: [\n      { label: 'Visible', value: 'visible', hint: 'block is visible' },\n      { label: 'Invisible', value: 'invisible', hint: 'block is hidden' }\n    ],\n    initial: 'visible'\n  },\n  {\n    key: 'location',\n    type: 'text',\n    label: 'Place',\n    hint: 'The command players will type to teleport here (e.g., \"spawn\", \"home\")',\n    initial: 'place',\n    placeholder: 'Enter command name (without slash)'\n  },\n]);\n\napp.keepActive = true;\n\n// SkinnedMesh\nlet rig, anims, posText, rotText, uiTitle;\nrig = app.get('PlaceRig')\nanims = rig.anims\nrig.play({ name: 'PlaceSpin', loop: true, fade: 0 });\n// Toggle visibility of block model\nconst blockPlace = app.get('PlaceHit');\nblockPlace.castShadow = false\nblockPlace.recieveShadow = false\nif (props.visibility === 'invisible') {\n  blockPlace.active = false;\n  rig.active = false\n}\n// Conditionally create UI based on visibility setting\nif (props.visibility === 'visible') {\n  // Create UI container\n  const ui = app.create('ui', {\n    width: 250,\n    height: 100,\n    backgroundColor: 'rgba(0,15,30,0.9)',\n    borderRadius: 8,\n    padding: 5,\n    justifyContent: 'center',\n    gap: 7,\n    alignItems: 'center'\n  });\n  ui.billboard = 'y'; // Face camera on Y-axis\n  ui.position.set(0, 0.5, 0); // 1.5 units above app\n\n  // Create position display text\n  posText = app.create('uitext', {\n    value: `X: 0.00\\nY: 0.00\\nZ: 0.00`, // Initial value, multi-line\n    fontSize: 16,\n    color: '#ffffff',\n    textAlign: 'left'\n  });\n  \n  // Create rotation display text\n  rotText = app.create('uitext', {\n    value: `RX: 0.00, RY: 0.00, RZ: 0.00`,\n    fontSize: 16,\n    color: '#ffffff',\n    textAlign: 'left'\n  });\n\n  // Create instance ID display text\n  uiTitle = app.create('uitext', {\n    value: props.location,\n    color: '#cccccc',\n    textAlign: 'center',\n    padding: 6\n ",
+      "script_path": "assets/260da0f549bcf7c1d902a0c797ab77c9602de5729c49f42092c4a2dd281bbfe9.js",
+      "asset_files": [
+        "260da0f549bcf7c1d902a0c797ab77c9602de5729c49f42092c4a2dd281bbfe9.js",
+        "5a446fe25fa1355add5ca30cff36bc076eb05beacc26ed7c3c3c7ac2361ef33b.webp",
+        "94fe96b10eb2468b4f80b42aaea7565ca1c4aa570b23ccdb21d748a889dab9e1.glb"
+      ],
+      "source_files": [
+        {
+          "path": "assets/260da0f549bcf7c1d902a0c797ab77c9602de5729c49f42092c4a2dd281bbfe9.js",
+          "size_bytes": 3588
+        },
+        {
+          "path": "assets/5a446fe25fa1355add5ca30cff36bc076eb05beacc26ed7c3c3c7ac2361ef33b.webp",
+          "size_bytes": 64510
+        },
+        {
+          "path": "assets/94fe96b10eb2468b4f80b42aaea7565ca1c4aa570b23ccdb21d748a889dab9e1.glb",
+          "size_bytes": 65912
+        },
+        {
+          "path": "blueprint.json",
+          "size_bytes": 764
+        },
+        {
+          "path": "manifest.json",
+          "size_bytes": 782
+        }
+      ],
+      "source_inventory": {
+        "file_count": 5,
+        "listed_file_count": 5,
+        "listed_truncated": false,
+        "total_size_bytes": 135556,
+        "js_files": 1,
+        "json_files": 2,
+        "asset_files": 3
+      },
+      "blueprint_path": "blueprint.json"
+    },
+    {
       "slug": "plane",
       "name": "Plane",
       "author": "ash",
@@ -17275,6 +17800,160 @@
         "asset_files": 1
       },
       "blueprint_path": "PlayerTag-UInew.json"
+    },
+    {
+      "slug": "portal-v9",
+      "name": "Portal\ud83c\udf00",
+      "author": "homemade",
+      "description": "made by 0mka\nPortal to a Place.",
+      "preview_url": "media/portal-v9/preview.png",
+      "preview_type": "image",
+      "hyp_filename": "portal-v9.hyp",
+      "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/v2/hyp-files/portal-v9.hyp",
+      "has_download": true,
+      "created_at": null,
+      "tags": [],
+      "interaction_modes": [],
+      "asset_profile": "medium",
+      "script_complexity": "medium",
+      "networking": "none",
+      "has_preview": true,
+      "has_source": true,
+      "has_details": true,
+      "source_status": "v2",
+      "props": {
+        "collision": true,
+        "portalName": "Portal\ud83c\udf00",
+        "portalDest": "here",
+        "uiWidth": 300,
+        "uiHeight": 40,
+        "uiYOffset": 2.2,
+        "uiFontSize": 35,
+        "visibility": "visible",
+        "uiVisibility": "visible",
+        "uiFontColor": "blue",
+        "aVisibility": "visible",
+        "eVisibility": "visible",
+        "rimEmissive": 1.1,
+        "rimSpeed": 0.001
+      },
+      "script_excerpt": "app.configure([\n\t{\n\t\tkey: 'visibilitySection',\n\t\ttype: 'section',\n\t\tlabel: 'Visual Config',\n\t},\n\t{\n\t\tkey: 'uiVisibility',\n\t\ttype: 'switch',\n\t\tlabel: 'UI Visibility',\n\t\toptions: [\n\t\t\t{ label: 'Visible', value: 'visible' },\n\t\t\t{ label: 'Invisible', value: 'invisible' }\n\t\t],\n\t\tinitial: 'visible',\n\t\thint: 'Controls visibility of the UI container'\n\t},\n\t{\n\t\tkey: 'aVisibility',\n\t\ttype: 'switch',\n\t\tlabel: 'Portal Visibility',\n\t\toptions: [\n\t\t\t{ label: 'Visible', value: 'visible' },\n\t\t\t{ label: 'Invisible', value: 'invisible' }\n\t\t],\n\t\tinitial: 'visible'\n\t},\n\t{\n\t\tkey: 'eVisibility',\n\t\ttype: 'switch',\n\t\tlabel: 'PortalRim Visibility',\n\t\toptions: [\n\t\t\t{ label: 'Visible', value: 'visible' },\n\t\t\t{ label: 'Invisible', value: 'invisible' }\n\t\t],\n\t\tinitial: 'visible'\n\t},\n\t{\n\t\tkey: 'portalConfigSection',\n\t\ttype: 'section',\n\t\tlabel: 'Portal Config',\n\t},\n\t{\n\t\tkey: 'portalName',\n\t\ttype: 'text',\n\t\tlabel: 'Portal Name',\n\t\tinitial: 'Portal',\n\t\tplaceholder: 'Enter a name for this portal',\n\t\thint: 'Name displayed above the portal'\n\t},\n\t{\n\t\tkey: 'portalDest',\n\t\ttype: 'text',\n\t\tlabel: 'Portal Destination',\n\t\tinitial: 'Place Name',\n\t\tplaceholder: 'Enter Destination',\n\t\thint: 'Where it goes'\n\t},\n\t{\n\t\tkey: 'rimSpeed',\n\t\ttype: 'range',\n\t\tlabel: 'Scroll Speed',\n\t\tmin: 0,\n\t\tmax: 0.01,\n\t\tstep: 0.001,\n\t\tinitial: 0,\n\t},\n\t{\n\t\tkey: 'rimEmissive',\n\t\ttype: 'range',\n\t\tlabel: 'Emissive Intensity',\n\t\tmin: 0,\n\t\tmax: 5,\n\t\tstep: 0.1,\n\t\tinitial: 1.5,\n\t},\n\t{\n\t\tkey: 'uiConfigSection',\n\t\ttype: 'section',\n\t\tlabel: 'UI Config',\n\t},\n\t{\n\t\tkey: 'uiWidth',\n\t\ttype: 'number',\n\t\tlabel: 'UI Width',\n\t\tinitial: 200,\n\t\thint: 'Width of the UI container',\n\t},\n\t{\n\t\tkey: 'uiHeight',\n\t\ttype: 'number',\n\t\tlabel: 'UI Height',\n\t\tinitial: 80,\n\t\thint: 'Height of the UI container',\n\t},\n\t{\n\t\tkey: 'uiYOffset',\n\t\ttype: 'range',\n\t\tlabel: 'ui Y Offset',\n\t\tmin: 0,\n\t\tmax: 5,\n\t\tstep: 0.1,\n\t\tinitial: 1.5,\n\t\thint: 'Y offset of the UI container',\n\t},\n\t{\n\t\tkey: 'uiFontSize',\n\t\ttype: 'number',\n\t\tlabel: 'UI Font Size',\n\t\tinitial: 20,\n\t\thint: 'Font size of t",
+      "script_path": "assets/dff7ed4455cac0afef9419e84118aaa415e95a3f0b10ee7086c6bae20b7e224b.js",
+      "asset_files": [
+        "23de53dfc14eb182cdcc6654081fffa00cf22cd1d365140db6f4132b9aba3b00.glb",
+        "86fd355db34421f0eca4cf61c193f0b313ebe7cd311a0364d01bf3bf999901e9.png",
+        "dff7ed4455cac0afef9419e84118aaa415e95a3f0b10ee7086c6bae20b7e224b.js"
+      ],
+      "source_files": [
+        {
+          "path": "assets/23de53dfc14eb182cdcc6654081fffa00cf22cd1d365140db6f4132b9aba3b00.glb",
+          "size_bytes": 42108
+        },
+        {
+          "path": "assets/86fd355db34421f0eca4cf61c193f0b313ebe7cd311a0364d01bf3bf999901e9.png",
+          "size_bytes": 174457
+        },
+        {
+          "path": "assets/dff7ed4455cac0afef9419e84118aaa415e95a3f0b10ee7086c6bae20b7e224b.js",
+          "size_bytes": 4457
+        },
+        {
+          "path": "blueprint.json",
+          "size_bytes": 1002
+        },
+        {
+          "path": "manifest.json",
+          "size_bytes": 780
+        }
+      ],
+      "source_inventory": {
+        "file_count": 5,
+        "listed_file_count": 5,
+        "listed_truncated": false,
+        "total_size_bytes": 222804,
+        "js_files": 1,
+        "json_files": 2,
+        "asset_files": 3
+      },
+      "blueprint_path": "blueprint.json"
+    },
+    {
+      "slug": "portal-v4",
+      "name": "Portal\ud83c\udf10",
+      "author": "homemade",
+      "description": "made by 0mka\nPortal out of world.",
+      "preview_url": "media/portal-v4/preview.jpg",
+      "preview_type": "image",
+      "hyp_filename": "portal-v4.hyp",
+      "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/v2/hyp-files/portal-v4.hyp",
+      "has_download": true,
+      "created_at": null,
+      "tags": [],
+      "interaction_modes": [],
+      "asset_profile": "medium",
+      "script_complexity": "medium",
+      "networking": "none",
+      "has_preview": true,
+      "has_source": true,
+      "has_details": true,
+      "source_status": "v2",
+      "props": {
+        "collision": true,
+        "portalName": "Portal\ud83c\udf10",
+        "portalDest": "somewhere",
+        "uiWidth": 300,
+        "uiHeight": 40,
+        "uiYOffset": 2.2,
+        "uiFontSize": 35,
+        "visibility": "visible",
+        "uiVisibility": "visible",
+        "uiFontColor": "blue",
+        "aVisibility": "visible",
+        "eVisibility": "visible",
+        "rimEmissive": 1.1,
+        "rimSpeed": 0,
+        "worldUrl": "https://google.com",
+        "newTab": false
+      },
+      "script_excerpt": "app.configure([\n\t{\n\t\tkey: 'visibilitySection',\n\t\ttype: 'section',\n\t\tlabel: 'Visual Config',\n\t},\n\t{\n\t\tkey: 'uiVisibility',\n\t\ttype: 'switch',\n\t\tlabel: 'UI Visibility',\n\t\toptions: [\n\t\t\t{ label: 'Visible', value: 'visible' },\n\t\t\t{ label: 'Invisible', value: 'invisible' }\n\t\t],\n\t\tinitial: 'visible',\n\t\thint: 'Controls visibility of the UI container'\n\t},\n\t{\n\t\tkey: 'aVisibility',\n\t\ttype: 'switch',\n\t\tlabel: 'Portal Visibility',\n\t\toptions: [\n\t\t\t{ label: 'Visible', value: 'visible' },\n\t\t\t{ label: 'Invisible', value: 'invisible' }\n\t\t],\n\t\tinitial: 'visible'\n\t},\n\t{\n\t\tkey: 'eVisibility',\n\t\ttype: 'switch',\n\t\tlabel: 'PortalRim Visibility',\n\t\toptions: [\n\t\t\t{ label: 'Visible', value: 'visible' },\n\t\t\t{ label: 'Invisible', value: 'invisible' }\n\t\t],\n\t\tinitial: 'visible'\n\t},\n\t{\n\t\tkey: 'portalConfigSection',\n\t\ttype: 'section',\n\t\tlabel: 'Portal Config',\n\t},\n\t{\n\t\tkey: 'portalName',\n\t\ttype: 'text',\n\t\tlabel: 'Portal Name',\n\t\tinitial: 'Portal',\n\t\tplaceholder: 'Enter a name for this portal',\n\t\thint: 'Name displayed above the portal'\n\t},\n\t{\n\t\tkey: 'worldUrl',\n\t\ttype: 'text',\n\t\tlabel: 'Destination World URL',\n\t\tplaceholder: 'https://google.com',\n\t},\n\t\t{\n\t\tkey: 'newTab',\n\t\ttype: 'switch',\n\t\tlabel: 'Open in New Tab',\n\t\toptions: [\n\t\t\t{ label: 'Yes', value: true },\n\t\t\t{ label: 'No', value: false }\n\t\t],\n\t\tinitial: true,\n\t\thint: 'Whether to open the world in a new tab or the current tab'\n\t},\n\t{\n\t\tkey: 'rimSpeed',\n\t\ttype: 'range',\n\t\tlabel: 'Scroll Speed',\n\t\tmin: 0,\n\t\tmax: 2,\n\t\tstep: 0.1,\n\t\tinitial: 0,\n\t},\n\t{\n\t\tkey: 'rimEmissive',\n\t\ttype: 'range',\n\t\tlabel: 'Emissive Intensity',\n\t\tmin: 0,\n\t\tmax: 5,\n\t\tstep: 0.1,\n\t\tinitial: 1.5,\n\t},\n\t{\n\t\tkey: 'uiConfigSection',\n\t\ttype: 'section',\n\t\tlabel: 'UI Config',\n\t},\n\t{\n\t\tkey: 'uiWidth',\n\t\ttype: 'number',\n\t\tlabel: 'UI Width',\n\t\tinitial: 200,\n\t\thint: 'Width of the UI container',\n\t},\n\t{\n\t\tkey: 'uiHeight',\n\t\ttype: 'number',\n\t\tlabel: 'UI Height',\n\t\tinitial: 80,\n\t\thint: 'Height of the UI container',\n\t},\n\t{\n\t\tkey: 'uiYOffset',\n\t\ttype: 'range',\n\t\tlabel: 'ui Y Offset',\n\t\tmin: 0,",
+      "script_path": "assets/68552553265e02f3529cbde41aee1335bbd95b6b3a9486f5feef5861e26bda03.js",
+      "asset_files": [
+        "23de53dfc14eb182cdcc6654081fffa00cf22cd1d365140db6f4132b9aba3b00.glb",
+        "68552553265e02f3529cbde41aee1335bbd95b6b3a9486f5feef5861e26bda03.js",
+        "86fd355db34421f0eca4cf61c193f0b313ebe7cd311a0364d01bf3bf999901e9.png"
+      ],
+      "source_files": [
+        {
+          "path": "assets/23de53dfc14eb182cdcc6654081fffa00cf22cd1d365140db6f4132b9aba3b00.glb",
+          "size_bytes": 42108
+        },
+        {
+          "path": "assets/68552553265e02f3529cbde41aee1335bbd95b6b3a9486f5feef5861e26bda03.js",
+          "size_bytes": 4380
+        },
+        {
+          "path": "assets/86fd355db34421f0eca4cf61c193f0b313ebe7cd311a0364d01bf3bf999901e9.png",
+          "size_bytes": 174457
+        },
+        {
+          "path": "blueprint.json",
+          "size_bytes": 1064
+        },
+        {
+          "path": "manifest.json",
+          "size_bytes": 780
+        }
+      ],
+      "source_inventory": {
+        "file_count": 5,
+        "listed_file_count": 5,
+        "listed_truncated": false,
+        "total_size_bytes": 222789,
+        "js_files": 1,
+        "json_files": 2,
+        "asset_files": 3
+      },
+      "blueprint_path": "blueprint.json"
     },
     {
       "slug": "position",
@@ -18576,6 +19255,87 @@
         "asset_files": 2
       },
       "blueprint_path": "Rain.json"
+    },
+    {
+      "slug": "rain-v3",
+      "name": "Rain",
+      "author": "Gert-Jan Akerboom",
+      "description": "Drag and Drop some rain into your world.",
+      "preview_url": "media/rain-v3/preview.png",
+      "preview_type": "image",
+      "hyp_filename": "rain-v3.hyp",
+      "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/v2/hyp-files/rain-v3.hyp",
+      "has_download": true,
+      "created_at": null,
+      "tags": [],
+      "interaction_modes": [],
+      "asset_profile": "medium",
+      "script_complexity": "medium",
+      "networking": "none",
+      "has_preview": true,
+      "has_source": true,
+      "has_details": true,
+      "source_status": "v2",
+      "props": {
+        "fireType": "custom",
+        "baseColor": "#ff3800",
+        "glowIntensity": 5,
+        "opacity": 0.6000000000000001,
+        "maxParticles": 2000,
+        "spawnRate": 1000,
+        "lifetime": 1.8,
+        "spawnRadius": 50,
+        "minScale": 0.02,
+        "maxScale": 0.07,
+        "minSpeed": 3,
+        "maxSpeed": 12,
+        "gravity": 2.8000000000000003,
+        "turbulence": 2,
+        "enableSmoke": false,
+        "smokeColor": "#444444",
+        "smokeOpacity": 1,
+        "smokeRatio": 0,
+        "presetName": "Test Fire",
+        "savePreset": false,
+        "loadPreset": "heavy",
+        "wind": 0.9,
+        "windDirection": 195,
+        "visible": "false"
+      },
+      "script_excerpt": "/**\n * Rain\n * Drag and Drop some Rain into your Hyperfy V2 world.\n * \n * @author Gert-Jan Akerboom\n * https://x.com/GertJanAkerboom\n * @license MIT\n * Copyright (c) 2025 Gert-Jan Akerboom\n */\n\n// Configure UI inputs for the rain particle system\napp.configure(() => {\n\treturn [\n\t\t{\n\t\t\ttype: 'switch',\n\t\t\tkey: 'visible',\n\t\t\tlabel: 'Move Cube',\n\t\t\toptions: [\n\t\t\t\t{\n\t\t\t\t\tlabel: 'Show',\n\t\t\t\t\tvalue: 'true',\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\tlabel: 'Hide',\n\t\t\t\t\tvalue: 'false',\n\t\t\t\t}\n\t\t\t],\n\t\t\tinitial: 'true',\n\t\t},\n\t\t{\n\t\t\tkey: 'maxParticles',\n\t\t\ttype: 'number',\n\t\t\tlabel: 'Max Particles',\n\t\t\tmin: 1,\n\t\t\tmax: 5000,\n\t\t\tstep: 50,\n\t\t\tinitial: 1000,\n\t\t},\n\t\t{\n\t\t\tkey: 'spawnRate',\n\t\t\ttype: 'number',\n\t\t\tlabel: 'Spawn Rate (per sec)',\n\t\t\tmin: 1,\n\t\t\tmax: 3000,\n\t\t\tstep: 10,\n\t\t\tinitial: 200,\n\t\t},\n\t\t{\n\t\t\tkey: 'spawnRadius',\n\t\t\ttype: 'number',\n\t\t\tlabel: 'Rain Area (meters)',\n\t\t\tmin: 1,\n\t\t\tmax: 300,\n\t\t\tstep: 1,\n\t\t\tinitial: 20,\n\t\t},\n\t\t{\n\t\t\tkey: 'minScale',\n\t\t\ttype: 'range',\n\t\t\tlabel: 'Min Particle Size',\n\t\t\tmin: 0.01,\n\t\t\tmax: 0.1,\n\t\t\tstep: 0.01,\n\t\t\tinitial: 0.02,\n\t\t},\n\t\t{\n\t\t\tkey: 'maxScale',\n\t\t\ttype: 'range',\n\t\t\tlabel: 'Max Particle Size',\n\t\t\tmin: 0.02,\n\t\t\tmax: 0.2,\n\t\t\tstep: 0.01,\n\t\t\tinitial: 0.05,\n\t\t},\n\t\t{\n\t\t\ttype: 'section',\n\t\t\tkey: 'physics',\n\t\t\tlabel: 'Rain Physics',\n\t\t},\n\t\t{\n\t\t\tkey: 'minSpeed',\n\t\t\ttype: 'range',\n\t\t\tlabel: 'Min Speed',\n\t\t\tmin: 1.0,\n\t\t\tmax: 10.0,\n\t\t\tstep: 0.5,\n\t\t\tinitial: 3.0,\n\t\t},\n\t\t{\n\t\t\tkey: 'maxSpeed',\n\t\t\ttype: 'range',\n\t\t\tlabel: 'Max Speed',\n\t\t\tmin: 2.0,\n\t\t\tmax: 20.0,\n\t\t\tstep: 0.5,\n\t\t\tinitial: 6.0,\n\t\t},\n\t\t{\n\t\t\tkey: 'gravity',\n\t\t\ttype: 'range',\n\t\t\tlabel: 'Gravity',\n\t\t\tmin: 0.5,\n\t\t\tmax: 5.0,\n\t\t\tstep: 0.1,\n\t\t\tinitial: 2.0,\n\t\t},\n\t]\n})\n\n// Get the required meshes from the GLB file\nconst raindrop = app.get('Icosphere');\nif (!raindrop) {\n\tconsole.error('Could not find raindrop - make sure your GLB has a mesh named \"Icosphere\"');\n\treturn;\n}\n\n// Get the ring mesh for splash effects\nconst ring = app.get('ring');\nif (!ring) {\n\tconsole.error('Could not find ring - make sure your GLB has a mesh name",
+      "script_path": "assets/e2b650151a467220860356799d31857bd1088385e6fa66e3d62b24ad9a3fc23b.js",
+      "asset_files": [
+        "e114dcde2120b91f2c943c50459a706c6a2efe7385ad4c9a8d127bc27ebea2ce.glb",
+        "e2b650151a467220860356799d31857bd1088385e6fa66e3d62b24ad9a3fc23b.js"
+      ],
+      "source_files": [
+        {
+          "path": "assets/e114dcde2120b91f2c943c50459a706c6a2efe7385ad4c9a8d127bc27ebea2ce.glb",
+          "size_bytes": 6796
+        },
+        {
+          "path": "assets/e2b650151a467220860356799d31857bd1088385e6fa66e3d62b24ad9a3fc23b.js",
+          "size_bytes": 9792
+        },
+        {
+          "path": "blueprint.json",
+          "size_bytes": 1046
+        },
+        {
+          "path": "manifest.json",
+          "size_bytes": 524
+        }
+      ],
+      "source_inventory": {
+        "file_count": 4,
+        "listed_file_count": 4,
+        "listed_truncated": false,
+        "total_size_bytes": 18158,
+        "js_files": 1,
+        "json_files": 2,
+        "asset_files": 2
+      },
+      "blueprint_path": "blueprint.json"
     },
     {
       "slug": "rainv3",
@@ -21142,6 +21902,89 @@
       "blueprint_path": "Seat\ud83e\ude91v2.json"
     },
     {
+      "slug": "seat-v32",
+      "name": "Seat\ud83e\ude91",
+      "author": "homemade",
+      "description": "made by 0mka\ntake a load off the easy way.",
+      "preview_url": "media/seat-v32/preview.png",
+      "preview_type": "image",
+      "hyp_filename": "seat-v32.hyp",
+      "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/v2/hyp-files/seat-v32.hyp",
+      "has_download": true,
+      "created_at": null,
+      "tags": [],
+      "interaction_modes": [],
+      "asset_profile": "medium",
+      "script_complexity": "medium",
+      "networking": "none",
+      "has_preview": true,
+      "has_source": true,
+      "has_details": true,
+      "source_status": "v2",
+      "props": {
+        "emote": {
+          "type": "emote",
+          "name": "Sitting And Talking To Another Person.glb",
+          "url": "asset://ad0dc6273210096fa432edaddea494beaa855cc3f108f2e909c6d4242559a97a.glb"
+        },
+        "visibleType": "invisible",
+        "hoverImage": {
+          "type": "texture",
+          "name": "LucideArmchair (1).png",
+          "url": "asset://94b7856da6a8e9874150a6b3086182ae655851535f575068c3ad54b6a9def8d1.png"
+        }
+      },
+      "script_excerpt": "app.configure([\n  {\n    key: 'emote',\n    type: 'file',\n    kind: 'emote',\n    label: 'Emote'\n  },\n  {\n    key: 'visibleType',\n    type: 'switch',\n    label: 'Visibility Type',\n    options: [\n      { value: 'visible', label: 'Visible' },\n      { value: 'invisible', label: 'Invisible' }\n    ],\n    initial: 'visible'\n  },\n  {\n    key: 'hoverImage',\n    type: 'file',\n    kind: 'texture',\n    label: 'Hover Image',\n    optional: true\n  }\n])\n\n\n\nconst DEG2RAD = Math.PI / 180\nconst state = app.state\n\nif (world.isServer) {\n  // Simplified server logic - no need for leave event\n  state.playerId = null\n\n  app.on('request', playerId => {\n    if (state.playerId) return\n    state.playerId = playerId\n    app.send('playerId', playerId)\n  })\n\n  app.on('release', playerId => {\n    if (state.playerId === playerId) {\n      state.playerId = null\n      app.send('playerId', null)\n    }\n  })\n}\n\nif (world.isClient) {\n  const player = world.getPlayer()\n  const trigger = app.get('Trigger')\n\n  // Visibility control for trigger mesh\n  if (trigger) {\n    const updateVisibility = (value) => {\n      trigger.visible = value === 'visible'\n    }\n    app.on('props:visibleType', updateVisibility)\n    updateVisibility(app.props.visibleType)\n  }\n\n  // Setup seat anchor\n  const anchor = app.create('anchor', { id: 'seat' })\n  anchor.position.set(0, 0.12, 0) // Adjust based on your model\n  anchor.rotation.y = 280 * DEG2RAD // Fully configurable\n  app.add(anchor)\n\n  let control\n  let isSitting = false\n  let hoverUI = null\n\n  // Create hover UI\n  function createHoverUI() {\n    if (!props.hoverImage?.url) return null\n\n    const container = app.create('ui', {\n      space: 'world',\n      position: [0, 0.8, 0],\n      display: 'none',\n      width: 30,\n      height: 20,\n      billboard: 'full',\n    })\n\n    const image = app.create('uiimage', {\n      src: props.hoverImage.url,\n      width: 30,\n      height: 20,\n      objectFit: 'contain',\n      backgroundColor: 'transparent'\n    })\n\n    container.add(image)\n    app.",
+      "script_path": "assets/437bbbfe58db1d1a6f6d1d1d1b0081e9380ba6c2946576b477eefa97e6df02e8.js",
+      "asset_files": [
+        "437bbbfe58db1d1a6f6d1d1d1b0081e9380ba6c2946576b477eefa97e6df02e8.js",
+        "6be2ff457c549182e139847120784bd7a0cdfc7d27730b33adc973afbcb51b32.png",
+        "94b7856da6a8e9874150a6b3086182ae655851535f575068c3ad54b6a9def8d1.png",
+        "ad0dc6273210096fa432edaddea494beaa855cc3f108f2e909c6d4242559a97a.glb",
+        "bc106fe8e4158546ce8a5b3565105659b2d8c3b6fc96e7835ac3d8c373a6978c.glb"
+      ],
+      "source_files": [
+        {
+          "path": "assets/437bbbfe58db1d1a6f6d1d1d1b0081e9380ba6c2946576b477eefa97e6df02e8.js",
+          "size_bytes": 4089
+        },
+        {
+          "path": "assets/6be2ff457c549182e139847120784bd7a0cdfc7d27730b33adc973afbcb51b32.png",
+          "size_bytes": 659589
+        },
+        {
+          "path": "assets/94b7856da6a8e9874150a6b3086182ae655851535f575068c3ad54b6a9def8d1.png",
+          "size_bytes": 17683
+        },
+        {
+          "path": "assets/ad0dc6273210096fa432edaddea494beaa855cc3f108f2e909c6d4242559a97a.glb",
+          "size_bytes": 1410320
+        },
+        {
+          "path": "assets/bc106fe8e4158546ce8a5b3565105659b2d8c3b6fc96e7835ac3d8c373a6978c.glb",
+          "size_bytes": 6260
+        },
+        {
+          "path": "blueprint.json",
+          "size_bytes": 1059
+        },
+        {
+          "path": "manifest.json",
+          "size_bytes": 1295
+        }
+      ],
+      "source_inventory": {
+        "file_count": 7,
+        "listed_file_count": 7,
+        "listed_truncated": false,
+        "total_size_bytes": 2100295,
+        "js_files": 1,
+        "json_files": 2,
+        "asset_files": 5
+      },
+      "blueprint_path": "blueprint.json"
+    },
+    {
       "slug": "securitybot",
       "name": "SecurityBot",
       "author": "MetaRick",
@@ -22606,6 +23449,244 @@
       "blueprint_path": "blueprint.json"
     },
     {
+      "slug": "spherea-v9",
+      "name": "Spherea",
+      "author": "homemade",
+      "description": "made by b0gie\nsignal trigger",
+      "preview_url": "media/spherea-v9/preview.jpg",
+      "preview_type": "image",
+      "hyp_filename": "spherea-v9.hyp",
+      "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/v2/hyp-files/spherea-v9.hyp",
+      "has_download": true,
+      "created_at": null,
+      "tags": [],
+      "interaction_modes": [],
+      "asset_profile": "medium",
+      "script_complexity": "medium",
+      "networking": "none",
+      "has_preview": true,
+      "has_source": true,
+      "has_details": true,
+      "source_status": "v2",
+      "props": {
+        "signal": "Wearable:Reveal",
+        "showMesh": false,
+        "debugColor": "white",
+        "visibleType": "visible",
+        "revealSignal": "Wearable:Reveal",
+        "equipSignal": "Wearable:Equip",
+        "showMesh1": "on",
+        "showMesh2": "on",
+        "showMesh3": "on"
+      },
+      "script_excerpt": "/*============================================================================\n * Spherea\n *============================================================================\n * Emits a signal when an object enters or leaves the trigger area.\n * - Only requires a 'Collider' object as the trigger volume.\n * - Emits the configured signal with value 1 on enter, 0 on leave.\n *============================================================================*/\n\napp.configure([\n\t{\n\t\tkey: 'signal',\n\t\ttype: 'text',\n\t\tlabel: 'Signal Name',\n\t\tinitial: 'Trigger'\n\t},\n\t{\n\t\tkey: 'visibleType',\n\t\ttype: 'switch',\n\t\tlabel: 'Visbility Type',\n\t\toptions: [\n\t\t\t{ value: 'visible', label: 'Visible' },\n\t\t\t{ value: 'invisible', label: 'Invisible' }\n\t\t],\n\t\tinitial: 'Invisible'\n\t}\n])\n\nconst signal = props.signal;\n\nconst mesh = app.get('Sphere')\nconst lod = app.get('LOD')\nconst rigidBody = app.get('AreaTrigger');\nconst collider = app.get('Collider');\n\n// Occupancy tracking for multiplayer-safe triggers\nconst occupants = new Set();\n\n// Set mesh visibility if it exists\nif (mesh) {\n\tmesh.active = true;\n\tconst updateVisibility = (value) => {\n\t\tmesh.active = value === 'visible'\n\t\tlod.active = value === 'visible'\n\t}\n\tapp.on('props:visibleType', updateVisibility)\n\tupdateVisibility(app.props.visibleType)\n\n}\n\nrigidBody.onTriggerEnter = (e) => {\n\tconst id = e?.playerId || e?.entityId;\n\tif (!id) {\n\t\tconsole.log('[Spherea] Ignoring ENTER for non-player entity', e);\n\t\treturn;\n\t}\n\toccupants.add(id);\n\tconsole.log('[Spherea] Trigger ENTER', id, 'occupants:', occupants.size);\n\n\t// Emit player-specific signal for the entering player\n\tif (e?.playerId) {\n\t\tconsole.log(`[Spherea] Emitting player-specific signal for player: ${e.playerId}`);\n\t\tworld.emit(signal, { playerId: e.playerId });\n\t}\n\n\t// Also emit the general signal if this is the first occupant\n\tif (occupants.size === 1) {\n\t\tconsole.log('[Spherea] Emitting OPEN');\n\t\tapp.emit(signal, 1);\n\t}\n};\n\nrigidBody.onTriggerLeave = (e) => {\n\tconst id = e?.playerId || e?.entityId;",
+      "script_path": "assets/7623dc0f6715e5963ff36f54efbdb8dcf3e2b9bd44b81db180df3de8cf852d55.js",
+      "asset_files": [
+        "6be2ff457c549182e139847120784bd7a0cdfc7d27730b33adc973afbcb51b32.png",
+        "7623dc0f6715e5963ff36f54efbdb8dcf3e2b9bd44b81db180df3de8cf852d55.js",
+        "acd9ab1fd12d8e98bcd7859e3fc499ec449a4b2e2d63b4f19af5a8bc1c682c18.glb"
+      ],
+      "source_files": [
+        {
+          "path": "assets/6be2ff457c549182e139847120784bd7a0cdfc7d27730b33adc973afbcb51b32.png",
+          "size_bytes": 659589
+        },
+        {
+          "path": "assets/7623dc0f6715e5963ff36f54efbdb8dcf3e2b9bd44b81db180df3de8cf852d55.js",
+          "size_bytes": 2407
+        },
+        {
+          "path": "assets/acd9ab1fd12d8e98bcd7859e3fc499ec449a4b2e2d63b4f19af5a8bc1c682c18.glb",
+          "size_bytes": 101616
+        },
+        {
+          "path": "blueprint.json",
+          "size_bytes": 881
+        },
+        {
+          "path": "manifest.json",
+          "size_bytes": 781
+        }
+      ],
+      "source_inventory": {
+        "file_count": 5,
+        "listed_file_count": 5,
+        "listed_truncated": false,
+        "total_size_bytes": 765274,
+        "js_files": 1,
+        "json_files": 2,
+        "asset_files": 3
+      },
+      "blueprint_path": "blueprint.json"
+    },
+    {
+      "slug": "sphere-v71",
+      "name": "Sphere\ud83c\udf00",
+      "author": "homemade",
+      "description": "made at ~/\nSpherea\ud83c\udf00 that goes to Place app.\n\nCan scale up to use as Area Volume Respawn.",
+      "preview_url": "media/sphere-v71/preview.jpg",
+      "preview_type": "image",
+      "hyp_filename": "sphere-v71.hyp",
+      "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/v2/hyp-files/sphere-v71.hyp",
+      "has_download": true,
+      "created_at": null,
+      "tags": [],
+      "interaction_modes": [],
+      "asset_profile": "medium",
+      "script_complexity": "medium",
+      "networking": "none",
+      "has_preview": true,
+      "has_source": true,
+      "has_details": true,
+      "source_status": "v2",
+      "props": {
+        "collision": true,
+        "portalName": "Spherea\ud83c\udf00",
+        "portalDest": "place5",
+        "uiWidth": 400,
+        "uiHeight": 50,
+        "uiYOffset": 1.5,
+        "uiFontSize": 40,
+        "visibility": "visible",
+        "uiVisibility": "visible",
+        "uiFontColor": "blue"
+      },
+      "script_excerpt": "app.configure([\n    {\n        key: 'portalConfigSection',\n        type: 'section',\n        label: 'Portal Config',\n    },\n    {\n        key: 'portalDest',\n        type: 'text',\n        label: 'Portal Destination',\n        initial: 'Place Name',\n        placeholder: 'Enter Destination',\n        description: 'Where it goes'\n    },\n    {\n        key: 'visibility',\n        type: 'switch',\n        label: 'SphereaPortal Visibility',\n        options: [\n            { label: 'Visible', value: 'visible' },\n            { label: 'Invisible', value: 'invisible' }\n        ],\n        initial: 'visible'\n    },\n    {\n        key: 'uiConfigSection',\n        type: 'section',\n        label: 'UI Config',\n    },\n    {\n        key: 'portalName',\n        type: 'text',\n        label: 'Portal Name',\n        initial: 'Portal',\n        placeholder: 'Enter a name for this portal',\n        description: 'Name displayed above the portal'\n    },\n    {\n        key: 'uiVisibility',\n        type: 'switch',\n        label: 'UI Visibility',\n        options: [\n            { label: 'Visible', value: 'visible' },\n            { label: 'Invisible', value: 'invisible' }\n        ],\n        initial: 'visible',\n        description: 'Controls visibility of the UI container'\n    },\n    {\n        key: 'uiWidth',\n        type: 'number',\n        label: 'UI Width',\n        initial: 200,\n        description: 'Width of the UI container',\n    },\n    {\n        key: 'uiHeight',\n        type: 'number',\n        label: 'UI Height',\n        initial: 80,\n        description: 'Height of the UI container',\n    },\n    {\n        key: 'uiYOffset',\n        type: 'number',\n        label: 'UI Y Offset',\n        initial: 2,\n        description: 'Y offset of the UI container',\n        dp: 2,\n    },\n    {\n        key: 'uiFontSize',\n        type: 'number',\n        label: 'UI Font Size',\n        initial: 20,\n        description: 'Font size of the UI title',\n    },\n    {\n        key: 'uiFontColor',\n        type: 'text',\n        label: 'UI Fon",
+      "script_path": "assets/20a1d0c8ad4898f6db1f603ab2fa713481ffd6669262c265848d47ff4cad53b9.js",
+      "asset_files": [
+        "20a1d0c8ad4898f6db1f603ab2fa713481ffd6669262c265848d47ff4cad53b9.js",
+        "63adb876e475633acecf5ba00d9bd42cc9288edf8ec83955adc63e8a9590cc68.png",
+        "63f65b109c0c002d64914dba5eec560036f04357d2c3ff04e91836749456326c.glb"
+      ],
+      "source_files": [
+        {
+          "path": "assets/20a1d0c8ad4898f6db1f603ab2fa713481ffd6669262c265848d47ff4cad53b9.js",
+          "size_bytes": 3822
+        },
+        {
+          "path": "assets/63adb876e475633acecf5ba00d9bd42cc9288edf8ec83955adc63e8a9590cc68.png",
+          "size_bytes": 35176
+        },
+        {
+          "path": "assets/63f65b109c0c002d64914dba5eec560036f04357d2c3ff04e91836749456326c.glb",
+          "size_bytes": 100164
+        },
+        {
+          "path": "blueprint.json",
+          "size_bytes": 976
+        },
+        {
+          "path": "manifest.json",
+          "size_bytes": 780
+        }
+      ],
+      "source_inventory": {
+        "file_count": 5,
+        "listed_file_count": 5,
+        "listed_truncated": false,
+        "total_size_bytes": 140918,
+        "js_files": 1,
+        "json_files": 2,
+        "asset_files": 3
+      },
+      "blueprint_path": "blueprint.json"
+    },
+    {
+      "slug": "sphere-v11",
+      "name": "Sphere\ud83d\udd0a",
+      "author": "homemade",
+      "description": "made by b0gie\nspatial ambience",
+      "preview_url": "media/sphere-v11/preview.png",
+      "preview_type": "image",
+      "hyp_filename": "sphere-v11.hyp",
+      "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/v2/hyp-files/sphere-v11.hyp",
+      "has_download": true,
+      "created_at": null,
+      "tags": [],
+      "interaction_modes": [],
+      "asset_profile": "medium",
+      "script_complexity": "medium",
+      "networking": "none",
+      "has_preview": true,
+      "has_source": true,
+      "has_details": true,
+      "source_status": "v2",
+      "props": {
+        "signal": "Ambiance1",
+        "showMesh": "visible",
+        "debugColor": "blue",
+        "audioFile": {
+          "type": "audio",
+          "name": "spaceship-ambiace-24881.mp3",
+          "url": "asset://1e7e62efc3d19d97f65d5952efe058b80308659681c010cad92412d47163435c.mp3"
+        },
+        "audio": {
+          "type": "audio",
+          "name": "spaceship-ambiace-24881.mp3",
+          "url": "asset://1e7e62efc3d19d97f65d5952efe058b80308659681c010cad92412d47163435c.mp3"
+        },
+        "volume": 1,
+        "audioType": "music",
+        "loop": true,
+        "spatial": true,
+        "distanceModel": "exponential",
+        "refDistance": 1,
+        "maxDistance": 10,
+        "rolloffFactor": 2,
+        "coneInnerAngle": 40,
+        "coneOuterAngle": 60,
+        "coneOuterGain": 1,
+        "defaultVolume": 1,
+        "isSpatial": true,
+        "minDistance": 1,
+        "visibleType": "Invisible"
+      },
+      "script_excerpt": "/*============================================================================\n * Sphere\ud83d\udd0a \n *============================================================================\n * - Upload an `.mp3` file for ambient sound\n * - Audio always plays\n * - Spatial audio settings control audibility by proximity\n * - Show/hide debug mesh via configuration\n *============================================================================*/\n\napp.configure([\n\t{\n\t\tkey: 'showMesh',\n\t\ttype: 'switch',\n\t\tlabel: 'Visbility',\n\t\thint:'',\n\t\toptions: [\n\t\t\t{ value: 'visible', label: 'Visible' },\n\t\t\t{ value: 'invisible', label: 'Invisible' }\n\t\t],\n\t\tinitial: 'Invisible'\n\t},\n  // #region AUDIO\n\t{\n\t\ttype: 'section',\n\t\tkey: 'audioSection',\n\t\tlabel: 'Audio Settings'\n\t},\n\t{\n\t\ttype: 'file',\n\t\tkey: 'audio',\n\t\tkind: 'audio',\n\t\tlabel: 'Audio File'\n\t},\n\t{\n\t\tkey: 'defaultVolume',\n\t\ttype: 'switch',\n\t\tlabel: 'Default Volume',\n\t\thint: '\ud83d\udd07\ud83d\udd08\ud83d\udd09\ud83d\udd0a',\n\t\toptions: [\n\t\t\t{ label: 'Low', value: 1 },\n\t\t\t{ label: 'Medium', value: 5 },\n\t\t\t{ label: 'High', value: 8 }\n\t\t],\n\t\tinitial: 5\n\t},\n\t{\n\t\tkey: 'isSpatial',\n\t\ttype: 'switch',\n\t\tlabel: 'Audio Type',\n\t\toptions: [\n\t\t\t{ label: 'Spatial (3D)', value: true },\n\t\t\t{ label: 'Global', value: false }\n\t\t],\n\t\tinitial: true\n\t},\n\t{\n\t\tkey: 'audioType',\n\t\ttype: 'switch',\n\t\tlabel: 'Audio Type',\n\t\toptions: [\n\t\t\t{ label: 'Music', value: 'music' },\n\t\t\t{ label: 'Sound Effect', value: 'sfx' }\n\t\t],\n\t\tinitial: 'music'\n\t},\n\t{\n\t\tkey: 'minDistance',\n\t\ttype: 'number',\n\t\tlabel: 'Min Distance',\n\t\tinitial: 5,\n\t\tmin: 1,\n\t\tmax: 50,\n\t\thint: 'Distance where audio starts to fade (in meters)'\n\t},\n\t{\n\t\tkey: 'maxDistance',\n\t\ttype: 'number',\n\t\tlabel: 'Max Distance',\n\t\tinitial: 20,\n\t\tmin: 1,\n\t\tmax: 100,\n\t\thint: 'Distance where audio becomes inaudible (in meters)'\n\t},\n\t{\n\t\tkey: 'rolloffFactor',\n\t\ttype: 'switch',\n\t\tlabel: 'Falloff Rate',\n\t\toptions: [\n\t\t\t{ label: 'Gradual', value: 0.5 },\n\t\t\t{ label: 'Medium', value: 1 },\n\t\t\t{ label: 'Steep', value: 2 }\n\t\t],\n\t\tinitial: 2\n\t},\n\t{\n\t\ttype: 'section',\n\t\tkey: 'coneSection',\n\t\tlab",
+      "script_path": "assets/b11765f8dfee8571a140268114305efa3c7a4e8bf412e82f85359fbeb6a2cfad.js",
+      "asset_files": [
+        "1e7e62efc3d19d97f65d5952efe058b80308659681c010cad92412d47163435c.mp3",
+        "6be2ff457c549182e139847120784bd7a0cdfc7d27730b33adc973afbcb51b32.png",
+        "acd9ab1fd12d8e98bcd7859e3fc499ec449a4b2e2d63b4f19af5a8bc1c682c18.glb",
+        "b11765f8dfee8571a140268114305efa3c7a4e8bf412e82f85359fbeb6a2cfad.js"
+      ],
+      "source_files": [
+        {
+          "path": "assets/1e7e62efc3d19d97f65d5952efe058b80308659681c010cad92412d47163435c.mp3",
+          "size_bytes": 2938080
+        },
+        {
+          "path": "assets/6be2ff457c549182e139847120784bd7a0cdfc7d27730b33adc973afbcb51b32.png",
+          "size_bytes": 659589
+        },
+        {
+          "path": "assets/acd9ab1fd12d8e98bcd7859e3fc499ec449a4b2e2d63b4f19af5a8bc1c682c18.glb",
+          "size_bytes": 101616
+        },
+        {
+          "path": "assets/b11765f8dfee8571a140268114305efa3c7a4e8bf412e82f85359fbeb6a2cfad.js",
+          "size_bytes": 3601
+        },
+        {
+          "path": "blueprint.json",
+          "size_bytes": 1448
+        },
+        {
+          "path": "manifest.json",
+          "size_bytes": 1291
+        }
+      ],
+      "source_inventory": {
+        "file_count": 6,
+        "listed_file_count": 6,
+        "listed_truncated": false,
+        "total_size_bytes": 3705625,
+        "js_files": 1,
+        "json_files": 2,
+        "asset_files": 4
+      },
+      "blueprint_path": "blueprint.json"
+    },
+    {
       "slug": "spicex-portal",
       "name": "SPICEXPortal",
       "author": "hypShaman",
@@ -23954,6 +25035,79 @@
         "js_files": 1,
         "json_files": 2,
         "asset_files": 2
+      },
+      "blueprint_path": "blueprint.json"
+    },
+    {
+      "slug": "text-v7",
+      "name": "Text",
+      "author": "Hyperfy",
+      "description": "",
+      "preview_url": "media/text-v7/preview.jpg",
+      "preview_type": "image",
+      "hyp_filename": "text-v7.hyp",
+      "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/v2/hyp-files/text-v7.hyp",
+      "has_download": true,
+      "created_at": null,
+      "tags": [],
+      "interaction_modes": [],
+      "asset_profile": "medium",
+      "script_complexity": "medium",
+      "networking": "none",
+      "has_preview": true,
+      "has_source": true,
+      "has_details": true,
+      "source_status": "v2",
+      "props": {
+        "width": 200,
+        "height": 200,
+        "lit": false,
+        "text": "Enter text...",
+        "color": "white",
+        "align": "center",
+        "bg": "black",
+        "padding": 20,
+        "size": 24,
+        "doubleside": true,
+        "shadows": true
+      },
+      "script_excerpt": "app.configure([\n  {\n    key: 'text',\n    type: 'textarea',\n    label: 'Text',\n  },\n  {\n    key: 'size',\n    type: 'number',\n    label: 'Size',\n    initial: 12,\n  },\n  {\n    key: 'color',\n    type: 'text',\n    label: 'Color',\n    initial: 'white',\n  },\n  {\n    key: 'align',\n    type: 'switch',\n    label: 'Align',\n    options: [\n      { label: 'Left', value: 'left' },\n      { label: 'Center', value: 'center' },\n      { label: 'Right', value: 'right' },\n    ],\n    initial: 'center',\n  },\n  {\n    key: 'canvas',\n    type: 'section',\n    label: 'Canvas'\n  },\n  {\n    key: 'width',\n    type: 'number',\n    label: 'Width',\n    dp: 1,\n    step: 1,\n    bigStep: 10,\n    initial: 100,\n  },\n  {\n    key: 'height',\n    type: 'number',\n    label: 'Height',\n    dp: 1,\n    step: 1,\n    bigStep: 10,\n    initial: 100,\n  },\n  {\n    key: 'bg',\n    type: 'text',\n    label: 'Background',\n    initial: 'black',\n  },\n  {\n    key: 'padding',\n    type: 'number',\n    label: 'Padding',\n    initial: 10,\n  },\n  {\n    key: 'lit',\n    type: 'toggle',\n    label: 'Lit',\n  },\n  {\n    key: 'doubleside',\n    type: 'toggle',\n    label: 'Doubleside',\n  },\n])\napp.keepActive = true\n\nconst text = props.text\nconst size = props.size\nconst color = props.color || 'white'\nconst align = props.align\nconst bg = props.bg\nconst width = props.width\nconst padding = props.padding\nconst height = props.height\nconst lit = props.lit\nconst doubleside = props.doubleside\n\nconst surface = app.get('Surface')\napp.remove(surface)\n\nconst $ui = app.create('ui', {\n  pivot: 'bottom-center',\n  width,\n  height,\n  backgroundColor: bg,\n  // alignItems: 'center',\n  justifyContent: 'center',\n  padding,\n  lit,\n  doubleside,\n})\nconst $text = app.create('uitext', {\n  value: text,\n  fontSize: size,\n  color,\n  textAlign: align,\n})\n$ui.add($text)\napp.add($ui)\n\n\n",
+      "script_path": "assets/5298877b10d5aae7db40dde9c0ec421f374644c7c869e9c3696c3a95dd338ba5.js",
+      "asset_files": [
+        "5298877b10d5aae7db40dde9c0ec421f374644c7c869e9c3696c3a95dd338ba5.js",
+        "a737851aa49988665c40380007a8e3ef3fc7d5eb27cffcdf199ded87abcc7bcf.png",
+        "e7cfd8f907f8979fc32f3afabc0962c8d74ea484a61d150187fec23bd0c03a5c.glb"
+      ],
+      "source_files": [
+        {
+          "path": "assets/5298877b10d5aae7db40dde9c0ec421f374644c7c869e9c3696c3a95dd338ba5.js",
+          "size_bytes": 1807
+        },
+        {
+          "path": "assets/a737851aa49988665c40380007a8e3ef3fc7d5eb27cffcdf199ded87abcc7bcf.png",
+          "size_bytes": 2069
+        },
+        {
+          "path": "assets/e7cfd8f907f8979fc32f3afabc0962c8d74ea484a61d150187fec23bd0c03a5c.glb",
+          "size_bytes": 2416
+        },
+        {
+          "path": "blueprint.json",
+          "size_bytes": 792
+        },
+        {
+          "path": "manifest.json",
+          "size_bytes": 777
+        }
+      ],
+      "source_inventory": {
+        "file_count": 5,
+        "listed_file_count": 5,
+        "listed_truncated": false,
+        "total_size_bytes": 7861,
+        "js_files": 1,
+        "json_files": 2,
+        "asset_files": 3
       },
       "blueprint_path": "blueprint.json"
     },
@@ -25640,6 +26794,88 @@
         "js_files": 1,
         "json_files": 2,
         "asset_files": 2
+      },
+      "blueprint_path": "blueprint.json"
+    },
+    {
+      "slug": "video-v5",
+      "name": "Video",
+      "author": "Hyperfy",
+      "description": "",
+      "preview_url": "media/video-v5/preview.jpg",
+      "preview_type": "image",
+      "hyp_filename": "video-v5.hyp",
+      "download_path": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/v2/hyp-files/video-v5.hyp",
+      "has_download": true,
+      "created_at": null,
+      "tags": [],
+      "interaction_modes": [],
+      "asset_profile": "medium",
+      "script_complexity": "medium",
+      "networking": "none",
+      "has_preview": true,
+      "has_source": true,
+      "has_details": true,
+      "source_status": "v2",
+      "props": {
+        "width": 0,
+        "height": 2,
+        "fit": "cover",
+        "lit": false,
+        "shadows": true,
+        "video": null,
+        "loop": true,
+        "volume": 1,
+        "sync": true,
+        "doubleside": true,
+        "placeholder": {
+          "type": "video",
+          "name": "VideoSpin.mp4",
+          "url": "asset://8fab0105d67539618ed9b9a68b2952aefc870be4f40d4541f1f773583950ff44.mp4"
+        }
+      },
+      "script_excerpt": "app.configure([\n  {\n    key: 'placeholder',\n    type: 'file',\n    kind: 'video',\n    label: 'Placeholder',\n    hidden: true,\n  },\n  {\n    key: 'video',\n    type: 'file',\n    kind: 'video',\n    label: 'Video',\n    hint: 'The video file to play.'\n  },\n  {\n    key: 'loop',\n    type: 'toggle',\n    label: 'Loop',\n    hint: 'Whether the video should loop or stop when it reaches the end.',\n    initial: true,\n  },\n  {\n    key: 'sync',\n    type: 'toggle',\n    label: 'Sync',\n    hint: 'When enabled, video state will be synchronized over multiplayer.',\n    initial: true,\n  },\n  {\n    key: 'surface',\n    type: 'section',\n    label: 'Surface'\n  },\n  {\n    key: 'width',\n    type: 'number',\n    label: 'Width',\n    dp: 1,\n    step: 0.1,\n    bigStep: 1,\n    hint: 'The width of the surface. This can be set to zero as long as you provide a height, and the width will automatically adapt to the videos aspect ratio.',\n    initial: 0,\n  },\n  {\n    key: 'height',\n    type: 'number',\n    label: 'Height',\n    dp: 1,\n    step: 0.1,\n    bigStep: 1,\n    hint: 'The height of the surface. This can be set to zero as long as you provide a width, and the height will automatically adapt to the videos aspect ratio.',\n    initial: 1,\n  },\n  {\n    key: 'fit',\n    type: 'switch',\n    label: 'Fit',\n    options: [\n      { label: 'Stretch', value: 'none' },\n      { label: 'Cover', value: 'cover' },\n      { label: 'Contain', value: 'contain' },\n    ],\n    hint: 'How the video should be scaled to fit the surface. This is only relevant when both height and width are set.',\n    initial: 'none',\n  },\n  {\n    key: 'lit',\n    type: 'toggle',\n    label: 'Lit',\n    hint: 'Whether the surface reacts to world lighting or not.'\n  },\n  {\n    key: 'shadows',\n    type: 'toggle',\n    label: 'Shadows',\n  },\n  {\n    key: 'doubleside',\n    type: 'toggle',\n    label: 'Doubleside',\n  },\n  {\n    key: 'audio',\n    type: 'section',\n    label: 'Audio'\n  },\n  {\n    key: 'volume',\n    type: 'number',\n    label: 'Volume',\n    dp: 1,\n ",
+      "script_path": "assets/3fb3a43c8c0be0b78a5ce5f357e43372d05c2024c3e37d08b5e9d08abe3f068b.js",
+      "asset_files": [
+        "2faa49a0505b0e7f143e2278e3aa4a5585cabe9e87cc850f3b9b3c1625b8ba69.glb",
+        "2fecd2130b39ec39e00dce51c162247ce07500f419fbb188e0bf99b5cec415af.png",
+        "3fb3a43c8c0be0b78a5ce5f357e43372d05c2024c3e37d08b5e9d08abe3f068b.js",
+        "8fab0105d67539618ed9b9a68b2952aefc870be4f40d4541f1f773583950ff44.mp4"
+      ],
+      "source_files": [
+        {
+          "path": "assets/2faa49a0505b0e7f143e2278e3aa4a5585cabe9e87cc850f3b9b3c1625b8ba69.glb",
+          "size_bytes": 2832
+        },
+        {
+          "path": "assets/2fecd2130b39ec39e00dce51c162247ce07500f419fbb188e0bf99b5cec415af.png",
+          "size_bytes": 2607
+        },
+        {
+          "path": "assets/3fb3a43c8c0be0b78a5ce5f357e43372d05c2024c3e37d08b5e9d08abe3f068b.js",
+          "size_bytes": 3994
+        },
+        {
+          "path": "assets/8fab0105d67539618ed9b9a68b2952aefc870be4f40d4541f1f773583950ff44.mp4",
+          "size_bytes": 201576
+        },
+        {
+          "path": "blueprint.json",
+          "size_bytes": 928
+        },
+        {
+          "path": "manifest.json",
+          "size_bytes": 1030
+        }
+      ],
+      "source_inventory": {
+        "file_count": 6,
+        "listed_file_count": 6,
+        "listed_truncated": false,
+        "total_size_bytes": 212967,
+        "js_files": 1,
+        "json_files": 2,
+        "asset_files": 4
       },
       "blueprint_path": "blueprint.json"
     },

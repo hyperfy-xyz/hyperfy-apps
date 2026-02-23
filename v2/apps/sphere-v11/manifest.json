@@ -1,0 +1,37 @@
+[
+  {
+    "type": "model",
+    "url": "asset://acd9ab1fd12d8e98bcd7859e3fc499ec449a4b2e2d63b4f19af5a8bc1c682c18.glb",
+    "filename": "acd9ab1fd12d8e98bcd7859e3fc499ec449a4b2e2d63b4f19af5a8bc1c682c18.glb",
+    "size": 101616,
+    "mime": "model/gltf-binary"
+  },
+  {
+    "type": "script",
+    "url": "asset://b11765f8dfee8571a140268114305efa3c7a4e8bf412e82f85359fbeb6a2cfad.js",
+    "filename": "b11765f8dfee8571a140268114305efa3c7a4e8bf412e82f85359fbeb6a2cfad.js",
+    "size": 3601,
+    "mime": "application/javascript"
+  },
+  {
+    "type": "texture",
+    "url": "asset://6be2ff457c549182e139847120784bd7a0cdfc7d27730b33adc973afbcb51b32.png",
+    "filename": "6be2ff457c549182e139847120784bd7a0cdfc7d27730b33adc973afbcb51b32.png",
+    "size": 659589,
+    "mime": "image/png"
+  },
+  {
+    "type": "audio",
+    "url": "asset://1e7e62efc3d19d97f65d5952efe058b80308659681c010cad92412d47163435c.mp3",
+    "filename": "1e7e62efc3d19d97f65d5952efe058b80308659681c010cad92412d47163435c.mp3",
+    "size": 2938080,
+    "mime": "audio/mpeg"
+  },
+  {
+    "type": "audio",
+    "url": "asset://1e7e62efc3d19d97f65d5952efe058b80308659681c010cad92412d47163435c.mp3",
+    "filename": "1e7e62efc3d19d97f65d5952efe058b80308659681c010cad92412d47163435c.mp3",
+    "size": 2938080,
+    "mime": "audio/mpeg"
+  }
+]

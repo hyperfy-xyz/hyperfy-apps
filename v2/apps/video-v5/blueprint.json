@@ -1,0 +1,37 @@
+{
+  "id": "dLZuSHmCTC",
+  "version": 5,
+  "name": "Video",
+  "image": {
+    "type": "texture",
+    "name": "Video.png",
+    "url": "asset://2fecd2130b39ec39e00dce51c162247ce07500f419fbb188e0bf99b5cec415af.png"
+  },
+  "author": "Hyperfy",
+  "url": null,
+  "desc": null,
+  "model": "asset://2faa49a0505b0e7f143e2278e3aa4a5585cabe9e87cc850f3b9b3c1625b8ba69.glb",
+  "script": "asset://3fb3a43c8c0be0b78a5ce5f357e43372d05c2024c3e37d08b5e9d08abe3f068b.js",
+  "props": {
+    "width": 0,
+    "height": 2,
+    "fit": "cover",
+    "lit": false,
+    "shadows": true,
+    "video": null,
+    "loop": true,
+    "volume": 1,
+    "sync": true,
+    "doubleside": true,
+    "placeholder": {
+      "type": "video",
+      "name": "VideoSpin.mp4",
+      "url": "asset://8fab0105d67539618ed9b9a68b2952aefc870be4f40d4541f1f773583950ff44.mp4"
+    }
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false,
+  "disabled": false
+}

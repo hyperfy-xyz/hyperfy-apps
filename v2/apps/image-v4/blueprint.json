@@ -1,0 +1,34 @@
+{
+  "id": "58UBIq2DWs",
+  "version": 4,
+  "name": "Image",
+  "image": {
+    "type": "texture",
+    "name": "Image.png",
+    "url": "asset://daaace2f1b595664c0e6f5a10deb494efc13a850d3cf0804b297a634d2003803.png"
+  },
+  "author": "Hyperfy",
+  "url": null,
+  "desc": null,
+  "model": "asset://70f1cabcf315fb6d19769609c0f2e9cc798a45165e19bf0e84c161643faef868.glb",
+  "script": "asset://378774dc69a8dc33c006d5c75c2d586070bfaa0aa42e0e4ba2ef74a2fd2aa81f.js",
+  "props": {
+    "width": 0,
+    "height": 2,
+    "fit": "cover",
+    "image": null,
+    "transparent": false,
+    "lit": false,
+    "shadows": true,
+    "placeholder": {
+      "type": "image",
+      "name": "Image.png",
+      "url": "asset://daaace2f1b595664c0e6f5a10deb494efc13a850d3cf0804b297a634d2003803.png"
+    }
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false,
+  "disabled": false
+}
