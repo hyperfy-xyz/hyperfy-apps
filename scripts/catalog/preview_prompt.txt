@@ -1,0 +1,13 @@
+Generate a preview image for a virtual world app called "{name}".
+
+Description: {description}
+Tags: {tags}
+
+{screenshot_ref}IMAGE REQUIREMENTS:
+- Aspect ratio: 16:9 widescreen
+- Isometric perspective, slightly elevated camera angle
+- Dark background (#0c0c14) with a subtle grid surface beneath the subject
+- Clean product-shot lighting: soft key light from upper-left, gentle fill from right
+- The subject should be the clear focal point, well-lit and immediately readable
+- No text, no UI overlays, no watermarks
+- Keep it simple and striking — this is a small preview card thumbnail

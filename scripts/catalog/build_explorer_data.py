@@ -368,13 +368,12 @@ def build_app_entry(
 ) -> dict[str, Any]:
     """Build a single app entry for catalog.json."""
     source = manifest.get("source", {})
-    preview_path = manifest.get("preview", {}).get("primary_media_path") or app_row.get("primary_preview")
-
-    # Fallback: check for generated preview image in media/<slug>/preview.*
-    if not preview_path:
-        matches = list((MEDIA_DIR / app_row['app_slug']).glob("preview.*"))
-        if matches:
-            preview_path = str(matches[0].relative_to(REPO_ROOT))
+    # Prefer generated preview (preview.*), fall back to manifest/Discord preview
+    gen_matches = list((MEDIA_DIR / app_row['app_slug']).glob("preview.*"))
+    if gen_matches:
+        preview_path = str(gen_matches[0].relative_to(REPO_ROOT))
+    else:
+        preview_path = manifest.get("preview", {}).get("primary_media_path") or app_row.get("primary_preview")
 
     # Prefer AI description, fall back to one_liner+primary_use_case (old schema), then manifest
     description = ""

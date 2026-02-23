@@ -157,7 +157,21 @@ body {
 }
 
 .header {
+  position: relative;
   margin-bottom: 24px;
+}
+
+.how-to-use {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  padding: 5px 10px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  background: var(--surface);
+  white-space: nowrap;
 }
 
 .title {
@@ -470,26 +484,8 @@ body {
   color: var(--text-muted);
 }
 
-.card-source-stats {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 8px;
-  width: fit-content;
-  padding: 5px 9px;
-  border-radius: 999px;
-  background: rgba(139, 92, 246, 0.14);
-  border: 1px solid rgba(139, 92, 246, 0.22);
-}
-
 .card-source-size {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--accent-hover);
-}
-
-.card-source-count {
-  font-size: 0.72rem;
-  color: var(--text-muted);
+  font-weight: 600;
 }
 
 .card-author {
@@ -754,17 +750,14 @@ body {
 
 .modal-preview {
   width: 100%;
-  max-height: 300px;
-  overflow: hidden;
   background: var(--bg);
   flex-shrink: 0;
 }
 
 .modal-preview-media {
   width: 100%;
-  height: 100%;
-  max-height: 300px;
-  object-fit: cover;
+  max-height: 400px;
+  object-fit: contain;
   display: block;
 }
 
@@ -836,6 +829,27 @@ body {
 }
 
 .modal-download-btn:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.modal-download-btn-sm {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: var(--radius-xs);
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-decoration: none;
+  background: var(--accent);
+  color: white;
+  border: 1px solid var(--accent);
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.modal-download-btn-sm:hover {
   background: var(--accent-hover);
   border-color: var(--accent-hover);
 }
@@ -1037,6 +1051,12 @@ body {
 
   .main {
     padding: 16px;
+  }
+
+  .how-to-use {
+    position: static;
+    margin-bottom: 8px;
+    width: fit-content;
   }
 
   .grid {
