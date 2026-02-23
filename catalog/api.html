@@ -289,9 +289,27 @@
       }
       .top-nav-link {
         font-size: 0.82rem;
+        display: flex;
+        width: 100%;
+        min-height: 40px;
+        align-items: center;
+        padding: 0 10px;
+        border: 1px solid transparent;
+        border-radius: 6px;
       }
       .top-nav-link::after {
         display: none;
+      }
+      .top-nav-link:hover {
+        background: var(--bg-subtle);
+        border-color: var(--border);
+      }
+      .top-nav-link.active {
+        background: rgba(139,92,246,0.12);
+        border-color: rgba(139,92,246,0.28);
+      }
+      .top-nav-link.icon {
+        justify-content: flex-start;
       }
       .subtitle {
         font-size: 0.84rem;
