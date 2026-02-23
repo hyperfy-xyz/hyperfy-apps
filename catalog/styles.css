@@ -784,6 +784,10 @@ body {
   white-space: nowrap;
 }
 
+.modal-copy-btn {
+  flex: 0 0 auto;
+}
+
 .modal-copy-btn:hover,
 .modal-close-btn:hover {
   background: var(--surface-hover);
@@ -1113,15 +1117,83 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 12px;
   }
+
+  .modal-overlay {
+    padding: 14px;
+  }
+
+  .modal {
+    max-height: 90vh;
+  }
+}
+
+@media (max-width: 760px) {
+  .controls {
+    align-items: stretch;
+  }
+
+  .search-wrap {
+    min-width: 100%;
+  }
+
+  .tag-dropdown,
+  .select {
+    width: 100%;
+  }
+
+  .tag-dropdown-btn {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .drag-callout {
+    font-size: 0.88rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
 }
 
 @media (max-width: 560px) {
+  .main {
+    padding: 12px 10px;
+  }
+
+  .header {
+    margin-bottom: 18px;
+  }
+
+  .title-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .top-nav {
+    gap: 10px;
+  }
+
+  .top-nav-link {
+    font-size: 0.74rem;
+  }
+
+  .drag-callout {
+    margin-top: 8px;
+  }
+
   .controls {
     flex-direction: column;
+    gap: 8px;
   }
 
   .search-wrap {
     min-width: unset;
+  }
+
+  .search,
+  .select {
+    font-size: 0.9rem;
   }
 
   .tag-dropdown {
@@ -1130,7 +1202,7 @@ body {
 
   .tag-dropdown-btn {
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .tag-dropdown-panel {
@@ -1144,6 +1216,112 @@ body {
   }
 
   .title {
-    font-size: 1.3rem;
+    font-size: 1.22rem;
+    line-height: 1.2;
+  }
+
+  .card-body {
+    padding: 12px;
+  }
+
+  .card-desc {
+    font-size: 0.88rem;
+  }
+
+  .modal-overlay {
+    padding: 8px;
+  }
+
+  .modal {
+    max-height: calc(100dvh - 16px);
+    border-radius: 10px;
+  }
+
+  .modal-header {
+    padding: 12px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .modal-title {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: initial;
+  }
+
+  .modal-header-actions {
+    width: 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .modal-download-btn-sm,
+  .modal-close-btn {
+    padding: 6px 10px;
+  }
+
+  .modal-preview-media {
+    max-height: 220px;
+  }
+
+  .modal-info {
+    padding: 12px;
+  }
+
+  .modal-info-meta {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .modal-tabs {
+    padding: 0 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .modal-tab {
+    white-space: nowrap;
+    flex: 0 0 auto;
+    padding: 10px 12px;
+  }
+
+  .modal-tabs .modal-copy-btn {
+    margin-left: 12px;
+  }
+
+  .modal-files {
+    padding: 12px;
+  }
+
+  .modal-body pre {
+    padding: 12px;
+    font-size: 0.78rem;
+  }
+
+  .file-tree {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 420px) {
+  .card-actions {
+    flex-direction: column;
+  }
+
+  .modal-header-actions {
+    justify-content: stretch;
+  }
+
+  .modal-download-btn-sm,
+  .modal-close-btn {
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .modal-tab {
+    font-size: 0.78rem;
   }
 }

@@ -213,6 +213,46 @@
     }
     .copy-btn:hover { background: rgba(139,92,246,0.2); border-color: var(--accent); }
     .copy-btn.copied { color: var(--green); border-color: rgba(52,211,153,0.3); background: rgba(52,211,153,0.1); }
+
+    @media (max-width: 760px) {
+      .container {
+        padding: 24px 14px 48px;
+      }
+      h1 {
+        font-size: 1.35rem;
+      }
+      .subtitle {
+        font-size: 0.84rem;
+      }
+      .api-actions {
+        margin-bottom: 20px;
+      }
+      .field-table {
+        width: 100%;
+        table-layout: fixed;
+      }
+      .field-table th,
+      .field-table td {
+        white-space: normal;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        padding: 7px 10px;
+      }
+      .field-table td:first-child,
+      .field-table td:nth-child(2) {
+        white-space: normal;
+      }
+      code {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+      pre {
+        max-width: 100%;
+      }
+      pre code {
+        white-space: pre-wrap;
+      }
+    }
   </style>
 </head>
 <body>
