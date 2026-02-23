@@ -170,6 +170,51 @@
       height: 14px;
       fill: currentColor;
     }
+    .menu-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 38px;
+      height: 34px;
+      padding: 0;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--surface);
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.15s;
+      flex-shrink: 0;
+    }
+    .menu-toggle:hover {
+      background: var(--bg-subtle);
+      color: var(--text);
+    }
+    .menu-toggle span {
+      display: block;
+      width: 16px;
+      height: 2px;
+      border-radius: 999px;
+      background: currentColor;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+    .menu-toggle span + span {
+      margin-top: 4px;
+    }
+    .menu-toggle.open {
+      color: var(--accent-hover);
+      border-color: rgba(139,92,246,0.35);
+      background: rgba(139,92,246,0.12);
+    }
+    .menu-toggle.open span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+    .menu-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-toggle.open span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
     .action-link {
       display: inline-flex;
       align-items: center;
@@ -221,6 +266,33 @@
       h1 {
         font-size: 1.35rem;
       }
+      .page-top {
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .menu-toggle {
+        display: inline-flex;
+      }
+      .top-nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 10px 12px;
+        border: 1px solid var(--border-subtle);
+        border-radius: 8px;
+        background: var(--surface);
+      }
+      .top-nav.open {
+        display: flex;
+      }
+      .top-nav-link {
+        font-size: 0.82rem;
+      }
+      .top-nav-link::after {
+        display: none;
+      }
       .subtitle {
         font-size: 0.84rem;
       }
@@ -259,7 +331,12 @@
   <div class="container">
     <div class="page-top">
       <h1>Hyperfy Apps API</h1>
-      <nav class="top-nav" aria-label="Primary">
+      <button class="menu-toggle" id="apiMenuToggle" type="button" aria-label="Toggle navigation" aria-controls="apiTopNav" aria-expanded="false" onclick="toggleApiNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="top-nav" id="apiTopNav" aria-label="Primary">
         <a class="top-nav-link" href="./">Explorer</a>
         <a class="top-nav-link active" href="./api.html">API</a>
         <a class="top-nav-link icon" href="https://github.com/hyperfy-xyz/hyperfy-apps" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository">
@@ -474,6 +551,42 @@ jq '.apps[] | select(.slug == "confetti") | .script_excerpt'   # get script exce
     setTimeout(() => { btn.textContent = 'Copy schema for LLM'; btn.classList.remove('copied'); }, 2000);
   });
 }
+
+function closeApiNav() {
+  const nav = document.getElementById('apiTopNav');
+  const btn = document.getElementById('apiMenuToggle');
+  if (!nav || !btn) return;
+  nav.classList.remove('open');
+  btn.classList.remove('open');
+  btn.setAttribute('aria-expanded', 'false');
+}
+
+function toggleApiNav() {
+  const nav = document.getElementById('apiTopNav');
+  const btn = document.getElementById('apiMenuToggle');
+  if (!nav || !btn) return;
+  const willOpen = !nav.classList.contains('open');
+  nav.classList.toggle('open', willOpen);
+  btn.classList.toggle('open', willOpen);
+  btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+}
+
+document.addEventListener('click', (e) => {
+  if (window.innerWidth > 760) return;
+  const nav = document.getElementById('apiTopNav');
+  const btn = document.getElementById('apiMenuToggle');
+  if (!nav || !btn || !nav.classList.contains('open')) return;
+  if (nav.contains(e.target) || btn.contains(e.target)) return;
+  closeApiNav();
+});
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeApiNav();
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 760) closeApiNav();
+});
   </script>
 </body>
 </html>
