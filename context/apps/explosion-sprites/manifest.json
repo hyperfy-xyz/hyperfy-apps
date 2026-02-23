@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-04-16T03:23:09.271Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1361904724118606025/Explosion_Sprites.hyp?ex=6979811d&is=69782f9d&hm=66ad82a6cc086a232dccf74714ef3cede8be950726d7d98cad6671b8f79c5507&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1361904724118606025/Explosion_Sprites.hyp?ex=69987c5d&is=69972add&hm=2e8b4e217f6849c460b5756fa70586203d7ac4c35cb3b4035be8efa24912ace0&"
   },
   "author": {
     "display_name": "ash",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Explosion_Sprites.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/explosion-sprites/m1_xyz-particle-demos_2_-_edit.mp4",
+    "primary_media_path": "catalog/media/explosion_sprites/1361903616788664400_xyz-particle-demos_2_-_edit.mp4",
     "media_type": ".mp4",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/explosion-sprites/m1_xyz-particle-demos_2_-_edit.mp4",
+      "catalog_path": "catalog/media/explosion_sprites/1361903616788664400_xyz-particle-demos_2_-_edit.mp4",
       "original_filename": "xyz-particle-demos_2_-_edit.mp4",
       "content_type": "video/mp4",
       "relative_index": -1,
@@ -51,18 +51,19 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "explosion-sprites-1361904724433174649",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:20:35+00:00",
-    "description": "Spawns a hemisphere-shaped particle emitter that renders explosion sprites from a configurable spritesheet texture. Uses a 2x4 grid spritesheet with up to 10,000 particles in world space, serving as a reference demo for the Hyperfy particles API.",
+    "generated_at": "2026-02-21T23:44:49+00:00",
+    "description": "Spawns a hemisphere-shaped particle emitter that renders explosion sprites from a configurable spritesheet texture. Uses a 2x4 grid spritesheet with 16 frames, emitting up to 10000 particles in world space with short lifetimes for burst-like explosion effects.",
     "feature_tags": [
       "particles",
       "3d-model"

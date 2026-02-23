@@ -1,0 +1,30 @@
+[
+  {
+    "type": "model",
+    "url": "asset://97fc7289a38b5b49357e6fbd74e7e77fc78493dbb1c0dbc850cb8e9db9fd2530.glb",
+    "filename": "97fc7289a38b5b49357e6fbd74e7e77fc78493dbb1c0dbc850cb8e9db9fd2530.glb",
+    "size": 3380,
+    "mime": "model/gltf-binary"
+  },
+  {
+    "type": "script",
+    "url": "asset://4dc08fe5a36f34bcdce1ea038e42eb58e3e131cad3615986459cc60c38c7dc5d.js",
+    "filename": "4dc08fe5a36f34bcdce1ea038e42eb58e3e131cad3615986459cc60c38c7dc5d.js",
+    "size": 6966,
+    "mime": "application/javascript"
+  },
+  {
+    "type": "texture",
+    "url": "asset://dcc62d3eb9e94d0b0bba717dc1b68843de0801b225dd2af3844634e3577cd055.webp",
+    "filename": "dcc62d3eb9e94d0b0bba717dc1b68843de0801b225dd2af3844634e3577cd055.webp",
+    "size": 7216,
+    "mime": "image/webp"
+  },
+  {
+    "type": "texture",
+    "url": "asset://dcc62d3eb9e94d0b0bba717dc1b68843de0801b225dd2af3844634e3577cd055.webp",
+    "filename": "dcc62d3eb9e94d0b0bba717dc1b68843de0801b225dd2af3844634e3577cd055.webp",
+    "size": 7216,
+    "mime": "image/webp"
+  }
+]

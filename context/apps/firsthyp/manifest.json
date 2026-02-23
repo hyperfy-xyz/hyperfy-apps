@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-04-23T12:22:12.139Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1364577094914539541/firstHYP.hyp?ex=697956b4&is=69780534&hm=4385b7f7b066fd5165199fa47bf3b394659f2dda0d831938b5ba102429f92994&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1364577094914539541/firstHYP.hyp?ex=6998fab4&is=6997a934&hm=699630516e4dfc1c8fa8ee7e26f3cf9c5bdf5e5693124c3151740614bf02e292&"
   },
   "author": {
     "display_name": "vox",
@@ -29,28 +29,29 @@
     "hyp_summary_path": "context/hyp_summaries/firstHYP.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/firsthyp/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "firsthyp-1364577095313002547",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:20:43+00:00",
-    "description": "Loads a GLB room model named ROOMERS4 and scrolls UV texture offsets on a mesh named UVSCROLL each frame, animating the material along the Y-axis at a configurable speed for a seamless looping effect on gold element plane textures.",
+    "generated_at": "2026-02-21T23:44:55+00:00",
+    "description": "Renders a 3D room model (ROOMERS4) and scrolls UV texture offsets on a mesh named UVSCROLL each frame, animating the material along the Y-axis at a configurable speed for a seamless looping effect with gold plane textures.",
     "feature_tags": [
       "3d-model",
       "animation"

@@ -9,7 +9,7 @@
     "discord_channel": "\ud83e\uddca\u25023d-design",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-10-13T13:52:18.828Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1031058655581323324/1427292872750661694/Book_-_Flip.hyp?ex=68efa712&is=68ee5592&hm=aab160d9f32bf1f517e7f01e8727f99fc7a3d4d83749739127e97263e34073a0&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1031058655581323324/1427292872750661694/Book_-_Flip.hyp?ex=69990fd2&is=6997be52&hm=1dbc6363b5fe0b59aa6d4773b3ad4c9c0c20d60a945b2f163ae674da6812d4b0&"
   },
   "author": {
     "display_name": "Dhin",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Book_-_Flip.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/book-flip/p1_knowledge.webp",
+    "primary_media_path": "catalog/media/book_-_flip/1427292962483605564_knowledge.webp",
     "media_type": ".webp",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/book-flip/p1_knowledge.webp",
+      "catalog_path": "catalog/media/book_-_flip/1427292962483605564_knowledge.webp",
       "original_filename": "knowledge.webp",
       "content_type": "image/webp",
       "relative_index": 1,
@@ -51,22 +51,24 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "book-flip-1427292873358971045",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:16:55+00:00",
-    "description": "Spawns a procedural book object from box primitives with static physics colliders. Pressing F triggers a flip emote and pushes the player upward and forward using camera-relative impulse vectors, functioning as a double-jump launchpad.",
+    "generated_at": "2026-02-21T23:43:11+00:00",
+    "description": "Spawns a procedural book object from box primitives with static physics colliders. Pressing F triggers a flip emote and pushes the player upward and forward based on camera direction, functioning as a double-jump launcher.",
     "feature_tags": [
       "physics",
       "animation",
-      "interaction"
+      "interaction",
+      "camera"
     ],
     "interaction_modes": [
       "passive"

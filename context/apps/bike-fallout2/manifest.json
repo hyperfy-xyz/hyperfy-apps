@@ -1,0 +1,79 @@
+{
+  "app_id": "bike-fallout2-1345115039920816150",
+  "app_slug": "bike-fallout2",
+  "app_name": "BIKE-fallout2",
+  "source": {
+    "hyp_filename": "BIKE-fallout2.hyp",
+    "discord_attachment_id": "1345115039576756264",
+    "discord_message_id": "1345115039920816150",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-28T19:26:56.546Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1345115039576756264/BIKE-fallout2.hyp?ex=6998b580&is=69976400&hm=810d3759c48de891edc1336d1b33591575b19b9a0eefcec76cb85ae0e5aea014&"
+  },
+  "author": {
+    "display_name": "~/drdoge.eth",
+    "discord_user_id": "357905702926286858",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "ahhh gotcha, yea i need to get to latest. on the last one. here is an udated bike. may need to adjust the collider size but in normal worlds it should work fine. i have a crazy terrain and its handling it withi minimal bouncing LMAO",
+    "raw_message_content": "ahhh gotcha, yea i need to get to latest. on the last one. here is an udated bike. may need to adjust the collider size but in normal worlds it should work fine. i have a crazy terrain and its handling it withi minimal bouncing LMAO",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/bike-fallout2/1345128358308085820_Screenshot_2025-02-28_200907.png",
+    "media_type": ".png",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/bike-fallout2/1345128358308085820_Screenshot_2025-02-28_200907.png",
+      "original_filename": "Screenshot_2025-02-28_200907.png",
+      "content_type": "image/png",
+      "relative_index": 3,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 188124,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1345128358308085820"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "bike-fallout2-1345115039920816150",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:43:07+00:00",
+    "description": "Spawns a rideable Fallout-themed bike vehicle with a box collider for terrain traversal. Handles physics-based movement across uneven terrain with minimal bouncing, and supports configurable collider sizing for different world environments.",
+    "feature_tags": [
+      "vehicle",
+      "physics",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "medium",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

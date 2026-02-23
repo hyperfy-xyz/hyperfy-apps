@@ -1,0 +1,77 @@
+{
+  "app_id": "navmesh-1344183085410816053",
+  "app_slug": "navmesh",
+  "app_name": "NavMesh",
+  "source": {
+    "hyp_filename": "NavMesh.hyp",
+    "discord_attachment_id": "1344183084928729171",
+    "discord_message_id": "1344183085410816053",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-26T05:43:41.276Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1344183084928729171/NavMesh.hyp?ex=69989d4d&is=69974bcd&hm=a090d54cac7f286f35a04728f86bba778df10cd3691ba41a4011b2a74f1c6474&"
+  },
+  "author": {
+    "display_name": "Shiffty",
+    "discord_user_id": "466331582458888192",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "For science",
+    "raw_message_content": "For science",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/navmesh/1344182707327995984_AStarAbomination.mp4",
+    "media_type": ".mp4",
+    "selection_reason": "same_author_nearby",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/navmesh/1344182707327995984_AStarAbomination.mp4",
+      "original_filename": "AStarAbomination.mp4",
+      "content_type": "video/mp4",
+      "relative_index": -1,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 16988720,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1344182707327995984"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "navmesh-1344183085410816053",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:46:57+00:00",
+    "description": "Generates a navigation mesh at runtime and drives an AI agent using A* pathfinding across the computed grid. The agent navigates obstacles autonomously, demonstrating procedural navmesh construction and graph-based path traversal within a Hyperfy world.",
+    "feature_tags": [
+      "npc",
+      "physics",
+      "environment"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "high",
+    "networking_profile": "none"
+  }
+}

@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-03-25T19:16:23.393Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1354172080479928431/Companion_v8.hyp?ex=69790f07&is=6977bd87&hm=dbc49c8fc5a15880534501efedc6995856a896257039860f720848397436f1cd&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1354172080479928431/Companion_v8.hyp?ex=6998b307&is=69976187&hm=967446750c163e85118120f4c112c38e6a05179710e43532f095aaa31832b542&"
   },
   "author": {
     "display_name": "~/drdoge.eth",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Companion_v8.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/companion-v8/m1_updated_companion.mp4",
+    "primary_media_path": "catalog/media/companion_v8/1354172022875361411_updated_companion.mp4",
     "media_type": ".mp4",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/companion-v8/m1_updated_companion.mp4",
+      "catalog_path": "catalog/media/companion_v8/1354172022875361411_updated_companion.mp4",
       "original_filename": "updated_companion.mp4",
       "content_type": "video/mp4",
       "relative_index": -1,
@@ -51,18 +51,19 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "companion-v8-1354172080924397802",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:19:18+00:00",
-    "description": "AI-powered VRM companion NPC named Victor that follows players, patrols within a configurable radius, scans nearby objects, and responds to chat commands via HuggingFace API with a cowboy Securitron personality. Animates idle and walk cycles on the avatar using emote assets.",
+    "generated_at": "2026-02-21T23:44:06+00:00",
+    "description": "AI-powered VRM companion NPC named Victor that follows players, patrols within a configurable radius, scans nearby objects, and responds to chat commands via HuggingFace API with a cowboy Securitron personality. Animates idle and walk cycles on the avatar and renders a UI overlay for status display.",
     "feature_tags": [
       "npc",
       "animation",

@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-09-10T12:15:47.057Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1415309780431536128/The_Meadow.hyp?ex=68c40ef2&is=68c2bd72&hm=a862751737f68ba8632a074325d26cbfb796ec8ca633dc95ee543607aecab988&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1415309780431536128/The_Meadow.hyp?ex=6998f932&is=6997a7b2&hm=1fd6d0af937e94528c4781ca072ac1f278dce13f3f5363a51f22f556958d213f&"
   },
   "author": {
     "display_name": "ash",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/The_Meadow.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/alien-planet/m4_image.png",
+    "primary_media_path": "catalog/media/the_meadow/1415290348061851730_image.png",
     "media_type": ".png",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/alien-planet/m4_image.png",
+      "catalog_path": "catalog/media/the_meadow/1415290348061851730_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": -4,
@@ -51,6 +51,7 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
@@ -58,13 +59,13 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "the-meadow-1415309781345894431",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:29:50+00:00",
-    "description": "Scene app that renders a meadow environment with configurable sky texture, HDR reflections, and fog. Calculates sun direction from elevation and horizontal rotation parameters, and applies sun intensity, color, and fog near/far distances to a sky node.",
+    "generated_at": "2026-02-21T23:49:31+00:00",
+    "description": "Scene app that renders a meadow environment with a configurable sky texture, HDR lighting, and fog. Calculates sun direction from elevation and horizontal rotation parameters and applies sun intensity, color, and fog near/far distances to a sky node.",
     "feature_tags": [
       "environment",
       "3d-model"

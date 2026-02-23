@@ -1,0 +1,65 @@
+{
+  "app_id": "model-vca-1397401042982801428",
+  "app_slug": "model-vca",
+  "app_name": "Model-VCA",
+  "source": {
+    "hyp_filename": "Model-VCA.hyp",
+    "discord_attachment_id": "1397401042567561297",
+    "discord_message_id": "1397401042982801428",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-07-23T02:12:51.103Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1397401042567561297/Model-VCA.hyp?ex=699914a3&is=6997c323&hm=cf6f1302e404077c1c526bd43427a869b8ccc8da8ae5d2cf44422d7960e20bf0&"
+  },
+  "author": {
+    "display_name": "0mka",
+    "discord_user_id": "783416470205497394",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "well while we are at it, added visibility toggle",
+    "raw_message_content": "well while we are at it, added visibility toggle",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "model-vca-1397401042982801428",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:46:50+00:00",
+    "description": "Loads a 3D model with configurable visibility, collision, and animation properties. Toggles mesh visibility on demand and reads mesh data via app.configure to dynamically expose editable fields for in-world customization of the model display.",
+    "feature_tags": [
+      "3d-model",
+      "interaction",
+      "ui"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

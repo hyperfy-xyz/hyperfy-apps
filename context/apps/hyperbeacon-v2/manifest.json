@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-02-07T01:32:11.867Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1337234208376098847/1337234426043826208/HyperBeacon_v2.hyp?ex=6979671b&is=6978159b&hm=fe26ac1e420c8ac984ff15cfd8553202cd18b1ec18e6cd6dd7649787693bfac5&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1337234208376098847/1337234426043826208/HyperBeacon_v2.hyp?ex=69990b1b&is=6997b99b&hm=4ca068bfb267d91826e74415ac30b773540baabab97b25b744ca3a29d86407e1&"
   },
   "author": {
     "display_name": "maximus",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/HyperBeacon_v2.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/hyperbeacon-v2/m1_spatial_relay_example.png",
+    "primary_media_path": "catalog/media/hyperbeacon_v2/1337234208812433540_spatial_relay_example.png",
     "media_type": ".png",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/hyperbeacon-v2/m1_spatial_relay_example.png",
+      "catalog_path": "catalog/media/hyperbeacon_v2/1337234208812433540_spatial_relay_example.png",
       "original_filename": "spatial_relay_example.png",
       "content_type": "image/png",
       "relative_index": -1,
@@ -51,18 +51,19 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "hyperbeacon-v2-1337234426395889747",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:22:36+00:00",
-    "description": "Beacon app that registers a world with a Zesty spatial relay by sending a PUT request on load and transmits session heartbeat signals every 4.5 seconds via fetch. Animates a rotating 3D model (ring and hyper mesh) on each update frame to indicate active beacon status.",
+    "generated_at": "2026-02-21T23:45:53+00:00",
+    "description": "Beacon app that registers a world with a Zesty DSIG relay server via PUT request and sends periodic session heartbeat signals every 4.5 seconds. Animates a rotating 3D model (ring and hyper mesh) on each frame update using client-side rotation logic.",
     "feature_tags": [
       "3d-model",
       "animation",

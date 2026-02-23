@@ -1,0 +1,23 @@
+{
+  "id": "8kGEwvPBzy",
+  "version": 53,
+  "name": "F117NH",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": "Interact to Fly (Q to quit)\n\nW-Increase Throttle | S-Decrease Throttle | A-Roll Left (clamped) | D-Roll Right (clamped) | Left Shift (hold)-Unclamp Roll (Barrel Roll) | Mouse Up/Down-Pitch | Mouse Left/Right-Yaw | LMB-Shoot Projectile | C-Change Camera",
+  "model": "asset://5e1934c3a59e0d6633af808e11c5a6f6c17b50e6669ca4ce0856c94d9a095ad5.glb",
+  "script": "asset://f3c4a34340ce0429437dcd9d1fe36cb010846ed6b241d277b72415d2c12a6d83.js",
+  "props": {
+    "enterEmote": {
+      "type": "emote",
+      "name": "Sitting In Chair Hands Resting On Thighs.glb",
+      "url": "asset://efdefb6e4021862743c361230bed8e8f67adbcc21141117d6f06707d24bb08b4.glb"
+    },
+    "modelId": "Mesh001"
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

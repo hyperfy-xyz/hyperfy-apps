@@ -1,0 +1,22 @@
+{
+  "id": "iTztkReJ0Q",
+  "version": 6,
+  "name": "CampChairNORMALSIZEAVATARS",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": null,
+  "model": "asset://baf63f1f7144c74de2ee291e43c76d4402dc7b23235b5588525c9977811ee634.glb",
+  "script": "asset://295a16cf74bf358adb6258f62adfdf05d95b54b799307ec7d969c73a94ec7cf0.js",
+  "props": {
+    "emote": {
+      "type": "emote",
+      "name": "Sitting And Talking To Another Person.glb",
+      "url": "asset://ad0dc6273210096fa432edaddea494beaa855cc3f108f2e909c6d4242559a97a.glb"
+    }
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

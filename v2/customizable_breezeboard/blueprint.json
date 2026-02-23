@@ -1,0 +1,27 @@
+{
+  "id": "jb1Os4reLk",
+  "version": 145,
+  "name": "Customizable BreezeBoard",
+  "image": {
+    "type": "texture",
+    "name": "image-removebg-preview (32).png",
+    "url": "asset://1e9747483c30a1c51012ae90e4430a38227694f0ffac85c8097e47d3e9a8082b.png"
+  },
+  "author": "Omka x Change",
+  "url": "https://www.midnightbreeze.store/",
+  "desc": "Display you're heART! \n\nCan you feel it?",
+  "model": "asset://0161559bd0b78a3ce76668d28332694697e868344f496b15024613dcc003d044.glb",
+  "script": "asset://2430890e9901ff81c1129732fa551b194e21388ecbf3640755fa3c54937ae26e.js",
+  "props": {
+    "imageAlpha": 0.94,
+    "imageFile": {
+      "type": "texture",
+      "name": "Owned Dutchtide #271.png",
+      "url": "asset://fde60a6433fa77d5aefd50a38be3ecd6ee4da2b6f8ea11394e18e488e1c0cc15.png"
+    }
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": true
+}

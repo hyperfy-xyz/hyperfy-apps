@@ -1,0 +1,64 @@
+{
+  "app_id": "omka-2-21-uibillboard_-_proximity_trigger-1351345873522655294",
+  "app_slug": "omka-2-21-uibillboard_-_proximity_trigger",
+  "app_name": "Omka-2-21-uiBillboard_-_proximity_trigger",
+  "source": {
+    "hyp_filename": "Omka-2-21-uiBillboard_-_proximity_trigger.hyp",
+    "discord_attachment_id": "1351345873350692874",
+    "discord_message_id": "1351345873522655294",
+    "discord_channel": "\ud83e\uddca\u25023d-design",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-18T00:06:03.040Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1031058655581323324/1351345873350692874/Omka-2-21-uiBillboard_-_proximity_trigger.hyp?ex=6998f6ea&is=6997a56a&hm=e8cf8bc7b6d513a1f2e40a22c7e4ba5bcf07104b87178ec84ec0c6c9982a55eb&"
+  },
+  "author": {
+    "display_name": "0mka",
+    "discord_user_id": "783416470205497394",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "omka-2-21-uibillboard_-_proximity_trigger-1351345873522655294",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:47:15+00:00",
+    "description": "Displays a UI billboard element that triggers based on player proximity. When a player enters the trigger zone, the billboard becomes visible, enabling contextual UI overlays in a 3D scene.",
+    "feature_tags": [
+      "ui",
+      "interaction"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

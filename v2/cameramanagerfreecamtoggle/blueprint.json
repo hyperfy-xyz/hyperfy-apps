@@ -1,0 +1,17 @@
+{
+  "id": "oAOiVqvNZ9",
+  "version": 6,
+  "name": "Camera Manager Test",
+  "image": null,
+  "author": "Shiffty",
+  "url": null,
+  "desc": null,
+  "model": "asset://b66285a1342dbc494a4a3da95cc661cd39d7fd9fbf7fe7a57c7629fd57ad79b1.glb",
+  "script": "asset://1fa2c177240547e31a50ced02a96bd928be6bdaf118e0149da74ee805627b8dd.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false,
+  "disabled": false
+}

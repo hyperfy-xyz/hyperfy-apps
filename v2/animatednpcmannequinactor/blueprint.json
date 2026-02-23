@@ -1,0 +1,23 @@
+{
+  "id": "fel2hyaMaz",
+  "version": 2,
+  "name": "AnimatedNPCMANNEQUINACTOR",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": null,
+  "model": "asset://3eaa033835e30f2ff4c6df05c81f6d7e79e6d635830bb7a4f7f0701465edaa37.vrm",
+  "script": "asset://fe4a4f2dbb9921981776d39f5927c9529b3015650f9b3924bc22dc84238dd7d0.js",
+  "props": {
+    "emote0": {
+      "type": "emote",
+      "name": "Looking.glb",
+      "url": "asset://1c6311337cc00e0a3db823716675cf416837af93ea0cc5942345476bdc07aab2.glb"
+    }
+  },
+  "preload": true,
+  "public": false,
+  "locked": false,
+  "unique": true,
+  "disabled": false
+}

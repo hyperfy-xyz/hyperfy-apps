@@ -1,0 +1,64 @@
+{
+  "app_id": "counter-1346072751063957534",
+  "app_slug": "counter",
+  "app_name": "Counter",
+  "source": {
+    "hyp_filename": "Counter.hyp",
+    "discord_attachment_id": "1346072750669697055",
+    "discord_message_id": "1346072751063957534",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-03T10:52:32.676Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1346072750669697055/Counter.hyp?ex=6998e5b0&is=69979430&hm=723af21a831fb72e251c4413e56cb8a97b08f16e560bb50fb801f15d9adf72c2&"
+  },
+  "author": {
+    "display_name": "ash",
+    "discord_user_id": "179546010303856640",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "just quickly whipped this up",
+    "raw_message_content": "just quickly whipped this up",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "counter-1346072751063957534",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:44:08+00:00",
+    "description": "Renders an interactive counter that increments on pointer click, using OnPointerDown events and pointer enter/leave callbacks to display visual feedback on hover. Demonstrates basic UI interaction patterns in Hyperfy.",
+    "feature_tags": [
+      "interaction",
+      "ui"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

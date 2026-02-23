@@ -1,0 +1,93 @@
+{
+  "app_id": "sword_l_r-1347279892248526868",
+  "app_slug": "sword_l_r",
+  "app_name": "Sword_l_r",
+  "source": {
+    "hyp_filename": "Sword_l_r.hyp",
+    "discord_attachment_id": "1347279891955191953",
+    "discord_message_id": "1347279892248526868",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-06T18:49:17.562Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1347279891955191953/Sword_l_r.hyp?ex=6998acad&is=69975b2d&hm=8d8baeab4e3cad3dad3aa7f7f6ae310d929f4d8cdde1a0874f56a4fd289cafa9&"
+  },
+  "author": {
+    "display_name": "0mka",
+    "discord_user_id": "783416470205497394",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "Here, I added a switch in the inspector pane to choose left or right hand.",
+    "raw_message_content": "Here, I added a switch in the inspector pane to choose left or right hand.",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/sword_l_r/1347282397430808717_image.png",
+    "media_type": ".png",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/sword_l_r/1347267310418919585_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": -5,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 104177,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1347267310418919585"
+    },
+    {
+      "catalog_path": "catalog/media/sword_l_r/1347282397430808717_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": 1,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 117378,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1347282397430808717"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "sword_l_r-1347279892248526868",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:49:19+00:00",
+    "description": "Renders a sword 3D model that can be equipped in either the left or right hand, toggled via an inspector pane switch. Allows users to configure hand placement through a UI property selector for avatar weapon attachment.",
+    "feature_tags": [
+      "3d-model",
+      "ui",
+      "combat",
+      "interaction"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

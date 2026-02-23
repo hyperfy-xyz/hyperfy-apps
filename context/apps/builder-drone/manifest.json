@@ -9,7 +9,7 @@
     "discord_channel": "\u26a1\u2502general",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-04-01T01:52:55.848Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/958209074045026327/1356446200651452477/Builder_Drone.hyp?ex=69796bf7&is=69781a77&hm=9964ef46d10255853a9492374c64fab0de8c2704a4a3dc31dbe56e549bd64ab4&"
+    "discord_url": "https://cdn.discordapp.com/attachments/958209074045026327/1356446200651452477/Builder_Drone.hyp?ex=69990ff7&is=6997be77&hm=cb0bf448e8e4fdda8f6adc9bc1e7523012f3c7e0dfe8416af4faa5c2e4f45c33&"
   },
   "author": {
     "display_name": "devbyte",
@@ -29,27 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Builder_Drone.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/builder-drone/m2_xyz-builder-drone-x501.mp4",
+    "primary_media_path": "catalog/media/builder_drone/1356441739052978196_xyz-builder-drone-x501.mp4",
     "media_type": ".mp4",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/builder-drone/m7_Screenshot_2025-03-31_200800.png",
-      "original_filename": "Screenshot_2025-03-31_200800.png",
-      "content_type": "image/png",
-      "relative_index": -7,
-      "same_author": false,
-      "selection_reason": "any_author_fallback",
-      "size_bytes": 1261459,
-      "optimized": true,
-      "excluded_large": false,
-      "download_status": "downloaded",
-      "attachment_id": "1356419888935342340"
-    },
-    {
-      "catalog_path": "catalog/media/builder-drone/m5_Screenshot_2025-03-31_205343.png",
+      "catalog_path": "catalog/media/builder_drone/1356431657036677360_Screenshot_2025-03-31_205343.png",
       "original_filename": "Screenshot_2025-03-31_205343.png",
       "content_type": "image/png",
       "relative_index": -5,
@@ -62,7 +49,7 @@
       "attachment_id": "1356431657036677360"
     },
     {
-      "catalog_path": "catalog/media/builder-drone/m2_xyz-builder-drone-x501.mp4",
+      "catalog_path": "catalog/media/builder_drone/1356441739052978196_xyz-builder-drone-x501.mp4",
       "original_filename": "xyz-builder-drone-x501.mp4",
       "content_type": "video/mp4",
       "relative_index": -2,
@@ -75,7 +62,7 @@
       "attachment_id": "1356441739052978196"
     },
     {
-      "catalog_path": "catalog/media/builder-drone/p2_7BF1F0C5-A1B7-4314-B897-43E2666AB7C8.png",
+      "catalog_path": "catalog/media/builder_drone/1356451711329370193_7BF1F0C5-A1B7-4314-B897-43E2666AB7C8.png",
       "original_filename": "7BF1F0C5-A1B7-4314-B897-43E2666AB7C8.png",
       "content_type": "image/png",
       "relative_index": 2,
@@ -86,23 +73,11 @@
       "excluded_large": false,
       "download_status": "downloaded",
       "attachment_id": "1356451711329370193"
-    },
-    {
-      "catalog_path": "catalog/media/builder-drone/p6_brave_7aQ5Vf2bpF.mp4",
-      "original_filename": "brave_7aQ5Vf2bpF.mp4",
-      "content_type": "video/mp4",
-      "relative_index": 6,
-      "same_author": false,
-      "selection_reason": "any_author_fallback",
-      "size_bytes": 1108899,
-      "optimized": true,
-      "excluded_large": false,
-      "download_status": "downloaded",
-      "attachment_id": "1356666163811323974"
     }
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
@@ -110,13 +85,13 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "builder-drone-1356446200907432129",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:17:11+00:00",
-    "description": "Spawns a flyable builder drone with spinning rotors that a player controls via a configurable hold-key keybind. Syncs position and quaternion across server and clients using networked events, and overrides the camera to a first-person drone view for building in flight mode.",
+    "generated_at": "2026-02-21T23:43:17+00:00",
+    "description": "Spawns a flyable builder drone with a configurable keybind that players hold to take control. Animates spinning rotors, syncs kinematic rigidbody position and quaternion across clients, and overrides the camera to a first-person drone view for building in flight mode.",
     "feature_tags": [
       "vehicle",
       "camera",
@@ -129,7 +104,7 @@
       "passive",
       "networked"
     ],
-    "asset_profile": "light",
+    "asset_profile": "medium",
     "script_complexity": "high",
     "networking_profile": "events"
   }

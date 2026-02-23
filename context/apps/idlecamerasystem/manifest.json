@@ -1,0 +1,64 @@
+{
+  "app_id": "idlecamerasystem-1348530244746739722",
+  "app_slug": "idlecamerasystem",
+  "app_name": "IdleCameraSystem",
+  "source": {
+    "hyp_filename": "IdleCameraSystem.hyp",
+    "discord_attachment_id": "1348530244348547223",
+    "discord_message_id": "1348530244746739722",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-10T05:37:44.828Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1348530244348547223/IdleCameraSystem.hyp?ex=69989be8&is=69974a68&hm=524e37f34e3d1388b74880cee23871f53e21e4b15493f6425bf9c02ffab7746e&"
+  },
+  "author": {
+    "display_name": "HowieDuhzit",
+    "discord_user_id": "161613961605677058",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "idlecamerasystem-1348530244746739722",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:46:11+00:00",
+    "description": "Triggers an idle camera system inspired by GTA that automatically rotates or pans the camera viewpoint when the player is inactive, creating cinematic sweeping views of the environment.",
+    "feature_tags": [
+      "camera",
+      "animation"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

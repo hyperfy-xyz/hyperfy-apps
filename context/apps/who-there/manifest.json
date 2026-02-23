@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-07-23T11:45:59.244Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1397545276981641236/who_there.hyp?ex=69794e37&is=6977fcb7&hm=03d398a921790100303cc3824f7343182529737fa780065d7c4509eee4c8d7ca&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1397545276981641236/who_there.hyp?ex=6998f237&is=6997a0b7&hm=78a046adbd874a0b34f6c861ec5462a8fa6df6ead61f2fc7b249bbde38187024&"
   },
   "author": {
     "display_name": "Gert-Jan Akerboom",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/who_there.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/who-there/m1_image.png",
+    "primary_media_path": "catalog/media/who_there/1397543725764182109_image.png",
     "media_type": ".png",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/who-there/m1_image.png",
+      "catalog_path": "catalog/media/who_there/1397543725764182109_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": -1,
@@ -51,18 +51,19 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "who-there-1397545277300412447",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:31:03+00:00",
-    "description": "Renders a screenspace UI panel in the top-right corner that displays an online player count and toggles an expandable list showing all player names. Listens for enter/leave events and syncs the roster every two seconds to keep the UI current.",
+    "generated_at": "2026-02-21T23:50:17+00:00",
+    "description": "Renders a screenspace UI panel displaying an online player count and toggles an expandable list of player names. Listens for enter/leave events and syncs the roster every two seconds. Highlights the local player with a colored indicator dot.",
     "feature_tags": [
       "ui",
       "multiplayer",

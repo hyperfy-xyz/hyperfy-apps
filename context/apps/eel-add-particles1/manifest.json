@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-04-17T13:37:02.907Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1362421603438428161/eel_add_particles1.hyp?ex=6979683e&is=697816be&hm=61fe64ed5e12256dd8575843abe797893c8b02b2df09227f981ad75ffb13af14&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1362421603438428161/eel_add_particles1.hyp?ex=69990c3e&is=6997babe&hm=0874c7022ef56d66d4fb4475a7ed96f93e21f40857aec2e3d71dc96c30639a6e&"
   },
   "author": {
     "display_name": "Gert-Jan Akerboom",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/eel_add_particles1.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/eel-add-particles1/m1_eel_add_particles.mp4",
+    "primary_media_path": "catalog/media/eel_add_particles1/1362421523838927020_eel_add_particles.mp4",
     "media_type": ".mp4",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/eel-add-particles1/m1_eel_add_particles.mp4",
+      "catalog_path": "catalog/media/eel_add_particles1/1362421523838927020_eel_add_particles.mp4",
       "original_filename": "eel_add_particles.mp4",
       "content_type": "video/mp4",
       "relative_index": -1,
@@ -51,18 +51,19 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "eel-add-particles1-1362421603765325946",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:20:11+00:00",
-    "description": "Spawns additive glow-dust particles that track a skeleton bone position each frame using getBoneTransform. Plays a 'flow' animation on the rig and allows configuring a custom particle texture via app properties.",
+    "generated_at": "2026-02-21T23:44:31+00:00",
+    "description": "Spawns additive glow-dust particles that track a bone position on an animated eel rig. Plays a 'flow' animation on the model and reads bone transforms each frame to reposition the particle emitter in world space. Supports a configurable particle texture upload.",
     "feature_tags": [
       "particles",
       "animation",

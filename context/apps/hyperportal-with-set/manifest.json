@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-03-13T17:01:20.441Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1349789439764856963/HyperPortal_with_Set.hyp?ex=69799820&is=697846a0&hm=e8749aaf0d779d89d21e014e67bb7f5d9be70db68811ba8854acd25034b92886&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1349789439764856963/HyperPortal_with_Set.hyp?ex=69989360&is=699741e0&hm=06a9913a753cc2b420f73a41af748481410d2ca5ea4d2787fc4938c5ee9e827b&"
   },
   "author": {
     "display_name": "0mka",
@@ -29,28 +29,29 @@
     "hyp_summary_path": "context/hyp_summaries/HyperPortal_with_Set.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/hyperportal-with-set/preview.png",
+    "media_type": ".png",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "hyperportal-with-set-1349789440293474304",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:22:40+00:00",
-    "description": "Portal trigger zone that teleports players to an admin-configurable destination. Admins click a 'Set' button in the inspect UI to store their current position on the server, and any player entering the portal collider is teleported to that saved location.",
+    "generated_at": "2026-02-21T23:46:07+00:00",
+    "description": "Portal trigger zone that teleports players to a configurable destination. Admins click a 'Set' button in the UI to store their current position on the server, and any player entering the portal collider is teleported to that saved location via networked position sync.",
     "feature_tags": [
       "teleport",
       "interaction",

@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-04-03T14:54:13.899Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1357367596844056757/generate_monstera_V1.hyp?ex=69797a55&is=697828d5&hm=57201d4aedf5b5a279f1e454140e873620f11f5b7394a2951bebd74d96fdfe26&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1357367596844056757/generate_monstera_V1.hyp?ex=69991e55&is=6997ccd5&hm=2d1a1e4aefa6613c6c02fdc56ee3ab436080d19df803a6ddac57e0af454d32df&"
   },
   "author": {
     "display_name": "Agent12",
@@ -29,28 +29,29 @@
     "hyp_summary_path": "context/hyp_summaries/generate_monstera_V1.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/generate-monstera-v1/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "generate-monstera-v1-1357367597435191527",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:21:27+00:00",
-    "description": "Procedural plant generator that clones a monstera leaf GLB model 3-30 times, stacking clones vertically with randomized spacing, rotation, and linearly interpolated scale so each instance renders a unique monstera plant arrangement in the scene.",
+    "generated_at": "2026-02-21T23:45:16+00:00",
+    "description": "Procedural plant generator that clones a monstera leaf GLB model 3\u201330 times, stacking clones vertically with randomized spacing, rotation, and linearly interpolated scale so each instance spawns a unique monstera plant in the scene.",
     "feature_tags": [
       "3d-model",
       "environment"

@@ -1,0 +1,64 @@
+{
+  "app_id": "model_-_animation-1397381791341482035",
+  "app_slug": "model_-_animation",
+  "app_name": "Model_-_animation",
+  "source": {
+    "hyp_filename": "Model_-_animation.hyp",
+    "discord_attachment_id": "1397381791022583808",
+    "discord_message_id": "1397381791341482035",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-07-23T00:56:21.154Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1397381791022583808/Model_-_animation.hyp?ex=699902b5&is=6997b135&hm=27f4d415595488b3702089017f87d42f0bc30b22bddfb46b660a6f2fc624e4bf&"
+  },
+  "author": {
+    "display_name": "ash",
+    "discord_user_id": "179546010303856640",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "modified the existing model app to add an animation field",
+    "raw_message_content": "modified the existing model app to add an animation field",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "model_-_animation-1397381791341482035",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:46:53+00:00",
+    "description": "Extends the default model app by adding a configurable animation field, allowing users to load a 3D model and trigger or play a specified animation clip directly from the app properties panel.",
+    "feature_tags": [
+      "3d-model",
+      "animation"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

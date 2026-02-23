@@ -1,0 +1,15 @@
+{
+  "id": "5XDxvJ7FNW",
+  "version": 4,
+  "model": "asset://924c4910485f37402cf0444a8d922d6404b8d5e2220b5add4b36f13fab37d7e8.glb",
+  "script": "asset://59758e3edfa1163479946f9a34afc2d8311a354ac8434e2d5b3f6946e0626180.js",
+  "props": {
+    "tags": "social",
+    "relay": "https://relay.zesty.xyz",
+    "url": "",
+    "name": "",
+    "description": "",
+    "image": ""
+  },
+  "preload": false
+}

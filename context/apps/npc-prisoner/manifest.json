@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-10-12T08:20:52.269Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1426847074359447674/NPC_Prisoner.hyp?ex=68eeb0a4&is=68ed5f24&hm=5066850e165f358a66d9c763aab75fd239c259e536e438e7c258b16a05e1537b&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1426847074359447674/NPC_Prisoner.hyp?ex=6998c224&is=699770a4&hm=ce72b6e166e4836e343e3d4900a704b447d1bb9f12c68917fe7c585b51f4ea5a&"
   },
   "author": {
     "display_name": "b34k3r",
@@ -29,27 +29,28 @@
     "hyp_summary_path": "context/hyp_summaries/NPC_Prisoner.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/npc-prisoner/preview.png",
+    "media_type": ".png",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "npc-prisoner-1426847075219275808",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:25:00+00:00",
+    "generated_at": "2026-02-21T23:47:12+00:00",
     "description": "Spawns a prisoner NPC with a VRM avatar that autonomously walks, idles, and talks using emote animations. A physics controller moves the character with gravity, pseudo-random direction changes, and smooth quaternion slerp rotation to face the current heading.",
     "feature_tags": [
       "npc",
@@ -61,7 +62,7 @@
       "passive",
       "networked"
     ],
-    "asset_profile": "heavy",
+    "asset_profile": "medium",
     "script_complexity": "medium",
     "networking_profile": "events"
   }

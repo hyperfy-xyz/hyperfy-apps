@@ -1,0 +1,77 @@
+{
+  "app_id": "followcurve6-1374726400036044891",
+  "app_slug": "followcurve6",
+  "app_name": "followcurve6",
+  "source": {
+    "hyp_filename": "followcurve6.hyp",
+    "discord_attachment_id": "1374726399734317096",
+    "discord_message_id": "1374726400036044891",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-05-21T12:31:54.950Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1374726399734317096/followcurve6.hyp?ex=6998fcfa&is=6997ab7a&hm=11b29a9b36637bf4dfaed4dea7421eeca2ff19c49fd4171d5a06f807bc8937b6&"
+  },
+  "author": {
+    "display_name": "Gert-Jan Akerboom",
+    "discord_user_id": "601886221072990251",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/followcurve6/1374726363445067837_meshsize.png",
+    "media_type": ".png",
+    "selection_reason": "same_author_nearby",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/followcurve6/1374726363445067837_meshsize.png",
+      "original_filename": "meshsize.png",
+      "content_type": "image/png",
+      "relative_index": -1,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 10013,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1374726363445067837"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "followcurve6-1374726400036044891",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:44:59+00:00",
+    "description": "Arranges GLB meshes along a 2D curve path by distributing cloned 3D models based on configurable amount and radius properties set via the UI. Users adjust mesh size to connect objects seamlessly along the generated curve.",
+    "feature_tags": [
+      "3d-model",
+      "ui",
+      "building"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "medium",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

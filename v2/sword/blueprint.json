@@ -1,0 +1,32 @@
+{
+  "id": "SMDXjpBMIC",
+  "version": 6,
+  "name": "Sword",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": "test sword, needs multiplayer",
+  "model": "asset://cc757d0ba094a1d7e9bdc38e83c35f3c1ccc2fb3733e5f0bf25fd54cec22bb6b.glb",
+  "script": "asset://04329f2d052547b528bcb23cd898ebdb882ad63e81cbf4c290c1d0185b64d43e.js",
+  "props": {
+    "attack": {
+      "type": "emote",
+      "name": "emote-sword-out-slash.glb",
+      "url": "asset://9eed8f2520fae4b02052fa66264aec8b8ca285bc004267a5a13f6576d40c22ed.glb"
+    },
+    "attack1": {
+      "type": "emote",
+      "name": "emote-sword-out-slash.glb",
+      "url": "asset://9eed8f2520fae4b02052fa66264aec8b8ca285bc004267a5a13f6576d40c22ed.glb"
+    },
+    "attack2": {
+      "type": "emote",
+      "name": "sword-in-slash.glb",
+      "url": "asset://9eed8f2520fae4b02052fa66264aec8b8ca285bc004267a5a13f6576d40c22ed.glb"
+    }
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

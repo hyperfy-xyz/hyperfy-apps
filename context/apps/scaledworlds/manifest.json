@@ -1,0 +1,64 @@
+{
+  "app_id": "scaledworlds-1349282976424394843",
+  "app_slug": "scaledworlds",
+  "app_name": "ScaledWorlds",
+  "source": {
+    "hyp_filename": "ScaledWorlds.hyp",
+    "discord_attachment_id": "1349282976441045056",
+    "discord_message_id": "1349282976424394843",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-12T07:28:50.045Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1349282976441045056/ScaledWorlds.hyp?ex=6998b5f2&is=69976472&hm=a402b21517d180c7f0d084f761efbfb7d8ab347d88b2ee39ee4c9e5351a99875&"
+  },
+  "author": {
+    "display_name": "~/MayD524/Hyperfy",
+    "discord_user_id": "350830819423551488",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "https://github.com/Bitmato-Studio/ScaledWorlds\n\nExample using HypTool and mods!",
+    "raw_message_content": "https://github.com/Bitmato-Studio/ScaledWorlds\n\nExample using HypTool and mods!",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "scaledworlds-1349282976424394843",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:48:27+00:00",
+    "description": "Demonstrates building scaled Hyperfy worlds using the HypTool modding framework, loading and arranging 3D models within an environment to showcase toolchain-driven world construction workflows.",
+    "feature_tags": [
+      "environment",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

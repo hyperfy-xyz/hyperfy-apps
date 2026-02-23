@@ -1,0 +1,78 @@
+{
+  "app_id": "uibillboard_-_proximity_trigger-1342406409467330602",
+  "app_slug": "uibillboard_-_proximity_trigger",
+  "app_name": "uiBillboard_-_proximity_trigger",
+  "source": {
+    "hyp_filename": "uiBillboard_-_proximity_trigger.hyp",
+    "discord_attachment_id": "1342406409152626752",
+    "discord_message_id": "1342406409467330602",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-21T08:03:48.722Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1342406409152626752/uiBillboard_-_proximity_trigger.hyp?ex=6998be24&is=69976ca4&hm=543f7d6c67070c9d95cf12fc7baed579eefc0138e8e497b0f6818a4907e8ce92&"
+  },
+  "author": {
+    "display_name": "0mka",
+    "discord_user_id": "783416470205497394",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/uibillboard_-_proximity_trigger/1342405505649479720_rigidbodyTrigger.mp4",
+    "media_type": ".mp4",
+    "selection_reason": "same_author_nearby",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/uibillboard_-_proximity_trigger/1342405505649479720_rigidbodyTrigger.mp4",
+      "original_filename": "rigidbodyTrigger.mp4",
+      "content_type": "video/mp4",
+      "relative_index": -1,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 377716,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1342405505649479720"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "uibillboard_-_proximity_trigger-1342406409467330602",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:49:44+00:00",
+    "description": "Renders a UI billboard that triggers visibility when a player enters a proximity collider zone. Uses rigidbody onTriggerEnter to detect nearby players and displays a floating UI panel above a 3D model in the world.",
+    "feature_tags": [
+      "ui",
+      "physics",
+      "interaction",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "medium",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

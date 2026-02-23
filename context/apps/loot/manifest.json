@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-02-12T06:32:35.128Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1339121960759721996/1339121965117476945/Loot.hyp?ex=697904c4&is=6977b344&hm=627d2315885762521f2d970ca9a521711719ee587aae4235d0e217fb041b2dee&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1339121960759721996/1339121965117476945/Loot.hyp?ex=6998a8c4&is=69975744&hm=b3e1cb5fdbf5f4ad2573ae8dcb5e57aae764cd884842912c4d8a1deec67cafe8&"
   },
   "author": {
     "display_name": "maximus",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Loot.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/health/p0_vt01.png",
+    "primary_media_path": "catalog/media/loot/1339121961598455881_vt01.png",
     "media_type": ".png",
     "selection_reason": "same_message",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/health/p0_vt01.png",
+      "catalog_path": "catalog/media/loot/1339121961598455881_vt01.png",
       "original_filename": "vt01.png",
       "content_type": "image/png",
       "relative_index": 0,
@@ -49,7 +49,7 @@
       "attachment_id": "1339121961598455881"
     },
     {
-      "catalog_path": "catalog/media/loot/p0_vt02.png",
+      "catalog_path": "catalog/media/loot/1339121962060087306_vt02.png",
       "original_filename": "vt02.png",
       "content_type": "image/png",
       "relative_index": 0,
@@ -62,7 +62,7 @@
       "attachment_id": "1339121962060087306"
     },
     {
-      "catalog_path": "catalog/media/loot/p0_Rover_Ships_and_Loot_Planets_in_Hyperfy.mp4",
+      "catalog_path": "catalog/media/loot/1339121966178762845_Rover_Ships_and_Loot_Planets_in_Hyperfy.mp4",
       "original_filename": "Rover_Ships_and_Loot_Planets_in_Hyperfy.mp4",
       "content_type": "video/mp4",
       "relative_index": 0,
@@ -77,18 +77,19 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "loot-1339121960759721996",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:23:12+00:00",
-    "description": "Spawns a collectible loot pack GLB model that animates with continuous Y-axis rotation. Responds to proximity-check and ping events from a collectron, triggers item-detected and item-cleanup world events upon collection, then hides the 3D model. Part of a space trading sim prototype.",
+    "generated_at": "2026-02-21T23:46:30+00:00",
+    "description": "Spawns a collectible loot pack GLB model that animates with continuous Y-axis rotation. Responds to proximity-check and ping events from a collectron, emits item-detected and pong events upon collection, then hides the mesh. Part of a space trading sim remix.",
     "feature_tags": [
       "3d-model",
       "animation",

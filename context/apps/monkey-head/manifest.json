@@ -9,10 +9,10 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-04-10T21:33:48.001Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1360004866717515958/monkey_head.hyp?ex=69792f3b&is=6977ddbb&hm=3c3ce312bba51b416d9ebaf3c12596d16167ac4f962ebe8384d61d0b76463eca&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1360004866717515958/monkey_head.hyp?ex=6998d33b&is=699781bb&hm=1d3b87d2a2fc86135dc6e4f7797208bedb25c71e430d02887ad5e5d158024eb7&"
   },
   "author": {
-    "display_name": ".hyp shaman",
+    "display_name": "hypShaman",
     "discord_user_id": "297290503181959169",
     "confidence": "high",
     "evidence": "discord"
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/monkey_head.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/monkey-head/m2_image.png",
+    "primary_media_path": "catalog/media/monkey_head/1360004590300434452_image.png",
     "media_type": ".png",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/monkey-head/m2_image.png",
+      "catalog_path": "catalog/media/monkey_head/1360004590300434452_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": -2,
@@ -51,21 +51,21 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "monkey-head-1360004867166437467",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:24:17+00:00",
-    "description": "Renders a monkey head 3D model with a jump button texture and configurable jumpHeight prop. The script is empty, serving as a minimal template to demonstrate app structure with a GLB model and texture asset loaded into the scene.",
+    "generated_at": "2026-02-21T23:46:53+00:00",
+    "description": "Renders a monkey head 3D model with a jump button texture and configurable jumpHeight prop. The script is empty, serving as a minimal scaffold for rigidbody and physics experimentation discussed in developer context.",
     "feature_tags": [
-      "3d-model",
-      "ui"
+      "3d-model"
     ],
     "interaction_modes": [
       "passive"

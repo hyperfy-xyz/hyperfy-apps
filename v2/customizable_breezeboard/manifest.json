@@ -1,0 +1,30 @@
+[
+  {
+    "type": "model",
+    "url": "asset://0161559bd0b78a3ce76668d28332694697e868344f496b15024613dcc003d044.glb",
+    "filename": "0161559bd0b78a3ce76668d28332694697e868344f496b15024613dcc003d044.glb",
+    "size": 6902880,
+    "mime": "model/gltf-binary"
+  },
+  {
+    "type": "script",
+    "url": "asset://2430890e9901ff81c1129732fa551b194e21388ecbf3640755fa3c54937ae26e.js",
+    "filename": "2430890e9901ff81c1129732fa551b194e21388ecbf3640755fa3c54937ae26e.js",
+    "size": 1528,
+    "mime": "application/javascript"
+  },
+  {
+    "type": "texture",
+    "url": "asset://1e9747483c30a1c51012ae90e4430a38227694f0ffac85c8097e47d3e9a8082b.png",
+    "filename": "1e9747483c30a1c51012ae90e4430a38227694f0ffac85c8097e47d3e9a8082b.png",
+    "size": 188851,
+    "mime": "image/png"
+  },
+  {
+    "type": "texture",
+    "url": "asset://fde60a6433fa77d5aefd50a38be3ecd6ee4da2b6f8ea11394e18e488e1c0cc15.png",
+    "filename": "fde60a6433fa77d5aefd50a38be3ecd6ee4da2b6f8ea11394e18e488e1c0cc15.png",
+    "size": 4169081,
+    "mime": "image/png"
+  }
+]

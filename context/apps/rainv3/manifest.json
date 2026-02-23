@@ -1,15 +1,15 @@
 {
-  "app_id": "rainv3-1359812146199920650",
+  "app_id": "rainv3-1359821051999158272",
   "app_slug": "rainv3",
   "app_name": "RainV3",
   "source": {
     "hyp_filename": "RainV3.hyp",
-    "discord_attachment_id": "1359812145839083520",
-    "discord_message_id": "1359812146199920650",
-    "discord_channel": "\ud83d\udcbb\u2502developers",
-    "discord_channel_category": "Creators",
-    "discord_timestamp": "2025-04-10T08:47:59.742Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1359812145839083520/RainV3.hyp?ex=6979247f&is=6977d2ff&hm=188f9e0b2801d5786b7932a9dda7679008535127c7b3a88ca3837a74b61bd2c1&"
+    "discord_attachment_id": "1359821051676332214",
+    "discord_message_id": "1359821051999158272",
+    "discord_channel": "\ud83c\udfa8\u2502showcase",
+    "discord_channel_category": "Platform",
+    "discord_timestamp": "2025-04-10T09:23:23.050Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1359821051676332214/RainV3.hyp?ex=6998d0ca&is=69977f4a&hm=75e336b1469d0030487e0cbb75f412d04babd7ab85aed9425e14f61d7ab6d1c9&"
   },
   "author": {
     "display_name": "Gert-Jan Akerboom",
@@ -18,8 +18,8 @@
     "evidence": "discord"
   },
   "description": {
-    "short": "if anyone wants to try it out",
-    "raw_message_content": "if anyone wants to try it out",
+    "short": "rain V3",
+    "raw_message_content": "rain V3",
     "summary_excerpt": "RainV3.hyp",
     "source_priority_used": "discord_message"
   },
@@ -29,45 +29,62 @@
     "hyp_summary_path": "context/hyp_summaries/RainV3.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/rainv3/m1_rainV3.mp4",
-    "media_type": ".mp4",
-    "selection_reason": "same_author_nearby",
-    "is_fallback_any_author": false
+    "primary_media_path": "catalog/media/rainv3/1359680764010303610_image.png",
+    "media_type": ".png",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/rainv3/m1_rainV3.mp4",
-      "original_filename": "rainV3.mp4",
-      "content_type": "video/mp4",
+      "catalog_path": "catalog/media/rainv3/1359680764010303610_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
       "relative_index": -1,
-      "same_author": true,
-      "selection_reason": "same_author_nearby",
-      "size_bytes": 2793055,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 138172,
       "optimized": true,
       "excluded_large": false,
       "download_status": "downloaded",
-      "attachment_id": "1359812001651757106"
+      "attachment_id": "1359680764010303610"
+    },
+    {
+      "catalog_path": "catalog/media/rainv3/1359680764517683422_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": -1,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 541019,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1359680764517683422"
     }
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
-    "flags": [],
+    "flags": [
+      "media_fallback_any_author"
+    ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
-    "app_id": "rainv3-1359812146199920650",
+    "app_id": "rainv3-1359821051999158272",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:26:24+00:00",
-    "description": "Spawns up to 5000 billboard raindrop particles that fall with configurable gravity and speed, then triggers ring-shaped splash effects on ground contact. Uses a pooled particle system with camera-facing rotation and adjustable spawn radius, scale, and spawn rate.",
+    "generated_at": "2026-02-21T23:47:57+00:00",
+    "description": "Spawns up to 5000 billboard raindrop particles that fall with configurable gravity and speed, then triggers ring-shaped splash effects on ground impact. Uses a pooled particle system with camera-facing rotation and adjustable spawn radius, scale, and spawn rate via UI controls.",
     "feature_tags": [
       "particles",
+      "physics",
       "environment",
       "camera",
-      "physics"
+      "ui"
     ],
     "interaction_modes": [
       "passive"

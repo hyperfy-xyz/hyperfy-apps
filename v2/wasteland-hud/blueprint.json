@@ -1,0 +1,20 @@
+{
+  "id": "ivsOxzl6cv",
+  "version": 31,
+  "name": "Wasteland-HUD",
+  "image": null,
+  "author": "drdoge",
+  "url": "https://tattedalien.club/",
+  "desc": "Customizable Hud with Reactive Health/Rad/Effect bar, Compass, Etc. will work in unison with other RAD ZONE or other PVP/Damage apps in the world. ",
+  "model": "asset://b619d3860e27516dc6945757467ad18b32e6f10517e8fd90a10695e20b590b3f.glb",
+  "script": "asset://e6f44c86a01ce2dfef59b9480098d9455510948f1659df43864ad5e402c749c2.js",
+  "props": {
+    "healthBarColor": "#4caf50",
+    "radiationColor": "#39ff14",
+    "textColor": "#fcba03"
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

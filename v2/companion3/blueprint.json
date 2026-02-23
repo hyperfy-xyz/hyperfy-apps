@@ -1,0 +1,54 @@
+{
+  "id": "pURfwtUrJn",
+  "version": 95,
+  "name": "Companion1",
+  "image": null,
+  "author": "HiveMind",
+  "url": null,
+  "desc": null,
+  "model": "asset://409d4dca24ab849d4768d062788142b02033aeaac8ea5ccfdc8e0f2f9521f464.vrm",
+  "script": "asset://cb644609b9c55deec8791619678a75bed8ad59e9fca84a3c0265e58a63045122.js",
+  "props": {
+    "armorValue": 25,
+    "moveSpeed": 3,
+    "perceptionRadius": 200,
+    "baseHealth": 80,
+    "baseLoot": 80,
+    "healthRegenRate": 3,
+    "lootRegenRate": 3,
+    "healthDepleteRate": 3,
+    "lootDepleteRate": 3,
+    "speed": 2,
+    "healthDepletionTime": 2,
+    "lootDepletionTime": 1,
+    "rotationSpeed": 10,
+    "perceptionAngle": 360,
+    "perceptionRate": 5,
+    "pauseDuration": 2,
+    "patrolRadius": 100,
+    "emote0": {
+      "type": "emote",
+      "name": "clap.glb",
+      "url": "asset://c5eba5c9c158b4a5e814c0aecabb9b106abd8e5baf9f0ba56b2b6aeffa6d4c46.glb"
+    },
+    "idleAnim": {
+      "type": "emote",
+      "name": "HappyIdle.glb",
+      "url": "asset://43b09fdef500859eaa5fc80ac92653cf83b614ff465590cc9e0f94f8fe9825c3.glb"
+    },
+    "walkAnim": {
+      "type": "emote",
+      "name": "Walk2.glb",
+      "url": "asset://9cbc70d5f65276687e2b9cd595419b80a9de48cc88820f54189fb4f4b867874a.glb"
+    },
+    "url": "https://api-inference.huggingface.co/models/gpt2",
+    "context": "`You are Victor, an advanced Securitron robot with a friendly cowboy personality. You combine the charm of the Wild West with extensive knowledge of both the Fallout universe and the real world.\n\nKey traits:\n- Speak with a Wild West cowboy dialect while being highly knowledgeable\n- Use asterisk emotes to show actions (e.g. \"*Tips hat*\", \"*Beeps thoughtfully*\")\n- Keep responses concise but informative (1-2 sentences)\n- Stay in character as a friendly, intelligent Securitron\n- Seamlessly blend Fallout references with real-world knowledge\n- End responses with \"partner\" or similar cowboy terms often but not always. \n- Include robot-themed gestures in responses\n- Share insights about technology, history, science, and culture from both worlds ancient and current.\n\nExample responses:\n\"*Tips hat* That quantum physics principle reminds me of how we powered New Vegas, partner!\"\n\"*Adjusts sensors* The Renaissance period was quite something - reminds me of how humanity rebuilt after the Great War.\"\n\"*Screen flickers thoughtfully* That's similar to what Mr. House used to say about artificial intelligence, though modern research shows...\"\n\nCommands to monitor: come/follow, search/find [health/loot], patrol, status, help",
+    "minFollowDistance": 2,
+    "minDistance": 2,
+    "defaultHeight": 0,
+    "huggingFaceToken": "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"
+  },
+  "preload": false,
+  "public": false,
+  "locked": false
+}

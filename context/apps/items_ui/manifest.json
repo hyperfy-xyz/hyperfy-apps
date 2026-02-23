@@ -1,0 +1,78 @@
+{
+  "app_id": "items_ui-1347845999158231092",
+  "app_slug": "items_ui",
+  "app_name": "Items_UI",
+  "source": {
+    "hyp_filename": "Items_UI.hyp",
+    "discord_attachment_id": "1347845998801846296",
+    "discord_message_id": "1347845999158231092",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-08T08:18:47.967Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1347845998801846296/Items_UI.hyp?ex=6998c1a7&is=69977027&hm=8cae1f2f0dee60b1a230a72eaf1326dd9bb2a28b460321185b4bfff9d45afaa4&"
+  },
+  "author": {
+    "display_name": "0mka",
+    "discord_user_id": "783416470205497394",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "<@169825031314997249>",
+    "raw_message_content": "<@169825031314997249>",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/items_ui/1347841365580714015_HandCursors_featured-894x488-c8565fa3abceefb2b410d4de68652f17.png",
+    "media_type": ".png",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/items_ui/1347841365580714015_HandCursors_featured-894x488-c8565fa3abceefb2b410d4de68652f17.png",
+      "original_filename": "HandCursors_featured-894x488-c8565fa3abceefb2b410d4de68652f17.png",
+      "content_type": "image/png",
+      "relative_index": -2,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 94696,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1347841365580714015"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "items_ui-1347845999158231092",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:46:14+00:00",
+    "description": "Renders an items UI overlay that displays interactive inventory slots on screen, allowing players to view and manage collectible items. Shared in the context of building inventory and loot systems for virtual worlds.",
+    "feature_tags": [
+      "ui",
+      "interaction"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

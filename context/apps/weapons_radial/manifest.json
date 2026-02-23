@@ -1,0 +1,92 @@
+{
+  "app_id": "weapons_radial-1347837513640841236",
+  "app_slug": "weapons_radial",
+  "app_name": "Weapons_Radial",
+  "source": {
+    "hyp_filename": "Weapons_Radial.hyp",
+    "discord_attachment_id": "1347837513351565382",
+    "discord_message_id": "1347837513640841236",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-08T07:45:04.862Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1347837513351565382/Weapons_Radial.hyp?ex=6998b9c0&is=69976840&hm=9af0e54f442d6251d269cb0e842917800d5965b32b9aff72c7537a9d31435e28&"
+  },
+  "author": {
+    "display_name": "0mka",
+    "discord_user_id": "783416470205497394",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/weapons_radial/1347841365580714015_HandCursors_featured-894x488-c8565fa3abceefb2b410d4de68652f17.png",
+    "media_type": ".png",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/weapons_radial/1347834729147400234_image0.jpg",
+      "original_filename": "image0.jpg",
+      "content_type": "image/jpeg",
+      "relative_index": -4,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 11900,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1347834729147400234"
+    },
+    {
+      "catalog_path": "catalog/media/weapons_radial/1347841365580714015_HandCursors_featured-894x488-c8565fa3abceefb2b410d4de68652f17.png",
+      "original_filename": "HandCursors_featured-894x488-c8565fa3abceefb2b410d4de68652f17.png",
+      "content_type": "image/png",
+      "relative_index": 3,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 94696,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1347841365580714015"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "weapons_radial-1347837513640841236",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:50:14+00:00",
+    "description": "Renders a radial UI menu that lets players select and switch between weapons. Triggers weapon selection via pointer interaction, enabling quick combat loadout changes through a circular overlay interface.",
+    "feature_tags": [
+      "ui",
+      "combat",
+      "interaction"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

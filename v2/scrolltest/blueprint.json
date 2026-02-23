@@ -1,0 +1,17 @@
+{
+  "id": "zJ6nyf2Jg3",
+  "version": 15,
+  "name": "scrolltest",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": null,
+  "model": "asset://a178bf47d5da5b785571bb49cdd36f4980f668728cff3c72d6208b082dfeca7d.glb",
+  "script": "asset://0f21d5b665051c4b9b3e8028f0b5ba63108267a32a22bea07a1c2c6230b55422.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false,
+  "disabled": false
+}

@@ -1,0 +1,32 @@
+{
+  "id": "hFVBfUa0eL",
+  "version": 5,
+  "name": "Avatar Station",
+  "image": null,
+  "author": "Hyperfy",
+  "url": null,
+  "desc": null,
+  "model": "asset://2f962657a3169a51905f660a64d5f56e5571e695198d705168e6cb1c789b3dbb.glb",
+  "script": "asset://35a314672273e6fa7404cb3aaaa36caed7ef22ece8a01e45037f33a6bc0b5040.js",
+  "props": {
+    "avatar": {
+      "type": "avatar",
+      "name": "Uncanny_Prisoner.vrm",
+      "url": "asset://936171d901e0fe0543353e320ea89a40fef117fe535c0b81d93b90ef3e995fe8.vrm"
+    },
+    "emote": {
+      "type": "emote",
+      "name": "idle.glb",
+      "url": "asset://c56b4f79ae304b31ee0f81ebd66b8f5a906ff508d739bf9deeafe7b68484efbe.glb"
+    },
+    "rotate": true,
+    "rssotate": false,
+    "rssotdate": false,
+    "hover": false,
+    "name": "Prisoner"
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": true
+}

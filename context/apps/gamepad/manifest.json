@@ -1,0 +1,76 @@
+{
+  "app_id": "gamepad-1347729509193089185",
+  "app_slug": "gamepad",
+  "app_name": "Gamepad",
+  "source": {
+    "hyp_filename": "Gamepad.hyp",
+    "discord_attachment_id": "1347729508907745280",
+    "discord_message_id": "1347729509193089185",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-08T00:35:54.595Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1347729508907745280/Gamepad.hyp?ex=6998fdea&is=6997ac6a&hm=e55abb02d03579174c0ae6bb3dc594ff8ce05c17fa4d30e1547f29201c971252&"
+  },
+  "author": {
+    "display_name": "0mka",
+    "discord_user_id": "783416470205497394",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "found some work arounds...",
+    "raw_message_content": "found some work arounds...",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/gamepad/1347729508626858044_gamepad.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "same_message",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/gamepad/1347729508626858044_gamepad.jpg",
+      "original_filename": "gamepad.jpg",
+      "content_type": "image/jpeg",
+      "relative_index": 0,
+      "same_author": true,
+      "selection_reason": "same_message",
+      "size_bytes": 166963,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1347729508626858044"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "gamepad-1347729509193089185",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:45:13+00:00",
+    "description": "Experimental gamepad input handler that captures controller or keybinding inputs and repositions objects freely within the world. Enables custom control mapping workarounds for positioning and interaction with scene nodes.",
+    "feature_tags": [
+      "interaction",
+      "ui"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

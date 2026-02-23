@@ -1,0 +1,77 @@
+{
+  "app_id": "waterplanet_fixed-1408809734793986078",
+  "app_slug": "waterplanet_fixed",
+  "app_name": "WaterPlanet_fixed",
+  "source": {
+    "hyp_filename": "WaterPlanet_fixed.hyp",
+    "discord_attachment_id": "1408809734290800771",
+    "discord_message_id": "1408809734793986078",
+    "discord_channel": "\ud83e\uddca\u25023d-design",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-08-23T13:46:55.194Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1031058655581323324/1408809734290800771/WaterPlanet_fixed.hyp?ex=69990e8f&is=6997bd0f&hm=b011a3e35d60d0f242f4453deb661635fe666c87e63f9997f3da279b04a71f84&"
+  },
+  "author": {
+    "display_name": "vox",
+    "discord_user_id": "415262868217266177",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": null,
+      "original_filename": "water.mp4",
+      "content_type": "video/mp4",
+      "relative_index": 1,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 1637857,
+      "optimized": false,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1408810125392871465"
+    }
+  ],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "waterplanet_fixed-1408809734793986078",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:50:10+00:00",
+    "description": "Renders a water planet 3D model with distorted UV-based surface animation that simulates realistic water movements. Shared as a fixed .hyp asset for placement in virtual environments.",
+    "feature_tags": [
+      "3d-model",
+      "environment",
+      "animation"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "medium",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

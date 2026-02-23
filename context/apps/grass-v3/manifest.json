@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-04-11T13:23:56.979Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1360243980234784839/Grass_V3.hyp?ex=6979652c&is=697813ac&hm=29cd588efe641122ae0cbb4c416fa20d2de22bcee29a8ec81cdb775cd31f84c1&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1360243980234784839/Grass_V3.hyp?ex=6999092c&is=6997b7ac&hm=16634462901cb5a8ff6e780780c275fe6d18817ca98706245cfcdbb8329fdce4&"
   },
   "author": {
     "display_name": "Gert-Jan Akerboom",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Grass_V3.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/grass-v3/m1_Play_-_Google_Chrome_11.04.2025_15_22_23.png",
+    "primary_media_path": "catalog/media/grass_v3/1360243950144852108_Play_-_Google_Chrome_11.04.2025_15_22_23.png",
     "media_type": ".png",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/grass-v3/m1_Play_-_Google_Chrome_11.04.2025_15_22_23.png",
+      "catalog_path": "catalog/media/grass_v3/1360243950144852108_Play_-_Google_Chrome_11.04.2025_15_22_23.png",
       "original_filename": "Play_-_Google_Chrome_11.04.2025_15_22_23.png",
       "content_type": "image/png",
       "relative_index": -1,
@@ -51,18 +51,19 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "grass-v3-1360243980150902917",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:21:48+00:00",
-    "description": "Spawns up to 10,000 grass and flower clones across a configurable area, distributing them in randomized clusters with adjustable density, size, and radius. Clones six wind-animated 3D grass/flower models with random rotation and scale for natural-looking ground cover.",
+    "generated_at": "2026-02-21T23:45:23+00:00",
+    "description": "Clones up to 10,000 grass and flower 3D models across a configurable area, spawns them in randomized clusters with adjustable density, size, and rotation. Exposes a UI panel for tuning clone count, area dimensions, cluster percentage, and scale range.",
     "feature_tags": [
       "environment",
       "3d-model",

@@ -1,0 +1,43 @@
+{
+  "id": "BktmRblIvQ",
+  "version": 64,
+  "name": "Idle Camera System",
+  "image": {
+    "type": "texture",
+    "name": "Camera.png",
+    "url": "asset://dec974a71761bd5f17c41f6873912d6984f15629dfa849472c2d6e0aa6be72fa.png"
+  },
+  "author": "Howie Duhzit",
+  "url": "HowieDuhzit.Best",
+  "desc": "Idle Camera Switcher",
+  "model": "asset://8fe194cfa3e2759b2a36b1bbbdc8dffd89ffd2289b9a386a07e7a7be0da71565.glb",
+  "script": "asset://7b486ecd2df98447dd0f43606896231177ea2ccd462f595baaf9d8d2c7ffecb6.js",
+  "props": {
+    "idleTimeout": 25,
+    "transitionTime": 10,
+    "cameraDwellTime": 30,
+    "randomPlayerMode": true,
+    "globalShakeEnabled": true,
+    "globalShakeIntensity": 0.003,
+    "globalShakeSpeed": 2.5,
+    "highOverlook": true,
+    "highOverlookHeight": 10,
+    "highOverlookDistance": 20,
+    "groundView": true,
+    "groundViewHeight": 1,
+    "groundViewDistance": 5,
+    "groundShakeEnabled": false,
+    "groundShakeIntensity": 0.1,
+    "groundShakeSpeed": 5,
+    "topDown": true,
+    "topDownHeight": 5,
+    "birdsEye": true,
+    "birdsEyeHeight": 4,
+    "birdsEyeDistance": 3,
+    "birdsEyeSpeed": 0.5
+  },
+  "preload": true,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

@@ -1,0 +1,64 @@
+{
+  "app_id": "sign-1342378159777251430",
+  "app_slug": "sign",
+  "app_name": "Sign",
+  "source": {
+    "hyp_filename": "Sign.hyp",
+    "discord_attachment_id": "1342378159445770240",
+    "discord_message_id": "1342378159777251430",
+    "discord_channel": "\ud83e\uddca\u25023d-design",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-21T06:11:33.471Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1031058655581323324/1342378159445770240/Sign.hyp?ex=6998a3d5&is=69975255&hm=3f03a637531995910c7527b191e8c4c4eadb6d68de4a31fe6c26faf8169bca61&"
+  },
+  "author": {
+    "display_name": "ash",
+    "discord_user_id": "179546010303856640",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "This is useful for things like this:",
+    "raw_message_content": "This is useful for things like this:",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "sign-1342378159777251430",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:48:43+00:00",
+    "description": "Renders a 3D sign model that displays configurable text, designed to be duplicated as unique instances so each sign shows different content in the world environment.",
+    "feature_tags": [
+      "3d-model",
+      "ui"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

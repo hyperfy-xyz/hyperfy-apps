@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-08-17T06:25:22.366Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1406524288546373642/MoonJump.hyp?ex=6979abd2&is=69785a52&hm=435b0cd30b07db92f6094d77b39c914d9fa406237e54232f7db3056687a51a78&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1406524288546373642/MoonJump.hyp?ex=6998a712&is=69975592&hm=4411d6f1f0bc5f1e74c9c96a303fbd70801b41359de7c2b7a6bbc5683f28ea70&"
   },
   "author": {
     "display_name": "0mka",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/MoonJump.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/moonjump/p1_image.png",
+    "primary_media_path": "catalog/media/moonjump/1406557434243190814_image.png",
     "media_type": ".png",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/moonjump/p1_image.png",
+      "catalog_path": "catalog/media/moonjump/1406557434243190814_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": 1,
@@ -51,6 +51,7 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
@@ -58,16 +59,15 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "moonjump-1406524288625807451",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:24:21+00:00",
-    "description": "Tracks player grounded state via world.raycast and pushes an upward force vector to grant an automatic double jump when airborne. Resets jump state on landing and manages per-player state maps for multiplayer support.",
+    "generated_at": "2026-02-21T23:46:54+00:00",
+    "description": "Tracks player grounded state via raycasts and automatically pushes players upward with a double-jump force vector when they become airborne, resetting the state upon landing. Loads a small GLB collider model as the app base.",
     "feature_tags": [
       "physics",
-      "multiplayer",
       "3d-model"
     ],
     "interaction_modes": [

@@ -1,0 +1,21 @@
+{
+  "id": "qNabt9SqNl",
+  "version": 6,
+  "name": "VoiceZone",
+  "image": null,
+  "author": "Hyperfy",
+  "url": null,
+  "desc": null,
+  "model": "asset://22d0ab3cf876fe30b7a194cf34a6f293ba82a011f6ec5b24c1a6d651767be4df.glb",
+  "script": "asset://04df5bf3207cfb6900b9ab73320461e324d1859f3ea3a6c57527cc97177a2b87.js",
+  "props": {
+    "visible": true,
+    "level": "global"
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false,
+  "scene": false,
+  "disabled": false
+}

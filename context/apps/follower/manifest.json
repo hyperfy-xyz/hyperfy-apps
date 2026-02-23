@@ -1,0 +1,65 @@
+{
+  "app_id": "follower-1341356089211617302",
+  "app_slug": "follower",
+  "app_name": "Follower",
+  "source": {
+    "hyp_filename": "Follower.hyp",
+    "discord_attachment_id": "1341356088825483334",
+    "discord_message_id": "1341356089211617302",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-18T10:30:12.859Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1341356088825483334/Follower.hyp?ex=6998e074&is=69978ef4&hm=6c1f71edf0ab5522691c28945a07dfae3814c944195eaa25f35b56d59cf94378&"
+  },
+  "author": {
+    "display_name": "ash",
+    "discord_user_id": "179546010303856640",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "follower-1341356089211617302",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:44:59+00:00",
+    "description": "Spawns an NPC follower entity that tracks and follows nearby players. Plays looping audio attached to the follower model, as indicated by Discord context discussing adding an mp3 slot with loop enabled.",
+    "feature_tags": [
+      "npc",
+      "audio",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

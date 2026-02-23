@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udc1e\u2502issues",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-03-09T02:57:13.707Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1022421054582423562/1348127460646060052/BlockTesting.hyp?ex=69797b09&is=69782989&hm=f1267ff18f6c81b644229fe6f041b1e021cb8cd1fe59ab0f841c88e343f607ae&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1022421054582423562/1348127460646060052/BlockTesting.hyp?ex=69987649&is=699724c9&hm=af516293b1f5b4b7d3bedd95846ada2f16cb6ca6a5adf3fcbf1aeef11d6a523f&"
   },
   "author": {
     "display_name": "Shiffty",
@@ -29,28 +29,29 @@
     "hyp_summary_path": "context/hyp_summaries/BlockTesting.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/blocktesting/preview.png",
+    "media_type": ".png",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "blocktesting-1348127461031809134",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:16:50+00:00",
-    "description": "Captures right mouse button input to apply a blocking emote effect on the local player with snare and long duration, then clears the effect on release. Uses applyEffect to trigger a Great Sword Blocking Idle animation. Created as a bug report testing effect cancellation behavior.",
+    "generated_at": "2026-02-21T23:43:08+00:00",
+    "description": "Captures right mouse button input to trigger a blocking emote on the local player via applyEffect, applying a snare and looping sword-block animation. Releases the effect on button release using applyEffect(null). Created as a bug report testing effect cancellation behavior.",
     "feature_tags": [
       "animation",
       "interaction",

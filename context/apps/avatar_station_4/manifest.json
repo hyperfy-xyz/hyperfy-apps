@@ -1,0 +1,64 @@
+{
+  "app_id": "avatar_station_4-1347515182779203594",
+  "app_slug": "avatar_station_4",
+  "app_name": "Avatar_Station_4",
+  "source": {
+    "hyp_filename": "Avatar_Station_4.hyp",
+    "discord_attachment_id": "1347515181785419796",
+    "discord_message_id": "1347515182779203594",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-07T10:24:15.196Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1347515181785419796/Avatar_Station_4.hyp?ex=6998df0e&is=69978d8e&hm=94129e67e6f750012e270dd059f4fbd69aa90b3618dc7f301dd5990aa2ae24ba&"
+  },
+  "author": {
+    "display_name": "MetaRick",
+    "discord_user_id": "612945510810255390",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "avatar_station_4-1347515182779203594",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:42:55+00:00",
+    "description": "Avatar station that renders a 3D model serving as an interactive kiosk where players can browse and swap avatars. Likely triggers avatar changes on interaction with the station object in the world.",
+    "feature_tags": [
+      "3d-model",
+      "interaction"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "medium",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

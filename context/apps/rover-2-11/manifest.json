@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-02-12T06:32:35.128Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1339121960759721996/1339121965486833685/Rover.2.11.hyp?ex=697904c4&is=6977b344&hm=33c44e05eebba3fac7469e661d19e3e4689aeb1e0964f5c9ad57113f1817b3e1&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1339121960759721996/1339121965486833685/Rover.2.11.hyp?ex=6998a8c4&is=69975744&hm=02638c2dd0ae429e9b3269d4fab09ad8f6888a114bbad7124cb6ebaec4562202&"
   },
   "author": {
     "display_name": "maximus",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Rover.2.11.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/health/p0_vt01.png",
+    "primary_media_path": "catalog/media/rover.2.11/1339121961598455881_vt01.png",
     "media_type": ".png",
     "selection_reason": "same_message",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/health/p0_vt01.png",
+      "catalog_path": "catalog/media/rover.2.11/1339121961598455881_vt01.png",
       "original_filename": "vt01.png",
       "content_type": "image/png",
       "relative_index": 0,
@@ -49,7 +49,7 @@
       "attachment_id": "1339121961598455881"
     },
     {
-      "catalog_path": "catalog/media/rover-2-11/p0_vt02.png",
+      "catalog_path": "catalog/media/rover.2.11/1339121962060087306_vt02.png",
       "original_filename": "vt02.png",
       "content_type": "image/png",
       "relative_index": 0,
@@ -62,7 +62,7 @@
       "attachment_id": "1339121962060087306"
     },
     {
-      "catalog_path": "catalog/media/rover-2-11/p0_Rover_Ships_and_Loot_Planets_in_Hyperfy.mp4",
+      "catalog_path": "catalog/media/rover.2.11/1339121966178762845_Rover_Ships_and_Loot_Planets_in_Hyperfy.mp4",
       "original_filename": "Rover_Ships_and_Loot_Planets_in_Hyperfy.mp4",
       "content_type": "video/mp4",
       "relative_index": 0,
@@ -77,24 +77,25 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "rover-2-11-1339121960759721996",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:27:31+00:00",
-    "description": "Autonomous collectron rover that patrols within a configurable radius, detects nearby items via perception scans, and depletes health/loot stats over time. Renders a billboard UI panel displaying status, target info, and stat bars. Emits proximity-check and resource-transfer events to coordinate wit",
+    "generated_at": "2026-02-21T23:48:24+00:00",
+    "description": "Autonomous collectron rover that patrols within a configurable radius, detects nearby items via perception scans, and depletes health and loot stats over time. Renders a billboard UI panel displaying status, target info, and stat bars. Emits resource-transfer and proximity-check events to coordinate",
     "feature_tags": [
       "npc",
       "ui",
       "interaction",
       "3d-model",
-      "environment"
+      "combat"
     ],
     "interaction_modes": [
       "ui",

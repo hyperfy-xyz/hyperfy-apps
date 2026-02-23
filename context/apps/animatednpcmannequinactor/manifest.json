@@ -1,0 +1,90 @@
+{
+  "app_id": "animatednpcmannequinactor-1374946928445489293",
+  "app_slug": "animatednpcmannequinactor",
+  "app_name": "AnimatedNPCMANNEQUINACTOR",
+  "source": {
+    "hyp_filename": "AnimatedNPCMANNEQUINACTOR.hyp",
+    "discord_attachment_id": "1374946927875199066",
+    "discord_message_id": "1374946928445489293",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-05-22T03:08:13.020Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1374946927875199066/AnimatedNPCMANNEQUINACTOR.hyp?ex=6999219c&is=6997d01c&hm=d26f236d1cb659a38c66fb6048bdabe769a11626990c2c91de0adb06504353b7&"
+  },
+  "author": {
+    "display_name": "~/drdoge.eth",
+    "discord_user_id": "357905702926286858",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "here's a good animation and a hyp example you can use to test them out on with different vrm/avatars.",
+    "raw_message_content": "here's a good animation and a hyp example you can use to test them out on with different vrm/avatars.",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/animatednpcmannequinactor/1374945966800507021_image.png",
+    "media_type": ".png",
+    "selection_reason": "same_author_nearby",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/animatednpcmannequinactor/1374945966800507021_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": -1,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 663536,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1374945966800507021"
+    },
+    {
+      "catalog_path": "catalog/media/animatednpcmannequinactor/1374976105852964945_HyperBallZ.mp4",
+      "original_filename": "HyperBallZ.mp4",
+      "content_type": "video/mp4",
+      "relative_index": 2,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 12609696,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1374976105852964945"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "animatednpcmannequinactor-1374946928445489293",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:42:40+00:00",
+    "description": "Renders a mannequin NPC actor that plays animations on a VRM avatar model. Users can swap the mannequin 3D model with any VRM and load custom animation GLBs via a config panel to test emotes and character animations.",
+    "feature_tags": [
+      "npc",
+      "animation",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "medium",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

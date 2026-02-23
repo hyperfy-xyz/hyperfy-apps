@@ -1,0 +1,16 @@
+{
+  "id": "Mx72QZPz4V",
+  "version": 9,
+  "name": "Elon_Rat",
+  "image": null,
+  "author": "MetaRick",
+  "url": null,
+  "desc": null,
+  "model": "asset://cd79da2c3e6b39e382be0b0db382182aca14c11476c8aea7a8507b4342814f53.glb",
+  "script": "asset://f11eae2306b3a352110b29efd00c33214f61f41e64ee5af1c5b7c31766f93d81.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

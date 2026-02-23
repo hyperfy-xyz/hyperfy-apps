@@ -1,0 +1,16 @@
+{
+  "id": "lyrMt91dvV",
+  "version": 2,
+  "name": "Follower",
+  "image": null,
+  "author": "MetaRick",
+  "url": null,
+  "desc": "FOllows you and then rotates around facing you, like a security bot or sumthin",
+  "model": "asset://28a2e22801904ade0436588350af3b59174a4e129326f0e4b52f6474f9cf5383.glb",
+  "script": "asset://1e5819514d927b5e44cdf4527e723ddb5af096e2195e3504a67180dee6fb23ed.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

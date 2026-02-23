@@ -1,0 +1,27 @@
+{
+  "id": "Y8d88ZjnfG",
+  "version": 2,
+  "name": "Customizable BreezeBoard",
+  "image": {
+    "type": "texture",
+    "name": "image-removebg-preview (32).png",
+    "url": "asset://1e9747483c30a1c51012ae90e4430a38227694f0ffac85c8097e47d3e9a8082b.png"
+  },
+  "author": "Omka x Change",
+  "url": "https://www.midnightbreeze.store/",
+  "desc": "Display you're heART! \n\nCan you feel it?",
+  "model": "asset://0161559bd0b78a3ce76668d28332694697e868344f496b15024613dcc003d044.glb",
+  "script": "asset://5e81120bf4598280510c279665709eaf7a3d68b0a876f9c12786dc7e15a83f14.js",
+  "props": {
+    "imageAlpha": 0.94,
+    "imageFile": {
+      "type": "texture",
+      "name": "Rickroll.webp",
+      "url": "asset://c6ea3a4dde65bf9273bec14668b3a77ddcf5ea6c349f5b4c34dd3708e8c0b0f3.webp"
+    }
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": true
+}

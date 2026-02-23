@@ -1,0 +1,30 @@
+[
+  {
+    "type": "model",
+    "url": "asset://4bad5bcdd2c5ad56bfeeb7a2b01d4515cca0138f43a7c2b856d87591c946f883.glb",
+    "filename": "4bad5bcdd2c5ad56bfeeb7a2b01d4515cca0138f43a7c2b856d87591c946f883.glb",
+    "size": 6288736,
+    "mime": "model/gltf-binary"
+  },
+  {
+    "type": "script",
+    "url": "asset://3ebce87edc1dbcf91f0b4f3c4c5a9ecfd40f6415937f8907da065cacb505bfaf.js",
+    "filename": "3ebce87edc1dbcf91f0b4f3c4c5a9ecfd40f6415937f8907da065cacb505bfaf.js",
+    "size": 38056,
+    "mime": "application/javascript"
+  },
+  {
+    "type": "emote",
+    "url": "asset://7c8a0708598c65c93aa5adf21dcb82658b8eef873e2aacab73698cd0a3d12ba5.glb",
+    "filename": "7c8a0708598c65c93aa5adf21dcb82658b8eef873e2aacab73698cd0a3d12ba5.glb",
+    "size": 156928,
+    "mime": "model/gltf-binary"
+  },
+  {
+    "type": "audio",
+    "url": "asset://af4ab7893f771857bae8600924595d01d91211263fb39f13a97710b08f6fa28d.mp3",
+    "filename": "af4ab7893f771857bae8600924595d01d91211263fb39f13a97710b08f6fa28d.mp3",
+    "size": 214080,
+    "mime": "audio/mpeg"
+  }
+]

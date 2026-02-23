@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udc1e\u2502issues",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-07-25T04:06:53.101Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1022421054582423562/1398154515848495214/position.hyp?ex=69798b5d&is=697839dd&hm=67533162b36ea7deb8bdb4d34ad8f51940e96af520b483a5e5938a881d1cb181&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1022421054582423562/1398154515848495214/position.hyp?ex=6998869d&is=6997351d&hm=df016a48ff6218a474c258456570f75cbca505a09223feb8ef1d5ee5bdec7e6f&"
   },
   "author": {
     "display_name": "0mka",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/position.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/position/p1_xyz-temp.mp4",
+    "primary_media_path": "catalog/media/position/1398166839732867143_xyz-temp.mp4",
     "media_type": ".mp4",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/position/p1_xyz-temp.mp4",
+      "catalog_path": "catalog/media/position/1398166839732867143_xyz-temp.mp4",
       "original_filename": "xyz-temp.mp4",
       "content_type": "video/quicktime",
       "relative_index": 1,
@@ -51,6 +51,7 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
@@ -58,13 +59,13 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "position-1398154516133839002",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:25:42+00:00",
-    "description": "Renders a screen-space UI panel at the center of the display that reads the local player's position each frame and updates a text element showing live X, Y, Z coordinates. Built as a debug tool to pinpoint locations in a world.",
+    "generated_at": "2026-02-21T23:47:32+00:00",
+    "description": "Renders a screen-space UI panel at the center of the viewport that reads the local player's position each frame and displays live X, Y, Z coordinates as updating text. Created as a debug tool to pinpoint locations in a world scene.",
     "feature_tags": [
       "ui"
     ],

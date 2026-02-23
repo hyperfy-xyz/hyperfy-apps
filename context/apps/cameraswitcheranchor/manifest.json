@@ -1,0 +1,64 @@
+{
+  "app_id": "cameraswitcheranchor-1381388751976140820",
+  "app_slug": "cameraswitcheranchor",
+  "app_name": "CameraSwitcherAnchor",
+  "source": {
+    "hyp_filename": "CameraSwitcherAnchor.hyp",
+    "discord_attachment_id": "1381388751665627156",
+    "discord_message_id": "1381388751976140820",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-06-08T21:45:43.433Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1381388751665627156/CameraSwitcherAnchor.hyp?ex=6998d607&is=69978487&hm=93408d870a5d83821cb39d38f1ac711c75ff0f5c0f1ffda4a55140eb3f2aa7d7&"
+  },
+  "author": {
+    "display_name": "~/drdoge.eth",
+    "discord_user_id": "357905702926286858",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "cameraswitcheranchor-1381388751976140820",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:43:46+00:00",
+    "description": "Switches the active camera to predefined anchor points when clicked, allowing users to navigate between multiple camera positions along a desired path within a world scene.",
+    "feature_tags": [
+      "camera",
+      "interaction"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "app_id": "bike-fallout-1344927028004257865",
+  "app_slug": "bike-fallout",
+  "app_name": "BIKE-fallout",
+  "source": {
+    "hyp_filename": "BIKE-fallout.hyp",
+    "discord_attachment_id": "1344927027723108443",
+    "discord_message_id": "1344927028004257865",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-28T06:59:51.012Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1344927027723108443/BIKE-fallout.hyp?ex=6998af26&is=69975da6&hm=5788818d29b9e40a194ed5bb1f46cc9ceacda3b5105bb4dff726bf82a1ddcdf5&"
+  },
+  "author": {
+    "display_name": "~/drdoge.eth",
+    "discord_user_id": "357905702926286858",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "this is what i been workin on tonight lol",
+    "raw_message_content": "this is what i been workin on tonight lol",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "bike-fallout-1344927028004257865",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:43:05+00:00",
+    "description": "Renders a rideable bike with a Fallout-themed 3D model and colliders, allowing players to mount and drive the vehicle through the world without being thrown off by physics interactions.",
+    "feature_tags": [
+      "vehicle",
+      "3d-model",
+      "physics"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "medium",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

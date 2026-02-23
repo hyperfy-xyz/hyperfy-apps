@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-03-28T06:38:53.339Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1350129252976168992/1355068612871716865/Butterfly_Swarm_V6_Hyperfly_edition2_BW.hyp?ex=6979063d&is=6977b4bd&hm=30d6b242c9dc224a54f4d6e36ec33994405d3dd5add2ebbae9de9482f9ef5599&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1350129252976168992/1355068612871716865/Butterfly_Swarm_V6_Hyperfly_edition2_BW.hyp?ex=6998aa3d&is=699758bd&hm=a359fb85663e676479bd1fa9a66639967a67f33a9a2e6a3acf1c44a938b5f898&"
   },
   "author": {
     "display_name": "Gert-Jan Akerboom",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Butterfly_Swarm_V6_Hyperfly_edition2_BW.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/butterfly-swarm-v6-hyperfly-edition2-bw/p1_1092aa12-4c83-4fd9-bd55-6704eea2f06e.png",
+    "primary_media_path": "catalog/media/butterfly_swarm_v6_hyperfly_edition2_bw/1355093782277787708_1092aa12-4c83-4fd9-bd55-6704eea2f06e.png",
     "media_type": ".png",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/butterfly-swarm-v6-hyperfly-edition2-bw/p1_1092aa12-4c83-4fd9-bd55-6704eea2f06e.png",
+      "catalog_path": "catalog/media/butterfly_swarm_v6_hyperfly_edition2_bw/1355093782277787708_1092aa12-4c83-4fd9-bd55-6704eea2f06e.png",
       "original_filename": "1092aa12-4c83-4fd9-bd55-6704eea2f06e.png",
       "content_type": "image/png",
       "relative_index": 1,
@@ -51,22 +51,24 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "butterfly-swarm-v6-hyperfly-edition2-bw-1355068613178167366",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:18:39+00:00",
-    "description": "Spawns up to 5000 black-and-white butterfly clones with randomized scale, flap speed, and fly speed. Animates wing rotation each frame using sinusoidal flapping and drifting within a configurable 3D spawn area. Clones GLB wing nodes into group containers with emissive materials.",
+    "generated_at": "2026-02-21T23:43:34+00:00",
+    "description": "Spawns up to 5000 butterfly clones with randomized scale, flap speed, and fly speed across a configurable 3D area. Animates wing flapping and drifting movement each frame using cloned GLB wing nodes with emissive materials in a black-and-white edition.",
     "feature_tags": [
       "animation",
+      "environment",
       "3d-model",
-      "environment"
+      "ui"
     ],
     "interaction_modes": [
       "passive"

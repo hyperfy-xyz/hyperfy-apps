@@ -1,0 +1,12 @@
+{
+  "id": "AeSSzNaKkI",
+  "version": 4,
+  "model": "asset://b146e96ebdcd3d6c5ae5793808fde93b31cd05cbeb2e3e93092dfc6beeab35d5.glb",
+  "script": "asset://f1c3715c653bf59174bf24615244d81be48a8e100744e4b34063df0754f76c84.js",
+  "preload": true,
+  "props": {},
+  "public": false,
+  "locked": false,
+  "unique": false,
+  "name": "clouds2"
+}

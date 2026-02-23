@@ -1,0 +1,65 @@
+{
+  "app_id": "smoothelevator-1395408978489376898",
+  "app_slug": "smoothelevator",
+  "app_name": "SmoothElevator",
+  "source": {
+    "hyp_filename": "SmoothElevator.hyp",
+    "discord_attachment_id": "1395408978124738710",
+    "discord_message_id": "1395408978489376898",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-07-17T14:17:05.917Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1395408978124738710/SmoothElevator.hyp?ex=699915a1&is=6997c421&hm=b98667bb9e76287b03dc9268d69d0b8db3c53a6077d76c0cae30d21d379a16e0&"
+  },
+  "author": {
+    "display_name": "ash",
+    "discord_user_id": "179546010303856640",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "smoothelevator-1395408978489376898",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:48:53+00:00",
+    "description": "Animates a kinematic rigidbody elevator platform using setKinematicTarget inside fixedUpdate ticks to achieve smooth vertical movement. Moves players between floors by leveraging world-space physics for jitter-free transport.",
+    "feature_tags": [
+      "physics",
+      "animation",
+      "interaction"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

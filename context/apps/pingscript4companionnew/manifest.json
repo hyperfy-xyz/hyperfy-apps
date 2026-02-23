@@ -1,0 +1,66 @@
+{
+  "app_id": "pingscript4companionnew-1344003672216047668",
+  "app_slug": "pingscript4companionnew",
+  "app_name": "PingScript4CompanionNEW",
+  "source": {
+    "hyp_filename": "PingScript4CompanionNEW.hyp",
+    "discord_attachment_id": "1344003672073437255",
+    "discord_message_id": "1344003672216047668",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-25T17:50:45.837Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1344003672073437255/PingScript4CompanionNEW.hyp?ex=69989ef5&is=69974d75&hm=c21d303e199d17a579843fec7ebda6489f2d3611afab7c3eef6bfc20946f523d&"
+  },
+  "author": {
+    "display_name": "~/drdoge.eth",
+    "discord_user_id": "357905702926286858",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "pingscript4companionnew-1344003672216047668",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:47:23+00:00",
+    "description": "Spawns a companion NPC that follows the player around the world. Users can swap 3D models to customize the follower entity. Shared for community experimentation with simple pathfinding and model-based companion behavior.",
+    "feature_tags": [
+      "npc",
+      "3d-model",
+      "animation",
+      "interaction"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

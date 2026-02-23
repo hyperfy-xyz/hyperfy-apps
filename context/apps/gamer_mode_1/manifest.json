@@ -1,0 +1,64 @@
+{
+  "app_id": "gamer_mode_1-1337575321800671343",
+  "app_slug": "gamer_mode_1",
+  "app_name": "gamer_mode_1",
+  "source": {
+    "hyp_filename": "gamer_mode_1.hyp",
+    "discord_attachment_id": "1337575321842483333",
+    "discord_message_id": "1337575321800671343",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-08T00:06:47.665Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1337575321842483333/gamer_mode_1.hyp?ex=6998f717&is=6997a597&hm=9af02959295a50fceb75067144abc49016bf202f9f613bd6685acdad191a208c&"
+  },
+  "author": {
+    "display_name": "peezy",
+    "discord_user_id": "169825031314997249",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "dumb proof of concept and kinda bugged but\n\n- press F to switch between modes\n- first time u click left mouse it will either lock or unlock ur camera depending on the mode\n\nneeds work but thats what i was talking about. the only thing app commands would add here is instead of pressing a button we would type in a command AND it could be limited to admins so all players would be locked into 'gamer mode' <@1099579050378399806>",
+    "raw_message_content": "dumb proof of concept and kinda bugged but\n\n- press F to switch between modes\n- first time u click left mouse it will either lock or unlock ur camera depending on the mode\n\nneeds work but thats what i was talking about. the only thing app commands would add here is instead of pressing a button we would type in a command AND it could be limited to admins so all players would be locked into 'gamer mode' <@1099579050378399806>",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "gamer_mode_1-1337575321800671343",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:45:14+00:00",
+    "description": "Proof-of-concept that toggles between camera modes when the player presses F, and locks or unlocks the camera on left mouse click depending on the active mode. Designed as a prototype for an over-the-shoulder gamer camera style with potential admin-only command support.",
+    "feature_tags": [
+      "camera",
+      "interaction"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-03-25T14:39:54.498Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1350129252976168992/1354102502181703750/Butterfly_Swarm_V5.hyp?ex=697976fa&is=6978257a&hm=66a770f62f9c4ecd8410cac8f6f3ed2d8e2f72c44bb2d7a5e79ab6d55a3ccf2c&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1350129252976168992/1354102502181703750/Butterfly_Swarm_V5.hyp?ex=69991afa&is=6997c97a&hm=38f1fa3daee163e85f27bb8de5f02bf8493124c73a808edad6e91ef9e23de7d9&"
   },
   "author": {
     "display_name": "Gert-Jan Akerboom",
@@ -29,28 +29,29 @@
     "hyp_summary_path": "context/hyp_summaries/Butterfly_Swarm_V5.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/butterfly-swarm-v5/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "butterfly-swarm-v5-1354102502055743531",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:18:17+00:00",
-    "description": "Spawns up to 5000 butterfly clones from a GLB wing model and animates their wing flapping, sinusoidal flight paths, and drift movement each frame. Configurable UI controls adjust butterfly count, random scale range, flap speed, and fly speed. Clamps Y position so butterflies never fly below ground.",
+    "generated_at": "2026-02-21T23:43:26+00:00",
+    "description": "Spawns up to 5000 butterfly clones from a GLB wing model and animates their wing flapping, sinusoidal flight paths, and drift movement each frame. Configurable scale, flap speed, fly speed, and swarm count via UI panel. Butterflies are clamped above ground level.",
     "feature_tags": [
       "animation",
       "3d-model",

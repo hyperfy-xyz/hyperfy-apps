@@ -9,7 +9,7 @@
     "discord_channel": "\u26a1\u2502general",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-09-09T18:59:54.437Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/958209074045026327/1415049093872619600/Free_Camera.hyp?ex=68c31c2a&is=68c1caaa&hm=abcb1a43d8b2eb0faf56817fdf3151748d3957cf013f82deed3a5a8eb62e4333&"
+    "discord_url": "https://cdn.discordapp.com/attachments/958209074045026327/1415049093872619600/Free_Camera.hyp?ex=6998af2a&is=69975daa&hm=119b55074f404e490ff7e34017eaa8c047b732e7d38fa2ce2d71281b34e49f49&"
   },
   "author": {
     "display_name": "vox",
@@ -29,28 +29,29 @@
     "hyp_summary_path": "context/hyp_summaries/Free_Camera.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/free-camera/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "free-camera-1415049094363086848",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:21:13+00:00",
-    "description": "Toggles a freecam or orbit camera mode via configurable hotkeys, letting users fly freely or orbit around a target position. Renders an in-world UI panel with stepper controls to adjust move speed, look speed, lerp, radius, and height in real time.",
+    "generated_at": "2026-02-21T23:45:06+00:00",
+    "description": "Toggles between freecam and orbit camera modes using configurable hotkeys, and renders an in-world UI panel with stepper controls to adjust move speed, look speed, orbit radius, and lerp smoothing in real time.",
     "feature_tags": [
       "camera",
       "ui",

@@ -1,0 +1,78 @@
+{
+  "app_id": "rocket_launcher_v1-1364968731712688249",
+  "app_slug": "rocket_launcher_v1",
+  "app_name": "Rocket_Launcher_V1",
+  "source": {
+    "hyp_filename": "Rocket_Launcher_V1.hyp",
+    "discord_attachment_id": "1364968731209498704",
+    "discord_message_id": "1364968731712688249",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-04-24T14:18:25.533Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1364968731209498704/Rocket_Launcher_V1.hyp?ex=699915f1&is=6997c471&hm=e0e8a7bdf3bdc557d4e84a4eadb5307d8e2a94b49b6ebd647391630ff4a14fa0&"
+  },
+  "author": {
+    "display_name": "Gert-Jan Akerboom",
+    "discord_user_id": "601886221072990251",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/rocket_launcher_v1/1364968706563899493_World_-_Google_Chrome_2025-04-24_16-15-42.mp4",
+    "media_type": ".mp4",
+    "selection_reason": "same_author_nearby",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/rocket_launcher_v1/1364968706563899493_World_-_Google_Chrome_2025-04-24_16-15-42.mp4",
+      "original_filename": "World_-_Google_Chrome_2025-04-24_16-15-42.mp4",
+      "content_type": "video/mp4",
+      "relative_index": -1,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 3901055,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1364968706563899493"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "rocket_launcher_v1-1364968731712688249",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:48:13+00:00",
+    "description": "Rocket launcher that fires projectile rockets and spawns bright explosion particles on impact. Author notes heavy use of particle effects for dramatic visual feedback, making it a flashy combat-style weapon app.",
+    "feature_tags": [
+      "particles",
+      "combat",
+      "physics",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "medium",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

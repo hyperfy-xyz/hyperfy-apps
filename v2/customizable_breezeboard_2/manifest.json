@@ -1,0 +1,30 @@
+[
+  {
+    "type": "model",
+    "url": "asset://0161559bd0b78a3ce76668d28332694697e868344f496b15024613dcc003d044.glb",
+    "filename": "0161559bd0b78a3ce76668d28332694697e868344f496b15024613dcc003d044.glb",
+    "size": 6902880,
+    "mime": "model/gltf-binary"
+  },
+  {
+    "type": "script",
+    "url": "asset://5e81120bf4598280510c279665709eaf7a3d68b0a876f9c12786dc7e15a83f14.js",
+    "filename": "5e81120bf4598280510c279665709eaf7a3d68b0a876f9c12786dc7e15a83f14.js",
+    "size": 1529,
+    "mime": "application/javascript"
+  },
+  {
+    "type": "texture",
+    "url": "asset://1e9747483c30a1c51012ae90e4430a38227694f0ffac85c8097e47d3e9a8082b.png",
+    "filename": "1e9747483c30a1c51012ae90e4430a38227694f0ffac85c8097e47d3e9a8082b.png",
+    "size": 188851,
+    "mime": "image/png"
+  },
+  {
+    "type": "texture",
+    "url": "asset://c6ea3a4dde65bf9273bec14668b3a77ddcf5ea6c349f5b4c34dd3708e8c0b0f3.webp",
+    "filename": "c6ea3a4dde65bf9273bec14668b3a77ddcf5ea6c349f5b4c34dd3708e8c0b0f3.webp",
+    "size": 6640,
+    "mime": "image/webp"
+  }
+]

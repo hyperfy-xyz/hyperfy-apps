@@ -1,0 +1,21 @@
+{
+  "id": "9VMo8D9PmG",
+  "version": 13,
+  "name": "Spherea",
+  "image": null,
+  "author": "~/made by b0gie",
+  "url": null,
+  "desc": "Collide -> Emit",
+  "model": "asset://63f65b109c0c002d64914dba5eec560036f04357d2c3ff04e91836749456326c.glb",
+  "script": "asset://9698fe8c7ef7218c1bba414e96629b118dbda88a4904fb4b9e6efbb714060940.js",
+  "props": {
+    "signal": "cool:signal:name",
+    "showMesh": "on",
+    "debugColor": "white"
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false,
+  "disabled": false
+}

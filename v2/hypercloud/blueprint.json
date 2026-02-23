@@ -1,0 +1,23 @@
+{
+  "id": "cKnNrNYjmV",
+  "version": 0,
+  "name": "HyperCloud",
+  "image": {
+    "type": "texture",
+    "name": "Model.png",
+    "url": "asset://39ad1b405cbf41a90825dadf0b554f3c3baba634636bb94a1057dd8ec0784c86.png"
+  },
+  "author": "Hyperfy",
+  "url": null,
+  "desc": null,
+  "model": "asset://95c97d3047588515899ddbbb0df216abc303dc9f7f14b620ff77b190e40ada3a.glb",
+  "script": "asset://b711a53ef7d06001f11226612920ffaf8378142c9d37c1e088686ed4d393a5f6.js",
+  "props": {
+    "collision": true
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false,
+  "disabled": false
+}

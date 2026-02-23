@@ -1,0 +1,90 @@
+{
+  "app_id": "chicken_with_hat-1410221398642659400",
+  "app_slug": "chicken_with_hat",
+  "app_name": "Chicken_with_Hat",
+  "source": {
+    "hyp_filename": "Chicken_with_Hat.hyp",
+    "discord_attachment_id": "1410221398646980628",
+    "discord_message_id": "1410221398642659400",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-08-27T11:16:22.083Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1410221398646980628/Chicken_with_Hat.hyp?ex=6998eb46&is=699799c6&hm=4a4b0e993bfa56ab526af1c26ac345f8498d47447d36a6563f6f500f121d521b&"
+  },
+  "author": {
+    "display_name": "Gert-Jan Akerboom",
+    "discord_user_id": "601886221072990251",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "i know you do, ha ha ha",
+    "raw_message_content": "i know you do, ha ha ha",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/chicken_with_hat/1410221346050543680_Bildschirmaufnahme_2025-08-27_131306.mp4",
+    "media_type": ".mp4",
+    "selection_reason": "same_author_nearby",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/chicken_with_hat/1410219761706467379_Bildschirmaufnahme_2025-08-27_124945.mp4",
+      "original_filename": "Bildschirmaufnahme_2025-08-27_124945.mp4",
+      "content_type": "video/mp4",
+      "relative_index": -2,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 2773788,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1410219761706467379"
+    },
+    {
+      "catalog_path": "catalog/media/chicken_with_hat/1410221346050543680_Bildschirmaufnahme_2025-08-27_131306.mp4",
+      "original_filename": "Bildschirmaufnahme_2025-08-27_131306.mp4",
+      "content_type": "video/mp4",
+      "relative_index": -1,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 3297583,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1410221346050543680"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "chicken_with_hat-1410221398642659400",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:43:55+00:00",
+    "description": "Renders a 3D chicken model wearing a hat that breaks apart into physics-driven pieces when a player clicks on it, simulating a fun destructible interaction with generated fragments.",
+    "feature_tags": [
+      "3d-model",
+      "physics",
+      "interaction"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

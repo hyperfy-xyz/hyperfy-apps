@@ -1,15 +1,15 @@
 {
-  "app_id": "rainv4-1359839641754275921",
+  "app_id": "rainv4-1359841759248646274",
   "app_slug": "rainv4",
   "app_name": "RainV4",
   "source": {
     "hyp_filename": "RainV4.hyp",
-    "discord_attachment_id": "1359839641070469150",
-    "discord_message_id": "1359839641754275921",
-    "discord_channel": "\ud83d\udcbb\u2502developers",
-    "discord_channel_category": "Creators",
-    "discord_timestamp": "2025-04-10T10:37:15.193Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1359839641070469150/RainV4.hyp?ex=69793e1b&is=6977ec9b&hm=d646c1a2c02e2b99ff98afa66bb09cfb77e9017f4053a67e5f08db9bea3ae191&"
+    "discord_attachment_id": "1359841758925815889",
+    "discord_message_id": "1359841759248646274",
+    "discord_channel": "\ud83c\udfa8\u2502showcase",
+    "discord_channel_category": "Platform",
+    "discord_timestamp": "2025-04-10T10:45:40.043Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1359841758925815889/RainV4.hyp?ex=6998e413&is=69979293&hm=e1df040388eb451674dd088c1343677487021610fe27e25f8e19a19949351425&"
   },
   "author": {
     "display_name": "Gert-Jan Akerboom",
@@ -18,8 +18,8 @@
     "evidence": "discord"
   },
   "description": {
-    "short": "<@415262868217266177> i added a cube for grabbing, can turn it on and off in UI",
-    "raw_message_content": "<@415262868217266177> i added a cube for grabbing, can turn it on and off in UI",
+    "short": "Added a cube for easier access, you can toggle it on and off in the UI",
+    "raw_message_content": "Added a cube for easier access, you can toggle it on and off in the UI",
     "summary_excerpt": "RainV4.hyp",
     "source_priority_used": "discord_message"
   },
@@ -29,28 +29,42 @@
     "hyp_summary_path": "context/hyp_summaries/RainV4.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/rainv4/m2_image.png",
+    "primary_media_path": "catalog/media/rainv4/1359680764010303610_image.png",
     "media_type": ".png",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/rainv4/m2_image.png",
+      "catalog_path": "catalog/media/rainv4/1359680764010303610_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": -2,
       "same_author": false,
       "selection_reason": "any_author_fallback",
-      "size_bytes": 197935,
+      "size_bytes": 138172,
       "optimized": true,
       "excluded_large": false,
       "download_status": "downloaded",
-      "attachment_id": "1359838621259137104"
+      "attachment_id": "1359680764010303610"
+    },
+    {
+      "catalog_path": "catalog/media/rainv4/1359680764517683422_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": -2,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 541019,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1359680764517683422"
     }
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
@@ -58,17 +72,17 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
-    "app_id": "rainv4-1359839641754275921",
+    "app_id": "rainv4-1359841759248646274",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:26:35+00:00",
-    "description": "Spawns up to 5000 raindrop particles that fall with configurable gravity and speed, then triggers ring-shaped splash effects on ground impact. A UI panel controls spawn rate, rain area radius, particle size, and toggles a grabbable cube for repositioning the rain emitter.",
+    "generated_at": "2026-02-21T23:47:58+00:00",
+    "description": "Spawns up to 5000 billboard raindrop particles that fall with configurable gravity and speed, then triggers ring-shaped splash effects on ground impact. A UI toggle shows or hides a grab cube for repositioning. Particle pool recycles oldest drops for continuous rainfall across a configurable area.",
     "feature_tags": [
       "particles",
-      "ui",
       "physics",
+      "ui",
       "environment",
       "camera"
     ],

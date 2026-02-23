@@ -1,0 +1,63 @@
+{
+  "app_id": "aloe_vera-1394600215700443256",
+  "app_slug": "aloe_vera",
+  "app_name": "Aloe_vera",
+  "source": {
+    "hyp_filename": "Aloe_vera.hyp",
+    "discord_attachment_id": "1394600215394127952",
+    "discord_message_id": "1394600215700443256",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-07-15T08:43:21.842Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1394600215394127952/Aloe_vera.hyp?ex=6998c769&is=699775e9&hm=5a45d4df42a222e0181ef75f4d6edbc90849a762ad0c3d5e435d845896e96378&"
+  },
+  "author": {
+    "display_name": "Gert-Jan Akerboom",
+    "discord_user_id": "601886221072990251",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "maybe this helps, very simple instancing",
+    "raw_message_content": "maybe this helps, very simple instancing",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "aloe_vera-1394600215700443256",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:42:36+00:00",
+    "description": "Demonstrates simple mesh instancing by cloning an aloe vera 3D model and placing instances in a scene. Serves as a minimal example showing how to duplicate and position GLB-based nodes within the Hyperfy app hierarchy.",
+    "feature_tags": [
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

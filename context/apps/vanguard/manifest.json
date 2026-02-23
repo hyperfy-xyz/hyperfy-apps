@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-03-30T13:57:21.442Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1355903732742881552/Vanguard.hyp?ex=69796d01&is=69781b81&hm=00b072e0f1747b8a415992a6088e500747d334a9c96382772ff79779aed8a966&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1355903732742881552/Vanguard.hyp?ex=69991101&is=6997bf81&hm=7b3fd96d430c316573b02898b89657110d74f2b083502c35e6ad58cd312fdd5d&"
   },
   "author": {
     "display_name": "ash",
@@ -29,62 +29,37 @@
     "hyp_summary_path": "context/hyp_summaries/Vanguard.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/mob-skelly/m6_xyz-skelly.mp4",
-    "media_type": ".mp4",
-    "selection_reason": "any_author_fallback",
-    "is_fallback_any_author": true
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
   },
-  "media": [
-    {
-      "catalog_path": "catalog/media/vanguard/m8_CamSwitcher.mp4",
-      "original_filename": "CamSwitcher.mp4",
-      "content_type": "video/mp4",
-      "relative_index": -8,
-      "same_author": false,
-      "selection_reason": "any_author_fallback",
-      "size_bytes": 22409746,
-      "optimized": true,
-      "excluded_large": false,
-      "download_status": "downloaded",
-      "attachment_id": "1355780113417113731"
-    },
-    {
-      "catalog_path": "catalog/media/mob-skelly/m6_xyz-skelly.mp4",
-      "original_filename": "xyz-skelly.mp4",
-      "content_type": "video/mp4",
-      "relative_index": -6,
-      "same_author": true,
-      "selection_reason": "any_author_fallback",
-      "size_bytes": 9033986,
-      "optimized": true,
-      "excluded_large": false,
-      "download_status": "downloaded",
-      "attachment_id": "1355851207217778808"
-    }
-  ],
+  "media": [],
   "status": {
-    "has_preview": true,
-    "needs_media_review": false,
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
     "needs_author_review": false,
     "flags": [
-      "media_fallback_any_author"
+      "media_fallback_any_author",
+      "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "vanguard-1355903733090750595",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:30:20+00:00",
-    "description": "Class-based PvPvE combat character that equips a VRM avatar and sword weapon, triggers attack/charge/special emotes with audio, damages nearby players via overlapSphere hit detection, and renders an energy-based action bar UI with configurable crit damage.",
+    "generated_at": "2026-02-21T23:49:53+00:00",
+    "description": "Class-based PvPvE combat character that equips a VRM avatar and sword weapon, triggers attack/charge/special emotes with damage via overlapSphere hit detection, plays combat audio, manages an energy system with regeneration, and renders a UI action bar with skill icons and health/energy bars.",
     "feature_tags": [
       "combat",
       "audio",
       "animation",
       "ui",
-      "multiplayer",
-      "3d-model"
+      "3d-model",
+      "multiplayer"
     ],
     "interaction_modes": [
       "ui",

@@ -1,0 +1,22 @@
+{
+  "id": "iTztkReJ0Q",
+  "version": 1,
+  "name": "CampChairSMALLAVATARS",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": null,
+  "model": "asset://baf63f1f7144c74de2ee291e43c76d4402dc7b23235b5588525c9977811ee634.glb",
+  "script": "asset://9fc75d47e46d2ca8baf4af2c0e2b667b2b957ffeb10a849ee62d04ebf6b74655.js",
+  "props": {
+    "emote": {
+      "type": "emote",
+      "name": "Sitting Still In A Chair.glb",
+      "url": "asset://6bbb2ac54cdd0f79dea89db778307a0bd8a48801afeedabc8d1ef0409d626efb.glb"
+    }
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

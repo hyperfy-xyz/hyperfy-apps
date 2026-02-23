@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-09-10T12:15:47.057Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1415309781094371338/The_Grid.hyp?ex=68c40ef2&is=68c2bd72&hm=ecabf5d63d50b638daa7871a604b5300bd9c0c2e68478cb058df4091157476da&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1415309781094371338/The_Grid.hyp?ex=6998f932&is=6997a7b2&hm=8cd51cf58e3c87f2de9d4926199e9f6cc7404b8a763e0855afa18d284edb4d76&"
   },
   "author": {
     "display_name": "ash",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/The_Grid.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/alien-planet/m4_image.png",
+    "primary_media_path": "catalog/media/the_grid/1415290348061851730_image.png",
     "media_type": ".png",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/alien-planet/m4_image.png",
+      "catalog_path": "catalog/media/the_grid/1415290348061851730_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": -4,
@@ -51,6 +51,7 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
@@ -58,16 +59,15 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "the-grid-1415309781345894431",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:29:45+00:00",
-    "description": "Scene app that renders a configurable sky node with HDR lighting, calculates sun direction from elevation and horizontal rotation angles, and applies fog near/far distances and color. Supports swappable sky textures and adjustable sun intensity via a configure panel.",
+    "generated_at": "2026-02-21T23:49:31+00:00",
+    "description": "Scene app that configures a sky node with a texture background, HDR reflections, and computed sun direction. Renders fog with near/far distance controls and adjusts sun intensity, color, and elevation via configurable props.",
     "feature_tags": [
       "environment",
-      "ui",
       "3d-model"
     ],
     "interaction_modes": [

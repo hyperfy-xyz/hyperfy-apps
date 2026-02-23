@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-03-29T23:23:55.925Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1355683927422926929/hexagonal_test_basic.hyp?ex=6979490b&is=6977f78b&hm=8eb2fed2abf5a26ade73131c549ff73de933f8cc542f8c4a42b9ebd322d90a81&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1355683927422926929/hexagonal_test_basic.hyp?ex=6998ed0b&is=69979b8b&hm=6977996466085faf41fb7ba4382c59648de09bd214c77311860ec68bf620cc17&"
   },
   "author": {
     "display_name": "cru",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/hexagonal_test_basic.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/hexagonal-test-basic/p0_image.png",
+    "primary_media_path": "catalog/media/hexagonal_test_basic/1355683928199004232_image.png",
     "media_type": ".png",
     "selection_reason": "same_message",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/hexagonal-test-basic/p0_image.png",
+      "catalog_path": "catalog/media/hexagonal_test_basic/1355683928199004232_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": 0,
@@ -51,18 +51,19 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "hexagonal-test-basic-1355683928421171290",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:22:16+00:00",
-    "description": "Hexagonal floor panels that react to player contact by oscillating vertically and scrolling UV offsets to cycle colors. Each panel shifts downward when stepped on and smoothly returns to an idle sine-wave oscillation when released, with configurable amplitude, frequency, and scroll speed.",
+    "generated_at": "2026-02-21T23:45:41+00:00",
+    "description": "Renders 25 hexagonal panels that oscillate vertically with sinusoidal motion and shift downward on player contact. Each panel scrolls UV offsets through 6 color states when stepped on, then trails back to idle. Configurable shift distance, speed, amplitude, and frequency.",
     "feature_tags": [
       "animation",
       "interaction",

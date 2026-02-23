@@ -1,0 +1,53 @@
+{
+  "id": "M49ZyHT5Vz",
+  "version": 151,
+  "model": "asset://a39e765561332a778658050991961753bc55e826ea2cc9eb78760bfb7743ee9b.vrm",
+  "script": "asset://8c2fac87e902811d2192309804600c9921485ed358b521ce109a4c75d21b453c.js",
+  "props": {
+    "url": "http://localhost:3001/e0e10e6f-ff2b-0d4c-8011-1fc1eee7cb32/hyperfy",
+    "name": "Eliza",
+    "context": "DO NOT RESPOND TO OTHER AGENTS",
+    "emote": "1",
+    "emote0": {
+      "type": "emote",
+      "name": "walk-circle.glb",
+      "url": "asset://2936a0527fa5e851563473e2636bd8a12765cd1f2b85c1260760a0672eaf4ad4.glb"
+    },
+    "emote1": {
+      "type": "emote",
+      "name": "wave-distant.glb",
+      "url": "asset://71114754534e64bcf90535d582dd72b80c319b2c59ab19a23c9b40d741abdaba.glb"
+    },
+    "emote1Name": "wave-distant",
+    "emote2Name": "wave-close",
+    "emote2": {
+      "type": "emote",
+      "name": "wave-close.glb",
+      "url": "asset://16c060ec2a214f365e130799b5d95d874b170bd2d8a6c24365aa9573982d1ed6.glb"
+    },
+    "emote3Name": "Talking",
+    "emote3": {
+      "type": "emote",
+      "name": "emote-idle.glb",
+      "url": "asset://c56b4f79ae304b31ee0f81ebd66b8f5a906ff508d739bf9deeafe7b68484efbe.glb"
+    },
+    "emote4Name": "talking",
+    "emote4": {
+      "type": "emote",
+      "name": "talking.glb",
+      "url": "asset://1c3066265c17c7491c4c58fb651dabed0d0d269a8b6fb141d47f3482e360a29c.glb"
+    },
+    "idleEmote": {
+      "type": "emote",
+      "name": "emote-idle.glb",
+      "url": "asset://c56b4f79ae304b31ee0f81ebd66b8f5a906ff508d739bf9deeafe7b68484efbe.glb"
+    }
+  },
+  "preload": true,
+  "public": true,
+  "locked": false,
+  "name": "LLM NPC",
+  "desc": "This code implements an avatar behavior system that manages animations and interactions based on player distance in a virtual world, using a behavior tree architecture to control chat responses, UI elements, and API communications across server and client.",
+  "author": "itsmetamike",
+  "url": "hyperfy.itsmetamike.com"
+}

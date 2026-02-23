@@ -1,0 +1,23 @@
+{
+  "id": "ShdXQF2ENR",
+  "version": 25,
+  "name": "DeepWiki",
+  "image": null,
+  "author": "hiromka",
+  "url": null,
+  "desc": null,
+  "model": "asset://97fc7289a38b5b49357e6fbd74e7e77fc78493dbb1c0dbc850cb8e9db9fd2530.glb",
+  "script": "asset://2f0108f032ff40ec36136132cd58f81a80fa4038272516c24f3cedcd0463a8ab.js",
+  "props": {
+    "collision": true,
+    "url": "https://deepwiki.com/hyperfy-xyz/hyperfy",
+    "uiPositionX": 0,
+    "uiPositionY": 2.2,
+    "visibility": false
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false,
+  "disabled": false
+}

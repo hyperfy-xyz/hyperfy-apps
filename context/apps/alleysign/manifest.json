@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udc1e\u2502issues",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-02-19T12:48:41.204Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1022421054582423562/1341753324394774609/AlleySign.hyp?ex=69795ce9&is=69780b69&hm=19ead5bbb27fb9e3d9bf82fc28e9a64685528f538c5ccf4b519931ed5f8c9042&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1022421054582423562/1341753324394774609/AlleySign.hyp?ex=699900e9&is=6997af69&hm=693abcb5473d2a3fe14c6fcc5507e73334495d1cc81595f5f7c9700168c04ae6&"
   },
   "author": {
     "display_name": "MetaRick",
@@ -29,28 +29,29 @@
     "hyp_summary_path": "context/hyp_summaries/AlleySign.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/alleysign/preview.png",
+    "media_type": ".png",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "alleysign-1341753324801626154",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:16:15+00:00",
-    "description": "Loads an alley sign GLB model and rotates it continuously around its Y-axis at a configurable speed using the per-frame update loop. A simple demonstration of scripted object rotation without triggering GLB animations.",
+    "generated_at": "2026-02-21T23:42:33+00:00",
+    "description": "Loads an alley sign GLB model and rotates it continuously around its Y-axis at a configurable speed using the per-frame update loop, creating a slow spinning sign effect without triggering any embedded GLB animations.",
     "feature_tags": [
       "3d-model",
       "animation"

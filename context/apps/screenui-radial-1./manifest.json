@@ -1,0 +1,90 @@
+{
+  "app_id": "screenui-radial-1.-1347703671747641465",
+  "app_slug": "screenui-radial-1.",
+  "app_name": "ScreenUI-Radial-1.",
+  "source": {
+    "hyp_filename": "ScreenUI-Radial-1..hyp",
+    "discord_attachment_id": "1347703671437398089",
+    "discord_message_id": "1347703671747641465",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-07T22:53:14.468Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1347703671437398089/ScreenUI-Radial-1..hyp?ex=6998e5da&is=6997945a&hm=71c382eb5f68b9a3070c565646473fe11866bb01e5cfa343f017972d28a10c12&"
+  },
+  "author": {
+    "display_name": "0mka",
+    "discord_user_id": "783416470205497394",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/screenui-radial-1./1347683318002352169_image.png",
+    "media_type": ".png",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/screenui-radial-1./1347682809266962493_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": -5,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 107803,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1347682809266962493"
+    },
+    {
+      "catalog_path": "catalog/media/screenui-radial-1./1347683318002352169_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": -4,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 90963,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1347683318002352169"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "screenui-radial-1.-1347703671747641465",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:48:32+00:00",
+    "description": "Renders a radial screen UI layout with directional views that can be rotated toward cardinal directions. The author discusses transforming and translating UI elements within the on-screen panel system.",
+    "feature_tags": [
+      "ui"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

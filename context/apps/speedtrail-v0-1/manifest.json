@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-04-16T08:51:30.071Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1361987355212251279/SpeedTrail_v0.1.hyp?ex=69792551&is=6977d3d1&hm=9b376449e36df683d6fc0a2c5c0413122334fabd8077479209862b9faa33a737&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1361987355212251279/SpeedTrail_v0.1.hyp?ex=6998c951&is=699777d1&hm=78379f4abe047e42f25f3763b6e347b191b044e1c1712c722d9fc5d70575128e&"
   },
   "author": {
     "display_name": "Valiant",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/SpeedTrail_v0.1.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/speedtrail-v0-1/m1_2025-04-14_23-09-26_1.mp4",
+    "primary_media_path": "catalog/media/speedtrail_v0.1/1361970355131908157_2025-04-14_23-09-26_1.mp4",
     "media_type": ".mp4",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/speedtrail-v0-1/m1_2025-04-14_23-09-26_1.mp4",
+      "catalog_path": "catalog/media/speedtrail_v0.1/1361970355131908157_2025-04-14_23-09-26_1.mp4",
       "original_filename": "2025-04-14_23-09-26_1.mp4",
       "content_type": "video/mp4",
       "relative_index": -1,
@@ -51,18 +51,19 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "speedtrail-v0-1-1361987355577421954",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:28:45+00:00",
-    "description": "Spawns dust-like trail particles behind the local player when moving on the ground, and triggers a radial particle burst on landing. Uses raycasts to detect ground distance and fall velocity, with configurable speed thresholds, spread, zigzag motion, and lifetime. Client-only; not synced to other pl",
+    "generated_at": "2026-02-21T23:49:04+00:00",
+    "description": "Spawns dust-like trail particles at the player's feet when moving above a speed threshold, and triggers a radial particle burst on landing impact. Uses raycasting to detect ground distance and air state. Client-only, toggleable via a config prop.",
     "feature_tags": [
       "particles",
       "physics"

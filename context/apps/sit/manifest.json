@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-03-17T16:00:45.098Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1351223743548231872/sit.hyp?ex=697989ec&is=6978386c&hm=f5036e69d8a73ad5ccdf05b84c6f4fefa958e46ca76aca16e7bcb19c281625ce&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1351223743548231872/sit.hyp?ex=6998852c&is=699733ac&hm=bb8b47592fd696935c1dc04a06ec5757bbb693fab91a0879579ad9afb77c54ae&"
   },
   "author": {
     "display_name": "Wilson",
@@ -29,28 +29,29 @@
     "hyp_summary_path": "context/hyp_summaries/sit.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/sit/preview.png",
+    "media_type": ".png",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "sit-1351223744022183987",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:28:17+00:00",
-    "description": "Renders a seat 3D model with an action button that lets a player sit down by anchoring them and playing a sitting emote animation. Syncs seat occupancy between server and clients so only one player sits at a time, and supports toggling trigger visibility.",
+    "generated_at": "2026-02-21T23:48:49+00:00",
+    "description": "Seat app that anchors a player to a sitting position and plays a sitting emote animation. Triggers a networked request/release flow so only one player occupies the seat at a time, with a configurable visibility toggle and an action button labeled Sit.",
     "feature_tags": [
       "interaction",
       "animation",

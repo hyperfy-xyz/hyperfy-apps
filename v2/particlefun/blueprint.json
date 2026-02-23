@@ -1,0 +1,16 @@
+{
+  "id": "eiXIZzzlM9",
+  "version": 24,
+  "name": "ParticleFun",
+  "image": null,
+  "author": "Shiffty",
+  "url": null,
+  "desc": null,
+  "model": "asset://609e906fea186c524a961a44622a773e17d68f73f78de05eefb5958c41d8d83c.glb",
+  "script": "asset://d1da74cf3bb4a09fb959207751208f5b9f396decca101f2c4c38c919c7bbe372.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

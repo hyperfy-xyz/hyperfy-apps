@@ -157,7 +157,21 @@ body {
 }
 
 .header {
+  position: relative;
   margin-bottom: 24px;
+}
+
+.how-to-use {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  padding: 5px 10px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  background: var(--surface);
+  white-space: nowrap;
 }
 
 .title {
@@ -470,6 +484,10 @@ body {
   color: var(--text-muted);
 }
 
+.card-source-size {
+  font-weight: 600;
+}
+
 .card-author {
   color: var(--accent-hover);
   cursor: pointer;
@@ -732,17 +750,14 @@ body {
 
 .modal-preview {
   width: 100%;
-  max-height: 300px;
-  overflow: hidden;
   background: var(--bg);
   flex-shrink: 0;
 }
 
 .modal-preview-media {
   width: 100%;
-  height: 100%;
-  max-height: 300px;
-  object-fit: cover;
+  max-height: 400px;
+  object-fit: contain;
   display: block;
 }
 
@@ -818,6 +833,27 @@ body {
   border-color: var(--accent-hover);
 }
 
+.modal-download-btn-sm {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: var(--radius-xs);
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-decoration: none;
+  background: var(--accent);
+  color: white;
+  border: 1px solid var(--accent);
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.modal-download-btn-sm:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
 .modal-tabs {
   display: flex;
   gap: 0;
@@ -871,6 +907,114 @@ body {
   font-size: 0.8rem;
 }
 
+.modal-files {
+  padding: 14px 20px 20px;
+}
+
+.modal-file-summary {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  margin-bottom: 10px;
+}
+
+.modal-source-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: fit-content;
+  padding: 10px 12px;
+  border-radius: var(--radius-xs);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  background: rgba(139, 92, 246, 0.12);
+}
+
+.modal-source-size {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent-hover);
+  letter-spacing: 0.01em;
+}
+
+.modal-source-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.file-tree {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  background: var(--bg);
+  overflow: auto;
+  max-height: 360px;
+}
+
+.file-tree-node {
+  display: block;
+}
+
+.file-tree-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  min-height: 30px;
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.76rem;
+}
+
+.file-tree-dir {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  text-align: left;
+}
+
+.file-tree-dir:hover {
+  background: var(--surface);
+}
+
+.file-tree-file {
+  color: var(--text-dim);
+}
+
+.file-tree-row:last-child {
+  border-bottom: none;
+}
+
+.file-tree-caret {
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  width: 10px;
+  text-align: center;
+  transition: transform 0.15s ease;
+}
+
+.file-tree-caret.open {
+  transform: rotate(90deg);
+}
+
+.file-tree-name {
+  font-family: "JetBrains Mono", "Fira Code", "SF Mono", Menlo, monospace;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  overflow-wrap: anywhere;
+}
+
+.file-tree-file-dot {
+  color: var(--text-dim);
+  width: 8px;
+  text-align: center;
+}
+
+.file-tree-size {
+  font-size: 0.74rem;
+  color: var(--text-dim);
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
 /* Override Prism theme to match dark UI */
 .modal-body pre[class*="language-"] {
   background: var(--bg) !important;
@@ -880,24 +1024,6 @@ body {
 
 .modal-body code[class*="language-"] {
   text-shadow: none !important;
-}
-
-.modal-meta {
-  padding: 16px 20px;
-  border-top: 1px solid var(--border-subtle);
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  flex-shrink: 0;
-}
-
-.modal-meta-item {
-  font-size: 0.75rem;
-  color: var(--text-dim);
-}
-
-.modal-meta-item strong {
-  color: var(--text-muted);
 }
 
 .modal-loading {
@@ -925,6 +1051,12 @@ body {
 
   .main {
     padding: 16px;
+  }
+
+  .how-to-use {
+    position: static;
+    margin-bottom: 8px;
+    width: fit-content;
   }
 
   .grid {

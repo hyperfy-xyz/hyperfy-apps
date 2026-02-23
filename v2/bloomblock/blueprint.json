@@ -1,0 +1,16 @@
+{
+  "id": "Td6IN2vgZp",
+  "version": 15,
+  "name": "BloomBlock",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": "Literally a Block, that Blooms.",
+  "model": "asset://2ed7215390bcb7c2d254ea3bb55e9f95838576f771f65b0a62e6c47a838e83b3.glb",
+  "script": "asset://a57b539360c26d623ae6e2242657b9a036c906f8ddf47ad768a57d43bf884b54.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-03-04T23:46:36.827Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1346629939633324052/m2-2-4-beacon-dev.hyp?ex=69794e5c&is=6977fcdc&hm=b45391a377ab6dbf119f50cfd691a1d9bc2af234e7722b76754c13c7127e22ab&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1346629939633324052/m2-2-4-beacon-dev.hyp?ex=6998f25c&is=6997a0dc&hm=4fef5d953ac47b72188927150e31f8cbde464d184fdd9fe5a5d099f1820d89a8&"
   },
   "author": {
     "display_name": "0mka",
@@ -29,31 +29,32 @@
     "hyp_summary_path": "context/hyp_summaries/m2-2-4-beacon-dev.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/m2-2-4-beacon-dev/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "m2-2-4-beacon-dev-1346629939817877556",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:23:27+00:00",
-    "description": "Beacon app that registers world metadata (name, URL, description, image, tags) to the Zesty relay server and sends periodic session heartbeat signals via fetch on each update tick. Renders a small 3D model as a visual anchor in the scene.",
+    "generated_at": "2026-02-21T23:46:36+00:00",
+    "description": "Beacon integration that sends world metadata (name, URL, description, image, tags) to the Zesty relay server and triggers periodic session heartbeat signals on each client update tick. Configures world properties via a UI panel with text and image fields.",
     "feature_tags": [
-      "3d-model",
-      "ui"
+      "ui",
+      "3d-model"
     ],
     "interaction_modes": [
       "passive"

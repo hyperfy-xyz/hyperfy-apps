@@ -1,0 +1,93 @@
+{
+  "app_id": "hyperball-1338715433439858760",
+  "app_slug": "hyperball",
+  "app_name": "hyperball",
+  "source": {
+    "hyp_filename": "hyperball.hyp",
+    "discord_attachment_id": "1338715432936538235",
+    "discord_message_id": "1338715433439858760",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-11T03:37:11.462Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1338715432936538235/hyperball.hyp?ex=69987fa7&is=69972e27&hm=3383cf4cfe0688909b1cd8acb1fce2dcb591623593a2d2379bc9b7169bd5876c&"
+  },
+  "author": {
+    "display_name": "Saori",
+    "discord_user_id": "1099579050378399806",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/hyperball/1338712309287358464_xyz-simplify-chat.mp4",
+    "media_type": ".mp4",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/hyperball/1338711983503048785_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": -5,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 2315461,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1338711983503048785"
+    },
+    {
+      "catalog_path": "catalog/media/hyperball/1338712309287358464_xyz-simplify-chat.mp4",
+      "original_filename": "xyz-simplify-chat.mp4",
+      "content_type": "video/mp4",
+      "relative_index": -4,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 2102252,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1338712309287358464"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "hyperball-1338715433439858760",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:45:49+00:00",
+    "description": "Hyperball is a ball-based interactive game object that spawns a physics-driven ball players can kick or throw within a Hyperfy world. Shared as a community asset, it renders a 3D model and syncs ball state across networked sessions for multiplayer play.",
+    "feature_tags": [
+      "physics",
+      "interaction",
+      "multiplayer",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

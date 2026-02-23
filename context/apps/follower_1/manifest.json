@@ -1,0 +1,64 @@
+{
+  "app_id": "follower_1-1341343546866794496",
+  "app_slug": "follower_1",
+  "app_name": "Follower_1",
+  "source": {
+    "hyp_filename": "Follower_1.hyp",
+    "discord_attachment_id": "1341343546417873008",
+    "discord_message_id": "1341343546866794496",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-18T09:40:22.531Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1341343546417873008/Follower_1.hyp?ex=6998d4c6&is=69978346&hm=eb0d29b68f4059158f08b8ac94e3455f6cd1bbdbc76c54e366ee28fffffbf9c3&"
+  },
+  "author": {
+    "display_name": "MetaRick",
+    "discord_user_id": "612945510810255390",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "hi, I made a little follower hyp. its basically like a security bot, so will follow you in world and when close it will start circling you while facing avatar. Does anyone know how I might add a mp3 slot so I can give em audio?\n\nif (world.isClient) {\n  // Configuration:\n  const safeDistance = 3;         // Distance threshold (in meters) for switching to avoid mode.\n  const followMargin = 0.5;       // Extra distance for switching back to follow mode.\n  const moveSpeed = 1;            // Movement speed (units per second) for following/avoiding.\n  const orbitSpeed = 1;           // Orbit (idle) speed when the player is stationary.\n  const rotationSpeed = 2;        // Rotation interpolation speed (radians per second)\n  const playerMovementThreshold = 0.01; // If the player's movement is below this, consider them stationary.\n  \n  // Track the current behavior mode. Start in \"follow\" mode.\n  let currentMode = \"follow\";\n  \n  // Store the player's last position for movement detection.\n  let lastPlayerPosition = null;\n  \n  app.on('update', delta => {\n    const player = world.getPlayer();\n    if (!player) return;\n    \n    // Initialize lastPlayerPosition if needed.\n    if (!lastPlayerPosition) {\n      lastPlayerPosition = player.position.clone();\n    }\n    \n    // Calculate the distance between the player and the object.\n    const distance = player.position.distanceTo(app.position);\n    \n    // Update mode based on distance with hysteresis:\n    if (currentMode === \"follow\" && distance < safeDistance) {\n      currentMode = \"avoid\";\n    } else if (currentMode === \"avoid\" && distance > safeDistance + followMargin) {\n      currentMode = \"follow\";\n    }\n    \n    // Determine how much the player moved since last frame.\n    const playerMovement = new Vector3().subVectors(player.position, lastPlayerPosition);\n    const playerSpeed = playerMovement.length();\n    \n    // Determine movement direction.\n    const moveDirection = new Vector3();\n    if (currentMode === \"avoid\") {\n      // If the player is nearly stationary, orbit around the player horizontally.\n      if (playerSpeed < playerMovementThreshold) {\n        const dirFromPlayer = new Vector3().subVectors(app.position, player.position);\n        dirFromPlayer.y = 0;  // Only orbit horizontally.\n        if (dirFromPlayer.lengthSq() > 0) {\n          const orbitDirection = new Vector3(-dirFromPlayer.z, 0, dirFromPlayer.x).normalize();\n          moveDirection.copy(orbitDirection);\n        }\n      } else {\n        // Otherwise, move directly away from the player in full 3D (including vertical differences).\n        moveDirection.subVectors(app.position, player.position);\n      }\n    } else {\n      // In follow mode, move toward the player in full 3D (including up/down).\n      moveDirection.subVectors(player.position, app.position);\n    }\n    \n    // Normalize and apply movement if a valid direction is computed.\n    if (moveDirection.lengthSq() > 0) {\n      moveDirection.normalize();\n      const speed =\n        (currentMode === \"avoid\" && playerSpeed < playerMovementThreshold)\n          ? orbitSpeed\n          : moveSpeed;\n      app.position.addScaledVector(moveDirection, speed * delta);\n    }\n    \n    // Always rotate to face the player (rotation is only on the horizontal plane).\n    const faceDirection = new Vector3().subVectors(player.position, app.position);\n    faceDirection.y = 0;\n    if (faceDirection.lengthSq() > 0) {\n      faceDirection.normalize();\n      const targetAngle = Math.atan2(faceDirection.x, faceDirection.z);\n      const targetQuat = new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), targetAngle);\n      app.quaternion.slerp(targetQuat, Math.min(1, rotationSpeed * delta));\n    }\n    \n    // Update lastPlayerPosition for the next frame.\n    lastPlayerPosition.copy(player.position);\n  });\n}",
+    "raw_message_content": "hi, I made a little follower hyp. its basically like a security bot, so will follow you in world and when close it will start circling you while facing avatar. Does anyone know how I might add a mp3 slot so I can give em audio?\n\nif (world.isClient) {\n  // Configuration:\n  const safeDistance = 3;         // Distance threshold (in meters) for switching to avoid mode.\n  const followMargin = 0.5;       // Extra distance for switching back to follow mode.\n  const moveSpeed = 1;            // Movement speed (units per second) for following/avoiding.\n  const orbitSpeed = 1;           // Orbit (idle) speed when the player is stationary.\n  const rotationSpeed = 2;        // Rotation interpolation speed (radians per second)\n  const playerMovementThreshold = 0.01; // If the player's movement is below this, consider them stationary.\n  \n  // Track the current behavior mode. Start in \"follow\" mode.\n  let currentMode = \"follow\";\n  \n  // Store the player's last position for movement detection.\n  let lastPlayerPosition = null;\n  \n  app.on('update', delta => {\n    const player = world.getPlayer();\n    if (!player) return;\n    \n    // Initialize lastPlayerPosition if needed.\n    if (!lastPlayerPosition) {\n      lastPlayerPosition = player.position.clone();\n    }\n    \n    // Calculate the distance between the player and the object.\n    const distance = player.position.distanceTo(app.position);\n    \n    // Update mode based on distance with hysteresis:\n    if (currentMode === \"follow\" && distance < safeDistance) {\n      currentMode = \"avoid\";\n    } else if (currentMode === \"avoid\" && distance > safeDistance + followMargin) {\n      currentMode = \"follow\";\n    }\n    \n    // Determine how much the player moved since last frame.\n    const playerMovement = new Vector3().subVectors(player.position, lastPlayerPosition);\n    const playerSpeed = playerMovement.length();\n    \n    // Determine movement direction.\n    const moveDirection = new Vector3();\n    if (currentMode === \"avoid\") {\n      // If the player is nearly stationary, orbit around the player horizontally.\n      if (playerSpeed < playerMovementThreshold) {\n        const dirFromPlayer = new Vector3().subVectors(app.position, player.position);\n        dirFromPlayer.y = 0;  // Only orbit horizontally.\n        if (dirFromPlayer.lengthSq() > 0) {\n          const orbitDirection = new Vector3(-dirFromPlayer.z, 0, dirFromPlayer.x).normalize();\n          moveDirection.copy(orbitDirection);\n        }\n      } else {\n        // Otherwise, move directly away from the player in full 3D (including vertical differences).\n        moveDirection.subVectors(app.position, player.position);\n      }\n    } else {\n      // In follow mode, move toward the player in full 3D (including up/down).\n      moveDirection.subVectors(player.position, app.position);\n    }\n    \n    // Normalize and apply movement if a valid direction is computed.\n    if (moveDirection.lengthSq() > 0) {\n      moveDirection.normalize();\n      const speed =\n        (currentMode === \"avoid\" && playerSpeed < playerMovementThreshold)\n          ? orbitSpeed\n          : moveSpeed;\n      app.position.addScaledVector(moveDirection, speed * delta);\n    }\n    \n    // Always rotate to face the player (rotation is only on the horizontal plane).\n    const faceDirection = new Vector3().subVectors(player.position, app.position);\n    faceDirection.y = 0;\n    if (faceDirection.lengthSq() > 0) {\n      faceDirection.normalize();\n      const targetAngle = Math.atan2(faceDirection.x, faceDirection.z);\n      const targetQuat = new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), targetAngle);\n      app.quaternion.slerp(targetQuat, Math.min(1, rotationSpeed * delta));\n    }\n    \n    // Update lastPlayerPosition for the next frame.\n    lastPlayerPosition.copy(player.position);\n  });\n}",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "follower_1-1341343546866794496",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:45:01+00:00",
+    "description": "Security bot NPC that follows the local player in 3D space and, when within a safe distance threshold, switches to orbiting around the avatar horizontally while rotating to face the player using quaternion slerp interpolation each frame.",
+    "feature_tags": [
+      "npc",
+      "animation"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

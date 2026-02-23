@@ -9,10 +9,10 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-03-26T03:02:14.488Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1354289315990995035/SPICEXPortal.hyp?ex=69797c36&is=69782ab6&hm=e4398dac5a436026907a8a17bf817d612fb6f0614e75581cf8442c7dbb63c940&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1354289315990995035/SPICEXPortal.hyp?ex=69987776&is=699725f6&hm=25839bc0e65ffba2d68382624bf64ca9a5672d5fb38d70a15777db9dcd226545&"
   },
   "author": {
-    "display_name": ".hyp shaman",
+    "display_name": "hypShaman",
     "discord_user_id": "297290503181959169",
     "confidence": "high",
     "evidence": "discord"
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/SPICEXPortal.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/spicex-portal/p1_brave_iUo8WLJkxq.mp4",
+    "primary_media_path": "catalog/media/spicexportal/1354289507909763113_brave_iUo8WLJkxq.mp4",
     "media_type": ".mp4",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/spicex-portal/p1_brave_iUo8WLJkxq.mp4",
+      "catalog_path": "catalog/media/spicexportal/1354289507909763113_brave_iUo8WLJkxq.mp4",
       "original_filename": "brave_iUo8WLJkxq.mp4",
       "content_type": "video/mp4",
       "relative_index": 1,
@@ -51,24 +51,25 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "spicex-portal-1354289316314087515",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:28:50+00:00",
-    "description": "Configurable portal gate that spawns chaotic particles around a spinning rim, plays spatial audio, renders a billboard UI with destination name and subtitle, and opens a target world URL via trigger collider when a player enters the box zone.",
+    "generated_at": "2026-02-21T23:49:07+00:00",
+    "description": "Configurable portal that renders a custom 3D model with a chaotic particle system on the rim, plays spatial audio, displays a billboard UI with destination name and subtitle, and triggers world.open to teleport players to a configurable URL when they enter a box collider zone.",
     "feature_tags": [
       "particles",
       "audio",
-      "physics",
-      "ui",
       "teleport",
+      "ui",
+      "physics",
       "3d-model"
     ],
     "interaction_modes": [

@@ -1,0 +1,76 @@
+{
+  "app_id": "proceduralcity-1349256444498808883",
+  "app_slug": "proceduralcity",
+  "app_name": "ProceduralCity",
+  "source": {
+    "hyp_filename": "ProceduralCity.hyp",
+    "discord_attachment_id": "1349256444045819945",
+    "discord_message_id": "1349256444498808883",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-12T05:43:24.341Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1349256444045819945/ProceduralCity.hyp?ex=69989d3c&is=69974bbc&hm=422a81a6586eccad8660b3fe028cb5c87fe97f4de15e6cd2cc47c8d2d5bc36a2&"
+  },
+  "author": {
+    "display_name": "Shiffty",
+    "discord_user_id": "466331582458888192",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "Needed a break from the arena so why not an infinite procedural city... can certainly be improved upon (especially with LODs). Vibe on. Use as you please.",
+    "raw_message_content": "Needed a break from the arena so why not an infinite procedural city... can certainly be improved upon (especially with LODs). Vibe on. Use as you please.",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/proceduralcity/1349256442619760710_ProceduralCity.mp4",
+    "media_type": ".mp4",
+    "selection_reason": "same_message",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/proceduralcity/1349256442619760710_ProceduralCity.mp4",
+      "original_filename": "ProceduralCity.mp4",
+      "content_type": "video/mp4",
+      "relative_index": 0,
+      "same_author": true,
+      "selection_reason": "same_message",
+      "size_bytes": 11740616,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1349256442619760710"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "proceduralcity-1349256444498808883",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:47:37+00:00",
+    "description": "Generates an infinite procedural city by spawning building geometry at runtime, creating an expansive urban environment. Renders city blocks dynamically without predefined models, suitable for exploration or ambient scenery.",
+    "feature_tags": [
+      "environment",
+      "building"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "medium",
+    "script_complexity": "high",
+    "networking_profile": "none"
+  }
+}

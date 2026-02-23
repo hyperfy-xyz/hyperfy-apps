@@ -1,15 +1,15 @@
 {
-  "app_id": "curved-video-viewer-1360630031814230229",
+  "app_id": "curved-video-viewer-1363490690339831849",
   "app_slug": "curved-video-viewer",
   "app_name": "Curved_Video_Viewer",
   "source": {
     "hyp_filename": "Curved_Video_Viewer.hyp",
-    "discord_attachment_id": "1360630031537279066",
-    "discord_message_id": "1360630031814230229",
-    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_attachment_id": "1363490690033516774",
+    "discord_message_id": "1363490690339831849",
+    "discord_channel": "\ud83e\uddca\u25023d-design",
     "discord_channel_category": "Creators",
-    "discord_timestamp": "2025-04-12T14:57:58.868Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1360630031537279066/Curved_Video_Viewer.hyp?ex=69797b36&is=697829b6&hm=ce1dd1cb45c08014c69230068607f2449956b6838ff770713b0085de164fab1f&"
+    "discord_timestamp": "2025-04-20T12:25:13.009Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1031058655581323324/1363490690033516774/Curved_Video_Viewer.hyp?ex=6998fb68&is=6997a9e8&hm=fd0d614c5909213f8f79d5231c68672ec18c5f11b57331dd7f551933e7a51496&"
   },
   "author": {
     "display_name": "ash",
@@ -18,8 +18,8 @@
     "evidence": "discord"
   },
   "description": {
-    "short": "And here's a curved video viewer",
-    "raw_message_content": "And here's a curved video viewer",
+    "short": "<@415262868217266177> give this a crack",
+    "raw_message_content": "<@415262868217266177> give this a crack",
     "summary_excerpt": "Curved Video Viewer.hyp",
     "source_priority_used": "discord_message"
   },
@@ -29,40 +29,43 @@
     "hyp_summary_path": "context/hyp_summaries/Curved_Video_Viewer.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/curved-video-viewer/p1_image.png",
-    "media_type": ".png",
-    "selection_reason": "same_author_nearby",
-    "is_fallback_any_author": false
+    "primary_media_path": "catalog/media/curved_video_viewer/1363452192446746686_UVscroll.mp4",
+    "media_type": ".mp4",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/curved-video-viewer/p1_image.png",
-      "original_filename": "image.png",
-      "content_type": "image/png",
-      "relative_index": 1,
-      "same_author": true,
-      "selection_reason": "same_author_nearby",
-      "size_bytes": 2941611,
+      "catalog_path": "catalog/media/curved_video_viewer/1363452192446746686_UVscroll.mp4",
+      "original_filename": "UVscroll.mp4",
+      "content_type": "video/mp4",
+      "relative_index": -2,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 255374,
       "optimized": true,
       "excluded_large": false,
       "download_status": "downloaded",
-      "attachment_id": "1360630186676064366"
+      "attachment_id": "1363452192446746686"
     }
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
-    "flags": [],
+    "flags": [
+      "media_fallback_any_author"
+    ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
-    "app_id": "curved-video-viewer-1360630031814230229",
+    "app_id": "curved-video-viewer-1363490690339831849",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:19:31+00:00",
-    "description": "Renders video onto a curved 3D mesh by replacing a named target object with a video node. Supports mp4 files and HLS (m3u8) streams, with configurable aspect ratio, fit mode (cover/contain/none), and loop toggle. Plays the video automatically on the client side.",
+    "generated_at": "2026-02-21T23:44:14+00:00",
+    "description": "Plays an MP4 or HLS video stream onto a curved 3D mesh by replacing the target mesh geometry with a video node. Supports configurable aspect ratio, cover/contain fit modes, looping, and double-sided rendering with shadow casting.",
     "feature_tags": [
       "media-player",
       "3d-model"

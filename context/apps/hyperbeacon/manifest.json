@@ -1,0 +1,65 @@
+{
+  "app_id": "hyperbeacon-1337136454526308474",
+  "app_slug": "hyperbeacon",
+  "app_name": "HyperBeacon",
+  "source": {
+    "hyp_filename": "HyperBeacon.hyp",
+    "discord_attachment_id": "1337136454169530478",
+    "discord_message_id": "1337136454526308474",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-06T19:02:53.553Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1337136454169530478/HyperBeacon.hyp?ex=6998afdd&is=69975e5d&hm=39132990ef3a65724df353acd314173d94cee8ef5125d260ad29a827f930e118&"
+  },
+  "author": {
+    "display_name": "hypShaman",
+    "discord_user_id": "297290503181959169",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "got an update actually works now lmao.\ni like how it doesn't animate till the fields are set <:hyperfy:1327018831834648669>",
+    "raw_message_content": "got an update actually works now lmao.\ni like how it doesn't animate till the fields are set <:hyperfy:1327018831834648669>",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": "v2/hyperbeacon",
+    "v2_json_path": "v2/hyperbeacon/HyperBeacon.json",
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "hyperbeacon-1337136454526308474",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:45:51+00:00",
+    "description": "Registers a Hyperfy world on a Zesty Relay by sending a PUT beacon signal with configurable name, description, image, and tags. Animates a rotating 3D model and ring mesh once fields are set, and sends periodic heartbeat POST requests to keep the session alive.",
+    "feature_tags": [
+      "animation",
+      "3d-model",
+      "ui"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

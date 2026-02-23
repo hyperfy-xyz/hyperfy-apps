@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udc1e\u2502issues",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-03-29T01:27:49.085Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1022421054582423562/1355352717073190964/SimonSays_Screen_2.hyp?ex=69796614&is=69781494&hm=a2f31231f33ef195a72f739910ae91b53f36f5ffa67ad2e25239248d1add65b9&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1022421054582423562/1355352717073190964/SimonSays_Screen_2.hyp?ex=69990a14&is=6997b894&hm=fe1dc52cca6094836a2d98257dc5c69e97dce1a7418bbecb7b4a764153d5c8f2&"
   },
   "author": {
     "display_name": "cru",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/SimonSays_Screen_2.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/simonsays-screen-2/p0_2025-03-28_21-20-07.mp4",
+    "primary_media_path": "catalog/media/simonsays_screen_2/1355352715399790602_2025-03-28_21-20-07.mp4",
     "media_type": ".mp4",
     "selection_reason": "same_message",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/simonsays-screen-2/p0_2025-03-28_21-20-07.mp4",
+      "catalog_path": "catalog/media/simonsays_screen_2/1355352715399790602_2025-03-28_21-20-07.mp4",
       "original_filename": "2025-03-28_21-20-07.mp4",
       "content_type": "video/mp4",
       "relative_index": 0,
@@ -49,7 +49,7 @@
       "attachment_id": "1355352715399790602"
     },
     {
-      "catalog_path": "catalog/media/simonsays-screen-2/m1_2025-03-28_19-57-21.mp4",
+      "catalog_path": "catalog/media/simonsays_screen_2/1355331169851539456_2025-03-28_19-57-21.mp4",
       "original_filename": "2025-03-28_19-57-21.mp4",
       "content_type": "video/mp4",
       "relative_index": -1,
@@ -64,23 +64,24 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "simonsays-screen-2-1355352717488296077",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:28:02+00:00",
-    "description": "Renders a scalable 3D UI screen that displays a networked Simon Says color-matching game. Syncs game state between server and clients, cycles through timed phases showing flashing color text and background changes, and emits color/reset signals to connected game boards via app.emit.",
+    "generated_at": "2026-02-21T23:48:47+00:00",
+    "description": "Simon Says game that renders a scalable 3D UI panel cycling through color-flash phases. Displays countdown text, then flashes randomized color names on screen across five timed phases, syncs game state between server and clients via networked events, and emits color/reset signals to other apps.",
     "feature_tags": [
       "ui",
       "audio",
       "multiplayer",
-      "interaction"
+      "3d-model"
     ],
     "interaction_modes": [
       "action",

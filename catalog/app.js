@@ -16,6 +16,145 @@ function formatDate(iso) {
   return d.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
 }
 
+function formatBytes(bytes) {
+  const n = Number(bytes);
+  if (!Number.isFinite(n) || n < 0) return "0 B";
+  if (n < 1024) return `${n} B`;
+  const units = ["KB", "MB", "GB", "TB"];
+  let value = n / 1024;
+  let i = 0;
+  while (value >= 1024 && i < units.length - 1) {
+    value /= 1024;
+    i += 1;
+  }
+  return `${value.toFixed(value >= 10 ? 0 : 1)} ${units[i]}`;
+}
+
+function sizeColor(bytes) {
+  const n = Number(bytes) || 0;
+  if (n < 10240) return "#34d399";          // < 10 KB — green
+  if (n < 102400) return "#6ee7b7";         // 10-100 KB — light green
+  if (n < 1048576) return "#a78bfa";        // 100 KB-1 MB — accent (default)
+  if (n < 10485760) return "#fbbf24";       // 1-10 MB — amber
+  return "#f97316";                          // 10 MB+ — orange
+}
+
+function getAppSize(app) {
+  return Number(app.source_inventory?.total_size_bytes) || 0;
+}
+
+function buildFileTree(sourceFiles) {
+  const root = { type: "dir", name: "", path: "", children: [] };
+  const dirMap = new Map([["", root]]);
+  const seenFiles = new Set();
+
+  for (const file of sourceFiles) {
+    const rawPath = typeof file?.path === "string" ? file.path : "";
+    const normalizedPath = rawPath.replace(/^\/+|\/+$/g, "");
+    if (!normalizedPath || seenFiles.has(normalizedPath)) continue;
+    seenFiles.add(normalizedPath);
+
+    const parts = normalizedPath.split("/").filter(Boolean);
+    if (!parts.length) continue;
+
+    let parent = root;
+    let currentPath = "";
+
+    for (let i = 0; i < parts.length; i += 1) {
+      const part = parts[i];
+      currentPath = currentPath ? `${currentPath}/${part}` : part;
+      const isLeaf = i === parts.length - 1;
+
+      if (isLeaf) {
+        parent.children.push({
+          type: "file",
+          name: part,
+          path: currentPath,
+          size_bytes: Number(file.size_bytes) || 0,
+        });
+        continue;
+      }
+
+      let dirNode = dirMap.get(currentPath);
+      if (!dirNode) {
+        dirNode = { type: "dir", name: part, path: currentPath, children: [] };
+        dirMap.set(currentPath, dirNode);
+        parent.children.push(dirNode);
+      }
+      parent = dirNode;
+    }
+  }
+
+  const sortNode = (node) => {
+    if (node.type !== "dir") return node;
+    node.children = node.children
+      .map(sortNode)
+      .sort((a, b) => {
+        if (a.type !== b.type) return a.type === "dir" ? -1 : 1;
+        return a.name.localeCompare(b.name);
+      });
+    return node;
+  };
+
+  return sortNode(root);
+}
+
+function collectInitialExpandedFolders(tree, maxDepth = 2) {
+  const expanded = new Set();
+
+  const visit = (node, depth) => {
+    if (!node || node.type !== "dir") return;
+    if (node.path && depth <= maxDepth) expanded.add(node.path);
+    if (depth >= maxDepth) return;
+    for (const child of node.children) {
+      if (child.type === "dir") visit(child, depth + 1);
+    }
+  };
+
+  visit(tree, 0);
+  return expanded;
+}
+
+function SourceFileTreeNode({ node, depth, expandedFolders, onToggle }) {
+  const indent = 8 + depth * 14;
+
+  if (node.type === "file") {
+    return html`
+      <div className="file-tree-row file-tree-file" style=${{ paddingLeft: `${indent + 22}px` }}>
+        <span className="file-tree-file-dot">•</span>
+        <span className="file-tree-name">${node.name}</span>
+        <span className="file-tree-size">${formatBytes(node.size_bytes)}</span>
+      </div>
+    `;
+  }
+
+  const isExpanded = expandedFolders.has(node.path);
+
+  return html`
+    <div className="file-tree-node">
+      <button
+        className="file-tree-row file-tree-dir"
+        style=${{ paddingLeft: `${indent}px` }}
+        onClick=${() => onToggle(node.path)}
+      >
+        <span className=${`file-tree-caret ${isExpanded ? "open" : ""}`}>▸</span>
+        <span className="file-tree-name">${node.name}</span>
+      </button>
+      ${isExpanded
+        ? html`${node.children.map((child) => html`
+            <${SourceFileTreeNode}
+              key=${child.path}
+              node=${child}
+              depth=${depth + 1}
+              expandedFolders=${expandedFolders}
+              onToggle=${onToggle}
+            />
+          `)}`
+        : null}
+    </div>
+  `;
+}
+
 // ---- VideoPreview: hover to play, muted ----
 
 function VideoPreview({ src }) {
@@ -54,9 +193,35 @@ function VideoPreview({ src }) {
 // ---- SourceModal: reads from preloaded app data ----
 
 function SourceModal({ app, onClose }) {
-  const [activeTab, setActiveTab] = useState("script");
+  const sourceFiles = Array.isArray(app.source_files) ? app.source_files : [];
+  const sourceInventory = app.source_inventory || null;
+  const fileTree = useMemo(() => buildFileTree(sourceFiles), [sourceFiles]);
+  const fallbackSourceBytes = useMemo(
+    () => sourceFiles.reduce((sum, file) => sum + (Number(file?.size_bytes) || 0), 0),
+    [sourceFiles]
+  );
+  const sourceFileCount = Number(sourceInventory?.file_count) || sourceFiles.length;
+  const sourceTotalBytes = Number(sourceInventory?.total_size_bytes) || fallbackSourceBytes;
+  const listedFileCount = Number(sourceInventory?.listed_file_count) || sourceFiles.length;
+  const listedTruncated = Boolean(sourceInventory?.listed_truncated);
+  const hasScript = !!app.script_excerpt;
+  const hasBlueprint = !!(app.props && Object.keys(app.props).length > 0);
+  const hasFiles = sourceFiles.length > 0;
+  const hasCode = hasScript || hasBlueprint;
+  const [expandedFolders, setExpandedFolders] = useState(() => collectInitialExpandedFolders(fileTree));
+  const [activeTab, setActiveTab] = useState(
+    hasFiles ? "files" : hasScript ? "script" : hasBlueprint ? "blueprint" : "script"
+  );
   const [copied, setCopied] = useState(false);
   const codeRef = useRef(null);
+
+  useEffect(() => {
+    setActiveTab(hasFiles ? "files" : hasScript ? "script" : hasBlueprint ? "blueprint" : "script");
+  }, [app, hasScript, hasBlueprint, hasFiles]);
+
+  useEffect(() => {
+    setExpandedFolders(collectInitialExpandedFolders(fileTree));
+  }, [app, fileTree]);
 
   // Highlight code after render
   useEffect(() => {
@@ -73,13 +238,15 @@ function SourceModal({ app, onClose }) {
   }, [onClose]);
 
   const getCurrentCode = useCallback(() => {
+    if (!hasCode) return "";
     if (activeTab === "script") return app.script_excerpt || "// No script found";
     if (activeTab === "blueprint") return JSON.stringify(app.props || {}, null, 2);
     return "";
-  }, [app, activeTab]);
+  }, [app, activeTab, hasCode]);
 
   const onCopy = useCallback(() => {
     const text = getCurrentCode();
+    if (!text) return;
     navigator.clipboard.writeText(text).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
@@ -87,6 +254,15 @@ function SourceModal({ app, onClose }) {
   }, [getCurrentCode]);
 
   const lang = activeTab === "script" ? "javascript" : "json";
+  const canCopy = hasCode && activeTab !== "files";
+  const toggleFolder = useCallback((path) => {
+    setExpandedFolders((prev) => {
+      const next = new Set(prev);
+      if (next.has(path)) next.delete(path);
+      else next.add(path);
+      return next;
+    });
+  }, []);
 
   const downloadHref = app.download_path || null;
   const dateStr = formatDate(app.created_at);
@@ -97,7 +273,12 @@ function SourceModal({ app, onClose }) {
       <div className="modal">
         <div className="modal-header">
           <h2 className="modal-title">${app.name.replace(/_/g, " ")}</h2>
-          <button className="modal-close-btn" onClick=${onClose}>Close</button>
+          <div className="modal-header-actions">
+            ${downloadHref
+              ? html`<a className="modal-download-btn-sm" href=${downloadHref} download=${app.hyp_filename}>Download .hyp</a>`
+              : null}
+            <button className="modal-close-btn" onClick=${onClose}>Close</button>
+          </div>
         </div>
 
         ${previewSrc ? html`
@@ -119,37 +300,56 @@ function SourceModal({ app, onClose }) {
               ${app.tags.map((tag) => html`<span key=${tag} className="modal-info-tag">${tag}</span>`)}
             </div>
           ` : null}
-          ${downloadHref
-            ? html`<div className="modal-info-actions">
-                <a className="modal-download-btn" href=${downloadHref} download=${app.hyp_filename}>Download .hyp</a>
-              </div>`
-            : null}
         </div>
 
         <div className="modal-tabs">
-          ${app.script_excerpt ? html`
-            <button className=${`modal-tab ${activeTab === "script" ? "active" : ""}`}
-              onClick=${() => setActiveTab("script")}>index.js</button>
+          ${hasFiles ? html`
+            <button className=${`modal-tab ${activeTab === "files" ? "active" : ""}`}
+              onClick=${() => setActiveTab("files")}>Files (${sourceFileCount}) · <span style=${{ color: sizeColor(sourceTotalBytes) }}>${formatBytes(sourceTotalBytes)}</span></button>
           ` : null}
-          ${app.props && Object.keys(app.props).length > 0 ? html`
+          ${hasScript ? html`
+            <button className=${`modal-tab ${activeTab === "script" ? "active" : ""}`}
+              onClick=${() => setActiveTab("script")}>Script</button>
+          ` : null}
+          ${hasBlueprint ? html`
             <button className=${`modal-tab ${activeTab === "blueprint" ? "active" : ""}`}
               onClick=${() => setActiveTab("blueprint")}>Props / Blueprint</button>
           ` : null}
-          <button className=${`modal-copy-btn ${copied ? "copied" : ""}`} onClick=${onCopy}>
-            ${copied ? "Copied!" : "Copy"}
-          </button>
+          ${canCopy ? html`
+            <button className=${`modal-copy-btn ${copied ? "copied" : ""}`} onClick=${onCopy}>
+              ${copied ? "Copied!" : "Copy"}
+            </button>
+          ` : null}
         </div>
 
         <div className="modal-body" ref=${codeRef}>
-          <pre className=${`language-${lang}`}><code className=${`language-${lang}`}>${getCurrentCode()}</code></pre>
-        </div>
-
-        <div className="modal-meta">
-          ${app.asset_files?.length ? html`
-            <span className="modal-meta-item"><strong>Assets:</strong> ${app.asset_files.join(", ")}</span>
-          ` : null}
-          <span className="modal-meta-item"><strong>Complexity:</strong> ${app.script_complexity}</span>
-          <span className="modal-meta-item"><strong>Networking:</strong> ${app.networking}</span>
+          ${activeTab === "files" && hasFiles
+            ? html`
+                <div className="modal-files">
+                  <div className="modal-file-summary">
+                    Showing ${listedFileCount} of ${sourceFileCount} files
+                    ${listedTruncated ? " (truncated for performance)" : ""}
+                  </div>
+                  <div className="file-tree">
+                    ${fileTree.children.map((node) => html`
+                      <${SourceFileTreeNode}
+                        key=${node.path}
+                        node=${node}
+                        depth=${0}
+                        expandedFolders=${expandedFolders}
+                        onToggle=${toggleFolder}
+                      />
+                    `)}
+                  </div>
+                </div>
+              `
+            : hasCode
+            ? html`<pre className=${`language-${lang}`}><code className=${`language-${lang}`}>${getCurrentCode()}</code></pre>`
+            : html`<div className="modal-desc">
+                ${app.has_source
+                  ? "No script or props preview is available. Use the Files tab to inspect package contents."
+                  : "Source files are not yet promoted to v2. Metadata is available above."}
+              </div>`}
         </div>
       </div>
     </div>
@@ -162,6 +362,9 @@ function AppCard({ app, onTagClick, onSourceClick, onAuthorClick }) {
   const previewSrc = app.preview_url || null;
   const downloadHref = app.download_path || null;
   const dateStr = formatDate(app.created_at);
+  const sourceFileCount = Number(app.source_inventory?.file_count) || (Array.isArray(app.source_files) ? app.source_files.length : 0);
+  const sourceTotalBytes = Number(app.source_inventory?.total_size_bytes) || 0;
+  const hasSourceStats = sourceFileCount > 0 || sourceTotalBytes > 0;
 
   const hypUrl = useMemo(() => {
     if (!app.download_path) return null;
@@ -211,6 +414,7 @@ function AppCard({ app, onTagClick, onSourceClick, onAuthorClick }) {
         <div className="card-meta">
           <span className="card-author" onClick=${(e) => { e.stopPropagation(); onAuthorClick(app.author); }}>${app.author}</span>
           ${dateStr ? html`<span> · ${dateStr}</span>` : null}
+          ${hasSourceStats ? html`<span> · <span className="card-source-size" style=${{ color: sizeColor(sourceTotalBytes) }}>${formatBytes(sourceTotalBytes)}</span></span>` : null}
         </div>
 
         ${app.description
@@ -237,7 +441,7 @@ function AppCard({ app, onTagClick, onSourceClick, onAuthorClick }) {
           ${downloadHref
             ? html`<a className="card-btn primary" href=${downloadHref} download=${app.hyp_filename}>Download .hyp</a>`
             : html`<span className="card-btn" style=${{ opacity: 0.4, cursor: "default" }}>No .hyp</span>`}
-          ${app.has_source
+          ${(app.has_details || app.has_source)
             ? html`<button className="card-btn" onClick=${(e) => { e.stopPropagation(); onSourceClick(app); }}>More info</button>`
             : null}
         </div>
@@ -320,6 +524,17 @@ function Explorer() {
   const [activeTags, setActiveTags] = useState(new Set());
   const [sourceApp, setSourceApp] = useState(null);
 
+  // Open/close modal updates URL hash
+  const openApp = useCallback((app) => {
+    setSourceApp(app);
+    window.history.replaceState(null, "", `#${app.slug}`);
+  }, []);
+
+  const closeApp = useCallback(() => {
+    setSourceApp(null);
+    window.history.replaceState(null, "", window.location.pathname + window.location.search);
+  }, []);
+
   useEffect(() => {
     let cancelled = false;
     fetch(CATALOG_DATA)
@@ -331,6 +546,17 @@ function Explorer() {
       .catch((e) => { if (!cancelled) setError(e.message); });
     return () => { cancelled = true; };
   }, []);
+
+  // Deep-link: open modal from URL hash on data load
+  useEffect(() => {
+    if (!data?.apps) return;
+    const match = window.location.hash.match(/^#(.+)$/);
+    if (match) {
+      const slug = decodeURIComponent(match[1]);
+      const app = data.apps.find((a) => a.slug === slug);
+      if (app) setSourceApp(app);
+    }
+  }, [data]);
 
   const onTagToggle = useCallback((tag) => {
     setActiveTags((prev) => {
@@ -382,6 +608,10 @@ function Explorer() {
       out.sort((a, b) => (a.created_at || "").localeCompare(b.created_at || ""));
     } else if (sortMode === "author") {
       out.sort((a, b) => (a.author || "").localeCompare(b.author || "") || a.name.localeCompare(b.name));
+    } else if (sortMode === "largest") {
+      out.sort((a, b) => getAppSize(b) - getAppSize(a) || a.name.localeCompare(b.name));
+    } else if (sortMode === "smallest") {
+      out.sort((a, b) => getAppSize(a) - getAppSize(b) || a.name.localeCompare(b.name));
     } else {
       out.sort((a, b) => a.name.localeCompare(b.name));
     }
@@ -433,6 +663,7 @@ function Explorer() {
       <div className="main">
         <header className="header">
           <h1 className="title"><a href="https://hyperfy.xyz/" target="_blank" rel="noopener noreferrer" style=${{background: 'linear-gradient(90deg, #a78bfa, #06b6d4, #22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', textDecoration: 'none'}}>Hyperfy</a> App Explorer <span style=${{fontSize: '0.4em', fontWeight: 400, color: 'rgba(255,255,255,0.45)', marginLeft: '0.5em'}}>made by <a href="https://github.com/madjin" target="_blank" rel="noopener noreferrer" style=${{color: 'rgba(255,255,255,0.55)', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.3)'}}>jin</a></span></h1>
+          <div className="how-to-use">Drag and drop .hyp files into Hyperfy</div>
           <p className="subtitle">Browse ${data.counts.total} community apps with AI-generated descriptions, tags, and downloadable .hyp files.</p>
           <div className="stats">
             <div className="stat">
@@ -442,10 +673,6 @@ function Explorer() {
             <div className="stat">
               <span className="stat-value">${Object.keys(data.tag_index).length}</span>
               <span className="stat-label">tags</span>
-            </div>
-            <div className="stat">
-              <span className="stat-value">${filteredApps.length}</span>
-              <span className="stat-label">showing</span>
             </div>
           </div>
         </header>
@@ -469,10 +696,12 @@ function Explorer() {
           </div>
 
           <select className="select" value=${sortMode} onChange=${(e) => setSortMode(e.target.value)}>
-            <option value="name">Sort: Name</option>
-            <option value="author">Sort: Author</option>
-            <option value="newest">Sort: Newest</option>
-            <option value="oldest">Sort: Oldest</option>
+            <option value="name">Name</option>
+            <option value="author">Author</option>
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+            <option value="largest">Largest</option>
+            <option value="smallest">Smallest</option>
           </select>
 
         </div>
@@ -505,14 +734,14 @@ function Explorer() {
           : html`
               <section className="grid">
                 ${filteredApps.map(
-                  (app) => html`<${AppCard} key=${app.slug} app=${app} onTagClick=${onTagToggle} onSourceClick=${setSourceApp} onAuthorClick=${onAuthorClick} />`
+                  (app) => html`<${AppCard} key=${app.slug} app=${app} onTagClick=${onTagToggle} onSourceClick=${openApp} onAuthorClick=${onAuthorClick} />`
                 )}
               </section>
             `}
       </div>
 
       ${sourceApp
-        ? html`<${SourceModal} app=${sourceApp} onClose=${() => setSourceApp(null)} />`
+        ? html`<${SourceModal} app=${sourceApp} onClose=${closeApp} />`
         : null}
     </div>
   `;

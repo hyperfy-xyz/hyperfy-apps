@@ -1,0 +1,27 @@
+{
+  "id": "dzQnRKFCIv",
+  "version": 57,
+  "name": "Quadduckhead (beadbeard)",
+  "image": {
+    "type": "texture",
+    "name": "a3d9099904ef4b4a8d704d29afdf8f61.jpg",
+    "url": "asset://a5497ec709d2a37e6b675a7d2640d8d0b54e81bceb3b96560aceee8e0a510fc4.jpg"
+  },
+  "author": "May",
+  "url": null,
+  "desc": "This versionf ollows a given player (networked)",
+  "model": "asset://817349cd19cc6fad78611a31f8b3f1f7fd6ec562570ddb9860394f377e7e1581.glb",
+  "script": "asset://0734a91ec0dd8836538175814d1fd902b3ff7c9409a68916c8fd3185e46b2270.js",
+  "props": {
+    "app_root": "Rigidapp",
+    "app_mass": "5.2",
+    "app_type": "dynamic",
+    "target": "pP0N6MzpQr",
+    "avoidance_distance": "4",
+    "follow_speed": "2.2",
+    "rotation_speed": "2.2"
+  },
+  "preload": false,
+  "public": false,
+  "locked": false
+}

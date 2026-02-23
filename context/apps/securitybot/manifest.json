@@ -1,0 +1,65 @@
+{
+  "app_id": "securitybot-1341358135599693916",
+  "app_slug": "securitybot",
+  "app_name": "SecurityBot",
+  "source": {
+    "hyp_filename": "SecurityBot.hyp",
+    "discord_attachment_id": "1341358135285383218",
+    "discord_message_id": "1341358135599693916",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-18T10:38:20.756Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1341358135285383218/SecurityBot.hyp?ex=6998e25c&is=699790dc&hm=41d06ec4c297cbb1cc3f4385fe50f7c6aaff96799bab6f14a3cc3b0f5cbd06df&"
+  },
+  "author": {
+    "display_name": "MetaRick",
+    "discord_user_id": "612945510810255390",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "Updated with looping audio for anyone that wants",
+    "raw_message_content": "Updated with looping audio for anyone that wants",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "securitybot-1341358135599693916",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:48:40+00:00",
+    "description": "Deploys a security bot NPC that plays looping audio to create an ambient guard presence in the world. The 3D model renders an automated sentinel character with continuous sound feedback for immersive patrol behavior.",
+    "feature_tags": [
+      "npc",
+      "audio",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

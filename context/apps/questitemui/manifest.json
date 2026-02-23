@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-07-20T07:26:56.291Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1396392921539936296/QuestItemUI.hyp?ex=69791180&is=6977c000&hm=566b09825d7357028964386ce07e454f3707146f8c296df873ddcd6f53cde056&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1396392921539936296/QuestItemUI.hyp?ex=6998b580&is=69976400&hm=35728b79cdd3bcf49e38c9bc547d643254677da6dd75866e2071f36e615e0a28&"
   },
   "author": {
     "display_name": "0mka",
@@ -29,28 +29,29 @@
     "hyp_summary_path": "context/hyp_summaries/QuestItemUI.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/questitemui/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "questitemui-1396392921833410642",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:26:13+00:00",
-    "description": "Renders a configurable screen-space UI panel that tracks collected quest items. Listens for emit signals from collectible item apps, increments a counter, and syncs the count via persistent server storage across sessions. Supports customizable position, border style, text sizing, and display modes.",
+    "generated_at": "2026-02-21T23:47:52+00:00",
+    "description": "Renders a configurable screen-space UI panel that tracks quest item collection counts. Listens for emit signals from collectible items via world.on, syncs counters with persistent server storage per player, and displays a styled notification with customizable position, border color, scale, and font ",
     "feature_tags": [
       "ui",
       "interaction",

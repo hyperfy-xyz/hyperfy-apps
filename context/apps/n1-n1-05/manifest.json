@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-03-25T23:07:52.329Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1354230334979571833/n1-n1-05.hyp?ex=69794548&is=6977f3c8&hm=13b9fcfff3d4b97fe44e9544e43c09f4546e509e176ed5994153c0837b241b7e&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1354230334979571833/n1-n1-05.hyp?ex=6998e948&is=699797c8&hm=4ceb45a1e571fc5455bc454055323516ba65766697f95e1d9f9ed5d1063295ce&"
   },
   "author": {
     "display_name": "ash",
@@ -29,31 +29,32 @@
     "hyp_summary_path": "context/hyp_summaries/n1-n1-05.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/n1-n1-05/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "n1-n1-05-1354230335344480448",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:24:25+00:00",
-    "description": "Loads a GLB model and sets its collider to trimesh mode by disabling convex on the collider node, enabling precise collision detection that matches the exact mesh geometry rather than a simplified convex hull.",
+    "generated_at": "2026-02-21T23:46:56+00:00",
+    "description": "Loads a GLB 3D model and sets its collider to trimesh mode by disabling convex, enabling precise collision detection against the model's actual geometry rather than a simplified convex hull.",
     "feature_tags": [
-      "physics",
-      "3d-model"
+      "3d-model",
+      "physics"
     ],
     "interaction_modes": [
       "passive"

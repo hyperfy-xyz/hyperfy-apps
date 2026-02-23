@@ -1,0 +1,31 @@
+{
+  "id": "dC2ndyh59K",
+  "version": 2,
+  "name": "RGB_Block1",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": null,
+  "model": "asset://1c8c06ffcbfaffc7c19ea802288466181f6890bca860f34e0e3743bed409dfa9.glb",
+  "script": "asset://3ccb98bd36e67ca54a2ddcdf968246623516b7e8f989eff62e858e95050913a7.js",
+  "props": {
+    "speedX": 2,
+    "speedY": 0,
+    "rotate": 1,
+    "reset": 0,
+    "glowMode": "static",
+    "glowIntensity": 100,
+    "pulseMin": 1,
+    "pulseMax": 50,
+    "pulseSpeed": 35,
+    "audioReactive": 0,
+    "audioScaleGlow": 100,
+    "audioScaleSpeed": 100,
+    "audioSource": null,
+    "audioVolume": 10
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

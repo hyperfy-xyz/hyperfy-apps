@@ -1,0 +1,69 @@
+{
+  "id": "uGbZ5E2Obt",
+  "version": 97,
+  "name": "CONFETTT PPOT",
+  "image": null,
+  "author": "Gert-Jan Akerboom",
+  "url": null,
+  "desc": "Confetti popper !\n-networked\n-has sound\n-add your own confetti/sound\n-click to pop",
+  "model": "asset://d91f5a14dce54f679b6a2c982da3a9cfefcddc0e0a48e55357519c18a8f993a6.glb",
+  "script": "asset://a9c82fe1f0ba5b20381e71b228473f69373c8cb207ee7ab2646a36e8b29708d9.js",
+  "props": {
+    "confettiImage1": {
+      "type": "texture",
+      "name": "p1.png",
+      "url": "asset://c68d78ac09493fb61732fbde6cf6bcf2083ebb302404273d5dba06df43b002ed.png"
+    },
+    "confettiImage2": {
+      "type": "texture",
+      "name": "p2.png",
+      "url": "asset://09c8bc8c7a5316301fdec7523ff751efb67458eaaeea7eeeee2495021ec9bdc7.png"
+    },
+    "confettiImage3": {
+      "type": "texture",
+      "name": "p3.png",
+      "url": "asset://19ffdd3a8a7591313f1fd259f75c74b08a3e2cb26154db5ad9847587c74ebccc.png"
+    },
+    "confettiImage4": {
+      "type": "texture",
+      "name": "p4.png",
+      "url": "asset://7c6a060a9a38aa57601b6f467e7d61c7493462431b570fa3276a066327aabf46.png"
+    },
+    "confettiImage5": {
+      "type": "texture",
+      "name": "p5.png",
+      "url": "asset://4078a72786c33dced79346816eaeac29d223d0c9c9667624c521aa55274f8891.png"
+    },
+    "confettiImage6": {
+      "type": "texture",
+      "name": "p6.png",
+      "url": "asset://8fbf6b897cda628db151ab177d3497f1a9b84d5800aaa47d4e0843f0db7f0bfc.png"
+    },
+    "confettiImage7": {
+      "type": "texture",
+      "name": "p7.png",
+      "url": "asset://418abad39699f7a83bf12e96449ee8065d34c179fb4830f90c35eaa1c233d7f8.png"
+    },
+    "confettiImage8": {
+      "type": "texture",
+      "name": "p8.png",
+      "url": "asset://ad882122cbb24872df3c558e4d73a56c9007bcaabe7a2a158a7d0983c08996cf.png"
+    },
+    "clickSound": {
+      "type": "audio",
+      "name": "POP1.mp3",
+      "url": "asset://303addb43bf5fa7bcc6828163caca12890e4c8c852b9b97afe6a4ea9a8c04e27.mp3"
+    },
+    "explosionSound": {
+      "type": "audio",
+      "name": "POP2.mp3",
+      "url": "asset://e340725a9d803c8a2739a8e77afcca452fe3cec7ce8036e9d8369d4088f06dc2.mp3"
+    }
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": true,
+  "scene": false,
+  "disabled": false
+}

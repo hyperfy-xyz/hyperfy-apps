@@ -1,0 +1,21 @@
+{
+  "id": "UOjan1bG7S",
+  "version": 1,
+  "name": "HyperPortal",
+  "image": {
+    "type": "texture",
+    "name": "hyperfy-social-2.png",
+    "url": "asset://d60648b9091c00e460545dce3cef7b88c0d643d0a864424f715a878c2ad3661a.png"
+  },
+  "author": "b0gie",
+  "url": "https://hyperfy.xyz",
+  "desc": "warp to a new location",
+  "model": "asset://f361b150f4d5ef44b6840e7c35264b863eb6982c5f74ed9b9736f61adab41d34.glb",
+  "script": "asset://28fde45d59ee32b896b43533aaaf0f5fcf198cc3bc042cb11eefdaaa4d96fafc.js",
+  "props": {
+    "zone1": "0,0,0"
+  },
+  "preload": false,
+  "public": false,
+  "locked": false
+}

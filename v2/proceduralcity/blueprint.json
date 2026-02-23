@@ -1,0 +1,16 @@
+{
+  "id": "NYvEwOT2RT",
+  "version": 17,
+  "name": "Procedural City",
+  "image": null,
+  "author": "Shiffty",
+  "url": null,
+  "desc": null,
+  "model": "asset://b57b720667e13cf91a665e22aa46565622554cfd0a711caa83760f5b515545da.glb",
+  "script": "asset://f6fbacabb997dda7ef8362329b0ae8fa784226b580b5b2deecefa22a57b5ad87.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

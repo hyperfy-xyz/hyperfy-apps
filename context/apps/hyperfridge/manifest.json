@@ -1,0 +1,64 @@
+{
+  "app_id": "hyperfridge-1339379901697884181",
+  "app_slug": "hyperfridge",
+  "app_name": "HyperFridge",
+  "source": {
+    "hyp_filename": "HyperFridge.hyp",
+    "discord_attachment_id": "1339379901450686504",
+    "discord_message_id": "1339379901697884181",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-12T23:37:33.040Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1339379901450686504/HyperFridge.hyp?ex=6998f03c&is=69979ebc&hm=1452b38b3812a17f420069de260990415c5ade86a7fcd9edb66179ecf3fff3c5&"
+  },
+  "author": {
+    "display_name": "hypShaman",
+    "discord_user_id": "297290503181959169",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "hyperfridge-1339379901697884181",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:45:57+00:00",
+    "description": "Renders a 3D fridge model as an interactive environment prop. Based on the app name and context, it likely displays a placeable refrigerator object that users can interact with in a Hyperfy world scene.",
+    "feature_tags": [
+      "3d-model",
+      "interaction"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

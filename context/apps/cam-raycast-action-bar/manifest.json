@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-03-10T20:04:11.978Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1348748294326583316/cam_raycast_action_bar.hyp?ex=69791a3b&is=6977c8bb&hm=8ab0c462978095d139c44fc6cf3bf468145b75b2b15fda439e82049e28440013&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1348748294326583316/cam_raycast_action_bar.hyp?ex=6998be3b&is=69976cbb&hm=c8b71c52ee32fcc3aaa2020b9ea341a37ad216c1a0e5456135fee6043fb1ff64&"
   },
   "author": {
     "display_name": "Saori",
@@ -29,33 +29,34 @@
     "hyp_summary_path": "context/hyp_summaries/cam_raycast_action_bar.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/cam-raycast-action-bar/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "cam-raycast-action-bar-1348748294658195487",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:18:44+00:00",
-    "description": "Renders a 10-slot action bar UI at the bottom of the screen with keybind labels and WoW-style spell icons. Triggers a camera-based raycast on key press (Q) that sends the ray direction and origin to the server via networked events for server-side hit detection.",
+    "generated_at": "2026-02-21T23:43:39+00:00",
+    "description": "Renders a 10-slot action bar UI anchored to the screen bottom with icon images and keybind labels. Triggers a camera-based raycast on key press (Q) by reading camera quaternion, computing a forward direction, and sending the ray origin/direction to the server via networked events.",
     "feature_tags": [
       "ui",
       "camera",
-      "combat",
-      "interaction"
+      "interaction",
+      "combat"
     ],
     "interaction_modes": [
       "ui",

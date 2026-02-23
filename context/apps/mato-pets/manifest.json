@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-02-25T05:11:27.263Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1343021211994820728/1343812585140785233/Mato_Pets.hyp?ex=69799a7f&is=697848ff&hm=e57b657fb5dcbdfb87f64d741b1f76514a4cf114dbeeb628385ec520934cac9b&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1343021211994820728/1343812585140785233/Mato_Pets.hyp?ex=699895bf&is=6997443f&hm=9c57ee0d8fe08e566d20c5d0bf148859f35247806ca6d7d63cb8393674059c9e&"
   },
   "author": {
     "display_name": "~/MayD524/Hyperfy",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Mato_Pets.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/mato-pets/m1_LaunchPartyMP.png",
+    "primary_media_path": "catalog/media/mato_pets/1343802488654139412_LaunchPartyMP.png",
     "media_type": ".png",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/mato-pets/m1_LaunchPartyMP.png",
+      "catalog_path": "catalog/media/mato_pets/1343802488654139412_LaunchPartyMP.png",
       "original_filename": "LaunchPartyMP.png",
       "content_type": "image/png",
       "relative_index": -1,
@@ -49,7 +49,7 @@
       "attachment_id": "1343802488654139412"
     },
     {
-      "catalog_path": "catalog/media/mato-pets/p5_grape-512-512.jpg",
+      "catalog_path": "catalog/media/mato_pets/1344027695993982997_grape-512-512.jpg",
       "original_filename": "grape-512-512.jpg",
       "content_type": "image/jpeg",
       "relative_index": 5,
@@ -60,36 +60,11 @@
       "excluded_large": false,
       "download_status": "downloaded",
       "attachment_id": "1344027695993982997"
-    },
-    {
-      "catalog_path": "catalog/media/mato-pets/p7_grape-banner-2050-512.jpg",
-      "original_filename": "grape-banner-2050-512.jpg",
-      "content_type": "image/jpeg",
-      "relative_index": 7,
-      "same_author": false,
-      "selection_reason": "any_author_fallback",
-      "size_bytes": 65522,
-      "optimized": true,
-      "excluded_large": false,
-      "download_status": "downloaded",
-      "attachment_id": "1344028145485086811"
-    },
-    {
-      "catalog_path": "catalog/media/mato-pets/p8_Screenshot_2025-02-25_at_11.07.00_AM.png",
-      "original_filename": "Screenshot_2025-02-25_at_11.07.00_AM.png",
-      "content_type": "image/png",
-      "relative_index": 8,
-      "same_author": false,
-      "selection_reason": "any_author_fallback",
-      "size_bytes": 370845,
-      "optimized": true,
-      "excluded_large": false,
-      "download_status": "downloaded",
-      "attachment_id": "1344028826602045573"
     }
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
@@ -97,13 +72,13 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "mato-pets-1343812585706749963",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:23:48+00:00",
-    "description": "Networked VRM pet that follows a target player using raycasting for obstacle avoidance. Players can adopt the pet via an interaction action. Animates idle, walking, and sitting emotes, and syncs position/quaternion across clients with interpolation.",
+    "generated_at": "2026-02-21T23:46:43+00:00",
+    "description": "Networked VRM pet that follows a target player using raycasting for obstacle avoidance. Players can adopt the pet via an interaction action. Animates idle, walking, and sitting emotes, syncs position and quaternion across clients, and teleports to the owner when too far away.",
     "feature_tags": [
       "npc",
       "animation",

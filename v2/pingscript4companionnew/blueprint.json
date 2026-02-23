@@ -1,0 +1,23 @@
+{
+  "id": "0PZkrSvNsQ",
+  "version": 32,
+  "name": "PingScript4Companion",
+  "image": null,
+  "author": "drdoge.eth",
+  "url": "tatted",
+  "desc": "ATTACH THIS SCRIPT TO ANYTHING YOU WANT THE COMPANION TO LOCATE IN WORLD JUST NAME ACCORDINGLY. ",
+  "model": "asset://cdcb56423fabbc0f36e8329622c987f12a4bd94e007aa95fce9129ec666e59c2.glb",
+  "script": "asset://9d3e9562bf3f50d27bf3293ab866150954450f7fb6fea816637035b8fcf97005.js",
+  "props": {
+    "name": "Train",
+    "type": "Train",
+    "description": "A scannable object in the world",
+    "tags": "Landmark",
+    "displayName": "Train",
+    "objectType": "LandMark"
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

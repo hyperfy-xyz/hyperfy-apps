@@ -1,0 +1,29 @@
+{
+  "id": "Lyok9lmIJr",
+  "version": 65,
+  "name": "chinookNEW",
+  "image": null,
+  "author": "HiveMind",
+  "url": null,
+  "desc": "shift=Engine Start/DOWN\nSpaceBar=UP \nW/S= Pitch Forward/Backwards A/D=Strafe left/right\nQ= Exit. just grab to reset position",
+  "model": "asset://4bad5bcdd2c5ad56bfeeb7a2b01d4515cca0138f43a7c2b856d87591c946f883.glb",
+  "script": "asset://3ebce87edc1dbcf91f0b4f3c4c5a9ecfd40f6415937f8907da065cacb505bfaf.js",
+  "props": {
+    "spawnY": 11,
+    "enterEmote": {
+      "type": "emote",
+      "name": "Sitting Looking Side To Side.glb",
+      "url": "asset://7c8a0708598c65c93aa5adf21dcb82658b8eef873e2aacab73698cd0a3d12ba5.glb"
+    },
+    "engineSound": {
+      "type": "audio",
+      "name": "helicopter-sound-41975.mp3",
+      "url": "asset://af4ab7893f771857bae8600924595d01d91211263fb39f13a97710b08f6fa28d.mp3"
+    },
+    "rotorSpeed": 0
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

@@ -1,0 +1,18 @@
+{
+  "id": "xdpaNrvS5x",
+  "version": 10,
+  "name": "Elevator",
+  "image": null,
+  "author": "Akerboom",
+  "url": null,
+  "desc": "Still gotta fix the shaking ",
+  "model": "asset://61f098263bf530dc29e91ecb337b886fb3b568aa9ced31f1c019cf8633485564.glb",
+  "script": "asset://b825d0b498f66cc26b5da67e6ceb6a1349a852e32a2dc4b84194374dd0fb4216.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false,
+  "scene": false,
+  "disabled": false
+}

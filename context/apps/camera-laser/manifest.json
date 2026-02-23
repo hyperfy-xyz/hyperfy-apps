@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-10-09T06:51:28.944Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1425737415955320935/CameraLaser.hyp?ex=68eaa730&is=68e955b0&hm=68a8eab8351a904707d8ed24d99957f5198ab0efe853e63cd4a68a6fa45f6ba7&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1425737415955320935/CameraLaser.hyp?ex=6998ad30&is=69975bb0&hm=73ed5a65e0ce554ed480ddeb75251243e47f6f425ad05ffaad90d932423449f8&"
   },
   "author": {
     "display_name": "Shiffty",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/CameraLaser.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/camera-laser/p2_cannonballs.mp4",
+    "primary_media_path": "catalog/media/cameralaser/1425757284574822470_cannonballs.mp4",
     "media_type": ".mp4",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/camera-laser/p2_cannonballs.mp4",
+      "catalog_path": "catalog/media/cameralaser/1425757284574822470_cannonballs.mp4",
       "original_filename": "cannonballs.mp4",
       "content_type": "video/mp4",
       "relative_index": 2,
@@ -51,6 +51,7 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
@@ -58,16 +59,16 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "camera-laser-1425737416207110174",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:18:52+00:00",
-    "description": "Equippable laser gun that shoots red laser beams from the camera direction. Players trigger an action to equip, then fire lasers on mouse click. Laser clones spawn via networked events, fade out over 3 seconds, and are cleaned up by the server.",
+    "generated_at": "2026-02-21T23:43:40+00:00",
+    "description": "Equippable laser gun that shoots red laser beams from the camera's forward direction. Players trigger an action to equip, then fire lasers on mouse click. Laser clones spawn via networked events, fade out over 3 seconds, and are cleaned up by the server.",
     "feature_tags": [
-      "combat",
       "camera",
+      "combat",
       "interaction",
       "multiplayer",
       "3d-model"

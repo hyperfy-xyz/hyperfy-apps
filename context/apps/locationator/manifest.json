@@ -1,15 +1,15 @@
 {
-  "app_id": "locationator-1363448335117193418",
+  "app_id": "locationator-1363449445173432493",
   "app_slug": "locationator",
   "app_name": "Locationator",
   "source": {
     "hyp_filename": "Locationator.hyp",
-    "discord_attachment_id": "1363448334857015467",
-    "discord_message_id": "1363448335117193418",
+    "discord_attachment_id": "1363449444976168990",
+    "discord_message_id": "1363449445173432493",
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
-    "discord_timestamp": "2025-04-20T09:36:54.737Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1363448334857015467/Locationator.hyp?ex=69792ff6&is=6977de76&hm=370ab390a50ecf0ea1a47f09e9103b3a6ee0d56c4912f4ea44d8469867e3557e&"
+    "discord_timestamp": "2025-04-20T09:41:19.395Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1363449444976168990/Locationator.hyp?ex=6998d4ff&is=6997837f&hm=b07958fad5c8848763f48509861f799a0452f6a575dc813a37eb2323102992fb&"
   },
   "author": {
     "display_name": "MetaRick",
@@ -18,8 +18,8 @@
     "evidence": "discord"
   },
   "description": {
-    "short": "heres a handy app that will just display the location when you place it, helpful for figuring out where you wanna teleport things  to.",
-    "raw_message_content": "heres a handy app that will just display the location when you place it, helpful for figuring out where you wanna teleport things  to.",
+    "short": "Updated shows rotation as well",
+    "raw_message_content": "Updated shows rotation as well",
     "summary_excerpt": "Locationator.hyp",
     "source_priority_used": "discord_message"
   },
@@ -29,19 +29,19 @@
     "hyp_summary_path": "context/hyp_summaries/Locationator.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/locationator/p0_image.png",
+    "primary_media_path": "catalog/media/locationator/1363448334567739392_image.png",
     "media_type": ".png",
-    "selection_reason": "same_message",
+    "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/locationator/p0_image.png",
+      "catalog_path": "catalog/media/locationator/1363448334567739392_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
-      "relative_index": 0,
+      "relative_index": -1,
       "same_author": true,
-      "selection_reason": "same_message",
+      "selection_reason": "same_author_nearby",
       "size_bytes": 832327,
       "optimized": true,
       "excluded_large": false,
@@ -51,18 +51,19 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
-    "app_id": "locationator-1363448335117193418",
+    "app_id": "locationator-1363449445173432493",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:23:04+00:00",
-    "description": "Renders a billboarded UI text label above a placed 3D model that displays live world position (X, Y, Z) and rotation (RX, RY, RZ) coordinates, updating each frame to help builders identify exact teleport destinations.",
+    "generated_at": "2026-02-21T23:46:27+00:00",
+    "description": "Renders a billboarded UI text label above a placed 3D model that displays the object's live world position (X, Y, Z) and rotation (RX, RY, RZ) coordinates, updating each frame. Useful as a developer tool for finding teleport destinations or precise placement locations.",
     "feature_tags": [
       "ui",
       "3d-model"

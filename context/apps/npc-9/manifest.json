@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-03-25T12:23:19.548Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1354068129331810354/NPC_9.hyp?ex=697956f7&is=69780577&hm=dd908a19a656e7920d1b1afa797c9c45f0b89b52fb84d9630f850b834cea903b&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1354068129331810354/NPC_9.hyp?ex=6998faf7&is=6997a977&hm=f90b9709fb81e433a26282abb517e45473f179d18f8992b2b2afa2936cfb7d4b&"
   },
   "author": {
     "display_name": "peezy",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/NPC_9.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/npc-9/p2_image.png",
+    "primary_media_path": "catalog/media/npc_9/1354068552398802955_image.png",
     "media_type": ".png",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/npc-9/p2_image.png",
+      "catalog_path": "catalog/media/npc_9/1354068552398802955_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": 2,
@@ -51,18 +51,19 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "npc-9-1354068129944174592",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:24:54+00:00",
-    "description": "VRM-based NPC that animates idle, walk, run, and sit emotes, detects players within a configurable FOV and range, chases them, and triggers randomized attack animations with cooldown-based hit detection. Plays spatial raptor audio and syncs combat events across server and clients via networked messa",
+    "generated_at": "2026-02-21T23:47:10+00:00",
+    "description": "VRM-based NPC that animates idle, walk, run, and sit emotes, detects players within a configurable FOV and range, chases them, and triggers randomized attack animations with cooldown-based hit detection. Plays spatial raptor audio and emits networked npc:attack events with calculated hit positions.",
     "feature_tags": [
       "npc",
       "combat",

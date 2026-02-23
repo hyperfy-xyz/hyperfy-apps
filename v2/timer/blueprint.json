@@ -1,0 +1,16 @@
+{
+  "id": "vM7gyK57yt",
+  "version": 4,
+  "name": "TImer",
+  "image": null,
+  "author": "MetaRick",
+  "url": "https://uncannydev.hyperworld.host/",
+  "desc": "A simple timer for watever reason you may need one",
+  "model": "asset://b22e4dcf41f98f5918e2f03e54f48b8c995d3568a2bb1e845c47dcafb1f269bd.glb",
+  "script": "asset://31463a37d115d948cb2cdc0779337f9fbce1ea8d802ed010861bdeea9109aab7.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

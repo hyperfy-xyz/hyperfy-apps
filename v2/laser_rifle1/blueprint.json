@@ -1,0 +1,16 @@
+{
+  "id": "iWgZ3LGWAZ",
+  "version": 66,
+  "name": "laser_rifle",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": null,
+  "model": "asset://0ede034f19fcbcb15bee8696faa8c464916ccbafa1beca809397f58f5eaa24f8.glb",
+  "script": "asset://a83926e78c98d3260c8937a0d218c1fdbc4a13191dd7eb2617c34211fad012f8.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

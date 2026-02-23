@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-03-14T15:31:38.098Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1350129252976168992/1350129254234587329/Butterfly_Swarm_V2a.hyp?ex=6979831a&is=6978319a&hm=7d104c4f317758df683c031e88e5d40a29f22ae6b62cb95ae257b2f451866c64&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1350129252976168992/1350129254234587329/Butterfly_Swarm_V2a.hyp?ex=69987e5a&is=69972cda&hm=55010e80ca83e995bb30f62c5a05558c4779cca66b2d8bf99f7e95fe25c5ffd7&"
   },
   "author": {
     "display_name": "Gert-Jan Akerboom",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Butterfly_Swarm_V2a.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/butterfly-swarm-v1/p0_5000.png",
+    "primary_media_path": "catalog/media/butterfly_swarm_v2a/1350130188687642774_5000.png",
     "media_type": ".png",
     "selection_reason": "same_message",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/butterfly-swarm-v1/p0_5000.png",
+      "catalog_path": "catalog/media/butterfly_swarm_v2a/1350130188687642774_5000.png",
       "original_filename": "5000.png",
       "content_type": "image/png",
       "relative_index": 0,
@@ -51,18 +51,19 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "butterfly-swarm-v2a-1350129252976168992",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:17:57+00:00",
-    "description": "Spawns a swarm of 100 butterfly clones from a GLB model, animates wing flapping via sinusoidal rotation, and drifts each butterfly along randomized 3D paths with per-instance scale, speed, and position offsets updated every frame.",
+    "generated_at": "2026-02-21T23:43:21+00:00",
+    "description": "Spawns a swarm of 100 butterfly clones with randomized scale, position, and flap speed. Animates wing flapping and sinusoidal drifting movement each frame using the update loop, creating an organic floating butterfly swarm from a single GLB model.",
     "feature_tags": [
       "animation",
       "3d-model",

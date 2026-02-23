@@ -1,0 +1,15 @@
+{
+  "id": "PNkY3jVqdS",
+  "version": 30,
+  "name": "Trippy Floor",
+  "image": null,
+  "author": "Shiffty",
+  "url": null,
+  "desc": "Just playing",
+  "model": "asset://4bd5e491a03f3c6e19e593cc8151320a70edefef9377ddff9dccd50157ec8939.glb",
+  "script": "asset://b89a6ca4883ed232d33b29559b0dedde9c43a7f888a08bdf89a5b3d1ab1add90.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false
+}

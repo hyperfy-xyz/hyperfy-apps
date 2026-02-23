@@ -1,0 +1,16 @@
+{
+  "id": "5pcZM11uAU",
+  "version": 14,
+  "name": "It's a vibe",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": null,
+  "model": "asset://b66285a1342dbc494a4a3da95cc661cd39d7fd9fbf7fe7a57c7629fd57ad79b1.glb",
+  "script": "asset://f7a893929b1c47d1fe0a53722dfe364bde87c3c79eff0468a96174e625a83350.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

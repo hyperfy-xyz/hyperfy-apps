@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-03-29T23:23:55.925Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1355683927712600184/hexagonal_test_networked.hyp?ex=6979490b&is=6977f78b&hm=7325560aa6eddcdca558c04f26f84aa8b6c14c7d82fe3e7f92b466ebdc1c5049&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1355683927712600184/hexagonal_test_networked.hyp?ex=6998ed0b&is=69979b8b&hm=6d3eb2b704877191597ebdf430d4287280631ae039ba4d6d4777d962f93e4469&"
   },
   "author": {
     "display_name": "cru",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/hexagonal_test_networked.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/hexagonal-test-basic/p0_image.png",
+    "primary_media_path": "catalog/media/hexagonal_test_networked/1355683928199004232_image.png",
     "media_type": ".png",
     "selection_reason": "same_message",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/hexagonal-test-basic/p0_image.png",
+      "catalog_path": "catalog/media/hexagonal_test_networked/1355683928199004232_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": 0,
@@ -51,18 +51,19 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "hexagonal-test-networked-1355683928421171290",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:22:21+00:00",
-    "description": "Networked hexagonal floor panels that detect player contact and react by shifting downward and scrolling UV offsets to cycle colors. The server simulates oscillation, dip movement, and UV state transitions, then broadcasts panel state to all clients for synchronized visuals.",
+    "generated_at": "2026-02-21T23:45:43+00:00",
+    "description": "Networked hexagonal floor panels that detect player contact via colliders, shift downward on step, and cycle UV offsets to animate color changes. The server simulates oscillation and broadcasts pad state to all clients for synchronized movement and texture scrolling.",
     "feature_tags": [
       "interaction",
       "animation",

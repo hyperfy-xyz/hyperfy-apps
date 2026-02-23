@@ -1,0 +1,18 @@
+{
+  "id": "KgNDhicV67",
+  "version": 2,
+  "name": "WaterPlanet",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": null,
+  "model": "asset://6df21038be61e04b6d4b4e97f2a21438aa15e419cd7f955fe9b0ff5fd1a5dfc9.glb",
+  "script": "asset://a1949c3a371fde14add9749543613e5f7e8410e9a95447384b2099e9064bc1d7.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false,
+  "scene": false,
+  "disabled": false
+}

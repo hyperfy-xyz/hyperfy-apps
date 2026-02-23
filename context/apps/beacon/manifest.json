@@ -1,0 +1,64 @@
+{
+  "app_id": "beacon-1336779970739048500",
+  "app_slug": "beacon",
+  "app_name": "beacon",
+  "source": {
+    "hyp_filename": "beacon.hyp",
+    "discord_attachment_id": "1336779970764079156",
+    "discord_message_id": "1336779970739048500",
+    "discord_channel": "\u26a1\u2502general",
+    "discord_channel_category": "Platform",
+    "discord_timestamp": "2025-02-05T19:26:21.195Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/958209074045026327/1336779970764079156/beacon.hyp?ex=6998b55d&is=699763dd&hm=5b28a82b8b394fd22d102f4e14cbce8de1c0755ec323aff7d4f04908883ece2b&"
+  },
+  "author": {
+    "display_name": "m\u2082",
+    "discord_user_id": "735949862692061246",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "Here's the first iteration of the beacon that should be ready for release, just toss this in your world somewhere and fill out the fields and your world will get listed on https://relay.zesty.xyz alongside other hyperfy worlds and spatial apps",
+    "raw_message_content": "Here's the first iteration of the beacon that should be ready for release, just toss this in your world somewhere and fill out the fields and your world will get listed on https://relay.zesty.xyz alongside other hyperfy worlds and spatial apps",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "beacon-1336779970739048500",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:43:01+00:00",
+    "description": "Registers a Hyperfy world on the Zesty relay directory by collecting user-configured fields and submitting world metadata. Drop the beacon into a world, fill out the listing properties, and the world appears on relay.zesty.xyz alongside other spatial apps.",
+    "feature_tags": [
+      "ui",
+      "interaction"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

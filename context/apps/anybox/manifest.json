@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-03-27T23:55:26.459Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1354967081073905674/anybox.hyp?ex=6979506e&is=6977feee&hm=8b9c24ac911e4a1ace36cef5acbc6de65ce1d5187f74fcfe4e7b6bb57072b3e2&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1354967081073905674/anybox.hyp?ex=6998f46e&is=6997a2ee&hm=d20bb81389dec225ad50c5f5bbaef14d49770ce038d112b21293f95d2bb1d8dc&"
   },
   "author": {
     "display_name": "ash",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/anybox.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/anybox/p0_image.png",
+    "primary_media_path": "catalog/media/anybox/1354967081556381816_image.png",
     "media_type": ".png",
     "selection_reason": "same_message",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/anybox/p0_image.png",
+      "catalog_path": "catalog/media/anybox/1354967081556381816_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": 0,
@@ -49,7 +49,7 @@
       "attachment_id": "1354967081556381816"
     },
     {
-      "catalog_path": "catalog/media/anybox/p0_image_1354967081921151006.png",
+      "catalog_path": "catalog/media/anybox/1354967081921151006_image.png",
       "original_filename": "image.png",
       "content_type": "image/png",
       "relative_index": 0,
@@ -64,18 +64,19 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "anybox-1354967082164424814",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:16:25+00:00",
-    "description": "A reusable container box that plays a configurable looping background audio track at low volume and renders a floating UI label reading 'Background Audio' above the 3D model. Designed as an organizational shell for logic-based apps.",
+    "generated_at": "2026-02-21T23:42:42+00:00",
+    "description": "A reusable container box that plays a configurable looping audio file as non-spatial background music and renders a floating UI label reading 'Background Audio' above the 3D model. Designed as an organizational shell for logic-based apps.",
     "feature_tags": [
       "audio",
       "ui",

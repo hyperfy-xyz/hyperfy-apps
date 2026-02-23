@@ -1,0 +1,47 @@
+{
+  "id": "PLsDIEv5ag",
+  "version": 58,
+  "name": "Projector v2",
+  "image": {
+    "type": "texture",
+    "name": "Screenshot 2025-03-15 174015.png",
+    "url": "asset://2c495ed20c34bde21a5b8e393bcf6f1d022244ddffe305d44bc19023f0988dbe.png"
+  },
+  "author": "cru",
+  "url": null,
+  "desc": "horse run fast \nprojector turn on and off",
+  "model": "asset://836fa409c26ad59c11d4a5bfaed3027d52420b8fa781eb2bbca2c5eaaf57c4b1.glb",
+  "script": "asset://2ec39c8393a851896ff10b171e6fd729abe6bd5a3b679da6f5d495c2aee9085f.js",
+  "props": {
+    "projectorSound": null,
+    "reelSound": {
+      "type": "audio",
+      "name": "projector.mp3",
+      "url": "asset://852fc7ff0175b9a5ddda1c017a88e311a265bfebe21a4453709fe4d562949cff.mp3"
+    },
+    "clickSound": {
+      "type": "audio",
+      "name": "click.mp3",
+      "url": "asset://04e4bcfae97099d4ee4af8f8dd5708a3ba0d109229092e3c8067156d4463d070.mp3"
+    },
+    "startSound": {
+      "type": "audio",
+      "name": "proj_start.mp3",
+      "url": "asset://d05a463ff78beaa13a7093f0c68ac03304e917df63fd64d47812bc78ea2ef7ec.mp3"
+    },
+    "middleSound": {
+      "type": "audio",
+      "name": "proj_loop.mp3",
+      "url": "asset://0c77d6946bd1874ba7c72aaae75e398e318577af0eaa08eea29687b8a61ed6e4.mp3"
+    },
+    "stopSound": {
+      "type": "audio",
+      "name": "proj_end.mp3",
+      "url": "asset://bab4d64fb7dd3cc1a6c7859bfaea7391bfaffabe16d8b10dac9301776f4c1897.mp3"
+    }
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

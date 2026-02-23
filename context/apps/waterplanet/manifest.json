@@ -1,0 +1,79 @@
+{
+  "app_id": "waterplanet-1408805449028993126",
+  "app_slug": "waterplanet",
+  "app_name": "WaterPlanet",
+  "source": {
+    "hyp_filename": "WaterPlanet.hyp",
+    "discord_attachment_id": "1408805448731070514",
+    "discord_message_id": "1408805449028993126",
+    "discord_channel": "\ud83e\uddca\u25023d-design",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-08-23T13:29:53.388Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1031058655581323324/1408805448731070514/WaterPlanet.hyp?ex=69990a91&is=6997b911&hm=c8e564458c2f53d1073fd1a8d3108a8be31724a8dddcaced85082b40590282da&"
+  },
+  "author": {
+    "display_name": "\ud83c\udd82\ud83c\udd74\ud83c\udd71\ud83c\udd76\ud83c\udd70",
+    "discord_user_id": "305071562241998858",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "Hey Vox, I used \"answer to this message\" for the ref, sorry , don't wan't to bother you. \nMessage for anyone who can help: \nI tried to copy the SAMPLE script in WaterPlanet (name updated in the script).  WaterPlanet has been created with Hyperfy Tool in Blender , is there a way to adapt the script for the hierarchy created by the addon (hyperfy tool) ?  Or I need to do differently (like glb with custom properties maybe?) to have water moving and keeping the collision ? Also , if we add a planet ring, can all moves be managed in script (water move, ring move,etc..) if it's exported as Batch GLB with Hyperfy Tool?",
+    "raw_message_content": "Hey Vox, I used \"answer to this message\" for the ref, sorry , don't wan't to bother you. \nMessage for anyone who can help: \nI tried to copy the SAMPLE script in WaterPlanet (name updated in the script).  WaterPlanet has been created with Hyperfy Tool in Blender , is there a way to adapt the script for the hierarchy created by the addon (hyperfy tool) ?  Or I need to do differently (like glb with custom properties maybe?) to have water moving and keeping the collision ? Also , if we add a planet ring, can all moves be managed in script (water move, ring move,etc..) if it's exported as Batch GLB with Hyperfy Tool?",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/waterplanet/1408806346564046987_image.png",
+    "media_type": ".png",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/waterplanet/1408806346564046987_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": 1,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 82362,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1408806346564046987"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "waterplanet-1408805449028993126",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:50:08+00:00",
+    "description": "A water planet 3D model created with Hyperfy Tool in Blender, intended to animate water surfaces and optionally rotate a planetary ring using per-frame update scripts that modify node rotation and position.",
+    "feature_tags": [
+      "3d-model",
+      "animation",
+      "environment"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "medium",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

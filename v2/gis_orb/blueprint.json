@@ -1,0 +1,16 @@
+{
+  "id": "SZUVeZ880I",
+  "version": 57,
+  "name": "GIS_Orb",
+  "image": null,
+  "author": "Cru",
+  "url": null,
+  "desc": "",
+  "model": "asset://b007bb60b53aa31e4f494e3c58e691f55a49f7571a9cfbc03c141256b5eeb737.glb",
+  "script": "asset://de98328c9e3639a08e7d07f77008c4ba57e1fcd7093ee3c09b52920bcff711dc.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

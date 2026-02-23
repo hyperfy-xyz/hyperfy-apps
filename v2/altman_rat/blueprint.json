@@ -1,0 +1,16 @@
+{
+  "id": "p9IBxLX6EW",
+  "version": 3,
+  "name": "Altman_Rat",
+  "image": null,
+  "author": "MetaRick",
+  "url": null,
+  "desc": null,
+  "model": "asset://7abe4613af407ff35fe41258fff666b1cfa3e9b805536cbe9e4ada4f462933ce.glb",
+  "script": "asset://7a20a143f7a1a49825215219b4fc6cb211f692fd17e48fe8b08828c5f4ff469c.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

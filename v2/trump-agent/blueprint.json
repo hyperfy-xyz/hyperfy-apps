@@ -1,0 +1,37 @@
+{
+  "id": "w2S99ngmbh",
+  "version": 1,
+  "model": "asset://e9bde28f0150f41f859af8ff09693f9b979a79718306554dc54df6aaada5b396.vrm",
+  "script": "asset://2998e0a3c56caac66773362f073297e248fd4b0086083c7d17298157e8eaaf3c.js",
+  "props": {
+    "name": "Trump",
+    "context": "You are standing in a large open grassy field in the middle of the day with a nice blue sky. There is almost nothing else around except the whitehouse which is behind you.\n",
+    "emote0": {
+      "name": "idle-happy-2.glb",
+      "url": "asset://a49fd36d62e15879a1a0aabc265904b68bfce32201f3a1d3098656e9c99daa0e.glb"
+    },
+    "emote": "4",
+    "emote1Name": "wave",
+    "emote1": {
+      "name": "wave.glb",
+      "url": "asset://2e7dbb54117a5dc83362ae7df4e2909607a62cd3abddd8abb9c8d873c5941a4b.glb"
+    },
+    "emote2Name": "think",
+    "emote2": {
+      "name": "thinking.glb",
+      "url": "asset://f26ed53da54504fd2fc0b49871feb0db4714b0bed60dd69d5514a4ee75d94fcf.glb"
+    },
+    "emote3Name": "cheer",
+    "emote3": {
+      "name": "cheer.glb",
+      "url": "asset://930040910cff7d172218a6251cb091f5be62c42b0b4c3cf9f051a1793101ce6f.glb"
+    },
+    "emote4": {
+      "name": "talking.glb",
+      "url": "asset://41e54bd466c366918d850312f8be6a9b27fb2683a661fa9e201387612cab8f22.glb"
+    },
+    "emote4Name": "explain",
+    "url": ""
+  },
+  "preload": false
+}

@@ -1,0 +1,18 @@
+{
+  "id": "nEcxAYraBt",
+  "version": 48,
+  "name": "Fireworks4",
+  "image": null,
+  "author": "Akerboom",
+  "url": null,
+  "desc": "fire fireworks when clicking the FIRE button\n",
+  "model": "asset://3d4c45be128a7b056d5101ee341d22d36794ae11ee0eb3edfedd5786b74f5627.glb",
+  "script": "asset://1e05fbb10b19ae1f785b1a569cc98f6f1686a3819672264816025dd33843ba1f.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false,
+  "scene": false,
+  "disabled": false
+}

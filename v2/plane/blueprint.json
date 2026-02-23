@@ -1,0 +1,17 @@
+{
+  "id": "ACgDHBRDSa",
+  "version": 4,
+  "name": "Plane",
+  "image": null,
+  "author": "Claude",
+  "url": null,
+  "desc": null,
+  "model": "asset://ai.glb",
+  "script": "asset://0d055208add43e6975afcf8267f2a3dc728bc7df8305741aca7e8dbec5db5376.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false,
+  "disabled": false
+}

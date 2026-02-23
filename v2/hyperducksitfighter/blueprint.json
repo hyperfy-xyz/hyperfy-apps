@@ -1,0 +1,22 @@
+{
+  "id": "dBj34uVWnK",
+  "version": 35,
+  "name": "hyperduck",
+  "image": null,
+  "author": null,
+  "url": null,
+  "desc": null,
+  "model": "asset://cdd6b597b95798b73a5c55ec2e8e3bbc66b231ab7fa852141a1fe96cf545ce9d.glb",
+  "script": "asset://34be35605cc91a8e669cf60f67737e555a59b567852a93d11c4c5c5b5aeb07ef.js",
+  "props": {
+    "emote": {
+      "type": "emote",
+      "name": "Aim Pistol While Sitting.glb",
+      "url": "asset://3273c901786ea3eb3111457f746d96d5f35406856f403626606229cf9284e9f9.glb"
+    }
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false
+}

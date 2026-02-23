@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-02-12T06:32:35.128Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1339121960759721996/1339121964136136726/Rover-LavaCargo.hyp?ex=697904c3&is=6977b343&hm=1956a3ea2b666b70510b743011b17295edc8f53b774c1e2f75e96cd722c84f01&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1339121960759721996/1339121964136136726/Rover-LavaCargo.hyp?ex=6998a8c3&is=69975743&hm=db603ae2528ee229c9e0b94b3851379a4b3476f12e02214b3d15b2bc4615fa42&"
   },
   "author": {
     "display_name": "maximus",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Rover-LavaCargo.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/health/p0_vt01.png",
+    "primary_media_path": "catalog/media/rover-lavacargo/1339121961598455881_vt01.png",
     "media_type": ".png",
     "selection_reason": "same_message",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/health/p0_vt01.png",
+      "catalog_path": "catalog/media/rover-lavacargo/1339121961598455881_vt01.png",
       "original_filename": "vt01.png",
       "content_type": "image/png",
       "relative_index": 0,
@@ -49,7 +49,7 @@
       "attachment_id": "1339121961598455881"
     },
     {
-      "catalog_path": "catalog/media/rover-lavacargo/p0_vt02.png",
+      "catalog_path": "catalog/media/rover-lavacargo/1339121962060087306_vt02.png",
       "original_filename": "vt02.png",
       "content_type": "image/png",
       "relative_index": 0,
@@ -62,7 +62,7 @@
       "attachment_id": "1339121962060087306"
     },
     {
-      "catalog_path": "catalog/media/rover-lavacargo/p0_Rover_Ships_and_Loot_Planets_in_Hyperfy.mp4",
+      "catalog_path": "catalog/media/rover-lavacargo/1339121966178762845_Rover_Ships_and_Loot_Planets_in_Hyperfy.mp4",
       "original_filename": "Rover_Ships_and_Loot_Planets_in_Hyperfy.mp4",
       "content_type": "video/mp4",
       "relative_index": 0,
@@ -77,23 +77,24 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "rover-lavacargo-1339121960759721996",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:27:19+00:00",
-    "description": "Autonomous rover ship that patrols within a configurable radius, scans for nearby items via a perception system, and renders billboard UI panels displaying ship stability and cargo profitability stat bars that deplete over time. Emits ping and resource-transfer events to simulate a space trading sim",
+    "generated_at": "2026-02-21T23:48:19+00:00",
+    "description": "Autonomous rover ship that patrols within a configurable radius, scans for nearby items via a perception system, and renders billboard UI panels displaying ship stability and cargo profitability stat bars that deplete over time. Emits ping and resource-transfer events to coordinate with other apps i",
     "feature_tags": [
       "npc",
       "ui",
-      "interaction",
-      "3d-model"
+      "3d-model",
+      "interaction"
     ],
     "interaction_modes": [
       "ui",

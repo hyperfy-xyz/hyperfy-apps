@@ -231,8 +231,64 @@ def copy_artifacts(
     }
 
 
+def extract_media_rel(local_path: str) -> str | None:
+    if not local_path:
+        return None
+    marker = "research/hyp_media/"
+    if marker in local_path:
+        return local_path.split(marker, 1)[1]
+    if "tmp/hyp_media_raw/" in local_path:
+        return local_path.split("tmp/hyp_media_raw/", 1)[1]
+    if local_path.startswith("hyp_media/"):
+        return local_path.split("hyp_media/", 1)[1]
+    if local_path.startswith("catalog/discord/hyp_media/"):
+        return local_path.split("catalog/discord/hyp_media/", 1)[1]
+    return None
+
+
+def collect_referenced_media_rels(hyp_index_path: Path) -> tuple[set[str], int]:
+    entries = json.loads(hyp_index_path.read_text(encoding="utf-8"))
+    referenced: set[str] = set()
+    legacy_flat = 0
+    for e in entries:
+        for c in e.get("media_candidates", []):
+            if not isinstance(c, dict):
+                continue
+            rel = extract_media_rel(c.get("local_path") or "")
+            if not rel:
+                continue
+            # Enforce slug-folder convention: <slug>/<filename>
+            if "/" not in rel:
+                legacy_flat += 1
+                continue
+            referenced.add(rel)
+    return referenced, legacy_flat
+
+
 def run_cmd(cmd: list[str]) -> subprocess.CompletedProcess:
     return subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, text=False)
+
+
+def human_size(num_bytes: int | None) -> str:
+    if num_bytes is None:
+        return "0 B"
+    size = float(max(num_bytes, 0))
+    units = ["B", "KB", "MB", "GB", "TB"]
+    for unit in units:
+        if size < 1024.0 or unit == units[-1]:
+            if unit == "B":
+                return f"{int(size)} {unit}"
+            return f"{size:.1f} {unit}"
+        size /= 1024.0
+    return "0 B"
+
+
+def progress_bar(current: int, total: int, width: int = 24) -> str:
+    if total <= 0:
+        return "[" + ("-" * width) + "]"
+    ratio = min(max(current / total, 0.0), 1.0)
+    filled = int(width * ratio)
+    return "[" + ("#" * filled) + ("-" * (width - filled)) + "]"
 
 
 def optimize_file(src: Path, dst: Path) -> bool:
@@ -271,6 +327,7 @@ def optimize_media_tree(
     max_bytes: int,
     dry_run: bool = False,
     resume: bool = True,
+    referenced_rels: set[str] | None = None,
 ):
     mapping: dict[str, OptimizeResult] = {}
     rows: list[dict[str, Any]] = []
@@ -278,17 +335,65 @@ def optimize_media_tree(
     if not media_raw.exists():
         return mapping, rows
 
+    all_sources = sorted(p for p in media_raw.rglob("*") if p.is_file())
+    if referenced_rels is None:
+        sources = all_sources
+        skipped_unreferenced = 0
+    else:
+        sources = []
+        for src in all_sources:
+            rel = src.relative_to(media_raw).as_posix()
+            if rel in referenced_rels:
+                sources.append(src)
+        skipped_unreferenced = len(all_sources) - len(sources)
+    total = len(sources)
+    if total == 0:
+        print("Media optimization")
+        print("  no source files found")
+        if referenced_rels is not None and skipped_unreferenced:
+            print(f"  skipped_unreferenced_files: {skipped_unreferenced}")
+        return mapping, rows
+
     if not dry_run:
         if media_out.exists() and not resume:
             shutil.rmtree(media_out)
         media_out.mkdir(parents=True, exist_ok=True)
 
-    for src in sorted(p for p in media_raw.rglob("*") if p.is_file()):
+    is_tty = os.isatty(1)
+    non_tty_step = max(1, total // 20)
+    processed = 0
+    count_images = 0
+    count_png = 0
+    count_videos = 0
+    count_kept = 0
+    count_excluded = 0
+    count_failed = 0
+    count_dry_run = 0
+    bytes_before = 0
+    bytes_after = 0
+    bytes_excluded = 0
+
+    print("Media optimization")
+    if referenced_rels is not None and skipped_unreferenced:
+        print(f"  skipped_unreferenced_files: {skipped_unreferenced}")
+
+    for src in sources:
         rel = src.relative_to(media_raw).as_posix()
         dst = media_out / rel
         original_size = src.stat().st_size
+        ext = src.suffix.lower()
+        bytes_before += original_size
+
+        if ext in VID_EXTS:
+            count_videos += 1
+        if ext == ".png":
+            count_png += 1
+        if ext in IMG_EXTS:
+            count_images += 1
 
         if dry_run:
+            count_dry_run += 1
+            bytes_after += original_size
             mapping[rel] = OptimizeResult(
                 status="dry_run",
                 optimized_rel=rel,
@@ -303,81 +408,122 @@ def optimize_media_tree(
                 "original_size": original_size,
                 "optimized_size": original_size,
             })
-            continue
+        else:
+            if resume and dst.exists():
+                optimized_size = dst.stat().st_size
+                if optimized_size <= max_bytes:
+                    count_kept += 1
+                    bytes_after += optimized_size
+                    mapping[rel] = OptimizeResult(
+                        status="kept",
+                        optimized_rel=rel,
+                        reason="reused_existing",
+                        original_size=original_size,
+                        optimized_size=optimized_size,
+                    )
+                    rows.append({
+                        "relative_path": rel,
+                        "status": "kept",
+                        "reason": "reused_existing",
+                        "original_size": original_size,
+                        "optimized_size": optimized_size,
+                    })
+                    processed += 1
+                    line = (
+                        f"  {progress_bar(processed, total)} {processed:>4}/{total:<4} "
+                        f"img:{count_images:<4} png:{count_png:<4} vid:{count_videos:<4} "
+                        f"kept:{count_kept:<4} excl:{count_excluded:<4} fail:{count_failed:<4}"
+                    )
+                    if is_tty:
+                        print(f"\r{line}", end="", flush=True)
+                    elif processed == total or processed % non_tty_step == 0:
+                        print(line)
+                    continue
+                dst.unlink(missing_ok=True)
 
-        if resume and dst.exists():
-            optimized_size = dst.stat().st_size
-            if optimized_size <= max_bytes:
+            ok = optimize_file(src, dst)
+            if not ok:
+                if dst.exists():
+                    dst.unlink(missing_ok=True)
+                count_failed += 1
                 mapping[rel] = OptimizeResult(
-                    status="kept",
-                    optimized_rel=rel,
-                    reason="reused_existing",
+                    status="failed",
+                    optimized_rel=None,
+                    reason="optimizer_failed",
                     original_size=original_size,
-                    optimized_size=optimized_size,
+                    optimized_size=None,
                 )
                 rows.append({
                     "relative_path": rel,
-                    "status": "kept",
-                    "reason": "reused_existing",
+                    "status": "failed",
+                    "reason": "optimizer_failed",
                     "original_size": original_size,
-                    "optimized_size": optimized_size,
+                    "optimized_size": "",
                 })
-                continue
-            dst.unlink(missing_ok=True)
+            else:
+                optimized_size = dst.stat().st_size
+                if optimized_size > max_bytes:
+                    dst.unlink(missing_ok=True)
+                    count_excluded += 1
+                    bytes_excluded += original_size
+                    mapping[rel] = OptimizeResult(
+                        status="excluded",
+                        optimized_rel=None,
+                        reason=f"optimized_above_limit_{max_bytes}",
+                        original_size=original_size,
+                        optimized_size=optimized_size,
+                    )
+                    rows.append({
+                        "relative_path": rel,
+                        "status": "excluded",
+                        "reason": f"optimized_above_limit_{max_bytes}",
+                        "original_size": original_size,
+                        "optimized_size": optimized_size,
+                    })
+                else:
+                    count_kept += 1
+                    bytes_after += optimized_size
+                    mapping[rel] = OptimizeResult(
+                        status="kept",
+                        optimized_rel=rel,
+                        reason="ok",
+                        original_size=original_size,
+                        optimized_size=optimized_size,
+                    )
+                    rows.append({
+                        "relative_path": rel,
+                        "status": "kept",
+                        "reason": "ok",
+                        "original_size": original_size,
+                        "optimized_size": optimized_size,
+                    })
 
-        ok = optimize_file(src, dst)
-        if not ok:
-            if dst.exists():
-                dst.unlink(missing_ok=True)
-            mapping[rel] = OptimizeResult(
-                status="failed",
-                optimized_rel=None,
-                reason="optimizer_failed",
-                original_size=original_size,
-                optimized_size=None,
-            )
-            rows.append({
-                "relative_path": rel,
-                "status": "failed",
-                "reason": "optimizer_failed",
-                "original_size": original_size,
-                "optimized_size": "",
-            })
-            continue
-
-        optimized_size = dst.stat().st_size
-        if optimized_size > max_bytes:
-            dst.unlink(missing_ok=True)
-            mapping[rel] = OptimizeResult(
-                status="excluded",
-                optimized_rel=None,
-                reason=f"optimized_above_limit_{max_bytes}",
-                original_size=original_size,
-                optimized_size=optimized_size,
-            )
-            rows.append({
-                "relative_path": rel,
-                "status": "excluded",
-                "reason": f"optimized_above_limit_{max_bytes}",
-                "original_size": original_size,
-                "optimized_size": optimized_size,
-            })
-            continue
-
-        mapping[rel] = OptimizeResult(
-            status="kept",
-            optimized_rel=rel,
-            reason="ok",
-            original_size=original_size,
-            optimized_size=optimized_size,
+        processed += 1
+        line = (
+            f"  {progress_bar(processed, total)} {processed:>4}/{total:<4} "
+            f"img:{count_images:<4} png:{count_png:<4} vid:{count_videos:<4} "
+            f"kept:{count_kept:<4} excl:{count_excluded:<4} fail:{count_failed:<4}"
         )
-        rows.append({
-            "relative_path": rel,
-            "status": "kept",
-            "reason": "ok",
-            "original_size": original_size,
-            "optimized_size": optimized_size,
-        })
+        if is_tty:
+            print(f"\r{line}", end="", flush=True)
+        elif processed == total or processed % non_tty_step == 0:
+            print(line)
+
+    if is_tty:
+        print()
+
+    size_saved = max(0, bytes_before - bytes_after)
+    saved_pct = (size_saved / bytes_before * 100.0) if bytes_before else 0.0
+    print("Media optimization summary")
+    print(
+        "  files: "
+        f"total={total}, kept={count_kept}, excluded={count_excluded}, failed={count_failed}, dry_run={count_dry_run}"
+    )
+    print(f"  types: images={count_images}, png={count_png}, videos={count_videos}")
+    print(f"  size_before: {human_size(bytes_before)}")
+    print(f"  size_after: {human_size(bytes_after)}")
+    print(f"  saved: {human_size(size_saved)} ({saved_pct:.1f}%)")
+    print(f"  excluded_input_size: {human_size(bytes_excluded)}")
 
     return mapping, rows
 
@@ -490,17 +636,7 @@ def build_catalog_manifests(
         mapped_media = []
         for c in e.get("media_candidates", []):
             local_path = c.get("local_path") or ""
-            # Source local_path looks like research/hyp_media/<rel>
-            rel_media = ""
-            marker = "research/hyp_media/"
-            if marker in local_path:
-                rel_media = local_path.split(marker, 1)[1]
-            elif "tmp/hyp_media_raw/" in local_path:
-                rel_media = local_path.split("tmp/hyp_media_raw/", 1)[1]
-            elif local_path.startswith("hyp_media/"):
-                rel_media = local_path.split("hyp_media/", 1)[1]
-            elif local_path.startswith("catalog/discord/hyp_media/"):
-                rel_media = local_path.split("catalog/discord/hyp_media/", 1)[1]
+            rel_media = extract_media_rel(local_path) or ""
             if not rel_media:
                 continue
 
@@ -756,6 +892,18 @@ def main():
         local_index_path=local_index,
     )
 
+    referenced_media_rels: set[str] | None = None
+    try:
+        referenced_media_rels, legacy_flat_refs = collect_referenced_media_rels(copied["index"])
+        if legacy_flat_refs:
+            copied["warnings"].append(
+                f"{legacy_flat_refs} media candidates still use legacy flat local_path entries; "
+                "rerun download_hyp_files.py --media --write-index to migrate to tmp/hyp_media_raw/<slug>/..."
+            )
+    except Exception as exc:
+        copied["warnings"].append(f"Could not collect referenced media rels from index: {exc}")
+        referenced_media_rels = None
+
     media_map: dict[str, OptimizeResult]
     optimize_rows: list[dict[str, Any]]
 
@@ -769,6 +917,7 @@ def main():
             max_bytes=args.max_bytes,
             dry_run=args.dry_run,
             resume=not args.no_resume_optimize,
+            referenced_rels=referenced_media_rels,
         )
 
     if not args.dry_run and not args.skip_optimize:
@@ -779,11 +928,15 @@ def main():
             optimize_rows,
             ["relative_path", "status", "reason", "original_size", "optimized_size"],
         )
-        write_csv(
-            exc_csv,
-            [r for r in optimize_rows if r.get("status") == "excluded"],
-            ["relative_path", "status", "reason", "original_size", "optimized_size"],
-        )
+        excluded_rows = [r for r in optimize_rows if r.get("status") == "excluded"]
+        if excluded_rows:
+            write_csv(
+                exc_csv,
+                excluded_rows,
+                ["relative_path", "status", "reason", "original_size", "optimized_size"],
+            )
+        else:
+            print("  Excluded media: 0 (no hyp_media_excluded.csv written)")
 
     result = build_catalog_manifests(
         repo_root=repo_root,

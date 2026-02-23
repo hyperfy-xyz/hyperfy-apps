@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-03-04T23:46:36.827Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1346629936999436369/Ricky-3-2-show_chart.hyp?ex=69794e5c&is=6977fcdc&hm=3a2725aa62bd6710851f04b44fbf080d52f0cf157166d1a9a31d23ff3fae6407&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1346629936999436369/Ricky-3-2-show_chart.hyp?ex=6998f25c&is=6997a0dc&hm=3bed0dce13f8a6647f3538ca69d8a24bce9dec83f114946e58c103d2f66b893e&"
   },
   "author": {
     "display_name": "0mka",
@@ -29,28 +29,29 @@
     "hyp_summary_path": "context/hyp_summaries/Ricky-3-2-show_chart.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/ricky-3-2-show-chart/preview.png",
+    "media_type": ".png",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "ricky-3-2-show-chart-1346629939817877556",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:26:55+00:00",
-    "description": "Renders a remote chart image on a billboard UI panel fetched from a configurable URL. Triggers a cache-busting refresh when the player presses the action button within a configurable radius, with a cooldown timer to prevent spam.",
+    "generated_at": "2026-02-21T23:48:09+00:00",
+    "description": "Renders a remote chart image on a billboard UI panel and triggers a cache-busting refresh when the player presses the action key within a configurable radius. Supports customizable width, height, position, and image fit via app.configure fields.",
     "feature_tags": [
       "ui",
       "interaction",

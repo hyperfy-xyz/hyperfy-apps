@@ -1,0 +1,79 @@
+{
+  "app_id": "hyperboardv1-1339891258528890961",
+  "app_slug": "hyperboardv1",
+  "app_name": "HyperBoardV1",
+  "source": {
+    "hyp_filename": "HyperBoardV1.hyp",
+    "discord_attachment_id": "1339891258340020264",
+    "discord_message_id": "1339891258528890961",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-14T09:29:30.009Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1339891258340020264/HyperBoardV1.hyp?ex=6998d239&is=699780b9&hm=2bc80b782bba036b9d6f4997fb08f748574baf51ed05ae85427ff47092d7eea9&"
+  },
+  "author": {
+    "display_name": "0mka",
+    "discord_user_id": "783416470205497394",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "If you throw out some loot or health, can ride the hyperboard.\n<@357905702926286858> ty",
+    "raw_message_content": "If you throw out some loot or health, can ride the hyperboard.\n<@357905702926286858> ty",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/hyperboardv1/1339893376467865611_anim.mp4",
+    "media_type": ".mp4",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/hyperboardv1/1339893376467865611_anim.mp4",
+      "original_filename": "anim.mp4",
+      "content_type": "video/mp4",
+      "relative_index": 5,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 987659,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1339893376467865611"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "hyperboardv1-1339891258528890961",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:45:53+00:00",
+    "description": "Spawns a rideable hyperboard vehicle that players can mount and ride. Dropping loot or health items triggers the ability to ride the board, combining interaction mechanics with vehicle movement across the world.",
+    "feature_tags": [
+      "vehicle",
+      "interaction",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

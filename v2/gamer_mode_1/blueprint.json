@@ -1,0 +1,15 @@
+{
+  "id": "IxqAkc2Ai1",
+  "version": 12,
+  "name": "gamer mode",
+  "image": null,
+  "author": "lol",
+  "url": null,
+  "desc": null,
+  "model": "asset://a624f445ae3354beb5b99a8ca139e2aaf201683aea3b0551a41df6872aec59f2.glb",
+  "script": "asset://943474fb85468f1f1982d6c57f8f9e47d8b000ec42b20cd60e818fb1805a1600.js",
+  "props": {},
+  "preload": false,
+  "public": false,
+  "locked": false
+}

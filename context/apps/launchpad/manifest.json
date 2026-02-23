@@ -9,7 +9,7 @@
     "discord_channel": "\ud83e\uddca\u25023d-design",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-10-14T15:54:19.238Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1031058655581323324/1427685964792205332/Launchpad.hyp?ex=68f1152b&is=68efc3ab&hm=42371d41b23033312f0cf5f0efe8c78a3eb8e58a5535a6576622f12515e7363a&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1031058655581323324/1427685964792205332/Launchpad.hyp?ex=69992c6b&is=6997daeb&hm=cfd9a4823ece7c5a0b1a8b63d290d68ef530518839d08654a8179ee01203e5ed&"
   },
   "author": {
     "display_name": "Dhin",
@@ -29,28 +29,29 @@
     "hyp_summary_path": "context/hyp_summaries/Launchpad.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/launchpad/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "launchpad-1427685965249515723",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:22:59+00:00",
-    "description": "Trampoline-style launchpad that detects player entry via a trigger zone on a 3D model and pushes the player upward with a vertical force vector, acting as a bouncy jump pad for traversal.",
+    "generated_at": "2026-02-21T23:46:23+00:00",
+    "description": "Trampoline-style launchpad that detects player entry via a trigger zone on a 3D model and pushes the player upward with a vertical force vector, creating a bouncy jump pad interaction.",
     "feature_tags": [
       "physics",
       "interaction",

@@ -1,0 +1,65 @@
+{
+  "app_id": "avatar_station_-_fixed-1347515824617029724",
+  "app_slug": "avatar_station_-_fixed",
+  "app_name": "Avatar_Station_-_fixed",
+  "source": {
+    "hyp_filename": "Avatar_Station_-_fixed.hyp",
+    "discord_attachment_id": "1347515824352657409",
+    "discord_message_id": "1347515824617029724",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-07T10:26:48.222Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1347515824352657409/Avatar_Station_-_fixed.hyp?ex=6998dfa8&is=69978e28&hm=f4521378155f9f9ac8c42db3824f61b21d590e75975b8ef0bc2b6fcb40bbbf18&"
+  },
+  "author": {
+    "display_name": "ash",
+    "discord_user_id": "179546010303856640",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "avatar_station_-_fixed-1347515824617029724",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:42:54+00:00",
+    "description": "Avatar station that allows players to interact with a kiosk to swap or customize their avatar model. Uses JSON-based synchronous storage to persist avatar selections across sessions.",
+    "feature_tags": [
+      "interaction",
+      "3d-model",
+      "ui"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "medium",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

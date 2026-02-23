@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udcbb\u2502developers",
     "discord_channel_category": "Creators",
     "discord_timestamp": "2025-04-16T03:23:09.271Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1361904722155409581/Smoke.hyp?ex=6979811c&is=69782f9c&hm=ae263e51c1584411bc3ecfd762c87afb947ffed079053359f88bb2e944195fb0&"
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1361904722155409581/Smoke.hyp?ex=69987c5c&is=69972adc&hm=340a19c77427ba494f9ee0dc471f94496d766b4134aba9f6597d964c60a011ba&"
   },
   "author": {
     "display_name": "ash",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Smoke.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/explosion-sprites/m1_xyz-particle-demos_2_-_edit.mp4",
+    "primary_media_path": "catalog/media/smoke/1361903616788664400_xyz-particle-demos_2_-_edit.mp4",
     "media_type": ".mp4",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/explosion-sprites/m1_xyz-particle-demos_2_-_edit.mp4",
+      "catalog_path": "catalog/media/smoke/1361903616788664400_xyz-particle-demos_2_-_edit.mp4",
       "original_filename": "xyz-particle-demos_2_-_edit.mp4",
       "content_type": "video/mp4",
       "relative_index": -1,
@@ -51,17 +51,18 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "smoke-1361904724433174649",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:28:22+00:00",
+    "generated_at": "2026-02-21T23:48:51+00:00",
     "description": "Spawns a cone-shaped smoke particle emitter that renders semi-transparent particles drifting upward with orbital velocity and rotation over lifetime. Supports a configurable texture image prop for the particle sprite. Serves as a reference demo for the Hyperfy particles API.",
     "feature_tags": [
       "particles",

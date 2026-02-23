@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-03-13T01:25:29.955Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1349553928139968597/ArrayVectorProps.hyp?ex=69796589&is=69781409&hm=828b639c220a091e8b9babd734c88fcf83ba42697cb64cdaae5c7fda88f42309&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1349553928139968597/ArrayVectorProps.hyp?ex=69990989&is=6997b809&hm=18795a31d34c674b1381a74d080d508a4f8eb8e0cab426ed773dbc484a0a1ea3&"
   },
   "author": {
     "display_name": "~/MayD524/Hyperfy",
@@ -29,36 +29,37 @@
     "hyp_summary_path": "context/hyp_summaries/ArrayVectorProps.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/arrayvectorprops/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "arrayvectorprops-1349553928085180437",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:16:29+00:00",
-    "description": "Demonstrates custom array and vector3 prop types by configuring arrayFile, arrayNumber, arrayRange, and vector3 props via app.configure(), then logs each prop value on the client. Requires the Bitmato ArrayProps mod to render extended property editors for emote files and numeric ranges.",
+    "generated_at": "2026-02-21T23:42:46+00:00",
+    "description": "Demonstrates custom array and vector3 prop types by configuring arrayFile, arrayNumber, arrayRange, and vector3 properties via app.configure(), then logs each prop value on the client. Requires the Bitmato ArrayProps mod to render extended prop UI controls on a 3D model.",
     "feature_tags": [
       "3d-model",
-      "animation"
+      "ui"
     ],
     "interaction_modes": [
       "passive"
     ],
-    "asset_profile": "medium",
+    "asset_profile": "light",
     "script_complexity": "low",
     "networking_profile": "none"
   }

@@ -1,0 +1,80 @@
+{
+  "app_id": "player_projectiles-1343454985886896180",
+  "app_slug": "player_projectiles",
+  "app_name": "Player_Projectiles",
+  "source": {
+    "hyp_filename": "Player_Projectiles.hyp",
+    "discord_attachment_id": "1343454985572319313",
+    "discord_message_id": "1343454985886896180",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-02-24T05:30:28.822Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1343454985572319313/Player_Projectiles.hyp?ex=69989a34&is=699748b4&hm=0517a59b4a242948223718e8f63ade141c1b275ac15c2ff5909d1464ace71c66&"
+  },
+  "author": {
+    "display_name": "ash",
+    "discord_user_id": "179546010303856640",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "",
+    "raw_message_content": "",
+    "summary_excerpt": "",
+    "source_priority_used": "empty"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/player_projectiles/1343474468110073946_docs2.mp4",
+    "media_type": ".mp4",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/player_projectiles/1343474468110073946_docs2.mp4",
+      "original_filename": "docs2.mp4",
+      "content_type": "video/mp4",
+      "relative_index": 4,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 476869,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1343474468110073946"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "player_projectiles-1343454985886896180",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:47:28+00:00",
+    "description": "Fires player-controlled projectiles using pointer lock input, spawning networked projectile entities on click. Includes a fix for accidental first-shoot by checking control.pointer.locked before triggering shots.",
+    "feature_tags": [
+      "combat",
+      "physics",
+      "interaction",
+      "multiplayer"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "TaHwTjHS2z",
+  "version": 1,
+  "name": "Aloe vera",
+  "image": null,
+  "author": "Gert-Jan Akerboom",
+  "url": null,
+  "desc": "Drag and Drop Aloe Vera plants into your world.",
+  "model": "asset://a3be9d4ee7178264bf0ef77d80328bef7788adb61e242e47fffc1e432c23e363.glb",
+  "script": "asset://543f6ad037939fb32a3056acd251591b8d9cc72567daf91553e2c325b0b0d1f0.js",
+  "props": {
+    "clone_count": 100,
+    "area_size": 10,
+    "min_size": 0.2,
+    "max_size": 1.5,
+    "area_size_x": 40,
+    "area_size_z": 40
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": true
+}

@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-04-21T12:49:23.660Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1363859162341179482/Video_Channel_Changer.hyp?ex=69795d13&is=69780b93&hm=c3ba64ccce34d9a0f50fea16511e95b2170022dca37fb7a69e21bd6204648775&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1363859162341179482/Video_Channel_Changer.hyp?ex=69990113&is=6997af93&hm=a81459dbe4f8a85a22730b94efcfa9f5a074fb4e99cb9052cc89ab1289795cdf&"
   },
   "author": {
     "display_name": "ash",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Video_Channel_Changer.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/video-channel-changer/m3_IMG_1182.png",
+    "primary_media_path": "catalog/media/video_channel_changer/1363856635457441912_IMG_1182.png",
     "media_type": ".png",
     "selection_reason": "any_author_fallback",
     "is_fallback_any_author": true
   },
   "media": [
     {
-      "catalog_path": "catalog/media/video-channel-changer/m5_xyz-screen-remote-many.mp4",
+      "catalog_path": "catalog/media/video_channel_changer/1363854172591624222_xyz-screen-remote-many.mp4",
       "original_filename": "xyz-screen-remote-many.mp4",
       "content_type": "video/mp4",
       "relative_index": -5,
@@ -49,7 +49,7 @@
       "attachment_id": "1363854172591624222"
     },
     {
-      "catalog_path": "catalog/media/video-channel-changer/m3_IMG_1182.png",
+      "catalog_path": "catalog/media/video_channel_changer/1363856635457441912_IMG_1182.png",
       "original_filename": "IMG_1182.png",
       "content_type": "image/jpeg",
       "relative_index": -3,
@@ -64,6 +64,7 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
@@ -71,13 +72,13 @@
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "video-channel-changer-1363859162676596797",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:30:25+00:00",
-    "description": "Plays a video atlas on a target mesh and cycles through 16 UV-based channels on pointer click. Supports mp4 files or HLS streams with configurable aspect ratio, fit mode, and looping. Replaces the original mesh geometry with a video node at the same transform.",
+    "generated_at": "2026-02-21T23:49:57+00:00",
+    "description": "Plays a video atlas on a target mesh and cycles through 16 UV-based channels on pointer click. Supports mp4 files or HLS streams with configurable aspect ratio, fit mode, and looping. Shifts texture UV offsets to switch the visible channel region.",
     "feature_tags": [
       "media-player",
       "interaction",

@@ -1,0 +1,16 @@
+[
+  {
+    "type": "model",
+    "url": "asset://b007bb60b53aa31e4f494e3c58e691f55a49f7571a9cfbc03c141256b5eeb737.glb",
+    "filename": "b007bb60b53aa31e4f494e3c58e691f55a49f7571a9cfbc03c141256b5eeb737.glb",
+    "size": 350912,
+    "mime": "model/gltf-binary"
+  },
+  {
+    "type": "script",
+    "url": "asset://de98328c9e3639a08e7d07f77008c4ba57e1fcd7093ee3c09b52920bcff711dc.js",
+    "filename": "de98328c9e3639a08e7d07f77008c4ba57e1fcd7093ee3c09b52920bcff711dc.js",
+    "size": 2462,
+    "mime": "application/javascript"
+  }
+]

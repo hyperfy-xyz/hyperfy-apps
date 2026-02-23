@@ -1,0 +1,65 @@
+{
+  "app_id": "hyperportal_-_fixed-1378052837799493764",
+  "app_slug": "hyperportal_-_fixed",
+  "app_name": "HyperPortal_-_fixed",
+  "source": {
+    "hyp_filename": "HyperPortal_-_fixed.hyp",
+    "discord_attachment_id": "1378052837560291328",
+    "discord_message_id": "1378052837799493764",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-05-30T16:49:59.515Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1378052837560291328/HyperPortal_-_fixed.hyp?ex=699890b7&is=69973f37&hm=b6670cb7f8d4651b4384b2b2f81180937f9a575882d3b9706cf3dec73451f06e&"
+  },
+  "author": {
+    "display_name": "Agent12",
+    "discord_user_id": "309735511461724171",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "Not sure if this is Super New but it works!!!",
+    "raw_message_content": "Not sure if this is Super New but it works!!!",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": null,
+    "v2_json_path": null,
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "hyperportal_-_fixed-1378052837799493764",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:46:01+00:00",
+    "description": "HyperPortal app that teleports players to another world or location when they interact with a portal object. Based on community discussion around portal tinkering, this fixed version renders a portal trigger zone and transports avatars on contact.",
+    "feature_tags": [
+      "teleport",
+      "interaction",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "type": "model",
+    "url": "asset://d91f5a14dce54f679b6a2c982da3a9cfefcddc0e0a48e55357519c18a8f993a6.glb",
+    "filename": "d91f5a14dce54f679b6a2c982da3a9cfefcddc0e0a48e55357519c18a8f993a6.glb",
+    "size": 84144,
+    "mime": "model/gltf-binary"
+  },
+  {
+    "type": "script",
+    "url": "asset://a9c82fe1f0ba5b20381e71b228473f69373c8cb207ee7ab2646a36e8b29708d9.js",
+    "filename": "a9c82fe1f0ba5b20381e71b228473f69373c8cb207ee7ab2646a36e8b29708d9.js",
+    "size": 37712,
+    "mime": "application/javascript"
+  },
+  {
+    "type": "texture",
+    "url": "asset://c68d78ac09493fb61732fbde6cf6bcf2083ebb302404273d5dba06df43b002ed.png",
+    "filename": "c68d78ac09493fb61732fbde6cf6bcf2083ebb302404273d5dba06df43b002ed.png",
+    "size": 358,
+    "mime": "image/png"
+  },
+  {
+    "type": "texture",
+    "url": "asset://09c8bc8c7a5316301fdec7523ff751efb67458eaaeea7eeeee2495021ec9bdc7.png",
+    "filename": "09c8bc8c7a5316301fdec7523ff751efb67458eaaeea7eeeee2495021ec9bdc7.png",
+    "size": 3410,
+    "mime": "image/png"
+  },
+  {
+    "type": "texture",
+    "url": "asset://19ffdd3a8a7591313f1fd259f75c74b08a3e2cb26154db5ad9847587c74ebccc.png",
+    "filename": "19ffdd3a8a7591313f1fd259f75c74b08a3e2cb26154db5ad9847587c74ebccc.png",
+    "size": 3930,
+    "mime": "image/png"
+  },
+  {
+    "type": "texture",
+    "url": "asset://7c6a060a9a38aa57601b6f467e7d61c7493462431b570fa3276a066327aabf46.png",
+    "filename": "7c6a060a9a38aa57601b6f467e7d61c7493462431b570fa3276a066327aabf46.png",
+    "size": 4583,
+    "mime": "image/png"
+  },
+  {
+    "type": "texture",
+    "url": "asset://4078a72786c33dced79346816eaeac29d223d0c9c9667624c521aa55274f8891.png",
+    "filename": "4078a72786c33dced79346816eaeac29d223d0c9c9667624c521aa55274f8891.png",
+    "size": 5446,
+    "mime": "image/png"
+  },
+  {
+    "type": "texture",
+    "url": "asset://8fbf6b897cda628db151ab177d3497f1a9b84d5800aaa47d4e0843f0db7f0bfc.png",
+    "filename": "8fbf6b897cda628db151ab177d3497f1a9b84d5800aaa47d4e0843f0db7f0bfc.png",
+    "size": 5007,
+    "mime": "image/png"
+  },
+  {
+    "type": "texture",
+    "url": "asset://418abad39699f7a83bf12e96449ee8065d34c179fb4830f90c35eaa1c233d7f8.png",
+    "filename": "418abad39699f7a83bf12e96449ee8065d34c179fb4830f90c35eaa1c233d7f8.png",
+    "size": 2212,
+    "mime": "image/png"
+  },
+  {
+    "type": "texture",
+    "url": "asset://ad882122cbb24872df3c558e4d73a56c9007bcaabe7a2a158a7d0983c08996cf.png",
+    "filename": "ad882122cbb24872df3c558e4d73a56c9007bcaabe7a2a158a7d0983c08996cf.png",
+    "size": 5762,
+    "mime": "image/png"
+  },
+  {
+    "type": "audio",
+    "url": "asset://303addb43bf5fa7bcc6828163caca12890e4c8c852b9b97afe6a4ea9a8c04e27.mp3",
+    "filename": "303addb43bf5fa7bcc6828163caca12890e4c8c852b9b97afe6a4ea9a8c04e27.mp3",
+    "size": 49581,
+    "mime": "audio/mpeg"
+  },
+  {
+    "type": "audio",
+    "url": "asset://e340725a9d803c8a2739a8e77afcca452fe3cec7ce8036e9d8369d4088f06dc2.mp3",
+    "filename": "e340725a9d803c8a2739a8e77afcca452fe3cec7ce8036e9d8369d4088f06dc2.mp3",
+    "size": 22509,
+    "mime": "audio/mpeg"
+  }
+]

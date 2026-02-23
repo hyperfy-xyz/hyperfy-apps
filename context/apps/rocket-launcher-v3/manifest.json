@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-04-24T14:32:26.925Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1364972260754198588/Rocket_Launcher_V3.hyp?ex=6979753a&is=697823ba&hm=4482676cdcce8a5ba21136cc04a24388ed187023c0da5541f0a9e20061336148&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1364972260754198588/Rocket_Launcher_V3.hyp?ex=6999193a&is=6997c7ba&hm=fa2e77b71cc5709ac4e303e07961224960535103daf0989aeb401af986faee0e&"
   },
   "author": {
     "display_name": "Gert-Jan Akerboom",
@@ -29,14 +29,14 @@
     "hyp_summary_path": "context/hyp_summaries/Rocket_Launcher_V3.md"
   },
   "preview": {
-    "primary_media_path": "catalog/media/rocket-launcher-v3/m1_World_-_Google_Chrome_24.04.2025_14_53_08.png",
+    "primary_media_path": "catalog/media/rocket_launcher_v3/1364947396399861770_World_-_Google_Chrome_24.04.2025_14_53_08.png",
     "media_type": ".png",
     "selection_reason": "same_author_nearby",
     "is_fallback_any_author": false
   },
   "media": [
     {
-      "catalog_path": "catalog/media/rocket-launcher-v3/m1_World_-_Google_Chrome_24.04.2025_14_53_08.png",
+      "catalog_path": "catalog/media/rocket_launcher_v3/1364947396399861770_World_-_Google_Chrome_24.04.2025_14_53_08.png",
       "original_filename": "World_-_Google_Chrome_24.04.2025_14_53_08.png",
       "content_type": "image/png",
       "relative_index": -1,
@@ -51,18 +51,19 @@
   ],
   "status": {
     "has_preview": true,
+    "has_hyp_file": true,
     "needs_media_review": false,
     "needs_author_review": false,
     "flags": [],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "rocket-launcher-v3-1364972260766646293",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:27:00+00:00",
-    "description": "Interactive rocket launcher that triggers a launch sequence when the player holds an action button. Spawns additive exhaust particles on the rocket mesh, animates it skyward with quadratic easing to 500 units, then respawns it by rising smoothly from underground.",
+    "generated_at": "2026-02-21T23:48:14+00:00",
+    "description": "Interactive rocket launcher that triggers additive particle exhaust and animates a rocket mesh skyward with quadratic easing acceleration. Players hold an action button to launch; the rocket rises to 500 units, then respawns by smoothly rising from underground back to its resting position.",
     "feature_tags": [
       "particles",
       "animation",

@@ -1,0 +1,32 @@
+{
+  "id": "fW4i3OnELt",
+  "version": 150,
+  "name": "Clock",
+  "image": {
+    "type": "texture",
+    "name": "LucideClock.webp",
+    "url": "asset://dcc62d3eb9e94d0b0bba717dc1b68843de0801b225dd2af3844634e3577cd055.webp"
+  },
+  "author": "0mka",
+  "url": null,
+  "desc": "your time, move screen space with switch",
+  "model": "asset://97fc7289a38b5b49357e6fbd74e7e77fc78493dbb1c0dbc850cb8e9db9fd2530.glb",
+  "script": "asset://4dc08fe5a36f34bcdce1ea038e42eb58e3e131cad3615986459cc60c38c7dc5d.js",
+  "props": {
+    "collision": true,
+    "uiPosition": "top-right",
+    "uiImage": {
+      "type": "texture",
+      "name": "LucideClock.webp",
+      "url": "asset://dcc62d3eb9e94d0b0bba717dc1b68843de0801b225dd2af3844634e3577cd055.webp"
+    },
+    "borderColor": "rgba(255, 50, 50, 0.5)",
+    "borderWidth": 3,
+    "visibility": true
+  },
+  "preload": false,
+  "public": false,
+  "locked": false,
+  "unique": false,
+  "disabled": false
+}

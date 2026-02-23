@@ -9,7 +9,7 @@
     "discord_channel": "\ud83d\udc1e\u2502issues",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-11-11T13:31:20.181Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1022421054582423562/1437796842350968912/RocketGlobalColl.hyp?ex=697966e8&is=69781568&hm=e3e9a5d137d6f48e2059bedb0aa14952b08c7322d7d23e2a34100b187fdf67aa&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1022421054582423562/1437796842350968912/RocketGlobalColl.hyp?ex=69990ae8&is=6997b968&hm=e4f12d960d962dc9eb0010558d4081e6c44c403859cd45087f522a72b39fc3c7&"
   },
   "author": {
     "display_name": "Gert-Jan Akerboom",
@@ -29,28 +29,29 @@
     "hyp_summary_path": "context/hyp_summaries/RocketGlobalColl.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/rocket-global-coll/preview.png",
+    "media_type": ".png",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "rocket-global-coll-1437796842313355295",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:27:09+00:00",
-    "description": "Interactive rocket launcher that triggers a globally synced launch sequence with additive exhaust particles. Players activate an action node to launch the rocket mesh skyward with quadratic easing, then it respawns by rising smoothly from underground after a timed delay.",
+    "generated_at": "2026-02-21T23:48:14+00:00",
+    "description": "Interactive rocket launcher that syncs launch state globally via client-server networking. Players trigger a launch action that animates the rocket mesh skyward with quadratic easing, spawns additive exhaust particles, then respawns the rocket by rising it smoothly from underground after an 8-second",
     "feature_tags": [
       "particles",
       "animation",

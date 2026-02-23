@@ -5,7 +5,9 @@ Outputs:
   catalog/catalog.json    - single file for web explorer (version 3)
 
 Inputs:
-  context/apps/*/manifest.json  (manifest["ai"] or tmp/ai-summaries/<slug>.json)
+  tmp/manifests/apps-manifest.json  (canonical manifest list)
+  context/apps/*/manifest.json      (optional fallback with --allow-context-fallback)
+  (manifest["ai"] or tmp/ai-summaries/<slug>.json)
   v2/*/  (blueprint JSON, index.js, asset files)
 """
 
@@ -27,6 +29,7 @@ MEDIA_DIR = CATALOG_ROOT / "media"
 V2_APPS_DIR = REPO_ROOT / "v2"
 HYP_FILES_DIR = REPO_ROOT / "hyp-files"
 TMP_MANIFESTS_DIR = REPO_ROOT / "tmp" / "manifests"
+APPS_MANIFEST_PATH = TMP_MANIFESTS_DIR / "apps-manifest.json"
 
 def detect_github_raw_base() -> str:
     """Detect GitHub raw URL base from git remote, with fallback."""
@@ -66,11 +69,86 @@ def now_iso() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
 
-def read_json(path: Path) -> dict[str, Any] | None:
+def read_json_any(path: Path) -> Any | None:
     try:
         return json.loads(path.read_text(encoding="utf-8"))
     except Exception:
         return None
+
+
+def read_json(path: Path) -> dict[str, Any] | None:
+    data = read_json_any(path)
+    if isinstance(data, dict):
+        return data
+    return None
+
+
+def resolve_repo_path(path_str: str) -> Path:
+    path = (REPO_ROOT / path_str).resolve()
+    try:
+        path.relative_to(REPO_ROOT)
+    except ValueError:
+        raise ValueError(f"path escapes repo root: {path_str}")
+    return path
+
+
+def collect_manifest_paths(*, allow_context_fallback: bool) -> tuple[list[Path], str, list[str]]:
+    warnings: list[str] = []
+
+    apps_manifest = read_json(APPS_MANIFEST_PATH)
+    if apps_manifest and isinstance(apps_manifest.get("apps"), list):
+        paths: list[Path] = []
+        missing_paths: list[str] = []
+
+        for row in apps_manifest["apps"]:
+            if not isinstance(row, dict):
+                continue
+
+            manifest_rel = (row.get("manifest_path") or "").strip()
+            if not manifest_rel:
+                slug = (row.get("app_slug") or "").strip()
+                if slug:
+                    manifest_rel = f"context/apps/{slug}/manifest.json"
+            if not manifest_rel:
+                continue
+
+            try:
+                manifest_path = resolve_repo_path(manifest_rel)
+            except ValueError:
+                missing_paths.append(f"{manifest_rel} (invalid path)")
+                continue
+
+            if manifest_path.exists():
+                paths.append(manifest_path)
+            else:
+                missing_paths.append(manifest_rel)
+
+        # preserve order while deduplicating
+        deduped_paths = list(dict.fromkeys(paths))
+        if deduped_paths:
+            if missing_paths:
+                warnings.append(
+                    f"apps-manifest references {len(missing_paths)} missing manifests; "
+                    "those rows will be skipped"
+                )
+            return deduped_paths, "apps-manifest", warnings
+
+        warnings.append("apps-manifest had no usable manifest paths")
+    elif not APPS_MANIFEST_PATH.exists():
+        warnings.append("apps-manifest file not found")
+    else:
+        warnings.append("apps-manifest could not be read")
+
+    if not allow_context_fallback:
+        warnings.append("context/apps fallback disabled")
+        return [], "apps-manifest", warnings
+
+    fallback_paths = sorted(CONTEXT_APPS_DIR.glob("*/manifest.json"))
+    if fallback_paths:
+        warnings.append("using context/apps fallback manifests")
+    else:
+        warnings.append("context/apps fallback produced no manifests")
+    return fallback_paths, "context-apps-glob", warnings
 
 
 def media_type_from_path(path: str | None) -> str:
@@ -101,15 +179,54 @@ def extract_props(blueprint: dict[str, Any]) -> dict[str, Any]:
     return clean
 
 
-def find_v2_app_dir(v2_app_dir_rel: str | None) -> Path | None:
-    """Resolve v2 app directory from manifest path like 'v2/<slug>'."""
-    if not v2_app_dir_rel:
+def find_v2_app_dir(v2_app_dir_rel: str | None, slug: str) -> Path | None:
+    """Resolve v2 app directory from explicit link, then fallback to v2/<slug>."""
+    candidates: list[Path] = []
+
+    if v2_app_dir_rel:
+        candidates.append(REPO_ROOT / v2_app_dir_rel)
+
+    # Fallback for manifests that don't have links.v2_app_dir yet.
+    candidates.append(V2_APPS_DIR / slug)
+
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate
+
+    return None
+
+
+def load_primary_blueprint(v2_dir: Path) -> tuple[dict[str, Any] | None, str | None]:
+    """Prefer blueprint.json, otherwise first object-shaped JSON that looks like blueprint data."""
+    if not v2_dir.exists():
+        return None, None
+
+    candidates: list[Path] = []
+    preferred = v2_dir / "blueprint.json"
+    if preferred.exists():
+        candidates.append(preferred)
+
+    for p in sorted(v2_dir.glob("*.json")):
+        if p not in candidates:
+            candidates.append(p)
+
+    for p in candidates:
+        payload = read_json_any(p)
+        if not isinstance(payload, dict):
+            continue
+        if p.name == "blueprint.json" or any(k in payload for k in ("props", "model", "script", "id", "version", "name")):
+            return payload, p.relative_to(v2_dir).as_posix()
+
+    return None, None
+
+
+def normalize_asset_ref(ref: Any) -> str | None:
+    if not isinstance(ref, str) or not ref:
         return None
-
-    direct = REPO_ROOT / v2_app_dir_rel
-    if direct.exists():
-        return direct
-
+    if ref.startswith("asset://"):
+        return ref.replace("asset://", "", 1)
+    if ref.startswith("assets/"):
+        return ref.replace("assets/", "", 1)
     return None
 
 
@@ -118,29 +235,127 @@ def get_asset_files(blueprint: dict[str, Any]) -> list[str]:
     assets: set[str] = set()
 
     # Model reference
-    model = blueprint.get("model", "")
-    if model and isinstance(model, str) and model.startswith("assets/"):
-        assets.add(model.replace("assets/", "", 1))
+    model_ref = normalize_asset_ref(blueprint.get("model"))
+    if model_ref:
+        assets.add(model_ref)
 
     # Image reference
     image = blueprint.get("image")
     if isinstance(image, dict):
-        url = image.get("url", "")
-        if url and isinstance(url, str) and url.startswith("assets/"):
-            assets.add(url.replace("assets/", "", 1))
-    elif isinstance(image, str) and image.startswith("assets/"):
-        assets.add(image.replace("assets/", "", 1))
+        image_ref = normalize_asset_ref(image.get("url"))
+        if image_ref:
+            assets.add(image_ref)
+    else:
+        image_ref = normalize_asset_ref(image)
+        if image_ref:
+            assets.add(image_ref)
+
+    # Script reference
+    script_ref = normalize_asset_ref(blueprint.get("script"))
+    if script_ref:
+        assets.add(script_ref)
 
     # Props with asset references
     props = blueprint.get("props", {})
     if isinstance(props, dict):
         for val in props.values():
             if isinstance(val, dict):
-                url = val.get("url", "")
-                if url and isinstance(url, str) and url.startswith("assets/"):
-                    assets.add(url.replace("assets/", "", 1))
+                prop_ref = normalize_asset_ref(val.get("url"))
+                if prop_ref:
+                    assets.add(prop_ref)
 
     return sorted(assets)
+
+
+def resolve_blueprint_script_path(v2_dir: Path, blueprint: dict[str, Any] | None) -> Path | None:
+    if not blueprint:
+        return None
+
+    script_ref = blueprint.get("script")
+    if not isinstance(script_ref, str) or not script_ref:
+        return None
+
+    if script_ref.startswith("asset://"):
+        candidate = v2_dir / "assets" / script_ref.replace("asset://", "", 1)
+    elif script_ref.startswith("assets/"):
+        candidate = v2_dir / script_ref
+    else:
+        candidate = v2_dir / script_ref
+
+    if candidate.exists() and candidate.is_file():
+        return candidate
+    return None
+
+
+def extract_script_excerpt(v2_dir: Path, blueprint: dict[str, Any] | None, max_chars: int = 2000) -> tuple[str, str | None]:
+    candidates: list[Path] = []
+    candidates.append(v2_dir / "index.js")
+
+    blueprint_script = resolve_blueprint_script_path(v2_dir, blueprint)
+    if blueprint_script:
+        candidates.append(blueprint_script)
+
+    # Fallbacks for non-standard layouts.
+    candidates.extend(sorted(v2_dir.glob("*.js")))
+    assets_dir = v2_dir / "assets"
+    if assets_dir.exists():
+        candidates.extend(sorted(assets_dir.glob("*.js")))
+
+    seen: set[str] = set()
+    for candidate in candidates:
+        key = str(candidate.resolve())
+        if key in seen:
+            continue
+        seen.add(key)
+        if not candidate.exists() or not candidate.is_file():
+            continue
+        try:
+            excerpt = candidate.read_text(encoding="utf-8", errors="ignore")[:max_chars]
+        except Exception:
+            continue
+        if excerpt:
+            return excerpt, candidate.relative_to(v2_dir).as_posix()
+
+    return "", None
+
+
+def collect_source_inventory(v2_dir: Path, max_files: int = 250) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    files: list[dict[str, Any]] = []
+    total_size_bytes = 0
+    total_files = 0
+    js_files = 0
+    json_files = 0
+    asset_files = 0
+
+    for p in sorted(x for x in v2_dir.rglob("*") if x.is_file()):
+        rel_path = p.relative_to(v2_dir).as_posix()
+        try:
+            size = int(p.stat().st_size)
+        except OSError:
+            size = 0
+
+        total_files += 1
+        total_size_bytes += size
+        if rel_path.endswith(".js"):
+            js_files += 1
+        if rel_path.endswith(".json"):
+            json_files += 1
+        if rel_path.startswith("assets/"):
+            asset_files += 1
+
+        if len(files) < max_files:
+            files.append({"path": rel_path, "size_bytes": size})
+
+    summary = {
+        "file_count": total_files,
+        "listed_file_count": len(files),
+        "listed_truncated": total_files > len(files),
+        "total_size_bytes": total_size_bytes,
+        "js_files": js_files,
+        "json_files": json_files,
+        "asset_files": asset_files,
+    }
+    return files, summary
 
 
 def build_app_entry(
@@ -149,16 +364,16 @@ def build_app_entry(
     ai_summary: dict[str, Any] | None,
     v2_dir: Path | None,
     blueprint: dict[str, Any] | None,
+    blueprint_path: str | None,
 ) -> dict[str, Any]:
     """Build a single app entry for catalog.json."""
     source = manifest.get("source", {})
-    preview_path = manifest.get("preview", {}).get("primary_media_path") or app_row.get("primary_preview")
-
-    # Fallback: check for generated preview image in media/<slug>/preview.*
-    if not preview_path:
-        matches = list((MEDIA_DIR / app_row['app_slug']).glob("preview.*"))
-        if matches:
-            preview_path = str(matches[0].relative_to(REPO_ROOT))
+    # Prefer generated preview (preview.*), fall back to manifest/Discord preview
+    gen_matches = list((MEDIA_DIR / app_row['app_slug']).glob("preview.*"))
+    if gen_matches:
+        preview_path = str(gen_matches[0].relative_to(REPO_ROOT))
+    else:
+        preview_path = manifest.get("preview", {}).get("primary_media_path") or app_row.get("primary_preview")
 
     # Prefer AI description, fall back to one_liner+primary_use_case (old schema), then manifest
     description = ""
@@ -197,19 +412,29 @@ def build_app_entry(
     # Extract source excerpts from v2
     props: dict[str, Any] = {}
     script_excerpt = ""
+    script_path = None
     asset_files: list[str] = []
+    source_files: list[dict[str, Any]] = []
+    source_inventory: dict[str, Any] | None = None
 
     if blueprint:
         props = extract_props(blueprint)
         asset_files = get_asset_files(blueprint)
 
     if v2_dir and v2_dir.exists():
-        index_js = v2_dir / "index.js"
-        if index_js.exists():
-            try:
-                script_excerpt = index_js.read_text(encoding="utf-8", errors="ignore")[:2000]
-            except Exception:
-                pass
+        script_excerpt, script_path = extract_script_excerpt(v2_dir, blueprint)
+        source_files, source_inventory = collect_source_inventory(v2_dir)
+
+    has_source = v2_dir is not None and v2_dir.exists()
+    has_details = bool(
+        has_source
+        or (description or "").strip()
+        or tags
+        or source.get("discord_message_id")
+        or source.get("discord_attachment_id")
+        or source.get("discord_timestamp")
+        or hyp_filename
+    )
 
     entry: dict[str, Any] = {
         "slug": app_row.get("app_slug", ""),
@@ -228,15 +453,25 @@ def build_app_entry(
         "script_complexity": script_complexity,
         "networking": networking,
         "has_preview": bool(preview_path),
-        "has_source": v2_dir is not None and v2_dir.exists(),
+        "has_source": has_source,
+        "has_details": has_details,
+        "source_status": "v2" if has_source else "metadata_only",
     }
 
     if props:
         entry["props"] = props
     if script_excerpt:
         entry["script_excerpt"] = script_excerpt
+    if script_path:
+        entry["script_path"] = script_path
     if asset_files:
         entry["asset_files"] = asset_files
+    if source_files:
+        entry["source_files"] = source_files
+    if source_inventory:
+        entry["source_inventory"] = source_inventory
+    if blueprint_path:
+        entry["blueprint_path"] = blueprint_path
 
     return entry
 
@@ -244,18 +479,35 @@ def build_app_entry(
 def main() -> int:
     parser = argparse.ArgumentParser(description="Build merged catalog JSON for explorer")
     parser.add_argument(
+        "--allow-context-fallback",
+        action="store_true",
+        help="Allow fallback to context/apps/*/manifest.json when apps-manifest is missing/unusable",
+    )
+    parser.add_argument(
         "--allow-missing-hyp",
         action="store_true",
         help="Allow apps that reference missing hyp-files/*.hyp entries (default: fail with error)",
     )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Alias for --allow-missing-hyp; continue building even when hyp files are missing",
+    )
     args = parser.parse_args()
 
-    manifest_paths = sorted(CONTEXT_APPS_DIR.glob("*/manifest.json"))
+    manifest_paths, manifest_source, manifest_warnings = collect_manifest_paths(
+        allow_context_fallback=args.allow_context_fallback
+    )
+    for warning in manifest_warnings:
+        print(f"Warning: {warning}")
+
     if not manifest_paths:
-        print(f"Error: no manifests found in {CONTEXT_APPS_DIR}")
-        print("Run build_catalog.py first to generate them (requires source-research dir)")
+        print(f"Error: no usable manifests found from {APPS_MANIFEST_PATH}")
+        print("Run build_catalog.py first to generate apps-manifest.")
+        print("If needed, rerun with --allow-context-fallback to use context/apps scan.")
         return 1
 
+    print(f"Manifest source: {manifest_source}")
     print(f"Processing {len(manifest_paths)} apps...")
 
     apps: list[dict[str, Any]] = []
@@ -263,6 +515,8 @@ def main() -> int:
     with_preview = 0
     ai_merged = 0
     missing_hyp: list[tuple[str, str]] = []
+    with_source = 0
+    missing_v2_sources: list[dict[str, Any]] = []
 
     for manifest_path in manifest_paths:
         manifest = read_json(manifest_path)
@@ -295,17 +549,17 @@ def main() -> int:
 
         # Find v2 app directory
         v2_dir_rel = manifest.get("links", {}).get("v2_app_dir")
-        v2_dir = find_v2_app_dir(v2_dir_rel)
+        v2_dir = find_v2_app_dir(v2_dir_rel, slug)
+        expected_v2 = v2_dir_rel or f"v2/{slug}"
 
         # Read blueprint JSON
         blueprint = None
+        blueprint_path = None
         if v2_dir and v2_dir.exists():
-            json_files = sorted(v2_dir.glob("*.json"))
-            if json_files:
-                blueprint = read_json(json_files[0])
+            blueprint, blueprint_path = load_primary_blueprint(v2_dir)
 
         # Build app entry
-        entry = build_app_entry(app_row, manifest, ai_summary, v2_dir, blueprint)
+        entry = build_app_entry(app_row, manifest, ai_summary, v2_dir, blueprint, blueprint_path)
         apps.append(entry)
 
         if entry.get("hyp_filename") and not entry.get("has_download"):
@@ -313,6 +567,21 @@ def main() -> int:
 
         if entry["has_preview"]:
             with_preview += 1
+        if entry["has_source"]:
+            with_source += 1
+        else:
+            reason = "v2_link_missing" if not v2_dir_rel else "v2_dir_missing"
+            missing_v2_sources.append(
+                {
+                    "slug": slug,
+                    "app_name": app_row.get("app_name"),
+                    "hyp_filename": entry.get("hyp_filename"),
+                    "discord_timestamp": entry.get("created_at"),
+                    "v2_app_dir": v2_dir_rel,
+                    "expected_v2_path": expected_v2,
+                    "reason": reason,
+                }
+            )
 
         # Accumulate tag counts
         for tag in entry["tags"]:
@@ -333,10 +602,27 @@ def main() -> int:
         "counts": {
             "total": len(apps),
             "with_preview": with_preview,
+            "with_source": with_source,
+            "metadata_only": len(apps) - with_source,
         },
         "tag_index": sorted_tag_index,
         "apps": apps,
     }
+
+    missing_v2_report_path = TMP_MANIFESTS_DIR / "missing-v2-source.json"
+    missing_v2_report = {
+        "generated_at": now_iso(),
+        "manifest_source": manifest_source,
+        "total_apps": len(apps),
+        "with_source": with_source,
+        "missing_v2_source_count": len(missing_v2_sources),
+        "missing_v2_sources": missing_v2_sources,
+    }
+    TMP_MANIFESTS_DIR.mkdir(parents=True, exist_ok=True)
+    missing_v2_report_path.write_text(
+        json.dumps(missing_v2_report, indent=2),
+        encoding="utf-8",
+    )
 
     if missing_hyp:
         missing_hyp_report_path = TMP_MANIFESTS_DIR / "missing-hyp-files.json"
@@ -362,9 +648,10 @@ def main() -> int:
         print(f"  Missing .hyp report: {missing_hyp_report_path.relative_to(REPO_ROOT)}")
         for slug, hyp_filename in missing_hyp:
             print(f"    - {slug}: hyp-files/{hyp_filename} (missing)")
-        if not args.allow_missing_hyp:
+        if not (args.allow_missing_hyp or args.force):
             print("Error: missing .hyp files detected. catalog/catalog.json was not updated.")
             return 2
+        print("Error: missing .hyp files detected, but continuing build due to --force/--allow-missing-hyp.")
 
     CATALOG_ROOT.mkdir(parents=True, exist_ok=True)
     catalog_path = CATALOG_ROOT / "catalog.json"
@@ -376,6 +663,9 @@ def main() -> int:
     print(f"Done!")
     print(f"  catalog.json: {catalog_size / 1024:.1f} KB ({len(apps)} apps, {tag_count} tags)")
     print(f"  Apps with preview: {with_preview}")
+    print(f"  Apps with source (v2): {with_source}")
+    print(f"  Apps metadata-only: {len(apps) - with_source}")
+    print(f"  Missing v2 source report: {missing_v2_report_path.relative_to(REPO_ROOT)}")
     if ai_merged:
         print(f"  AI summaries merged into manifests: {ai_merged}")
 

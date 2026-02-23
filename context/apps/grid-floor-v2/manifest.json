@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-06-06T13:06:46.986Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1380533380067889284/Grid_Floor_v2.hyp?ex=69796126&is=69780fa6&hm=1004de06154a21b1477dec3ee6e46063ba3e1fb7a271a167dc56105425f4bf0c&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1380533380067889284/Grid_Floor_v2.hyp?ex=69990526&is=6997b3a6&hm=852c187e6dc365e84cad5ac59981ef510b36e3d723d0d35bb056c1fd6bf42323&"
   },
   "author": {
     "display_name": "ash",
@@ -29,28 +29,29 @@
     "hyp_summary_path": "context/hyp_summaries/Grid_Floor_v2.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/grid-floor-v2/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "grid-floor-v2-1380533380520738816",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:21:52+00:00",
-    "description": "Renders a world-scale grid floor using a Kenney prototype texture on a GLB model and positions it slightly above the origin at y=0.03. Serves as a simple environment base tile for scene building.",
+    "generated_at": "2026-02-21T23:45:27+00:00",
+    "description": "Renders a world-scale grid floor using a Kenney prototype texture GLB model and positions it slightly above the origin at y=0.03. Serves as a simple ground plane for building or prototyping environments.",
     "feature_tags": [
       "3d-model",
       "environment"

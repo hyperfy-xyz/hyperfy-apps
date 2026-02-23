@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-03-10T20:03:26.308Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1348748102810603610/Raycaster.hyp?ex=69791a0e&is=6977c88e&hm=0c6be9bddb91de18f8181f89e72a569e94a0b96f9750512240150ea515c500b4&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1348748102810603610/Raycaster.hyp?ex=6998be0e&is=69976c8e&hm=dc3df9682e1bbb5eaad0b52dad514828431636c93f19283143073d52ec132020&"
   },
   "author": {
     "display_name": "Saori",
@@ -29,28 +29,29 @@
     "hyp_summary_path": "context/hyp_summaries/Raycaster.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/raycaster/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "raycaster-1348748103104331778",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:26:51+00:00",
-    "description": "Performs a server-side raycast from a beam origin and direction, then spawns a scaled clone of a 3D model at the hit point. Uses networked events to relay hit data from server to client and removes the previous clone before placing a new one.",
+    "generated_at": "2026-02-21T23:48:05+00:00",
+    "description": "Performs a server-side raycast from a ray origin and direction, then spawns a scaled clone of a Beam 3D model at the hit point on the client. Uses app.send networking to relay hit coordinates between server and client environments.",
     "feature_tags": [
       "physics",
       "interaction",

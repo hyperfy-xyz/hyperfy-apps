@@ -9,7 +9,7 @@
     "discord_channel": "\ud83c\udfa8\u2502showcase",
     "discord_channel_category": "Platform",
     "discord_timestamp": "2025-06-08T04:28:19.667Z",
-    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1381127682380791808/Teleport_Command_v2.hyp?ex=69799063&is=69783ee3&hm=bb87fe0a4ae59c5f3d05ca7577426e7e142c07ca7f027cc2b40afc2132b2e7e7&"
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1381127682380791808/Teleport_Command_v2.hyp?ex=69988ba3&is=69973a23&hm=9f67304c6eb331dbeb77083043f7f2ab381224f5b140a83579507c39c6d6bb23&"
   },
   "author": {
     "display_name": "ash",
@@ -29,33 +29,33 @@
     "hyp_summary_path": "context/hyp_summaries/Teleport_Command_v2.md"
   },
   "preview": {
-    "primary_media_path": null,
-    "media_type": null,
-    "selection_reason": null,
+    "primary_media_path": "catalog/media/teleport-command-v2/preview.png",
+    "media_type": ".png",
+    "selection_reason": "existing_catalog_preview",
     "is_fallback_any_author": false
   },
   "media": [],
   "status": {
-    "has_preview": false,
-    "needs_media_review": true,
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
     "needs_author_review": false,
     "flags": [
       "no_media_found"
     ],
     "notes": ""
   },
-  "generated_at": "2026-02-15T07:17:42+00:00",
-  "max_commit_size_bytes": 50000000,
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
   "ai": {
     "app_id": "teleport-command-v2-1381127682699427880",
     "model": "anthropic/claude-opus-4.6",
-    "generated_at": "2026-02-15T19:29:22+00:00",
-    "description": "Teleports a player to a stored destination when they type a configurable slash command (e.g. /home). An admin clicks a button to set the destination position and rotation, which persists via world storage. The server syncs destination state to all clients via networked events.",
+    "generated_at": "2026-02-21T23:49:23+00:00",
+    "description": "Teleport command app that lets admins set a destination point and teleports players to stored coordinates when they type a configurable slash command. Persists destination position and rotation via world storage, syncs state between server and clients using networked events.",
     "feature_tags": [
       "teleport",
       "interaction",
-      "ui",
-      "multiplayer"
+      "ui"
     ],
     "interaction_modes": [
       "passive",
