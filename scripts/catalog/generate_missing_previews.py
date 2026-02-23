@@ -9,8 +9,8 @@ Outputs:
 
 Inputs:
   catalog/catalog.json                      (app list, filter has_preview=false)
-  context/apps/*/manifest.json             (optional richer AI description + tags)
-  v2/{slug}/*.json                          (blueprint — GLB model path)
+  scripts/context/apps/*/manifest.json      (optional richer AI description + tags)
+  v2/apps/{slug}/*.json                     (blueprint — GLB model path)
   scripts/catalog/preview_prompt.txt        (prompt template, overridable via --prompt-file)
 """
 
@@ -88,14 +88,14 @@ def find_app_glbs(slug: str) -> tuple[Path | None, list[Path]]:
     Returns (main_glb, extra_glbs) where extra_glbs are models/emotes from props.
 
     Supports two naming conventions:
-      - v2/<slug>/blueprint.json  (newer)
-      - v2/<slug>/<Name>.json     (older, any .json that isn't package.json)
+      - v2/apps/<slug>/blueprint.json  (newer)
+      - v2/apps/<slug>/<Name>.json     (older, any .json that isn't package.json)
 
     And two asset reference formats:
       - "assets/foo.glb"          (direct path)
       - "asset://hash.glb"        (content-addressed)
     """
-    app_dir = REPO_ROOT / "v2" / slug
+    app_dir = REPO_ROOT / "v2" / "apps" / slug
     if not app_dir.is_dir():
         return None, []
 
@@ -414,7 +414,7 @@ def process_one(
         return {"app_id": app_id, "status": "skipped_existing"}
 
     # Load manifest for richer context if available
-    manifest_path = REPO_ROOT / "context" / "apps" / slug / "manifest.json"
+    manifest_path = REPO_ROOT / "scripts" / "context" / "apps" / slug / "manifest.json"
     manifest = read_json(manifest_path)
     ai = (manifest or {}).get("ai", {})
 

@@ -1,0 +1,78 @@
+{
+  "app_id": "curvedvid-with-link-input-1363573773185450045",
+  "app_slug": "curvedvid-with-link-input",
+  "app_name": "CurvedVid_with_link_input",
+  "source": {
+    "hyp_filename": "CurvedVid_with_link_input.hyp",
+    "discord_attachment_id": "1363573772858429580",
+    "discord_message_id": "1363573773185450045",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-04-20T17:55:21.503Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1363573772858429580/CurvedVid_with_link_input.hyp?ex=6998a009&is=69974e89&hm=2065663285e2052deb4999142c54bc077572204ea8d10907bd3c1bfc91f17e84&"
+  },
+  "author": {
+    "display_name": "MetaRick",
+    "discord_user_id": "612945510810255390",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "Here you go <@742409123311779860>",
+    "raw_message_content": "Here you go <@742409123311779860>",
+    "summary_excerpt": "CurvedVid with link input.hyp",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/curvedvid-with-link-input",
+    "v2_json_path": "v2/apps/curvedvid-with-link-input/blueprint.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/CurvedVid_with_link_input.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/curvedvid_with_link_input/1363580345357963264_Desktop_2025.04.20_-_20.18.43.04.mp4",
+    "media_type": ".mp4",
+    "selection_reason": "same_author_nearby",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/curvedvid_with_link_input/1363580345357963264_Desktop_2025.04.20_-_20.18.43.04.mp4",
+      "original_filename": "Desktop_2025.04.20_-_20.18.43.04.mp4",
+      "content_type": "video/mp4",
+      "relative_index": 1,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 6303056,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1363580345357963264"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "curvedvid-with-link-input-1363573773185450045",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:44:15+00:00",
+    "description": "Renders a video onto a curved 3D screen mesh, supporting both uploaded video files and pasted URL links. Creates a video node that copies the mesh position and quaternion, then plays the stream in a looping 16:9 aspect ratio with cover mode enabled.",
+    "feature_tags": [
+      "media-player",
+      "3d-model"
+    ],
+    "interaction_modes": [
+      "passive"
+    ],
+    "asset_profile": "heavy",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

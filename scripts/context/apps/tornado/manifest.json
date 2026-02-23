@@ -1,0 +1,78 @@
+{
+  "app_id": "tornado-1361904724433174649",
+  "app_slug": "tornado",
+  "app_name": "Tornado",
+  "source": {
+    "hyp_filename": "Tornado.hyp",
+    "discord_attachment_id": "1361904722575098179",
+    "discord_message_id": "1361904724433174649",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-04-16T03:23:09.271Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1361904722575098179/Tornado.hyp?ex=69987c5c&is=69972adc&hm=2e9b294556fdf688e6780c634b8a954bfc6ff5b6998123ef75eec32b1ff9d682&"
+  },
+  "author": {
+    "display_name": "ash",
+    "discord_user_id": "179546010303856640",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "Tornado.hyp",
+    "raw_message_content": "",
+    "summary_excerpt": "Tornado.hyp",
+    "source_priority_used": "summary_excerpt"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/tornado",
+    "v2_json_path": "v2/apps/tornado/Tornado.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/Tornado.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/tornado/1361903616788664400_xyz-particle-demos_2_-_edit.mp4",
+    "media_type": ".mp4",
+    "selection_reason": "same_author_nearby",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/tornado/1361903616788664400_xyz-particle-demos_2_-_edit.mp4",
+      "original_filename": "xyz-particle-demos_2_-_edit.mp4",
+      "content_type": "video/mp4",
+      "relative_index": -1,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 22376201,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1361903616788664400"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "tornado-1361904724433174649",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:49:36+00:00",
+    "description": "Spawns a tornado-style particle system using a circular emitter with orbital and linear velocity to create a swirling upward vortex. Supports a configurable texture image prop and renders up to 10,000 particles with alpha-over-life fade curves in world space.",
+    "feature_tags": [
+      "particles",
+      "3d-model"
+    ],
+    "interaction_modes": [
+      "passive"
+    ],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

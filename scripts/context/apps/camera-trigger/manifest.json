@@ -1,0 +1,95 @@
+{
+  "app_id": "camera-trigger-1428031026826842285",
+  "app_slug": "camera-trigger",
+  "app_name": "Camera_Trigger",
+  "source": {
+    "hyp_filename": "Camera_Trigger.hyp",
+    "discord_attachment_id": "1428031026504142888",
+    "discord_message_id": "1428031026826842285",
+    "discord_channel": "\ud83e\uddca\u25023d-design",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-10-15T14:45:28.329Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1031058655581323324/1428031026504142888/Camera_Trigger.hyp?ex=69991c48&is=6997cac8&hm=59ce37baee8ea022b3357024fa0625d3a80cbab7b547d8ae343e0f2955df603c&"
+  },
+  "author": {
+    "display_name": "Dhin",
+    "discord_user_id": "235754161377902593",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "<@849162940699115530> \nThis could potentially be pretty cool for a museum type environment.\nIt's a trigger that while standing on it changes the camera view. Would require setup but may give more control than the jumper.",
+    "raw_message_content": "<@849162940699115530> \nThis could potentially be pretty cool for a museum type environment.\nIt's a trigger that while standing on it changes the camera view. Would require setup but may give more control than the jumper.",
+    "summary_excerpt": "Camera Trigger.hyp",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/camera-trigger",
+    "v2_json_path": "v2/apps/camera-trigger/Camera Trigger.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/Camera_Trigger.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/camera_trigger/1428010788530032795_IMG_0630.png",
+    "media_type": ".png",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/camera_trigger/1428010788530032795_IMG_0630.png",
+      "original_filename": "IMG_0630.png",
+      "content_type": "image/jpeg",
+      "relative_index": -1,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 611448,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1428010788530032795"
+    },
+    {
+      "catalog_path": "catalog/media/camera_trigger/1428010788869898392_IMG_0623.png",
+      "original_filename": "IMG_0623.png",
+      "content_type": "image/jpeg",
+      "relative_index": -1,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 524920,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1428010788869898392"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "camera-trigger-1428031026826842285",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:43:38+00:00",
+    "description": "Creates a semi-transparent trigger zone that detects when the local player enters and smoothly lerps the camera to a fixed overlook position using quaternion slerp. On exit, the camera transitions back to player eye level and releases control. Ideal for museum-style cinematic viewpoints.",
+    "feature_tags": [
+      "camera",
+      "physics",
+      "interaction",
+      "animation"
+    ],
+    "interaction_modes": [
+      "passive"
+    ],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "app_id": "cube-1-1355371621468209172",
+  "app_slug": "cube-1",
+  "app_name": "Cube_1",
+  "source": {
+    "hyp_filename": "Cube_1.hyp",
+    "discord_attachment_id": "1355371621136990400",
+    "discord_message_id": "1355371621468209172",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-29T02:42:56.145Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1355371621136990400/Cube_1.hyp?ex=69991bb0&is=6997ca30&hm=87ee941ca3ba7135e82051f82fdf40b0f098ea8933d2cf7f5256f3469e8f8a3e&"
+  },
+  "author": {
+    "display_name": "ash",
+    "discord_user_id": "179546010303856640",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "Cube 1.hyp",
+    "raw_message_content": "",
+    "summary_excerpt": "Cube 1.hyp",
+    "source_priority_used": "summary_excerpt"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/cube-1",
+    "v2_json_path": "v2/apps/cube-1/Cube 1.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/Cube_1.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/cube_1/1355371490803187732_xyz-unlinked-uvscroll.mp4",
+    "media_type": ".mp4",
+    "selection_reason": "same_author_nearby",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/cube_1/1355371490803187732_xyz-unlinked-uvscroll.mp4",
+      "original_filename": "xyz-unlinked-uvscroll.mp4",
+      "content_type": "video/mp4",
+      "relative_index": -2,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 533301,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1355371490803187732"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "cube-1-1355371621468209172",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:44:11+00:00",
+    "description": "Scrolls a cube mesh's texture along the X axis each frame using a configurable speed prop. Sets the mesh to unlinked mode so each unique app instance animates its textureX offset independently, demonstrating per-instance material control on a GLB model.",
+    "feature_tags": [
+      "animation",
+      "3d-model"
+    ],
+    "interaction_modes": [
+      "passive"
+    ],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

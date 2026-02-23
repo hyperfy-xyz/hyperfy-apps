@@ -1,0 +1,77 @@
+{
+  "app_id": "monkey-head-1360004867166437467",
+  "app_slug": "monkey-head",
+  "app_name": "monkey_head",
+  "source": {
+    "hyp_filename": "monkey_head.hyp",
+    "discord_attachment_id": "1360004866717515958",
+    "discord_message_id": "1360004867166437467",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-04-10T21:33:48.001Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1360004866717515958/monkey_head.hyp?ex=6998d33b&is=699781bb&hm=1d3b87d2a2fc86135dc6e4f7797208bedb25c71e430d02887ad5e5d158024eb7&"
+  },
+  "author": {
+    "display_name": "hypShaman",
+    "discord_user_id": "297290503181959169",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "here",
+    "raw_message_content": "here",
+    "summary_excerpt": "monkey head.hyp",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/monkey-head",
+    "v2_json_path": "v2/apps/monkey-head/monkey_head.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/monkey_head.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/monkey_head/1360004590300434452_image.png",
+    "media_type": ".png",
+    "selection_reason": "same_author_nearby",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/monkey_head/1360004590300434452_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": -2,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 11568,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1360004590300434452"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "monkey-head-1360004867166437467",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:46:53+00:00",
+    "description": "Renders a monkey head 3D model with a jump button texture and configurable jumpHeight prop. The script is empty, serving as a minimal scaffold for rigidbody and physics experimentation discussed in developer context.",
+    "feature_tags": [
+      "3d-model"
+    ],
+    "interaction_modes": [
+      "passive"
+    ],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

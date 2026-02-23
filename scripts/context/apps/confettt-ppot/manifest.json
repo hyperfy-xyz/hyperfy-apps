@@ -1,0 +1,70 @@
+{
+  "app_id": "confettt-ppot-1402249836455264277",
+  "app_slug": "confettt-ppot",
+  "app_name": "CONFETTT_PPOT",
+  "source": {
+    "hyp_filename": "CONFETTT_PPOT.hyp",
+    "discord_attachment_id": "1402249836136501398",
+    "discord_message_id": "1402249836455264277",
+    "discord_channel": "\ud83c\udfa8\u2502showcase",
+    "discord_channel_category": "Platform",
+    "discord_timestamp": "2025-08-05T11:20:13.553Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1402249836136501398/CONFETTT_PPOT.hyp?ex=6998ec2d&is=69979aad&hm=457caeddcfcd83c01e1d55e7021086cab7adb3f44cc15ee4df511d9689b2845d&"
+  },
+  "author": {
+    "display_name": "Gert-Jan Akerboom",
+    "discord_user_id": "601886221072990251",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "Confetti Popper",
+    "raw_message_content": "Confetti Popper",
+    "summary_excerpt": "CONFETTT PPOT.hyp",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/confettt-ppot",
+    "v2_json_path": "v2/apps/confettt-ppot/CONFETTT PPOT.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/CONFETTT_PPOT.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/confettt-ppot/preview.png",
+    "media_type": ".png",
+    "selection_reason": "existing_catalog_preview",
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "confettt-ppot-1402249836455264277",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:44:07+00:00",
+    "description": "Networked confetti popper that spawns randomized particle bursts from up to 8 customizable confetti textures when clicked. Plays spatial click and explosion audio, syncs cooldown state across clients, and animates emissive glow on the popper mesh during hover.",
+    "feature_tags": [
+      "particles",
+      "audio",
+      "interaction",
+      "multiplayer",
+      "3d-model"
+    ],
+    "interaction_modes": [
+      "passive",
+      "networked"
+    ],
+    "asset_profile": "medium",
+    "script_complexity": "high",
+    "networking_profile": "events"
+  }
+}

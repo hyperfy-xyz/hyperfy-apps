@@ -1,0 +1,66 @@
+{
+  "app_id": "generate-monstera-v1-1357367597435191527",
+  "app_slug": "generate-monstera-v1",
+  "app_name": "generate_monstera_V1",
+  "source": {
+    "hyp_filename": "generate_monstera_V1.hyp",
+    "discord_attachment_id": "1357367596844056757",
+    "discord_message_id": "1357367597435191527",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-04-03T14:54:13.899Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1357367596844056757/generate_monstera_V1.hyp?ex=69991e55&is=6997ccd5&hm=2d1a1e4aefa6613c6c02fdc56ee3ab436080d19df803a6ddac57e0af454d32df&"
+  },
+  "author": {
+    "display_name": "Agent12",
+    "discord_user_id": "309735511461724171",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "<@601886221072990251> Have you seen this .hyp? \n\ni'm mostly an AI dev as well (and a poor one at that xD) \n\nBut maybe this working App that does something similar could help you come up with a different path to the same end-goal? \n\nI'm sure some other dev will also pop in at some point and guide you as well!",
+    "raw_message_content": "<@601886221072990251> Have you seen this .hyp? \n\ni'm mostly an AI dev as well (and a poor one at that xD) \n\nBut maybe this working App that does something similar could help you come up with a different path to the same end-goal? \n\nI'm sure some other dev will also pop in at some point and guide you as well!",
+    "summary_excerpt": "generate monstera V1.hyp",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/generate-monstera-v1",
+    "v2_json_path": "v2/apps/generate-monstera-v1/generate monstera V1.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/generate_monstera_V1.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/generate-monstera-v1/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "generate-monstera-v1-1357367597435191527",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:45:16+00:00",
+    "description": "Procedural plant generator that clones a monstera leaf GLB model 3\u201330 times, stacking clones vertically with randomized spacing, rotation, and linearly interpolated scale so each instance spawns a unique monstera plant in the scene.",
+    "feature_tags": [
+      "3d-model",
+      "environment"
+    ],
+    "interaction_modes": [
+      "passive"
+    ],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "app_id": "day-night-weather-current-1364018271719919686",
+  "app_slug": "day-night-weather-current",
+  "app_name": "DAY_NIGHT_WEATHER_CURRENT",
+  "source": {
+    "hyp_filename": "DAY_NIGHT_WEATHER_CURRENT.hyp",
+    "discord_attachment_id": "1364018271384244294",
+    "discord_message_id": "1364018271719919686",
+    "discord_channel": "\ud83c\udfa8\u2502showcase",
+    "discord_channel_category": "Platform",
+    "discord_timestamp": "2025-04-21T23:21:38.212Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1364018271384244294/DAY_NIGHT_WEATHER_CURRENT.hyp?ex=6998ec82&is=69979b02&hm=1c6985c85dad596b9596b91af70832b040559358a3f03430df6404aada5bdb38&"
+  },
+  "author": {
+    "display_name": "~/drdoge.eth",
+    "discord_user_id": "357905702926286858",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "DAY NIGHT WEATHER CURRENT.hyp",
+    "raw_message_content": "",
+    "summary_excerpt": "DAY NIGHT WEATHER CURRENT.hyp",
+    "source_priority_used": "summary_excerpt"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/day-night-weather-current",
+    "v2_json_path": "v2/apps/day-night-weather-current/blueprint.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/DAY_NIGHT_WEATHER_CURRENT.md"
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author",
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "day-night-weather-current-1364018271719919686",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:44:23+00:00",
+    "description": "Solar panel controller that rotates the sun and sky through a real-time day/night cycle, spawns weather particle effects (rain, dust storms, lightning, fog, ash), and plays thunder and rain audio. Renders a Pip-Boy-style UI displaying current time and days passed.",
+    "feature_tags": [
+      "particles",
+      "audio",
+      "ui",
+      "environment",
+      "3d-model"
+    ],
+    "interaction_modes": [
+      "ui"
+    ],
+    "asset_profile": "heavy",
+    "script_complexity": "high",
+    "networking_profile": "none"
+  }
+}

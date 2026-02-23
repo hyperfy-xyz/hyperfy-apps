@@ -1,0 +1,67 @@
+{
+  "app_id": "teleport-trigger-box-1431333007888748678",
+  "app_slug": "teleport-trigger-box",
+  "app_name": "TeleportTriggerBox",
+  "source": {
+    "hyp_filename": "TeleportTriggerBox.hyp",
+    "discord_attachment_id": "1431333007783886849",
+    "discord_message_id": "1431333007888748678",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-10-24T17:26:21.962Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1431333007783886849/TeleportTriggerBox.hyp?ex=6998993d&is=699747bd&hm=5ca98fa6007ec084778bd2e5cf1e70b946b740dc403fed300c1490b98be7644e&"
+  },
+  "author": {
+    "display_name": "\ud835\udd7d\ud835\udd94\ud835\udd9a\ud835\udd98\ud835\udd99\ud835\udd86\ud835\udd93",
+    "discord_user_id": "722481129449586739",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "I made a simple customizable teleport trigger box. my first .hyp file \ud83d\ude0e",
+    "raw_message_content": "I made a simple customizable teleport trigger box. my first .hyp file \ud83d\ude0e",
+    "summary_excerpt": "TeleportTriggerBox.hyp",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/teleport-trigger-box",
+    "v2_json_path": "v2/apps/teleport-trigger-box/Teleport Trigger Box.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/TeleportTriggerBox.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/teleport-trigger-box/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "teleport-trigger-box-1431333007888748678",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:49:27+00:00",
+    "description": "Customizable trigger box that teleports players to a configurable X,Y,Z destination when they walk into it. Creates a rigidbody with a trigger collider on a scalable green cube mesh that can be toggled invisible to hide the zone.",
+    "feature_tags": [
+      "teleport",
+      "physics",
+      "interaction"
+    ],
+    "interaction_modes": [
+      "trigger"
+    ],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

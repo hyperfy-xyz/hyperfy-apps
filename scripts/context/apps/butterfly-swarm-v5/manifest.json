@@ -1,0 +1,68 @@
+{
+  "app_id": "butterfly-swarm-v5-1354102502055743531",
+  "app_slug": "butterfly-swarm-v5",
+  "app_name": "Butterfly_Swarm_V5",
+  "source": {
+    "hyp_filename": "Butterfly_Swarm_V5.hyp",
+    "discord_attachment_id": "1354102502181703750",
+    "discord_message_id": "1354102502055743531",
+    "discord_channel": "\ud83c\udfa8\u2502showcase",
+    "discord_channel_category": "Platform",
+    "discord_timestamp": "2025-03-25T14:39:54.498Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1350129252976168992/1354102502181703750/Butterfly_Swarm_V5.hyp?ex=69991afa&is=6997c97a&hm=38f1fa3daee163e85f27bb8de5f02bf8493124c73a808edad6e91ef9e23de7d9&"
+  },
+  "author": {
+    "display_name": "Gert-Jan Akerboom",
+    "discord_user_id": "601886221072990251",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "Butterfly Swarm V5.hyp",
+    "raw_message_content": "",
+    "summary_excerpt": "Butterfly Swarm V5.hyp",
+    "source_priority_used": "summary_excerpt"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/butterfly-swarm-v5",
+    "v2_json_path": "v2/apps/butterfly-swarm-v5/Butterfly Swarm V5.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/Butterfly_Swarm_V5.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/butterfly-swarm-v5/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "butterfly-swarm-v5-1354102502055743531",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:43:26+00:00",
+    "description": "Spawns up to 5000 butterfly clones from a GLB wing model and animates their wing flapping, sinusoidal flight paths, and drift movement each frame. Configurable scale, flap speed, fly speed, and swarm count via UI panel. Butterflies are clamped above ground level.",
+    "feature_tags": [
+      "animation",
+      "3d-model",
+      "environment",
+      "ui"
+    ],
+    "interaction_modes": [
+      "passive"
+    ],
+    "asset_profile": "medium",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "app_id": "hyperportal-with-set-manual-1352439458317865070",
+  "app_slug": "hyperportal-with-set-manual",
+  "app_name": "HyperPortal_with_Set_Manual",
+  "source": {
+    "hyp_filename": "HyperPortal_with_Set_Manual.hyp",
+    "discord_attachment_id": "1352439457847967874",
+    "discord_message_id": "1352439458317865070",
+    "discord_channel": "\ud83c\udfa8\u2502showcase",
+    "discord_channel_category": "Platform",
+    "discord_timestamp": "2025-03-21T00:31:33.973Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1352439457847967874/HyperPortal_with_Set_Manual.hyp?ex=6998fce5&is=6997ab65&hm=636f68798117f4b1ca82cfd60070edb5ca3026a9b7c4b81dedb748059043e984&"
+  },
+  "author": {
+    "display_name": "0mka",
+    "discord_user_id": "783416470205497394",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "Added a switch to enter manual or set",
+    "raw_message_content": "Added a switch to enter manual or set",
+    "summary_excerpt": "HyperPortal with Set Manual.hyp",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/hyperportal-with-set-manual",
+    "v2_json_path": "v2/apps/hyperportal-with-set-manual/HyperPortal with Set-Manual.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/HyperPortal_with_Set_Manual.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/hyperportal_with_set_manual/1352508973491818577_image.png",
+    "media_type": ".png",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/hyperportal_with_set_manual/1352508973491818577_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": 1,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 673447,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1352508973491818577"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "hyperportal-with-set-manual-1352439458317865070",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:46:06+00:00",
+    "description": "Portal trigger zone that teleports players to a configurable destination. Admins switch between 'Set' mode (captures current player position) or 'Manual' mode (enters X/Y/Z coordinates). Syncs the target position from server to all clients via networked events.",
+    "feature_tags": [
+      "teleport",
+      "interaction",
+      "ui",
+      "3d-model"
+    ],
+    "interaction_modes": [
+      "passive",
+      "networked"
+    ],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "events"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "app_id": "raycaster-1348748103104331778",
+  "app_slug": "raycaster",
+  "app_name": "Raycaster",
+  "source": {
+    "hyp_filename": "Raycaster.hyp",
+    "discord_attachment_id": "1348748102810603610",
+    "discord_message_id": "1348748103104331778",
+    "discord_channel": "\ud83c\udfa8\u2502showcase",
+    "discord_channel_category": "Platform",
+    "discord_timestamp": "2025-03-10T20:03:26.308Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1348748102810603610/Raycaster.hyp?ex=6998be0e&is=69976c8e&hm=dc3df9682e1bbb5eaad0b52dad514828431636c93f19283143073d52ec132020&"
+  },
+  "author": {
+    "display_name": "Saori",
+    "discord_user_id": "1099579050378399806",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "just boilerplate server raycast stuff and places an object where it hit",
+    "raw_message_content": "just boilerplate server raycast stuff and places an object where it hit",
+    "summary_excerpt": "Raycaster.hyp",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/raycaster",
+    "v2_json_path": "v2/apps/raycaster/Raycaster.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/Raycaster.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/raycaster/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "raycaster-1348748103104331778",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:48:05+00:00",
+    "description": "Performs a server-side raycast from a ray origin and direction, then spawns a scaled clone of a Beam 3D model at the hit point on the client. Uses app.send networking to relay hit coordinates between server and client environments.",
+    "feature_tags": [
+      "physics",
+      "interaction",
+      "3d-model"
+    ],
+    "interaction_modes": [
+      "passive",
+      "networked"
+    ],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "events"
+  }
+}

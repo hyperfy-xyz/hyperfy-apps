@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Download missing .hyp files and optional media candidates from context/hyp_index.raw.json.
+Download missing .hyp files and optional media candidates from scripts/context/hyp_index.raw.json.
 
 Usage:
   DISCORD_TOKEN=... uv run python scripts/research/download_hyp_files.py
@@ -28,8 +28,8 @@ from typing import Any
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
-DEFAULT_INDEX = PROJECT_ROOT / "context" / "hyp_index.raw.json"
-DEFAULT_HYP_DIR = PROJECT_ROOT / "hyp-files"
+DEFAULT_INDEX = PROJECT_ROOT / "scripts" / "context" / "hyp_index.raw.json"
+DEFAULT_HYP_DIR = PROJECT_ROOT / "v2" / "hyp-files"
 DEFAULT_MEDIA_DIR = PROJECT_ROOT / "tmp" / "hyp_media_raw"
 
 

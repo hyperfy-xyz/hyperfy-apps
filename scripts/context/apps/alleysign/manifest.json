@@ -1,0 +1,66 @@
+{
+  "app_id": "alleysign-1341753324801626154",
+  "app_slug": "alleysign",
+  "app_name": "AlleySign",
+  "source": {
+    "hyp_filename": "AlleySign.hyp",
+    "discord_attachment_id": "1341753324394774609",
+    "discord_message_id": "1341753324801626154",
+    "discord_channel": "\ud83d\udc1e\u2502issues",
+    "discord_channel_category": "Platform",
+    "discord_timestamp": "2025-02-19T12:48:41.204Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1022421054582423562/1341753324394774609/AlleySign.hyp?ex=699900e9&is=6997af69&hm=693abcb5473d2a3fe14c6fcc5507e73334495d1cc81595f5f7c9700168c04ae6&"
+  },
+  "author": {
+    "display_name": "MetaRick",
+    "discord_user_id": "612945510810255390",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "<@601886221072990251>  This will rotate it on y axis not triggering a glb animation but just rotate if it helps",
+    "raw_message_content": "<@601886221072990251>  This will rotate it on y axis not triggering a glb animation but just rotate if it helps",
+    "summary_excerpt": "AlleySign.hyp",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/alleysign",
+    "v2_json_path": "v2/apps/alleysign/AlleySign.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/AlleySign.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/alleysign/preview.png",
+    "media_type": ".png",
+    "selection_reason": "existing_catalog_preview",
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "alleysign-1341753324801626154",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:42:33+00:00",
+    "description": "Loads an alley sign GLB model and rotates it continuously around its Y-axis at a configurable speed using the per-frame update loop, creating a slow spinning sign effect without triggering any embedded GLB animations.",
+    "feature_tags": [
+      "3d-model",
+      "animation"
+    ],
+    "interaction_modes": [
+      "passive"
+    ],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

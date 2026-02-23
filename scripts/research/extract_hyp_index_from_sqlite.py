@@ -11,7 +11,7 @@ Usage:
     uv run python scripts/research/extract_hyp_index_from_sqlite.py --channel-id 994775534733115412
 
 Output:
-    context/hyp_index.raw.json
+    scripts/context/hyp_index.raw.json
 """
 
 from __future__ import annotations
@@ -26,7 +26,7 @@ from urllib.parse import unquote, urlparse
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
-OUTPUT_PATH = PROJECT_ROOT / "context" / "hyp_index.raw.json"
+OUTPUT_PATH = PROJECT_ROOT / "scripts" / "context" / "hyp_index.raw.json"
 
 MEDIA_EXTENSIONS = {
     ".png", ".jpg", ".jpeg", ".gif", ".webp", ".bmp", ".svg",
@@ -368,7 +368,7 @@ def extract_hyp_attachments(
                     primary_preview = media_candidates[0].get("attachment_id") or media_candidates[0].get("filename")
 
                 app_name = app_name_from_filename(filename)
-                summary_path = PROJECT_ROOT / "context" / "hyp_summaries" / f"{app_name}.md"
+                summary_path = PROJECT_ROOT / "scripts" / "context" / "hyp_summaries" / f"{app_name}.md"
 
                 flags = []
                 if not media_candidates:
@@ -485,7 +485,7 @@ def build_external_entries(hyp_urls: list[str], matched_urls: set[str], matched_
 
         app_name = normalize_url_to_app_name(url)
         filename = Path(urlparse(url).path).name or f"{app_name}.hyp"
-        summary_path = PROJECT_ROOT / "context" / "hyp_summaries" / f"{app_name}.md"
+        summary_path = PROJECT_ROOT / "scripts" / "context" / "hyp_summaries" / f"{app_name}.md"
 
         external_entries.append({
             "filename": filename,

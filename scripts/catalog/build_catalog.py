@@ -2,9 +2,9 @@
 """Build catalog artifacts in hyperfy-apps from sunset research outputs.
 
 Pipeline:
-1. Copy source research artifacts into context/ and tmp/
+1. Copy source research artifacts into scripts/context/ and tmp/
 2. Optimize media into catalog/media/ with size gating
-3. Generate per-app manifests in context/apps/<slug>/manifest.json
+3. Generate per-app manifests in scripts/context/apps/<slug>/manifest.json
 4. Generate global manifest index in tmp/manifests/apps-manifest.json
 5. Generate missing-media checklist in tmp/issues/
 """
@@ -169,7 +169,7 @@ def copy_artifacts(
     elif dst_index.exists():
         index_path = dst_index
         index_mode = "local-existing"
-        warnings.append("source-research hyp_index.json missing; using existing context/hyp_index.raw.json")
+        warnings.append("source-research hyp_index.json missing; using existing scripts/context/hyp_index.raw.json")
     else:
         raise FileNotFoundError(
             "No usable index found. Provide --local-index (or generate it) or ensure --source-research/hyp_index.json exists."
@@ -574,11 +574,11 @@ def build_catalog_manifests(
     dry_run: bool = False,
 ):
     entries = json.loads(hyp_index_path.read_text(encoding="utf-8"))
-    v2_root = repo_root / "v2"
+    v2_root = repo_root / "v2" / "apps"
     v2_slugs = {p.name for p in v2_root.iterdir() if p.is_dir()} if v2_root.exists() else set()
     mappings = load_filename_mappings(repo_root / "tmp" / "filename-mappings.csv")
 
-    apps_out_root = repo_root / "context" / "apps"
+    apps_out_root = repo_root / "scripts" / "context" / "apps"
     manifests_out = repo_root / "tmp" / "manifests" / "apps-manifest.json"
     issue_out = repo_root / "tmp" / "issues" / "missing-media-checklist.md"
 
@@ -598,7 +598,7 @@ def build_catalog_manifests(
         message_id = e.get("message_id") or e.get("attachment_id") or "unknown"
         app_id = f"{preferred_slug}-{message_id}"
         hyp_filename = e.get("filename")
-        has_hyp_file = bool(hyp_filename and (repo_root / "hyp-files" / hyp_filename).exists())
+        has_hyp_file = bool(hyp_filename and (repo_root / "v2" / "hyp-files" / hyp_filename).exists())
         slug_collision_entries.setdefault(preferred_slug, []).append({
             "app_id": app_id,
             "message_id": e.get("message_id"),
@@ -608,7 +608,7 @@ def build_catalog_manifests(
             "has_hyp_file": has_hyp_file,
         })
 
-        v2_dir = repo_root / "v2" / v2_slug if v2_slug else None
+        v2_dir = repo_root / "v2" / "apps" / v2_slug if v2_slug else None
         v2_json = detect_v2_json(v2_dir) if v2_dir else None
         v2_json_data: dict[str, Any] = {}
         if v2_json and v2_json.exists():
@@ -618,7 +618,7 @@ def build_catalog_manifests(
                 v2_json_data = {}
 
         summary_rel = e.get("summary_path") or ""
-        for prefix in ("research/hyp_summaries/", "context/hyp_summaries/", "./context/hyp_summaries/"):
+        for prefix in ("research/hyp_summaries/", "scripts/context/hyp_summaries/", "./scripts/context/hyp_summaries/"):
             if summary_rel.startswith(prefix):
                 summary_rel = summary_rel[len(prefix):]
                 break
@@ -707,10 +707,10 @@ def build_catalog_manifests(
                 "source_priority_used": desc_source,
             },
             "links": {
-                "v2_app_dir": f"v2/{v2_slug}" if v2_slug else None,
+                "v2_app_dir": f"v2/apps/{v2_slug}" if v2_slug else None,
                 "v2_json_path": str(v2_json.relative_to(repo_root)) if v2_json else None,
                 "hyp_summary_path": (
-                    f"context/hyp_summaries/{summary_rel}"
+                    f"scripts/context/hyp_summaries/{summary_rel}"
                     if (summary_rel and summary_path and summary_path.exists())
                     else None
                 ),
@@ -750,8 +750,8 @@ def build_catalog_manifests(
             "author": author_name,
             "has_preview": primary is not None,
             "primary_preview": primary.get("catalog_path") if primary else None,
-            "manifest_path": f"context/apps/{preferred_slug}/manifest.json",
-            "v2_app_dir": f"v2/{v2_slug}" if v2_slug else None,
+            "manifest_path": f"scripts/context/apps/{preferred_slug}/manifest.json",
+            "v2_app_dir": f"v2/apps/{v2_slug}" if v2_slug else None,
             "has_hyp_file": has_hyp_file,
             "has_ai_summary": bool(ai_summary),
             "ai_summary_path": f"tmp/ai-summaries/{preferred_slug}.json" if ai_summary else None,
@@ -861,13 +861,13 @@ def main():
         "--use-local-index",
         action=argparse.BooleanOptionalAction,
         default=True,
-        help="Prefer local canonical index (context/hyp_index.raw.json) over importing source-research/hyp_index.json",
+        help="Prefer local canonical index (scripts/context/hyp_index.raw.json) over importing source-research/hyp_index.json",
     )
     parser.add_argument(
         "--local-index",
         type=Path,
         default=None,
-        help="Override local index path (default: <repo-root>/context/hyp_index.raw.json)",
+        help="Override local index path (default: <repo-root>/scripts/context/hyp_index.raw.json)",
     )
     parser.add_argument("--repo-root", type=Path, default=Path(__file__).resolve().parents[2])
     parser.add_argument("--max-bytes", type=int, default=MAX_BYTES_DEFAULT)
@@ -879,7 +879,7 @@ def main():
 
     repo_root = args.repo_root.resolve()
     catalog_root = repo_root / "catalog"
-    context_dir = repo_root / "context"
+    context_dir = repo_root / "scripts" / "context"
     tmp_dir = repo_root / "tmp"
     local_index = args.local_index.resolve() if args.local_index else (context_dir / "hyp_index.raw.json")
 

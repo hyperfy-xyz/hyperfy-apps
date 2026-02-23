@@ -6,16 +6,18 @@ Archive of Hyperfy virtual world apps preserved in human-readable format for ref
 
 ```
 hyperfy-apps/
-├── v1/              # 40 V1 React-based apps (legacy platform)
-├── v2/              # ~200 V2 apps (extracted, human-readable)
-│   └── <slug>/      # Each app: blueprint JSON + index.js + assets/
-├── hyp-files/       # 174 original .hyp binary files
+├── v1/                  # 40 V1 React-based apps (legacy platform)
+├── v2/
+│   ├── apps/<slug>/     # ~165 V2 apps (extracted, human-readable)
+│   │   └── blueprint JSON + index.js + assets/
+│   └── hyp-files/       # 174 original .hyp binary files
+├── catalog/             # Static web explorer (GitHub Pages)
+├── scripts/
+│   ├── catalog/         # Build pipeline scripts
+│   ├── research/        # AI summarization + context preparation
+│   └── context/         # Knowledge base (Discord metadata, manifests, summaries)
 └── package.json
 ```
-
-## ETL Documentation
-
-- See [`ETL_PIPELINE.md`](ETL_PIPELINE.md) for script-level ingest/transform/output contracts and runbooks.
 
 ## V1 Apps (Legacy)
 
@@ -199,16 +201,16 @@ hyperfy-apps/
 cat v1/hyperfy-alert/app.json
 
 # View V2 app script
-cat "v2/fire/index.js"
+cat "v2/apps/fire/index.js"
 
 # View V2 app config
-cat "v2/fire/Fire.json"
+cat "v2/apps/fire/Fire.json"
 ```
 
 **Import to Hyperfy world:**
 ```bash
 # Copy .hyp file to your world's apps folder
-cp hyp-files/Fire.hyp ~/hyperfy/worlds/myworld/apps/
+cp v2/hyp-files/Fire.hyp ~/hyperfy/worlds/myworld/apps/
 ```
 
 ## .hyp Format

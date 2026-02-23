@@ -1,0 +1,119 @@
+{
+  "app_id": "water-plane-1348535520128663593",
+  "app_slug": "water-plane",
+  "app_name": "WaterPlane",
+  "source": {
+    "hyp_filename": "WaterPlane.hyp",
+    "discord_attachment_id": "1348535519730073630",
+    "discord_message_id": "1348535520128663593",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-10T05:58:42.577Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1348535519730073630/WaterPlane.hyp?ex=6998a0d2&is=69974f52&hm=edcad692cc3afa603f6f6a14ef8100507236f5021f4aa4b31298d7ff8b72b864&"
+  },
+  "author": {
+    "display_name": "Shiffty",
+    "discord_user_id": "466331582458888192",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "Here's a uv scrolling plane if it helps",
+    "raw_message_content": "Here's a uv scrolling plane if it helps",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/water-plane",
+    "v2_json_path": "v2/apps/water-plane/Water Plane.json",
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/waterplane/1348555933244194847_image.png",
+    "media_type": ".png",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/waterplane/1348555933244194847_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": 4,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 748522,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1348555933244194847"
+    },
+    {
+      "catalog_path": "catalog/media/waterplane/1348571069480566784_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": 5,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 585942,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1348571069480566784"
+    },
+    {
+      "catalog_path": "catalog/media/waterplane/1348571070667554847_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": 5,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 850314,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1348571070667554847"
+    },
+    {
+      "catalog_path": null,
+      "original_filename": "mowater.mp4",
+      "content_type": "video/mp4",
+      "relative_index": 5,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 9782119,
+      "optimized": false,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1348571071405756467"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "water-plane-1348535520128663593",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:50:08+00:00",
+    "description": "Renders a dynamic water surface by cloning a 20x20 grid of plane segments and animating wave height and rotation each frame. Spawns ambient spray particles, periodic fish splash bursts, and player movement trail particles at the water surface level.",
+    "feature_tags": [
+      "particles",
+      "environment",
+      "animation",
+      "3d-model"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "heavy",
+    "script_complexity": "high",
+    "networking_profile": "none"
+  }
+}

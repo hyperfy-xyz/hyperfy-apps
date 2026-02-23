@@ -1,0 +1,67 @@
+{
+  "app_id": "free-camera-1415049094363086848",
+  "app_slug": "free-camera",
+  "app_name": "Free_Camera",
+  "source": {
+    "hyp_filename": "Free_Camera.hyp",
+    "discord_attachment_id": "1415049093872619600",
+    "discord_message_id": "1415049094363086848",
+    "discord_channel": "\u26a1\u2502general",
+    "discord_channel_category": "Platform",
+    "discord_timestamp": "2025-09-09T18:59:54.437Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/958209074045026327/1415049093872619600/Free_Camera.hyp?ex=6998af2a&is=69975daa&hm=119b55074f404e490ff7e34017eaa8c047b732e7d38fa2ce2d71281b34e49f49&"
+  },
+  "author": {
+    "display_name": "vox",
+    "discord_user_id": "415262868217266177",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "Free Camera.hyp",
+    "raw_message_content": "",
+    "summary_excerpt": "Free Camera.hyp",
+    "source_priority_used": "summary_excerpt"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/free-camera",
+    "v2_json_path": "v2/apps/free-camera/Free Camera.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/Free_Camera.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/free-camera/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "free-camera-1415049094363086848",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:45:06+00:00",
+    "description": "Toggles between freecam and orbit camera modes using configurable hotkeys, and renders an in-world UI panel with stepper controls to adjust move speed, look speed, orbit radius, and lerp smoothing in real time.",
+    "feature_tags": [
+      "camera",
+      "ui",
+      "interaction"
+    ],
+    "interaction_modes": [
+      "ui"
+    ],
+    "asset_profile": "light",
+    "script_complexity": "high",
+    "networking_profile": "none"
+  }
+}
