@@ -1,6 +1,14 @@
 {
-  "version": 3,
-  "generated_at": "2026-02-23T03:03:40+00:00",
+  "version": 4,
+  "generated_at": "2026-02-23T04:37:41+00:00",
+  "name": "Hyperfy Apps Archive",
+  "description": "326 community-built virtual world apps for the Hyperfy platform",
+  "base_url": "https://hyperfy-xyz.github.io/hyperfy-apps",
+  "source_url": "https://github.com/hyperfy-xyz/hyperfy-apps",
+  "endpoints": {
+    "app_source": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/v2/apps/{slug}/index.js",
+    "app_blueprint": "https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/v2/apps/{slug}/{blueprint_path}"
+  },
   "counts": {
     "total": 326,
     "with_preview": 326,

@@ -49,7 +49,8 @@ v2/hyp-files/*.hyp (binary)
 - **`v2/apps/<slug>/`** — Flat app source dirs (slugified). Each has `<Name>.json` (blueprint), `index.js`, and optional `assets/`.
 - **`v2/hyp-files/`** — Original `.hyp` binary files (174 files).
 - **`catalog/`** — Static web explorer deployed to GitHub Pages. React 18 + HTM, no build step.
-- **`catalog/catalog.json`** — Merged app data + source excerpts fetched on load (~495KB).
+- **`catalog/catalog.json`** — Complete app data + agent metadata (version 4, ~1.2MB). Single source of truth for both the web explorer and programmatic access. Includes `endpoints`, `tag_index`, and `counts`.
+- **`catalog/api.html`** — Static schema docs page for agents. Documents `catalog.json` fields, endpoints, `jq` recipes, and has a "Copy schema for LLM" button.
 - **`catalog/media/<slug>/`** — Optimized preview images/videos (~670MB, committed via LFS-like approach).
 - **`scripts/context/`** — Knowledge base (not deployed): `hyp_index.raw.json` (Discord metadata), `apps/<slug>/manifest.json` (provenance + AI data), `hyp_summaries/` (full app docs), `snippets/` (doc snippets), `source/` (raw docs), `context-index.json`.
 - **`scripts/catalog/`** — Build pipeline scripts.

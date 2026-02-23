@@ -2,7 +2,7 @@
 """Build merged catalog from manifests and AI summaries.
 
 Outputs:
-  catalog/catalog.json    - single file for web explorer (version 3)
+  catalog/catalog.json    - complete app data + agent metadata (version 4)
 
 Inputs:
   tmp/manifests/apps-manifest.json  (canonical manifest list)
@@ -595,10 +595,22 @@ def main() -> int:
         sorted(tag_counts.items(), key=lambda x: x[1], reverse=True)
     )
 
-    # Build final catalog.json
+    # GitHub Pages base URLs
+    github_pages_base = "https://hyperfy-xyz.github.io/hyperfy-apps"
+    source_url = "https://github.com/hyperfy-xyz/hyperfy-apps"
+
+    # Build final catalog.json (version 4: card data + agent metadata)
     catalog_data = {
-        "version": 3,
+        "version": 4,
         "generated_at": now_iso(),
+        "name": "Hyperfy Apps Archive",
+        "description": f"{len(apps)} community-built virtual world apps for the Hyperfy platform",
+        "base_url": github_pages_base,
+        "source_url": source_url,
+        "endpoints": {
+            "app_source": f"{GITHUB_RAW_BASE}/v2/apps/{{slug}}/index.js",
+            "app_blueprint": f"{GITHUB_RAW_BASE}/v2/apps/{{slug}}/{{blueprint_path}}",
+        },
         "counts": {
             "total": len(apps),
             "with_preview": with_preview,
@@ -656,6 +668,15 @@ def main() -> int:
     CATALOG_ROOT.mkdir(parents=True, exist_ok=True)
     catalog_path = CATALOG_ROOT / "catalog.json"
     catalog_path.write_text(json.dumps(catalog_data, indent=2), encoding="utf-8")
+
+    # Clean up stale split files from previous builds
+    import shutil
+    stale_apps_dir = CATALOG_ROOT / "apps"
+    if stale_apps_dir.exists():
+        shutil.rmtree(stale_apps_dir)
+    stale_api = CATALOG_ROOT / "api.json"
+    if stale_api.exists():
+        stale_api.unlink()
 
     # Stats
     catalog_size = catalog_path.stat().st_size
