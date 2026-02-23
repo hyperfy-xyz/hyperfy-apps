@@ -2,7 +2,8 @@
 """Build merged catalog from manifests and AI summaries.
 
 Outputs:
-  catalog/catalog.json    - single file for web explorer (version 3)
+  catalog/catalog.json           - card data + agent metadata (version 4)
+  catalog/apps/{slug}.json       - per-app detail (lazy-loaded by SourceModal)
 
 Inputs:
   tmp/manifests/apps-manifest.json  (canonical manifest list)
@@ -365,8 +366,12 @@ def build_app_entry(
     v2_dir: Path | None,
     blueprint: dict[str, Any] | None,
     blueprint_path: str | None,
-) -> dict[str, Any]:
-    """Build a single app entry for catalog.json."""
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    """Build a single app entry split into card data and detail data.
+
+    Returns (card, detail) where card goes into catalog.json and
+    detail is written to catalog/apps/{slug}.json.
+    """
     source = manifest.get("source", {})
     # Prefer generated preview (preview.*), fall back to manifest/Discord preview
     gen_matches = list((MEDIA_DIR / app_row['app_slug']).glob("preview.*"))
@@ -436,7 +441,8 @@ def build_app_entry(
         or hyp_filename
     )
 
-    entry: dict[str, Any] = {
+    # Card data: stays in catalog.json (lightweight)
+    card: dict[str, Any] = {
         "slug": app_row.get("app_slug", ""),
         "name": app_row.get("app_name", ""),
         "author": manifest.get("author", {}).get("display_name") or app_row.get("author", "Unknown"),
@@ -458,22 +464,26 @@ def build_app_entry(
         "source_status": "v2" if has_source else "metadata_only",
     }
 
-    if props:
-        entry["props"] = props
-    if script_excerpt:
-        entry["script_excerpt"] = script_excerpt
-    if script_path:
-        entry["script_path"] = script_path
-    if asset_files:
-        entry["asset_files"] = asset_files
-    if source_files:
-        entry["source_files"] = source_files
     if source_inventory:
-        entry["source_inventory"] = source_inventory
-    if blueprint_path:
-        entry["blueprint_path"] = blueprint_path
+        card["source_inventory"] = source_inventory
 
-    return entry
+    # Detail data: written to catalog/apps/{slug}.json (lazy-loaded)
+    detail: dict[str, Any] = {}
+
+    if script_excerpt:
+        detail["script_excerpt"] = script_excerpt
+    if script_path:
+        detail["script_path"] = script_path
+    if source_files:
+        detail["source_files"] = source_files
+    if props:
+        detail["props"] = props
+    if asset_files:
+        detail["asset_files"] = asset_files
+    if blueprint_path:
+        detail["blueprint_path"] = blueprint_path
+
+    return card, detail
 
 
 def main() -> int:
@@ -510,7 +520,10 @@ def main() -> int:
     print(f"Manifest source: {manifest_source}")
     print(f"Processing {len(manifest_paths)} apps...")
 
+    import shutil
+
     apps: list[dict[str, Any]] = []
+    detail_map: dict[str, dict[str, Any]] = {}
     tag_counts: dict[str, int] = {}
     with_preview = 0
     ai_merged = 0
@@ -558,16 +571,18 @@ def main() -> int:
         if v2_dir and v2_dir.exists():
             blueprint, blueprint_path = load_primary_blueprint(v2_dir)
 
-        # Build app entry
-        entry = build_app_entry(app_row, manifest, ai_summary, v2_dir, blueprint, blueprint_path)
-        apps.append(entry)
+        # Build app entry (card + detail)
+        card, detail = build_app_entry(app_row, manifest, ai_summary, v2_dir, blueprint, blueprint_path)
+        apps.append(card)
+        if detail:
+            detail_map[card["slug"]] = detail
 
-        if entry.get("hyp_filename") and not entry.get("has_download"):
-            missing_hyp.append((entry["slug"], entry["hyp_filename"]))
+        if card.get("hyp_filename") and not card.get("has_download"):
+            missing_hyp.append((card["slug"], card["hyp_filename"]))
 
-        if entry["has_preview"]:
+        if card["has_preview"]:
             with_preview += 1
-        if entry["has_source"]:
+        if card["has_source"]:
             with_source += 1
         else:
             reason = "v2_link_missing" if not v2_dir_rel else "v2_dir_missing"
@@ -575,8 +590,8 @@ def main() -> int:
                 {
                     "slug": slug,
                     "app_name": app_row.get("app_name"),
-                    "hyp_filename": entry.get("hyp_filename"),
-                    "discord_timestamp": entry.get("created_at"),
+                    "hyp_filename": card.get("hyp_filename"),
+                    "discord_timestamp": card.get("created_at"),
                     "v2_app_dir": v2_dir_rel,
                     "expected_v2_path": expected_v2,
                     "reason": reason,
@@ -584,7 +599,7 @@ def main() -> int:
             )
 
         # Accumulate tag counts
-        for tag in entry["tags"]:
+        for tag in card["tags"]:
             tag_counts[tag] = tag_counts.get(tag, 0) + 1
 
     # Sort apps by name
@@ -595,14 +610,28 @@ def main() -> int:
         sorted(tag_counts.items(), key=lambda x: x[1], reverse=True)
     )
 
-    # Build final catalog.json
+    # GitHub Pages base URLs
+    github_pages_base = "https://hyperfy-xyz.github.io/hyperfy-apps"
+    source_url = "https://github.com/hyperfy-xyz/hyperfy-apps"
+
+    # Build final catalog.json (version 4: card data + agent metadata)
     catalog_data = {
-        "version": 3,
+        "version": 4,
         "generated_at": now_iso(),
+        "name": "Hyperfy Apps Archive",
+        "description": f"{len(apps)} community-built virtual world apps for the Hyperfy platform",
+        "base_url": github_pages_base,
+        "source_url": source_url,
+        "endpoints": {
+            "app_detail": "./apps/{slug}.json",
+            "app_source": f"{GITHUB_RAW_BASE}/v2/apps/{{slug}}/index.js",
+            "app_blueprint": f"{GITHUB_RAW_BASE}/v2/apps/{{slug}}/{{blueprint_path}}",
+        },
         "counts": {
             "total": len(apps),
             "with_preview": with_preview,
             "with_source": with_source,
+            "with_details": len(detail_map),
             "metadata_only": len(apps) - with_source,
         },
         "tag_index": sorted_tag_index,
@@ -657,11 +686,31 @@ def main() -> int:
     catalog_path = CATALOG_ROOT / "catalog.json"
     catalog_path.write_text(json.dumps(catalog_data, indent=2), encoding="utf-8")
 
+    # Write per-app detail files to catalog/apps/{slug}.json
+    apps_detail_dir = CATALOG_ROOT / "apps"
+    # Clean stale detail files before regenerating
+    if apps_detail_dir.exists():
+        shutil.rmtree(apps_detail_dir)
+    apps_detail_dir.mkdir(parents=True, exist_ok=True)
+
+    detail_total_bytes = 0
+    for slug, detail in detail_map.items():
+        detail_path = apps_detail_dir / f"{slug}.json"
+        detail_bytes = json.dumps(detail, separators=(",", ":")).encode("utf-8")
+        detail_path.write_bytes(detail_bytes)
+        detail_total_bytes += len(detail_bytes)
+
+    # Remove stale api.json if present
+    stale_api = CATALOG_ROOT / "api.json"
+    if stale_api.exists():
+        stale_api.unlink()
+
     # Stats
     catalog_size = catalog_path.stat().st_size
     tag_count = len(sorted_tag_index)
     print(f"Done!")
     print(f"  catalog.json: {catalog_size / 1024:.1f} KB ({len(apps)} apps, {tag_count} tags)")
+    print(f"  apps/ detail files: {len(detail_map)} files, {detail_total_bytes / 1024:.1f} KB total")
     print(f"  Apps with preview: {with_preview}")
     print(f"  Apps with source (v2): {with_source}")
     print(f"  Apps metadata-only: {len(apps) - with_source}")

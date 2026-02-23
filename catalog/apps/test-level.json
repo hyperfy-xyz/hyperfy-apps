@@ -1,0 +1,1 @@
+{"script_excerpt":"export default function main(world, app, fetch, props, setTimeout) { }\n","script_path":"index.js","source_files":[{"path":"assets/test_level.glb","size_bytes":3085668},{"path":"index.js","size_bytes":71},{"path":"test_level.json","size_bytes":283}],"asset_files":["test_level.glb"],"blueprint_path":"test_level.json"}

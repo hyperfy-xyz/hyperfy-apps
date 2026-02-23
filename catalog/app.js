@@ -5,7 +5,7 @@ import htm from "htm";
 const html = htm.bind(React.createElement);
 
 const CATALOG_DATA = "./catalog.json";
-const MIN_TAG_COUNT = 3; // Only show tags used by this many apps in sidebar
+const MIN_TAG_COUNT = 3; // Only show tags used by this many apps
 
 const MISSING_PREVIEW_SVG = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 24 24' fill='none' stroke='%233a3a5a' stroke-width='1.5'%3E%3Crect x='3' y='3' width='18' height='18' rx='2'/%3E%3Ccircle cx='8.5' cy='8.5' r='1.5'/%3E%3Cpath d='m21 15-5-5L5 21'/%3E%3C/svg%3E`;
 
@@ -190,10 +190,32 @@ function VideoPreview({ src }) {
   `;
 }
 
-// ---- SourceModal: reads from preloaded app data ----
+// ---- SourceModal: lazy-loads detail from apps/{slug}.json ----
 
 function SourceModal({ app, onClose }) {
-  const sourceFiles = Array.isArray(app.source_files) ? app.source_files : [];
+  const [detail, setDetail] = useState(null);
+  const [detailLoading, setDetailLoading] = useState(true);
+  const [detailError, setDetailError] = useState("");
+
+  // Fetch per-app detail on mount
+  useEffect(() => {
+    let cancelled = false;
+    setDetailLoading(true);
+    setDetailError("");
+    setDetail(null);
+
+    fetch(`./apps/${app.slug}.json`)
+      .then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
+      .then((d) => { if (!cancelled) { setDetail(d); setDetailLoading(false); } })
+      .catch((e) => { if (!cancelled) { setDetailError(e.message); setDetailLoading(false); } });
+
+    return () => { cancelled = true; };
+  }, [app.slug]);
+
+  const sourceFiles = Array.isArray(detail?.source_files) ? detail.source_files : [];
   const sourceInventory = app.source_inventory || null;
   const fileTree = useMemo(() => buildFileTree(sourceFiles), [sourceFiles]);
   const fallbackSourceBytes = useMemo(
@@ -204,31 +226,29 @@ function SourceModal({ app, onClose }) {
   const sourceTotalBytes = Number(sourceInventory?.total_size_bytes) || fallbackSourceBytes;
   const listedFileCount = Number(sourceInventory?.listed_file_count) || sourceFiles.length;
   const listedTruncated = Boolean(sourceInventory?.listed_truncated);
-  const hasScript = !!app.script_excerpt;
-  const hasBlueprint = !!(app.props && Object.keys(app.props).length > 0);
+  const hasScript = !!detail?.script_excerpt;
+  const hasBlueprint = !!(detail?.props && Object.keys(detail.props).length > 0);
   const hasFiles = sourceFiles.length > 0;
   const hasCode = hasScript || hasBlueprint;
   const [expandedFolders, setExpandedFolders] = useState(() => collectInitialExpandedFolders(fileTree));
-  const [activeTab, setActiveTab] = useState(
-    hasFiles ? "files" : hasScript ? "script" : hasBlueprint ? "blueprint" : "script"
-  );
+  const [activeTab, setActiveTab] = useState("script");
   const [copied, setCopied] = useState(false);
   const codeRef = useRef(null);
 
   useEffect(() => {
     setActiveTab(hasFiles ? "files" : hasScript ? "script" : hasBlueprint ? "blueprint" : "script");
-  }, [app, hasScript, hasBlueprint, hasFiles]);
+  }, [detail, hasScript, hasBlueprint, hasFiles]);
 
   useEffect(() => {
     setExpandedFolders(collectInitialExpandedFolders(fileTree));
-  }, [app, fileTree]);
+  }, [detail, fileTree]);
 
   // Highlight code after render
   useEffect(() => {
     if (codeRef.current && window.Prism) {
       window.Prism.highlightAllUnder(codeRef.current);
     }
-  }, [activeTab]);
+  }, [activeTab, detail]);
 
   // Close on Escape
   useEffect(() => {
@@ -239,10 +259,10 @@ function SourceModal({ app, onClose }) {
 
   const getCurrentCode = useCallback(() => {
     if (!hasCode) return "";
-    if (activeTab === "script") return app.script_excerpt || "// No script found";
-    if (activeTab === "blueprint") return JSON.stringify(app.props || {}, null, 2);
+    if (activeTab === "script") return detail?.script_excerpt || "// No script found";
+    if (activeTab === "blueprint") return JSON.stringify(detail?.props || {}, null, 2);
     return "";
-  }, [app, activeTab, hasCode]);
+  }, [detail, activeTab, hasCode]);
 
   const onCopy = useCallback(() => {
     const text = getCurrentCode();
@@ -302,55 +322,67 @@ function SourceModal({ app, onClose }) {
           ` : null}
         </div>
 
-        <div className="modal-tabs">
-          ${hasFiles ? html`
-            <button className=${`modal-tab ${activeTab === "files" ? "active" : ""}`}
-              onClick=${() => setActiveTab("files")}>Files (${sourceFileCount}) · <span style=${{ color: sizeColor(sourceTotalBytes) }}>${formatBytes(sourceTotalBytes)}</span></button>
-          ` : null}
-          ${hasScript ? html`
-            <button className=${`modal-tab ${activeTab === "script" ? "active" : ""}`}
-              onClick=${() => setActiveTab("script")}>Script</button>
-          ` : null}
-          ${hasBlueprint ? html`
-            <button className=${`modal-tab ${activeTab === "blueprint" ? "active" : ""}`}
-              onClick=${() => setActiveTab("blueprint")}>Props / Blueprint</button>
-          ` : null}
-          ${canCopy ? html`
-            <button className=${`modal-copy-btn ${copied ? "copied" : ""}`} onClick=${onCopy}>
-              ${copied ? "Copied!" : "Copy"}
-            </button>
-          ` : null}
-        </div>
+        ${detailLoading ? html`
+          <div className="modal-loading">Loading app details...</div>
+        ` : detailError ? html`
+          <div className="modal-body">
+            <div className="modal-desc">
+              ${app.has_source
+                ? "Could not load app detail. Metadata is available above."
+                : "Source files are not yet promoted to v2. Metadata is available above."}
+            </div>
+          </div>
+        ` : html`
+          <div className="modal-tabs">
+            ${hasFiles ? html`
+              <button className=${`modal-tab ${activeTab === "files" ? "active" : ""}`}
+                onClick=${() => setActiveTab("files")}>Files (${sourceFileCount}) · <span style=${{ color: sizeColor(sourceTotalBytes) }}>${formatBytes(sourceTotalBytes)}</span></button>
+            ` : null}
+            ${hasScript ? html`
+              <button className=${`modal-tab ${activeTab === "script" ? "active" : ""}`}
+                onClick=${() => setActiveTab("script")}>Script</button>
+            ` : null}
+            ${hasBlueprint ? html`
+              <button className=${`modal-tab ${activeTab === "blueprint" ? "active" : ""}`}
+                onClick=${() => setActiveTab("blueprint")}>Props / Blueprint</button>
+            ` : null}
+            ${canCopy ? html`
+              <button className=${`modal-copy-btn ${copied ? "copied" : ""}`} onClick=${onCopy}>
+                ${copied ? "Copied!" : "Copy"}
+              </button>
+            ` : null}
+          </div>
 
-        <div className="modal-body" ref=${codeRef}>
-          ${activeTab === "files" && hasFiles
-            ? html`
-                <div className="modal-files">
-                  <div className="modal-file-summary">
-                    Showing ${listedFileCount} of ${sourceFileCount} files
-                    ${listedTruncated ? " (truncated for performance)" : ""}
+          <div className="modal-body" ref=${codeRef}>
+            ${activeTab === "files" && hasFiles
+              ? html`
+                  <div className="modal-files">
+                    <div className="modal-file-summary">
+                      Showing ${listedFileCount} of ${sourceFileCount} files
+                      ${listedTruncated ? " (truncated for performance)" : ""}
+                    </div>
+                    <div className="file-tree">
+                      ${fileTree.children.map((node) => html`
+                        <${SourceFileTreeNode}
+                          key=${node.path}
+                          node=${node}
+                          depth=${0}
+                          expandedFolders=${expandedFolders}
+                          onToggle=${toggleFolder}
+                        />
+                      `)}
+                    </div>
                   </div>
-                  <div className="file-tree">
-                    ${fileTree.children.map((node) => html`
-                      <${SourceFileTreeNode}
-                        key=${node.path}
-                        node=${node}
-                        depth=${0}
-                        expandedFolders=${expandedFolders}
-                        onToggle=${toggleFolder}
-                      />
-                    `)}
-                  </div>
-                </div>
-              `
-            : hasCode
-            ? html`<pre className=${`language-${lang}`}><code className=${`language-${lang}`}>${getCurrentCode()}</code></pre>`
-            : html`<div className="modal-desc">
-                ${app.has_source
-                  ? "No script or props preview is available. Use the Files tab to inspect package contents."
-                  : "Source files are not yet promoted to v2. Metadata is available above."}
-              </div>`}
-        </div>
+                `
+              : hasCode
+              ? html`<pre className=${`language-${lang}`}><code className=${`language-${lang}`}>${getCurrentCode()}</code></pre>`
+              : html`<div className="modal-desc">
+                  ${app.has_source
+                    ? "No script or props preview is available. Use the Files tab to inspect package contents."
+                    : "Source files are not yet promoted to v2. Metadata is available above."}
+                </div>`}
+          </div>
+        `}
       </div>
     </div>
   `;
@@ -450,65 +482,72 @@ function AppCard({ app, onTagClick, onSourceClick, onAuthorClick }) {
   `;
 }
 
-// ---- TagSidebar ----
+// ---- TagDropdown ----
 
-function TagSidebar({ tagIndex, activeTags, onTagToggle }) {
+function TagDropdown({ tagIndex, activeTags, onTagToggle }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef(null);
+
   const filteredTags = useMemo(() => {
     return Object.entries(tagIndex)
       .filter(([, count]) => count >= MIN_TAG_COUNT)
       .sort((a, b) => b[1] - a[1]);
   }, [tagIndex]);
 
-  return html`
-    <aside className="sidebar">
-      <div className="sidebar-header">
-        <h2 className="sidebar-title">Tags (${filteredTags.length})</h2>
-      </div>
-      <div className="tag-list">
-        ${filteredTags.map(
-          ([tag, count]) => html`
-            <div
-              key=${tag}
-              className=${`tag-item ${activeTags.has(tag) ? "active" : ""}`}
-              onClick=${() => onTagToggle(tag)}
-            >
-              <span>${tag}</span>
-              <span className="tag-count">${count}</span>
-            </div>
-          `
-        )}
-      </div>
-      <div className="sidebar-footer">
-        <a className="sidebar-footer-link" href="https://github.com/hyperfy-xyz/hyperfy-apps/issues" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>
-          Report Issues
-        </a>
-      </div>
-    </aside>
-  `;
-}
+  // Close on click outside
+  useEffect(() => {
+    if (!open) return;
+    const handler = (e) => {
+      if (ref.current && !ref.current.contains(e.target)) setOpen(false);
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, [open]);
 
-// ---- MobileTags ----
+  // Close on Escape
+  useEffect(() => {
+    if (!open) return;
+    const handler = (e) => { if (e.key === "Escape") setOpen(false); };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [open]);
 
-function MobileTags({ tagIndex, activeTags, onTagToggle }) {
-  const filteredTags = useMemo(() => {
-    return Object.entries(tagIndex)
-      .filter(([, count]) => count >= MIN_TAG_COUNT)
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 30);
-  }, [tagIndex]);
+  const activeCount = activeTags.size;
+  const label = activeCount > 0 ? `Tags (${activeCount})` : "Tags";
 
   return html`
-    <div className="mobile-tags">
-      ${filteredTags.map(
-        ([tag]) => html`
-          <span
-            key=${tag}
-            className=${`mobile-tag ${activeTags.has(tag) ? "active" : ""}`}
-            onClick=${() => onTagToggle(tag)}
-          >${tag}</span>
-        `
-      )}
+    <div className="tag-dropdown" ref=${ref}>
+      <button
+        className=${`tag-dropdown-btn ${open ? "open" : ""} ${activeCount > 0 ? "has-active" : ""}`}
+        onClick=${() => setOpen((v) => !v)}
+      >
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/>
+        </svg>
+        <span>${label}</span>
+        <svg className=${`tag-dropdown-caret ${open ? "open" : ""}`} viewBox="0 0 12 12" width="10" height="10">
+          <path fill="currentColor" d="M3 5l3 3 3-3"/>
+        </svg>
+      </button>
+      ${open ? html`
+        <div className="tag-dropdown-panel">
+          <div className="tag-dropdown-list">
+            ${filteredTags.map(
+              ([tag, count]) => html`
+                <button
+                  key=${tag}
+                  className=${`tag-dropdown-item ${activeTags.has(tag) ? "active" : ""}`}
+                  onClick=${() => onTagToggle(tag)}
+                >
+                  <span className="tag-dropdown-check">${activeTags.has(tag) ? "\u2713" : ""}</span>
+                  <span className="tag-dropdown-name">${tag}</span>
+                  <span className="tag-dropdown-count">${count}</span>
+                </button>
+              `
+            )}
+          </div>
+        </div>
+      ` : null}
     </div>
   `;
 }
@@ -654,34 +693,19 @@ function Explorer() {
 
   return html`
     <div className="layout">
-      <${TagSidebar}
-        tagIndex=${data.tag_index}
-        activeTags=${activeTags}
-        onTagToggle=${onTagToggle}
-      />
-
       <div className="main">
         <header className="header">
-          <h1 className="title"><a href="https://hyperfy.xyz/" target="_blank" rel="noopener noreferrer" style=${{background: 'linear-gradient(90deg, #a78bfa, #06b6d4, #22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', textDecoration: 'none'}}>Hyperfy</a> App Explorer <span style=${{fontSize: '0.4em', fontWeight: 400, color: 'rgba(255,255,255,0.45)', marginLeft: '0.5em'}}>made by <a href="https://github.com/madjin" target="_blank" rel="noopener noreferrer" style=${{color: 'rgba(255,255,255,0.55)', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.3)'}}>jin</a></span></h1>
-          <div className="how-to-use">Drag and drop .hyp files into Hyperfy</div>
-          <p className="subtitle">Browse ${data.counts.total} community apps with AI-generated descriptions, tags, and downloadable .hyp files.</p>
-          <div className="stats">
-            <div className="stat">
-              <span className="stat-value">${data.counts.total}</span>
-              <span className="stat-label">apps</span>
-            </div>
-            <div className="stat">
-              <span className="stat-value">${Object.keys(data.tag_index).length}</span>
-              <span className="stat-label">tags</span>
+          <div className="header-row">
+            <h1 className="title"><a href="https://hyperfy.xyz/" target="_blank" rel="noopener noreferrer" style=${{background: 'linear-gradient(90deg, #a78bfa, #06b6d4, #22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', textDecoration: 'none'}}>Hyperfy</a> App Explorer</h1>
+            <div className="header-utils">
+              <a className="header-link" href="./api.html" target="_blank" rel="noopener noreferrer">{ } API</a>
+              <a className="header-link" href="https://github.com/hyperfy-xyz/hyperfy-apps/issues" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>
+              </a>
             </div>
           </div>
+          <p className="subtitle">${data.counts.total} community apps <span className="subtitle-sep">/</span> ${Object.keys(data.tag_index).length} tags <span className="subtitle-sep">/</span> Drag .hyp files into Hyperfy <span className="subtitle-sep">/</span> <span className="subtitle-credit">made by <a href="https://github.com/madjin" target="_blank" rel="noopener noreferrer" style=${{color: 'var(--accent-hover)', textDecoration: 'none', borderBottom: '1px solid rgba(167,139,250,0.3)'}}>jin</a></span></p>
         </header>
-
-        <${MobileTags}
-          tagIndex=${data.tag_index}
-          activeTags=${activeTags}
-          onTagToggle=${onTagToggle}
-        />
 
         <div className="controls">
           <div className="search-wrap">
@@ -694,6 +718,12 @@ function Explorer() {
               onInput=${(e) => setQuery(e.target.value)}
             />
           </div>
+
+          <${TagDropdown}
+            tagIndex=${data.tag_index}
+            activeTags=${activeTags}
+            onTagToggle=${onTagToggle}
+          />
 
           <select className="select" value=${sortMode} onChange=${(e) => setSortMode(e.target.value)}>
             <option value="name">Name</option>

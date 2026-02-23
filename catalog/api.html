@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hyperfy Apps API</title>
+  <style>
+    :root {
+      --bg: #0c0c14;
+      --bg-subtle: #12121c;
+      --surface: #16162a;
+      --border: #2a2a4a;
+      --border-subtle: #222244;
+      --text: #e8e8f0;
+      --text-muted: #8888a8;
+      --text-dim: #5a5a7a;
+      --accent: #8b5cf6;
+      --accent-hover: #a78bfa;
+      --green: #34d399;
+      --yellow: #fbbf24;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+    }
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0 0 8px;
+      background: linear-gradient(135deg, #e8e8f0, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin: 0 0 32px;
+    }
+    .subtitle a {
+      color: var(--accent-hover);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(167,139,250,0.3);
+    }
+    .subtitle a:hover { border-bottom-color: var(--accent-hover); }
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 32px 0 12px;
+      color: var(--text);
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 8px;
+    }
+    h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin: 20px 0 8px;
+      color: var(--text-muted);
+    }
+    p { color: var(--text-muted); font-size: 0.88rem; margin: 8px 0; }
+    code {
+      font-family: "JetBrains Mono", "Fira Code", "SF Mono", Menlo, monospace;
+      font-size: 0.82rem;
+      background: var(--surface);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--accent-hover);
+    }
+    pre {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 16px;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      color: var(--text);
+    }
+    .field-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+      margin: 12px 0;
+    }
+    .field-table th {
+      text-align: left;
+      padding: 8px 12px;
+      background: var(--surface);
+      color: var(--text-muted);
+      font-weight: 600;
+      border: 1px solid var(--border-subtle);
+    }
+    .field-table td {
+      padding: 6px 12px;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      vertical-align: top;
+    }
+    .field-table td:first-child { color: var(--accent-hover); font-family: "JetBrains Mono", monospace; font-size: 0.78rem; white-space: nowrap; }
+    .field-table td:nth-child(2) { color: var(--green); font-family: "JetBrains Mono", monospace; font-size: 0.78rem; white-space: nowrap; }
+    .nav-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .nav-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.78rem;
+      font-family: "JetBrains Mono", monospace;
+      color: var(--text-dim);
+      padding: 6px 12px;
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      background: var(--surface);
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+    .nav-links a:hover {
+      color: var(--text-muted);
+      border-color: var(--border);
+      background: var(--bg-subtle);
+    }
+    .tag { display: inline-block; padding: 1px 6px; border-radius: 999px; font-size: 0.7rem; background: rgba(139,92,246,0.15); color: var(--accent-hover); margin: 0 2px; }
+    .copy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      font-family: "JetBrains Mono", monospace;
+      color: var(--accent-hover);
+      padding: 6px 12px;
+      border: 1px solid rgba(139,92,246,0.3);
+      border-radius: 6px;
+      background: rgba(139,92,246,0.1);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .copy-btn:hover { background: rgba(139,92,246,0.2); border-color: var(--accent); }
+    .copy-btn.copied { color: var(--green); border-color: rgba(52,211,153,0.3); background: rgba(52,211,153,0.1); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hyperfy Apps API</h1>
+    <p class="subtitle">Static JSON API for the <a href="./">Hyperfy App Explorer</a>. No auth required. All data served from GitHub Pages.</p>
+
+    <div class="nav-links">
+      <a href="./catalog.json">catalog.json</a>
+      <a href="./">Explorer</a>
+      <a href="https://github.com/hyperfy-xyz/hyperfy-apps">GitHub</a>
+      <button class="copy-btn" id="copyBtn" onclick="copySchema()">Copy schema for LLM</button>
+    </div>
+
+    <h2>Overview</h2>
+    <p><code>catalog.json</code> is the single data file. It contains card-level metadata for every app plus top-level indexes. Heavy per-app detail (script excerpts, file trees, props) lives in separate <code>apps/{slug}.json</code> files, loaded on demand.</p>
+
+    <h2>Top-level Schema</h2>
+    <table class="field-table">
+      <tr><th>Field</th><th>Type</th><th>Description</th></tr>
+      <tr><td>version</td><td>number</td><td>Schema version (currently 4)</td></tr>
+      <tr><td>generated_at</td><td>string</td><td>ISO 8601 build timestamp</td></tr>
+      <tr><td>name</td><td>string</td><td>Archive name</td></tr>
+      <tr><td>description</td><td>string</td><td>Archive description with app count</td></tr>
+      <tr><td>base_url</td><td>string</td><td>GitHub Pages base URL</td></tr>
+      <tr><td>source_url</td><td>string</td><td>GitHub repository URL</td></tr>
+      <tr><td>endpoints</td><td>object</td><td>URL templates for deeper resources (see below)</td></tr>
+      <tr><td>counts</td><td>object</td><td>Aggregate stats: total, with_preview, with_source, with_details, metadata_only</td></tr>
+      <tr><td>tag_index</td><td>object</td><td>Map of tag name to usage count, sorted by frequency</td></tr>
+      <tr><td>apps</td><td>array</td><td>Array of per-app card objects</td></tr>
+    </table>
+
+    <h2>Per-App Card Fields</h2>
+    <p>Each entry in the <code>apps</code> array:</p>
+    <table class="field-table">
+      <tr><th>Field</th><th>Type</th><th>Description</th></tr>
+      <tr><td>slug</td><td>string</td><td>Unique slug identifier</td></tr>
+      <tr><td>name</td><td>string</td><td>Display name</td></tr>
+      <tr><td>author</td><td>string</td><td>Author display name</td></tr>
+      <tr><td>description</td><td>string</td><td>AI-generated description</td></tr>
+      <tr><td>preview_url</td><td>string?</td><td>Relative path to preview media</td></tr>
+      <tr><td>preview_type</td><td>string</td><td>"image", "video", or "none"</td></tr>
+      <tr><td>hyp_filename</td><td>string?</td><td>Original .hyp filename</td></tr>
+      <tr><td>download_path</td><td>string?</td><td>Direct download URL for .hyp file</td></tr>
+      <tr><td>has_download</td><td>boolean</td><td>Whether .hyp file is available</td></tr>
+      <tr><td>created_at</td><td>string?</td><td>ISO 8601 timestamp (from Discord)</td></tr>
+      <tr><td>tags</td><td>string[]</td><td>Feature tags (max 6)</td></tr>
+      <tr><td>interaction_modes</td><td>string[]</td><td>Interaction types: action, trigger, ui, passive, networked</td></tr>
+      <tr><td>asset_profile</td><td>string</td><td>"light" | "medium" | "heavy"</td></tr>
+      <tr><td>script_complexity</td><td>string</td><td>"low" | "medium" | "high"</td></tr>
+      <tr><td>networking</td><td>string</td><td>"none" | "local" | "shared_state" | "events"</td></tr>
+      <tr><td>has_preview</td><td>boolean</td><td>Whether preview media exists</td></tr>
+      <tr><td>has_source</td><td>boolean</td><td>Whether extracted v2 source exists</td></tr>
+      <tr><td>has_details</td><td>boolean</td><td>Whether detail file exists at apps/{slug}.json</td></tr>
+      <tr><td>source_status</td><td>string</td><td>"v2" or "metadata_only"</td></tr>
+      <tr><td>source_inventory</td><td>object?</td><td>File count/size stats (if source exists)</td></tr>
+    </table>
+
+    <h2>Per-App Detail (apps/{slug}.json)</h2>
+    <p>Lazy-loaded detail for apps with source. Fetched by the explorer when opening the "More info" modal.</p>
+    <table class="field-table">
+      <tr><th>Field</th><th>Type</th><th>Description</th></tr>
+      <tr><td>script_excerpt</td><td>string?</td><td>First ~2000 chars of the app script</td></tr>
+      <tr><td>script_path</td><td>string?</td><td>Relative path within the app dir (e.g. "index.js")</td></tr>
+      <tr><td>source_files</td><td>array?</td><td>File tree: [{path, size_bytes}, ...]</td></tr>
+      <tr><td>props</td><td>object?</td><td>Blueprint props (user-configurable fields)</td></tr>
+      <tr><td>asset_files</td><td>string[]?</td><td>Referenced asset filenames from blueprint</td></tr>
+      <tr><td>blueprint_path</td><td>string?</td><td>Blueprint JSON filename within the app dir</td></tr>
+    </table>
+
+    <h2>Endpoints</h2>
+    <p>URL templates from <code>catalog.json</code> <code>endpoints</code> field. Replace <code>{slug}</code> with an app slug:</p>
+    <table class="field-table">
+      <tr><th>Key</th><th>Template</th><th>Description</th></tr>
+      <tr><td>app_detail</td><td>./apps/{slug}.json</td><td>Per-app detail (relative to catalog.json)</td></tr>
+      <tr><td>app_source</td><td>raw.githubusercontent.com/.../v2/apps/{slug}/index.js</td><td>Raw app script source</td></tr>
+      <tr><td>app_blueprint</td><td>raw.githubusercontent.com/.../v2/apps/{slug}/{blueprint_path}</td><td>Raw blueprint JSON (use blueprint_path from detail)</td></tr>
+    </table>
+
+    <h2>Example Entry</h2>
+    <pre><code>{
+  "slug": "confetti",
+  "name": "Confetti",
+  "author": "ash",
+  "description": "Spawns colorful particle confetti when players interact with it.",
+  "preview_url": "media/confetti/preview.webp",
+  "preview_type": "image",
+  "hyp_filename": "Confetti.hyp",
+  "download_path": "https://raw.githubusercontent.com/.../v2/hyp-files/Confetti.hyp",
+  "has_download": true,
+  "created_at": "2024-06-15T18:30:00+00:00",
+  "tags": ["particles", "interaction"],
+  "interaction_modes": ["action"],
+  "asset_profile": "light",
+  "script_complexity": "low",
+  "networking": "events",
+  "has_preview": true,
+  "has_source": true,
+  "has_details": true,
+  "source_status": "v2",
+  "source_inventory": {
+    "file_count": 3,
+    "listed_file_count": 3,
+    "listed_truncated": false,
+    "total_size_bytes": 4521,
+    "js_files": 1,
+    "json_files": 1,
+    "asset_files": 0
+  }
+}</code></pre>
+
+    <h2>jq Recipes</h2>
+    <p>Download <code>catalog.json</code> and query it locally:</p>
+    <pre><code># Count apps
+curl -s catalog.json | jq '.apps | length'
+
+# List all tags with counts
+curl -s catalog.json | jq '.tag_index'
+
+# Filter by tag
+curl -s catalog.json | jq '[.apps[] | select(.tags[] == "particles") | .slug]'
+
+# Filter by author
+curl -s catalog.json | jq '[.apps[] | select(.author == "ash") | {slug, name, description}]'
+
+# Semantic search in descriptions
+curl -s catalog.json | jq '[.apps[] | select(.description | test("fire|flame"; "i")) | .slug]'
+
+# High-complexity apps with networking
+curl -s catalog.json | jq '[.apps[] | select(.script_complexity == "high" and .networking != "none") | {slug, name, networking}]'
+
+# Discover endpoints
+curl -s catalog.json | jq '.endpoints'
+
+# Get app detail (replace SLUG)
+curl -s apps/SLUG.json | jq '.'</code></pre>
+
+    <h2>Allowed Tags</h2>
+    <p>Apps are tagged with up to 6 from this canonical set:</p>
+    <p>
+      <span class="tag">particles</span>
+      <span class="tag">audio</span>
+      <span class="tag">vehicle</span>
+      <span class="tag">npc</span>
+      <span class="tag">combat</span>
+      <span class="tag">camera</span>
+      <span class="tag">physics</span>
+      <span class="tag">ui</span>
+      <span class="tag">environment</span>
+      <span class="tag">animation</span>
+      <span class="tag">interaction</span>
+      <span class="tag">building</span>
+      <span class="tag">teleport</span>
+      <span class="tag">media-player</span>
+      <span class="tag">multiplayer</span>
+      <span class="tag">3d-model</span>
+    </p>
+  </div>
+  <script>
+function copySchema() {
+  const text = `# Hyperfy Apps API — catalog.json schema (v4)
+
+Base: https://hyperfy-xyz.github.io/hyperfy-apps/catalog.json
+Source: https://github.com/hyperfy-xyz/hyperfy-apps
+
+## Top-level
+version: number (4)
+generated_at: string (ISO 8601)
+name: string
+description: string
+base_url: string (GitHub Pages URL)
+source_url: string (GitHub repo URL)
+endpoints: { app_detail, app_source, app_blueprint } (URL templates, replace {slug})
+counts: { total, with_preview, with_source, with_details, metadata_only }
+tag_index: { tag: count } sorted by frequency
+apps: array of card objects
+
+## Per-app card (in apps[])
+slug: string — unique identifier
+name: string — display name
+author: string
+description: string — AI-generated
+preview_url: string? — relative path to preview media
+preview_type: "image" | "video" | "none"
+hyp_filename: string? — original .hyp filename
+download_path: string? — direct download URL
+has_download: boolean
+created_at: string? — ISO 8601
+tags: string[] — max 6 from: particles, audio, vehicle, npc, combat, camera, physics, ui, environment, animation, interaction, building, teleport, media-player, multiplayer, 3d-model
+interaction_modes: string[] — subset of: action, trigger, ui, passive, networked
+asset_profile: "light" | "medium" | "heavy"
+script_complexity: "low" | "medium" | "high"
+networking: "none" | "local" | "shared_state" | "events"
+has_preview: boolean
+has_source: boolean
+has_details: boolean
+source_status: "v2" | "metadata_only"
+source_inventory: { file_count, total_size_bytes, js_files, json_files, asset_files }?
+
+## Per-app detail (apps/{slug}.json, lazy-loaded)
+script_excerpt: string? — first ~2000 chars of app script
+script_path: string? — e.g. "index.js"
+source_files: [{ path, size_bytes }]?
+props: object? — blueprint props
+asset_files: string[]? — referenced asset filenames
+blueprint_path: string? — blueprint JSON filename
+
+## Endpoints (replace {slug})
+app_detail: ./apps/{slug}.json
+app_source: https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/v2/apps/{slug}/index.js
+app_blueprint: https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/v2/apps/{slug}/{blueprint_path}
+
+## jq recipes
+jq '.apps | length'                                            # count apps
+jq '.tag_index'                                                # all tags with counts
+jq '[.apps[] | select(.tags[] == "particles") | .slug]'        # filter by tag
+jq '[.apps[] | select(.author == "ash") | {slug, name}]'       # filter by author
+jq '[.apps[] | select(.description | test("fire"; "i")) | .slug]' # search descriptions
+jq '.endpoints'                                                # discover endpoints`;
+
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.getElementById('copyBtn');
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'Copy schema for LLM'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+  </script>
+</body>
+</html>
