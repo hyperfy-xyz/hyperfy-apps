@@ -1,0 +1,73 @@
+{
+  "app_id": "mini-nukeportal-1357785271864660153",
+  "app_slug": "mini-nukeportal",
+  "app_name": "MINI-NukePORTAL",
+  "source": {
+    "hyp_filename": "MINI-NukePORTAL.hyp",
+    "discord_attachment_id": "1357785271701078036",
+    "discord_message_id": "1357785271864660153",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-04-04T18:33:55.243Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1357785271701078036/MINI-NukePORTAL.hyp?ex=6998a913&is=69975793&hm=ef37ad92156aa04487c6d941a5204f7c02abb0fd51db4ae1ac3be0b2650ab4eb&"
+  },
+  "author": {
+    "display_name": "~/drdoge.eth",
+    "discord_user_id": "357905702926286858",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "MINI NukePORTAL.hyp",
+    "raw_message_content": "",
+    "summary_excerpt": "MINI NukePORTAL.hyp",
+    "source_priority_used": "summary_excerpt"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/mini-nukeportal",
+    "v2_json_path": "v2/apps/mini-nukeportal/MINI-NukePORTAL.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/MINI-NukePORTAL.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/mini-nukeportal/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "mini-nukeportal-1357785271864660153",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:46:46+00:00",
+    "description": "Interactive mini-nuke that players detonate via action button, triggering explosion audio, radiation particle cloud with \u2622 symbols, and radiation damage to nearby players. After a configurable delay, opens a portal to a destination world URL. Includes Geiger counter SFX and green radiation tint UI o",
+    "feature_tags": [
+      "particles",
+      "audio",
+      "combat",
+      "ui",
+      "interaction",
+      "teleport"
+    ],
+    "interaction_modes": [
+      "action",
+      "trigger",
+      "ui",
+      "networked"
+    ],
+    "asset_profile": "heavy",
+    "script_complexity": "high",
+    "networking_profile": "events"
+  }
+}

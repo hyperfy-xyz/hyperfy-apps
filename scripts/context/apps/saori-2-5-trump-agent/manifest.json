@@ -1,0 +1,70 @@
+{
+  "app_id": "saori-2-5-trump-agent-1346629939817877556",
+  "app_slug": "saori-2-5-trump-agent",
+  "app_name": "saori-2-5-trump-agent",
+  "source": {
+    "hyp_filename": "saori-2-5-trump-agent.hyp",
+    "discord_attachment_id": "1346629937737502720",
+    "discord_message_id": "1346629939817877556",
+    "discord_channel": "\ud83c\udfa8\u2502showcase",
+    "discord_channel_category": "Platform",
+    "discord_timestamp": "2025-03-04T23:46:36.827Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1346629937737502720/saori-2-5-trump-agent.hyp?ex=6998f25c&is=6997a0dc&hm=e321eb21a6bea5f4cb14b1487cf83681227f97072bff54eab318c81f87a38757&"
+  },
+  "author": {
+    "display_name": "0mka",
+    "discord_user_id": "783416470205497394",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "saori 2 5 trump agent.hyp",
+    "raw_message_content": "",
+    "summary_excerpt": "saori 2 5 trump agent.hyp",
+    "source_priority_used": "summary_excerpt"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/saori-2-5-trump-agent",
+    "v2_json_path": "v2/apps/saori-2-5-trump-agent/saori-2-5-trump-agent.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/saori-2-5-trump-agent.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/saori-2-5-trump-agent/preview.png",
+    "media_type": ".png",
+    "selection_reason": "existing_catalog_preview",
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "saori-2-5-trump-agent-1346629939817877556",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:48:25+00:00",
+    "description": "AI-driven NPC agent using a VRM avatar that listens for chat messages and player enter/leave events, sends world state to an external endpoint, and renders speech bubble UI responses. Triggers named emotes (wave, think, cheer, explain) and rotates to look at nearby players.",
+    "feature_tags": [
+      "npc",
+      "ui",
+      "animation",
+      "interaction",
+      "3d-model"
+    ],
+    "interaction_modes": [
+      "ui",
+      "networked"
+    ],
+    "asset_profile": "heavy",
+    "script_complexity": "high",
+    "networking_profile": "events"
+  }
+}

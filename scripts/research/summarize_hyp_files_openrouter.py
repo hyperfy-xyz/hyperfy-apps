@@ -6,10 +6,10 @@ Outputs one file per app:
 
 Inputs:
   - tmp/manifests/apps-manifest.json
-  - context/apps/*/manifest.json
-  - context/hyp_index.raw.json
-  - context/hyp_summaries/*.md
-  - context/snippets/*.snippet.txt (conditionally)
+  - scripts/context/apps/*/manifest.json
+  - scripts/context/hyp_index.raw.json
+  - scripts/context/hyp_summaries/*.md
+  - scripts/context/snippets/*.snippet.txt (conditionally)
 """
 
 from __future__ import annotations
@@ -29,7 +29,7 @@ from typing import Any
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-CONTEXT_DIR = REPO_ROOT / "context"
+CONTEXT_DIR = REPO_ROOT / "scripts" / "context"
 CONTEXT_APPS_DIR = CONTEXT_DIR / "apps"
 GLOBAL_MANIFEST = REPO_ROOT / "tmp" / "manifests" / "apps-manifest.json"
 HYP_INDEX_RAW = CONTEXT_DIR / "hyp_index.raw.json"

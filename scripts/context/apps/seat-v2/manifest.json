@@ -1,0 +1,71 @@
+{
+  "app_id": "seat-v2-1391991885559631884",
+  "app_slug": "seat-v2",
+  "app_name": "Seatv2",
+  "source": {
+    "hyp_filename": "Seatv2.hyp",
+    "discord_attachment_id": "1391991885396180992",
+    "discord_message_id": "1391991885559631884",
+    "discord_channel": "\ud83c\udfa8\u2502showcase",
+    "discord_channel_category": "Platform",
+    "discord_timestamp": "2025-07-08T03:58:47.476Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1391991885396180992/Seatv2.hyp?ex=699884b7&is=69973337&hm=a7560ebc75c1da5bad9842770e5e55de6b436de3731a6e152470245e249c672b&"
+  },
+  "author": {
+    "display_name": "0mka",
+    "discord_user_id": "783416470205497394",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "Seatv2.hyp",
+    "raw_message_content": "",
+    "summary_excerpt": "Seatv2.hyp",
+    "source_priority_used": "summary_excerpt"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/seat-v2",
+    "v2_json_path": "v2/apps/seat-v2/Seat\ud83e\ude91v2.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/Seatv2.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/seat-v2/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "seat-v2-1391991885559631884",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:48:39+00:00",
+    "description": "Interactive seat that anchors a player to a configurable sitting position and triggers one of four selectable emote animations. Syncs occupancy state via server networking, displays a hover UI image on pointer enter, and supports both hold-action and click interaction modes with adjustable distance ",
+    "feature_tags": [
+      "interaction",
+      "animation",
+      "ui",
+      "3d-model",
+      "multiplayer"
+    ],
+    "interaction_modes": [
+      "action",
+      "ui",
+      "networked"
+    ],
+    "asset_profile": "medium",
+    "script_complexity": "medium",
+    "networking_profile": "events"
+  }
+}

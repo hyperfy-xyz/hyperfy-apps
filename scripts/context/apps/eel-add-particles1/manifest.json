@@ -1,0 +1,79 @@
+{
+  "app_id": "eel-add-particles1-1362421603765325946",
+  "app_slug": "eel-add-particles1",
+  "app_name": "eel_add_particles1",
+  "source": {
+    "hyp_filename": "eel_add_particles1.hyp",
+    "discord_attachment_id": "1362421603438428161",
+    "discord_message_id": "1362421603765325946",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-04-17T13:37:02.907Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1362421603438428161/eel_add_particles1.hyp?ex=69990c3e&is=6997babe&hm=0874c7022ef56d66d4fb4475a7ed96f93e21f40857aec2e3d71dc96c30639a6e&"
+  },
+  "author": {
+    "display_name": "Gert-Jan Akerboom",
+    "discord_user_id": "601886221072990251",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "here the app if someone wants to check it out : )",
+    "raw_message_content": "here the app if someone wants to check it out : )",
+    "summary_excerpt": "eel add particles1.hyp",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/eel-add-particles1",
+    "v2_json_path": "v2/apps/eel-add-particles1/eel_add_particles1.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/eel_add_particles1.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/eel_add_particles1/1362421523838927020_eel_add_particles.mp4",
+    "media_type": ".mp4",
+    "selection_reason": "same_author_nearby",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/eel_add_particles1/1362421523838927020_eel_add_particles.mp4",
+      "original_filename": "eel_add_particles.mp4",
+      "content_type": "video/mp4",
+      "relative_index": -1,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 1971016,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1362421523838927020"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "eel-add-particles1-1362421603765325946",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:44:31+00:00",
+    "description": "Spawns additive glow-dust particles that track a bone position on an animated eel rig. Plays a 'flow' animation on the model and reads bone transforms each frame to reposition the particle emitter in world space. Supports a configurable particle texture upload.",
+    "feature_tags": [
+      "particles",
+      "animation",
+      "3d-model"
+    ],
+    "interaction_modes": [
+      "passive"
+    ],
+    "asset_profile": "medium",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

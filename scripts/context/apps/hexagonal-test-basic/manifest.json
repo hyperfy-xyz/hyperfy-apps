@@ -1,0 +1,79 @@
+{
+  "app_id": "hexagonal-test-basic-1355683928421171290",
+  "app_slug": "hexagonal-test-basic",
+  "app_name": "hexagonal_test_basic",
+  "source": {
+    "hyp_filename": "hexagonal_test_basic.hyp",
+    "discord_attachment_id": "1355683927422926929",
+    "discord_message_id": "1355683928421171290",
+    "discord_channel": "\ud83c\udfa8\u2502showcase",
+    "discord_channel_category": "Platform",
+    "discord_timestamp": "2025-03-29T23:23:55.925Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1355683927422926929/hexagonal_test_basic.hyp?ex=6998ed0b&is=69979b8b&hm=6977996466085faf41fb7ba4382c59648de09bd214c77311860ec68bf620cc17&"
+  },
+  "author": {
+    "display_name": "cru",
+    "discord_user_id": "735663632356212887",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "interesting hexagonal panels that react to player and change color \nmade em for a mini-game project",
+    "raw_message_content": "interesting hexagonal panels that react to player and change color \nmade em for a mini-game project",
+    "summary_excerpt": "hexagonal test basic.hyp",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/hexagonal-test-basic",
+    "v2_json_path": "v2/apps/hexagonal-test-basic/blueprint.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/hexagonal_test_basic.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/hexagonal_test_basic/1355683928199004232_image.png",
+    "media_type": ".png",
+    "selection_reason": "same_message",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/hexagonal_test_basic/1355683928199004232_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": 0,
+      "same_author": true,
+      "selection_reason": "same_message",
+      "size_bytes": 385735,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1355683928199004232"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "hexagonal-test-basic-1355683928421171290",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:45:41+00:00",
+    "description": "Renders 25 hexagonal panels that oscillate vertically with sinusoidal motion and shift downward on player contact. Each panel scrolls UV offsets through 6 color states when stepped on, then trails back to idle. Configurable shift distance, speed, amplitude, and frequency.",
+    "feature_tags": [
+      "animation",
+      "interaction",
+      "3d-model"
+    ],
+    "interaction_modes": [
+      "passive"
+    ],
+    "asset_profile": "medium",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

@@ -11,8 +11,8 @@ Usage:
 
 Commands:
     unbundle       Extract .hyp to directory with blueprint.json and assets/
-    unbundle-index Batch-unbundle from context/hyp_index.raw.json into tmp/unbundled-hyp/
-    promote        Promote unbundled apps from tmp/unbundled-hyp/ into v2/ using apps-manifest
+    unbundle-index Batch-unbundle from scripts/context/hyp_index.raw.json into tmp/unbundled-hyp/
+    promote        Promote unbundled apps from tmp/unbundled-hyp/ into v2/apps/ using apps-manifest
     bundle         Pack directory back into .hyp file
     info           Show .hyp file contents without extracting
 
@@ -23,7 +23,7 @@ Examples:
     # Extract to specific directory
     python hyp_tool.py unbundle sit.hyp ./my-app/
 
-    # Promote unbundled apps into v2/
+    # Promote unbundled apps into v2/apps/
     python hyp_tool.py promote --write-index
 
     # Repack after editing
@@ -46,12 +46,12 @@ from typing import Any
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
-DEFAULT_INDEX = PROJECT_ROOT / "context" / "hyp_index.raw.json"
-DEFAULT_HYP_ROOT = PROJECT_ROOT / "hyp-files"
+DEFAULT_INDEX = PROJECT_ROOT / "scripts" / "context" / "hyp_index.raw.json"
+DEFAULT_HYP_ROOT = PROJECT_ROOT / "v2" / "hyp-files"
 DEFAULT_OUT_ROOT = PROJECT_ROOT / "tmp" / "unbundled-hyp"
 DEFAULT_APPS_MANIFEST = PROJECT_ROOT / "tmp" / "manifests" / "apps-manifest.json"
-DEFAULT_CONTEXT_APPS = PROJECT_ROOT / "context" / "apps"
-DEFAULT_V2_ROOT = PROJECT_ROOT / "v2"
+DEFAULT_CONTEXT_APPS = PROJECT_ROOT / "scripts" / "context" / "apps"
+DEFAULT_V2_ROOT = PROJECT_ROOT / "v2" / "apps"
 DEFAULT_PROMOTE_REPORT = PROJECT_ROOT / "tmp" / "manifests" / "v2-promotion-report.json"
 
 

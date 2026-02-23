@@ -6,9 +6,9 @@ Outputs:
 
 Inputs:
   tmp/manifests/apps-manifest.json  (canonical manifest list)
-  context/apps/*/manifest.json      (optional fallback with --allow-context-fallback)
+  scripts/context/apps/*/manifest.json      (optional fallback with --allow-context-fallback)
   (manifest["ai"] or tmp/ai-summaries/<slug>.json)
-  v2/*/  (blueprint JSON, index.js, asset files)
+  v2/apps/*/  (blueprint JSON, index.js, asset files)
 """
 
 from __future__ import annotations
@@ -23,11 +23,11 @@ from typing import Any
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 CATALOG_ROOT = REPO_ROOT / "catalog"
-CONTEXT_APPS_DIR = REPO_ROOT / "context" / "apps"
+CONTEXT_APPS_DIR = REPO_ROOT / "scripts" / "context" / "apps"
 AI_SUMMARIES_DIR = REPO_ROOT / "tmp" / "ai-summaries"
 MEDIA_DIR = CATALOG_ROOT / "media"
-V2_APPS_DIR = REPO_ROOT / "v2"
-HYP_FILES_DIR = REPO_ROOT / "hyp-files"
+V2_APPS_DIR = REPO_ROOT / "v2" / "apps"
+HYP_FILES_DIR = REPO_ROOT / "v2" / "hyp-files"
 TMP_MANIFESTS_DIR = REPO_ROOT / "tmp" / "manifests"
 APPS_MANIFEST_PATH = TMP_MANIFESTS_DIR / "apps-manifest.json"
 
@@ -108,7 +108,7 @@ def collect_manifest_paths(*, allow_context_fallback: bool) -> tuple[list[Path],
             if not manifest_rel:
                 slug = (row.get("app_slug") or "").strip()
                 if slug:
-                    manifest_rel = f"context/apps/{slug}/manifest.json"
+                    manifest_rel = f"scripts/context/apps/{slug}/manifest.json"
             if not manifest_rel:
                 continue
 
@@ -140,14 +140,14 @@ def collect_manifest_paths(*, allow_context_fallback: bool) -> tuple[list[Path],
         warnings.append("apps-manifest could not be read")
 
     if not allow_context_fallback:
-        warnings.append("context/apps fallback disabled")
+        warnings.append("scripts/context/apps fallback disabled")
         return [], "apps-manifest", warnings
 
     fallback_paths = sorted(CONTEXT_APPS_DIR.glob("*/manifest.json"))
     if fallback_paths:
-        warnings.append("using context/apps fallback manifests")
+        warnings.append("using scripts/context/apps fallback manifests")
     else:
-        warnings.append("context/apps fallback produced no manifests")
+        warnings.append("scripts/context/apps fallback produced no manifests")
     return fallback_paths, "context-apps-glob", warnings
 
 
@@ -407,7 +407,7 @@ def build_app_entry(
     # Download: only emit URL if the .hyp file exists in hyp-files/
     hyp_filename = source.get("hyp_filename")
     has_hyp_file = bool(hyp_filename and (HYP_FILES_DIR / hyp_filename).exists())
-    download_url = f"{GITHUB_RAW_BASE}/hyp-files/{hyp_filename}" if has_hyp_file else None
+    download_url = f"{GITHUB_RAW_BASE}/v2/hyp-files/{hyp_filename}" if has_hyp_file else None
 
     # Extract source excerpts from v2
     props: dict[str, Any] = {}
@@ -481,12 +481,12 @@ def main() -> int:
     parser.add_argument(
         "--allow-context-fallback",
         action="store_true",
-        help="Allow fallback to context/apps/*/manifest.json when apps-manifest is missing/unusable",
+        help="Allow fallback to scripts/context/apps/*/manifest.json when apps-manifest is missing/unusable",
     )
     parser.add_argument(
         "--allow-missing-hyp",
         action="store_true",
-        help="Allow apps that reference missing hyp-files/*.hyp entries (default: fail with error)",
+        help="Allow apps that reference missing v2/hyp-files/*.hyp entries (default: fail with error)",
     )
     parser.add_argument(
         "--force",
@@ -550,7 +550,7 @@ def main() -> int:
         # Find v2 app directory
         v2_dir_rel = manifest.get("links", {}).get("v2_app_dir")
         v2_dir = find_v2_app_dir(v2_dir_rel, slug)
-        expected_v2 = v2_dir_rel or f"v2/{slug}"
+        expected_v2 = v2_dir_rel or f"v2/apps/{slug}"
 
         # Read blueprint JSON
         blueprint = None
@@ -633,7 +633,7 @@ def main() -> int:
                 {
                     "slug": slug,
                     "hyp_filename": hyp_filename,
-                    "expected_path": f"hyp-files/{hyp_filename}",
+                    "expected_path": f"v2/hyp-files/{hyp_filename}",
                 }
                 for slug, hyp_filename in missing_hyp
             ],
@@ -647,7 +647,7 @@ def main() -> int:
         print(f"  Missing .hyp files: {len(missing_hyp)}")
         print(f"  Missing .hyp report: {missing_hyp_report_path.relative_to(REPO_ROOT)}")
         for slug, hyp_filename in missing_hyp:
-            print(f"    - {slug}: hyp-files/{hyp_filename} (missing)")
+            print(f"    - {slug}: v2/hyp-files/{hyp_filename} (missing)")
         if not (args.allow_missing_hyp or args.force):
             print("Error: missing .hyp files detected. catalog/catalog.json was not updated.")
             return 2

@@ -1,0 +1,70 @@
+{
+  "app_id": "emote-rom-1-1362219850151231579",
+  "app_slug": "emote-rom-1",
+  "app_name": "Emote_Rom_1",
+  "source": {
+    "hyp_filename": "Emote_Rom_1.hyp",
+    "discord_attachment_id": "1362219849807560896",
+    "discord_message_id": "1362219850151231579",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-04-17T00:15:21.097Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1362219849807560896/Emote_Rom_1.hyp?ex=6998f919&is=6997a799&hm=10e306dab04c2533d15305b493a074d5c59bc3523c0c5f061ffea0547b07f9df&"
+  },
+  "author": {
+    "display_name": "~/drdoge.eth",
+    "discord_user_id": "357905702926286858",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "<@722481129449586739>",
+    "raw_message_content": "<@722481129449586739>",
+    "summary_excerpt": "Emote Rom 1.hyp",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/emote-rom-1",
+    "v2_json_path": "v2/apps/emote-rom-1/blueprint.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/Emote_Rom_1.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/emote-rom-1/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "emote-rom-1-1362219850151231579",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:44:43+00:00",
+    "description": "Emote player ROM that triggers up to 10 configurable emote animations via numpad keys, syncs playback across multiplayer clients using broadcast events, and renders a floating emoji UI indicator above each player for the emote duration.",
+    "feature_tags": [
+      "animation",
+      "ui",
+      "multiplayer",
+      "interaction",
+      "3d-model"
+    ],
+    "interaction_modes": [
+      "ui",
+      "networked"
+    ],
+    "asset_profile": "medium",
+    "script_complexity": "medium",
+    "networking_profile": "events"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "app_id": "gert-2-1-aloe-1346629939817877556",
+  "app_slug": "gert-2-1-aloe",
+  "app_name": "Gert-2-1-aloe",
+  "source": {
+    "hyp_filename": "Gert-2-1-aloe.hyp",
+    "discord_attachment_id": "1346629938626953306",
+    "discord_message_id": "1346629939817877556",
+    "discord_channel": "\ud83c\udfa8\u2502showcase",
+    "discord_channel_category": "Platform",
+    "discord_timestamp": "2025-03-04T23:46:36.827Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1346629938626953306/Gert-2-1-aloe.hyp?ex=6998f25c&is=6997a0dc&hm=479a9c6059ba299b6b83d35761e9becf2cce046257e3bdb02682676595765578&"
+  },
+  "author": {
+    "display_name": "0mka",
+    "discord_user_id": "783416470205497394",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "Gert 2 1 aloe.hyp",
+    "raw_message_content": "",
+    "summary_excerpt": "Gert 2 1 aloe.hyp",
+    "source_priority_used": "summary_excerpt"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/gert-2-1-aloe",
+    "v2_json_path": "v2/apps/gert-2-1-aloe/blueprint.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/Gert-2-1-aloe.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/gert-2-1-aloe/preview.png",
+    "media_type": ".png",
+    "selection_reason": "existing_catalog_preview",
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "gert-2-1-aloe-1346629939817877556",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:45:18+00:00",
+    "description": "Spawns configurable Aloe Vera plant clones across a defined rectangular area. Distributes up to 100 3D model instances with randomized position, Y-axis rotation, and uniform scale between user-defined min/max size values via a configure UI panel.",
+    "feature_tags": [
+      "3d-model",
+      "environment",
+      "ui"
+    ],
+    "interaction_modes": [
+      "passive"
+    ],
+    "asset_profile": "medium",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "app_id": "camera-laser-1425737416207110174",
+  "app_slug": "camera-laser",
+  "app_name": "CameraLaser",
+  "source": {
+    "hyp_filename": "CameraLaser.hyp",
+    "discord_attachment_id": "1425737415955320935",
+    "discord_message_id": "1425737416207110174",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-10-09T06:51:28.944Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1425737415955320935/CameraLaser.hyp?ex=6998ad30&is=69975bb0&hm=73ed5a65e0ce554ed480ddeb75251243e47f6f425ad05ffaad90d932423449f8&"
+  },
+  "author": {
+    "display_name": "Shiffty",
+    "discord_user_id": "466331582458888192",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "This should get you on track",
+    "raw_message_content": "This should get you on track",
+    "summary_excerpt": "CameraLaser.hyp",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/camera-laser",
+    "v2_json_path": "v2/apps/camera-laser/Camera Laser.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/CameraLaser.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/cameralaser/1425757284574822470_cannonballs.mp4",
+    "media_type": ".mp4",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/cameralaser/1425757284574822470_cannonballs.mp4",
+      "original_filename": "cannonballs.mp4",
+      "content_type": "video/mp4",
+      "relative_index": 2,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 3459899,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1425757284574822470"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "camera-laser-1425737416207110174",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:43:40+00:00",
+    "description": "Equippable laser gun that shoots red laser beams from the camera's forward direction. Players trigger an action to equip, then fire lasers on mouse click. Laser clones spawn via networked events, fade out over 3 seconds, and are cleaned up by the server.",
+    "feature_tags": [
+      "camera",
+      "combat",
+      "interaction",
+      "multiplayer",
+      "3d-model"
+    ],
+    "interaction_modes": [
+      "action",
+      "networked"
+    ],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "events"
+  }
+}

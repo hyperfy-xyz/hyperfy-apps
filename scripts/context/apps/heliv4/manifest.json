@@ -1,0 +1,68 @@
+{
+  "app_id": "heliv4-1374463195070332958",
+  "app_slug": "heliv4",
+  "app_name": "HELIv4",
+  "source": {
+    "hyp_filename": "HELIv4.hyp",
+    "discord_attachment_id": "1374463194738987048",
+    "discord_message_id": "1374463195070332958",
+    "discord_channel": "\ud83c\udfa8\u2502showcase",
+    "discord_channel_category": "Platform",
+    "discord_timestamp": "2025-05-20T19:06:01.996Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1374463194738987048/HELIv4.hyp?ex=6998b099&is=69975f19&hm=4548dfe2018793236d00e6dbeec6139be1e8f3d0bf5630794b27c5774d4efa61&"
+  },
+  "author": {
+    "display_name": "vox",
+    "discord_user_id": "415262868217266177",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "HELIv4.hyp",
+    "raw_message_content": "",
+    "summary_excerpt": "HELIv4.hyp",
+    "source_priority_used": "summary_excerpt"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/heliv4",
+    "v2_json_path": "v2/apps/heliv4/blueprint.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/HELIv4.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/heliv4/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "heliv4-1374463195070332958",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:45:36+00:00",
+    "description": "Helicopter that flies an oval path with curvature-based speed adjustment, scrolls rotor UV textures to simulate spinning blades, and plays a looping spatial engine audio. The script interpolates yaw and pitch to animate smooth banking turns around the circuit.",
+    "feature_tags": [
+      "vehicle",
+      "audio",
+      "animation",
+      "3d-model"
+    ],
+    "interaction_modes": [
+      "passive"
+    ],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

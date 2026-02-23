@@ -1,0 +1,83 @@
+{
+  "app_id": "neon-2-1369292993667928145",
+  "app_slug": "neon-2",
+  "app_name": "NEON_2",
+  "source": {
+    "hyp_filename": "NEON_2.hyp",
+    "discord_attachment_id": "1369292993231851604",
+    "discord_message_id": "1369292993667928145",
+    "discord_channel": "\ud83c\udfa8\u2502showcase",
+    "discord_channel_category": "Platform",
+    "discord_timestamp": "2025-05-06T12:41:29.924Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1369292993231851604/NEON_2.hyp?ex=6998ff39&is=6997adb9&hm=effe1da749e47209fa3f6b7eda0b04a80f114fac0c1a9d5ffdfb859bad9bf831&"
+  },
+  "author": {
+    "display_name": "Gert-Jan Akerboom",
+    "discord_user_id": "601886221072990251",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "NEON 2.hyp",
+    "raw_message_content": "",
+    "summary_excerpt": "NEON 2.hyp",
+    "source_priority_used": "summary_excerpt"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/neon-2",
+    "v2_json_path": "v2/apps/neon-2/NEON_2.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/NEON_2.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/neon_2/1369282306526674985_NEON.mp4",
+    "media_type": ".mp4",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/neon_2/1369282306526674985_NEON.mp4",
+      "original_filename": "NEON.mp4",
+      "content_type": "video/mp4",
+      "relative_index": -3,
+      "same_author": true,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 4280581,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1369282306526674985"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "neon-2-1369292993667928145",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:47:02+00:00",
+    "description": "Renders a customizable neon sign by cloning 3D letter meshes from a GLB model based on user-typed text input. Supports configurable spacing, scale, height, glow intensity, color, and alignment. Plays looping spatial audio with adjustable volume, distance, and rolloff settings via a UI panel.",
+    "feature_tags": [
+      "audio",
+      "ui",
+      "3d-model",
+      "environment"
+    ],
+    "interaction_modes": [
+      "passive",
+      "networked"
+    ],
+    "asset_profile": "medium",
+    "script_complexity": "medium",
+    "networking_profile": "events"
+  }
+}

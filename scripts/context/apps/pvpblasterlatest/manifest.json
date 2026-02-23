@@ -1,0 +1,72 @@
+{
+  "app_id": "pvpblasterlatest-1354225264028291292",
+  "app_slug": "pvpblasterlatest",
+  "app_name": "PVPblasterLATEST",
+  "source": {
+    "hyp_filename": "PVPblasterLATEST.hyp",
+    "discord_attachment_id": "1354225263701000274",
+    "discord_message_id": "1354225264028291292",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-25T22:47:43.233Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1354225263701000274/PVPblasterLATEST.hyp?ex=6998e48f&is=6997930f&hm=684f8a5ccf94ab5ee5b421209407b8b5d902a3b417a75aff3bb06c5ddbc44dc5&"
+  },
+  "author": {
+    "display_name": "hypShaman",
+    "discord_user_id": "297290503181959169",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "PVPblasterLATEST.hyp",
+    "raw_message_content": "",
+    "summary_excerpt": "PVPblasterLATEST.hyp",
+    "source_priority_used": "summary_excerpt"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/pvpblasterlatest",
+    "v2_json_path": "v2/apps/pvpblasterlatest/PVPblasterLATEST.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/PVPblasterLATEST.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/pvpblasterlatest/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "pvpblasterlatest-1354225264028291292",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:47:47+00:00",
+    "description": "PVP blaster weapon that fires raycast projectiles, spawns lightning and muzzle flash particles, plays spatial impact and lightning audio, damages other players with configurable headshot multipliers, and supports health regeneration and first-person camera mode.",
+    "feature_tags": [
+      "combat",
+      "particles",
+      "audio",
+      "animation",
+      "camera",
+      "ui"
+    ],
+    "interaction_modes": [
+      "action",
+      "ui",
+      "networked"
+    ],
+    "asset_profile": "heavy",
+    "script_complexity": "high",
+    "networking_profile": "events"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "app_id": "triggerzone-1440323116382556250",
+  "app_slug": "triggerzone",
+  "app_name": "TriggerZone",
+  "source": {
+    "hyp_filename": "TriggerZone.hyp",
+    "discord_attachment_id": "1440323116084756635",
+    "discord_message_id": "1440323116382556250",
+    "discord_channel": "\ud83c\udfa8\u2502showcase",
+    "discord_channel_category": "Platform",
+    "discord_timestamp": "2025-11-18T12:49:50.855Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1440323116084756635/TriggerZone.hyp?ex=6999012e&is=6997afae&hm=d828ecc7060225fd6e4cf630abb11b8f208c74a6329383b8137e8ca41f79bd7f&"
+  },
+  "author": {
+    "display_name": "Gert-Jan Akerboom",
+    "discord_user_id": "601886221072990251",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "TriggerZone - triggers when a player walks through, sends a message to discord when triggered.",
+    "raw_message_content": "TriggerZone - triggers when a player walks through, sends a message to discord when triggered.",
+    "summary_excerpt": "TriggerZone.hyp",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/triggerzone",
+    "v2_json_path": "v2/apps/triggerzone/TriggerZone.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/TriggerZone.md"
+  },
+  "preview": {
+    "primary_media_path": null,
+    "media_type": null,
+    "selection_reason": null,
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": false,
+    "has_hyp_file": true,
+    "needs_media_review": true,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "triggerzone-1440323116382556250",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:49:40+00:00",
+    "description": "Creates a configurable box collider trigger zone that detects when players walk through it and sends a Discord webhook message. Renders a semi-transparent emissive prim cube as a visual indicator with adjustable color, opacity, and size. Supports excluding specific player names from triggering.",
+    "feature_tags": [
+      "physics",
+      "interaction",
+      "ui"
+    ],
+    "interaction_modes": [
+      "trigger",
+      "networked"
+    ],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "events"
+  }
+}

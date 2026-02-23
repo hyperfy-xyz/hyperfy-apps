@@ -1,0 +1,69 @@
+{
+  "app_id": "discord3-1421084209073885294",
+  "app_slug": "discord3",
+  "app_name": "Discord3",
+  "source": {
+    "hyp_filename": "Discord3.hyp",
+    "discord_attachment_id": "1421084208608055326",
+    "discord_message_id": "1421084209073885294",
+    "discord_channel": "\ud83c\udfa8\u2502showcase",
+    "discord_channel_category": "Platform",
+    "discord_timestamp": "2025-09-26T10:41:17.911Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1421084208608055326/Discord3.hyp?ex=6998e30d&is=6997918d&hm=bb744e48b6bf8fee0852163a11272fe9682efec20e78592fb7bbe6564d1bfc07&"
+  },
+  "author": {
+    "display_name": "Gert-Jan Akerboom",
+    "discord_user_id": "601886221072990251",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "Added some features to the discord app.\n- shows how long players were in the world.\n- optional screen UI ping when someone enters\n- Exclude player names from the discord notifications (yourself for instance)\n- Logo visibility on/off",
+    "raw_message_content": "Added some features to the discord app.\n- shows how long players were in the world.\n- optional screen UI ping when someone enters\n- Exclude player names from the discord notifications (yourself for instance)\n- Logo visibility on/off",
+    "summary_excerpt": "Discord3.hyp",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/discord3",
+    "v2_json_path": "v2/apps/discord3/Discord3.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/Discord3.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/discord3/preview.png",
+    "media_type": ".png",
+    "selection_reason": "existing_catalog_preview",
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "discord3-1421084209073885294",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:44:27+00:00",
+    "description": "Broadcasts world events to a Discord webhook. Tracks player enter/leave events and chat messages, sends them via fetch to a configured Discord channel. Displays a rotating 3D Discord logo and renders screen-space UI notifications when players join. Supports name exclusion lists and session duration ",
+    "feature_tags": [
+      "ui",
+      "animation",
+      "interaction",
+      "3d-model"
+    ],
+    "interaction_modes": [
+      "ui",
+      "networked"
+    ],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "events"
+  }
+}

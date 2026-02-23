@@ -1,0 +1,69 @@
+{
+  "app_id": "car1-v2-1353199999730581585",
+  "app_slug": "car1-v2",
+  "app_name": "car1-v2",
+  "source": {
+    "hyp_filename": "car1-v2.hyp",
+    "discord_attachment_id": "1353199999349162085",
+    "discord_message_id": "1353199999730581585",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-23T02:53:41.176Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1353199999349162085/car1-v2.hyp?ex=69991e35&is=6997ccb5&hm=b5d458a7082f4293c921c9fdc4526dbf364dad696622c229d9987585d9a2eb18&"
+  },
+  "author": {
+    "display_name": "ash",
+    "discord_user_id": "179546010303856640",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "ok added some better anti-roll to this",
+    "raw_message_content": "ok added some better anti-roll to this",
+    "summary_excerpt": "car1 v2.hyp",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/car1-v2",
+    "v2_json_path": "v2/apps/car1-v2/blueprint.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/car1-v2.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/car1-v2/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "car1-v2-1353199999730581585",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:43:54+00:00",
+    "description": "Drivable car with raycast suspension that simulates spring forces, lateral grip, and anti-roll stabilization per wheel. Players steer and accelerate via WASD controls, with an anchor node attaching the driver to the vehicle body during fixedUpdate physics ticks.",
+    "feature_tags": [
+      "vehicle",
+      "physics",
+      "interaction",
+      "3d-model"
+    ],
+    "interaction_modes": [
+      "passive",
+      "networked"
+    ],
+    "asset_profile": "light",
+    "script_complexity": "high",
+    "networking_profile": "events"
+  }
+}

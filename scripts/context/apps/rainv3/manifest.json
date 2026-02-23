@@ -1,0 +1,96 @@
+{
+  "app_id": "rainv3-1359821051999158272",
+  "app_slug": "rainv3",
+  "app_name": "RainV3",
+  "source": {
+    "hyp_filename": "RainV3.hyp",
+    "discord_attachment_id": "1359821051676332214",
+    "discord_message_id": "1359821051999158272",
+    "discord_channel": "\ud83c\udfa8\u2502showcase",
+    "discord_channel_category": "Platform",
+    "discord_timestamp": "2025-04-10T09:23:23.050Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1359821051676332214/RainV3.hyp?ex=6998d0ca&is=69977f4a&hm=75e336b1469d0030487e0cbb75f412d04babd7ab85aed9425e14f61d7ab6d1c9&"
+  },
+  "author": {
+    "display_name": "Gert-Jan Akerboom",
+    "discord_user_id": "601886221072990251",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "rain V3",
+    "raw_message_content": "rain V3",
+    "summary_excerpt": "RainV3.hyp",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/rainv3",
+    "v2_json_path": "v2/apps/rainv3/RainV3.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/RainV3.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/rainv3/1359680764010303610_image.png",
+    "media_type": ".png",
+    "selection_reason": "any_author_fallback",
+    "is_fallback_any_author": true
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/rainv3/1359680764010303610_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": -1,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 138172,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1359680764010303610"
+    },
+    {
+      "catalog_path": "catalog/media/rainv3/1359680764517683422_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": -1,
+      "same_author": false,
+      "selection_reason": "any_author_fallback",
+      "size_bytes": 541019,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1359680764517683422"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "media_fallback_any_author"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "rainv3-1359821051999158272",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:47:57+00:00",
+    "description": "Spawns up to 5000 billboard raindrop particles that fall with configurable gravity and speed, then triggers ring-shaped splash effects on ground impact. Uses a pooled particle system with camera-facing rotation and adjustable spawn radius, scale, and spawn rate via UI controls.",
+    "feature_tags": [
+      "particles",
+      "physics",
+      "environment",
+      "camera",
+      "ui"
+    ],
+    "interaction_modes": [
+      "passive"
+    ],
+    "asset_profile": "light",
+    "script_complexity": "medium",
+    "networking_profile": "none"
+  }
+}

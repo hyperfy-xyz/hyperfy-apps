@@ -2,7 +2,7 @@
 """Prepare a local context bundle for AI summarization in hyperfy-apps.
 
 Copies curated Hyperfy docs and hyperfy-archiver references into:
-  context/
+  scripts/context/
 
 Also creates compact snippet files used by the OpenRouter summarizer.
 """
@@ -15,7 +15,7 @@ from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-CONTEXT_ROOT = REPO_ROOT / "context"
+CONTEXT_ROOT = REPO_ROOT / "scripts" / "context"
 SNIPPETS_DIR = CONTEXT_ROOT / "snippets"
 
 SOURCE_FILES = [

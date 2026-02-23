@@ -1,0 +1,67 @@
+{
+  "app_id": "screen-1361324085598228530",
+  "app_slug": "screen",
+  "app_name": "Screen",
+  "source": {
+    "hyp_filename": "Screen.hyp",
+    "discord_attachment_id": "1361324085199503401",
+    "discord_message_id": "1361324085598228530",
+    "discord_channel": "\ud83c\udfa8\u2502showcase",
+    "discord_channel_category": "Platform",
+    "discord_timestamp": "2025-04-14T12:55:54.185Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/1346623562462527649/1361324085199503401/Screen.hyp?ex=6999029a&is=6997b11a&hm=730edb9cc5b0ab854c045f7c20ad8c45677fe7f6e372c61d8f47ba459e557549&"
+  },
+  "author": {
+    "display_name": "ash",
+    "discord_user_id": "179546010303856640",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "TV with screensharing:",
+    "raw_message_content": "TV with screensharing:",
+    "summary_excerpt": "Screen.hyp",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/screen",
+    "v2_json_path": "v2/apps/screen/Screen.json",
+    "hyp_summary_path": "scripts/context/hyp_summaries/Screen.md"
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/screen/preview.jpg",
+    "media_type": ".jpg",
+    "selection_reason": "existing_catalog_preview",
+    "is_fallback_any_author": false
+  },
+  "media": [],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [
+      "no_media_found"
+    ],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "screen-1361324085598228530",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:48:28+00:00",
+    "description": "Renders a TV screen model and creates a linked video node that triggers screensharing when a player interacts with an action button. Supports a configurable permission toggle restricting screen sharing to admins or allowing everyone within a 5-meter interaction distance.",
+    "feature_tags": [
+      "media-player",
+      "interaction",
+      "3d-model"
+    ],
+    "interaction_modes": [
+      "action"
+    ],
+    "asset_profile": "light",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}

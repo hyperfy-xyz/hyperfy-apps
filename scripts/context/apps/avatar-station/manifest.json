@@ -1,0 +1,78 @@
+{
+  "app_id": "avatar-station-1348513329236148266",
+  "app_slug": "avatar-station",
+  "app_name": "Avatar_Station",
+  "source": {
+    "hyp_filename": "Avatar_Station.hyp",
+    "discord_attachment_id": "1348513328972038216",
+    "discord_message_id": "1348513329236148266",
+    "discord_channel": "\ud83d\udcbb\u2502developers",
+    "discord_channel_category": "Creators",
+    "discord_timestamp": "2025-03-10T04:30:31.856Z",
+    "discord_url": "https://cdn.discordapp.com/attachments/994775534733115412/1348513328972038216/Avatar_Station.hyp?ex=69988c27&is=69973aa7&hm=60ecfed4a7a02e8ae9c5c852a03bdc77375e4791533d327ae0ff22001b2b0e51&"
+  },
+  "author": {
+    "display_name": "Shiffty",
+    "discord_user_id": "466331582458888192",
+    "confidence": "high",
+    "evidence": "discord"
+  },
+  "description": {
+    "short": "The avatar station needs an update for anyone in dev with the new player stuff... still uses an event player (e.player.setSessionAvatar). Fixed here.",
+    "raw_message_content": "The avatar station needs an update for anyone in dev with the new player stuff... still uses an event player (e.player.setSessionAvatar). Fixed here.",
+    "summary_excerpt": "",
+    "source_priority_used": "discord_message"
+  },
+  "links": {
+    "v2_app_dir": "v2/apps/avatar-station",
+    "v2_json_path": "v2/apps/avatar-station/Avatar Station.json",
+    "hyp_summary_path": null
+  },
+  "preview": {
+    "primary_media_path": "catalog/media/avatar_station/1348513988400517161_image.png",
+    "media_type": ".png",
+    "selection_reason": "same_author_nearby",
+    "is_fallback_any_author": false
+  },
+  "media": [
+    {
+      "catalog_path": "catalog/media/avatar_station/1348513988400517161_image.png",
+      "original_filename": "image.png",
+      "content_type": "image/png",
+      "relative_index": 1,
+      "same_author": true,
+      "selection_reason": "same_author_nearby",
+      "size_bytes": 295013,
+      "optimized": true,
+      "excluded_large": false,
+      "download_status": "downloaded",
+      "attachment_id": "1348513988400517161"
+    }
+  ],
+  "status": {
+    "has_preview": true,
+    "has_hyp_file": true,
+    "needs_media_review": false,
+    "needs_author_review": false,
+    "flags": [],
+    "notes": ""
+  },
+  "generated_at": "2026-02-22T02:16:59+00:00",
+  "max_commit_size_bytes": 52428800,
+  "ai": {
+    "app_id": "avatar-station-1348513329236148266",
+    "model": "anthropic/claude-opus-4.6",
+    "generated_at": "2026-02-21T23:42:50+00:00",
+    "description": "Displays a VRM avatar on a pedestal with optional hover and rotate animations, a nametag label, and an interaction action that triggers setSessionAvatar to equip the displayed avatar onto the player's session.",
+    "feature_tags": [
+      "3d-model",
+      "animation",
+      "interaction",
+      "npc"
+    ],
+    "interaction_modes": [],
+    "asset_profile": "medium",
+    "script_complexity": "low",
+    "networking_profile": "none"
+  }
+}
