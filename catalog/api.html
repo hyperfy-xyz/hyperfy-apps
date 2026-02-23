@@ -170,7 +170,7 @@
     </div>
 
     <h2>Overview</h2>
-    <p><code>catalog.json</code> is the single data file. It contains card-level metadata for every app plus top-level indexes. Heavy per-app detail (script excerpts, file trees, props) lives in separate <code>apps/{slug}.json</code> files, loaded on demand.</p>
+    <p><code>catalog.json</code> is the single data file. It contains complete metadata for every app — descriptions, tags, script excerpts, file trees, props, and download links — plus top-level indexes for filtering and discovery.</p>
 
     <h2>Top-level Schema</h2>
     <table class="field-table">
@@ -187,7 +187,7 @@
       <tr><td>apps</td><td>array</td><td>Array of per-app card objects</td></tr>
     </table>
 
-    <h2>Per-App Card Fields</h2>
+    <h2>Per-App Fields</h2>
     <p>Each entry in the <code>apps</code> array:</p>
     <table class="field-table">
       <tr><th>Field</th><th>Type</th><th>Description</th></tr>
@@ -208,15 +208,9 @@
       <tr><td>networking</td><td>string</td><td>"none" | "local" | "shared_state" | "events"</td></tr>
       <tr><td>has_preview</td><td>boolean</td><td>Whether preview media exists</td></tr>
       <tr><td>has_source</td><td>boolean</td><td>Whether extracted v2 source exists</td></tr>
-      <tr><td>has_details</td><td>boolean</td><td>Whether detail file exists at apps/{slug}.json</td></tr>
+      <tr><td>has_details</td><td>boolean</td><td>Whether detail fields are present</td></tr>
       <tr><td>source_status</td><td>string</td><td>"v2" or "metadata_only"</td></tr>
-      <tr><td>source_inventory</td><td>object?</td><td>File count/size stats (if source exists)</td></tr>
-    </table>
-
-    <h2>Per-App Detail (apps/{slug}.json)</h2>
-    <p>Lazy-loaded detail for apps with source. Fetched by the explorer when opening the "More info" modal.</p>
-    <table class="field-table">
-      <tr><th>Field</th><th>Type</th><th>Description</th></tr>
+      <tr><td>source_inventory</td><td>object?</td><td>File count/size stats: { file_count, total_size_bytes, js_files, json_files, asset_files }</td></tr>
       <tr><td>script_excerpt</td><td>string?</td><td>First ~2000 chars of the app script</td></tr>
       <tr><td>script_path</td><td>string?</td><td>Relative path within the app dir (e.g. "index.js")</td></tr>
       <tr><td>source_files</td><td>array?</td><td>File tree: [{path, size_bytes}, ...]</td></tr>
@@ -229,9 +223,8 @@
     <p>URL templates from <code>catalog.json</code> <code>endpoints</code> field. Replace <code>{slug}</code> with an app slug:</p>
     <table class="field-table">
       <tr><th>Key</th><th>Template</th><th>Description</th></tr>
-      <tr><td>app_detail</td><td>./apps/{slug}.json</td><td>Per-app detail (relative to catalog.json)</td></tr>
-      <tr><td>app_source</td><td>raw.githubusercontent.com/.../v2/apps/{slug}/index.js</td><td>Raw app script source</td></tr>
-      <tr><td>app_blueprint</td><td>raw.githubusercontent.com/.../v2/apps/{slug}/{blueprint_path}</td><td>Raw blueprint JSON (use blueprint_path from detail)</td></tr>
+      <tr><td>app_source</td><td>raw.githubusercontent.com/.../v2/apps/{slug}/index.js</td><td>Full app script source (script_excerpt is truncated to ~2KB)</td></tr>
+      <tr><td>app_blueprint</td><td>raw.githubusercontent.com/.../v2/apps/{slug}/{blueprint_path}</td><td>Raw blueprint JSON (use blueprint_path from app entry)</td></tr>
     </table>
 
     <h2>Example Entry</h2>
@@ -255,15 +248,11 @@
   "has_source": true,
   "has_details": true,
   "source_status": "v2",
-  "source_inventory": {
-    "file_count": 3,
-    "listed_file_count": 3,
-    "listed_truncated": false,
-    "total_size_bytes": 4521,
-    "js_files": 1,
-    "json_files": 1,
-    "asset_files": 0
-  }
+  "source_inventory": { "file_count": 3, "total_size_bytes": 4521, "js_files": 1 },
+  "script_excerpt": "export default function main(world, app) { ... }",
+  "script_path": "index.js",
+  "source_files": [{"path": "index.js", "size_bytes": 1200}, {"path": "Confetti.json", "size_bytes": 321}],
+  "blueprint_path": "Confetti.json"
 }</code></pre>
 
     <h2>jq Recipes</h2>
@@ -289,8 +278,8 @@ curl -s catalog.json | jq '[.apps[] | select(.script_complexity == "high" and .n
 # Discover endpoints
 curl -s catalog.json | jq '.endpoints'
 
-# Get app detail (replace SLUG)
-curl -s apps/SLUG.json | jq '.'</code></pre>
+# Get script excerpt for a specific app
+curl -s catalog.json | jq '.apps[] | select(.slug == "confetti") | .script_excerpt'</code></pre>
 
     <h2>Allowed Tags</h2>
     <p>Apps are tagged with up to 6 from this canonical set:</p>
@@ -327,12 +316,12 @@ name: string
 description: string
 base_url: string (GitHub Pages URL)
 source_url: string (GitHub repo URL)
-endpoints: { app_detail, app_source, app_blueprint } (URL templates, replace {slug})
-counts: { total, with_preview, with_source, with_details, metadata_only }
+endpoints: { app_source, app_blueprint } (URL templates, replace {slug})
+counts: { total, with_preview, with_source, metadata_only }
 tag_index: { tag: count } sorted by frequency
-apps: array of card objects
+apps: array of app objects
 
-## Per-app card (in apps[])
+## Per-app fields (in apps[])
 slug: string — unique identifier
 name: string — display name
 author: string
@@ -353,8 +342,6 @@ has_source: boolean
 has_details: boolean
 source_status: "v2" | "metadata_only"
 source_inventory: { file_count, total_size_bytes, js_files, json_files, asset_files }?
-
-## Per-app detail (apps/{slug}.json, lazy-loaded)
 script_excerpt: string? — first ~2000 chars of app script
 script_path: string? — e.g. "index.js"
 source_files: [{ path, size_bytes }]?
@@ -363,7 +350,6 @@ asset_files: string[]? — referenced asset filenames
 blueprint_path: string? — blueprint JSON filename
 
 ## Endpoints (replace {slug})
-app_detail: ./apps/{slug}.json
 app_source: https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/v2/apps/{slug}/index.js
 app_blueprint: https://raw.githubusercontent.com/hyperfy-xyz/hyperfy-apps/main/v2/apps/{slug}/{blueprint_path}
 
@@ -373,7 +359,8 @@ jq '.tag_index'                                                # all tags with c
 jq '[.apps[] | select(.tags[] == "particles") | .slug]'        # filter by tag
 jq '[.apps[] | select(.author == "ash") | {slug, name}]'       # filter by author
 jq '[.apps[] | select(.description | test("fire"; "i")) | .slug]' # search descriptions
-jq '.endpoints'                                                # discover endpoints`;
+jq '.endpoints'                                                # discover endpoints
+jq '.apps[] | select(.slug == "confetti") | .script_excerpt'   # get script excerpt`;
 
   navigator.clipboard.writeText(text).then(() => {
     const btn = document.getElementById('copyBtn');

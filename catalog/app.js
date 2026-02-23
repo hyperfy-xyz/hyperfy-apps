@@ -190,32 +190,10 @@ function VideoPreview({ src }) {
   `;
 }
 
-// ---- SourceModal: lazy-loads detail from apps/{slug}.json ----
+// ---- SourceModal: reads from preloaded app data ----
 
 function SourceModal({ app, onClose }) {
-  const [detail, setDetail] = useState(null);
-  const [detailLoading, setDetailLoading] = useState(true);
-  const [detailError, setDetailError] = useState("");
-
-  // Fetch per-app detail on mount
-  useEffect(() => {
-    let cancelled = false;
-    setDetailLoading(true);
-    setDetailError("");
-    setDetail(null);
-
-    fetch(`./apps/${app.slug}.json`)
-      .then((r) => {
-        if (!r.ok) throw new Error(`HTTP ${r.status}`);
-        return r.json();
-      })
-      .then((d) => { if (!cancelled) { setDetail(d); setDetailLoading(false); } })
-      .catch((e) => { if (!cancelled) { setDetailError(e.message); setDetailLoading(false); } });
-
-    return () => { cancelled = true; };
-  }, [app.slug]);
-
-  const sourceFiles = Array.isArray(detail?.source_files) ? detail.source_files : [];
+  const sourceFiles = Array.isArray(app.source_files) ? app.source_files : [];
   const sourceInventory = app.source_inventory || null;
   const fileTree = useMemo(() => buildFileTree(sourceFiles), [sourceFiles]);
   const fallbackSourceBytes = useMemo(
@@ -226,29 +204,31 @@ function SourceModal({ app, onClose }) {
   const sourceTotalBytes = Number(sourceInventory?.total_size_bytes) || fallbackSourceBytes;
   const listedFileCount = Number(sourceInventory?.listed_file_count) || sourceFiles.length;
   const listedTruncated = Boolean(sourceInventory?.listed_truncated);
-  const hasScript = !!detail?.script_excerpt;
-  const hasBlueprint = !!(detail?.props && Object.keys(detail.props).length > 0);
+  const hasScript = !!app.script_excerpt;
+  const hasBlueprint = !!(app.props && Object.keys(app.props).length > 0);
   const hasFiles = sourceFiles.length > 0;
   const hasCode = hasScript || hasBlueprint;
   const [expandedFolders, setExpandedFolders] = useState(() => collectInitialExpandedFolders(fileTree));
-  const [activeTab, setActiveTab] = useState("script");
+  const [activeTab, setActiveTab] = useState(
+    hasFiles ? "files" : hasScript ? "script" : hasBlueprint ? "blueprint" : "script"
+  );
   const [copied, setCopied] = useState(false);
   const codeRef = useRef(null);
 
   useEffect(() => {
     setActiveTab(hasFiles ? "files" : hasScript ? "script" : hasBlueprint ? "blueprint" : "script");
-  }, [detail, hasScript, hasBlueprint, hasFiles]);
+  }, [app, hasScript, hasBlueprint, hasFiles]);
 
   useEffect(() => {
     setExpandedFolders(collectInitialExpandedFolders(fileTree));
-  }, [detail, fileTree]);
+  }, [app, fileTree]);
 
   // Highlight code after render
   useEffect(() => {
     if (codeRef.current && window.Prism) {
       window.Prism.highlightAllUnder(codeRef.current);
     }
-  }, [activeTab, detail]);
+  }, [activeTab]);
 
   // Close on Escape
   useEffect(() => {
@@ -259,10 +239,10 @@ function SourceModal({ app, onClose }) {
 
   const getCurrentCode = useCallback(() => {
     if (!hasCode) return "";
-    if (activeTab === "script") return detail?.script_excerpt || "// No script found";
-    if (activeTab === "blueprint") return JSON.stringify(detail?.props || {}, null, 2);
+    if (activeTab === "script") return app.script_excerpt || "// No script found";
+    if (activeTab === "blueprint") return JSON.stringify(app.props || {}, null, 2);
     return "";
-  }, [detail, activeTab, hasCode]);
+  }, [app, activeTab, hasCode]);
 
   const onCopy = useCallback(() => {
     const text = getCurrentCode();
@@ -322,67 +302,55 @@ function SourceModal({ app, onClose }) {
           ` : null}
         </div>
 
-        ${detailLoading ? html`
-          <div className="modal-loading">Loading app details...</div>
-        ` : detailError ? html`
-          <div className="modal-body">
-            <div className="modal-desc">
-              ${app.has_source
-                ? "Could not load app detail. Metadata is available above."
-                : "Source files are not yet promoted to v2. Metadata is available above."}
-            </div>
-          </div>
-        ` : html`
-          <div className="modal-tabs">
-            ${hasFiles ? html`
-              <button className=${`modal-tab ${activeTab === "files" ? "active" : ""}`}
-                onClick=${() => setActiveTab("files")}>Files (${sourceFileCount}) · <span style=${{ color: sizeColor(sourceTotalBytes) }}>${formatBytes(sourceTotalBytes)}</span></button>
-            ` : null}
-            ${hasScript ? html`
-              <button className=${`modal-tab ${activeTab === "script" ? "active" : ""}`}
-                onClick=${() => setActiveTab("script")}>Script</button>
-            ` : null}
-            ${hasBlueprint ? html`
-              <button className=${`modal-tab ${activeTab === "blueprint" ? "active" : ""}`}
-                onClick=${() => setActiveTab("blueprint")}>Props / Blueprint</button>
-            ` : null}
-            ${canCopy ? html`
-              <button className=${`modal-copy-btn ${copied ? "copied" : ""}`} onClick=${onCopy}>
-                ${copied ? "Copied!" : "Copy"}
-              </button>
-            ` : null}
-          </div>
+        <div className="modal-tabs">
+          ${hasFiles ? html`
+            <button className=${`modal-tab ${activeTab === "files" ? "active" : ""}`}
+              onClick=${() => setActiveTab("files")}>Files (${sourceFileCount}) · <span style=${{ color: sizeColor(sourceTotalBytes) }}>${formatBytes(sourceTotalBytes)}</span></button>
+          ` : null}
+          ${hasScript ? html`
+            <button className=${`modal-tab ${activeTab === "script" ? "active" : ""}`}
+              onClick=${() => setActiveTab("script")}>Script</button>
+          ` : null}
+          ${hasBlueprint ? html`
+            <button className=${`modal-tab ${activeTab === "blueprint" ? "active" : ""}`}
+              onClick=${() => setActiveTab("blueprint")}>Props / Blueprint</button>
+          ` : null}
+          ${canCopy ? html`
+            <button className=${`modal-copy-btn ${copied ? "copied" : ""}`} onClick=${onCopy}>
+              ${copied ? "Copied!" : "Copy"}
+            </button>
+          ` : null}
+        </div>
 
-          <div className="modal-body" ref=${codeRef}>
-            ${activeTab === "files" && hasFiles
-              ? html`
-                  <div className="modal-files">
-                    <div className="modal-file-summary">
-                      Showing ${listedFileCount} of ${sourceFileCount} files
-                      ${listedTruncated ? " (truncated for performance)" : ""}
-                    </div>
-                    <div className="file-tree">
-                      ${fileTree.children.map((node) => html`
-                        <${SourceFileTreeNode}
-                          key=${node.path}
-                          node=${node}
-                          depth=${0}
-                          expandedFolders=${expandedFolders}
-                          onToggle=${toggleFolder}
-                        />
-                      `)}
-                    </div>
+        <div className="modal-body" ref=${codeRef}>
+          ${activeTab === "files" && hasFiles
+            ? html`
+                <div className="modal-files">
+                  <div className="modal-file-summary">
+                    Showing ${listedFileCount} of ${sourceFileCount} files
+                    ${listedTruncated ? " (truncated for performance)" : ""}
                   </div>
-                `
-              : hasCode
-              ? html`<pre className=${`language-${lang}`}><code className=${`language-${lang}`}>${getCurrentCode()}</code></pre>`
-              : html`<div className="modal-desc">
-                  ${app.has_source
-                    ? "No script or props preview is available. Use the Files tab to inspect package contents."
-                    : "Source files are not yet promoted to v2. Metadata is available above."}
-                </div>`}
-          </div>
-        `}
+                  <div className="file-tree">
+                    ${fileTree.children.map((node) => html`
+                      <${SourceFileTreeNode}
+                        key=${node.path}
+                        node=${node}
+                        depth=${0}
+                        expandedFolders=${expandedFolders}
+                        onToggle=${toggleFolder}
+                      />
+                    `)}
+                  </div>
+                </div>
+              `
+            : hasCode
+            ? html`<pre className=${`language-${lang}`}><code className=${`language-${lang}`}>${getCurrentCode()}</code></pre>`
+            : html`<div className="modal-desc">
+                ${app.has_source
+                  ? "No script or props preview is available. Use the Files tab to inspect package contents."
+                  : "Source files are not yet promoted to v2. Metadata is available above."}
+              </div>`}
+        </div>
       </div>
     </div>
   `;

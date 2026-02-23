@@ -49,9 +49,8 @@ v2/hyp-files/*.hyp (binary)
 - **`v2/apps/<slug>/`** — Flat app source dirs (slugified). Each has `<Name>.json` (blueprint), `index.js`, and optional `assets/`.
 - **`v2/hyp-files/`** — Original `.hyp` binary files (174 files).
 - **`catalog/`** — Static web explorer deployed to GitHub Pages. React 18 + HTM, no build step.
-- **`catalog/catalog.json`** — Card-level app data + agent metadata (version 4, ~310KB). Doubles as the static API: includes `endpoints`, `tag_index`, and `counts` for programmatic access.
-- **`catalog/apps/{slug}.json`** — Per-app detail files (script excerpts, file trees, props). Lazy-loaded by SourceModal on demand.
-- **`catalog/api.html`** — Static schema docs page for agents. Documents `catalog.json` fields, endpoints, and `jq` recipes.
+- **`catalog/catalog.json`** — Complete app data + agent metadata (version 4, ~1.2MB). Single source of truth for both the web explorer and programmatic access. Includes `endpoints`, `tag_index`, and `counts`.
+- **`catalog/api.html`** — Static schema docs page for agents. Documents `catalog.json` fields, endpoints, `jq` recipes, and has a "Copy schema for LLM" button.
 - **`catalog/media/<slug>/`** — Optimized preview images/videos (~670MB, committed via LFS-like approach).
 - **`scripts/context/`** — Knowledge base (not deployed): `hyp_index.raw.json` (Discord metadata), `apps/<slug>/manifest.json` (provenance + AI data), `hyp_summaries/` (full app docs), `snippets/` (doc snippets), `source/` (raw docs), `context-index.json`.
 - **`scripts/catalog/`** — Build pipeline scripts.
@@ -66,7 +65,7 @@ Single-page React app with no build step — edit `app.js`/`styles.css` directly
 - **`app.js`** — Full component tree (~500 LOC). Uses HTM tagged templates (`` html`<div>...</div>` ``), not JSX.
 - **`styles.css`** — Dark theme, CSS variables (`--bg: #0c0c14`, `--accent: #8b5cf6`).
 
-Data flow: fetches `catalog.json` on load for card data; SourceModal lazy-loads per-app detail from `apps/{slug}.json`.
+Data flow: fetches `catalog.json` on load; all app data including source excerpts is immediately available.
 
 ### Per-App Metadata Schema
 
